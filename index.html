@@ -3,154 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Nugzz Crew</title>
+    <title>Official Nugzz Crew | Home</title>
     <style>
-        /* 1. EMBED ATTACHED FONT */
+        /* Embedded Custom Font Declaration */
         @font-face {
-            font-family: 'HighSpeed';
+            font-family: 'HighSpeedRegular';
             src: url('fonts/HIGHSPEEDREGULAR-8MRON.OTF') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
 
-        /* 2. COLOR VARIABLES */
-        :root {
-            --gold: #D4AF37;
-            --dark-grey: #2F2F2F;
-            --black: #000000;
-            --light-grey: #9a9a9a;
-        }
+        /* Color Palette: 
+            Gold: #D4AF37 
+            Grey: #2F2F2F
+            Black: #121212 
+        */
 
-        /* 3. GENERAL STYLES */
         body {
             margin: 0;
-            background-color: var(--black);
-            color: white;
-            font-family: 'Arial', sans-serif; /* Fallback for paragraph text */
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
         }
 
-        /* Applying your font to all headers and sub-headers */
-        h1, h2, h3, h4, .crew-font {
-            font-family: 'HighSpeed', sans-serif;
-            color: var(--gold);
+        header {
+            background-color: #2F2F2F;
+            border-bottom: 3px solid #D4AF37;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'HighSpeedRegular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #D4AF37;
+            font-size: 1.8rem;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        /* 4. LAYOUT COMPONENTS */
-        header {
-            background-color: var(--dark-grey);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--gold);
-        }
-
         nav a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
             margin-left: 20px;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--gold);
+            color: #D4AF37;
         }
 
         .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('hero-bg.jpg'); /* Add your image here */
-            background-size: cover;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        repeating-linear-gradient(45deg, #2f2f2f 0, #2f2f2f 2px, transparent 0, transparent 50%);
+            background-size: 10px 10px;
         }
 
         .hero h1 {
+            font-family: 'HighSpeedRegular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 4rem;
-            margin: 0;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .hero span {
+            color: #D4AF37;
         }
 
         .hero p {
-            color: var(--light-grey);
             font-size: 1.2rem;
+            color: #cccccc;
             max-width: 600px;
-            margin: 20px auto;
         }
 
-        .cta-btn {
-            background-color: var(--gold);
-            color: var(--black);
+        .cta-button {
+            margin-top: 30px;
             padding: 12px 30px;
+            background-color: #D4AF37;
+            color: #121212;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
+            transition: transform 0.2s, background-color 0.3s;
         }
 
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px 5%;
-            flex-wrap: wrap;
+        .cta-button:hover {
+            background-color: #f1c40f;
+            transform: scale(1.05);
+        }
+
+        .content-section {
+            padding: 50px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            background-color: #1a1a1a;
         }
 
         .card {
-            background-color: var(--dark-grey);
-            border: 1px solid var(--gold);
+            background-color: #2F2F2F;
             padding: 25px;
-            width: 30%;
-            min-width: 280px;
-            margin-bottom: 20px;
-            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: #D4AF37;
+        }
+
+        .card h3 {
+            font-family: 'HighSpeedRegular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #D4AF37;
+            margin-top: 0;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            background-color: var(--dark-grey);
-            border-top: 1px solid var(--gold);
-            font-size: 0.8rem;
+            padding: 40px;
+            background-color: #121212;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #2F2F2F;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="crew-font" style="font-size: 1.5rem;">Official Nugzz Crew</div>
+        <div class="logo">Official Nugzz Crew</div>
         <nav>
             <a href="#">Home</a>
-            <a href="#">The Crew</a>
-            <a href="#">Merch</a>
+            <a href="#">About</a>
+            <a href="#">Community</a>
             <a href="#">Contact</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Official Nugzz Crew</h1>
-        <p>Premium quality. High speed. Join the most elite crew in the game.</p>
-        <a href="#" class="cta-btn">JOIN THE CREW</a>
+        <h1>JOIN THE <span>CREW</span></h1>
+        <p>The premier destination for the Official Nugzz Crew. Gold standards, grey matter, and black-tie execution.</p>
+        <a href="#" class="cta-button">EXPLORE NOW</a>
     </section>
 
-    <section class="features">
+    <section class="content-section">
         <div class="card">
-            <h3>Exclusive Content</h3>
-            <p>Get access to behind-the-scenes footage and crew-only updates.</p>
+            <h3>The Mission</h3>
+            <p>Building a community that values quality, loyalty, and the pursuit of excellence in everything we do.</p>
         </div>
         <div class="card">
-            <h3>Premium Merch</h3>
-            <p>Represent the crew with our high-quality Gold & Black apparel.</p>
+            <h3>The Legacy</h3>
+            <p>Established with the vision of bringing the crew together under one digital roof.</p>
         </div>
         <div class="card">
-            <h3>Community</h3>
-            <p>Network with other members of the Nugzz Crew worldwide.</p>
+            <h3>Events</h3>
+            <p>Stay tuned for upcoming crew meetups, digital hangouts, and exclusive drops.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Official Nugzz Crew. High Speed Regular is a trademark of 177Studio.</p>
+        &copy; 2026 Official Nugzz Crew. All Rights Reserved.
     </footer>
 
 </body>
