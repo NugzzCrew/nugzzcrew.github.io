@@ -13,4 +13,4 @@ jobs:
         uses: withastro/action@v3
         with:
           path: .
-          node-version: 20
+          node-version: 22
