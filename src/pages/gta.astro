@@ -33,7 +33,7 @@ import gtaData from '../data/gta-weekly.json';
                 <p class="text-[10px] uppercase text-zinc-500 font-bold tracking-tighter">{car.robbery}</p>
                 <p class="text-xl font-bold text-white">{car.name}</p>
               </div>
-              <span class="px-3 py-1 bg-zinc-800 text-gold text-[10px] font-black uppercase rounded-full">
+              <span class="px-3 py-1 bg-zinc-800 text-gold text-[10px] font-black uppercase rounded-full border border-gold/20">
                 {car.type}
               </span>
             </div>
@@ -43,20 +43,25 @@ import gtaData from '../data/gta-weekly.json';
 
       <!-- Side Column: Podium & Discounts -->
       <div class="space-y-6">
-        <div class="p-6 bg-gold rounded-2xl text-black">
-          <p class="text-xs uppercase font-black opacity-80">Lucky Wheel Podium</p>
+        <!-- Podium Card: Now with High-Contrast Black Text -->
+        <div class="p-6 bg-gold rounded-2xl text-black shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
+          <p class="text-xs uppercase font-black opacity-70">Lucky Wheel Podium</p>
           <h3 class="text-2xl font-black leading-tight uppercase">{gtaData.podium}</h3>
-          <i data-lucide="sparkles" class="mt-4 opacity-50"></i>
+          <div class="mt-4 flex justify-end">
+             <i data-lucide="sparkles" class="w-8 h-8 opacity-40"></i>
+          </div>
         </div>
 
+        <!-- Weekly Challenge Box -->
         <div class="p-6 bg-zinc-900 border border-gold/30 rounded-2xl">
           <p class="text-xs uppercase font-bold text-gold mb-1">Weekly Challenge</p>
-          <p class="text-white text-sm">Complete 3 Nightclub Management Missions for GTA$100,000.</p>
+          <p class="text-zinc-300 text-sm">Complete 3 Nightclub Management Missions for <span class="text-white font-bold">GTA$100,000</span>.</p>
         </div>
 
+        <!-- Discounts Box -->
         <div class="p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
           <p class="text-xs uppercase font-bold text-zinc-500 mb-1">Major Discount</p>
-          <p class="text-white font-bold">{gtaData.discounts}</p>
+          <p class="text-white font-bold text-lg">{gtaData.discounts}</p>
         </div>
       </div>
     </div>
