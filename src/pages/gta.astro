@@ -43,12 +43,14 @@ import gtaData from '../data/gta-weekly.json';
 
       <!-- Side Column: Podium & Discounts -->
       <div class="space-y-6">
-        <!-- Podium Card: Now with High-Contrast Black Text -->
-        <div class="p-6 bg-gold rounded-2xl text-black shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
-          <p class="text-xs uppercase font-black opacity-70">Lucky Wheel Podium</p>
-          <h3 class="text-2xl font-black leading-tight uppercase">{gtaData.podium}</h3>
+        <!-- Podium Card: Using inline style to override global CSS -->
+        <div class="p-6 bg-gold rounded-2xl shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
+          <p class="text-[10px] uppercase font-black text-black/60 mb-1">Lucky Wheel Podium</p>
+          <h3 class="text-2xl font-black leading-tight uppercase !text-black" style="color: black !important;">
+            {gtaData.podium}
+          </h3>
           <div class="mt-4 flex justify-end">
-             <i data-lucide="sparkles" class="w-8 h-8 opacity-40"></i>
+             <i data-lucide="sparkles" class="w-8 h-8 text-black/40"></i>
           </div>
         </div>
 
