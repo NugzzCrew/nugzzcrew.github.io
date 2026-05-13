@@ -3,10 +3,10 @@ import MainLayout from '../layouts/MainLayout.astro';
 import gtaData from '../data/gta-weekly.json';
 ---
 
-<MainLayout title="GTA Weekly Updates">
+<MainLayout title="GTA Bonuses">
   <div class="max-w-5xl mx-auto py-12 px-6">
     <!-- Header Section -->
-    <h1 class="text-5xl mb-2 tracking-wider">Weekly Bonuses</h1>
+    <h1 class="text-5xl mb-2 tracking-wider uppercase font-black">GTA Bonuses</h1>
     <p class="text-zinc-500 mb-10 text-lg italic tracking-wide">Valid through {gtaData.weekEnding}</p>
 
     <!-- Main Bonus Grid -->
@@ -43,7 +43,7 @@ import gtaData from '../data/gta-weekly.json';
 
       <!-- Side Column: Podium & Discounts -->
       <div class="space-y-6">
-        <!-- Podium Card: Font color locked to black -->
+        <!-- Podium Card: Fixed Black Text -->
         <div class="p-6 bg-gold rounded-2xl shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
           <p class="text-[10px] uppercase font-black text-black/60 mb-1">Lucky Wheel Podium</p>
           <h3 class="text-2xl font-black leading-tight uppercase !text-black" style="color: #000000 !important;">
@@ -109,6 +109,5 @@ import gtaData from '../data/gta-weekly.json';
         </div>
       </div>
     </div>
-    
   </div>
 </MainLayout>
