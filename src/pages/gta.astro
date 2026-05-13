@@ -20,6 +20,31 @@ import gtaData from '../data/gta-weekly.json';
       ))}
     </div>
 
+    <!-- NEW SECTION: Limited Time Unlocks & Rewards -->
+    <div class="mb-12">
+        <h2 class="text-2xl mb-6 uppercase font-black tracking-tighter flex items-center gap-2">
+            <i data-lucide="gift" class="text-gold"></i> Motor Madness Unlocks
+        </h2>
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-zinc-900 border-l-4 border-gold p-5 rounded-r-xl">
+                <p class="text-[10px] uppercase font-bold text-zinc-500">Login Reward</p>
+                <p class="text-white font-bold">Rockstar Helmet</p>
+            </div>
+            <div class="bg-zinc-900 border-l-4 border-zinc-700 p-5 rounded-r-xl">
+                <p class="text-[10px] uppercase font-bold text-zinc-500">Free Services</p>
+                <p class="text-white font-bold">Horn Customization & LS Car Meet Membership</p>
+            </div>
+            <div class="bg-zinc-900/50 border border-zinc-800 p-5 rounded-xl col-span-full">
+                <p class="text-[10px] uppercase font-bold text-gold mb-3 tracking-widest">Showroom Bonuses (Delivered within 72hrs)</p>
+                <ul class="grid md:grid-cols-3 gap-4 text-sm">
+                    <li class="text-zinc-300"><span class="text-white font-bold block">Rockstar Racing Suit</span> Buy any vehicle from Simeon's</li>
+                    <li class="text-zinc-300"><span class="text-white font-bold block">LS Customs Varsity Jacket</span> Buy any vehicle from Luxury Autos</li>
+                    <li class="text-zinc-300"><span class="text-white font-bold block">Blue Banshee Tee</span> Buy any vehicle from the LS Car Meet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="grid md:grid-cols-3 gap-8 mb-20">
       <!-- Salvage Yard Robberies -->
       <div class="md:col-span-2 bg-zinc-900/30 p-8 rounded-2xl border border-zinc-800">
@@ -43,7 +68,7 @@ import gtaData from '../data/gta-weekly.json';
 
       <!-- Side Column: Podium & Discounts -->
       <div class="space-y-6">
-        <!-- Podium Card: Fixed Black Text -->
+        <!-- Podium Card -->
         <div class="p-6 bg-gold rounded-2xl shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
           <p class="text-[10px] uppercase font-black text-black/60 mb-1">Lucky Wheel Podium</p>
           <h3 class="text-2xl font-black leading-tight uppercase !text-black" style="color: #000000 !important;">
@@ -63,8 +88,12 @@ import gtaData from '../data/gta-weekly.json';
 
         <!-- Discounts Box -->
         <div class="p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
-          <p class="text-xs uppercase font-bold text-zinc-500 mb-1">Major Discount</p>
-          <p class="text-white font-bold text-lg">{gtaData.discounts}</p>
+          <p class="text-xs uppercase font-bold text-zinc-500 mb-1">Major Discounts</p>
+          <ul class="text-white font-bold text-sm space-y-1">
+              <li>40% OFF Salvage Yards</li>
+              <li>50% OFF HSW & Benny's Upgrades</li>
+              <li>50% OFF Tuner Racing Suits</li>
+          </ul>
         </div>
       </div>
     </div>
