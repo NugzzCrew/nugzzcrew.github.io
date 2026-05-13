@@ -9,18 +9,16 @@ import MainLayout from '../layouts/MainLayout.astro';
     </h1>
     <p class="text-xl text-zinc-400 mb-10">Streaming, GTA Updates, and the best community in the game.</p>
     
-    <div class="aspect-video w-full bg-zinc-900 rounded-2xl border border-zinc-800 flex items-center justify-center mb-12 overflow-hidden shadow-2xl">
-      <!-- Replace YOUR_VIDEO_ID with an actual YouTube ID later -->
-      <iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/live_stream?channel=UCYNmnbEgm3G0m4avmwz_4Eg" 
-  title="Official Nugzz Crew Live Stream" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen>
-</iframe>
-    </div>
+    <div class="aspect-video w-full bg-zinc-900 rounded-2xl border border-zinc-800 mb-12 overflow-hidden shadow-2xl">
+  <iframe 
+    class="w-full h-full"
+    src="https://www.youtube.com/embed/live_stream?channel=UCYNmnbEgm3G0m4avmwz_4Eg" 
+    title="Official Nugzz Crew Live Stream" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+  </iframe>
+</div>
 
     <div class="grid md:grid-cols-2 gap-6">
       <a href="/gta" class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-orange-500 transition-all group text-left">
