@@ -1,17 +1,23 @@
 {
-  "weekEnding": "May 13, 2026",
+  "weekEnding": "May 20, 2026",
+  "podium": "Benefactor LM87",
+  "prizeRide": "Benefactor Krieger",
+  "weeklyChallenge": "Win any two Races to receive the Dark Manor Racing Suit and GTA$100,000",
   "bonuses": [
-    { "category": "Nightclub", "name": "Daily Income", "value": "2X GTA$" },
-    { "category": "Nightclub", "name": "Warehouse Production", "value": "2X Speed" },
-    { "category": "Missions", "name": "Terrorbyte Client Jobs", "value": "2X GTA$ & RP" },
-    { "category": "Missions", "name": "Yohan's Goods", "value": "2X GTA$, RP & Goods" }
+    { "category": "Land Races", "name": "4X GTA$ & RP", "value": "4X" },
+    { "category": "HSW Time Trial", "name": "3X GTA$ & RP", "value": "3X" },
+    { "category": "Simeon Missions", "name": "3X GTA$ & RP", "value": "3X" },
+    { "category": "Tow Truck Service", "name": "2X GTA$ & RP", "value": "2X" }
   ],
   "salvageYard": [
-    { "type": "Top Tier", "name": "Pfister Growler", "robbery": "The Podium" },
-    { "type": "Standard", "name": "Dinka Jester Classic", "robbery": "The Cargo Ship" },
-    { "type": "Low Tier", "name": "Albany Cavalcade XL", "robbery": "The Gangbanger" }
+    { "robbery": "The Podium Robbery", "name": "Invetero Coquette D10", "type": "Claimable" },
+    { "robbery": "The Gangbanger Robbery", "name": "Vapid Dominator GT", "type": "Standard" },
+    { "robbery": "The Duggan Robbery", "name": "Karin Previon", "type": "Low Tier" }
   ],
-  "podium": "Överflöd Imorgon",
-  "prizeRide": "Annis Minimus",
-  "discounts": "40% Off Nightclubs & Upgrades"
+  "discounts": "40% OFF Salvage Yards & Select Vehicles",
+  "gtaPlus": {
+    "ending": "June 10, 2026",
+    "freeVehicle": "Übermacht Sentinel GTS",
+    "bonuses": "4X Junk Energy Skydives, 2X Import/Export"
+  }
 }
