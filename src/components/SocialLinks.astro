@@ -1,35 +1,28 @@
 ---
-import { 
-  Youtube, Twitch, MessageSquare, Tiktok, 
-  Instagram, Twitter, Facebook, ShoppingBag, 
-  Users, Snapchat 
-} from 'lucide-astro';
-
 const socials = [
-  { name: 'YouTube', url: 'https://www.youtube.com/c/OfficialNugzzCrew', icon: Youtube },
-  { name: 'Twitch', url: 'https://www.twitch.tv/officialnugzzcrew', icon: Twitch },
-  { name: 'Kick', url: 'https://kick.com/officialnugzzcrew', icon: Twitch }, // Using Twitch icon as placeholder
-  { name: 'Discord', url: 'https://discord.gg/officialnugzzcrew', icon: MessageSquare },
-  { name: 'TikTok', url: 'https://www.tiktok.com/@officialnugzzcrew', icon: Tiktok },
-  { name: 'Instagram', url: 'https://www.instagram.com/officialnugzzcrew', icon: Instagram },
-  { name: 'X', url: 'https://x.com/NugzzCrew', icon: Twitter },
-  { name: 'Facebook', url: 'https://www.facebook.com/nugzzcrew', icon: Facebook },
-  { name: 'Snapchat', url: 'https://www.snapchat.com/add/nugzzcrew', icon: Snapchat },
-  { name: 'Shop', url: 'https://officialnugzzcrew-shop.fourthwall.com', icon: ShoppingBag },
-  { name: 'Crew', url: 'https://socialclub.rockstargames.com/crew/official_nugzz_crew', icon: Users },
+  { name: 'YouTube', url: 'https://www.youtube.com/c/OfficialNugzzCrew' },
+  { name: 'Twitch', url: 'https://www.twitch.tv/officialnugzzcrew' },
+  { name: 'Kick', url: 'https://kick.com/officialnugzzcrew' },
+  { name: 'Discord', url: 'https://discord.gg/officialnugzzcrew' },
+  { name: 'TikTok', url: 'https://www.tiktok.com/@officialnugzzcrew' },
+  { name: 'Instagram', url: 'https://www.instagram.com/officialnugzzcrew' },
+  { name: 'X', url: 'https://x.com/NugzzCrew' },
+  { name: 'Facebook', url: 'https://www.facebook.com/nugzzcrew' },
+  { name: 'Snapchat', url: 'https://www.snapchat.com/add/nugzzcrew' },
+  { name: 'Shop', url: 'https://officialnugzzcrew-shop.fourthwall.com' },
+  { name: 'Crew', url: 'https://socialclub.rockstargames.com/crew/official_nugzz_crew' },
 ];
 ---
 
-<div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 my-12">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 my-12">
   {socials.map((social) => (
     <a 
       href={social.url} 
       target="_blank" 
       rel="noopener noreferrer"
-      class="flex flex-col items-center justify-center p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-gold hover:bg-zinc-900 transition-all group"
+      class="flex flex-col items-center justify-center p-6 bg-zinc-900 border border-zinc-800 rounded-xl hover:border-gold hover:scale-105 transition-all group"
     >
-      <social.icon class="w-8 h-8 text-zinc-500 group-hover:text-gold transition-colors" />
-      <span class="text-[10px] uppercase mt-2 text-zinc-500 group-hover:text-gold font-bold tracking-widest">
+      <span class="text-xs uppercase text-zinc-400 group-hover:text-gold font-bold tracking-widest text-center">
         {social.name}
       </span>
     </a>
