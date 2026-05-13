@@ -1,20 +1,32 @@
 {
-  "weekEnding": "May 20, 2026",
+  "weekEnding": "May 27, 2026",
   "podium": "Benefactor LM87",
   "prizeRide": "Benefactor Krieger",
   "weeklyChallenge": "Win any two Races to receive the Dark Manor Racing Suit and GTA$100,000",
   "bonuses": [
     { "category": "Land Races", "name": "4X GTA$ & RP", "value": "4X" },
     { "category": "HSW Time Trial", "name": "3X GTA$ & RP", "value": "3X" },
-    { "category": "Simeon Missions", "name": "3X GTA$ & RP", "value": "3X" },
-    { "category": "Tow Truck Service", "name": "2X GTA$ & RP", "value": "2X" }
+    { "category": "Simeon Missions", "name": "2X GTA$ & RP", "value": "2X" },
+    { "category": "Tow Truck Service", "name": "2X GTA$", "value": "2X" }
+  ],
+  "unlocks": [
+    { "title": "Rockstar Helmet", "requirement": "Log in this week" },
+    { "title": "Rockstar Racing Suit", "requirement": "Buy any car from Simeon's" },
+    { "title": "LS Customs Varsity Jacket", "requirement": "Buy any car from Luxury Autos" },
+    { "title": "Blue Banshee Tee", "requirement": "Buy any car from LS Car Meet" },
+    { "title": "Free Services", "requirement": "Horns & LSCM Membership" }
   ],
   "salvageYard": [
     { "robbery": "The Podium Robbery", "name": "Invetero Coquette D10", "type": "Claimable" },
     { "robbery": "The Gangbanger Robbery", "name": "Vapid Dominator GT", "type": "Standard" },
-    { "robbery": "The Duggan Robbery", "name": "Karin Previon", "type": "Low Tier" }
+    { "robbery": "The Duggan Robbery", "name": "Karin Previon", "type": "Standard" }
   ],
-  "discounts": "40% OFF Salvage Yards & Select Vehicles",
+  "majorDiscounts": [
+    "40% Off Salvage Yards",
+    "50% Off HSW & Benny's Upgrades",
+    "50% Off Tuner Racing Suits",
+    "50% Off Turbo Tuning & Tire Smoke"
+  ],
   "gtaPlus": {
     "ending": "June 10, 2026",
     "freeVehicle": "Übermacht Sentinel GTS",
