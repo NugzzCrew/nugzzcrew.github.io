@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@theme {
+  /* Define Nugzz Gold for Tailwind */
+  --color-gold: #D4AF37;
+  --color-gold-bright: #FFD700;
+  
+  /* Define HighSpeed Font for Tailwind */
+  --font-header: "HighSpeed", ui-sans-serif, system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: 'HighSpeed';
+  src: url('/fonts/HighspeedRegular-8MrOn.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    /* Sets the background to black and default text to white */
+    @apply bg-black text-white;
+  }
+  
+  h1, h2, h3 {
+    /* Automatically applies HighSpeed and Gold to your headers */
+    font-family: 'HighSpeed', sans-serif;
+    @apply text-gold uppercase tracking-wider;
+  }
+}
