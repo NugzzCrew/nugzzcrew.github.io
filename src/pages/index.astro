@@ -7,43 +7,73 @@ import MainLayout from '../layouts/MainLayout.astro';
     <h1 class="text-6xl mb-4 tracking-wider">
       Official Nugzz Crew
     </h1>
-    <p class="text-xl text-zinc-400 mb-10 italic">"Streaming, GTA Updates, and the best community in the game."</p>
+    <p class="text-xl text-zinc-400 mb-10 italic text-zinc-500">"Streaming, GTA Updates, and the best community in the game."</p>
     
-    <!-- Stream Container with Background Image -->
+    <!-- Stream Container -->
     <div 
-      class="relative aspect-video w-full rounded-2xl border border-zinc-800 mb-12 overflow-hidden shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)] bg-cover bg-center"
-      style="background-image: url('/offline.png');"
+      id="stream-container"
+      class="relative aspect-video w-full rounded-2xl border border-zinc-800 mb-12 overflow-hidden shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)] bg-black"
     >
-      <!-- The YouTube Embed sits on top -->
-      <!-- If the stream is live, the thumbnail/video covers the background automatically -->
+      <!-- 1. The Offline Image (Always in the background) -->
+      <img 
+        src="/offline.png" 
+        alt="Official Nugzz Crew Offline" 
+        class="absolute inset-0 w-full h-full object-cover opacity-60"
+      />
+
+      <!-- 2. The YouTube Embed -->
       <iframe 
-        class="absolute top-0 left-0 w-full h-full z-10"
-        src="https://www.youtube.com/embed/live_stream?channel=UCYNmnbEgm3G0m4avmwz_4Eg" 
+        id="yt-player"
+        class="absolute top-0 left-0 w-full h-full z-10 hidden"
+        src="https://www.youtube.com/embed/live_stream?channel=UCYNmnbEgm3G0m4avmwz_4Eg&autoplay=1&mute=1" 
         title="Official Nugzz Crew Live Stream" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
       </iframe>
 
-      <!-- Optional: A subtle Gold overlay that only shows if the iframe is transparent/empty -->
-      <div class="absolute inset-0 bg-black/40 flex items-end justify-start p-6 pointer-events-none">
-         <span class="flex items-center gap-2 text-gold font-bold uppercase text-xs tracking-[0.2em]">
-            <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
-            Live Feed
-         </span>
+      <!-- 3. Status Badge -->
+      <div class="absolute bottom-6 left-6 z-20 flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+        <span id="live-indicator" class="w-2 h-2 bg-zinc-500 rounded-full"></span>
+        <span id="live-text" class="text-[10px] uppercase font-black tracking-widest text-zinc-400">Stream Offline</span>
       </div>
     </div>
 
+    <!-- Rest of your grid code remains the same... -->
     <div class="grid md:grid-cols-2 gap-6 mt-12">
-      <a href="/gta" class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold transition-all group text-left">
-        <h2 class="text-2xl group-hover:text-gold-bright transition-colors uppercase">GTA Weekly Updates &rarr;</h2>
-        <p class="text-zinc-500 mt-2">Get the latest on bonuses, car meets, and robberies.</p>
-      </a>
-
-      <div class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl text-left">
-        <h2 class="text-2xl uppercase font-header text-gold">The Fam Bam</h2>
-        <p class="text-zinc-500 mt-2">Catch every live stream and join the best community on YouTube.</p>
+        <a href="/gta" class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold transition-all group text-left">
+          <h2 class="text-2xl group-hover:text-gold-bright transition-colors uppercase">GTA Weekly Updates &rarr;</h2>
+          <p class="text-zinc-500 mt-2">Get the latest on bonuses, car meets, and robberies.</p>
+        </a>
+  
+        <div class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl text-left">
+          <h2 class="text-2xl uppercase font-header text-gold">The Fam Bam</h2>
+          <p class="text-zinc-500 mt-2">Catch every live stream and join the best community on YouTube.</p>
+        </div>
       </div>
-    </div>
   </section>
 </MainLayout>
+
+<script is:inline>
+  // This script checks if the YouTube embed is actually showing a live video
+  const channelId = 'UCYNmnbEgm3G0m4avmwz_4Eg';
+  const player = document.getElementById('yt-player');
+  const indicator = document.getElementById('live-indicator');
+  const statusText = document.getElementById('live-text');
+
+  // We use a trick to check if the stream is live by trying to load the thumbnail
+  const img = new Image();
+  img.src = `https://img.youtube.com/vi/live_stream/mqdefault.jpg?channel=${channelId}`;
+  
+  img.onload = function() {
+    // YouTube returns a specific width (120px) for the "no-thumbnail" default image
+    if (img.width > 120) {
+      player.classList.remove('hidden');
+      indicator.classList.remove('bg-zinc-500');
+      indicator.classList.add('bg-red-600', 'animate-pulse');
+      statusText.innerText = 'Live Now';
+      statusText.classList.remove('text-zinc-400');
+      statusText.classList.add('text-white');
+    }
+  };
+</script>
