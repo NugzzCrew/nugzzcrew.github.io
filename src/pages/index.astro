@@ -1,38 +1,38 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 ---
 
 <MainLayout title="Home">
   <section class="max-w-4xl mx-auto py-20 px-6 text-center">
-    <!-- Updated to use Gold and HighSpeed Font -->
     <h1 class="text-6xl mb-4 tracking-wider">
       Official Nugzz Crew
     </h1>
     <p class="text-xl text-zinc-400 mb-10 italic">"Streaming, GTA Updates, and the best community in the game."</p>
     
-    <!-- Updated Video Container with Gold Shadow/Glow -->
     <div class="aspect-video w-full bg-black rounded-2xl border border-zinc-800 mb-12 overflow-hidden shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)]">
       <iframe 
         class="w-full h-full"
         src="https://www.youtube.com/embed/live_stream?channel=UCYNmnbEgm3G0m4avmwz_4Eg" 
         title="Official Nugzz Crew Live Stream" 
         frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
       </iframe>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Card 1: GTA Updates -->
+    <!-- The New Social Section -->
+    <h2 class="text-2xl mb-6">Join The Fam Bam</h2>
+    <SocialLinks />
+
+    <div class="grid md:grid-cols-2 gap-6 mt-12">
       <a href="/gta" class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold transition-all group text-left">
-        <h2 class="text-2xl group-hover:text-gold-bright transition-colors">GTA Weekly Updates &rarr;</h2>
+        <h2 class="text-2xl group-hover:text-gold-bright transition-colors uppercase">GTA Weekly Updates &rarr;</h2>
         <p class="text-zinc-500 mt-2">Get the latest on bonuses, car meets, and robberies.</p>
       </a>
 
-      <!-- Card 2: Join The Fam Bam -->
       <div class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl text-left">
-        <h2 class="text-2xl">Join The Fam Bam</h2>
-        <p class="text-zinc-500 mt-2">Catch every live stream on YouTube and show some love.</p>
+        <h2 class="text-2xl uppercase">Support the Crew</h2>
+        <p class="text-zinc-500 mt-2">Grab the latest gear and merch from the official shop.</p>
       </div>
     </div>
   </section>
