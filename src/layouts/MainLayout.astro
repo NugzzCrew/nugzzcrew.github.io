@@ -25,45 +25,45 @@ const socials = [
     <head>
         <meta charset="utf-8" />
         <title>{title} | Official Nugzz Crew</title>
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://unpkg.com/lucide@latest"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v10/font/simple-icons.min.css" />
     </head>
     <body class="bg-black text-white">
-        <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800 p-4">
-            <!-- Updated Container: 3-column grid for perfect alignment -->
-            <div class="max-w-7xl mx-auto grid grid-cols-3 items-center">
+        <nav class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800 p-4">
+            <!-- Container: Flex-col on mobile, 3-col Grid on Desktop -->
+            <div class="max-w-7xl mx-auto flex flex-col items-center gap-4 md:grid md:grid-cols-3 md:gap-0">
                 
-                <!-- 1. LEFT: Logo and Branding -->
-                <div class="flex justify-start">
-                    <a href="/" class="flex items-center gap-4 group hover:opacity-90 transition-opacity">
-                        <img src="/Logo.png" alt="Official Nugzz Crew Logo" class="w-10 h-10 object-contain" />
-                        <span class="hidden lg:block text-xl font-header text-gold uppercase tracking-tighter group-hover:text-gold-bright transition-colors">
+                <!-- 1. Branding (Centered on mobile, Left on desktop) -->
+                <div class="flex md:justify-start w-full justify-center">
+                    <a href="/" class="flex items-center gap-3 group hover:opacity-90 transition-opacity">
+                        <img src="/Logo.png" alt="Official Nugzz Crew Logo" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+                        <span class="text-lg md:text-xl font-header text-gold uppercase tracking-tighter group-hover:text-gold-bright transition-colors whitespace-nowrap">
                             Official Nugzz Crew
                         </span>
                     </a>
                 </div>
 
-                <!-- 2. CENTER: Navigation Links -->
-                <div class="flex justify-center gap-8 text-xs uppercase font-bold tracking-widest text-zinc-400">
+                <!-- 2. Navigation (Center) -->
+                <div class="flex justify-center gap-6 text-[10px] md:text-xs uppercase font-bold tracking-[0.2em] text-zinc-400">
                     <a href="/" class="hover:text-gold transition-colors">Home</a>
                     <a href="/gta" class="hover:text-gold transition-colors">GTA Weekly</a>
                 </div>
 
-                <!-- 3. RIGHT: Social Icons -->
-                <div class="flex justify-end gap-3 flex-wrap">
+                <!-- 3. Social Icons (Centered wrap on mobile, Right on desktop) -->
+                <div class="flex justify-center md:justify-end gap-3 flex-wrap w-full">
                     {socials.map((social) => (
                         <a 
                             href={social.url} 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             title={social.name}
-                            class="hover:scale-110 transition-transform"
+                            class="hover:scale-110 active:scale-95 transition-transform"
                         >
                             {social.si ? (
-                                <i class={`si ${social.si} text-lg text-zinc-400 hover:text-gold transition-colors`}></i>
+                                <i class={`si ${social.si} text-base md:text-lg text-zinc-400 hover:text-gold transition-colors`}></i>
                             ) : (
-                                <i data-lucide={social.lucide} class="w-5 h-5 text-zinc-400 hover:text-gold transition-colors"></i>
+                                <i data-lucide={social.lucide} class="w-4 h-4 md:w-5 md:h-5 text-zinc-400 hover:text-gold transition-colors"></i>
                             )}
                         </a>
                     ))}
@@ -76,7 +76,7 @@ const socials = [
             <slot /> 
         </main>
 
-        <footer class="p-10 text-center text-zinc-600 text-xs border-t border-zinc-900 mt-20">
+        <footer class="p-10 text-center text-zinc-600 text-[10px] md:text-xs border-t border-zinc-900 mt-20">
             &copy; 2026 Official Nugzz Crew | Built for The Fam Bam
         </footer>
 
