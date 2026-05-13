@@ -30,22 +30,26 @@ const socials = [
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v10/font/simple-icons.min.css" />
     </head>
     <body class="bg-black text-white">
-        <!-- Main Navigation Bar -->
         <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800 p-4">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
                 
-                <!-- Logo and Page Links -->
-                <div class="flex items-center gap-6">
-                    <span class="text-xl font-header text-gold uppercase tracking-tighter">
-                        Official Nugzz Crew
-                    </span>
-                    <div class="flex gap-4 text-xs uppercase font-bold tracking-widest">
-                        <a href="/" class="hover:text-gold transition-colors">Home</a>
-                        <a href="/gta" class="hover:text-gold transition-colors">GTA Weekly</a>
+                <!-- Clickable Logo and Branding -->
+                <a href="/" class="flex items-center gap-4 group hover:opacity-90 transition-opacity">
+                    <!-- Replace 'logo.png' with your actual file name -->
+                    <img src="/logo.png" alt="Official Nugzz Crew Logo" class="w-10 h-10 object-contain" />
+                    
+                    <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                        <span class="text-xl font-header text-gold uppercase tracking-tighter group-hover:text-gold-bright transition-colors">
+                            Official Nugzz Crew
+                        </span>
+                        <div class="flex gap-4 text-xs uppercase font-bold tracking-widest text-zinc-400">
+                            <span class="hover:text-gold transition-colors">Home</span>
+                            <a href="/gta" class="hover:text-gold transition-colors">GTA Weekly</a>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <!-- Social Icons Row -->
+                <!-- Social Icons -->
                 <div class="flex flex-wrap justify-center gap-3">
                     {socials.map((social) => (
                         <a 
