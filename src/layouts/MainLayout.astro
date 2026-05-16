@@ -6,8 +6,11 @@ interface Props {
 const { title } = Astro.props;
 import '../styles/global.css'; 
 
+// Use your verified Channel ID with the join trigger
+const channelJoinUrl = "https://www.youtube.com/channel/UCYNmnbEgm3G0m4avmwz_4Eg/join?v=dummy";
+
 const socials = [
-  { name: 'YouTube', url: 'https://www.youtube.com/@OfficialNugzzCrew/join?app=desktop&action=join', si: 'si-youtube' },
+  { name: 'YouTube', url: channelJoinUrl, si: 'si-youtube' },
   { name: 'Twitch', url: 'https://www.twitch.tv/officialnugzzcrew', si: 'si-twitch' },
   { name: 'Kick', url: 'https://kick.com/officialnugzzcrew', si: 'si-kick' }, 
   { name: 'Discord', url: 'https://discord.gg/officialnugzzcrew', si: 'si-discord' },
@@ -49,7 +52,7 @@ const socials = [
                         <a href="/gta" class="hover:text-gold transition-colors">GTA Bonuses</a>
                     </div>
                     <a 
-                      href="https://www.youtube.com/@OfficialNugzzCrew/join?app=desktop&action=join" 
+                      href={channelJoinUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       class="text-[clamp(8px,2vw,10px)] text-gold-bright uppercase tracking-[0.2em] font-black text-center transition-all hover:text-white hover:scale-105 active:scale-95"
@@ -109,9 +112,8 @@ const socials = [
         line-height: 1 !important;
     }
 
-    /* Custom color for the Join link to make it pop */
     .text-gold-bright {
-        color: #ffcc00;
-        text-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+        color: #D4AF37;
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
     }
 </style>
