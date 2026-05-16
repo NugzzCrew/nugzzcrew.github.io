@@ -3,142 +3,191 @@ import MainLayout from '../layouts/MainLayout.astro';
 import gtaData from '../data/gta-weekly.json';
 ---
 
-<MainLayout title="GTA Bonuses">
-  <div class="max-w-6xl mx-auto py-8 md:py-12 px-4 md:px-6 relative">
+<MainLayout title="GTA Weekly & GTA+">
+  <div class="max-w-7xl mx-auto py-12 px-4 md:px-6 space-y-16">
     
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
-        <div class="w-full md:w-auto">
-            <h1 class="text-[clamp(32px,10vw,72px)] tracking-tighter uppercase font-black italic leading-none">GTA Bonuses</h1>
-            <p class="text-zinc-500 text-sm md:text-lg italic tracking-wide mt-2">Valid through {gtaData.weekEnding}</p>
-        </div>
-        
-        <div class="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
-            <div class="bg-gold/10 border border-gold/20 px-4 py-2 rounded-lg w-fit">
-                <p class="text-[9px] uppercase font-bold text-gold tracking-[0.3em]">FIB Priority File</p>
-                <p class="text-white font-black uppercase text-xs mt-1">{gtaData.fibFile}</p>
+    <section class="border-b border-zinc-800 pb-10">
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+            <div>
+                <h1 class="text-[clamp(40px,8vw,90px)] font-black italic uppercase leading-[0.8] text-white tracking-tighter">Motor <span class="text-gold">Madness</span></h1>
+                <p class="text-zinc-500 font-bold uppercase tracking-widest mt-4">Event ends {gtaData.weekEnding}</p>
             </div>
-            <div class="bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-lg w-fit">
-                <p class="text-[9px] uppercase font-bold text-blue-400 tracking-[0.3em]">Weekly Challenge</p>
-                <p class="text-white font-black uppercase text-[10px] mt-1 leading-tight max-w-[200px]">{gtaData.weeklyChallenge}</p>
+            <div class="bg-gold p-6 rounded-2xl text-black max-w-md">
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-1">Weekly Challenge</p>
+                <p class="font-black italic text-lg leading-tight uppercase">{gtaData.weeklyChallenge}</p>
             </div>
         </div>
+    </section>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+        {gtaData.bonuses.map(bonus => (
+            <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-center hover:border-gold transition-colors">
+                <p class="text-gold font-black text-2xl">{bonus.value}</p>
+                <p class="text-[9px] text-zinc-400 font-bold uppercase mt-1 leading-tight">{bonus.name}</p>
+            </div>
+        ))}
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-      {gtaData.bonuses.map((bonus) => (
-        <div class="bg-zinc-900/50 p-6 rounded-xl border border-zinc-800 hover:border-gold transition-all group">
-          <span class="text-[10px] uppercase tracking-widest text-gold font-bold">{bonus.category}</span>
-          <h2 class="text-sm font-bold mt-1 text-white leading-tight group-hover:text-gold transition-colors">{bonus.name}</h2>
-          <p class="text-4xl font-black text-gold mt-2 tracking-tighter">{bonus.value}</p>
-        </div>
-      ))}
-    </div>
-
-    <div class="grid lg:grid-cols-3 gap-6 mb-12">
-        <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-3xl">
-            <h3 class="text-white font-black uppercase italic mb-4 flex items-center gap-2 text-sm">
-                <i data-lucide="wrench" class="text-gold w-4 h-4"></i> Salvage Yard
-            </h3>
-            <div class="space-y-3">
-                {gtaData.salvageYard.map((car) => (
-                    <div class="flex justify-between items-center bg-black/20 p-3 rounded-lg border border-zinc-800/50">
-                        <div>
-                            <p class="text-[9px] uppercase text-zinc-500 font-bold">{car.robbery}</p>
-                            <p class="text-xs font-bold text-white">{car.name}</p>
-                        </div>
-                        <span class={`text-[8px] font-black px-2 py-1 rounded uppercase ${car.type === 'Claimable' ? 'bg-gold text-black' : 'bg-zinc-800 text-gold'}`}>
-                            {car.type}
-                        </span>
-                    </div>
-                ))}
-            </div>
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="space-y-4">
+            <h2 class="text-xl font-black uppercase italic text-gold flex items-center gap-2">
+                <i data-lucide="wrench" class="w-5 h-5"></i> Salvage Yard
+            </h2>
+            {gtaData.salvageYard.map(car => (
+                <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800">
+                    <p class="text-[10px] text-zinc-500 font-bold uppercase">{car.robbery}</p>
+                    <p class="text-white font-bold">{car.name}</p>
+                    <span class="text-[9px] font-black text-gold border border-gold/30 px-2 py-0.5 rounded mt-2 inline-block">{car.type}</span>
+                </div>
+            ))}
         </div>
 
-        <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-3xl">
-            <h3 class="text-white font-black uppercase italic mb-4 flex items-center gap-2 text-sm">
-                <i data-lucide="shopping-cart" class="text-gold w-4 h-4"></i> Showrooms
-            </h3>
-            <div class="space-y-4">
+        <div class="space-y-4">
+            <h2 class="text-xl font-black uppercase italic text-gold flex items-center gap-2">
+                <i data-lucide="car" class="w-5 h-5"></i> Showrooms
+            </h2>
+            <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 space-y-4">
                 <div>
-                    <p class="text-gold text-[9px] font-black uppercase mb-1">PDM / Luxury Autos</p>
-                    <p class="text-zinc-300 text-[11px] font-bold leading-relaxed">
-                        {[...gtaData.simeonVehicles, ...gtaData.luxuryAutos].join(' • ')}
-                    </p>
+                    <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-2">PDM (Simeon)</p>
+                    <ul class="text-white text-sm font-bold space-y-1">
+                        {gtaData.simeonVehicles.map(car => <li>• {car}</li>)}
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-2">Luxury Autos</p>
+                    <ul class="text-white text-sm font-bold space-y-1">
+                        {gtaData.luxuryAutos.map(car => <li>• {car}</li>)}
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-3xl">
-            <h3 class="text-white font-black uppercase italic mb-4 flex items-center gap-2 text-sm">
-                <i data-lucide="timer" class="text-gold w-4 h-4"></i> Trials
-            </h3>
-            <div class="space-y-2">
-                <div class="flex justify-between text-[11px] border-b border-zinc-800 pb-1">
-                    <span class="text-zinc-500 uppercase font-bold">Time Trial</span>
-                    <span class="text-white font-black text-right">{gtaData.timeTrials.regular}</span>
+        <div class="space-y-4">
+            <h2 class="text-xl font-black uppercase italic text-gold flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-5 h-5"></i> LS Car Meet
+            </h2>
+            <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 space-y-4">
+                <div>
+                    <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-1">Prize Ride</p>
+                    <p class="text-white font-bold text-sm">{gtaData.prizeRide}</p>
+                    <p class="text-zinc-500 text-[10px] uppercase font-bold mt-1 leading-tight">{gtaData.lsCarMeet.prizeRideRequirement}</p>
                 </div>
-                <div class="flex justify-between text-[11px] border-b border-zinc-800 pb-1">
-                    <span class="text-zinc-500 uppercase font-bold">HSW</span>
-                    <span class="text-white font-black text-right">{gtaData.timeTrials.hsw}</span>
-                </div>
-                <div class="flex justify-between text-[11px]">
-                    <span class="text-zinc-500 uppercase font-bold">Premium</span>
-                    <span class="text-white font-black text-right">{gtaData.timeTrials.premium}</span>
+                <div>
+                    <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-2">Test Track</p>
+                    <ul class="text-white text-sm font-bold space-y-1">
+                        {gtaData.lsCarMeet.testTrack.map(car => <li>• {car}</li>)}
+                        <li class="text-blue-400 italic">Premium: {gtaData.lsCarMeet.hsw}</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bg-zinc-900/40 border border-zinc-800 p-8 rounded-3xl mb-12">
-        <h2 class="text-xl mb-6 uppercase font-black tracking-tighter flex items-center gap-2 italic">
-            <i data-lucide="tag" class="text-gold"></i> Motor Madness Discounts
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
-            {gtaData.majorDiscounts.map((discount) => (
-                <div class="flex items-center gap-3 border-l-2 border-gold/30 pl-4">
-                    <p class="text-white font-bold text-xs uppercase tracking-tight">{discount}</p>
-                </div>
-            ))}
+    <section class="bg-zinc-900/50 rounded-3xl p-8 border border-zinc-800">
+        <h2 class="text-2xl font-black uppercase italic text-white mb-8 border-l-4 border-gold pl-4">Vehicle & Property Discounts</h2>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div>
+                <p class="text-gold font-black text-lg mb-4 italic">50% OFF</p>
+                <ul class="text-white text-sm font-bold space-y-2 uppercase tracking-tighter">
+                    {gtaData.discounts.fifty.map(item => <li>{item}</li>)}
+                </ul>
+            </div>
+            <div>
+                <p class="text-gold font-black text-lg mb-4 italic">40% OFF</p>
+                <ul class="text-white text-sm font-bold space-y-2 uppercase tracking-tighter">
+                    {gtaData.discounts.forty.map(item => <li>{item}</li>)}
+                </ul>
+            </div>
+            <div>
+                <p class="text-gold font-black text-lg mb-4 italic">30% OFF</p>
+                <ul class="text-white text-sm font-bold space-y-2 uppercase tracking-tighter">
+                    {gtaData.discounts.thirty.map(item => <li>{item}</li>)}
+                </ul>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="mb-12">
-        <h2 class="text-xl mb-6 uppercase font-black tracking-tighter flex items-center gap-2 italic">
-            <i data-lucide="gift" class="text-gold"></i> Unlocks & Rewards
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {gtaData.unlocks.map((item) => (
-                <div class="bg-zinc-900 border-t-2 border-gold p-4 rounded-xl">
-                    <p class="text-[8px] uppercase font-bold text-zinc-500 mb-1">{item.requirement}</p>
-                    <p class="text-white font-black text-[10px] uppercase">{item.title}</p>
+    <section class="relative rounded-[2.5rem] overflow-hidden bg-[#0a0014] border border-[#ff00ff]/20">
+        <div class="bg-gradient-to-r from-[#5a009d] to-[#ff00ff] p-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-white">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-black italic uppercase tracking-tighter">GTA+ Benefits</h2>
+                    <p class="font-bold opacity-80 uppercase tracking-widest text-xs mt-1">{gtaData.gtaPlus.duration}</p>
                 </div>
-            ))}
+                <div class="bg-white/20 backdrop-blur-md px-6 py-2 rounded-full font-black uppercase text-sm border border-white/30">
+                    Premium Member Exclusive
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] border border-zinc-700 bg-gradient-to-br from-zinc-900 via-black to-zinc-900 shadow-2xl mb-20">
-      <div class="relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tighter text-white">GTA+ Benefits</h2>
-          <div class="md:text-right">
-              <p class="text-zinc-500 text-[10px] font-black uppercase leading-none">Ending {gtaData.gtaPlus.ending}</p>
-          </div>
+        <div class="p-8 md:p-12 space-y-12">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p class="text-[#ff00ff] font-black uppercase tracking-[0.2em] text-xs">Free Vehicles & Paints</p>
+                    <div class="grid grid-cols-1 gap-2">
+                        {gtaData.gtaPlus.freeVehicles.map(v => <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-white font-bold">{v}</div>)}
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-[#ff00ff] font-black uppercase tracking-[0.2em] text-xs">Free Clothing</p>
+                    <div class="grid grid-cols-1 gap-2">
+                        {gtaData.gtaPlus.clothing.map(c => <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-white font-bold">{c}</div>)}
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p class="text-[#ff00ff] font-black uppercase tracking-[0.2em] text-xs">Active Multipliers</p>
+                    <div class="grid grid-cols-1 gap-2">
+                        {gtaData.gtaPlus.bonuses.map(b => <div class="bg-[#ff00ff]/10 p-4 rounded-xl border border-[#ff00ff]/20 text-white font-bold">{b}</div>)}
+                    </div>
+                    <div class="mt-6">
+                        <p class="text-[#ff00ff] font-black uppercase tracking-[0.2em] text-xs mb-4">Exclusive Discounts</p>
+                        {gtaData.gtaPlus.discounts.map(d => <div class="text-white font-black text-xl italic">{d}</div>)}
+                    </div>
+                </div>
+                <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                    <p class="text-[#ff00ff] font-black uppercase tracking-[0.2em] text-xs mb-4 text-center">Vinewood Club Showroom (20% OFF)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+                        {gtaData.gtaPlus.vinewoodShowroom.map(car => <li class="text-white text-xs font-bold list-none">• {car}</li>)}
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 pt-8 border-t border-white/10">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-black italic uppercase text-white tracking-tighter">Member Persistent Perks</h3>
+                    <div class="grid grid-cols-1 gap-y-3">
+                        {gtaData.gtaPlus.persistent.map(perk => (
+                            <div class="flex items-center gap-3 text-zinc-400">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-[#ff00ff]"></i>
+                                <span class="text-xs font-bold uppercase">{perk}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-black italic uppercase text-white tracking-tighter">Vinewood Club Access</h3>
+                    <div class="grid grid-cols-1 gap-y-4">
+                        {gtaData.gtaPlus.vinewoodClub.map(benefit => (
+                            <div class="bg-[#5a009d]/20 p-4 rounded-xl border border-[#5a009d]/30">
+                                <p class="text-white text-[11px] font-bold uppercase leading-tight">{benefit}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-            <p class="text-gold text-[10px] font-black uppercase mb-2">Free Ride</p>
-            <h3 class="text-xl font-bold text-white uppercase">{gtaData.gtaPlus.freeVehicle}</h3>
-          </div>
-          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-            <p class="text-gold text-[10px] font-black uppercase mb-2">Active Bonuses</p>
-            <p class="text-white text-[10px] font-bold uppercase leading-relaxed">{gtaData.gtaPlus.bonuses}</p>
-          </div>
-          <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-            <p class="text-gold text-[10px] font-black uppercase mb-2">Persistent Perks</p>
-            <p class="text-[10px] text-zinc-400 font-bold uppercase leading-tight">100-Car Garage • Free CEO Skills • Business Staff Management • Daily Lucky Spin</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
+
   </div>
 </MainLayout>
+
+<script>
+  // Refresh Lucide icons after Astro render
+  import { createIcons, CheckCircle, Car, Wrench, MapPin, Timer, Tag, Gift } from 'lucide';
+  createIcons({
+    icons: { CheckCircle, Car, Wrench, MapPin, Timer, Tag, Gift }
+  });
+</script>

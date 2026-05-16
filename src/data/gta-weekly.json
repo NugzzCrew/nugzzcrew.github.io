@@ -7,54 +7,51 @@
   "prizeRide": "Benefactor Krieger",
   "bonuses": [
     { "category": "4X GTA$ & RP", "name": "Land Races", "value": "4X" },
-    { "category": "3X GTA$ & RP", "name": "HSW Time Trials", "value": "3X" },
+    { "category": "3X GTA$ & RP", "name": "HSW Time Trial", "value": "3X" },
     { "category": "3X GTA$ & RP", "name": "Simeon Contact Missions", "value": "3X" },
     { "category": "2X GTA$ & RP", "name": "Tow Truck Service", "value": "2X" },
     { "category": "2X GTA$ & RP", "name": "Community Race Series", "value": "2X" },
     { "category": "2X GTA$", "name": "Salvage Yard Daily Income", "value": "2X" },
-    { "category": "2X GTA$", "name": "Salvage Yard Robbery Sales", "value": "2X" }
+    { "category": "2X GTA$", "name": "Salvage Yard Robbery Sales & Value", "value": "2X" }
   ],
+  "motorMadness": [
+    "Log in to receive the Rockstar Helmet",
+    "Purchase PDM vehicle for Rockstar Racing Suit",
+    "Purchase Luxury Autos vehicle for LS Customs Varsity Jacket",
+    "Purchase LSCM vehicle for Blue Banshee Tee",
+    "FREE Horn Customization & LS Car Meet Membership"
+  ],
+  "discounts": {
+    "fifty": ["LS Tuners Racing Suits", "HSW Performance Upgrades", "Benny’s Conversion Upgrades", "Turbo Tuning", "Blue and Yellow Tire Smoke"],
+    "forty": ["Salvage Yard Properties & Mods", "Eclipse Blvd Garage", "Bravado Banshee GTS", "Canis Castigator", "Dewbauchee JB 700", "Dewbauchee Rapid GT Cabrio", "Grotti Itali RSX", "Karin 190z", "Lampadati Furore GT", "Nagasaki Shotaro", "Överflöd Pipistrello", "Western Rat Bike"],
+    "thirty": ["Bravado Gauntlet Classic", "Coil Brawler", "Declasse Impaler SZ", "Lampadati Novak", "Übermacht Rhinehart"]
+  },
   "salvageYard": [
-    { "robbery": "The Podium Robbery", "name": "Coquette D10 (LS Pounders Plate)", "type": "Claimable" },
+    { "robbery": "The Podium Robbery", "name": "Invetero Coquette D10 (LS Pounders Plate)", "type": "CLAIMABLE" },
     { "robbery": "The Gangbanger Robbery", "name": "Vapid Dominator GT", "type": "Standard" },
     { "robbery": "The Duggan Robbery", "name": "Karin Previon", "type": "Low Tier" }
   ],
-  "simeonVehicles": ["JB 700", "Rapid GT Cabrio", "Karin 190z", "Furore GT", "Rat Bike"],
-  "luxuryAutos": ["Sentinel XS4", "Vapid FMJ MK V (Water Like)"],
+  "simeonVehicles": ["Dewbauchee JB 700", "Dewbauchee Rapid GT Cabrio", "Karin 190z", "Lampadati Furore GT", "Western Rat Bike"],
+  "luxuryAutos": ["Übermacht Sentinel XS4", "Vapid FMJ MK V (Water Like Livery)"],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 5 in 5 LSCM Races",
-    "testTrack": ["Banshee GTS", "Itali RSX (Monochrome)", "Pipistrello (Street Camo)"]
+    "prizeRideRequirement": "Place Top 5 in five Races in the LS Car Meet Series",
+    "testTrack": ["Bravado Banshee GTS", "Grotti Itali RSX (Monochrome)", "Överflöd Pipistrello (Street Camo)"],
+    "hsw": "Weeny Issi Rally"
   },
   "timeTrials": {
     "regular": "Galileo Park",
-    "hsw": "East Vinewood to Vespucci",
+    "hsw": "East Vinewood to Vespucci Beach",
     "premium": "The Commute"
   },
-  "gunVan": {
-    "primary": "Compact EMP Launcher (40% Off)",
-    "gtaPlus": "Precision Rifle (40% Off)"
-  },
-  "unlocks": [
-    { "requirement": "Login Reward", "title": "Rockstar Helmet" },
-    { "requirement": "PDM Purchase", "title": "Rockstar Racing Suit" },
-    { "requirement": "Luxury Purchase", "title": "LS Customs Varsity Jacket" },
-    { "requirement": "LSCM Purchase", "title": "Blue Banshee Tee" },
-    { "requirement": "All Players", "title": "Free LSCM Membership & Horns" }
-  ],
-  "majorDiscounts": [
-    "40% OFF: Salvage Yard Properties & Mods",
-    "40% OFF: Eclipse Blvd Garage (50-Car)",
-    "40% OFF: Banshee GTS, Castigator, JB 700",
-    "40% OFF: Rapid GT Cabrio, Itali RSX, 190z",
-    "40% OFF: Furore GT, Shotaro, Pipistrello, Rat Bike",
-    "30% OFF: Gauntlet Classic, Brawler, Impaler SZ",
-    "30% OFF: Lampadati Novak, Übermacht Rhinehart",
-    "50% OFF: HSW & Benny's Upgrades, Turbo Tuning",
-    "50% OFF: LS Tuners Racing Suits"
-  ],
+  "gunVan": ["Compact EMP Launcher (40% OFF)", "Precision Rifle (40% OFF for GTA+)"],
   "gtaPlus": {
-    "ending": "June 10, 2026",
-    "freeVehicle": "Übermacht Sentinel GTS",
-    "bonuses": "4X Junk Energy Skydives | 2X Import/Export | 2X Special Vehicle Work | 2X Junk Time Trials"
+    "duration": "May 7 - June 10, 2026",
+    "freeVehicles": ["Übermacht Sentinel GTS", "Junk Energy Inductor Bike", "Magenta/Cyan Flip Chameleon Paint & Wheel Paint"],
+    "clothing": ["Junk x Jackal Tee (Sports)", "Junk x Jackal Wide Pants (Designer Jeans)"],
+    "bonuses": ["4X GTA$ & RP on Junk Energy Skydives", "2X GTA$ & RP on Import/Export Sell Missions", "2X GTA$ & RP on Special Vehicle Work", "2X GTA$ & RP on Junk Energy Time Trials"],
+    "discounts": ["60% OFF Executive Offices, Upgrades & Mods"],
+    "vinewoodShowroom": ["Annis S80RR (eCola)", "Bollokan Envisage (Junk Race)", "Bravado Gauntlet Hellfire", "Coil Cyclone II", "Declasse Scramjet", "HVY Nightshark (Galaxy)", "Pegassi Oppressor (Santo Capra)", "Pegassi Toreador (Shark Camo)", "Pegassi Zentorno (Rockstar Motorsport)"],
+    "persistent": ["FREE Taxi services (shorter cooldown)", "FREE CEO/VIP Abilities", "FREE vehicle requests via Interaction Menu", "Remote Access to Business Staff", "Extra Lucky Wheel Spin Every Day", "Claim All Business Earnings", "Gun Van blipped with extra discounts", "GTA$500,000 every month", "15% extra bonus on Shark Cards"],
+    "vinewoodClub": ["Showroom: Rotating premium vehicles (20% off)", "Garage: 100-car personal storage", "Hangar: 5 extra storage slots", "Workshop: Discounted mods (No rank req)", "App: Manage earnings, ammo, and requests"]
   }
 }
