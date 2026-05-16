@@ -25,44 +25,37 @@ const socials = [
     <head>
         <meta charset="utf-8" />
         <title>{title} | Official Nugzz Crew</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <link rel="icon" type="image/png" href="/Logo.png" />
-        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v10/font/simple-icons.min.css" />
         <script src="https://unpkg.com/lucide@latest"></script>
     </head>
-    <body class="bg-black text-white antialiased overflow-x-hidden">
+    <body class="bg-black text-white antialiased">
         <nav class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800 px-3 py-3 md:px-4">
             <div class="max-w-7xl mx-auto flex flex-col items-center gap-3 md:grid md:grid-cols-3 md:gap-0">
                 
                 <div class="flex md:justify-start w-full justify-center">
                     <a href="/" class="flex items-center gap-2 group transition-opacity hover:opacity-90">
                         <img src="/Logo.png" alt="Logo" class="w-6 h-6 md:w-9 md:h-9 object-contain" />
-                        <span class="text-[11px] sm:text-sm md:text-xl font-header text-gold uppercase tracking-tighter whitespace-nowrap">
+                        <span class="text-[clamp(11px,3vw,18px)] font-header text-gold uppercase tracking-tighter whitespace-nowrap">
                             Official Nugzz Crew
                         </span>
                     </a>
                 </div>
 
-                <div class="flex flex-col items-center gap-1 w-full">
-                    <div class="flex justify-center gap-4 md:gap-6 text-[9px] md:text-xs uppercase font-bold tracking-widest text-zinc-400">
+                <div class="flex flex-col items-center gap-1.5 w-full">
+                    <div class="flex justify-center gap-4 text-[9px] md:text-xs uppercase font-bold tracking-widest text-zinc-400">
                         <a href="/" class="hover:text-gold transition-colors">Home</a>
                         <a href="/gta" class="hover:text-gold transition-colors">GTA Bonuses</a>
                     </div>
-                    <a href="https://www.youtube.com/c/OfficialNugzzCrew/join" target="_blank" class="text-[8px] md:text-[10px] text-gold-bright hover:text-white uppercase tracking-[0.2em] font-black text-center transition-colors px-2">
+                    <a href="https://www.youtube.com/c/OfficialNugzzCrew/join" target="_blank" class="text-[clamp(8px,2vw,10px)] text-gold-bright uppercase tracking-[0.2em] font-black text-center transition-colors">
                         Join The Fam Bam Membership
                     </a>
                 </div>
 
                 <div class="flex justify-center md:justify-end gap-1.5 md:gap-3 w-full">
                     {socials.map((social) => (
-                        <a 
-                            href={social.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="group transition-transform hover:scale-110 active:scale-95"
-                        >
+                        <a href={social.url} target="_blank" rel="noopener noreferrer" class="group transition-transform hover:scale-110 active:scale-95">
                             <div class="w-4 h-4 md:w-6 md:h-6 flex items-center justify-center">
                                 {social.si ? (
                                     <i class={`si ${social.si} text-[10px] md:text-base text-zinc-400 group-hover:text-gold transition-colors`}></i>
@@ -73,11 +66,10 @@ const socials = [
                         </a>
                     ))}
                 </div>
-
             </div>
         </nav>
         
-        <main class="overflow-x-hidden">
+        <main class="relative z-10">
             <slot /> 
         </main>
 
@@ -94,10 +86,19 @@ const socials = [
 </html>
 
 <style is:global>
-    /* Absolute guard against horizontal scroll */
-    html, body {
-        max-width: 100%;
-        overflow-x: hidden;
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    /* IMPORTANT: We removed 'overflow-x: hidden' from the 'html' tag. 
+       Sometimes 'overflow-x: hidden' on the <html> or <body> 
+       breaks 'position: sticky' in certain browsers.
+    */
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow-x: hidden; /* Keep it on body only */
     }
 
     .si {
@@ -105,10 +106,5 @@ const socials = [
         align-items: center !important;
         justify-content: center !important;
         line-height: 1 !important;
-    }
-
-    [data-lucide] {
-        display: inline-block;
-        vertical-align: middle;
     }
 </style>
