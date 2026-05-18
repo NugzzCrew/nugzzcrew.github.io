@@ -1,0 +1,202 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+// Logic: Filters colors from your CSV where 'Obtainable' is FALSE
+const textures = ["MP100 (Super Shiny)", "Other (Shiny)", "Brushed (Shiny+Matte)", "Matte", "Worn"];
+
+const primaryUnobtainable = [
+  "MP100", "Chrome", "Secret Gold", "Pure White", "Modded Blue", "Modded Green",
+  "Worn Honey Beige", "Worn Golden Red", "Worn Light Orange", "Worn Blue Silver", 
+  "Worn Olive Army Green", "Matte Foliage Green", "Matte Desert Tan", "Matte Dark Earth"
+];
+
+// Pulled from your CSV "Obtainable Interior/Trim" == FALSE
+const trimUnselected = ["Pure White", "Silver", "MP100", "Chrome", "Black", "Blue", "Brown", "Dark Blue", "Dark Earth", "Dark Red", "Desert Tan", "Foliage Green", "Gray"];
+
+// Pulled from your CSV "Obtainable Dashboard/Accent" == FALSE
+const accentUnselected = ["Pure White", "Secret Gold", "MP100", "Chrome", "Black", "Blue", "Brown", "Dark Blue", "Dark Earth", "Dark Red", "Desert Tan", "Foliage Green", "Gray", "Hot Pink"];
+
+const rimStyles = ["Bespoke", "Originals", "F1", "Street", "Stock"];
+const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint Green", "Lime Green", "Yellow", "Golden Shower", "Orange", "Red", "Poncho Pink", "Hot Pink", "Purple", "Blacklight"];
+---
+
+<MainLayout title="DMO Spec Generator">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="mb-10 text-center">
+      <h1 class="text-4xl font-header text-gold uppercase tracking-tighter mb-2">DMO Spec Generator</h1>
+      <p class="text-zinc-400 uppercase text-xs tracking-[0.2em]">Build your spec and paste it into your ticket</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <div class="lg:col-span-7 bg-zinc-900/40 p-6 md:p-8 rounded-3xl border border-zinc-800 space-y-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label-text">Vehicle or Set</label>
+            <input type="text" id="vehicle" placeholder="e.g. Buffalo STX" class="input-field" />
+          </div>
+          <div>
+            <label class="label-text">Plate Text (8 Chars)</label>
+            <input type="text" id="plate" maxlength="8" placeholder="NUGZZ" class="input-field uppercase font-mono" />
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="section-title text-gold">Exterior Paint</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="label-text">Paint Texture</label>
+              <select id="texture" class="input-field">
+                {textures.map(t => <option value={t}>{t}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="label-text">Primary Color</label>
+              <select id="primary" class="input-field">
+                {primaryUnobtainable.map(c => <option value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="label-text">Secondary Color</label>
+              <select id="secondary" class="input-field">
+                {primaryUnobtainable.map(c => <option value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="label-text">Pearlescent (No RGB)</label>
+              <input type="text" id="pearl" placeholder="e.g. Race Yellow" class="input-field" />
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="section-title text-gold">Interior Customization</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="label-text">Interior Trim Color</label>
+              <select id="trim" class="input-field">
+                {trimUnselected.map(c => <option value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="label-text">Dashboard Accent Color</label>
+              <select id="accent" class="input-field">
+                {accentUnselected.map(c => <option value={c}>{c}</option>)}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="section-title text-gold">Wheels & Lighting</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="label-text">Rim Style</label>
+              <select id="rimStyle" class="input-field">
+                {rimStyles.map(s => <option value={s}>{s}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="label-text">Rim Color</label>
+              <input type="text" id="rimColor" placeholder="e.g. Pure White" class="input-field" />
+            </div>
+            <div>
+              <label class="label-text">Headlights (No RGB)</label>
+              <select id="headlights" class="input-field">
+                {headlightColors.map(h => <option value={h}>{h}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="label-text">Window Tint</label>
+              <select id="windows" class="input-field">
+                <option value="Clear">Clear</option>
+                <option value="Green">Green</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="label-text">Neon Color / Horn / Livery / Notes</label>
+            <textarea id="notes" rows="3" placeholder="Enter RGB values or extra details..." class="input-field resize-none"></textarea>
+          </div>
+        </div>
+
+        <button id="generateBtn" class="w-full bg-gold hover:bg-white text-black font-black uppercase py-5 rounded-2xl tracking-[0.3em] transition-all transform active:scale-95">
+          Generate Spec Sheet
+        </button>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="sticky top-24">
+            <div class="bg-black border-2 border-dashed border-zinc-800 rounded-3xl p-6 flex flex-col">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-[10px] text-zinc-500 uppercase font-black tracking-widest">Discord Spec:</span>
+                    <span id="copyStatus" class="text-[10px] text-green-500 uppercase font-black hidden">Copied!</span>
+                </div>
+                <textarea id="output" readonly class="bg-transparent text-gold-bright font-mono text-sm h-[450px] w-full resize-none outline-none border-none" placeholder="Build your car on the left..."></textarea>
+                <button id="copyBtn" class="mt-6 w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold uppercase py-4 rounded-xl tracking-widest transition-all">
+                    Copy To Clipboard
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .label-text { @apply block text-[10px] text-zinc-500 uppercase font-black mb-2 tracking-wider; }
+  .input-field { @apply w-full bg-black border border-zinc-800 rounded-xl p-3 text-white outline-none focus:border-gold transition-all text-sm; }
+  .section-title { @apply text-[11px] uppercase font-black tracking-[0.4em] pb-2 border-b border-zinc-800 mb-2; }
+  .text-gold-bright { color: #D4AF37; }
+</style>
+
+<script>
+  const generateBtn = document.getElementById('generateBtn');
+  const copyBtn = document.getElementById('copyBtn');
+  const output = document.getElementById('output');
+  const copyStatus = document.getElementById('copyStatus');
+
+  generateBtn.addEventListener('click', () => {
+    const v = (document.getElementById('vehicle') as HTMLInputElement).value || "Not Specified";
+    const plate = (document.getElementById('plate') as HTMLInputElement).value || "Stock";
+    const texture = (document.getElementById('texture') as HTMLSelectElement).value;
+    const p = (document.getElementById('primary') as HTMLSelectElement).value;
+    const s = (document.getElementById('secondary') as HTMLSelectElement).value;
+    const pearl = (document.getElementById('pearl') as HTMLInputElement).value || "None";
+    const trim = (document.getElementById('trim') as HTMLSelectElement).value;
+    const accent = (document.getElementById('accent') as HTMLSelectElement).value;
+    const rimS = (document.getElementById('rimStyle') as HTMLSelectElement).value;
+    const rimC = (document.getElementById('rimColor') as HTMLInputElement).value || "Stock";
+    const lights = (document.getElementById('headlights') as HTMLSelectElement).value;
+    const windows = (document.getElementById('windows') as HTMLSelectElement).value;
+    const notes = (document.getElementById('notes') as HTMLTextAreaElement).value || "None";
+
+    const spec = `**🚀 NEW DMO SPEC SHEET**
+────────────────────
+🚘 **VEHICLE:** ${v}
+📟 **PLATE:** ${plate}
+🎨 **EXTERIOR:** ${texture}
+   • Primary: ${p}
+   • Secondary: ${s}
+   • Pearl: ${pearl}
+🛋️ **INTERIOR:**
+   • Trim Color: ${trim}
+   • Dash Accent: ${accent}
+🛞 **WHEELS:** ${rimS} (${rimC})
+💡 **LIGHTS:** ${lights}
+🪟 **WINDOWS:** ${windows}
+📝 **NOTES:** ${notes}
+────────────────────
+*Generated @ OfficialNugzzCrew.com*`;
+
+    (output as HTMLTextAreaElement).value = spec;
+  });
+
+  copyBtn.addEventListener('click', () => {
+    (output as HTMLTextAreaElement).select();
+    document.execCommand('copy');
+    copyStatus.classList.remove('hidden');
+    setTimeout(() => copyStatus.classList.add('hidden'), 2000);
+  });
+</script>
