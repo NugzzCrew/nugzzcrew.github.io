@@ -38,76 +38,77 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
           <div class="grid grid-cols-2 gap-4">
             <div>
                 <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Windows Tint:</label>
-                <select id="windows" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full">
+                <select id="windows" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full outline-none focus:border-gold">
                     <option value="Clear">Clear</option>
                     <option value="Green">Green</option>
                 </select>
             </div>
             <div>
-                <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Headlight Color (No RGB):</label>
-                <select id="headlights" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full">
+                <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Headlight Color:</label>
+                <select id="headlights" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full outline-none focus:border-gold">
                     {headlightAndNeonColors.filter(c => c !== "Custom RGB").map(h => <option value={h}>{h}</option>)}
                 </select>
             </div>
           </div>
 
-          <div id="rgbInputArea" class="bg-gold/10 p-4 rounded-xl border border-gold/50" style="display: none;">
+          <div id="rgbInputArea" class="bg-gold/10 p-4 rounded-xl border border-gold/50 shadow-[0_0_15px_rgba(212,175,55,0.1)]" style="display: none;">
             <label class="block text-[10px] text-gold uppercase font-black mb-2 tracking-widest">⚠️ ENTER SHARED RGB (R, G, B):</label>
             <input type="text" id="sharedRgb" placeholder="e.g. 212, 175, 55" class="w-full bg-black border-2 border-gold rounded-lg p-3 text-white text-sm font-mono outline-none" />
           </div>
 
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Neon Color or RGB:</label>
-            <select id="neon" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
-                {headlightAndNeonColors.map(c => <option value={c}>{c}</option>)}
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Paint Texture:</label>
-            <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
-              {textures.map(t => <option value={t}>{t}</option>)}
-            </select>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Neon Color or RGB:</label>
+              <select id="neon" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
+                  {headlightAndNeonColors.map(c => <option value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Paint Texture:</label>
+              <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
+                {textures.map(t => <option value={t}>{t}</option>)}
+              </select>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="space-y-1">
-                <label class="text-[10px] text-zinc-500 uppercase font-black">Primary Color or RGB:</label>
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Primary Color / RGB:</label>
                 <div class="flex gap-2 items-center">
                     <select id="primary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
                         {primaryUnselected.map(c => <option value={c}>{c}</option>)}
                     </select>
-                    <div id="primaryPrev" class="w-12 h-12 rounded-lg border-2 border-zinc-700 bg-zinc-800 shrink-0"></div>
+                    <div id="primaryPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0"></div>
                 </div>
             </div>
             <div class="space-y-1">
-                <label class="text-[10px] text-zinc-500 uppercase font-black">Secondary Color or RGB:</label>
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Secondary Color / RGB:</label>
                 <div class="flex gap-2 items-center">
                     <select id="secondary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
                         {secondaryUnselected.map(c => <option value={c}>{c}</option>)}
                     </select>
-                    <div id="secondaryPrev" class="w-12 h-12 rounded-lg border-2 border-zinc-700 bg-zinc-800 shrink-0"></div>
+                    <div id="secondaryPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0"></div>
                 </div>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="space-y-1">
-                <label class="text-[10px] text-zinc-500 uppercase font-black">Pearlescent (No RGB):</label>
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Pearlescent:</label>
                 <div class="flex gap-2 items-center">
                     <select id="pearl" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
                         {pearlUnselected.map(c => <option value={c}>{c}</option>)}
                     </select>
-                    <div id="pearlPrev" class="w-12 h-12 rounded-lg border-2 border-zinc-700 bg-zinc-800 shrink-0"></div>
+                    <div id="pearlPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0"></div>
                 </div>
             </div>
             <div class="space-y-1">
-                <label class="text-[10px] text-zinc-500 uppercase font-black">Interior Color (No RGB):</label>
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Interior Color:</label>
                 <div class="flex gap-2 items-center">
                     <select id="interior" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
                         {interiorUnselected.map(c => <option value={c}>{c}</option>)}
                     </select>
-                    <div id="interiorPrev" class="w-12 h-12 rounded-lg border-2 border-zinc-700 bg-zinc-800 shrink-0"></div>
+                    <div id="interiorPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0"></div>
                 </div>
             </div>
           </div>
@@ -118,32 +119,32 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
               <input type="text" id="rimStyle" placeholder="e.g. Bennys Bespoke" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold" />
             </div>
             <div class="space-y-1">
-                <label class="text-[10px] text-zinc-500 uppercase font-black">Rim Color (No RGB):</label>
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Rim Color:</label>
                 <div class="flex gap-2 items-center">
                     <select id="rimColor" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
                         {rimUnselected.map(c => <option value={c}>{c}</option>)}
                     </select>
-                    <div id="rimColorPrev" class="w-12 h-12 rounded-lg border-2 border-zinc-700 bg-zinc-800 shrink-0"></div>
+                    <div id="rimColorPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0"></div>
                 </div>
             </div>
           </div>
 
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Tire Design:</label>
-            <select id="tires" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
-              {tireDesigns.map(d => <option value={d}>{d}</option>)}
-            </select>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Horn:</label>
-              <input type="text" id="horn" placeholder="Horn" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none" />
+              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Tire Design:</label>
+              <select id="tires" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
+                {tireDesigns.map(d => <option value={d}>{d}</option>)}
+              </select>
             </div>
             <div>
               <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Livery:</label>
-              <input type="text" id="livery" placeholder="Livery" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none" />
+              <input type="text" id="livery" placeholder="Livery Name" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold" />
             </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Horn:</label>
+            <input type="text" id="horn" placeholder="e.g. San Andreas Loop" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold" />
           </div>
         </div>
 
@@ -155,7 +156,8 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
       <div class="lg:col-span-5">
         <div class="sticky top-24">
           <div class="bg-black border-2 border-dashed border-zinc-800 rounded-3xl p-6">
-            <textarea id="finalOutput" readonly class="bg-transparent font-mono text-sm h-[500px] w-full resize-none outline-none border-none text-gold" placeholder="Ready for NUGZZ..."></textarea>
+            <span class="text-[10px] text-zinc-500 uppercase font-black mb-4 block">Discord Output:</span>
+            <textarea id="finalOutput" readonly class="bg-transparent font-mono text-sm h-[520px] w-full resize-none outline-none border-none text-gold" placeholder="Ready for NUGZZ..."></textarea>
             <button id="copyFinal" class="mt-4 w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold uppercase py-4 rounded-xl transition-all">
               Copy To Clipboard
             </button>
