@@ -11,7 +11,7 @@ const rimUnselected = primaryUnselected.slice(1);
 const interiorUnselected = primaryUnselected.slice(1);
 
 const textures = ["Metallic", "Rim", "Utility", "MP100(Super Shiny)", "Other(Shiny)", "Brushed(Shiny/Matte)", "Matte", "Worn"];
-const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint Green", "Lime Green", "Yellow", "Golden Shower", "Orange", "Red", "Poncho Pink", "Hot Pink", "Purple", "Blacklight"];
+const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "Electric Blue", "Mint Green", "Lime Green", "Yellow", "Golden Shower", "Orange", "Red", "Poncho Pink", "Hot Pink", "Purple", "Blacklight"];
 ---
 
 <MainLayout title="DMO Generator">
@@ -54,9 +54,20 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
             </div>
           </div>
 
-          <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-            {textures.map(t => <option value={t}>{t}</option>)}
-          </select>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Paint Texture:</label>
+                <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
+                    {textures.map(t => <option value={t}>{t}</option>)}
+                </select>
+            </div>
+            <div class="space-y-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Neon Color:</label>
+                <select id="neon" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
+                    {headlightAndNeonColors.map(c => <option value={c}>{c}</option>)}
+                </select>
+            </div>
+          </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1">
@@ -80,30 +91,46 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" id="rimStyle" placeholder="Rim Style (Bennys, etc)" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
-            <div class="flex gap-2">
-                <select id="rimColor" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm color-select">
-                    {rimUnselected.map(c => <option value={c}>{c}</option>)}
-                </select>
-                <div id="rimColorPrev" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-900"></div>
+            <div class="space-y-1">
+              <label class="text-[10px] text-zinc-500 uppercase font-black">Rim Style:</label>
+              <input type="text" id="rimStyle" placeholder="e.g. Bennys" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
+            </div>
+            <div class="space-y-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Rim Color:</label>
+                <div class="flex gap-2">
+                    <select id="rimColor" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm color-select">
+                        {rimUnselected.map(c => <option value={c}>{c}</option>)}
+                    </select>
+                    <div id="rimColorPrev" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-900"></div>
+                </div>
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
-            <select id="headlights" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                {headlightColors.map(h => <option value={h}>{h}</option>)}
-            </select>
-            <select id="windows" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                <option value="Clear">Clear Windows</option>
-                <option value="Green">Green Windows</option>
-            </select>
+            <div class="space-y-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Headlights:</label>
+                <select id="headlights" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full">
+                    {headlightAndNeonColors.filter(c => c !== "Custom RGB").map(h => <option value={h}>{h}</option>)}
+                </select>
+            </div>
+            <div class="space-y-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Windows:</label>
+                <select id="windows" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full">
+                    <option value="Clear">Clear</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
           </div>
-
-          <input type="text" id="neon" placeholder="Neon Color/RGB" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
           
-          <div class="grid grid-cols-2 gap-4">
-            <input type="text" id="horn" placeholder="Horn" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
-            <input type="text" id="livery" placeholder="Livery" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="space-y-1">
+              <label class="text-[10px] text-zinc-500 uppercase font-black">Horn:</label>
+              <input type="text" id="horn" placeholder="Horn" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
+            </div>
+            <div class="space-y-1">
+              <label class="text-[10px] text-zinc-500 uppercase font-black">Livery:</label>
+              <input type="text" id="livery" placeholder="Livery" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
+            </div>
           </div>
         </div>
 
@@ -134,11 +161,13 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
 
   const primary = document.getElementById('primary');
   const secondary = document.getElementById('secondary');
+  const neon = document.getElementById('neon');
   const rgbArea = document.getElementById('rgbInputArea');
 
-  // Toggle RGB Box
+  // Toggle RGB Box (Linked to Primary, Secondary, and Neon)
   function toggleRgb() {
-    rgbArea.style.display = (primary.value === "Custom RGB" || secondary.value === "Custom RGB") ? "block" : "none";
+    const needsRgb = (primary.value === "Custom RGB" || secondary.value === "Custom RGB" || neon.value === "Custom RGB");
+    rgbArea.style.display = needsRgb ? "block" : "none";
   }
 
   // Update Previews
@@ -148,7 +177,7 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
     if (s && p) p.style.backgroundColor = hexCodes[s.value] || "#111111";
   }
 
-  [primary, secondary].forEach(el => el.addEventListener('change', () => { toggleRgb(); setPrev(el.id); }));
+  [primary, secondary, neon].forEach(el => el.addEventListener('change', () => { toggleRgb(); setPrev(el.id); }));
   ['pearl', 'interior', 'rimColor'].forEach(id => {
     document.getElementById(id).addEventListener('change', () => setPrev(id));
   });
@@ -160,6 +189,7 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
     
     const pOut = primary.value === "Custom RGB" ? `RGB (${sRgb})` : primary.value;
     const sOut = secondary.value === "Custom RGB" ? `RGB (${sRgb})` : secondary.value;
+    const nOut = neon.value === "Custom RGB" ? `RGB (${sRgb})` : neon.value;
 
     const outputText = `**🚀 DMO SPEC SHEET**
 ────────────────────
@@ -167,8 +197,8 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
 📟 **Plate:** ${val('plate')}
 🪟 **Windows:** ${val('windows')}
 💡 **Headlights:** ${val('headlights')}
+🌈 **Neon:** ${nOut}
 🎨 **Texture:** ${val('texture')}
-🌈 **Neon/RGB:** ${val('neon')}
 🖌️ **Primary:** ${pOut}
 🖌️ **Secondary:** ${sOut}
 ✨ **Pearl:** ${val('pearl')}
