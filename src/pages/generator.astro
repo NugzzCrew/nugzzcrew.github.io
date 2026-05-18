@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-// DATA EXTRACTED FROM COLOR SHENANIGANS CSV (Obtainable = FALSE)
+// DATA FROM CSV
 const primaryUnselected = ["Custom RGB", "Alloy", "Anthracite Gray", "Baby Blue", "BeechWood Brown", "Bison Brown", "Black", "Black Poly", "Black Steel", "Blaze Red", "Bleached Brown", "Blue", "Blue Silver", "Bluish Silver", "Bright Blue/Slate Blue", "Bright Green", "Bright Orange", "Bright Purple", "Bright Red", "Bronze", "Brown", "Brushed Aluminium", "Brushed Black Steel", "Brushed Gold", "Brushed Steel", "Cabernet Red", "Candy Red", "Carbon Black", "Cast Iron Silver", "Champagne", "Chocolate Brown", "Chrome", "Cream", "Creek Brown", "Dark Blue", "Dark Brown", "Dark Earth", "Dark Green", "Dark Red", "Dark Silver", "Dark Steel", "Desert Tan", "Dew Yellow/Yellow Bird", "Diamond Blue", "Epsilon Blue", "Feltzer Brown", "Fluorescent Blue", "Foliage Green", "Forest Green", "Formula Red", "Frost White", "Galaxy Blue", "Garnet Red", "Gasoline Green", "Gold", "Golden Red", "Grace Red", "Graphite", "Gray", "Green", "Green Bright", "Gun Metal", "Harbor Blue", "Honey Beige", "Hot Pink", "Hunter Green", "Ice White", "Lava Red", "Light Blue", "Light Brown", "Light Gray", "Light Orange", "Lightning Blue", "Lime Green", "MP100", "Maple Brown", "Mariner Blue", "Maui Blue Poly", "Medium Brown", "Midnight Blue", "Midnight Purple", "Midnight Purple/V Dark Blue", "Midnight Silver", "Moss Brown", "Nautical Blue", "Off White", "Olive Army Green", "Olive Drab", "Olive Green", "Orange", "Orange 2", "Pea Green/Securicor Green", "Pfister Pink", "Police Blue", "Pure Gold", "Pure White", "Race Yellow", "Racing Blue", "Racing Green", "Red", "Rolled Steel", "Saddle Brown", "Salmon Pink", "Sandy Brown", "Saxon Blue", "Schafter Purple", "Sea Foam Blue", "Sea Green", "Sea Wash", "Shadow Silver", "Shawdow Silver", "Sienna Brown", "Silver", "Silver Grey", "Spinnaker Purple", "Stone Silver", "Straw Beige", "Straw Brown", "Sunrise Orange", "Sunset Red", "Surf Blue", "Taxi Yellow", "Torino Red", "Ultra Blue", "White", "Wine Red", "Woodbeach Brown", "Yellow"];
 
 const secondaryUnselected = ["Custom RGB", "Alloy", "Baby Blue", "Black", "Black Poly", "Blue", "Blue Silver", "Bright Blue/Slate Blue", "Bright Red", "Brown", "Champagne", "Dark Blue", "Dark Brown", "Dark Green", "Dark Red", "Dark Silver", "Epsilon Blue", "Fluorescent Blue", "Garnet Red", "Golden Red", "Graphite", "Green", "Green Bright", "Gun Metal", "Honey Beige", "Hunter Green", "Light Brown", "Light Orange", "Lightning Blue", "MP100", "Maui Blue Poly", "Medium Brown", "Midnight Blue", "Off White", "Olive Army Green", "Orange", "Orange 2", "Pea Green/Securicor Green", "Police Blue", "Pure White", "Red", "Sea Foam Blue", "Sea Wash", "Shadow Silver", "Shawdow Silver", "Silver", "Silver Grey", "Straw Beige", "Taxi Yellow", "White"];
@@ -10,8 +10,7 @@ const pearlUnselected = primaryUnselected.slice(1);
 const rimUnselected = primaryUnselected.slice(1);
 const interiorUnselected = primaryUnselected.slice(1);
 
-const textures = ["MP100(Super Shiny)", "Other(Shiny)", "Brushed(Shiny/Matte)", "Matte", "Worn"];
-const tireDesigns = ["None", "White lines", "Classic", "Retro", "Red", "Blue"];
+const textures = ["Metallic", "Rim", "Utility", "MP100(Super Shiny)", "Other(Shiny)", "Brushed(Shiny/Matte)", "Matte", "Worn"];
 const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint Green", "Lime Green", "Yellow", "Golden Shower", "Orange", "Red", "Poncho Pink", "Hot Pink", "Purple", "Blacklight"];
 ---
 
@@ -19,132 +18,105 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
   <div class="max-w-5xl mx-auto px-4 py-12">
     <div class="mb-10 text-center">
       <h1 class="text-4xl font-header text-gold uppercase tracking-tighter mb-2">DMO Generator</h1>
-      <p class="text-zinc-400 uppercase text-xs tracking-[0.2em]">Build your spec for the Fam Bam</p>
+      <p class="text-zinc-400 uppercase text-xs tracking-[0.2em]">Crafted for the Fam Bam</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
       <div class="lg:col-span-7 bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800 space-y-6">
         
         <div class="space-y-4">
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Vehicle or Set:</label>
-            <input type="text" id="vehicle" placeholder="e.g. Buffalo STX" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
-          </div>
+          <input type="text" id="vehicle" placeholder="Vehicle Name" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
+          <input type="text" id="plate" maxlength="8" placeholder="Plate (8 Chars)" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm uppercase font-mono" />
 
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Plate Text:</label>
-            <input type="text" id="plate" maxlength="8" placeholder="NUGZZ" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm uppercase font-mono" />
-          </div>
-
-          <div id="rgbContainer" class="bg-gold/10 p-4 rounded-xl border border-gold/50 hidden">
-            <label class="block text-[10px] text-gold uppercase font-black mb-2 tracking-widest">⚠️ ENTER YOUR CUSTOM RGB HERE:</label>
-            <input type="text" id="customRgb" placeholder="e.g. 212, 175, 55" class="w-full bg-black border-2 border-gold rounded-lg p-3 text-white text-sm outline-none font-mono" />
+          <div id="rgbInputArea" class="bg-gold/10 p-4 rounded-xl border border-gold/50" style="display: none;">
+            <label class="block text-[10px] text-gold uppercase font-black mb-2 tracking-widest">⚠️ ENTER SHARED RGB (R, G, B):</label>
+            <input type="text" id="sharedRgb" placeholder="e.g. 212, 175, 55" class="w-full bg-black border-2 border-gold rounded-lg p-3 text-white text-sm font-mono" />
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="space-y-2">
-              <label class="block text-[10px] text-zinc-500 uppercase font-black">Primary Color:</label>
-              <div class="flex gap-2 items-center">
-                <select id="primary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                  {primaryUnselected.map(c => <option value={c}>{c}</option>)}
-                </select>
-                <div id="primaryPreview" class="w-12 h-12 rounded-lg border-2 border-zinc-700 bg-zinc-800 shrink-0"></div>
-              </div>
+            <div class="space-y-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Primary:</label>
+                <div class="flex gap-2">
+                    <select id="primary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm color-select">
+                        {primaryUnselected.map(c => <option value={c}>{c}</option>)}
+                    </select>
+                    <div id="primaryPrev" class="w-12 h-12 rounded-lg border border-zinc-700 bg-zinc-900"></div>
+                </div>
             </div>
-            <div class="space-y-2">
-              <label class="block text-[10px] text-zinc-500 uppercase font-black">Secondary Color:</label>
-              <div class="flex gap-2 items-center">
-                <select id="secondary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                  {secondaryUnselected.map(c => <option value={c}>{c}</option>)}
-                </select>
-                <div id="secondaryPreview" class="w-12 h-12 rounded-lg border-2 border-zinc-700 bg-zinc-800 shrink-0"></div>
-              </div>
+            <div class="space-y-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Secondary:</label>
+                <div class="flex gap-2">
+                    <select id="secondary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm color-select">
+                        {secondaryUnselected.map(c => <option value={c}>{c}</option>)}
+                    </select>
+                    <div id="secondaryPrev" class="w-12 h-12 rounded-lg border border-zinc-700 bg-zinc-900"></div>
+                </div>
             </div>
           </div>
 
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Paint Texture:</label>
-            <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-              {textures.map(t => <option value={t}>{t}</option>)}
-            </select>
-          </div>
+          <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
+            {textures.map(t => <option value={t}>{t}</option>)}
+          </select>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-             <div class="space-y-2">
-              <label class="block text-[10px] text-zinc-500 uppercase font-black">Pearlescent:</label>
-              <div class="flex gap-2 items-center">
-                <select id="pearl" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                  {pearlUnselected.map(c => <option value={c}>{c}</option>)}
-                </select>
-                <div id="pearlPreview" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-800"></div>
-              </div>
+            <div class="flex flex-col gap-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Pearl:</label>
+                <div class="flex gap-2">
+                    <select id="pearl" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm color-select">
+                        {pearlUnselected.map(c => <option value={c}>{c}</option>)}
+                    </select>
+                    <div id="pearlPrev" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-900"></div>
+                </div>
             </div>
-            <div class="space-y-2">
-              <label class="block text-[10px] text-zinc-500 uppercase font-black">Interior:</label>
-              <div class="flex gap-2 items-center">
-                <select id="interior" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                  {interiorUnselected.map(c => <option value={c}>{c}</option>)}
-                </select>
-                <div id="interiorPreview" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-800"></div>
-              </div>
+            <div class="flex flex-col gap-1">
+                <label class="text-[10px] text-zinc-500 uppercase font-black">Interior:</label>
+                <div class="flex gap-2">
+                    <select id="interior" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm color-select">
+                        {interiorUnselected.map(c => <option value={c}>{c}</option>)}
+                    </select>
+                    <div id="interiorPrev" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-900"></div>
+                </div>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Rim Style:</label>
-              <input type="text" id="rimStyle" placeholder="e.g. Bennys" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
-            </div>
-            <div class="space-y-2">
-              <label class="block text-[10px] text-zinc-500 uppercase font-black">Rim Color:</label>
-              <div class="flex gap-2 items-center">
-                <select id="rimColor" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                  {rimUnselected.map(c => <option value={c}>{c}</option>)}
+            <input type="text" id="rimStyle" placeholder="Rim Style (Bennys, etc)" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
+            <div class="flex gap-2">
+                <select id="rimColor" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm color-select">
+                    {rimUnselected.map(c => <option value={c}>{c}</option>)}
                 </select>
-                <div id="rimColorPreview" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-800"></div>
-              </div>
+                <div id="rimColorPrev" class="w-10 h-10 rounded-lg border border-zinc-700 bg-zinc-900"></div>
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
-            <div>
-                <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Windows:</label>
-                <select id="windows" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                    <option value="Clear">Clear</option>
-                    <option value="Green">Green</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Headlights:</label>
-                <select id="headlights" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-                    {headlightColors.map(h => <option value={h}>{h}</option>)}
-                </select>
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Tire Design:</label>
-            <select id="tires" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
-              {tireDesigns.map(d => <option value={d}>{d}</option>)}
+            <select id="headlights" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
+                {headlightColors.map(h => <option value={h}>{h}</option>)}
+            </select>
+            <select id="windows" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm">
+                <option value="Clear">Clear Windows</option>
+                <option value="Green">Green Windows</option>
             </select>
           </div>
 
+          <input type="text" id="neon" placeholder="Neon Color/RGB" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
+          
           <div class="grid grid-cols-2 gap-4">
             <input type="text" id="horn" placeholder="Horn" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
             <input type="text" id="livery" placeholder="Livery" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm" />
           </div>
         </div>
 
-        <button id="generateBtn" class="w-full bg-gold hover:bg-white text-black font-black uppercase py-5 rounded-xl tracking-widest transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-          Generate Spec Sheet
+        <button id="mainGenerateBtn" class="w-full bg-gold hover:bg-white text-black font-black uppercase py-5 rounded-xl tracking-widest transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+          Generate DMO Spec
         </button>
       </div>
 
       <div class="lg:col-span-5">
         <div class="sticky top-24">
-          <div class="bg-black border-2 border-dashed border-zinc-800 rounded-3xl p-6 flex flex-col">
-            <textarea id="output" readonly class="bg-transparent font-mono text-sm h-[500px] w-full resize-none outline-none border-none text-gold" placeholder="Output will appear here..."></textarea>
-            <button id="copyBtn" class="mt-6 w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold uppercase py-4 rounded-xl tracking-widest transition-all">
+          <div class="bg-black border-2 border-dashed border-zinc-800 rounded-3xl p-6">
+            <textarea id="finalOutput" readonly class="bg-transparent font-mono text-sm h-[500px] w-full resize-none outline-none border-none text-gold" placeholder="Ready for NUGZZ..."></textarea>
+            <button id="copyFinal" class="mt-4 w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold uppercase py-4 rounded-xl transition-all">
               Copy To Clipboard
             </button>
           </div>
@@ -155,83 +127,65 @@ const headlightColors = ["Default", "Pure White", "Blue", "Electric Blue", "Mint
 </MainLayout>
 
 <script is:inline>
-  // Expanded Color Map
-  const colorMap = {
-    "Pure White": "#FFFFFF", "Black": "#000000", "Red": "#FF0000", "Blue": "#0000FF", "Green": "#00FF00",
-    "Gold": "#FFD700", "Secret Gold": "#B8860B", "Chrome": "#C0C0C0", "Pure Gold": "#DAA520",
-    "Hot Pink": "#FF69B4", "Ice White": "#F4F9FF", "Midnight Purple": "#2E0854", "Ultra Blue": "#0045FF",
-    "Lime Green": "#32CD32", "Orange": "#FFA500", "Yellow": "#FFFF00", "Graphite": "#383838",
-    "Silver": "#AAAAAA", "Wine Red": "#722F37", "Baby Blue": "#89CFF0", "Dark Blue": "#00008B",
-    "Formula Red": "#B22222", "Epsilon Blue": "#003399", "Race Yellow": "#FFDB00", "MP100": "#E5E4E2"
+  // FULL HEX MAP FROM YOUR CSV
+  const hexCodes = {
+    "Alloy": "#666666", "Anthracite Gray": "#1C1D21", "Baby Blue": "#5082C3", "BeechWood Brown": "#2E2823", "Bison Brown": "#1C1916", "Black": "#0D0C10", "Black Poly": "#0D0C10", "Black Steel": "#212121", "Blaze Red": "#5F0A0A", "Bleached Brown": "#423930", "Blue": "#1A1F2B", "Blue Silver": "#313845", "Bluish Silver": "#4E5660", "Bright Green": "#009900", "Bright Orange": "#F27D00", "Bright Purple": "#400E52", "Bright Red": "#820707", "Bronze": "#413023", "Brown": "#261D17", "Brushed Aluminium": "#474E54", "Brushed Black Steel": "#121315", "Brushed Gold": "#4A3B2B", "Brushed Steel": "#272D33", "Cabernet Red": "#1F0206", "Candy Red": "#660000", "Carbon Black": "#050505", "Champagne": "#655C50", "Chocolate Brown": "#18100A", "Chrome": "#929292", "Cream": "#B8AE96", "Dark Blue": "#0A0C17", "Dark Brown": "#0E0D0B", "Dark Earth": "#231D19", "Dark Green": "#05130D", "Dark Red": "#1B0202", "Dark Silver": "#1E1E1E", "Dark Steel": "#12151A", "Desert Tan": "#6A5C4A", "Epsilon Blue": "#355990", "Feltzer Brown": "#2A211D", "Fluorescent Blue": "#00ADFF", "Foliage Green": "#242E25", "Forest Green": "#0C1410", "Formula Red": "#540000", "Frost White": "#ECF0F0", "Galaxy Blue": "#001426", "Garnet Red": "#350406", "Gasoline Green": "#051D21", "Gold": "#47351B", "Golden Red": "#450A0A", "Grace Red": "#3E0204", "Graphite": "#15191E", "Gray": "#333333", "Green": "#0E1F18", "Gun Metal": "#283034", "Honey Beige": "#574431", "Hot Pink": "#B01259", "Ice White": "#F0F0F0", "Lava Red": "#210202", "Light Blue": "#1D2D44", "Light Brown": "#3B3026", "Light Gray": "#737373", "Light Orange": "#CF6300", "Lime Green": "#244105", "MP100": "#637380", "Midnight Blue": "#010816", "Midnight Purple": "#070310", "Midnight Silver": "#0D1116", "Off White": "#B8B3A8", "Olive Army Green": "#24231E", "Olive Drab": "#1A1A11", "Orange": "#9E4006", "Police Blue": "#000620", "Pure Gold": "#3D2B13", "Pure White": "#FFFFFF", "Race Yellow": "#C29100", "Racing Blue": "#001C57", "Racing Green": "#001A12", "Red": "#690000", "Saddle Brown": "#321B13", "Salmon Pink": "#5F3D41", "Sandy Brown": "#423226", "Schafter Purple": "#373E52", "Sea Green": "#011A19", "Shadow Silver": "#121417", "Silver": "#515554", "Stone Silver": "#1E2329", "Sunset Red": "#400708", "Surf Blue": "#03394D", "Taxi Yellow": "#7F6500", "Torino Red": "#4E0303", "Ultra Blue": "#0045FF", "White": "#919191", "Wine Red": "#160102", "Yellow": "#B79600"
   };
 
-  const primarySel = document.getElementById('primary');
-  const secondarySel = document.getElementById('secondary');
-  const rgbContainer = document.getElementById('rgbContainer');
+  const primary = document.getElementById('primary');
+  const secondary = document.getElementById('secondary');
+  const rgbArea = document.getElementById('rgbInputArea');
 
-  function updateRgb() {
-    if (primarySel.value === "Custom RGB" || secondarySel.value === "Custom RGB") {
-      rgbContainer.classList.remove('hidden');
-    } else {
-      rgbContainer.classList.add('hidden');
-    }
+  // Toggle RGB Box
+  function toggleRgb() {
+    rgbArea.style.display = (primary.value === "Custom RGB" || secondary.value === "Custom RGB") ? "block" : "none";
   }
 
-  function updatePreview(id) {
-    const sel = document.getElementById(id);
-    const box = document.getElementById(id + 'Preview');
-    if (!sel || !box) return;
-    
-    // Default to a dark gray if color isn't in map (for Worn/Modded colors)
-    box.style.backgroundColor = colorMap[sel.value] || "#27272a";
+  // Update Previews
+  function setPrev(selId) {
+    const s = document.getElementById(selId);
+    const p = document.getElementById(selId + 'Prev');
+    if (s && p) p.style.backgroundColor = hexCodes[s.value] || "#111111";
   }
 
-  // Listeners
-  [primarySel, secondarySel].forEach(s => s.addEventListener('change', () => {
-    updateRgb();
-    updatePreview(s.id);
-  }));
-
+  [primary, secondary].forEach(el => el.addEventListener('change', () => { toggleRgb(); setPrev(el.id); }));
   ['pearl', 'interior', 'rimColor'].forEach(id => {
-    document.getElementById(id).addEventListener('change', () => updatePreview(id));
+    document.getElementById(id).addEventListener('change', () => setPrev(id));
   });
 
-  // Initial update
-  updateRgb();
-  ['primary', 'secondary', 'pearl', 'interior', 'rimColor'].forEach(id => updatePreview(id));
-
-  document.getElementById('generateBtn').addEventListener('click', () => {
+  // GENERATE ACTION
+  document.getElementById('mainGenerateBtn').addEventListener('click', () => {
     const val = (id) => document.getElementById(id).value;
-    const rgb = val('customRgb');
+    const sRgb = val('sharedRgb');
     
-    const p = primarySel.value === "Custom RGB" ? `RGB (${rgb})` : primarySel.value;
-    const s = secondarySel.value === "Custom RGB" ? `RGB (${rgb})` : secondarySel.value;
+    const pOut = primary.value === "Custom RGB" ? `RGB (${sRgb})` : primary.value;
+    const sOut = secondary.value === "Custom RGB" ? `RGB (${sRgb})` : secondary.value;
 
-    const spec = `**🚀 DMO SPEC SHEET**
+    const outputText = `**🚀 DMO SPEC SHEET**
 ────────────────────
 🚘 **Vehicle:** ${val('vehicle')}
 📟 **Plate:** ${val('plate')}
 🪟 **Windows:** ${val('windows')}
 💡 **Headlights:** ${val('headlights')}
-🌈 **Neon/RGB:** ${val('neon')}
 🎨 **Texture:** ${val('texture')}
-🖌️ **Primary:** ${p}
-🖌️ **Secondary:** ${s}
+🌈 **Neon/RGB:** ${val('neon')}
+🖌️ **Primary:** ${pOut}
+🖌️ **Secondary:** ${sOut}
 ✨ **Pearl:** ${val('pearl')}
 🛋️ **Interior:** ${val('interior')}
 🛞 **Rim Style:** ${val('rimStyle')}
 🎨 **Rim Color:** ${val('rimColor')}
-🏁 **Tires:** ${val('tires')}
 📢 **Horn:** ${val('horn')}
 📜 **Livery:** ${val('livery')}
 ────────────────────
 *OfficialNugzzCrew.com*`;
 
-    document.getElementById('output').value = spec;
+    document.getElementById('finalOutput').value = outputText;
   });
 
-  document.getElementById('copyBtn').addEventListener('click', () => {
-    document.getElementById('output').select();
+  document.getElementById('copyFinal').addEventListener('click', () => {
+    const box = document.getElementById('finalOutput');
+    box.select();
     document.execCommand('copy');
     alert('Copied to Clipboard!');
   });
