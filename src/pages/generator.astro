@@ -18,8 +18,10 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
   <div class="max-w-5xl mx-auto px-4 py-12">
     <div class="mb-10 text-center">
       <h1 class="text-4xl font-header text-gold uppercase tracking-tighter mb-2">DMO Generator</h1>
-      <p class="text-zinc-400 uppercase text-xs tracking-[0.2em]">Build your custom DMO creation!</p>
+      <p class="text-zinc-400 uppercase text-xs tracking-[0.2em]">Build your spec for the Fam Bam</p>
     </div>
+
+    <input type="color" id="colorPicker" class="sr-only" />
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
       <div class="lg:col-span-7 bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800 space-y-6">
@@ -30,12 +32,11 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
             <input type="text" id="vehicle" placeholder="e.g. Buffalo STX" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold" />
           </div>
 
-          <div>
-            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Plate Text (8 Chars):</label>
-            <input type="text" id="plate" maxlength="8" placeholder="NUGZZ" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm uppercase font-mono outline-none focus:border-gold" />
-          </div>
-
           <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Plate Text (8 Chars):</label>
+              <input type="text" id="plate" maxlength="8" placeholder="NUGZZ" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm uppercase font-mono outline-none focus:border-gold" />
+            </div>
             <div>
                 <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Windows Tint:</label>
                 <select id="windows" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full outline-none focus:border-gold">
@@ -43,32 +44,40 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
                     <option value="Green">Green</option>
                 </select>
             </div>
+          </div>
+
+          <div id="rgbInputArea" class="bg-gold/10 p-4 rounded-xl border border-gold/50 shadow-[0_0_15px_rgba(212,175,55,0.1)]" style="display: none;">
+            <label class="block text-[10px] text-gold uppercase font-black mb-2 tracking-widest flex justify-between">
+                <span>⚠️ SHARED PAINT RGB:</span>
+                <span class="text-[8px] opacity-70 italic uppercase">Click primary/secondary rainbow box for wheel</span>
+            </label>
+            <input type="text" id="sharedRgb" placeholder="e.g. 212, 175, 55" class="w-full bg-black border-2 border-gold rounded-lg p-3 text-white text-sm font-mono outline-none" />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
                 <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Headlight Color:</label>
                 <select id="headlights" class="bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm w-full outline-none focus:border-gold">
                     {headlightAndNeonColors.filter(c => c !== "Custom RGB").map(h => <option value={h}>{h}</option>)}
                 </select>
             </div>
+            <div>
+              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Neon Color:</label>
+              <div class="flex gap-2 items-center">
+                  <select id="neon" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
+                      {headlightAndNeonColors.map(c => <option value={c}>{c}</option>)}
+                  </select>
+                  <div id="neonPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0 cursor-pointer hover:border-white transition-all"></div>
+              </div>
+            </div>
           </div>
 
-          <div id="rgbInputArea" class="bg-gold/10 p-4 rounded-xl border border-gold/50 shadow-[0_0_15px_rgba(212,175,55,0.1)]" style="display: none;">
-            <label class="block text-[10px] text-gold uppercase font-black mb-2 tracking-widest">⚠️ ENTER SHARED RGB (R, G, B):</label>
-            <input type="text" id="sharedRgb" placeholder="e.g. 212, 175, 55" class="w-full bg-black border-2 border-gold rounded-lg p-3 text-white text-sm font-mono outline-none" />
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Neon Color or RGB:</label>
-              <select id="neon" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
-                  {headlightAndNeonColors.map(c => <option value={c}>{c}</option>)}
-              </select>
-            </div>
-            <div>
-              <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Paint Texture:</label>
-              <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
-                {textures.map(t => <option value={t}>{t}</option>)}
-              </select>
-            </div>
+          <div id="neonRgbArea" class="bg-blue-500/10 p-4 rounded-xl border border-blue-500/50" style="display: none;">
+            <label class="block text-[10px] text-blue-400 uppercase font-black mb-2 tracking-widest flex justify-between">
+                <span>🌈 NEON RGB VALUE:</span>
+                <span class="text-[8px] opacity-70 italic uppercase">Click neon rainbow box for wheel</span>
+            </label>
+            <input type="text" id="neonRgb" placeholder="e.g. 0, 255, 255" class="w-full bg-black border-2 border-blue-500 rounded-lg p-3 text-white text-sm font-mono outline-none" />
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -78,7 +87,7 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
                     <select id="primary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
                         {primaryUnselected.map(c => <option value={c}>{c}</option>)}
                     </select>
-                    <div id="primaryPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0"></div>
+                    <div id="primaryPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0 cursor-pointer hover:border-white transition-all"></div>
                 </div>
             </div>
             <div class="space-y-1">
@@ -87,9 +96,16 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
                     <select id="secondary" class="flex-1 bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
                         {secondaryUnselected.map(c => <option value={c}>{c}</option>)}
                     </select>
-                    <div id="secondaryPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0"></div>
+                    <div id="secondaryPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0 cursor-pointer hover:border-white transition-all"></div>
                 </div>
             </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Paint Texture:</label>
+            <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
+              {textures.map(t => <option value={t}>{t}</option>)}
+            </select>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -138,7 +154,7 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
             </div>
             <div class="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg border border-zinc-700 h-[46px]">
                 <input type="checkbox" id="activator" class="w-4 h-4 accent-gold cursor-pointer" />
-                <label for="activator" class="text-[10px] text-zinc-300 uppercase font-black cursor-pointer tracking-widest">Apply Activator</label>
+                <label for="activator" class="text-[10px] text-zinc-300 uppercase font-black cursor-pointer tracking-widest">Activator</label>
             </div>
           </div>
 
@@ -162,8 +178,8 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
       <div class="lg:col-span-5">
         <div class="sticky top-24">
           <div class="bg-black border-2 border-dashed border-zinc-800 rounded-3xl p-6">
-            <span class="text-[10px] text-zinc-500 uppercase font-black mb-4 block">Discord Output:</span>
-            <textarea id="finalOutput" readonly class="bg-transparent font-mono text-sm h-[540px] w-full resize-none outline-none border-none text-gold" placeholder="Ready for NUGZZ..."></textarea>
+            <span class="text-[10px] text-zinc-500 uppercase font-black mb-4 block">Discord Ready Output:</span>
+            <textarea id="finalOutput" readonly class="bg-transparent font-mono text-sm h-[520px] w-full resize-none outline-none border-none text-gold" placeholder="Ready for NUGZZ..."></textarea>
             <button id="copyFinal" class="mt-4 w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold uppercase py-4 rounded-xl transition-all">
               Copy To Clipboard
             </button>
@@ -182,35 +198,77 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
   const primary = document.getElementById('primary');
   const secondary = document.getElementById('secondary');
   const neon = document.getElementById('neon');
-  const rgbArea = document.getElementById('rgbInputArea');
+  const paintRgbArea = document.getElementById('rgbInputArea');
+  const neonRgbArea = document.getElementById('neonRgbArea');
+  const colorPicker = document.getElementById('colorPicker');
+  const paintRgbInput = document.getElementById('sharedRgb');
+  const neonRgbInput = document.getElementById('neonRgb');
 
-  function toggleRgb() {
-    const needsRgb = (primary.value === "Custom RGB" || secondary.value === "Custom RGB" || neon.value === "Custom RGB");
-    rgbArea.style.display = needsRgb ? "block" : "none";
+  let activePickerTarget = 'paint'; // 'paint' or 'neon'
+
+  function hexToRgb(hex) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `${r}, ${g}, ${b}`;
+  }
+
+  function toggleVisibility() {
+    paintRgbArea.style.display = (primary.value === "Custom RGB" || secondary.value === "Custom RGB") ? "block" : "none";
+    neonRgbArea.style.display = (neon.value === "Custom RGB") ? "block" : "none";
   }
 
   function setPrev(selId) {
     const s = document.getElementById(selId);
     const p = document.getElementById(selId + 'Prev');
-    if (s && p) p.style.backgroundColor = hexCodes[s.value] || "#111111";
+    if (!s || !p) return;
+
+    if (s.value === "Custom RGB") {
+        p.style.background = "conic-gradient(from 0deg, red, yellow, green, cyan, blue, magenta, red)";
+    } else {
+        p.style.backgroundColor = hexCodes[s.value] || "#111111";
+        p.style.background = "";
+    }
   }
 
-  [primary, secondary, neon].forEach(el => el.addEventListener('change', () => { toggleRgb(); setPrev(el.id); }));
+  function handleBoxClick(selId) {
+    const s = document.getElementById(selId);
+    if (s.value === "Custom RGB") {
+      activePickerTarget = (selId === 'neon') ? 'neon' : 'paint';
+      colorPicker.click();
+    }
+  }
+
+  colorPicker.addEventListener('input', (e) => {
+    const rgb = hexToRgb(e.target.value);
+    if (activePickerTarget === 'neon') {
+        neonRgbInput.value = rgb;
+    } else {
+        paintRgbInput.value = rgb;
+    }
+  });
+
+  [primary, secondary, neon].forEach(el => {
+    el.addEventListener('change', () => { toggleVisibility(); setPrev(el.id); });
+    document.getElementById(el.id + 'Prev').addEventListener('click', () => handleBoxClick(el.id));
+  });
+
   ['pearl', 'interior', 'rimColor'].forEach(id => {
     document.getElementById(id).addEventListener('change', () => setPrev(id));
   });
 
   // INITIAL RUN
-  ['primary', 'secondary', 'pearl', 'interior', 'rimColor'].forEach(id => setPrev(id));
+  ['primary', 'secondary', 'neon', 'pearl', 'interior', 'rimColor'].forEach(id => setPrev(id));
 
   document.getElementById('mainGenerateBtn').addEventListener('click', () => {
     const val = (id) => document.getElementById(id).value;
-    const sRgb = val('sharedRgb');
+    const pRgb = val('sharedRgb');
+    const nRgb = val('neonRgb');
     const isActivator = document.getElementById('activator').checked;
     
-    const pOut = primary.value === "Custom RGB" ? `RGB (${sRgb})` : primary.value;
-    const sOut = secondary.value === "Custom RGB" ? `RGB (${sRgb})` : secondary.value;
-    const nOut = neon.value === "Custom RGB" ? `RGB (${sRgb})` : neon.value;
+    const pOut = primary.value === "Custom RGB" ? `RGB (${pRgb})` : primary.value;
+    const sOut = secondary.value === "Custom RGB" ? `RGB (${pRgb})` : secondary.value;
+    const nOut = neon.value === "Custom RGB" ? `RGB (${nRgb})` : neon.value;
 
     const outputText = `**🚀 DMO SPEC SHEET**
 ────────────────────
