@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-// RESTORED FULL SAVE EDITOR LIST
+// FULL SAVE EDITOR LIST
 const primaryUnselected = ["Custom RGB", "Alloy", "Anthracite Gray", "Baby Blue", "BeechWood Brown", "Bison Brown", "Black", "Black Poly", "Black Steel", "Blaze Red", "Bleached Brown", "Blue", "Blue Silver", "Bluish Silver", "Bright Blue/Slate Blue", "Bright Green", "Bright Orange", "Bright Purple", "Bright Red", "Bronze", "Brown", "Brushed Aluminium", "Brushed Black Steel", "Brushed Gold", "Brushed Steel", "Cabernet Red", "Candy Red", "Carbon Black", "Cast Iron Silver", "Champagne", "Chocolate Brown", "Chrome", "Cream", "Creek Brown", "Dark Blue", "Dark Brown", "Dark Earth", "Dark Green", "Dark Red", "Dark Silver", "Dark Steel", "Desert Tan", "Dew Yellow/Yellow Bird", "Diamond Blue", "Epsilon Blue", "Feltzer Brown", "Fluorescent Blue", "Foliage Green", "Forest Green", "Formula Red", "Frost White", "Galaxy Blue", "Garnet Red", "Gasoline Green", "Gold", "Golden Red", "Grace Red", "Graphite", "Gray", "Green", "Green Bright", "Gun Metal", "Harbor Blue", "Honey Beige", "Hot Pink", "Hunter Green", "Ice White", "Lava Red", "Light Blue", "Light Brown", "Light Gray", "Light Orange", "Lightning Blue", "Lime Green", "MP100", "Maple Brown", "Mariner Blue", "Maui Blue Poly", "Medium Brown", "Midnight Blue", "Midnight Purple", "Midnight Purple/V Dark Blue", "Midnight Silver", "Moss Brown", "Nautical Blue", "Off White", "Olive Army Green", "Olive Drab", "Olive Green", "Orange", "Orange 2", "Pea Green/Securicor Green", "Pfister Pink", "Police Blue", "Pure Gold", "Pure White", "Race Yellow", "Racing Blue", "Racing Green", "Red", "Rolled Steel", "Saddle Brown", "Salmon Pink", "Sandy Brown", "Saxon Blue", "Schafter Purple", "Sea Foam Blue", "Sea Green", "Sea Wash", "Shadow Silver", "Shawdow Silver", "Sienna Brown", "Silver", "Silver Grey", "Spinnaker Purple", "Stone Silver", "Straw Beige", "Straw Brown", "Sunrise Orange", "Sunset Red", "Surf Blue", "Taxi Yellow", "Torino Red", "Ultra Blue", "White", "Wine Red", "Woodbeach Brown", "Yellow"];
 
 const secondaryUnselected = ["Custom RGB", ...primaryUnselected.slice(1)];
@@ -49,7 +49,7 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
           <div id="rgbInputArea" class="bg-gold/10 p-4 rounded-xl border border-gold/50" style="display: none;">
             <label class="block text-[10px] text-gold uppercase font-black mb-2 tracking-widest flex justify-between">
                 <span>⚠️ SHARED PAINT RGB:</span>
-                <span class="text-[8px] opacity-70 italic">Click Rainbow Box to pick</span>
+                <span class="text-[8px] opacity-70 italic">Click Rainbow Box for wheel</span>
             </label>
             <input type="text" id="sharedRgb" placeholder="212, 175, 55" class="w-full bg-black border-2 border-gold rounded-lg p-3 text-white text-sm font-mono outline-none" />
           </div>
@@ -73,7 +73,7 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
           </div>
 
           <div id="neonRgbArea" class="bg-blue-500/10 p-4 rounded-xl border border-blue-500/50" style="display: none;">
-            <label class="block text-[10px] text-blue-400 uppercase font-black mb-2 tracking-widest flex justify-between">
+            <label class="block text-[10px] text-blue-400 uppercase font-black mb-2 tracking-widest">
                 <span>🌈 NEON RGB VALUE:</span>
             </label>
             <input type="text" id="neonRgb" placeholder="0, 255, 255" class="w-full bg-black border-2 border-blue-500 rounded-lg p-3 text-white text-sm font-mono outline-none" />
@@ -98,6 +98,13 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
                     <div id="secondaryPrev" class="w-6 h-12 rounded border border-zinc-700 bg-zinc-800 shrink-0 cursor-pointer hover:border-white transition-all"></div>
                 </div>
             </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Paint Texture:</label>
+            <select id="texture" class="w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold">
+              {textures.map(t => <option value={t}>{t}</option>)}
+            </select>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -171,9 +178,8 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
 </MainLayout>
 
 <script is:inline>
-  // FULL RESTORED HEX CODES FROM CSV
   const hexCodes = {
-    "Alloy": "#666666", "Anthracite Gray": "#1C1D21", "Baby Blue": "#5082C3", "BeechWood Brown": "#2E2823", "Bison Brown": "#1C1916", "Black": "#0D0C10", "Black Poly": "#0D0C10", "Black Steel": "#212121", "Blaze Red": "#5F0A0A", "Bleached Brown": "#423930", "Blue": "#1A1F2B", "Blue Silver": "#313845", "Bluish Silver": "#4E5660", "Bright Blue/Slate Blue": "#455364", "Bright Green": "#009900", "Bright Orange": "#F27D00", "Bright Purple": "#400E52", "Bright Red": "#820707", "Bronze": "#413023", "Brown": "#261D17", "Brushed Aluminium": "#474E54", "Brushed Black Steel": "#121315", "Brushed Gold": "#4A3B2B", "Brushed Steel": "#272D33", "Cabernet Red": "#1F0206", "Candy Red": "#660000", "Carbon Black": "#050505", "Cast Iron Silver": "#1E1E1E", "Champagne": "#655C50", "Chocolate Brown": "#18100A", "Chrome": "#929292", "Cream": "#B8AE96", "Creek Brown": "#2A211D", "Dark Blue": "#0A0C17", "Dark Brown": "#0E0D0B", "Dark Earth": "#231D19", "Dark Green": "#05130D", "Dark Red": "#1B0202", "Dark Silver": "#1E1E1E", "Dark Steel": "#12151A", "Desert Tan": "#6A5C4A", "Dew Yellow/Yellow Bird": "#B79600", "Diamond Blue": "#4E5660", "Epsilon Blue": "#355990", "Feltzer Brown": "#2A211D", "Fluorescent Blue": "#00ADFF", "Foliage Green": "#242E25", "Forest Green": "#0C1410", "Formula Red": "#540000", "Frost White": "#ECF0F0", "Galaxy Blue": "#001426", "Garnet Red": "#350406", "Gasoline Green": "#051D21", "Gold": "#47351B", "Golden Red": "#450A0A", "Grace Red": "#3E0204", "Graphite": "#15191E", "Gray": "#333333", "Green": "#0E1F18", "Green Bright": "#009900", "Gun Metal": "#283034", "Harbor Blue": "#001C57", "Honey Beige": "#574431", "Hot Pink": "#B01259", "Hunter Green": "#0C1410", "Ice White": "#F0F0F0", "Lava Red": "#210202", "Light Blue": "#1D2D44", "Light Brown": "#3B3026", "Light Gray": "#737373", "Light Orange": "#CF6300", "Lightning Blue": "#0045FF", "Lime Green": "#244105", "MP100": "#637380", "Maple Brown": "#261D17", "Mariner Blue": "#1A1F2B", "Maui Blue Poly": "#1D2D44", "Medium Brown": "#18100A", "Midnight Blue": "#010816", "Midnight Purple": "#070310", "Midnight Purple/V Dark Blue": "#070310", "Midnight Silver": "#0D1116", "Moss Brown": "#0E1F18", "Nautical Blue": "#001426", "Off White": "#B8B3A8", "Olive Army Green": "#24231E", "Olive Drab": "#1A1A11", "Olive Green": "#05130D", "Orange": "#9E4006", "Orange 2": "#F27D00", "Pea Green/Securicor Green": "#274227", "Pfister Pink": "#B01259", "Police Blue": "#000620", "Pure Gold": "#3D2B13", "Pure White": "#FFFFFF", "Race Yellow": "#C29100", "Racing Blue": "#001C57", "Racing Green": "#001A12", "Red": "#690000", "Rolled Steel": "#212121", "Saddle Brown": "#321B13", "Salmon Pink": "#5F3D41", "Sandy Brown": "#423226", "Saxon Blue": "#355990", "Schafter Purple": "#373E52", "Sea Foam Blue": "#5082C3", "Sea Green": "#011A19", "Sea Wash": "#313845", "Shadow Silver": "#121417", "Shawdow Silver": "#121417", "Sienna Brown": "#0E0D0B", "Silver": "#515554", "Silver Grey": "#474E54", "Spinnaker Purple": "#400E52", "Stone Silver": "#1E2329", "Straw Beige": "#B8AE96", "Straw Brown": "#423930", "Sunrise Orange": "#CF6300", "Sunset Red": "#400708", "Surf Blue": "#03394D", "Taxi Yellow": "#7F6500", "Torino Red": "#4E0303", "Ultra Blue": "#0045FF", "White": "#919191", "Wine Red": "#160102", "Woodbeach Brown": "#2E2823", "Yellow": "#B79600"
+    "Alloy": "#666666", "Anthracite Gray": "#1C1D21", "Baby Blue": "#5082C3", "BeechWood Brown": "#2E2823", "Bison Brown": "#1C1916", "Black": "#0D0C10", "Black Poly": "#0D0C10", "Black Steel": "#212121", "Blaze Red": "#5F0A0A", "Bleached Brown": "#423930", "Blue": "#1A1F2B", "Blue Silver": "#313845", "Bluish Silver": "#4E5660", "Bright Blue/Slate Blue": "#455364", "Bright Green": "#009900", "Bright Orange": "#F27D00", "Bright Purple": "#400E52", "Bright Red": "#820707", "Bronze": "#413023", "Brown": "#261D17", "Brushed Aluminium": "#474E54", "Brushed Black Steel": "#121315", "Brushed Gold": "#4A3B2B", "Brushed Steel": "#272D33", "Cabernet Red": "#1F0206", "Candy Red": "#660000", "Carbon Black": "#050505", "Cast Iron Silver": "#1E1E1E", "Champagne": "#655C50", "Chocolate Brown": "#18100A", "Chrome": "#929292", "Cream": "#B8AE96", "Creek Brown": "#2A211D", "Dark Blue": "#0A0C17", "Dark Brown": "#0E0D0B", "Dark Earth": "#231D19", "Dark Green": "#05130D", "Dark Red": "#1B0202", "Dark Silver": "#1E1E1E", "Dark Steel": "#12151A", "Desert Tan": "#6A5C4A", "Dew Yellow/Yellow Bird": "#B79600", "Diamond Blue": "#4E5660", "Epsilon Blue": "#355990", "Feltzer Brown": "#2A211D", "Fluorescent Blue": "#00ADFF", "Foliage Green": "#242E25", "Forest Green": "#0C1410", "Formula Red": "#540000", "Frost White": "#ECF0F0", "Galaxy Blue": "#001426", "Garnet Red": "#350406", "Gasoline Green": "#051D21", "Gold": "#47351B", "Golden Red": "#450A0A", "Grace Red": "#3E0204", "Graphite": "#15191E", "Gray": "#333333", "Green": "#0E1F18", "Green Bright": "#009900", "Gun Metal": "#283034", "Honey Beige": "#574431", "Hot Pink": "#B01259", "Hunter Green": "#0C1410", "Ice White": "#F0F0F0", "Lava Red": "#210202", "Light Blue": "#1D2D44", "Light Brown": "#3B3026", "Light Gray": "#737373", "Light Orange": "#CF6300", "Lightning Blue": "#0045FF", "Lime Green": "#244105", "MP100": "#637380", "Maple Brown": "#261D17", "Mariner Blue": "#1A1F2B", "Maui Blue Poly": "#1D2D44", "Medium Brown": "#18100A", "Midnight Blue": "#010816", "Midnight Purple": "#070310", "Midnight Purple/V Dark Blue": "#070310", "Midnight Silver": "#0D1116", "Moss Brown": "#0E1F18", "Nautical Blue": "#001426", "Off White": "#B8B3A8", "Olive Army Green": "#24231E", "Olive Drab": "#1A1A11", "Olive Green": "#05130D", "Orange": "#9E4006", "Orange 2": "#F27D00", "Pea Green/Securicor Green": "#274227", "Pfister Pink": "#B01259", "Police Blue": "#000620", "Pure Gold": "#3D2B13", "Pure White": "#FFFFFF", "Race Yellow": "#C29100", "Racing Blue": "#001C57", "Racing Green": "#001A12", "Red": "#690000", "Rolled Steel": "#212121", "Saddle Brown": "#321B13", "Salmon Pink": "#5F3D41", "Sandy Brown": "#423226", "Saxon Blue": "#355990", "Schafter Purple": "#373E52", "Sea Foam Blue": "#5082C3", "Sea Green": "#011A19", "Sea Wash": "#313845", "Shadow Silver": "#121417", "Shawdow Silver": "#121417", "Sienna Brown": "#0E0D0B", "Silver": "#515554", "Silver Grey": "#474E54", "Spinnaker Purple": "#400E52", "Stone Silver": "#1E2329", "Straw Beige": "#B8AE96", "Straw Brown": "#423930", "Sunrise Orange": "#CF6300", "Sunset Red": "#400708", "Surf Blue": "#03394D", "Taxi Yellow": "#7F6500", "Torino Red": "#4E0303", "Ultra Blue": "#0045FF", "White": "#919191", "Wine Red": "#160102", "Woodbeach Brown": "#2E2823", "Yellow": "#B79600"
   };
 
   const primary = document.getElementById('primary');
@@ -194,28 +200,48 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
     return `${r}, ${g}, ${b}`;
   }
 
+  function rgbToHex(rgbStr) {
+    if (!rgbStr || !rgbStr.includes(',')) return "#000000";
+    const parts = rgbStr.split(',').map(n => parseInt(n.trim()));
+    if (parts.length !== 3 || parts.some(isNaN)) return "#000000";
+    return "#" + parts.map(x => x.toString(16).padStart(2, '0')).join('');
+  }
+
   function toggleVisibility() {
     paintRgbArea.style.display = (primary.value === "Custom RGB" || secondary.value === "Custom RGB") ? "block" : "none";
     neonRgbArea.style.display = (neon.value === "Custom RGB") ? "block" : "none";
   }
 
-  function setPrev(selId) {
-    const s = document.getElementById(selId);
-    const p = document.getElementById(selId + 'Prev');
-    if (!s || !p) return;
+  function updatePreviews() {
+    const ids = ['primary', 'secondary', 'neon', 'pearl', 'interior', 'rimColor'];
+    ids.forEach(id => {
+        const s = document.getElementById(id);
+        const p = document.getElementById(id + 'Prev');
+        if (!s || !p) return;
 
-    if (s.value === "Custom RGB") {
-        p.style.background = "conic-gradient(from 0deg, red, yellow, green, cyan, blue, magenta, red)";
-    } else {
-        p.style.backgroundColor = hexCodes[s.value] || "#111111";
-        p.style.background = "";
-    }
+        if (s.value === "Custom RGB") {
+            // For Custom RGB, use the actual color from the specific input box
+            const rgbValue = (id === 'neon') ? neonRgbInput.value : paintRgbInput.value;
+            if (rgbValue) {
+                p.style.backgroundColor = `rgb(${rgbValue})`;
+                p.style.background = "";
+            } else {
+                p.style.background = "conic-gradient(from 0deg, red, yellow, green, cyan, blue, magenta, red)";
+            }
+        } else {
+            p.style.backgroundColor = hexCodes[s.value] || "#111111";
+            p.style.background = "";
+        }
+    });
   }
 
   function handleBoxClick(selId) {
     const s = document.getElementById(selId);
     if (s.value === "Custom RGB") {
       activePickerTarget = (selId === 'neon') ? 'neon' : 'paint';
+      // Preset picker to current value if valid
+      const currentVal = (activePickerTarget === 'neon') ? neonRgbInput.value : paintRgbInput.value;
+      colorPicker.value = rgbToHex(currentVal);
       colorPicker.click();
     }
   }
@@ -227,19 +253,26 @@ const headlightAndNeonColors = ["Custom RGB", "Default", "Pure White", "Blue", "
     } else {
         paintRgbInput.value = rgb;
     }
+    updatePreviews();
   });
 
+  // Event Listeners
   [primary, secondary, neon].forEach(el => {
-    el.addEventListener('change', () => { toggleVisibility(); setPrev(el.id); });
+    el.addEventListener('change', () => { toggleVisibility(); updatePreviews(); });
     document.getElementById(el.id + 'Prev').addEventListener('click', () => handleBoxClick(el.id));
   });
 
+  [paintRgbInput, neonRgbInput].forEach(el => {
+      el.addEventListener('input', updatePreviews);
+  });
+
   ['pearl', 'interior', 'rimColor'].forEach(id => {
-    document.getElementById(id).addEventListener('change', () => setPrev(id));
+    document.getElementById(id).addEventListener('change', updatePreviews);
   });
 
   // INITIAL RUN
-  ['primary', 'secondary', 'neon', 'pearl', 'interior', 'rimColor'].forEach(id => setPrev(id));
+  toggleVisibility();
+  updatePreviews();
 
   document.getElementById('mainGenerateBtn').addEventListener('click', () => {
     const val = (id) => document.getElementById(id).value;
