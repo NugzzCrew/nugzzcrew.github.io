@@ -48,13 +48,12 @@ const fallbackWeapons = [
             <p id="displayDetails" class="text-sm text-zinc-400 leading-relaxed">{defaultDetails}</p>
           </div>
 
-          <div class="relative aspect-video w-full bg-black border border-zinc-800 rounded-2xl overflow-hidden group">
+          <div class="relative aspect-video w-full bg-black border border-zinc-800 rounded-2xl overflow-hidden group flex items-center justify-center">
             <img 
               id="vanMapImage" 
-              src="/images/gunvan/map_9.jpg" 
+              src="" 
               alt="Gun Van Location Map" 
-              class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
-              onerror="this.style.display='none';"
+              class="w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:scale-105"
             />
             
             <div class="absolute inset-x-0 top-1/2 border-t border-zinc-800/40 pointer-events-none"></div>
@@ -106,7 +105,7 @@ const fallbackWeapons = [
       if (!res.ok) return;
       const data = await res.json();
       
-      // Update text fields
+      // Update text fields dynamically
       document.getElementById('displayZone').textContent = data.zone;
       document.getElementById('displayDetails').textContent = data.description;
       document.getElementById('displayCoords').textContent = data.coordinates;
@@ -115,12 +114,18 @@ const fallbackWeapons = [
       if (data.locationId) {
         const mapImg = document.getElementById('vanMapImage');
         if (mapImg) {
-          mapImg.src = `images/gunvan/map_${data.locationId}.jpg`;
-          mapImg.style.display = 'block'; // Ensure it's visible if fallback previously hid it
+          // Standardized root-level absolute reference format for Astro public root directory bundling
+          mapImg.src = `/images/gunvan/map_${data.locationId}.jpg`;
+          
+          // Smooth fade-in presentation as soon as the server assets complete rendering
+          mapImg.onload = function() {
+            mapImg.classList.remove('opacity-0');
+            mapImg.classList.add('opacity-80');
+          };
         }
       }
     } catch (e) {
-      console.log("Assets running deployment generation sequence build synchronization.");
+      console.error("Error running tracking engine interface synchronization loops:", e);
     }
   }
 
