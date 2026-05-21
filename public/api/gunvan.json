@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-05-21T04:08:55.912Z",
-  "zone": "Sandy Shores (Grand Senora Desert)",
-  "description": "Parked near the abandoned motel off Panorama Drive.",
-  "coordinates": "LAT: 34.1560 | LNG: -118.2980"
+  "lastUpdated": "2026-05-21T04:23:51.788Z",
+  "locationId": 9,
+  "zone": "Palmer-Taylor Power Station (Los Santos East)",
+  "description": "Just off the Power Plant access road",
+  "coordinates": "LAT: 34.0681 | LNG: -118.1834",
+  "weapons": [
+    {
+      "name": "Compact EMP Launcher",
+      "discount": "-40% OFF"
+    },
+    {
+      "name": "Military Rifle",
+      "discount": "-10% OFF"
+    },
+    {
+      "name": "Precision Rifle",
+      "discount": "-10% OFF"
+    },
+    {
+      "name": "Homing Launcher",
+      "discount": "-10% OFF"
+    },
+    {
+      "name": "Pump Shotgun",
+      "discount": "-10% OFF"
+    },
+    {
+      "name": "Pool Cue",
+      "discount": "-10% OFF"
+    }
+  ],
+  "supplies": [
+    {
+      "name": "Molotov",
+      "type": "Throwable"
+    },
+    {
+      "name": "Tear Gas",
+      "type": "Throwable"
+    },
+    {
+      "name": "Proximity Mine",
+      "type": "Throwable"
+    },
+    {
+      "name": "Body Armor",
+      "type": "Surplus Supply"
+    }
+  ]
 }
