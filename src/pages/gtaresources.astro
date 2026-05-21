@@ -4,7 +4,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 // Fallback defaults while automated compiler actions finalize
 const defaultZone = "Locating Active Vector...";
 const defaultDetails = "Polling real-time scraping anchors from gtalens server maps...";
-const defaultCoords = "LAT: --.---- | LNG: --.----";
 
 const fallbackWeapons = [
   { name: "Compact EMP Launcher", discount: "-40% OFF" },
@@ -53,15 +52,11 @@ const fallbackWeapons = [
               id="vanMapImage" 
               src="" 
               alt="Gun Van Location Map" 
-              class="w-full h-full object-cover opacity-0 transition-transform transition-opacity duration-700 ease-out group-hover:scale-115"
+              class="w-full h-full object-cover opacity-0 transition-transform transition-opacity duration-700 ease-out group-hover:scale-150"
             />
             
             <div class="absolute inset-x-0 top-1/2 border-t border-zinc-800/40 pointer-events-none"></div>
             <div class="absolute inset-y-0 left-1/2 border-l border-zinc-800/40 pointer-events-none"></div>
-            
-            <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-sm border border-zinc-800 px-3 py-1.5 rounded-xl z-20">
-              <div id="displayCoords" class="font-mono text-[10px] text-gold tracking-wider font-bold">{defaultCoords}</div>
-            </div>
           </div>
         </div>
       </div>
@@ -108,7 +103,6 @@ const fallbackWeapons = [
       // Update text fields dynamically
       document.getElementById('displayZone').textContent = data.zone;
       document.getElementById('displayDetails').textContent = data.description;
-      document.getElementById('displayCoords').textContent = data.coordinates;
       
       // Dynamically switch the map image source to match the active locationId
       if (data.locationId) {
