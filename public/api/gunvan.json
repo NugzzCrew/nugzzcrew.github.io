@@ -1,51 +1,21 @@
 {
-  "lastUpdated": "2026-05-21T17:46:29.483Z",
-  "locationId": 9,
-  "zone": "Palmer-Taylor Power Station (Los Santos East)",
-  "description": "Just off the Power Plant access road",
-  "coordinates": "LAT: 34.0681 | LNG: -118.1834",
-  "weapons": [
-    {
-      "name": "Compact EMP Launcher",
-      "discount": "-40% OFF"
-    },
-    {
-      "name": "Military Rifle",
-      "discount": "-10% OFF"
-    },
-    {
-      "name": "Precision Rifle",
-      "discount": "-10% OFF"
-    },
-    {
-      "name": "Homing Launcher",
-      "discount": "-10% OFF"
-    },
-    {
-      "name": "Pump Shotgun",
-      "discount": "-10% OFF"
-    },
-    {
-      "name": "Pool Cue",
-      "discount": "-10% OFF"
-    }
+  "id": "9",
+  "locationName": "Palmer-Taylor Power Station",
+  "imagePath": "/images/gunvan/loc_9.jpg",
+  "mapPath": "/images/gunvan/map_9.jpg",
+  "inventory": [
+    "Weapons:\nCombat Shotgun: -10 %\nPrecision Rifle: -10 %\nRailgun: -50 %\nCompact Rifle: -10 %\nMG: -10 %\nMachete: -10 %",
+    "Combat Shotgun: -10 %",
+    "Precision Rifle: -10 %",
+    "Railgun: -50 %",
+    "Compact Rifle: -10 %",
+    "MG: -10 %",
+    "Machete: -10 %",
+    "Throwables:\nTear Gas: -10 %\nGrenade: -10 %\nProximity Mine: -10 %",
+    "Tear Gas: -10 %",
+    "Grenade: -10 %",
+    "Proximity Mine: -10 %",
+    "Body armor: -10 %"
   ],
-  "supplies": [
-    {
-      "name": "Molotov",
-      "type": "Throwable"
-    },
-    {
-      "name": "Tear Gas",
-      "type": "Throwable"
-    },
-    {
-      "name": "Proximity Mine",
-      "type": "Throwable"
-    },
-    {
-      "name": "Body Armor",
-      "type": "Surplus Supply"
-    }
-  ]
+  "updatedAt": "2026-05-21T19:06:14.891Z"
 }
