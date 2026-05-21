@@ -1,0 +1,46 @@
+name: Daily Gun Van Scraper
+
+on:
+  # Runs automatically at 06:10 UTC every day (10 minutes after daily reset)
+  schedule:
+    - cron: '10 6 * * *'
+  # Allows you to trigger it manually from the Actions tab!
+  workflow_dispatch:
+
+permissions:
+  contents: write # Gives the bot permission to push code
+  actions: write  # Gives the bot permission to trigger other workflows
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Scraper Script
+        run: node scripts/update-gunvan.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/api/gunvan.json
+          
+          # Only commit if the location actually changed to avoid empty commits
+          git commit -m "🤖 Auto-update Gun Van location" || echo "No changes to commit"
+          git push
+
+      - name: Trigger Deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml

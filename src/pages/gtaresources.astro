@@ -1,0 +1,91 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const defaultZone = "Los Santos Sector";
+const defaultDetails = "Awaiting automated morning system diagnostics report from the GitHub Scraper engine...";
+const defaultCoords = "LAT: 34.0522 | LNG: -118.2437";
+
+const weeklyWeapons = [
+  { name: "Railgun", price: "$225,000", discount: "20% OFF" },
+  { name: "Tactical SMG", price: "$65,000", discount: "10% OFF" },
+  { name: "Combat Pistol", price: "$2,800", discount: "Standard" },
+  { name: "Service Carbine", price: "$54,000", discount: "Special Offer" },
+  { name: "Heavy Sniper", price: "$30,400", discount: "15% OFF" }
+];
+---
+
+<MainLayout title="Gun Van Tracker">
+  <div class="max-w-5xl mx-auto px-4 py-12">
+    
+    <div class="mb-10 text-center">
+      <h1 class="text-4xl font-header text-gold uppercase tracking-tighter mb-2">Gun Van Locator</h1>
+      <p class="text-zinc-400 uppercase text-xs tracking-[0.2em]">Automated Live Mapping Matrix for the Fam Bam</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-6 space-y-6">
+        <div class="bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800 space-y-6">
+          <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+            <div>
+              <span class="text-[10px] text-zinc-500 uppercase font-black tracking-widest block">System Hook</span>
+              <span class="text-emerald-400 font-bold text-sm uppercase flex items-center gap-1.5">
+                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> Scraper Online
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Current Sector:</label>
+            <div id="displayZone" class="text-xl font-header text-white uppercase tracking-tight">{defaultZone}</div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-zinc-500 uppercase font-black mb-1">Specific Landmarks:</label>
+            <p id="displayDetails" class="text-sm text-zinc-400 leading-relaxed">{defaultDetails}</p>
+          </div>
+
+          <div class="relative aspect-video w-full bg-black border border-zinc-800 rounded-2xl overflow-hidden flex items-center justify-center">
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#222_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="absolute inset-x-0 top-1/2 border-t border-zinc-800/60"></div>
+            <div class="absolute inset-y-0 left-1/2 border-l border-zinc-800/60"></div>
+            
+            <div class="z-10 text-center space-y-2 px-4">
+              <div class="w-10 h-10 rounded-full border-2 border-gold border-dashed flex items-center justify-center mx-auto text-gold font-bold animate-spin [animation-duration:12s]">🎯</div>
+              <div id="displayCoords" class="font-mono text-[11px] text-zinc-500 tracking-wider">{defaultCoords}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="bg-black border-2 border-zinc-800 rounded-3xl p-6 space-y-4">
+          <h2 class="text-xl font-header text-gold uppercase tracking-tight">Current Weapons Surplus</h2>
+          {weeklyWeapons.map(w => (
+            <div class="flex justify-between items-center p-3 bg-zinc-900/20 border border-zinc-800/60 rounded-xl">
+              <span class="text-sm font-bold text-white">{w.name}</span>
+              <span class="font-mono text-gold text-xs font-bold">{w.price} ({w.discount})</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<script is:inline>
+  async function fetchLiveMap() {
+    try {
+      const res = await fetch('/api/gunvan.json');
+      if (!res.ok) return;
+      const data = await res.json();
+      
+      document.getElementById('displayZone').textContent = data.zone;
+      document.getElementById('displayDetails').textContent = data.description;
+      document.getElementById('displayCoords').textContent = data.coordinates;
+    } catch (e) {
+      console.log("Local path initialized before initial script run compiles layout dependencies.");
+    }
+  }
+
+  fetchLiveMap();
+</script>
