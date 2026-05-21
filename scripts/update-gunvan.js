@@ -15,26 +15,62 @@ async function scrapeGunVan() {
     console.log("📡 Connecting directly to gtalens.com/map/gun-vans...");
     await page.setViewport({ width: 1440, height: 900 });
     
-    // Track API network responses to catch dynamic map data payloads directly
-    let interceptedIndex = null;
+    // Variable to dynamically catch the active ID from network data payloads
+    let detectedActiveId = null;
+
+    // Listen to network responses to catch the raw JSON configuration payload automatically
     page.on('response', async (response) => {
       try {
         const url = response.url();
-        if (url.includes('/api/') && url.includes('gun-van')) {
+        // Catching the actual API calls gtalens uses to hydrate their map markers
+        if (url.includes('/api/') && (url.includes('gun-van') || url.includes('gunvan'))) {
           const json = await response.json();
           if (json && json.active_id) {
-            interceptedIndex = parseInt(json.active_id, 10);
+            detectedActiveId = parseInt(json.active_id, 10);
+            console.log(`🎯 Intercepted Active ID from Network Layer: #${detectedActiveId}`);
+          } else if (Array.isArray(json)) {
+            // Alternative layout check: look for an object flagged as active inside an array
+            const activeVan = json.find(van => van.active === true || van.is_active === true);
+            if (activeVan && activeVan.id) {
+              detectedActiveId = parseInt(activeVan.id, 10);
+              console.log(`🎯 Found Active Object Array ID: #${detectedActiveId}`);
+            }
           }
         }
       } catch (e) {
-        // Ignore parsing errors for non-JSON responses
+        // Suppress parsing anomalies on non-JSON image assets or styles
       }
     });
 
+    // Fire the page navigation
     await page.goto('https://gtalens.com/map/gun-vans', { waitUntil: 'networkidle2' });
 
-    console.log("⏳ Processing active DOM elements and dynamic data arrays...");
+    console.log("⏳ Waiting for network streams to fully resolve updates...");
     await new Promise(resolve => setTimeout(resolve, 5000));
+
+    // Fallback extraction strategy: Look into window variables injected into the DOM context
+    if (!detectedActiveId) {
+      console.log("⚠️ Network capture missed data stream. Inspecting inner page script contexts...");
+      detectedActiveId = await page.evaluate(() => {
+        try {
+          // Checks common frontend framework stores or global map asset configurations
+          if (window.__NEXT_DATA__?.props?.pageProps?.initialData?.active_id) {
+            return parseInt(window.__NEXT_DATA__.props.pageProps.initialData.active_id, 10);
+          }
+          if (window.gtaLensData?.active_id) {
+            return parseInt(window.gtaLensData.active_id, 10);
+          }
+        } catch (err) {
+          return null;
+        }
+        return null;
+      });
+    }
+
+    // Guard rail check: throw an explicit error if both approaches return blank data arrays
+    if (!detectedActiveId) {
+      throw new Error("Automated dynamic extraction failed: active_id parameters could not be found.");
+    }
 
     // Global GTA Online coordinates mapping for all 30 potential spawn locations
     const allLocations = {
@@ -55,7 +91,7 @@ async function scrapeGunVan() {
       15: { name: "Land Act Reservoir", detail: "At the north end of the shoreline", zone: "Los Santos County", lat: "34.0799", lng: "-118.2311" },
       16: { name: "La Mesa", detail: "Next to Fridgit Forced Labor Place", zone: "Los Santos East", lat: "34.0320", lng: "-118.2140" },
       17: { name: "Jetsam Terminal", detail: "Under the stairs in the southwest corner of the docks", zone: "Los Santos South", lat: "33.9845", lng: "-118.2412" },
-      18: { name: "La Puerta", detail: "In front of Rogers Salvage & Scrap", zone: "Los Santos South", lat: "34.0110", lng: "-118.2678" },
+      18: { name: "La Puerta", detail: "In front of Rogers Salvage & Scrap", zone: "Los Santos South", lat: "34.0110", font: "bold", tracking: "normal", lng: "-118.2678" },
       19: { name: "La Mesa (Popular St)", detail: "Hidden behind the industrial brick alleys", zone: "Los Santos East", lat: "34.0385", lng: "-118.2099" },
       20: { name: "Del Perro", detail: "Under a carport between Cougar Ave & Bay City Ave", zone: "Downtown LS", lat: "34.0244", lng: "-118.2911" },
       21: { name: "Vespucci Beach", detail: "Behind a building on Magellan Ave and Conquistador St", zone: "Downtown LS", lat: "34.0122", lng: "-118.2845" },
@@ -70,39 +106,8 @@ async function scrapeGunVan() {
       30: { name: "Davis", detail: "In an alley beside Bishop's Chicken", zone: "Los Santos South", lat: "33.9988", lng: "-118.2399" }
     };
 
-    // Evaluate structural targets if API interception didn't fire immediately
-    let finalIndex = interceptedIndex;
-    
-    if (!finalIndex) {
-      finalIndex = await page.evaluate(() => {
-        // Search inside dynamic sidebar wrappers or active badge elements
-        const activeBadges = Array.from(document.querySelectorAll('.active, [class*="active"], [class*="current"]'));
-        for (const badge of activeBadges) {
-          const txt = badge.textContent || "";
-          const m = txt.match(/(?:Van|#)\s*(\d+)/i);
-          if (m) return parseInt(m[1], 10);
-        }
-
-        // Broad fallback checking lists or navigation maps
-        const elements = Array.from(document.querySelectorAll('span, p, h1, h2, h3, li, a'));
-        for (const el of elements) {
-          const txt = el.textContent || "";
-          if (txt.toLowerCase().includes('active') || txt.toLowerCase().includes('today')) {
-            const m = txt.match(/#?\s*(\d+)/);
-            if (m) return parseInt(m[1], 10);
-          }
-        }
-        return null;
-      });
-    }
-
-    if (!finalIndex) {
-      throw new Error("Could not extract active Gun Van ID via text interfaces, intercepted network vectors, or node definitions.");
-    }
-
-    console.log(`🎯 Extracted Active Target ID: Gun Van #${finalIndex}`);
-    
-    const selectedLocation = allLocations[finalIndex] || allLocations[1];
+    console.log(`🎯 Extracted Active Target ID: Gun Van #${detectedActiveId}`);
+    const selectedLocation = allLocations[detectedActiveId] || allLocations[1];
 
     const scrapedWeapons = [
       { name: "Compact EMP Launcher", discount: "-40% OFF" },
@@ -122,7 +127,7 @@ async function scrapeGunVan() {
 
     const outputData = {
       lastUpdated: new Date().toISOString(),
-      locationId: finalIndex,
+      locationId: detectedActiveId,
       zone: `${selectedLocation.name} (${selectedLocation.zone})`,
       description: selectedLocation.detail,
       coordinates: `LAT: ${selectedLocation.lat} | LNG: ${selectedLocation.lng}`,
@@ -138,7 +143,7 @@ async function scrapeGunVan() {
       JSON.stringify(outputData, null, 2)
     );
     
-    console.log("Base file configuration synced successfully.");
+    console.log("✅ public/api/gunvan.json updated with active real-time data!");
 
   } catch (error) {
     console.error("❌ Operational scraping fault encountered:", error);
