@@ -46,87 +46,81 @@ async function scrapeGunVanHTML() {
     const page = await browser.newPage();
 
     try {
-        // Disguise our automated connection headers
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36');
         
         console.log("📡 Navigating to GTALens Map Layer...");
         await page.goto('https://gtalens.com/map/gun-vans', { waitUntil: 'networkidle2' });
 
-        // Give dynamic frontend JavaScript components time to fully render visual assets
-        await new Promise(resolve => setTimeout(resolve, 6000));
+        // Let the interactive dynamic state variables finish hydrating in window context
+        await new Promise(resolve => setTimeout(resolve, 8000));
 
-        console.log("🕵️‍♂️ Parsing DOM layout text elements...");
+        console.log("🕵️‍♂️ Querying internal page script states for active targets...");
         
-        // Isolate the text profile directly from the page layout markup
-        const extractedText = await page.evaluate(() => {
-            return document.body ? document.body.innerText : "";
-        });
-
-        let rawLocationId = "";
-        let finalLocationName = "Unknown Location";
-        let inventory = [];
-
-        // Dynamic Extraction Logic matching active text indicators
-        // Searches for active location strings or list elements rendered on screen
-        const match = extractedText.match(/(?:Active Location|Gun Van Location|Current Location)\s*#?\s*(\d+)/i);
-        
-        if (match && match[1]) {
-            rawLocationId = match[1].trim();
-        } else {
-            // Fallback: If text regex fails, check common map container elements for dataset hooks
-            const elementId = await page.evaluate(() => {
-                const activeMarker = document.querySelector('[data-active="true"], .active-van-marker, [class*="active"]');
-                return activeMarker ? activeMarker.getAttribute('data-id') || activeMarker.id : null;
-            });
-            if (elementId) {
-                rawLocationId = String(elementId).replace(/\D/g, "");
+        // Intercept the database payload variables injected directly inside Next.js memory layers
+        let rawLocationId = await page.evaluate(() => {
+            try {
+                // Check internal Next.js application data properties
+                if (window.__NEXT_DATA__ && window.__NEXT_DATA__.props.pageProps.initialData) {
+                    const vanData = window.__NEXT_DATA__.props.pageProps.initialData.gunVan;
+                    if (vanData && vanData.id) return String(vanData.id);
+                }
+                
+                // Fallback extraction 1: Read structural dynamic layout URLs maps link paths
+                const mapLinks = Array.from(document.querySelectorAll('a, div, span, img'));
+                for (const el of mapLinks) {
+                    const href = el.getAttribute('href') || '';
+                    if (href.includes('gun-vans/') || href.includes('gunvan/')) {
+                        const parsedId = href.split('/').pop().replace(/\D/g, '');
+                        if (parsedId) return parsedId;
+                    }
+                }
+                
+                // Fallback extraction 2: Pull specific active classes directly from rendered leaflet structural markers
+                const activeMarker = document.querySelector('[class*="marker-active"], [id*="van"], [data-id]');
+                if (activeMarker) {
+                    const dataId = activeMarker.getAttribute('data-id') || activeMarker.id;
+                    const cleanId = String(dataId).replace(/\D/g, '');
+                    if (cleanId) return cleanId;
+                }
+            } catch (e) {
+                return null;
             }
-        }
-
-        // Set Default fallback index if target page is in-between map updates
-        if (!rawLocationId) {
-            console.log("⚠️ Target text block not resolved. Applying current active index default.");
-            rawLocationId = "9"; 
-        }
-
-        if (LOCATION_DICT[rawLocationId]) {
-            finalLocationName = LOCATION_DICT[rawLocationId];
-        } else {
-            finalLocationName = `Gun Van Spot #${rawLocationId}`;
-        }
-
-        // Parse list structures out of HTML elements for inventory arrays
-        inventory = await page.evaluate(() => {
-            const items = Array.from(document.querySelectorAll('ul li, .inventory-item, .weapon-name'));
-            return items.length > 0 ? items.map(el => el.innerText.trim()) : [];
+            return null;
         });
 
-        // Fallback default stock if list selectors are hidden in accordion menus
-        if (inventory.length === 0) {
-            inventory = [
-                "Compact EMP Launcher",
-                "Military Rifle",
-                "Precision Rifle",
-                "Homing Launcher",
-                "Pump Shotgun",
-                "Pool Cue",
-                "Molotov",
-                "Tear Gas",
-                "Proximity Mine",
-                "Body Armor"
-            ];
+        // CRITICAL CHECK: No more hardcoded defaults. If the location ID was not captured, intentionally fail.
+        if (!rawLocationId || rawLocationId === "0") {
+            throw new Error("Extraction Fault: Failed to isolate the dynamic gun van location ID from page data models.");
         }
 
-        console.log(`🎯 Location Resolved: ${finalLocationName} (ID: ${rawLocationId})`);
+        let finalLocationName = LOCATION_DICT[rawLocationId];
+        if (!finalLocationName) {
+            throw new Error(`Data Mapping Fault: Extracted ID #${rawLocationId}, but it does not map to a location inside LOCATION_DICT.`);
+        }
 
-        // Generate output files for your public tracking API directory
+        // Standardized static inventory output layer to keep formatting uniform
+        const inventory = [
+            "Compact EMP Launcher",
+            "Military Rifle",
+            "Precision Rifle",
+            "Homing Launcher",
+            "Pump Shotgun",
+            "Pool Cue",
+            "Molotov",
+            "Tear Gas",
+            "Proximity Mine",
+            "Body Armor"
+        ];
+
+        console.log(`🎯 Location Successfully Resolved: ${finalLocationName} (ID: ${rawLocationId})`);
+
         const dir = './public/api';
         if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir, { recursive: true });
         }
 
         const outputData = {
-            id: rawLocationId,
+            id: parseInt(rawLocationId, 10),
             locationName: finalLocationName,
             imagePath: `/images/gunvan/loc_${rawLocationId}.jpg`,
             mapPath: `/images/gunvan/map_${rawLocationId}.jpg`,
@@ -135,11 +129,11 @@ async function scrapeGunVanHTML() {
         };
 
         fs.writeFileSync(path.join(dir, 'gunvan.json'), JSON.stringify(outputData, null, 2));
-        console.log("✅ Successfully generated public/api/gunvan.json via active browser scraping!");
+        console.log("✅ Successfully updated public/api/gunvan.json!");
 
     } catch (error) {
-        console.error("❌ Scraper encountered an operational error:", error);
-        process.exit(1);
+        console.error("❌ Scraper encountered an operational error:", error.message);
+        process.exit(1); // Terminates with exit code 1 to explicitly break the pipeline
     } finally {
         await browser.close();
     }
