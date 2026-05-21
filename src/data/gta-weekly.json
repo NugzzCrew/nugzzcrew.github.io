@@ -1,20 +1,18 @@
 {
-  "weekEnding": "May 20, 2026",
-  "fibFile": "The Black Box File",
-  "weeklyChallenge": "Win any two Races to receive the Dark Manor Racing Suit and GTA$100,000",
-  "podium": "Benefactor LM87",
-  "prizeRide": "Benefactor Krieger",
+  "weekEnding": "May 27, 2026",
+  "fibFile": "The Brute Force File",
+  "weeklyChallenge": "Win 2 LS Car Meet Races to get the Bright Manor Racing Suit and GTA$100,000.",
+  "podium": "Ocelot R88",
+  "prizeRide": "Ocelot Virtue",
   "bonuses": [
-    { "category": "4X GTA$ & RP", "name": "Land Races", "value": "4X" },
-    { "category": "3X GTA$ & RP", "name": "HSW Time Trial", "value": "3X" },
-    { "category": "3X GTA$ & RP", "name": "Simeon Contact Missions", "value": "3X" },
-    { "category": "2X GTA$ & RP", "name": "Tow Truck Service", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Community Race Series", "value": "2X" },
-    { "category": "2X GTA$", "name": "Salvage Yard Daily Income", "value": "2X" },
-    { "category": "2X GTA$", "name": "Salvage Yard Robbery Sales & Value", "value": "2X" }
+    { "category": "5X REP", "name": "LS Car Meet Reputation", "value": "5X" },
+    { "category": "2X GTA$ & RP", "name": "Auto Shop Robbery Finales", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "LS Car Meet Series", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Junk Energy Time Trials", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "RC Time Trials", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Hotring Races", "value": "2X" }
   ],
   "loginRewards": [
-    "Water Like Livery (Vapid FMJ MK V)",
     "Rockstar Helmet",
     "FREE Horn Customization",
     "FREE LS Car Meet Membership"
@@ -25,33 +23,73 @@
     { "action": "Purchase any LSCM Featured Vehicle", "reward": "Blue Banshee Tee" }
   ],
   "discounts": {
-    "fifty": ["LS Tuners Racing Suits", "HSW Performance Upgrades", "Benny’s Conversion Upgrades", "Turbo Tuning", "Blue and Yellow Tire Smoke"],
-    "forty": ["Salvage Yard Properties & Mods", "Eclipse Blvd Garage", "Bravado Banshee GTS", "Canis Castigator", "Dewbauchee JB 700", "Dewbauchee Rapid GT Cabrio", "Grotti Itali RSX", "Karin 190z", "Lampadati Furore GT", "Nagasaki Shotaro", "Överflöd Pipistrello", "Western Rat Bike"],
-    "thirty": ["Bravado Gauntlet Classic", "Coil Brawler", "Declasse Impaler SZ", "Lampadati Novak", "Übermacht Rhinehart"]
+    "fifty": [
+      "LS Tuners Racing Suits",
+      "HSW Performance Upgrades",
+      "Benny's Conversion Upgrades",
+      "Turbo Tuning",
+      "Blue and Yellow Tire Smoke Customization"
+    ],
+    "forty": [
+      "Auto Shop Properties, Upgrades & Mods",
+      "All Small, Medium & Large Garage Properties",
+      "Bravado Banshee GTS",
+      "Declasse Lifeguard",
+      "Dewbauchee Rapid GT",
+      "Emperor Vectre",
+      "Enus Paragon R",
+      "Lampadati Felon GT",
+      "Nagasaki Hot Rod Blazer",
+      "Överflöd Entity XF",
+      "Übermacht Cypher"
+    ],
+    "thirty": [
+      "Dashound",
+      "HVY Chernobog",
+      "Pegassi Torero",
+      "RC Bandito",
+      "Vapid Desert Raid"
+    ]
   },
   "salvageYard": [
-    { "robbery": "The Podium Robbery", "name": "Invetero Coquette D10 (LS Pounders Plate)", "type": "CLAIMABLE" },
-    { "robbery": "The Gangbanger Robbery", "name": "Vapid Dominator GT", "type": "Standard" },
-    { "robbery": "The Duggan Robbery", "name": "Karin Previon", "type": "Low Tier" }
+    { "robbery": "The Cargo Ship Robbery", "name": "Grotti Turismo Omaggio", "type": "Top Tier" },
+    { "robbery": "The Gangbanger Robbery", "name": "Obey Omnis (LS Car Meet Plate)", "type": "CLAIMABLE" },
+    { "robbery": "The McTony Robbery", "name": "Vapid Hustler", "type": "Low Tier" }
   ],
-  "simeonVehicles": ["Dewbauchee JB 700", "Dewbauchee Rapid GT Cabrio", "Karin 190z", "Lampadati Furore GT", "Western Rat Bike"],
-  "luxuryAutos": ["Übermacht Sentinel XS4", "Vapid FMJ MK V (Water Like Livery)"],
+  "simeonVehicles": [
+    "Declasse Lifeguard",
+    "Dewbauchee Rapid GT",
+    "Lampadati Felon GT",
+    "Överflöd Entity XF",
+    "Western Rat Bike"
+  ],
+  "luxuryAutos": [
+    "Progen Luiva",
+    "Shitzu Keitora"
+  ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 5 in five LSCM Races",
-    "testTrack": ["Bravado Banshee GTS", "Grotti Itali RSX (Monochrome)", "Överflöd Pipistrello (Street Camo)"],
-    "hsw": "Weeny Issi Rally"
+    "prizeRideRequirement": "Place Top 3 in three Races in the LS Car Meet Series",
+    "testTrack": [
+      "Bravado Banshee GTS",
+      "Emperor Vectre (Xero 29 Livery)",
+      "Übermacht Cypher (Negative Speed Demon Livery)"
+    ],
+    "hsw": "Übermacht Niobe"
   },
   "timeTrials": {
-    "regular": "Galileo Park",
-    "hsw": "East Vinewood to Vespucci Beach",
-    "premium": "The Commute"
+    "regular": "Stab City",
+    "hsw": "Del Perro Beach to Murietta Heights",
+    "premium": "Criminal Records (Premium Race)"
   },
-  "gunVan": ["Compact EMP Launcher (40% OFF)", "Precision Rifle (40% OFF for GTA+)"],
+  "gunVan": [
+    "Railgun (50% OFF)",
+    "Combat Shotgun (30% OFF for GTA+)"
+  ],
   "gtaPlus": {
     "duration": "May 7 - June 10, 2026",
     "freeVehicles": ["Übermacht Sentinel GTS", "Junk Energy Inductor Bike", "Magenta/Cyan Flip Chameleon Paint & Wheel Paint"],
     "clothing": ["Junk x Jackal Tee (Sports)", "Junk x Jackal Wide Pants (Designer Jeans)"],
-    "bonuses": ["4X Junk Energy Skydives", "2X Import/Export Sell Missions", "2X Special Vehicle Work", "2X Junk Energy Time Trials"],
+    "bonuses": ["4X Junk Energy Skydives", "2X Import/Export Sell Missions", "2X Special Vehicle Work", "4X Junk Energy Time Trials"],
     "discounts": ["60% OFF Executive Offices, Upgrades & Mods"],
     "vinewoodShowroom": ["Annis S80RR (eCola)", "Bollokan Envisage (Junk Race)", "Bravado Gauntlet Hellfire", "Coil Cyclone II", "Declasse Scramjet", "HVY Nightshark (Galaxy)", "Pegassi Oppressor (Santo Capra)", "Pegassi Toreador (Shark Camo)", "Pegassi Zentorno (Rockstar Motorsport)"],
     "persistent": ["FREE Taxi services (shorter cooldown)", "FREE CEO/VIP Abilities", "FREE vehicle requests via Interaction Menu", "Remote Access to Business Staff", "Extra Lucky Wheel Spin Every Day", "Claim All Business Earnings", "Gun Van blipped with extra discounts", "GTA$500,000 every month", "15% extra bonus on Shark Cards"],
