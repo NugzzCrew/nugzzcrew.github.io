@@ -1,8 +1,8 @@
 {
-  "locationId": 7,
-  "zone": "Gun Van Location #7",
-  "description": "Paleto Forest Lumber Yard",
-  "mapPath": "map_7.jpg",
+  "locationId": 1,
+  "zone": "Gun Van Location #1",
+  "description": "No Marks Cleaners, Paleto Bay",
+  "mapPath": "map_1.jpg",
   "inventory": [
     "Combat Shotgun: -10 %",
     "Precision Rifle: -10 %",
@@ -15,5 +15,5 @@
     "Proximity Mine: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-05-26T17:49:21.790Z"
+  "updatedAt": "2026-05-27T17:45:21.601Z"
 }
