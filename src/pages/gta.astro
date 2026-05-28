@@ -1,6 +1,9 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import gtaData from '../data/gta-weekly.json';
+
+// Fallback in case eventTitle isn't in the JSON yet, defaults to a clean theme title
+const eventTitle = gtaData.eventTitle || "Hands On Car Wash Takeover";
 ---
 
 <MainLayout title="GTA Weekly & GTA+">
@@ -9,7 +12,10 @@ import gtaData from '../data/gta-weekly.json';
     <section>
         <div class="flex flex-col md:flex-row justify-between gap-8 items-start">
             <div>
-                <h1 class="text-[clamp(40px,8vw,90px)] font-black italic uppercase leading-[0.8] text-white tracking-tighter">Motor <span class="text-gold">Madness</span></h1>
+                <!-- FIXED: Header is now completely dynamic based on the active event -->
+                <h1 class="text-[clamp(40px,6vw,80px)] font-black italic uppercase leading-[0.8] text-white tracking-tighter">
+                  {eventTitle}
+                </h1>
                 <p class="text-zinc-500 font-bold uppercase tracking-widest mt-4">Event available through {gtaData.weekEnding}</p>
             </div>
             <div class="bg-gold p-6 rounded-2xl text-black max-w-md shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
