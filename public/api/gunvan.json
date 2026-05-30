@@ -1,8 +1,8 @@
 {
-  "locationId": 7,
-  "zone": "Gun Van Location #7",
-  "description": "Paleto Forest Lumber Yard",
-  "mapPath": "map_7.jpg",
+  "locationId": 3,
+  "zone": "Gun Van Location #3",
+  "description": "Merle Abrahams' house, Sandy Shores",
+  "mapPath": "map_3.jpg",
   "inventory": [
     "Heavy Rifle: -50 %",
     "Military Rifle: -10 %",
@@ -15,5 +15,5 @@
     "Molotov: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-05-29T12:38:10.347Z"
+  "updatedAt": "2026-05-30T09:32:09.161Z"
 }
