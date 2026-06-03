@@ -1,8 +1,8 @@
 {
-  "locationId": 27,
-  "zone": "Gun Van Location #27",
-  "description": "Hookies, North Chumash",
-  "mapPath": "map_27.jpg",
+  "locationId": 23,
+  "zone": "Gun Van Location #23",
+  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
+  "mapPath": "map_23.jpg",
   "inventory": [
     "Heavy Rifle: -50 %",
     "Military Rifle: -10 %",
@@ -15,5 +15,5 @@
     "Molotov: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-06-02T06:46:33.259Z"
+  "updatedAt": "2026-06-03T06:57:38.459Z"
 }
