@@ -1,78 +1,72 @@
 {
-  "weekEnding": "June 3, 2026",
-  "fibFile": "The Fine Art File",
-  "weeklyChallenge": "Complete three Hands On Car Wash Legal Missions to receive GTA$100,000.",
-  "podium": "Lampadati Komoda",
-  "prizeRide": "Truffade Nero",
+  "eventTitle": "Community Mission Showcase",
+  "weekEnding": "June 10, 2026",
+  "fibFile": "The Project Breakaway File",
+  "weeklyChallenge": "Steal from two Stash Houses to receive GTA$100,000.",
+  "podium": "Vapid GB200",
+  "prizeRide": "Declasse Mamba",
   "bonuses": [
-    { "category": "5X GTA$ & RP", "name": "Lamar Contact Missions", "value": "5X" },
-    { "category": "4X GTA$ & RP", "name": "Money Laundering Missions", "value": "4X" },
-    { "category": "2X GTA$ & RP", "name": "Mr. Faber Work", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Random Transform Races", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Community Combat Series", "value": "2X" },
-    { "category": "2X GTA$", "name": "Laundered Income at Car Wash", "value": "2X" }
+    { "category": "4X GTA$ & RP", "name": "Community Mission Series (PS5, Xbox Series X|S, PC Enhanced)", "value": "4X" },
+    { "category": "2X GTA$ & RP", "name": "Meth Sell Missions (Includes Nightclub Pharmaceutical Research)", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Featured Series (Top Fun, Turf Wars, Sumo, Come Out to Play)", "value": "2X" },
+    { "category": "2X GTA$", "name": "Street Dealers", "value": "2X" }
   ],
   "loginRewards": [
-    "FREE Higgins Helitours Front"
+    "None this week"
   ],
   "purchaseUnlocks": [
-    { "action": "No Purchase Unlocks this week", "reward": "Check back next week" }
+    { "action": "Complete all 7 Featured Community Missions", "reward": "GTA$500,000 (Within 72 Hours)" }
   ],
   "discounts": {
     "fifty": [
       "None this week"
     ],
     "forty": [
-      "Hands On Car Wash",
-      "Smoke on the Water Dispensary"
+      "Meth Labs (Including Upgrades)"
     ],
     "thirty": [
-      "Albany Cavalcade XL",
-      "Benefactor Terrorbyte",
-      "Buckingham Howard NX-25",
-      "Buckingham Vestra",
-      "Grotti Brioso 300",
-      "Imponte Ruiner ZZ-8",
-      "Jobuilt Velum 5-Seater",
-      "Karin Previon",
-      "Maibatsu Penumbra FF",
-      "Obey Tailgater S",
-      "Sea Sparrow"
+      "BF Raptor",
+      "BF Weevil",
+      "Declasse Draugur",
+      "Fathom FR36",
+      "MTL Dune",
+      "Rhino Tank",
+      "Western Company Rogue"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Duggan Robbery", "name": "Toundra Panthere", "type": "Top Tier" },
-    { "robbery": "The Cargo Ship Robbery", "name": "Albany V-STR", "type": "Standard Tier" },
-    { "robbery": "The Podium Robbery", "name": "Willard Eudora", "type": "Low Tier" }
+    { "robbery": "The Cargo Ship Robbery", "name": "Benefactor SM722", "type": "Top Tier" },
+    { "robbery": "The McTony Robbery", "name": "Annis ZR350", "type": "Standard Tier" },
+    { "robbery": "The Duggan Robbery", "name": "Dinka Sugoi", "type": "Low Tier" }
   ],
   "simeonVehicles": [
-    "Bravado Verlierer",
-    "Enus Cognoscenti",
-    "Hijak Ruston",
-    "Western Cliffhanger",
-    "Western Wolfsbane"
+    "Albany Alpha",
+    "BF Bifta",
+    "Emperor Habanero",
+    "Invetero Coquette BlackFin",
+    "Vapid Hustler"
   ],
   "luxuryAutos": [
-    "Annis Hardy",
+    "Declasse Tampa GT",
     "Grotti GT750"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 2 in the LS Car Meet Series for two days in a row",
+    "prizeRideRequirement": "Place Top 3 in the LS Car Meet Series for three days in a row",
     "testTrack": [
-      "Grotti Stinger",
-      "Übermacht Oracle XS",
-      "Vulcar Fagaloa"
+      "Dinka Enduro",
+      "Grotti Carbonizzare",
+      "Vapid Clique"
     ],
-    "hsw": "Vapid FMJ MK V"
+    "hsw": "Vapid Firebolt ASP"
   },
   "timeTrials": {
-    "regular": "Vinewood Hills",
-    "hsw": "Sandy Shores to La Puerta",
-    "premium": "Route 68"
+    "regular": "Grove Street",
+    "hsw": "Textile City to Stab City",
+    "premium": "Wiwang Park"
   },
   "gunVan": [
-    "Heavy Rifle (50% OFF)",
-    "Military Rifle (40% OFF for GTA+)"
+    "Tactical SMG (30% OFF)",
+    "Service Carbine (40% OFF for GTA+)"
   ],
   "gtaPlus": {
     "duration": "May 7 - June 10, 2026",
