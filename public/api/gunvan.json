@@ -1,8 +1,8 @@
 {
-  "locationId": 9,
-  "zone": "Gun Van Location #9",
-  "description": "Palmer-Taylor Power Station",
-  "mapPath": "map_9.jpg",
+  "locationId": 14,
+  "zone": "Gun Van Location #14",
+  "description": "Walker Ocean Store, Port of Los Santos",
+  "mapPath": "map_14.jpg",
   "inventory": [
     "Precision Rifle: -10 %",
     "Service Carbine: -30 %",
@@ -15,5 +15,5 @@
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-06-13T06:21:29.287Z"
+  "updatedAt": "2026-06-14T06:45:48.643Z"
 }
