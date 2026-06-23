@@ -1,8 +1,8 @@
 {
-  "locationId": 15,
-  "zone": "Gun Van Location #15",
-  "description": "Land Act Reservoir (north end)",
-  "mapPath": "map_15.jpg",
+  "locationId": 3,
+  "zone": "Gun Van Location #3",
+  "description": "Merle Abrahams' house, Sandy Shores",
+  "mapPath": "map_3.jpg",
   "inventory": [
     "Stun Gun: -10 %",
     "Military Rifle: -10 %",
@@ -15,5 +15,5 @@
     "Molotov: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-06-22T07:29:56.261Z"
+  "updatedAt": "2026-06-23T06:12:00.960Z"
 }
