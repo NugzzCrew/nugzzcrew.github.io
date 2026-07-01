@@ -1,83 +1,130 @@
 {
-  "eventTitle": "Acid Lab & FIB Operations",
-  "weekEnding": "July 1, 2026",
-  "fibFile": "The Fine Art File",
-  "weeklyChallenge": "Complete three FIB Files to receive GTA$100,000.",
-  "podium": "Invetero Coquette D10",
-  "prizeRide": "Obey I-Wagen",
+  "eventTitle": "Independence Day Spectacular",
+  "weekEnding": "July 13, 2026",
+  "fibFile": "July 2-8: The Project Breakaway File\nJuly 9-13: The Fine Art File",
+  "weeklyChallenge": "July 2-8: Complete 3 Bunker Research Missions\nJuly 9-13: Win 2 Races\n(Each pays GTA$100,000 + Blue Jock Cranley Jumpsuit)",
+  "podium": "Jugular",
+  "prizeRide": "Viseris",
   "bonuses": [
-    { "category": "4X GTA$", "name": "FIB Priority File (The Fine Art File)", "value": "4X" },
-    { "category": "2X GTA$ & RP", "name": "Acid Lab Sell Missions", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Fooligan Jobs", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Special Vehicle Races", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Community Combat Series", "value": "2X" },
-    { "category": "2X GTA$", "name": "Standard FIB Files", "value": "2X" }
+    { "category": "3X GTA$ & RP", "name": "Stunt Race Series", "value": "3X" },
+    { "category": "2X GTA$ & RP", "name": "Bunker Sell Missions", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Ammu-Nation Contract Missions", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Running Back (Remix)", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Community Series", "value": "2X" },
+    { "category": "2X MULTI & RES", "name": "Bunker Research Missions (Agent 14 - 2X Speed)", "value": "2X" }
   ],
   "loginRewards": [
-    "Burgundy Rockstar Varsity Crewneck (Claim via Rockstar Discord #discord-rewards)",
-    "GTA$500,000 (Fine Art Collector Program - Within 72 Hours)",
-    "Free Benefactor Turreted Limo (Claim from Warstock Cache & Carry)",
-    "Mansion Owners: Curated collection of special gifts (Delivered upon Heist launch)"
+    "Lady Liberty Bucket Hat",
+    "Guaranteed Independence Day items from Business Battles",
+    "Fine Art Collector: GTA$500,000 within 72 hours",
+    "Fine Art Collector: Free Turreted Limo (Sedan) from Warstock",
+    "Mansion Owners: GTA$1M Art Studio upgrade discount, Free Annihilator Stealth, Unique Sculpture & Unique High-Value Painting"
   ],
   "specialRewards": [
     { "action": "Complete any Heist by July 13", "reward": "GTA$1,000,000 + NOOSE Outfit" },
-    { "action": "MTL Brickade 6x6 Equipment", "reward": "Acid Lab Installation (FREE)" }
+    { "action": "Claim Free Property Location", "reward": "Lago Zancudo Bunker (FREE)" },
+    { "action": "Claim Free Garage Properties", "reward": "High-End Garages (FREE)" }
   ],
   "discounts": {
+    "seventy": [
+      "Mobile Operations Center",
+      "Terrorbyte",
+      "B-11 Strikeforce",
+      "Luxor",
+      "Avenger",
+      "RM-10 Bombushka",
+      "RO-86 Alkonost"
+    ],
+    "sixty": [
+      "Agencies Properties (Including Upgrades & Mods)",
+      "Hangars Properties (Including Upgrades & Mods)",
+      "Scramjet",
+      "Furia",
+      "Stinger TT",
+      "X80 Proto",
+      "Deluxo",
+      "Zeno",
+      "Tezeract",
+      "Emerus"
+    ],
     "fifty": [
-      "None this week"
+      "Krieger",
+      "Banshee GTS",
+      "Buffalo EVX / Buffalo STX",
+      "Half-Track",
+      "Pyro",
+      "Rocket Voltic",
+      "Vigero ZX",
+      "Weaponized Tampa",
+      "LSCM Jester RR / LSCM Cheetah Classic",
+      "Titan 250 D",
+      "Baller ST-D",
+      "Barrage",
+      "Ruiner 2000",
+      "P-996 LAZER",
+      "Karin Calico GTF",
+      "F-160 Raiju / Hydra",
+      "Shinobi",
+      "10F / Ignus / Torero XO",
+      "Oppressor / Toreador",
+      "Weaponized Ignus",
+      "La Coureuse / Growler",
+      "TM-02 Khanjali",
+      "Niobe / Sentinel GTS",
+      "V-65 Molotok / FMJ MK V",
+      "Vom Feuer Anti-Aircraft Trailer",
+      "Western Police Bike"
     ],
     "forty": [
-      "Darnell Bros. Garment Factory",
-      "MTL Brickade 6x6"
+      "Bunkers Properties (Including Upgrades & Modifications)",
+      "Independence Day Returning Content & Gear"
     ],
     "thirty": [
-      "Annis Euros X32",
-      "Annis Remus",
-      "Declasse Hotring Sabre",
-      "Dewbauchee Specter",
-      "Dinka Jester Classic",
-      "HVY Dump",
-      "Karin Everon",
-      "Pegassi Zorrusso",
-      "Pfister Comet S2 Cabrio",
-      "Vapid Flash GT"
+      "Annis Savestra",
+      "Bravado Sprunk Buffalo",
+      "Buckingham Nimbus",
+      "Buckingham Shamal",
+      "Lampadati Casco",
+      "Lampadati Tropos Rallye",
+      "Vapid Caracara 4x4",
+      "Western Rampant Rocket"
     ]
   },
   "salvageYard": [
-    { "robbery": "The McTony Robbery", "name": "Lampadati Tigon", "type": "Top Tier" },
-    { "robbery": "The Podium Robbery", "name": "Invetero Coquette BlackFin", "type": "Standard Tier" },
-    { "robbery": "The Gangbanger Robbery", "name": "Vapid Clique", "type": "Low Tier" }
+    { "robbery": "July 2-8: The McTony Robbery\nJuly 9-13: The Gangbanger Robbery", "name": "Itali RSX\nTurismo Omaggio", "type": "Top Tier" },
+    { "robbery": "July 2-8: The Duggan Robbery\nJuly 9-13: The Podium Robbery", "name": "Broadway\nCypher", "type": "Standard Tier" },
+    { "robbery": "July 2-8: The Cargo Ship Robbery\nJuly 9-13: The Duggan Robbery", "name": "Ellie\nEudora", "type": "Low Tier" }
   ],
   "simeonVehicles": [
-    "Declasse Tornado Rat Rod",
-    "Enus Stafford",
-    "Pegassi Esskey",
-    "Vapid Blade",
-    "Weeny Dynasty"
+    "Banshee GTS",
+    "Vigero ZX",
+    "X80 Proto",
+    "Torero XO",
+    "Niobe"
   ],
   "luxuryAutos": [
-    "Declasse Walton L35 Stock",
-    "Karin Everon RS"
+    "Sentinel GTS",
+    "FMJ MK V"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for four days in a row",
+    "prizeRideRequirement": "Win in the LS Car Meet Series for two days in a row",
     "testTrack": [
-      "Benefactor XLS",
-      "Declasse Tulip",
-      "Dinka Jester"
+      "LSCM Cheetah Classic",
+      "10F",
+      "La Coureuse"
     ],
-    "hsw": "Maibatsu MonstroCiti"
+    "hsw": "Deveste Eight"
   },
   "timeTrials": {
-    "regular": "Elysian Island II",
-    "hsw": "Pacific Bluffs to Mount Gordo",
-    "premium": "Senora Freeway (Premium Race)"
+    "regular": "July 2-8: Lake Vinewood Estate\nJuly 9-13: El Burro Heights",
+    "hsw": "July 2-8: North Chumash to Palomino Highlands\nJuly 9-13: East Vinewood to Vespucci Beach",
+    "premium": "Muscle In (Premium Race)"
   },
   "gunVan": [
-    "Baseball Bat (FREE)",
-    "Battle Rifle (50% OFF)",
-    "Stun Gun (30% OFF for GTA+ Members)"
+    "Firework Launcher & Firework Ammo (FREE)",
+    "Musket (FREE)",
+    "Heavy Rifle (40% OFF)",
+    "Railgun (30% OFF for GTA+ Members)"
   ],
   "gtaPlus": {
     "duration": "June 11 - July 13, 2026",
