@@ -1,8 +1,8 @@
 {
-  "locationId": 17,
-  "zone": "Gun Van Location #17",
-  "description": "Terminal (southwest corner)",
-  "mapPath": "map_17.jpg",
+  "locationId": 1,
+  "zone": "Gun Van Location #1",
+  "description": "No Marks Cleaners, Paleto Bay",
+  "mapPath": "map_1.jpg",
   "inventory": [
     "Compact EMP Launcher: -10 %",
     "Heavy Rifle: -40 %",
@@ -16,5 +16,5 @@
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-08T05:25:25.497Z"
+  "updatedAt": "2026-07-09T06:09:34.443Z"
 }
