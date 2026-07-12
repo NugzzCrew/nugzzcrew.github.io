@@ -59,48 +59,52 @@ import MainLayout from '../layouts/MainLayout.astro';
       
       ws.onopen = () => {
           console.log("Connected to Nugzz WS Server");
-          // 1. Subscribe to custom events sent by Streamer.bot
-          ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
           
-          // 2. Immediately ask Streamer.bot for the current live status so late viewers get the right video
+          // Immediately asks Streamer.bot for the current live status so late viewers get the right video
           ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
       };
 
       ws.onmessage = (event) => {
           try {
               const msg = JSON.parse(event.data);
+              let streamData = null;
+
+              // 1. Checks for the raw string payload from your new C# script
+              if (msg.name === "LiveStatusUpdate") {
+                  streamData = msg;
+              } 
+              // 2. Fallback just in case Streamer.bot wraps it in a custom event envelope
+              else if (msg.event && msg.event.type === "Custom" && msg.data && msg.data.data) {
+                  streamData = JSON.parse(msg.data.data);
+              }
               
-              if (msg.event && msg.event.type === "Custom" && msg.data && msg.data.data) {
-                  const customData = JSON.parse(msg.data.data);
+              // 3. THE SWITCH: Flips the CSS classes based on the payload
+              if (streamData && streamData.name === "LiveStatusUpdate") {
+                  const videoFrame = document.getElementById('yt-video-frame');
+                  const placeholderImg = document.getElementById('offline-placeholder');
                   
-                  // Looks for the specific LiveStatusUpdate payload
-                  if (customData.name === "LiveStatusUpdate") {
-                      const videoFrame = document.getElementById('yt-video-frame');
-                      const placeholderImg = document.getElementById('offline-placeholder');
+                  if (streamData.isLive === true && streamData.videoId) {
+                      // Stream is LIVE: Show iframe, hide image
+                      videoFrame.classList.remove('hidden');
+                      videoFrame.classList.add('block');
+                      placeholderImg.classList.remove('block');
+                      placeholderImg.classList.add('hidden');
                       
-                      if (customData.isLive && customData.videoId) {
-                          // Stream is LIVE: Show iframe, hide image
-                          videoFrame.classList.remove('hidden');
-                          videoFrame.classList.add('block');
-                          placeholderImg.classList.remove('block');
-                          placeholderImg.classList.add('hidden');
-                          
-                          // Inject video ID if it's not already loaded
-                          if (!videoFrame.src.includes(customData.videoId)) {
-                              videoFrame.src = `https://www.youtube.com/embed/${customData.videoId}?autoplay=1&mute=1`;
-                          }
-                      } else {
-                          // Stream is OFFLINE: Hide iframe, show image
-                          videoFrame.classList.remove('block');
-                          videoFrame.classList.add('hidden');
-                          placeholderImg.classList.remove('hidden');
-                          placeholderImg.classList.add('block');
-                          videoFrame.src = "about:blank"; 
+                      // Inject video ID into the iframe if not already loaded
+                      if (!videoFrame.src.includes(streamData.videoId)) {
+                          videoFrame.src = `https://www.youtube.com/embed/${streamData.videoId}?autoplay=1&mute=1`;
                       }
+                  } else {
+                      // Stream is OFFLINE: Hide iframe, show image
+                      videoFrame.classList.remove('block');
+                      videoFrame.classList.add('hidden');
+                      placeholderImg.classList.remove('hidden');
+                      placeholderImg.classList.add('block');
+                      videoFrame.src = "about:blank"; 
                   }
               }
           } catch (e) {
-              console.error("Error parsing WS message:", e);
+              // Silently catches non-JSON messages to keep your console clean
           }
       };
 
