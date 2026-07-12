@@ -55,7 +55,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 <script is:inline>
   function connectStreamBot() {
       // Connects to your dedicated WebSocket domain
-      const ws = new WebSocket("wss://ws.officialnugzzcrew.com/");
+      const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
       
       ws.onopen = () => {
           console.log("Connected to Nugzz WS Server");
