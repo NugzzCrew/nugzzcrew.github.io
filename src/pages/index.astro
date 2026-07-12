@@ -13,107 +13,58 @@ import MainLayout from '../layouts/MainLayout.astro';
       "Streaming, GTA Updates, and the best community in the game."
     </p>
     
-    <!-- Video Container with Offline Placeholder & Z-Index Stacking -->
+    <!-- Video Wrapper -->
     <div class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 mb-12 overflow-hidden bg-black shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)]">
-      
-      <!-- Offline Image (Visible by Default) -->
-      <img 
-        id="offline-placeholder" 
-        src="/images/offline.png" 
-        alt="Stream is currently offline" 
-        class="absolute top-0 left-0 w-full h-full object-cover z-10 block" 
-      />
-      
-      <!-- Live Stream Player (Hidden by Default, z-index 20 keeps it on top when active) -->
-      <iframe 
-        id="yt-video-frame"
-        class="absolute top-0 left-0 w-full h-full z-20 hidden"
-        src="about:blank" 
-        title="Official Nugzz Crew Live Stream" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-      </iframe>
-
+      <img id="offline-placeholder" src="/images/offline.png" alt="Stream is currently offline" class="absolute top-0 left-0 w-full h-full object-cover z-10 block" />
+      <iframe id="yt-video-frame" src="about:blank" allowfullscreen class="absolute top-0 left-0 w-full h-full z-20 hidden"></iframe>
     </div>
 
+    <!-- Commands & Other sections stay here -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12">
         <a href="/gta" class="p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold transition-all group text-left">
           <h2 class="text-xl md:text-2xl group-hover:text-gold transition-colors uppercase font-black italic">GTA Bonuses &rarr;</h2>
-          <p class="text-zinc-500 mt-2 text-sm md:text-base">Get the latest on bonuses, car meets, and robberies.</p>
         </a>
-  
         <div class="p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl text-left">
           <h2 class="text-xl md:text-2xl uppercase font-black italic text-gold">The Fam Bam</h2>
-          <p class="text-zinc-500 mt-2 text-sm md:text-base">Catch every live stream and join the best community on YouTube.</p>
         </div>
-      </div>
+    </div>
   </section>
 </MainLayout>
 
-<!-- WebSocket Listener to control the placeholder logic -->
 <script is:inline>
-  function connectStreamBot() {
-      // Connects to your dedicated WebSocket domain
-      const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
-      
+  let ws;
+  function connectBot() {
+      // Connects to your domain
+      ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+
       ws.onopen = () => {
           console.log("Connected to Nugzz WS Server");
-          
-          // Immediately asks Streamer.bot for the current live status so late viewers get the right video
+          // Request status immediately on load
           ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
       };
 
       ws.onmessage = (event) => {
           try {
               const msg = JSON.parse(event.data);
-              let streamData = null;
-
-              // 1. Checks for the raw string payload from your new C# script
+              // Handle the specific LiveStatusUpdate payload sent by your C# script
               if (msg.name === "LiveStatusUpdate") {
-                  streamData = msg;
-              } 
-              // 2. Fallback just in case Streamer.bot wraps it in a custom event envelope
-              else if (msg.event && msg.event.type === "Custom" && msg.data && msg.data.data) {
-                  streamData = JSON.parse(msg.data.data);
-              }
-              
-              // 3. THE SWITCH: Flips the CSS classes based on the payload
-              if (streamData && streamData.name === "LiveStatusUpdate") {
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
-                  
-                  if (streamData.isLive === true && streamData.videoId) {
-                      // Stream is LIVE: Show iframe, hide image
-                      videoFrame.classList.remove('hidden');
-                      videoFrame.classList.add('block');
-                      placeholderImg.classList.remove('block');
-                      placeholderImg.classList.add('hidden');
-                      
-                      // Inject video ID into the iframe if not already loaded
-                      if (!videoFrame.src.includes(streamData.videoId)) {
-                          videoFrame.src = `https://www.youtube.com/embed/${streamData.videoId}?autoplay=1&mute=1`;
-                      }
+
+                  if (msg.isLive === true && msg.videoId && msg.videoId.trim() !== "") {
+                      videoFrame.style.display = 'block';
+                      videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1`;
+                      placeholderImg.style.display = 'none';
                   } else {
-                      // Stream is OFFLINE: Hide iframe, show image
-                      videoFrame.classList.remove('block');
-                      videoFrame.classList.add('hidden');
-                      placeholderImg.classList.remove('hidden');
-                      placeholderImg.classList.add('block');
-                      videoFrame.src = "about:blank"; 
+                      videoFrame.style.display = 'none';
+                      videoFrame.src = "about:blank";
+                      placeholderImg.style.display = 'block';
                   }
               }
-          } catch (e) {
-              // Silently catches non-JSON messages to keep your console clean
-          }
+          } catch (e) { console.error("WS Parse Error:", e); }
       };
 
-      ws.onclose = () => {
-          console.log("WS Connection lost. Retrying in 5 seconds...");
-          setTimeout(connectStreamBot, 5000);
-      };
+      ws.onclose = () => setTimeout(connectBot, 5000);
   }
-  
-  // Initialize the connection when the page loads
-  window.addEventListener('load', connectStreamBot);
+  window.addEventListener('load', connectBot);
 </script>
