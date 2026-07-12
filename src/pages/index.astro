@@ -53,15 +53,15 @@ import MainLayout from '../layouts/MainLayout.astro';
 
       ws.onmessage = (event) => {
           try {
+              // Parse the raw string sent by CPH.WebsocketBroadcastString
               const msg = JSON.parse(event.data);
-              console.log("WS Payload received:", msg); // Check this in F12 console to verify isLive status
-
+              
+              // This matches the exact structure your C# script is pushing
               if (msg.name === "LiveStatusUpdate") {
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
 
-                  // Force explicit style changes to override CSS classes
-                  if (msg.isLive === true && msg.videoId && msg.videoId.trim() !== "") {
+                  if (msg.isLive === true) {
                       videoFrame.style.display = 'block';
                       videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1&mute=1`;
                       placeholderImg.style.display = 'none';
@@ -71,7 +71,9 @@ import MainLayout from '../layouts/MainLayout.astro';
                       placeholderImg.style.display = 'block';
                   }
               }
-          } catch (e) { console.error("WS Parse Error:", e); }
+          } catch (e) { 
+              // This catches any non-JSON messages sent by other bot actions
+          }
       };
 
       ws.onclose = () => setTimeout(connectBot, 5000);
