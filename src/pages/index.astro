@@ -13,11 +13,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       "Streaming, GTA Updates, and the best community in the game."
     </p>
     
+    <!-- UPDATED: Video Container with Offline Placeholder & Z-Index Stacking -->
     <div class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 mb-12 overflow-hidden bg-black shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)]">
       
+      <!-- Offline Image (Visible by Default) -->
+      <img 
+        id="offline-placeholder" 
+        src="/images/offline.png" 
+        alt="Stream is currently offline" 
+        class="absolute top-0 left-0 w-full h-full object-cover z-10 block" 
+      />
+      
+      <!-- Live Stream Player (Hidden by Default, z-index 20 keeps it on top when active) -->
       <iframe 
-        class="absolute top-0 left-0 w-full h-full"
-        src="https://www.youtube.com/embed/live_stream?channel=UCYNmnbEgm3G0m4avmwz_4Eg&autoplay=1&mute=1" 
+        id="yt-video-frame"
+        class="absolute top-0 left-0 w-full h-full z-20 hidden"
+        src="about:blank" 
         title="Official Nugzz Crew Live Stream" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -39,3 +50,63 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
   </section>
 </MainLayout>
+
+<!-- NEW: WebSocket Listener to control the placeholder logic -->
+<script is:inline>
+  function connectStreamBot() {
+      // Connects to your dedicated WebSocket domain
+      const ws = new WebSocket("wss://ws.officialnugzzcrew.com/");
+      
+      ws.onopen = () => {
+          console.log("Connected to Nugzz WS Server");
+          // Subscribes to custom events sent by Streamer.bot
+          ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
+      };
+
+      ws.onmessage = (event) => {
+          try {
+              const msg = JSON.parse(event.data);
+              
+              if (msg.event && msg.event.type === "Custom" && msg.data && msg.data.data) {
+                  const customData = JSON.parse(msg.data.data);
+                  
+                  // Looks for the specific LiveStatusUpdate payload
+                  if (customData.name === "LiveStatusUpdate") {
+                      const videoFrame = document.getElementById('yt-video-frame');
+                      const placeholderImg = document.getElementById('offline-placeholder');
+                      
+                      if (customData.isLive && customData.videoId) {
+                          // Stream is LIVE: Show iframe, hide image
+                          videoFrame.classList.remove('hidden');
+                          videoFrame.classList.add('block');
+                          placeholderImg.classList.remove('block');
+                          placeholderImg.classList.add('hidden');
+                          
+                          // Inject video ID if it's not already loaded
+                          if (!videoFrame.src.includes(customData.videoId)) {
+                              videoFrame.src = `https://www.youtube.com/embed/${customData.videoId}?autoplay=1&mute=1`;
+                          }
+                      } else {
+                          // Stream is OFFLINE: Hide iframe, show image
+                          videoFrame.classList.remove('block');
+                          videoFrame.classList.add('hidden');
+                          placeholderImg.classList.remove('hidden');
+                          placeholderImg.classList.add('block');
+                          videoFrame.src = "about:blank"; 
+                      }
+                  }
+              }
+          } catch (e) {
+              console.error("Error parsing WS message:", e);
+          }
+      };
+
+      ws.onclose = () => {
+          console.log("WS Connection lost. Retrying in 5 seconds...");
+          setTimeout(connectStreamBot, 5000);
+      };
+  }
+  
+  // Initialize the connection when the page loads
+  window.addEventListener('load', connectStreamBot);
+</script>
