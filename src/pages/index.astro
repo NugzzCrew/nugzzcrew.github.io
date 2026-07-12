@@ -13,20 +13,10 @@ import MainLayout from '../layouts/MainLayout.astro';
       "Streaming, GTA Updates, and the best community in the game."
     </p>
     
-    <!-- Video Wrapper: Z-Index ensures the iframe sits on top when active -->
+    <!-- Video Wrapper -->
     <div class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 mb-12 overflow-hidden bg-black shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)]">
-      <img 
-        id="offline-placeholder" 
-        src="/images/offline.png" 
-        alt="Stream is currently offline" 
-        style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 10;" 
-      />
-      <iframe 
-        id="yt-video-frame" 
-        src="about:blank" 
-        allowfullscreen 
-        style="display: none; width: 100%; height: 100%; position: relative; z-index: 20;">
-      </iframe>
+      <img id="offline-placeholder" src="/images/offline.png" alt="Stream is currently offline" style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 10;">
+      <iframe id="yt-video-frame" src="about:blank" allowfullscreen style="display: none; width: 100%; height: 100%; position: relative; z-index: 20;"></iframe>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12">
@@ -41,42 +31,55 @@ import MainLayout from '../layouts/MainLayout.astro';
 </MainLayout>
 
 <script is:inline>
+  let ws;
   function connectBot() {
-      // Connects to your specific secure WebSocket domain
-      const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+      // Connect to your WebSocket
+      ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
       ws.onopen = () => {
           console.log("Connected to Nugzz WS Server");
-          // Request status immediately on load to force the update
+          // Request status immediately
           ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
       };
 
       ws.onmessage = (event) => {
+          console.log("RAW WS MESSAGE:", event.data);
+
           try {
-              // Parse the raw string sent by CPH.WebsocketBroadcastString
               const msg = JSON.parse(event.data);
               
-              // This matches the exact structure your C# script is pushing
-              if (msg.name === "LiveStatusUpdate") {
+              // We simulate the structure your friend's app expects
+              // If the message isn't already wrapped, we wrap it to match his logic
+              const customData = msg.name === "LiveStatusUpdate" ? msg : (msg.data ? JSON.parse(msg.data) : null);
+
+              if (customData && customData.name === "LiveStatusUpdate") {
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
 
-                  if (msg.isLive === true) {
-                      videoFrame.style.display = 'block';
-                      videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1&mute=1`;
-                      placeholderImg.style.display = 'none';
+                  if (customData.videoId && customData.videoId.trim() !== "") {
+                      if (videoFrame) {
+                          videoFrame.style.display = 'block';
+                          if (!videoFrame.src.includes(customData.videoId)) {
+                              videoFrame.src = `https://www.youtube.com/embed/${customData.videoId}?autoplay=1&mute=1`;
+                          }
+                      }
+                      if (placeholderImg) placeholderImg.style.display = 'none';
                   } else {
-                      videoFrame.style.display = 'none';
-                      videoFrame.src = "about:blank";
-                      placeholderImg.style.display = 'block';
+                      if (videoFrame) {
+                          videoFrame.style.display = 'none';
+                          videoFrame.src = "about:blank";
+                      }
+                      if (placeholderImg) placeholderImg.style.display = 'block';
                   }
               }
-          } catch (e) { 
-              // This catches any non-JSON messages sent by other bot actions
+          } catch (error) {
+              console.error("Failed to parse incoming WebSocket message:", error);
           }
       };
 
-      ws.onclose = () => setTimeout(connectBot, 5000);
+      ws.onclose = () => {
+          setTimeout(connectBot, 5000);
+      };
   }
   window.addEventListener('load', connectBot);
 </script>
