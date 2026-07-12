@@ -11,12 +11,13 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
     <section>
         <div class="flex flex-col md:flex-row justify-between gap-8 items-start">
             <div>
-                <h1 class="text-[clamp(40px,6vw,80px)] font-black italic uppercase leading-[0.8] text-white tracking-tighter">
+                <h1 class="text-[clamp(40px,6vw,80px)] font-black italic uppercase leading-[0.8] text-white tracking-tighter drop-shadow-lg">
                   {eventTitle}
                 </h1>
-                <p class="text-zinc-500 font-bold uppercase tracking-widest mt-4">Event available through {gtaData.weekEnding}</p>
+                <p class="text-zinc-400 font-bold uppercase tracking-widest mt-4">Event available through {gtaData.weekEnding}</p>
             </div>
-            <div class="bg-gold p-6 rounded-2xl text-black max-w-md shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
+            <!-- Added backdrop-blur and opacity to the challenge box -->
+            <div class="bg-gold/90 backdrop-blur-sm p-6 rounded-2xl text-black max-w-md shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)] border border-gold">
                 <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-1 opacity-70">Weekly Challenge</p>
                 <p class="font-black italic text-lg leading-tight uppercase whitespace-pre-line">{gtaData.weeklyChallenge}</p>
             </div>
@@ -24,72 +25,73 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
     </section>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-zinc-900/30 border border-zinc-800 p-5 rounded-2xl flex flex-col justify-between">
+        <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-between">
             <div>
                 <span class="text-[9px] text-red-500 font-black uppercase tracking-wider block mb-1">Intercepted Ledger</span>
                 <h3 class="text-white font-header text-lg uppercase tracking-tight">FIB Priority File</h3>
             </div>
-            <div class="mt-4 p-3 bg-red-950/20 border border-red-900/40 rounded-xl text-center">
-                <p class="text-zinc-400 text-xs font-mono font-bold whitespace-pre-line">{gtaData.fibFile}</p>
+            <div class="mt-4 p-3 bg-red-950/30 border border-red-900/40 rounded-xl text-center">
+                <p class="text-zinc-300 text-xs font-mono font-bold whitespace-pre-line">{gtaData.fibFile}</p>
             </div>
         </div>
 
-        <div class="bg-zinc-900/30 border border-zinc-800 p-5 rounded-2xl flex flex-col justify-between">
+        <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-between">
             <div>
                 <span class="text-[9px] text-gold font-black uppercase tracking-wider block mb-1">Mobile Black Market</span>
                 <h3 class="text-white font-header text-lg uppercase tracking-tight">Gun Van Primary Stock</h3>
             </div>
             <div class="mt-3 space-y-1.5">
                 {gtaData.gunVan.map(item => (
-                    <div class="bg-black/40 border border-zinc-800 px-3 py-1.5 rounded-lg text-[11px] font-mono font-bold text-zinc-300">
+                    <div class="bg-black/50 border border-zinc-700/50 px-3 py-1.5 rounded-lg text-[11px] font-mono font-bold text-zinc-300">
                         • {item}
                     </div>
                 ))}
             </div>
         </div>
 
-        <div class="bg-zinc-900/30 border border-zinc-800 p-5 rounded-2xl flex flex-col justify-between">
+        <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-between">
             <div>
                 <span class="text-[9px] text-blue-400 font-black uppercase tracking-wider block mb-1">Time Trial Node</span>
                 <h3 class="text-white font-header text-lg uppercase tracking-tight">Race Vectors</h3>
             </div>
-            <div class="mt-3 space-y-1.5 text-[11px] font-bold uppercase text-zinc-400 whitespace-pre-line">
+            <div class="mt-3 space-y-1.5 text-[11px] font-bold uppercase text-zinc-300 whitespace-pre-line">
                 <div><span class="text-white block mb-0.5">Regular:</span> {gtaData.timeTrials.regular}</div>
-                <div class="border-t border-zinc-800/60 pt-1"><span class="text-blue-400 block mb-0.5">HSW Tier:</span> {gtaData.timeTrials.hsw}</div>
-                <div class="border-t border-zinc-800/60 pt-1"><span class="text-gold block mb-0.5">Premium:</span> {gtaData.timeTrials.premium}</div>
+                <div class="border-t border-zinc-700/50 pt-1"><span class="text-blue-400 block mb-0.5">HSW Tier:</span> {gtaData.timeTrials.hsw}</div>
+                <div class="border-t border-zinc-700/50 pt-1"><span class="text-gold block mb-0.5">Premium:</span> {gtaData.timeTrials.premium}</div>
             </div>
         </div>
     </div>
 
     <div class="flex flex-wrap justify-center gap-3">
         {gtaData.bonuses.map(bonus => (
-            <div class="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.5rem)] lg:w-auto lg:flex-1 lg:min-w-[160px] lg:max-w-[220px] bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-center hover:border-gold transition-colors flex flex-col justify-center items-center">
-                <p class="text-gold font-black text-2xl tracking-tighter">{bonus.value}</p>
-                <p class="text-[9px] text-zinc-400 font-bold uppercase mt-1 leading-tight">{bonus.name}</p>
+            <!-- Swapped bg-zinc-900 for bg-zinc-900/50 with backdrop blur -->
+            <div class="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.5rem)] lg:w-auto lg:flex-1 lg:min-w-[160px] lg:max-w-[220px] bg-zinc-900/50 backdrop-blur-md border border-zinc-700/50 p-4 rounded-xl text-center hover:border-gold transition-colors flex flex-col justify-center items-center shadow-lg">
+                <p class="text-gold font-black text-2xl tracking-tighter drop-shadow-md">{bonus.value}</p>
+                <p class="text-[9px] text-zinc-300 font-bold uppercase mt-1 leading-tight">{bonus.name}</p>
             </div>
         ))}
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-zinc-900/50 border border-zinc-800 p-6 rounded-2xl">
+        <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-6 rounded-2xl">
             <h3 class="text-white font-black uppercase italic mb-4 flex items-center gap-2">
                 <i data-lucide="gift" class="text-gold w-5 h-5"></i> Login Rewards
             </h3>
             <ul class="space-y-2">
                 {gtaData.loginRewards.map(reward => (
-                    <li class="bg-black/40 border border-zinc-800 px-4 py-2 rounded-lg text-white text-[11px] font-bold uppercase tracking-tight">• {reward}</li>
+                    <li class="bg-black/50 border border-zinc-700/50 px-4 py-2 rounded-lg text-white text-[11px] font-bold uppercase tracking-tight shadow-sm">• {reward}</li>
                 ))}
             </ul>
         </div>
         
-        <div class="bg-gold/5 border border-gold/20 p-6 rounded-2xl">
-            <h3 class="text-gold font-black uppercase italic mb-4 flex items-center gap-2">
+        <div class="bg-gold/10 backdrop-blur-md border border-gold/30 p-6 rounded-2xl">
+            <h3 class="text-gold font-black uppercase italic mb-4 flex items-center gap-2 drop-shadow-sm">
                 <i data-lucide="award" class="text-gold w-5 h-5"></i> Special Rewards
             </h3>
             <div class="space-y-2">
                 {gtaData.specialRewards.map(item => (
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-center bg-black/40 p-3 rounded-lg border border-gold/10 gap-1">
-                        <p class="text-[10px] text-zinc-400 font-bold uppercase">{item.action}</p>
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center bg-black/60 p-3 rounded-lg border border-gold/20 gap-1 shadow-sm">
+                        <p class="text-[10px] text-zinc-300 font-bold uppercase">{item.action}</p>
                         <p class="text-[11px] text-gold font-black uppercase tracking-tighter">{item.reward}</p>
                     </div>
                 ))}
@@ -99,13 +101,13 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
 
     <div class="grid md:grid-cols-3 gap-8">
         <div class="space-y-4">
-            <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3">
+            <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3 drop-shadow-md">
                 Salvage Yard
             </h2>
             {gtaData.salvageYard.map(car => (
-                <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 flex justify-between items-center">
+                <div class="bg-zinc-900/50 backdrop-blur-md p-4 rounded-xl border border-zinc-700/50 flex justify-between items-center shadow-lg">
                     <div>
-                        <p class="text-[9px] text-zinc-500 font-bold uppercase whitespace-pre-line">{car.robbery}</p>
+                        <p class="text-[9px] text-zinc-400 font-bold uppercase whitespace-pre-line">{car.robbery}</p>
                         <p class="text-white font-bold text-sm leading-tight mt-0.5">{car.name}</p>
                     </div>
                     <span class={`text-[8px] font-black px-2 py-1 rounded uppercase tracking-tighter ${car.type === 'CLAIMABLE' ? 'bg-gold text-black animate-pulse' : 'bg-zinc-800 text-gold'}`}>{car.type}</span>
@@ -114,10 +116,10 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
         </div>
 
         <div class="space-y-4">
-            <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3">
+            <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3 drop-shadow-md">
                 Showrooms
             </h2>
-            <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 space-y-4 h-[calc(100%-3rem)]">
+            <div class="bg-zinc-900/50 backdrop-blur-md p-6 rounded-xl border border-zinc-700/50 space-y-4 h-[calc(100%-3rem)] shadow-lg">
                 <div>
                     <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-2">PDM & Luxury Autos Inventory</p>
                     <ul class="text-white text-[11px] font-bold space-y-1.5 uppercase tracking-tight">
@@ -128,13 +130,13 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
         </div>
 
         <div class="space-y-4">
-            <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3">
+            <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3 drop-shadow-md">
                 LS Car Meet
             </h2>
-            <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 space-y-4">
+            <div class="bg-zinc-900/50 backdrop-blur-md p-6 rounded-xl border border-zinc-700/50 space-y-4 shadow-lg">
                 <div>
                     <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-1">Prize Ride: {gtaData.prizeRide}</p>
-                    <p class="text-zinc-500 text-[10px] uppercase font-bold leading-tight">{gtaData.lsCarMeet.prizeRideRequirement}</p>
+                    <p class="text-zinc-400 text-[10px] uppercase font-bold leading-tight">{gtaData.lsCarMeet.prizeRideRequirement}</p>
                 </div>
                 <div>
                     <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-2">Test Track Fleet</p>
@@ -147,55 +149,56 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
         </div>
     </div>
 
-    <!-- UPDATED: 5-Column layout grid block to visually feature 70% and 60% tiers cleanly -->
-    <section class="bg-zinc-900/50 rounded-3xl p-8 border border-zinc-800">
-        <h2 class="text-2xl font-black uppercase italic text-white mb-8 border-l-4 border-gold pl-4">Limited Time Discounts</h2>
+    <section class="bg-zinc-900/40 backdrop-blur-md rounded-3xl p-8 border border-zinc-700/50 shadow-xl">
+        <h2 class="text-2xl font-black uppercase italic text-white mb-8 border-l-4 border-gold pl-4 drop-shadow-md">Limited Time Discounts</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {gtaData.discounts.seventy && gtaData.discounts.seventy.length > 0 && (
               <div>
-                  <p class="text-red-500 font-black text-lg mb-4 italic tracking-tight">70% OFF</p>
+                  <p class="text-red-500 font-black text-lg mb-4 italic tracking-tight drop-shadow-md">70% OFF</p>
                   <ul class="text-white text-[11px] font-bold space-y-2 uppercase tracking-tighter">
-                      {gtaData.discounts.seventy.map(item => <li class="border-b border-white/5 pb-1">{item}</li>)}
+                      {gtaData.discounts.seventy.map(item => <li class="border-b border-white/10 pb-1">{item}</li>)}
                   </ul>
               </div>
             )}
             {gtaData.discounts.sixty && gtaData.discounts.sixty.length > 0 && (
               <div>
-                  <p class="text-orange-500 font-black text-lg mb-4 italic tracking-tight">60% OFF</p>
+                  <p class="text-orange-500 font-black text-lg mb-4 italic tracking-tight drop-shadow-md">60% OFF</p>
                   <ul class="text-white text-[11px] font-bold space-y-2 uppercase tracking-tighter">
-                      {gtaData.discounts.sixty.map(item => <li class="border-b border-white/5 pb-1">{item}</li>)}
+                      {gtaData.discounts.sixty.map(item => <li class="border-b border-white/10 pb-1">{item}</li>)}
                   </ul>
               </div>
             )}
             <div>
-                <p class="text-gold font-black text-lg mb-4 italic">50% OFF</p>
+                <p class="text-gold font-black text-lg mb-4 italic drop-shadow-md">50% OFF</p>
                 <ul class="text-white text-[11px] font-bold space-y-2 uppercase tracking-tighter">
-                    {gtaData.discounts.fifty.map(item => <li class="border-b border-white/5 pb-1">{item}</li>)}
+                    {gtaData.discounts.fifty.map(item => <li class="border-b border-white/10 pb-1">{item}</li>)}
                 </ul>
             </div>
             <div>
-                <p class="text-gold font-black text-lg mb-4 italic">40% OFF</p>
+                <p class="text-gold font-black text-lg mb-4 italic drop-shadow-md">40% OFF</p>
                 <ul class="text-white text-[11px] font-bold space-y-2 uppercase tracking-tighter">
-                    {gtaData.discounts.forty.map(item => <li class="border-b border-white/5 pb-1">{item}</li>)}
+                    {gtaData.discounts.forty.map(item => <li class="border-b border-white/10 pb-1">{item}</li>)}
                 </ul>
             </div>
             <div>
-                <p class="text-gold font-black text-lg mb-4 italic">30% OFF</p>
+                <p class="text-gold font-black text-lg mb-4 italic drop-shadow-md">30% OFF</p>
                 <ul class="text-white text-[11px] font-bold space-y-2 uppercase tracking-tighter">
-                    {gtaData.discounts.thirty.map(item => <li class="border-b border-white/5 pb-1">{item}</li>)}
+                    {gtaData.discounts.thirty.map(item => <li class="border-b border-white/10 pb-1">{item}</li>)}
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="relative rounded-[2.5rem] overflow-hidden bg-black border border-gold/30">
-        <div class="bg-zinc-900 p-8 border-b border-gold/20">
+    <!-- Swapped solid bg-black for a translucent black with blur -->
+    <section class="relative rounded-[2.5rem] overflow-hidden bg-black/60 backdrop-blur-xl border border-gold/40 shadow-2xl">
+        <!-- Header area wrapper -->
+        <div class="bg-zinc-900/60 p-8 border-b border-gold/20">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-black italic uppercase tracking-tighter text-white">GTA+ <span class="text-gold">Rewards</span></h2>
+                    <h2 class="text-4xl md:text-5xl font-black italic uppercase tracking-tighter text-white drop-shadow-md">GTA+ <span class="text-gold">Rewards</span></h2>
                     <p class="text-gold font-bold uppercase tracking-widest text-[10px] mt-1 italic">{gtaData.gtaPlus.duration}</p>
                 </div>
-                <div class="bg-gold text-black px-6 py-2 rounded-full font-black uppercase text-xs">
+                <div class="bg-gold text-black px-6 py-2 rounded-full font-black uppercase text-xs shadow-lg">
                     Premium Member Benefits
                 </div>
             </div>
@@ -204,41 +207,41 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
         <div class="p-8 md:p-12 space-y-12">
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="space-y-4">
-                    <p class="text-gold font-black uppercase tracking-widest text-[10px]">Free Vehicles & Paints</p>
+                    <p class="text-gold font-black uppercase tracking-widest text-[10px] drop-shadow-sm">Free Vehicles & Paints</p>
                     <div class="grid grid-cols-1 gap-2">
-                        {gtaData.gtaPlus.freeVehicles.map(v => <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 text-white text-xs font-bold uppercase">• {v}</div>)}
+                        {gtaData.gtaPlus.freeVehicles.map(v => <div class="bg-zinc-900/60 p-4 rounded-xl border border-zinc-700/50 text-white text-xs font-bold uppercase shadow-sm">• {v}</div>)}
                     </div>
                 </div>
                 <div class="space-y-4">
-                    <p class="text-gold font-black uppercase tracking-widest text-[10px]">Free Clothing</p>
+                    <p class="text-gold font-black uppercase tracking-widest text-[10px] drop-shadow-sm">Free Clothing</p>
                     <div class="grid grid-cols-1 gap-2">
-                        {gtaData.gtaPlus.clothing.map(c => <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 text-white text-xs font-bold uppercase">• {c}</div>)}
+                        {gtaData.gtaPlus.clothing.map(c => <div class="bg-zinc-900/60 p-4 rounded-xl border border-zinc-700/50 text-white text-xs font-bold uppercase shadow-sm">• {c}</div>)}
                     </div>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="space-y-4">
-                    <p class="text-gold font-black uppercase tracking-widest text-[10px]">Active Multipliers & Discounts</p>
+                    <p class="text-gold font-black uppercase tracking-widest text-[10px] drop-shadow-sm">Active Multipliers & Discounts</p>
                     <div class="grid grid-cols-1 gap-2">
-                        {gtaData.gtaPlus.bonuses.map(b => <div class="bg-gold/10 p-4 rounded-xl border border-gold/20 text-white text-xs font-bold uppercase tracking-tight">{b}</div>)}
-                        {gtaData.gtaPlus.discounts.map(d => <div class="bg-gold p-3 rounded-xl text-black font-black text-sm uppercase text-center mt-2">{d}</div>)}
+                        {gtaData.gtaPlus.bonuses.map(b => <div class="bg-gold/10 p-4 rounded-xl border border-gold/30 text-white text-xs font-bold uppercase tracking-tight shadow-sm">{b}</div>)}
+                        {gtaData.gtaPlus.discounts.map(d => <div class="bg-gold/90 p-3 rounded-xl text-black font-black text-sm uppercase text-center mt-2 shadow-md">{d}</div>)}
                     </div>
                 </div>
-                <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
-                    <p class="text-gold font-black uppercase tracking-widest text-[10px] mb-4 text-center">Vinewood Club Showroom (20% OFF)</p>
+                <div class="bg-zinc-900/60 p-6 rounded-2xl border border-zinc-700/50 shadow-lg">
+                    <p class="text-gold font-black uppercase tracking-widest text-[10px] mb-4 text-center drop-shadow-sm">Vinewood Club Showroom (20% OFF)</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1">
-                        {gtaData.gtaPlus.vinewoodShowroom.map(car => <li class="text-white text-[10px] font-bold list-none uppercase border-b border-white/5 pb-1">• {car}</li>)}
+                        {gtaData.gtaPlus.vinewoodShowroom.map(car => <li class="text-white text-[10px] font-bold list-none uppercase border-b border-white/10 pb-1">• {car}</li>)}
                     </div>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 pt-8 border-t border-zinc-800">
+            <div class="grid md:grid-cols-2 gap-12 pt-8 border-t border-zinc-700/60">
                 <div class="space-y-6">
-                    <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter">Member Persistent Perks</h3>
+                    <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter drop-shadow-md">Member Persistent Perks</h3>
                     <div class="grid grid-cols-1 gap-y-3">
                         {gtaData.gtaPlus.persistent.map(perk => (
-                            <div class="flex items-center gap-3 text-zinc-400">
+                            <div class="flex items-center gap-3 text-zinc-300">
                                 <i data-lucide="check-circle" class="w-4 h-4 text-gold"></i>
                                 <span class="text-[10px] font-bold uppercase">{perk}</span>
                             </div>
@@ -246,10 +249,10 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
                     </div>
                 </div>
                 <div class="space-y-6">
-                    <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter">Vinewood Club Access</h3>
+                    <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter drop-shadow-md">Vinewood Club Access</h3>
                     <div class="grid grid-cols-1 gap-y-4">
                         {gtaData.gtaPlus.vinewoodClub.map(benefit => (
-                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10 shadow-sm">
                                 <p class="text-white text-[10px] font-bold uppercase leading-tight">{benefit}</p>
                             </div>
                         ))}
@@ -258,11 +261,11 @@ const eventTitle = gtaData.eventTitle || "Independence Day Showcase";
             </div>
             
             {gtaData.gtaPlus.gamesLibrary && (
-              <div class="pt-8 border-t border-zinc-800 space-y-4">
-                  <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter">GTA+ Games Library</h3>
+              <div class="pt-8 border-t border-zinc-700/60 space-y-4">
+                  <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter drop-shadow-md">GTA+ Games Library</h3>
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {gtaData.gtaPlus.gamesLibrary.map(game => (
-                          <div class="bg-zinc-900 p-3 rounded-xl border border-zinc-800 text-zinc-300 text-xs font-bold uppercase">• {game}</div>
+                          <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-700/50 text-zinc-300 text-xs font-bold uppercase shadow-sm">• {game}</div>
                       ))}
                   </div>
               </div>
