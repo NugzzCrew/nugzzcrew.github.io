@@ -13,7 +13,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       "Streaming, GTA Updates, and the best community in the game."
     </p>
     
-    <!-- Video Wrapper: Ensuring Z-Index management -->
+    <!-- Video Wrapper -->
     <div class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 mb-12 overflow-hidden bg-black shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)]">
       <img 
         id="offline-placeholder" 
@@ -36,7 +36,10 @@ import MainLayout from '../layouts/MainLayout.astro';
       const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
       ws.onopen = () => {
+          // Subscribe to custom events
           ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
+          
+          // Request status immediately
           setTimeout(() => {
             ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
           }, 1000);
@@ -46,18 +49,19 @@ import MainLayout from '../layouts/MainLayout.astro';
           try {
               const msg = JSON.parse(event.data);
               
-              // Dig into the nested structure shown in your console log
-              // The data is at: msg.data.data
+              // Handle nested data structure
               if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
                   const data = msg.data.data;
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
                   
-                  if (data.isLive === true) {
+                  // Logical check for live status and video ID presence
+                  if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
                       videoFrame.style.display = 'block';
                       videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
                       placeholderImg.style.display = 'none';
                   } else {
+                      // Offline/End state
                       videoFrame.style.display = 'none';
                       videoFrame.src = "about:blank";
                       placeholderImg.style.display = 'block';
