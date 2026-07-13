@@ -1,8 +1,8 @@
 {
-  "locationId": 25,
-  "zone": "Gun Van Location #25",
-  "description": "Caesars Auto Parking, Little Seoul",
-  "mapPath": "map_25.jpg",
+  "locationId": 21,
+  "zone": "Gun Van Location #21",
+  "description": "Magellan Ave / Conquistador St, Vespucci Beach",
+  "mapPath": "map_21.jpg",
   "inventory": [
     "Compact EMP Launcher: -10 %",
     "Heavy Rifle: -40 %",
@@ -16,5 +16,5 @@
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-13T05:41:47.761Z"
+  "updatedAt": "2026-07-13T17:17:00.472Z"
 }
