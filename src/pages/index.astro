@@ -32,53 +32,22 @@ import MainLayout from '../layouts/MainLayout.astro';
 </MainLayout>
 
 <script is:inline>
-  console.log("Diagnostic: Script initialized...");
-
-  function connectBot() {
-      console.log("Diagnostic: Attempting to connect to WSS...");
-      const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
-
-      ws.onopen = () => {
-          console.log("Diagnostic: Connected to Nugzz WS Server!");
-          // Trigger the status action
-          ws.send(JSON.stringify({ 
-              "request": "DoAction", 
-              "action": { "name": "Web_Request_Status" }, 
-              "id": "StatusCheck" 
-          }));
-      };
-
-      ws.onmessage = (event) => {
-          console.log("Diagnostic: Raw WS Message received:", event.data);
-          try {
-              const msg = JSON.parse(event.data);
+  const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+  ws.onmessage = (event) => {
+      console.log("RECEIVED:", event.data);
+      try {
+          const msg = JSON.parse(event.data);
+          // Look for the specific name we defined in C#
+          if (msg.name === "LiveStatusUpdate") {
+              const videoFrame = document.getElementById('yt-video-frame');
+              const placeholderImg = document.getElementById('offline-placeholder');
               
-              if (msg && msg.name === "LiveStatusUpdate") {
-                  console.log("Diagnostic: Received LiveStatusUpdate payload");
-                  const videoFrame = document.getElementById('yt-video-frame');
-                  const placeholderImg = document.getElementById('offline-placeholder');
-
-                  if (msg.isLive === true) {
-                      videoFrame.style.display = 'block';
-                      videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1&mute=1`;
-                      placeholderImg.style.display = 'none';
-                  } else {
-                      videoFrame.style.display = 'none';
-                      videoFrame.src = "about:blank";
-                      placeholderImg.style.display = 'block';
-                  }
+              if (msg.isLive === true) {
+                  videoFrame.style.display = 'block';
+                  videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1&mute=1`;
+                  placeholderImg.style.display = 'none';
               }
-          } catch (e) { 
-              console.log("Diagnostic: Non-JSON message or ignore."); 
           }
-      };
-
-      ws.onerror = (error) => console.error("Diagnostic: WebSocket Error:", error);
-      ws.onclose = () => {
-          console.log("Diagnostic: Disconnected, retrying...");
-          setTimeout(connectBot, 5000);
-      };
-  }
-
-  window.addEventListener('load', connectBot);
+      } catch (e) {}
+  };
 </script>
