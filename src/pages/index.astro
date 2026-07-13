@@ -36,41 +36,36 @@ import MainLayout from '../layouts/MainLayout.astro';
       const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
       ws.onopen = () => {
-          console.log("Connected! Requesting subscription...");
-          // This tells Streamer.bot to start sending us 'Custom' events
-          ws.send(JSON.stringify({ 
-              "request": "Subscribe", 
-              "events": { "general": ["Custom"] }, 
-              "id": "SubRequest" 
-          }));
+          ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
+          // ADDED: Force request for data immediately after subscribing
+          setTimeout(() => {
+            ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
+          }, 1000);
       };
 
       ws.onmessage = (event) => {
           console.log("RAW RECEIVED:", event.data);
           try {
               const msg = JSON.parse(event.data);
+              // Handle both direct broadcast and wrapped event
+              const data = msg.data ? msg.data : msg; 
               
-              // We check if the data matches our wrapper
-              if (msg.event_type === "Custom" && msg.data) {
-                  const data = msg.data;
-                  if (data.name === "LiveStatusUpdate") {
-                      const videoFrame = document.getElementById('yt-video-frame');
-                      const placeholderImg = document.getElementById('offline-placeholder');
-
-                      if (data.isLive === true) {
-                          videoFrame.style.display = 'block';
-                          videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
-                          placeholderImg.style.display = 'none';
-                      } else {
-                          videoFrame.style.display = 'none';
-                          videoFrame.src = "about:blank";
-                          placeholderImg.style.display = 'block';
-                      }
+              if (data.name === "LiveStatusUpdate") {
+                  const videoFrame = document.getElementById('yt-video-frame');
+                  const placeholderImg = document.getElementById('offline-placeholder');
+                  
+                  if (data.isLive === true) {
+                      videoFrame.style.display = 'block';
+                      videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
+                      placeholderImg.style.display = 'none';
+                  } else {
+                      videoFrame.style.display = 'none';
+                      videoFrame.src = "about:blank";
+                      placeholderImg.style.display = 'block';
                   }
               }
-          } catch (e) { console.log("Non-JSON message ignored."); }
+          } catch (e) {}
       };
-      
       ws.onclose = () => setTimeout(connectBot, 5000);
   }
   window.addEventListener('load', connectBot);
