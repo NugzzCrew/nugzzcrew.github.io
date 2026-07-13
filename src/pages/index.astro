@@ -1,5 +1,8 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+// Assuming these are your component imports
+import GtaEventModule from '../components/GtaEventModule.astro';
+import GtaPlusModule from '../components/GtaPlusModule.astro';
 ---
 
 <MainLayout title="Home">
@@ -28,6 +31,13 @@ import MainLayout from '../layouts/MainLayout.astro';
         style="display: none; width: 100%; height: 100%; position: relative; z-index: 20;">
       </iframe>
     </div>
+
+    <!-- Restored Bottom Modules -->
+    <div class="grid md:grid-cols-2 gap-6 mt-12">
+      <GtaEventModule />
+      <GtaPlusModule />
+    </div>
+
   </section>
 </MainLayout>
 
@@ -36,10 +46,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
       ws.onopen = () => {
-          // Subscribe to custom events
           ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
-          
-          // Request status immediately
           setTimeout(() => {
             ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
           }, 1000);
@@ -48,20 +55,16 @@ import MainLayout from '../layouts/MainLayout.astro';
       ws.onmessage = (event) => {
           try {
               const msg = JSON.parse(event.data);
-              
-              // Handle nested data structure
               if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
                   const data = msg.data.data;
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
                   
-                  // Logical check for live status and video ID presence
                   if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
                       videoFrame.style.display = 'block';
                       videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
                       placeholderImg.style.display = 'none';
                   } else {
-                      // Offline/End state
                       videoFrame.style.display = 'none';
                       videoFrame.src = "about:blank";
                       placeholderImg.style.display = 'block';
