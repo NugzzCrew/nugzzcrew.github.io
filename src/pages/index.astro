@@ -33,53 +33,38 @@ import MainLayout from '../layouts/MainLayout.astro';
 <script is:inline>
   let ws;
   function connectBot() {
-      // Connect to your WebSocket
       ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
-
+      
       ws.onopen = () => {
-          console.log("Connected to Nugzz WS Server");
-          // Request status immediately
+          // Subscribe to custom events so the bot knows to send them to this client
+          ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
+          // Request status
           ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
       };
 
       ws.onmessage = (event) => {
-          console.log("RAW WS MESSAGE:", event.data);
-
           try {
               const msg = JSON.parse(event.data);
-              
-              // We simulate the structure your friend's app expects
-              // If the message isn't already wrapped, we wrap it to match his logic
-              const customData = msg.name === "LiveStatusUpdate" ? msg : (msg.data ? JSON.parse(msg.data) : null);
+              // Handle the payload structure sent by CPH.WebsocketBroadcastJson
+              const data = (msg.event && msg.event.type === "Custom" && msg.data) ? JSON.parse(msg.data.data) : msg;
 
-              if (customData && customData.name === "LiveStatusUpdate") {
+              if (data && data.name === "LiveStatusUpdate") {
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
-
-                  if (customData.videoId && customData.videoId.trim() !== "") {
-                      if (videoFrame) {
-                          videoFrame.style.display = 'block';
-                          if (!videoFrame.src.includes(customData.videoId)) {
-                              videoFrame.src = `https://www.youtube.com/embed/${customData.videoId}?autoplay=1&mute=1`;
-                          }
-                      }
-                      if (placeholderImg) placeholderImg.style.display = 'none';
+                  
+                  if (data.isLive === true && data.videoId) {
+                      videoFrame.style.display = 'block';
+                      videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
+                      placeholderImg.style.display = 'none';
                   } else {
-                      if (videoFrame) {
-                          videoFrame.style.display = 'none';
-                          videoFrame.src = "about:blank";
-                      }
-                      if (placeholderImg) placeholderImg.style.display = 'block';
+                      videoFrame.style.display = 'none';
+                      videoFrame.src = "about:blank";
+                      placeholderImg.style.display = 'block';
                   }
               }
-          } catch (error) {
-              console.error("Failed to parse incoming WebSocket message:", error);
-          }
+          } catch (e) { console.error("WS Parse Error:", e); }
       };
-
-      ws.onclose = () => {
-          setTimeout(connectBot, 5000);
-      };
+      ws.onclose = () => setTimeout(connectBot, 5000);
   }
   window.addEventListener('load', connectBot);
 </script>
