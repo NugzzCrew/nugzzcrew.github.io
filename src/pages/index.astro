@@ -36,7 +36,13 @@ import MainLayout from '../layouts/MainLayout.astro';
       const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
       ws.onopen = () => {
-          console.log("Connected!");
+          console.log("Connected! Requesting subscription...");
+          // This tells Streamer.bot to start sending us 'Custom' events
+          ws.send(JSON.stringify({ 
+              "request": "Subscribe", 
+              "events": { "general": ["Custom"] }, 
+              "id": "SubRequest" 
+          }));
       };
 
       ws.onmessage = (event) => {
@@ -44,7 +50,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           try {
               const msg = JSON.parse(event.data);
               
-              // We look for our manual 'event_type'
+              // We check if the data matches our wrapper
               if (msg.event_type === "Custom" && msg.data) {
                   const data = msg.data;
                   if (data.name === "LiveStatusUpdate") {
