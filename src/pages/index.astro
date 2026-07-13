@@ -13,39 +13,52 @@ import MainLayout from '../layouts/MainLayout.astro';
       "Streaming, GTA Updates, and the best community in the game."
     </p>
     
-    <!-- Video Wrapper -->
+    <!-- Video Wrapper: Ensuring Z-Index management -->
     <div class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 mb-12 overflow-hidden bg-black shadow-[0_0_50px_-12px_rgba(212,175,55,0.3)]">
-      <img id="offline-placeholder" src="/images/offline.png" alt="Stream is currently offline" style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 10;">
-      <iframe id="yt-video-frame" src="about:blank" allowfullscreen style="display: none; width: 100%; height: 100%; position: relative; z-index: 20;"></iframe>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12">
-        <a href="/gta" class="p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold transition-all group text-left">
-          <h2 class="text-xl md:text-2xl group-hover:text-gold transition-colors uppercase font-black italic">GTA Bonuses &rarr;</h2>
-        </a>
-        <div class="p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl text-left">
-          <h2 class="text-xl md:text-2xl uppercase font-black italic text-gold">The Fam Bam</h2>
-        </div>
+      <img 
+        id="offline-placeholder" 
+        src="/images/offline.png" 
+        alt="Stream is currently offline" 
+        style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 10;" 
+      />
+      <iframe 
+        id="yt-video-frame" 
+        src="about:blank" 
+        allowfullscreen 
+        style="display: none; width: 100%; height: 100%; position: relative; z-index: 20;">
+      </iframe>
     </div>
   </section>
 </MainLayout>
 
 <script is:inline>
+  console.log("Diagnostic: Script initialized...");
+
   function connectBot() {
+      console.log("Diagnostic: Attempting to connect to WSS...");
       const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
-      ws.onmessage = (event) => {
-          // Ignore non-string or empty messages
-          if (!event.data || event.data === "undefined") return;
+      ws.onopen = () => {
+          console.log("Diagnostic: Connected to Nugzz WS Server!");
+          // Trigger the status action
+          ws.send(JSON.stringify({ 
+              "request": "DoAction", 
+              "action": { "name": "Web_Request_Status" }, 
+              "id": "StatusCheck" 
+          }));
+      };
 
+      ws.onmessage = (event) => {
+          console.log("Diagnostic: Raw WS Message received:", event.data);
           try {
               const msg = JSON.parse(event.data);
               
               if (msg && msg.name === "LiveStatusUpdate") {
+                  console.log("Diagnostic: Received LiveStatusUpdate payload");
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
 
-                  if (msg.isLive === true && msg.videoId) {
+                  if (msg.isLive === true) {
                       videoFrame.style.display = 'block';
                       videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1&mute=1`;
                       placeholderImg.style.display = 'none';
@@ -56,15 +69,16 @@ import MainLayout from '../layouts/MainLayout.astro';
                   }
               }
           } catch (e) { 
-              // Silently ignore messages that aren't for this feature
+              console.log("Diagnostic: Non-JSON message or ignore."); 
           }
       };
 
-      ws.onopen = () => {
-          ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
+      ws.onerror = (error) => console.error("Diagnostic: WebSocket Error:", error);
+      ws.onclose = () => {
+          console.log("Diagnostic: Disconnected, retrying...");
+          setTimeout(connectBot, 5000);
       };
-      
-      ws.onclose = () => setTimeout(connectBot, 5000);
   }
+
   window.addEventListener('load', connectBot);
 </script>
