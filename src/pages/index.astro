@@ -32,22 +32,53 @@ import MainLayout from '../layouts/MainLayout.astro';
 </MainLayout>
 
 <script is:inline>
-  const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
-  ws.onmessage = (event) => {
-      console.log("RECEIVED:", event.data);
-      try {
-          const msg = JSON.parse(event.data);
-          // Look for the specific name we defined in C#
-          if (msg.name === "LiveStatusUpdate") {
-              const videoFrame = document.getElementById('yt-video-frame');
-              const placeholderImg = document.getElementById('offline-placeholder');
+  console.log("Diagnostic: Initializing Global Listener...");
+
+  function connectBot() {
+      const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+
+      ws.onopen = () => {
+          console.log("Connected! Subscribing to all broadcasts...");
+          // This tells Streamer.bot to send EVERYTHING to this browser
+          ws.send(JSON.stringify({ 
+              "request": "Subscribe", 
+              "events": { "general": ["Custom"] }, 
+              "id": "SubRequest" 
+          }));
+      };
+
+      ws.onmessage = (event) => {
+          // Log EVERYTHING received so we can see if the JSON is even arriving
+          console.log("RAW RECEIVED:", event.data);
+
+          try {
+              const msg = JSON.parse(event.data);
               
-              if (msg.isLive === true) {
-                  videoFrame.style.display = 'block';
-                  videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1&mute=1`;
-                  placeholderImg.style.display = 'none';
+              // Handle standard Custom Event envelope from Streamer.bot
+              let data = msg;
+              if (msg.event && msg.event.type === "Custom" && msg.data) {
+                  data = JSON.parse(msg.data.data);
               }
-          }
-      } catch (e) {}
-  };
+
+              if (data && data.name === "LiveStatusUpdate") {
+                  const videoFrame = document.getElementById('yt-video-frame');
+                  const placeholderImg = document.getElementById('offline-placeholder');
+
+                  if (data.isLive === true) {
+                      videoFrame.style.display = 'block';
+                      videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
+                      placeholderImg.style.display = 'none';
+                  } else {
+                      videoFrame.style.display = 'none';
+                      videoFrame.src = "about:blank";
+                      placeholderImg.style.display = 'block';
+                  }
+              }
+          } catch (e) { console.log("Non-JSON message skipped."); }
+      };
+      
+      ws.onclose = () => setTimeout(connectBot, 5000);
+  }
+
+  window.addEventListener('load', connectBot);
 </script>
