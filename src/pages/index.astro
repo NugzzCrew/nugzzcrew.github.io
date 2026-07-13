@@ -31,30 +31,23 @@ import MainLayout from '../layouts/MainLayout.astro';
 </MainLayout>
 
 <script is:inline>
-  let ws;
   function connectBot() {
-      ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
-      
-      ws.onopen = () => {
-          // Subscribe to custom events so the bot knows to send them to this client
-          ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
-          // Request status
-          ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
-      };
+      const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
       ws.onmessage = (event) => {
+          // Ignore non-string or empty messages
+          if (!event.data || event.data === "undefined") return;
+
           try {
               const msg = JSON.parse(event.data);
-              // Handle the payload structure sent by CPH.WebsocketBroadcastJson
-              const data = (msg.event && msg.event.type === "Custom" && msg.data) ? JSON.parse(msg.data.data) : msg;
-
-              if (data && data.name === "LiveStatusUpdate") {
+              
+              if (msg && msg.name === "LiveStatusUpdate") {
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
-                  
-                  if (data.isLive === true && data.videoId) {
+
+                  if (msg.isLive === true && msg.videoId) {
                       videoFrame.style.display = 'block';
-                      videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
+                      videoFrame.src = `https://www.youtube.com/embed/${msg.videoId}?autoplay=1&mute=1`;
                       placeholderImg.style.display = 'none';
                   } else {
                       videoFrame.style.display = 'none';
@@ -62,8 +55,15 @@ import MainLayout from '../layouts/MainLayout.astro';
                       placeholderImg.style.display = 'block';
                   }
               }
-          } catch (e) { console.error("WS Parse Error:", e); }
+          } catch (e) { 
+              // Silently ignore messages that aren't for this feature
+          }
       };
+
+      ws.onopen = () => {
+          ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
+      };
+      
       ws.onclose = () => setTimeout(connectBot, 5000);
   }
   window.addEventListener('load', connectBot);
