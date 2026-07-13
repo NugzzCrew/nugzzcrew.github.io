@@ -1,8 +1,5 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-// Assuming these are your component imports
-import GtaEventModule from '../components/GtaEventModule.astro';
-import GtaPlusModule from '../components/GtaPlusModule.astro';
 ---
 
 <MainLayout title="Home">
@@ -32,12 +29,17 @@ import GtaPlusModule from '../components/GtaPlusModule.astro';
       </iframe>
     </div>
 
-    <!-- Restored Bottom Modules -->
-    <div class="grid md:grid-cols-2 gap-6 mt-12">
-      <GtaEventModule />
-      <GtaPlusModule />
-    </div>
-
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12">
+        <a href="/gta" class="p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold transition-all group text-left">
+          <h2 class="text-xl md:text-2xl group-hover:text-gold transition-colors uppercase font-black italic">GTA Bonuses &rarr;</h2>
+          <p class="text-zinc-500 mt-2 text-sm md:text-base">Get the latest on bonuses, car meets, and robberies.</p>
+        </a>
+  
+        <div class="p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl text-left">
+          <h2 class="text-xl md:text-2xl uppercase font-black italic text-gold">The Fam Bam</h2>
+          <p class="text-zinc-500 mt-2 text-sm md:text-base">Catch every live stream and join the best community on YouTube.</p>
+        </div>
+      </div>
   </section>
 </MainLayout>
 
@@ -46,7 +48,10 @@ import GtaPlusModule from '../components/GtaPlusModule.astro';
       const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
       ws.onopen = () => {
+          // Subscribe to custom events
           ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
+          
+          // Request status immediately
           setTimeout(() => {
             ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
           }, 1000);
@@ -55,16 +60,20 @@ import GtaPlusModule from '../components/GtaPlusModule.astro';
       ws.onmessage = (event) => {
           try {
               const msg = JSON.parse(event.data);
+              
+              // Handle nested data structure
               if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
                   const data = msg.data.data;
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
                   
+                  // Logical check for live status and video ID presence
                   if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
                       videoFrame.style.display = 'block';
                       videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
                       placeholderImg.style.display = 'none';
                   } else {
+                      // Offline/End state
                       videoFrame.style.display = 'none';
                       videoFrame.src = "about:blank";
                       placeholderImg.style.display = 'block';
