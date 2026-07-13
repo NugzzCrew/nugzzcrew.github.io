@@ -37,20 +37,19 @@ import MainLayout from '../layouts/MainLayout.astro';
 
       ws.onopen = () => {
           ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
-          // ADDED: Force request for data immediately after subscribing
           setTimeout(() => {
             ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
           }, 1000);
       };
 
       ws.onmessage = (event) => {
-          console.log("RAW RECEIVED:", event.data);
           try {
               const msg = JSON.parse(event.data);
-              // Handle both direct broadcast and wrapped event
-              const data = msg.data ? msg.data : msg; 
               
-              if (data.name === "LiveStatusUpdate") {
+              // Dig into the nested structure shown in your console log
+              // The data is at: msg.data.data
+              if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
+                  const data = msg.data.data;
                   const videoFrame = document.getElementById('yt-video-frame');
                   const placeholderImg = document.getElementById('offline-placeholder');
                   
@@ -64,8 +63,9 @@ import MainLayout from '../layouts/MainLayout.astro';
                       placeholderImg.style.display = 'block';
                   }
               }
-          } catch (e) {}
+          } catch (e) { console.log("Parsing error:", e); }
       };
+      
       ws.onclose = () => setTimeout(connectBot, 5000);
   }
   window.addEventListener('load', connectBot);
