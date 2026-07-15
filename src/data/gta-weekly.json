@@ -1,169 +1,112 @@
 {
-  "eventTitle": "Independence Day Spectacular",
-  "weekEnding": "July 13, 2026",
-  "fibFile": "July 2-8: The Project Breakaway File\nJuly 9-13: The Fine Art File",
-  "weeklyChallenge": "July 2-8: Complete 3 Bunker Research Missions\nJuly 9-13: Win 2 Races\n(Each pays GTA$100,000 + Blue Jock Cranley Jumpsuit)",
-  "podium": "Jugular",
-  "prizeRide": "Viseris",
+  "eventTitle": "The Kortz Center Heist",
+  "weekEnding": "July 22, 2026",
+  "fibFile": "The Black Box File",
+  "weeklyChallenge": "Complete The Kortz Center Heist 1 time to receive GTA$100,000",
+  "podium": "Dinka Jester RR",
+  "prizeRide": "Obey Omnis e-GT",
   "bonuses": [
-    { "category": "3X GTA$ & RP", "name": "Stunt Race Series", "value": "3X" },
-    { "category": "2X GTA$ & RP", "name": "Bunker Sell Missions", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Ammu-Nation Contract Missions", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Running Back (Remix)", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Community Series", "value": "2X" },
-    { "category": "2X MULTI & RES", "name": "Bunker Research Missions (Agent 14 - 2X Speed)", "value": "2X" }
+    { "category": "3X GTA$ & RP", "name": "Community Series & Sumo (Remix)", "value": "3X" },
+    { "category": "2X GTA$ & RP", "name": "HSW Time Trial", "value": "2X" }
   ],
   "loginRewards": [
-    "Lady Liberty Bucket Hat",
-    "Guaranteed Independence Day items from Business Battles",
-    "Fine Art Collector: GTA$500,000 within 72 hours",
-    "Fine Art Collector: Free Turreted Limo (Sedan) from Warstock",
-    "Mansion Owners: GTA$1M Art Studio upgrade discount, Free Annihilator Stealth, Unique Sculpture & Unique High-Value Painting"
+    "Grotti Veleno GT (Early Access for GTA+)",
+    "Albany Merula, Benefactor Läufer, Benefactor LRC GT, Grotti Cartuccia GT & Ocelot E-Stride (Available to all)",
+    "Mission Creator: New features, characters and props"
   ],
   "specialRewards": [
-    { "action": "Complete any Heist by July 13", "reward": "GTA$1,000,000 + NOOSE Outfit" },
-    { "action": "Claim Free Property Location", "reward": "Lago Zancudo Bunker (FREE)" },
-    { "action": "Claim Free Garage Properties", "reward": "High-End Garages (FREE)" }
+    { "action": "Complete The Kortz Center Heist", "reward": "GTA$100,000" }
   ],
   "discounts": {
-    "seventy": [
-      "Mobile Operations Center",
-      "Terrorbyte",
-      "B-11 Strikeforce",
-      "Luxor",
-      "Avenger",
-      "RM-10 Bombushka",
-      "RO-86 Alkonost"
-    ],
-    "sixty": [
-      "Agencies Properties (Including Upgrades & Mods)",
-      "Hangars Properties (Including Upgrades & Mods)",
-      "Scramjet",
-      "Furia",
-      "Stinger TT",
-      "X80 Proto",
-      "Deluxo",
-      "Zeno",
-      "Tezeract",
-      "Emerus"
-    ],
     "fifty": [
-      "Krieger",
-      "Banshee GTS",
-      "Buffalo EVX / Buffalo STX",
-      "Half-Track",
-      "Pyro",
-      "Rocket Voltic",
-      "Vigero ZX",
-      "Weaponized Tampa",
-      "LSCM Jester RR / LSCM Cheetah Classic",
-      "Titan 250 D",
-      "Baller ST-D",
-      "Barrage",
-      "Ruiner 2000",
-      "P-996 LAZER",
-      "Karin Calico GTF",
-      "F-160 Raiju / Hydra",
-      "Shinobi",
-      "10F / Ignus / Torero XO",
-      "Oppressor / Toreador",
-      "Weaponized Ignus",
-      "La Coureuse / Growler",
-      "TM-02 Khanjali",
-      "Niobe / Sentinel GTS",
-      "V-65 Molotok / FMJ MK V",
-      "Vom Feuer Anti-Aircraft Trailer",
-      "Western Police Bike"
-    ],
-    "forty": [
-      "Bunkers Properties (Including Upgrades & Modifications)",
-      "Independence Day Returning Content & Gear"
+      "Benny's Original Motor Works Conversions",
+      "Hao's Special Works Conversions",
+      "Colored Headlights Upgrades"
     ],
     "thirty": [
-      "Annis Savestra",
-      "Bravado Sprunk Buffalo",
-      "Buckingham Nimbus",
-      "Buckingham Shamal",
-      "Lampadati Casco",
-      "Lampadati Tropos Rallye",
-      "Vapid Caracara 4x4",
-      "Western Rampant Rocket"
+      "Annis Hellion",
+      "Bravado Greenwood",
+      "Coil Brawler",
+      "Imponte Nightshade",
+      "Karin Futo GTX",
+      "Nagasaki Blazer Aqua",
+      "Nagasaki Stryder",
+      "Taxi",
+      "Vapid FMJ",
+      "Vysser Neo",
+      "Compact EMP Launcher",
+      "Railgun (GTA+ Only)"
     ]
   },
   "salvageYard": [
-    { "robbery": "July 2-8: The McTony Robbery\nJuly 9-13: The Gangbanger Robbery", "name": "Itali RSX\nTurismo Omaggio", "type": "Top Tier" },
-    { "robbery": "July 2-8: The Duggan Robbery\nJuly 9-13: The Podium Robbery", "name": "Broadway\nCypher", "type": "Standard Tier" },
-    { "robbery": "July 2-8: The Cargo Ship Robbery\nJuly 9-13: The Duggan Robbery", "name": "Ellie\nEudora", "type": "Low Tier" }
+    { "robbery": "The McTony Robbery", "name": "Pfister Neon", "type": "TOP TIER" },
+    { "robbery": "The Duggan Robbery", "name": "Bravado Gauntlet Hellfire", "type": "STANDARD" },
+    { "robbery": "The Cargo Ship Robbery", "name": "Dinka Blista Kanjo", "type": "LOW TIER" }
   ],
   "simeonVehicles": [
-    "Banshee GTS",
-    "Vigero ZX",
-    "X80 Proto",
-    "Torero XO",
-    "Niobe"
+    "Albany Merula",
+    "Benefactor Läufer",
+    "Benefactor LRC GT",
+    "Grotti Cartuccia GT",
+    "Ocelot E-Stride"
   ],
   "luxuryAutos": [
-    "Sentinel GTS",
-    "FMJ MK V"
+    "Annis Minimus",
+    "Progen Luiva"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Win in the LS Car Meet Series for two days in a row",
+    "prizeRideRequirement": "Place top 4 in an LS Car Meet Series race",
     "testTrack": [
-      "LSCM Cheetah Classic",
-      "10F",
-      "La Coureuse"
+      "Bravado Greenwood",
+      "Karin Futo GTX",
+      "Vysser Neo"
     ],
-    "hsw": "Deveste Eight"
+    "hsw": "Weeny Issi Rally"
   },
   "timeTrials": {
-    "regular": "July 2-8: Lake Vinewood Estate\nJuly 9-13: El Burro Heights",
-    "hsw": "July 2-8: North Chumash to Palomino Highlands\nJuly 9-13: East Vinewood to Vespucci Beach",
-    "premium": "Muscle In (Premium Race)"
+    "regular": "Del Perro Pier",
+    "hsw": "Del Perro Beach to Murietta Heights",
+    "premium": "Art to Art"
   },
   "gunVan": [
-    "Firework Launcher & Firework Ammo (FREE)",
-    "Musket (FREE)",
-    "Heavy Rifle (40% OFF)",
-    "Railgun (30% OFF for GTA+ Members)"
+    "Compact EMP Launcher (30% OFF)",
+    "Railgun (30% OFF - GTA+ Only)"
   ],
   "gtaPlus": {
-    "duration": "June 11 - July 13, 2026",
+    "duration": "July 14 - August 12, 2026",
     "freeVehicles": [
-      "Ocelot Stromberg",
-      "Teal/Purple Flip Chameleon Paint",
-      "Teal/Purple Flip Chameleon Wheel Paint"
+      "Grotti Veleno GT (w/ Attack livery)",
+      "Black Oil Spill Prismatic Chameleon Body Paint",
+      "Black Oil Spill Prismatic Chameleon Wheel Paint"
     ],
     "clothing": [
-      "Independence Day Jacket and Pants",
-      "Green Emissive Lady Liberty Mask",
-      "Feud Anniversary Baseball Shirt"
+      "Orange Manor Bomber Zipped Jacket"
     ],
     "bonuses": [
-      "5X GTA$ & RP on G's Caches",
-      "2X GTA$ & RP on Smuggler Sell Missions",
-      "2X GTA$ & RP on KnoWay Out Missions (Full Strand)",
-      "2X GTA$ & RP on Home Sweet Home (Michael's Mission)"
+      "2X GTA$ and RP on HSW Time Trials"
     ],
     "discounts": [
-      "60% OFF Hangars (Including Upgrades & Modifications)",
-      "60% OFF McKenzie Field Hangar (Oscar Guzman)"
+      "GTA$2M Mansion Discount (thru Aug 5)",
+      "GTA$1M Art Studio Discount",
+      "50% OFF Benny's & HSW Conversions",
+      "50% OFF Colored Headlights"
     ],
     "vinewoodShowroom": [
-      "Albany Hermes (Amazing Albany II Livery)",
-      "Declasse Drift Walton L35 (Atomic Racing Livery)",
-      "Emperor Vectre (Mambas 24 Livery)",
-      "Grotti Turismo Classic",
-      "Ocelot Ardent (Conveyor Livery)",
-      "Ocelot R88",
-      "Överflöd Pipistrello (Splashes 76 Livery)",
-      "Pegassi Oppressor MK II (Sessanta Nove Multi-color Livery)",
-      "Vapid Dominator GT"
+      "Benefactor LM87",
+      "Benefactor LRC GT",
+      "Declasse Scramjet",
+      "Grotti Cartuccia GT",
+      "Grotti Itali RSX (Monochrome livery)",
+      "Imponte Deluxo",
+      "Ocelot E-Stride",
+      "Pfister Astrale (Side Stripes)",
+      "Übermacht Revolter (Dolla Dolla)"
     ],
     "persistent": [
-      "FREE Taxi services (shorter cooldown)",
+      "FREE Taxi services",
       "FREE CEO/VIP Abilities",
-      "FREE vehicle requests via Interaction Menu",
-      "Remote Access to Business Staff",
+      "FREE vehicle requests",
+      "Remote Business Staff Management",
       "Extra Lucky Wheel Spin Every Day",
       "Claim All Business Earnings",
       "Gun Van blipped with extra discounts",
@@ -172,19 +115,18 @@
     ],
     "vinewoodClub": [
       "Showroom: Rotating premium vehicles (20% off)",
-      "Garage: Downtown Los Santos with 100 personal vehicle slots",
-      "Hangar Storage: 5 storage slots (McKenzie Field Hangar not required)",
-      "Workshop: Discounted mods (No rank requirements)",
-      "App: Manage earnings, ammo, and vehicle requests/claims"
+      "Garage: Downtown Los Santos with 100 slots",
+      "Hangar Storage: 5 slots (No McKenzie Hangar needed)",
+      "Workshop: Discounted mods (No rank required)",
+      "App: Earnings, ammo, and vehicle requests"
     ],
     "gamesLibrary": [
-      "Grand Theft Auto V & GTA Online (PS5, Xbox Series X|S, PC)",
-      "GTA: The Trilogy - The Definitive Edition (Console, PC, Mobile)",
-      "Bully (App Store, Google Play, PlayStation, Xbox, PC)",
-      "Red Dead Redemption (PlayStation, Xbox, PC)",
-      "L.A. Noire (PlayStation, Xbox, PC)",
-      "GTA: Liberty City Stories & Chinatown Wars (Mobile)",
-      "Note: 20% discount to purchase listed titles permanently"
+      "Grand Theft Auto V & Online (PS5, XSX, PC)",
+      "GTA III, Vice City - The Definitive Edition",
+      "Bully",
+      "Red Dead Redemption",
+      "L.A. Noire",
+      "GTA: Liberty City Stories & Chinatown Wars"
     ]
   }
 }
