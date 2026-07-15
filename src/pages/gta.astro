@@ -1,42 +1,72 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import gtaData from '../data/gta-weekly.json';
+
+const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
 ---
 
 <MainLayout title="GTA Weekly & GTA+">
   <div class="max-w-7xl mx-auto py-12 px-4 md:px-6 space-y-16">
+    
     <section>
-        <h1 class="text-6xl font-black italic uppercase text-white">{gtaData.eventTitle}</h1>
-        <p class="text-zinc-400">Available through {gtaData.weekEnding}</p>
+        <div class="flex flex-col md:flex-row justify-between gap-8 items-start">
+            <div>
+                <h1 class="text-[clamp(40px,6vw,80px)] font-black italic uppercase leading-[0.8] text-white tracking-tighter drop-shadow-lg">
+                  {eventTitle}
+                </h1>
+                <p class="text-zinc-400 font-bold uppercase tracking-widest mt-4">Event available through {gtaData.weekEnding}</p>
+            </div>
+            <div class="bg-gold/90 backdrop-blur-sm p-6 rounded-2xl text-black max-w-md shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)] border border-gold">
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-1 opacity-70">Weekly Challenge</p>
+                <p class="font-black italic text-lg leading-tight uppercase whitespace-pre-line">{gtaData.weeklyChallenge}</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Time Trials Section -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-zinc-900 p-6 rounded-xl">
-            <h3 class="text-gold font-bold uppercase">Time Trial</h3>
-            <p class="text-white">{gtaData.timeTrials?.regular}</p>
-        </div>
-        <div class="bg-zinc-900 p-6 rounded-xl">
-            <h3 class="text-blue-400 font-bold uppercase">HSW Time Trial</h3>
-            <p class="text-white">{gtaData.timeTrials?.hsw}</p>
-        </div>
-        <div class="bg-zinc-900 p-6 rounded-xl">
-            <h3 class="text-gold font-bold uppercase">Premium Race</h3>
-            <p class="text-white">{gtaData.timeTrials?.premium}</p>
+        <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-between">
+            <div>
+                <span class="text-[9px] text-gold font-black uppercase tracking-wider block mb-1">Mobile Black Market</span>
+                <h3 class="text-white font-header text-lg uppercase tracking-tight">Gun Van Primary Stock</h3>
+            </div>
+            <div class="mt-3 space-y-1.5">
+                {gtaData.gunVan.map(item => (
+                    <div class="bg-black/50 border border-zinc-700/50 px-3 py-1.5 rounded-lg text-[11px] font-mono font-bold text-zinc-300">
+                        • {item}
+                    </div>
+                ))}
+            </div>
         </div>
     </div>
 
-    <!-- Weekly Challenge -->
-    <div class="bg-gold p-8 rounded-2xl text-black">
-        <h2 class="font-black uppercase">Weekly Challenge</h2>
-        <p class="text-lg">{gtaData.weeklyChallenge}</p>
-    </div>
-
-    <!-- Salvage Yard -->
-    <div class="grid md:grid-cols-3 gap-4">
-        {gtaData.salvageYard?.map(car => (
-            <div class="bg-zinc-800 p-4 rounded-lg text-white">{car.name}</div>
+    <div class="flex flex-wrap justify-center gap-3">
+        {gtaData.bonuses.map(bonus => (
+            <div class="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.5rem)] lg:auto bg-zinc-900/50 backdrop-blur-md border border-zinc-700/50 p-4 rounded-xl text-center shadow-lg">
+                <p class="text-gold font-black text-2xl tracking-tighter drop-shadow-md">{bonus.value}</p>
+                <p class="text-[9px] text-zinc-300 font-bold uppercase mt-1 leading-tight">{bonus.name}</p>
+            </div>
         ))}
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-6 rounded-2xl">
+            <ul class="space-y-2">
+                {gtaData.loginRewards.map(reward => (
+                    <li class="text-white text-[11px] font-bold uppercase">• {reward}</li>
+                ))}
+            </ul>
+        </div>
+        
+        <div class="bg-gold/10 backdrop-blur-md border border-gold/30 p-6 rounded-2xl">
+            <div class="space-y-2">
+                {gtaData.specialRewards.map(item => (
+                    <div class="flex justify-between bg-black/60 p-3 rounded-lg border border-gold/20">
+                        <p class="text-[10px] text-zinc-300 font-bold uppercase">{item.action}</p>
+                        <p class="text-[11px] text-gold font-black uppercase">{item.reward}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
     </div>
   </div>
 </MainLayout>

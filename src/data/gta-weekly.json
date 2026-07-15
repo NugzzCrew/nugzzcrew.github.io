@@ -1,42 +1,35 @@
 {
   "eventTitle": "The Kortz Center Heist",
   "weekEnding": "July 22, 2026",
-  "weeklyChallenge": "Complete The Kortz Center Heist 1 time to receive GTA$100,000",
   "fibFile": "The Black Box File",
-  "gunVan": [
-    "Compact EMP Launcher (30% OFF)",
-    "Railgun (30% OFF - GTA+ Only)"
-  ],
+  "weeklyChallenge": "Complete The Kortz Center Heist 1 time to receive GTA$100,000",
+  "podium": "Dinka Jester RR",
+  "prizeRide": "Obey Omnis e-GT",
   "bonuses": [
     { "name": "Community Series & Sumo (Remix)", "value": "3X" },
     { "name": "HSW Time Trial", "value": "2X" }
   ],
   "loginRewards": [
     "Grotti Veleno GT (Early Access for GTA+)",
-    "Albany Merula, Benefactor Läufer, Benefactor LRC GT, Grotti Cartuccia GT & Ocelot E-Stride",
+    "Albany Merula, Benefactor Läufer, Benefactor LRC GT, Grotti Cartuccia GT & Ocelot E-Stride (Available to all)",
     "Mission Creator updates"
   ],
   "specialRewards": [
     { "action": "Complete The Kortz Center Heist", "reward": "GTA$100,000" }
   ],
+  "discounts": {
+    "thirty": [
+      "Annis Hellion", "Bravado Greenwood", "Coil Brawler", "Imponte Nightshade", "Karin Futo GTX", "Nagasaki Blazer Aqua", "Nagasaki Stryder", "Taxi", "Vapid FMJ", "Vysser Neo", "Compact EMP Launcher", "Railgun (GTA+ Only)"
+    ]
+  },
   "salvageYard": [
-    { "name": "Pfister Neon (Top Tier)" },
-    { "name": "Bravado Gauntlet Hellfire (Standard)" },
-    { "name": "Dinka Blista Kanjo (Low Tier)" }
+    { "robbery": "The McTony Robbery", "name": "Pfister Neon", "type": "TOP TIER" },
+    { "robbery": "The Duggan Robbery", "name": "Bravado Gauntlet Hellfire", "type": "STANDARD" },
+    { "robbery": "The Cargo Ship Robbery", "name": "Dinka Blista Kanjo", "type": "LOW TIER" }
   ],
-  "simeonVehicles": [
-    "Albany Merula",
-    "Benefactor Läufer",
-    "Benefactor LRC GT",
-    "Grotti Cartuccia GT",
-    "Ocelot E-Stride"
-  ],
-  "luxuryAutos": [
-    "Annis Minimus",
-    "Progen Luiva"
-  ],
+  "simeonVehicles": ["Albany Merula", "Benefactor Läufer", "Benefactor LRC GT", "Grotti Cartuccia GT", "Ocelot E-Stride"],
+  "luxuryAutos": ["Annis Minimus", "Progen Luiva"],
   "lsCarMeet": {
-    "prizeRide": "Obey Omnis e-GT",
     "prizeRideRequirement": "Place top 4 in an LS Car Meet Series race",
     "testTrack": ["Bravado Greenwood", "Karin Futo GTX", "Vysser Neo"],
     "hsw": "Weeny Issi Rally"
@@ -46,12 +39,5 @@
     "hsw": "Del Perro Beach to Murietta Heights",
     "premium": "Art to Art"
   },
-  "gtaPlus": {
-    "duration": "July 14 - August 12, 2026",
-    "freeVehicles": ["Grotti Veleno GT (w/ Attack livery)"],
-    "clothing": ["Orange Manor Bomber Zipped Jacket"],
-    "bonuses": ["2X GTA$ and RP on HSW Time Trials"],
-    "discounts": ["GTA$2M Mansion Discount", "GTA$1M Art Studio Discount", "50% OFF Benny's & HSW Conversions"],
-    "vinewoodShowroom": ["Benefactor LM87", "Benefactor LRC GT", "Declasse Scramjet", "Grotti Cartuccia GT", "Grotti Itali RSX", "Imponte Deluxo", "Ocelot E-Stride", "Pfister Astrale", "Übermacht Revolter"]
-  }
+  "gunVan": ["Compact EMP Launcher (30% OFF)", "Railgun (30% OFF - GTA+ Only)"]
 }
