@@ -1,20 +1,19 @@
 {
-  "locationId": 21,
-  "zone": "Gun Van Location #21",
-  "description": "Magellan Ave / Conquistador St, Vespucci Beach",
-  "mapPath": "map_21.jpg",
+  "locationId": 9,
+  "zone": "Gun Van Location #9",
+  "description": "Palmer-Taylor Power Station",
+  "mapPath": "map_9.jpg",
   "inventory": [
-    "Compact EMP Launcher: -10 %",
-    "Heavy Rifle: -40 %",
+    "Tactical SMG: -10 %",
     "Railgun: -10 %",
-    "RPG: -10 %",
-    "Up-n-Atomizer: -10 %",
-    "Firework Launcher: FREE",
-    "Musket: FREE",
-    "Unknown (hash: -1916886713): -10 %",
-    "Sticky Bomb: -10 %",
+    "Compact EMP Launcher: -30 %",
+    "Gusenberg Sweeper: -10 %",
+    "Vintage Pistol: -10 %",
+    "Pool Cue: -10 %",
+    "Pipe Bomb: -10 %",
+    "Tear Gas: -10 %",
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-14T04:55:05.362Z"
+  "updatedAt": "2026-07-15T04:55:01.931Z"
 }
