@@ -1,8 +1,8 @@
 {
-  "locationId": 9,
-  "zone": "Gun Van Location #9",
-  "description": "Palmer-Taylor Power Station",
-  "mapPath": "map_9.jpg",
+  "locationId": 27,
+  "zone": "Gun Van Location #27",
+  "description": "Hookies, North Chumash",
+  "mapPath": "map_27.jpg",
   "inventory": [
     "Tactical SMG: -10 %",
     "Railgun: -10 %",
@@ -15,5 +15,5 @@
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-15T04:55:01.931Z"
+  "updatedAt": "2026-07-16T05:14:30.019Z"
 }
