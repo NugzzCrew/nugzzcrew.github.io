@@ -1,8 +1,8 @@
 {
-  "locationId": 15,
-  "zone": "Gun Van Location #15",
-  "description": "Land Act Reservoir (north end)",
-  "mapPath": "map_15.jpg",
+  "locationId": 11,
+  "zone": "Gun Van Location #11",
+  "description": "Thomson Scrapyard",
+  "mapPath": "map_11.jpg",
   "inventory": [
     "Tactical SMG: -10 %",
     "Railgun: -10 %",
@@ -15,5 +15,5 @@
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-17T05:17:21.661Z"
+  "updatedAt": "2026-07-18T04:52:26.247Z"
 }
