@@ -1,8 +1,8 @@
 {
-  "locationId": 13,
-  "zone": "Gun Van Location #13",
-  "description": "LT Weld Supply Co. / Lester's Warehouse, Murrieta Heights",
-  "mapPath": "map_13.jpg",
+  "locationId": 1,
+  "zone": "Gun Van Location #1",
+  "description": "No Marks Cleaners, Paleto Bay",
+  "mapPath": "map_1.jpg",
   "inventory": [
     "Tactical SMG: -10 %",
     "Railgun: -10 %",
@@ -15,5 +15,5 @@
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-21T05:24:28.322Z"
+  "updatedAt": "2026-07-22T05:23:23.121Z"
 }
