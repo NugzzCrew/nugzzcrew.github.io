@@ -1,8 +1,8 @@
 {
-  "locationId": 1,
-  "zone": "Gun Van Location #1",
-  "description": "No Marks Cleaners, Paleto Bay",
-  "mapPath": "map_1.jpg",
+  "locationId": 19,
+  "zone": "Gun Van Location #19",
+  "description": "Popular Street, La Mesa",
+  "mapPath": "map_19.jpg",
   "inventory": [
     "Tactical SMG: -10 %",
     "Railgun: -10 %",
@@ -15,5 +15,5 @@
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-22T05:23:23.121Z"
+  "updatedAt": "2026-07-23T05:29:43.990Z"
 }
