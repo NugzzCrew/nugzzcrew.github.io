@@ -1,55 +1,138 @@
 {
-  "eventTitle": "The Kortz Center Heist",
-  "weekEnding": "July 22, 2026",
-  "fibFile": "The Black Box File",
-  "weeklyChallenge": "Complete The Kortz Center Heist 1 time to receive GTA$100,000",
-  "podium": "Dinka Jester RR",
-  "prizeRide": "Obey Omnis e-GT",
+  "eventTitle": "The Kortz Center Heist Update",
+  "weekEnding": "July 29, 2026",
+  "fibFile": "The Brute Force File\n\nKORTZ CENTER PRIMARY TARGETS:\n• The Outcome of Endeavour (Fine Art Collectors only)\n• Winter, Nowhere in Particular\n• I Hear Voices\n• I, Fruit",
+  "weeklyChallenge": "Complete The Kortz Center Heist without dying to receive a bonus reward of GTA$400,000",
+  "podium": "Vapid Ratel",
+  "prizeRide": "Dinka Postlude",
   "bonuses": [
-    { "category": "3X GTA$ & RP", "name": "Community Series & Sumo (Remix)", "value": "3X" },
-    { "category": "2X GTA$ & RP", "name": "HSW Time Trial", "value": "2X" }
+    { "category": "5X GTA$ & RP", "name": "HSW Race Series (PS5/XSX/PC)", "value": "5X" },
+    { "category": "4X GTA$", "name": "Associate and Bodyguard Salaries", "value": "4X" },
+    { "category": "3X GTA$ & RP", "name": "Overtime Rumble", "value": "3X" },
+    { "category": "3X GTA$ & RP", "name": "Community Series", "value": "3X" },
+    { "category": "2X GTA$", "name": "First-Time Completion: The Titan Job", "value": "2X" }
   ],
   "loginRewards": [
-    "Grotti Veleno GT (Early Access for GTA+)",
-    "Albany Merula, Benefactor Läufer, Benefactor LRC GT, Grotti Cartuccia GT & Ocelot E-Stride",
-    "Mission Creator: New features, characters and props",
-    "Play GTA Online for Free on PS5/Xbox Series X|S"
+    "Knuckleduster Tee",
+    "New Law Enforcement Vehicle: Pegassi Ignus Pursuit (Warstock)",
+    "Now available to everyone: Grotti Veleno GT (Legendary Motorsport)"
   ],
   "specialRewards": [
-    { "action": "Complete The Kortz Center Heist", "reward": "GTA$100,000" }
+    { "action": "Complete The Kortz Center Heist without dying", "reward": "GTA$400,000 Bonus" },
+    { "action": "Fine Art Collector Program (Played June 17-July 13)", "reward": "GTA$1M Art Studio Discount, Free Vault Keypad, Free Annihilator Stealth, Exclusive Art" }
   ],
   "discounts": {
+    "seventy": [],
+    "sixty": [],
+    "fifty": [
+      "Chameleon Paints (PS5, XBOX Series X|S, PC Enhanced)",
+      "McKenzie Field Hangar"
+    ],
+    "forty": [],
     "thirty": [
-      "Annis Hellion", "Bravado Greenwood", "Coil Brawler", "Imponte Nightshade", "Karin Futo GTX", "Nagasaki Blazer Aqua", "Nagasaki Stryder", "Taxi", "Vapid FMJ", "Vysser Neo", "Compact EMP Launcher"
+      "Benefactor Vorschlaghammer",
+      "Declasse Tulip M-100",
+      "Dewbauchee JB 700W",
+      "Enus Windsor Drop",
+      "Karin Technical",
+      "Pegassi Tempesta",
+      "Pegassi Torero",
+      "Pfister 811",
+      "Vapid Retinue Mk II"
     ]
   },
   "salvageYard": [
-    { "robbery": "The McTony Robbery", "name": "Pfister Neon", "type": "Top Tier" },
-    { "robbery": "The Duggan Robbery", "name": "Bravado Gauntlet Hellfire", "type": "Standard Tier" },
-    { "robbery": "The Cargo Ship Robbery", "name": "Dinka Blista Kanjo", "type": "Low Tier" }
+    { "robbery": "The Podium Robbery", "name": "Grotti Stinger TT", "type": "Top Tier" },
+    { "robbery": "The Gangbanger Robbery", "name": "Übermacht Cypher", "type": "Standard Tier" },
+    { "robbery": "The Cargo Ship Robbery", "name": "Canis Seminole Frontier", "type": "Low Tier" }
   ],
-  "simeonVehicles": ["Albany Merula", "Benefactor Läufer", "Benefactor LRC GT", "Grotti Cartuccia GT", "Ocelot E-Stride"],
-  "luxuryAutos": ["Annis Minimus", "Progen Luiva"],
+  "simeonVehicles": [
+    "Benefactor Läufer",
+    "Grotti Veleno GT"
+  ],
+  "luxuryAutos": [
+    "Benefactor Vorschlaghammer",
+    "Declasse Tulip M-100",
+    "Enus Windsor Drop",
+    "Pfister 811",
+    "Vapid Retinue Mk II"
+  ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place top 4 in an LS Car Meet Series race",
-    "testTrack": ["Bravado Greenwood", "Karin Futo GTX", "Vysser Neo"],
-    "hsw": "Weeny Issi Rally"
+    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
+    "testTrack": [
+      "Dewbauchee JB 700W",
+      "Pegassi Tempesta",
+      "Pegassi Torero"
+    ],
+    "hsw": "Grotti Brioso R/A"
   },
   "timeTrials": {
-    "regular": "Del Perro Pier",
-    "hsw": "Del Perro Beach to Murietta Heights",
-    "premium": "Art to Art"
+    "regular": "Observatory",
+    "hsw": "Sandy Shores to La Puerta",
+    "premium": "Cutting Coroners"
   },
-  "gunVan": ["Compact EMP Launcher (30% OFF)", "Railgun (30% OFF - GTA+ Members)"],
+  "gunVan": [
+    "Combat Shotgun (30% OFF)",
+    "Compact EMP Launcher (40% OFF - GTA+ Members)",
+    "Military Rifle, Compact Grenade Launcher, Flare Gun",
+    "Knuckle Dusters, Proximity Mines, Pipe Bombs & Sticky Bombs"
+  ],
   "gtaPlus": {
     "duration": "July 14 - August 12, 2026",
-    "freeVehicles": ["Grotti Veleno GT (w/ Attack livery)", "Black Oil Spill Prismatic Chameleon Body Paint", "Black Oil Spill Prismatic Chameleon Wheel Paint"],
-    "clothing": ["Orange Manor Bomber Zipped Jacket"],
-    "bonuses": ["2X GTA$ and RP on HSW Time Trials"],
-    "discounts": ["GTA$2M Mansion Discount (Through Aug 5)", "GTA$1M Art Studio Discount", "50% OFF Benny's & HSW Conversions", "50% OFF Colored Headlights"],
-    "vinewoodShowroom": ["Benefactor LM87", "Benefactor LRC GT", "Declasse Scramjet", "Grotti Cartuccia GT", "Grotti Itali RSX (Monochrome)", "Imponte Deluxo", "Ocelot E-Stride", "Pfister Astrale (Side Stripes)", "Übermacht Revolter (Dolla Dolla)"],
-    "persistent": ["FREE Taxi services", "FREE CEO/VIP Abilities", "FREE vehicle requests", "Remote Business Staff Management", "Extra Lucky Wheel Spin Every Day", "Claim All Business Earnings", "Gun Van blipped with extra discounts", "GTA$500,000 monthly", "15% extra bonus on Shark Cards"],
-    "vinewoodClub": ["Showroom: Premium vehicles (20% off)", "Garage: 100 personal vehicle slots", "Hangar Storage: 5 slots (No McKenzie req)", "Workshop: Discounted mods", "App: Collect earnings, buy ammo, request Car Club vehicles"],
-    "gamesLibrary": ["GTA V & Online", "GTA III, Vice City - The Definitive Edition", "Bully", "Red Dead Redemption", "L.A. Noire", "GTA: Liberty City Stories & Chinatown Wars (Mobile)", "20% discount on listed titles"]
+    "freeVehicles": [
+      "Grotti Veleno GT (w/ Attack livery)",
+      "Black Oil Spill Prismatic Chameleon Body Paint",
+      "Black Oil Spill Prismatic Chameleon Wheel Paint"
+    ],
+    "clothing": [
+      "Orange Manor Bomber Zipped Jacket"
+    ],
+    "bonuses": [
+      "2X GTA$ and RP on HSW Time Trials"
+    ],
+    "discounts": [
+      "GTA$2M Mansion Discount (Through Aug 5)",
+      "GTA$1M Art Studio Discount",
+      "50% OFF Benny's & HSW Conversions",
+      "50% OFF Colored Headlights"
+    ],
+    "vinewoodShowroom": [
+      "Benefactor LM87",
+      "Benefactor LRC GT",
+      "Declasse Scramjet",
+      "Grotti Cartuccia GT",
+      "Grotti Itali RSX (Monochrome)",
+      "Imponte Deluxo",
+      "Ocelot E-Stride",
+      "Pfister Astrale (Side Stripes)",
+      "Übermacht Revolter (Dolla Dolla)"
+    ],
+    "persistent": [
+      "FREE Taxi services",
+      "FREE CEO/VIP Abilities",
+      "FREE vehicle requests",
+      "Remote Business Staff Management",
+      "Extra Lucky Wheel Spin Every Day",
+      "Claim All Business Earnings",
+      "Gun Van blipped with extra discounts",
+      "GTA$500,000 monthly",
+      "15% extra bonus on Shark Cards"
+    ],
+    "vinewoodClub": [
+      "Showroom: Premium vehicles (20% off)",
+      "Garage: 100 personal vehicle slots",
+      "Hangar Storage: 5 slots (No McKenzie req)",
+      "Workshop: Discounted mods",
+      "App: Collect earnings, buy ammo, request Car Club vehicles"
+    ],
+    "gamesLibrary": [
+      "GTA V & Online",
+      "GTA III, Vice City - The Definitive Edition",
+      "Bully",
+      "Red Dead Redemption",
+      "L.A. Noire",
+      "GTA: Liberty City Stories & Chinatown Wars (Mobile)",
+      "20% discount on listed titles"
+    ]
   }
 }
