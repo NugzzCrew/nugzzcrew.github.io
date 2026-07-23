@@ -1,7 +1,13 @@
 {
   "eventTitle": "The Kortz Center Heist Update",
   "weekEnding": "July 29, 2026",
-  "fibFile": "The Brute Force File\n\nKORTZ CENTER PRIMARY TARGETS:\n• The Outcome of Endeavour (Fine Art Collectors only)\n• Winter, Nowhere in Particular\n• I Hear Voices\n• I, Fruit",
+  "fibFile": "The Brute Force File",
+  "primaryTargets": [
+    "The Outcome of Endeavour (Fine Art Collectors)",
+    "Winter, Nowhere in Particular",
+    "I Hear Voices",
+    "I, Fruit"
+  ],
   "weeklyChallenge": "Complete The Kortz Center Heist without dying to receive a bonus reward of GTA$400,000",
   "podium": "Vapid Ratel",
   "prizeRide": "Dinka Postlude",

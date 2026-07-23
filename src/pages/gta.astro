@@ -16,6 +16,7 @@ const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
                 </h1>
                 <p class="text-zinc-400 font-bold uppercase tracking-widest mt-4">Event available through {gtaData.weekEnding}</p>
             </div>
+            <!-- Added backdrop-blur and opacity to the challenge box -->
             <div class="bg-gold/90 backdrop-blur-sm p-6 rounded-2xl text-black max-w-md shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)] border border-gold">
                 <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-1 opacity-70">Weekly Challenge</p>
                 <p class="font-black italic text-lg leading-tight uppercase whitespace-pre-line">{gtaData.weeklyChallenge}</p>
@@ -23,7 +24,8 @@ const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
         </div>
     </section>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Changed to a 4-column grid to fit the new Targets module next to FIB File -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-between">
             <div>
                 <span class="text-[9px] text-red-500 font-black uppercase tracking-wider block mb-1">Intercepted Ledger</span>
@@ -31,6 +33,21 @@ const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
             </div>
             <div class="mt-4 p-3 bg-red-950/30 border border-red-900/40 rounded-xl text-center">
                 <p class="text-zinc-300 text-xs font-mono font-bold whitespace-pre-line">{gtaData.fibFile}</p>
+            </div>
+        </div>
+
+        <!-- NEW MODULE: Kortz Center Primary Targets -->
+        <div class="bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-between">
+            <div>
+                <span class="text-[9px] text-purple-400 font-black uppercase tracking-wider block mb-1">Kortz Center</span>
+                <h3 class="text-white font-header text-lg uppercase tracking-tight">Primary Targets</h3>
+            </div>
+            <div class="mt-3 space-y-1.5">
+                {gtaData.primaryTargets.map(target => (
+                    <div class="bg-black/50 border border-zinc-700/50 px-3 py-1.5 rounded-lg text-[11px] font-mono font-bold text-zinc-300">
+                        • {target}
+                    </div>
+                ))}
             </div>
         </div>
 
@@ -63,6 +80,7 @@ const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
 
     <div class="flex flex-wrap justify-center gap-3">
         {gtaData.bonuses.map(bonus => (
+            <!-- Swapped bg-zinc-900 for bg-zinc-900/50 with backdrop blur -->
             <div class="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.5rem)] lg:w-auto lg:flex-1 lg:min-w-[160px] lg:max-w-[220px] bg-zinc-900/50 backdrop-blur-md border border-zinc-700/50 p-4 rounded-xl text-center hover:border-gold transition-colors flex flex-col justify-center items-center shadow-lg">
                 <p class="text-gold font-black text-2xl tracking-tighter drop-shadow-md">{bonus.value}</p>
                 <p class="text-[9px] text-zinc-300 font-bold uppercase mt-1 leading-tight">{bonus.name}</p>
@@ -108,7 +126,7 @@ const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
                         <p class="text-[9px] text-zinc-400 font-bold uppercase whitespace-pre-line">{car.robbery}</p>
                         <p class="text-white font-bold text-sm leading-tight mt-0.5">{car.name}</p>
                     </div>
-                    <span class="bg-zinc-800 text-gold text-[8px] font-black px-2 py-1 rounded uppercase tracking-tighter">{car.type}</span>
+                    <span class={`text-[8px] font-black px-2 py-1 rounded uppercase tracking-tighter ${car.type === 'CLAIMABLE' ? 'bg-gold text-black animate-pulse' : 'bg-zinc-800 text-gold'}`}>{car.type}</span>
                 </div>
             ))}
         </div>
@@ -156,6 +174,7 @@ const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
 
     <!-- GTA+ Rewards Section -->
     <section class="relative rounded-[2.5rem] overflow-hidden bg-black/60 backdrop-blur-xl border border-gold/40 shadow-2xl">
+        <!-- Header area wrapper -->
         <div class="bg-zinc-900/60 p-8 border-b border-gold/20">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div>
@@ -194,5 +213,16 @@ const eventTitle = gtaData.eventTitle || "GTA Weekly Showcase";
             </div>
         </div>
     </section>
+
   </div>
 </MainLayout>
+
+<script is:inline>
+  function initGtaIcons() {
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  }
+  window.addEventListener('load', initGtaIcons);
+  document.addEventListener('astro:page-load', initGtaIcons);
+</script>
