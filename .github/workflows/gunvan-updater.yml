@@ -2,7 +2,7 @@ name: Daily Gun Van Scraper & Deploy
 
 on:
   schedule:
-    - cron: '2 2 * * *' # Scheduled for 06:30 UTC every day
+    - cron: '2 3 * * *' # Scheduled for 03:02 UTC every day
   workflow_dispatch:
 
 permissions:
