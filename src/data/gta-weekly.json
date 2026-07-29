@@ -1,87 +1,92 @@
 {
-  "eventTitle": "The Kortz Center Heist Update",
-  "weekEnding": "July 29, 2026",
-  "fibFile": "The Brute Force File",
+  "eventTitle": "Heist First-Time Completion Bonuses",
+  "weekEnding": "August 5, 2026",
+  "fibFile": "The Fine Art File",
   "primaryTargets": [
-    "The Outcome of Endeavour (Fine Art Collectors)",
-    "Winter, Nowhere in Particular",
-    "I Hear Voices",
-    "I, Fruit"
+    "A Cast of Characters",
+    "Mi O Melee",
+    "To Beat About the Bush"
   ],
-  "weeklyChallenge": "Complete The Kortz Center Heist without dying to receive a bonus reward of GTA$400,000",
-  "podium": "Vapid Ratel",
-  "prizeRide": "Dinka Postlude",
+  "weeklyChallenge": "Win two Adversary Modes to receive the Manor Tie-dye Tee and GTA$100,000",
+  "podium": "Übermacht Cypher",
+  "prizeRide": "Karin Boor",
   "bonuses": [
-    { "category": "5X GTA$ & RP", "name": "HSW Race Series (PS5/XSX/PC)", "value": "5X" },
-    { "category": "4X GTA$", "name": "Associate and Bodyguard Salaries", "value": "4X" },
-    { "category": "3X GTA$ & RP", "name": "Overtime Rumble", "value": "3X" },
-    { "category": "3X GTA$ & RP", "name": "Community Series", "value": "3X" },
-    { "category": "2X GTA$", "name": "First-Time Completion: The Titan Job", "value": "2X" }
+    { "category": "3X GTA$ & RP", "name": "Community Mission Series", "value": "3X" },
+    { "category": "2X GTA$ & RP", "name": "A Superyacht Life Missions", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Motor Wars (Cayo Perico)", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Shipwrecks", "value": "2X" },
+    { "category": "2X GTA$", "name": "First Time Completion: The Fleeca Heist Finale", "value": "2X" },
+    { "category": "2X GTA$", "name": "First Time Completion: The Pacific Standard Heist", "value": "2X" }
   ],
   "loginRewards": [
-    "Knuckleduster Tee",
-    "New Law Enforcement Vehicle: Pegassi Ignus Pursuit (Warstock)",
-    "Now available to everyone: Grotti Veleno GT (Legendary Motorsport)"
+    "Tropical Bangles",
+    "Tropical Glow Necklace",
+    "Pacific Standard Sweater"
   ],
   "specialRewards": [
-    { "action": "Complete The Kortz Center Heist without dying", "reward": "GTA$400,000 Bonus" },
-    { "action": "Fine Art Collector Program (Played June 17-July 13)", "reward": "GTA$1M Art Studio Discount, Free Vault Keypad, Free Annihilator Stealth, Exclusive Art" }
+    { "action": "Complete The Fleeca Heist Finale", "reward": "Fleeca Circuit livery for Übermacht Cypher (within 72h)" },
+    { "action": "Fine Art Collector Elitist Tier", "reward": "Final week to claim rewards" }
   ],
   "discounts": {
     "seventy": [],
-    "sixty": [],
-    "fifty": [
-      "Chameleon Paints (PS5, XBOX Series X|S, PC Enhanced)",
-      "McKenzie Field Hangar"
+    "sixty": [
+      "Paleto Bay Businesses",
+      "Galaxy Super Yacht (including modifications)",
+      "Karin Kuruma (Armored)",
+      "Karin Kuruma"
     ],
-    "forty": [],
+    "fifty": [],
+    "forty": [
+      "High-End Apartments",
+      "Benny's Conversions"
+    ],
     "thirty": [
-      "Benefactor Vorschlaghammer",
-      "Declasse Tulip M-100",
-      "Dewbauchee JB 700W",
-      "Enus Windsor Drop",
-      "Karin Technical",
-      "Pegassi Tempesta",
-      "Pegassi Torero",
-      "Pfister 811",
-      "Vapid Retinue Mk II"
+      "Classique Broadway",
+      "Dinka Blista Kanjo",
+      "Dinka Chavos V6",
+      "Imponte Ruiner ZZ-8",
+      "Invetero Coquette D1",
+      "Prison Bus",
+      "Truffade Adder",
+      "Truffade Z-Type",
+      "Vapid Uranus LozSpeed"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Podium Robbery", "name": "Grotti Stinger TT", "type": "Top Tier" },
-    { "robbery": "The Gangbanger Robbery", "name": "Übermacht Cypher", "type": "Standard Tier" },
-    { "robbery": "The Cargo Ship Robbery", "name": "Canis Seminole Frontier", "type": "Low Tier" }
+    { "robbery": "The Gangbanger Robbery", "name": "Pfister Comet S2 Cabrio (LS Pounders plate)", "type": "CLAIMABLE" },
+    { "robbery": "The McTony Robbery", "name": "Invetero Coquette D10", "type": "Top Tier" },
+    { "robbery": "The Podium Robbery", "name": "Vapid Dominator GTT", "type": "Standard Tier" }
   ],
   "simeonVehicles": [
-    "Benefactor Läufer",
-    "Grotti Veleno GT"
+    "Classique Broadway",
+    "Dinka Blista Kanjo",
+    "Dinka Chavos V6",
+    "Invetero Coquette D1",
+    "Truffade Z-Type"
   ],
   "luxuryAutos": [
-    "Benefactor Vorschlaghammer",
-    "Declasse Tulip M-100",
-    "Enus Windsor Drop",
-    "Pfister 811",
-    "Vapid Retinue Mk II"
+    "Albany Merula",
+    "Ocelot E-Stride"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
+    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for four days in a row",
     "testTrack": [
-      "Dewbauchee JB 700W",
-      "Pegassi Tempesta",
-      "Pegassi Torero"
+      "Imponte Ruiner ZZ-8",
+      "Truffade Adder",
+      "Vapid Uranus LozSpeed"
     ],
-    "hsw": "Grotti Brioso R/A"
+    "hsw": "Överflöd Entity MT"
   },
   "timeTrials": {
-    "regular": "Observatory",
-    "hsw": "Sandy Shores to La Puerta",
-    "premium": "Cutting Coroners"
+    "regular": "Great Ocean Highway",
+    "hsw": "Textile City to Stab City",
+    "premium": "Crossing Paths"
   },
   "gunVan": [
-    "Combat Shotgun (30% OFF)",
-    "Compact EMP Launcher (40% OFF - GTA+ Members)",
-    "Military Rifle, Compact Grenade Launcher, Flare Gun",
-    "Knuckle Dusters, Proximity Mines, Pipe Bombs & Sticky Bombs"
+    "Service Carbine (40% OFF)",
+    "Railgun (30% OFF - GTA+ Members)",
+    "Tactical SMG, Compact Grenade Launcher, Combat Pistol, Machete",
+    "Grenades, Sticky Bombs & Pipe Bombs"
   ],
   "gtaPlus": {
     "duration": "July 14 - August 12, 2026",
