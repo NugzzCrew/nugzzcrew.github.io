@@ -1,19 +1,19 @@
 {
-  "locationId": 11,
-  "zone": "Gun Van Location #11",
-  "description": "Thomson Scrapyard",
-  "mapPath": "map_11.jpg",
+  "locationId": 29,
+  "zone": "Gun Van Location #29",
+  "description": "Hearty Taco, Mirror Park",
+  "mapPath": "map_29.jpg",
   "inventory": [
-    "Compact EMP Launcher: -10 %",
-    "Combat Shotgun: -30 %",
-    "Military Rifle: -10 %",
+    "Tactical SMG: -10 %",
+    "Railgun: -10 %",
+    "Service Carbine: -40 %",
     "Compact Grenade Launcher: -10 %",
-    "Flare Gun: -10 %",
-    "Knuckle Duster: -10 %",
-    "Proximity Mine: -10 %",
-    "Pipe Bomb: -10 %",
+    "Combat Pistol: -10 %",
+    "Machete: -10 %",
+    "Grenade: -10 %",
     "Sticky Bomb: -10 %",
+    "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-29T09:24:17.417Z"
+  "updatedAt": "2026-07-30T09:16:09.602Z"
 }
