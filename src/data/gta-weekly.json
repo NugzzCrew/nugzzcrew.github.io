@@ -1,92 +1,93 @@
 {
-  "eventTitle": "Heist First-Time Completion Bonuses",
-  "weekEnding": "August 5, 2026",
-  "fibFile": "The Fine Art File",
+  "eventTitle": "The Panther Statue Returns",
+  "weekEnding": "August 12, 2026",
+  "fibFile": "The Project Breakaway File",
   "primaryTargets": [
-    "A Cast of Characters",
-    "Mi O Melee",
-    "To Beat About the Bush"
+    "Brother Brother",
+    "The Girl With the Pearl Necklace",
+    "In Excess of Success"
   ],
-  "weeklyChallenge": "Win two Adversary Modes to receive the Manor Tie-dye Tee and GTA$100,000",
-  "podium": "Übermacht Cypher",
-  "prizeRide": "Karin Boor",
+  "weeklyChallenge": "Survive three waves in Cayo Perico Survival to receive the Noise Rockstar Logo Aged Tee and GTA$100,000.",
+  "podium": "Declasse Drift Tampa",
+  "prizeRide": "Coil Raiden",
   "bonuses": [
     { "category": "3X GTA$ & RP", "name": "Community Mission Series", "value": "3X" },
     { "category": "2X GTA$ & RP", "name": "A Superyacht Life Missions", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Motor Wars (Cayo Perico)", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Shipwrecks", "value": "2X" },
-    { "category": "2X GTA$", "name": "First Time Completion: The Fleeca Heist Finale", "value": "2X" },
-    { "category": "2X GTA$", "name": "First Time Completion: The Pacific Standard Heist", "value": "2X" }
+    { "category": "2X GTA$ & RP", "name": "Assault on Cayo Perico", "value": "2X" }
   ],
   "loginRewards": [
-    "Tropical Bangles",
-    "Tropical Glow Necklace",
-    "Pacific Standard Sweater"
+    "Sunset Glow Necklace",
+    "Blue and Pink Glow Shades",
+    "GTA$1,000,000 login bonus",
+    "End of Summer Giveaway bonus of GTA$1,000,000 within 72 hours",
+    "New Community Mission Series: Escape The City by Zibulaatio"
   ],
   "specialRewards": [
-    { "action": "Complete The Fleeca Heist Finale", "reward": "Fleeca Circuit livery for Übermacht Cypher (within 72h)" },
-    { "action": "Fine Art Collector Elitist Tier", "reward": "Final week to claim rewards" }
+    { "action": "First playthrough of The Cayo Perico Heist Finale", "reward": "100% chance of finding the Panther Statue" },
+    { "action": "Complete The Cayo Perico Heist Finale", "reward": "Panther Tour Jacket" },
+    { "action": "Heists and Contact Missions", "reward": "Weekly completion bonuses reset" }
   ],
   "discounts": {
     "seventy": [],
     "sixty": [
-      "Paleto Bay Businesses",
-      "Galaxy Super Yacht (including modifications)",
+      "Paleto Bay Business Properties",
       "Karin Kuruma (Armored)",
       "Karin Kuruma"
     ],
     "fifty": [],
     "forty": [
-      "High-End Apartments",
-      "Benny's Conversions"
+      "High End Apartments",
+      "Benny's Conversion Upgrades"
     ],
     "thirty": [
-      "Classique Broadway",
-      "Dinka Blista Kanjo",
-      "Dinka Chavos V6",
-      "Imponte Ruiner ZZ-8",
-      "Invetero Coquette D1",
-      "Prison Bus",
-      "Truffade Adder",
-      "Truffade Z-Type",
-      "Vapid Uranus LozSpeed"
+      "Albany Cavalcade XL",
+      "BF Weevil",
+      "Brute Armored Boxville",
+      "Canis Castigator",
+      "Dinka Kanjo SJ",
+      "HVY Vetir",
+      "Lampadati Toro",
+      "Obey 8F Drafter",
+      "Pegassi Reaper",
+      "Pfister Comet Safari",
+      "Progen Itali GTB"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Gangbanger Robbery", "name": "Pfister Comet S2 Cabrio (LS Pounders plate)", "type": "CLAIMABLE" },
-    { "robbery": "The McTony Robbery", "name": "Invetero Coquette D10", "type": "Top Tier" },
-    { "robbery": "The Podium Robbery", "name": "Vapid Dominator GTT", "type": "Standard Tier" }
+    { "robbery": "The Gangbanger Robbery", "name": "Lampadati Tigon", "type": "CLAIMABLE" },
+    { "robbery": "The McTony Robbery", "name": "Obey 10F", "type": "Top Tier" },
+    { "robbery": "The Duggan Robbery", "name": "Classique Broadway", "type": "Standard Tier" }
   ],
   "simeonVehicles": [
-    "Classique Broadway",
-    "Dinka Blista Kanjo",
-    "Dinka Chavos V6",
-    "Invetero Coquette D1",
-    "Truffade Z-Type"
+    "Albany Cavalcade XL",
+    "BF Weevil",
+    "Canis Castigator",
+    "Dinka Kanjo SJ",
+    "Obey 8F Drafter"
   ],
   "luxuryAutos": [
-    "Albany Merula",
-    "Ocelot E-Stride"
+    "Annis Hardy",
+    "Grotti Cartuccia GT"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for four days in a row",
+    "prizeRideRequirement": "Win in the LS Car Meet Series for four days in a row",
     "testTrack": [
-      "Imponte Ruiner ZZ-8",
-      "Truffade Adder",
-      "Vapid Uranus LozSpeed"
+      "Pegassi Reaper",
+      "Pfister Comet Safari",
+      "Progen Itali GTB"
     ],
-    "hsw": "Överflöd Entity MT"
+    "hsw": "Übermacht Sentinel XS"
   },
   "timeTrials": {
-    "regular": "Great Ocean Highway",
-    "hsw": "Textile City to Stab City",
-    "premium": "Crossing Paths"
+    "regular": "Fort Zancudo",
+    "hsw": "Ron Alternates to Elysian Island",
+    "premium": "Business Trip"
   },
   "gunVan": [
-    "Service Carbine (40% OFF)",
-    "Railgun (30% OFF - GTA+ Members)",
-    "Tactical SMG, Compact Grenade Launcher, Combat Pistol, Machete",
-    "Grenades, Sticky Bombs & Pipe Bombs"
+    "Heavy Rifle (50% OFF)",
+    "Combat Shotgun (30% OFF - GTA+ Members)",
+    "Service Carbine, Compact Rifle, Heavy Pistol, Battle Axe",
+    "Tear Gas, Grenades & Sticky Bombs"
   ],
   "gtaPlus": {
     "duration": "July 14 - August 12, 2026",
