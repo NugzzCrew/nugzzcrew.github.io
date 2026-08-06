@@ -1,19 +1,19 @@
 {
-  "locationId": 11,
-  "zone": "Gun Van Location #11",
-  "description": "Thomson Scrapyard",
-  "mapPath": "map_11.jpg",
+  "locationId": 21,
+  "zone": "Gun Van Location #21",
+  "description": "Magellan Ave / Conquistador St, Vespucci Beach",
+  "mapPath": "map_21.jpg",
   "inventory": [
-    "Compact EMP Launcher: -10 %",
-    "Combat Shotgun: -30 %",
-    "Military Rifle: -10 %",
-    "Compact Grenade Launcher: -10 %",
-    "Flare Gun: -10 %",
-    "Knuckle Duster: -10 %",
-    "Proximity Mine: -10 %",
-    "Pipe Bomb: -10 %",
+    "Service Carbine: -10 %",
+    "Heavy Rifle: -50 %",
+    "Combat Shotgun: -10 %",
+    "Compact Rifle: -10 %",
+    "Heavy Pistol: -10 %",
+    "Battle Axe: -10 %",
+    "Grenade: -10 %",
+    "Tear Gas: -10 %",
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-07-29T09:24:17.417Z"
+  "updatedAt": "2026-08-06T09:24:36.633Z"
 }
