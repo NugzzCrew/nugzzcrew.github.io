@@ -1,8 +1,8 @@
 {
-  "locationId": 9,
-  "zone": "Gun Van Location #9",
-  "description": "Palmer-Taylor Power Station",
-  "mapPath": "map_9.jpg",
+  "locationId": 6,
+  "zone": "Gun Van Location #6",
+  "description": "Behind Ink Inc. Tattoos, Chumash Plaza",
+  "mapPath": "map_6.jpg",
   "inventory": [
     "Service Carbine: -10 %",
     "Heavy Rifle: -50 %",
@@ -15,5 +15,5 @@
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-08-07T07:53:46.667Z"
+  "updatedAt": "2026-08-08T07:32:12.175Z"
 }
