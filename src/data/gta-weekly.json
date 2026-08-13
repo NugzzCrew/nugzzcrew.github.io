@@ -8,6 +8,17 @@
     "Juiced"
   ],
   "weeklyChallenge": "Complete three Business Battles to get the Impotent Rage Sweatsuit and a 2.5X Reward of GTA$250,000",
+  "brandWars": {
+    "duration": "August 13 - 26",
+    "details": [
+      "Link Twitch & Rockstar Games accounts",
+      "Watch participating Team Sprunk or Team eCola streamers",
+      "Earn Sprunk or eCola Sweatsuits",
+      "Earn up to GTA$2,000,000 in Twitch Drops",
+      "Claim FREE Sprunk & eCola Bodysuits at clothing stores",
+      "Claim FREE Sprunk x eCola livery & vanity plates at Vehicle Workshops"
+    ]
+  },
   "podium": "Pfister Astron",
   "prizeRide": "Enus Deity",
   "bonuses": [
@@ -26,6 +37,9 @@
     { "action": "All Clothing Stores", "reward": "FREE Sprunk & eCola Bodysuits" }
   ],
   "discounts": {
+    "free": [
+      "Declasse Hotring Sabre"
+    ],
     "seventy": [],
     "sixty": [],
     "fifty": [],
