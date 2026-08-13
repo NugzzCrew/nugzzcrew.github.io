@@ -1,8 +1,8 @@
 {
-  "locationId": 21,
-  "zone": "Gun Van Location #21",
-  "description": "Magellan Ave / Conquistador St, Vespucci Beach",
-  "mapPath": "map_21.jpg",
+  "locationId": 13,
+  "zone": "Gun Van Location #13",
+  "description": "LT Weld Supply Co. / Lester's Warehouse, Murrieta Heights",
+  "mapPath": "map_13.jpg",
   "inventory": [
     "Service Carbine: -10 %",
     "Heavy Rifle: -50 %",
@@ -15,5 +15,5 @@
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-08-06T09:24:36.633Z"
+  "updatedAt": "2026-08-13T08:02:46.088Z"
 }
