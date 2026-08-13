@@ -1,144 +1,140 @@
 {
-  "eventTitle": "The Panther Statue Returns",
-  "weekEnding": "August 12, 2026",
-  "fibFile": "The Project Breakaway File",
+  "eventTitle": "Brand Wars Event",
+  "weekEnding": "August 19, 2026",
+  "fibFile": "The Black Box File",
   "primaryTargets": [
-    "Brother Brother",
-    "The Girl With the Pearl Necklace",
-    "In Excess of Success"
+    "Gone to Seed",
+    "Chat on Fruit",
+    "Juiced"
   ],
-  "weeklyChallenge": "Survive three waves in Cayo Perico Survival to receive the Noise Rockstar Logo Aged Tee and GTA$100,000.",
-  "podium": "Declasse Drift Tampa",
-  "prizeRide": "Coil Raiden",
+  "weeklyChallenge": "Complete three Business Battles to get the Impotent Rage Sweatsuit and a 2.5X Reward of GTA$250,000",
+  "podium": "Pfister Astron",
+  "prizeRide": "Enus Deity",
   "bonuses": [
-    { "category": "3X GTA$ & RP", "name": "Community Mission Series", "value": "3X" },
-    { "category": "2X GTA$ & RP", "name": "A Superyacht Life Missions", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Assault on Cayo Perico", "value": "2X" }
+    { "category": "4X GTA$ & RP", "name": "Hotring Circuit Series", "value": "4X" },
+    { "category": "4X GTA$ & RP", "name": "Freemode Challenges & Events", "value": "4X" },
+    { "category": "3X GTA$ & RP", "name": "Select Odd Jobs", "value": "3X" },
+    { "category": "3X GTA$ & RP", "name": "Community Series", "value": "3X" }
   ],
   "loginRewards": [
-    "Sunset Glow Necklace",
-    "Blue and Pink Glow Shades",
-    "GTA$1,000,000 login bonus",
-    "End of Summer Giveaway bonus of GTA$1,000,000 within 72 hours",
-    "New Community Mission Series: Escape The City by Zibulaatio"
+    "Sprunk x eCola livery for the Declasse Hotring Sabre",
+    "Sprunk and eCola vanity plates"
   ],
   "specialRewards": [
-    { "action": "First playthrough of The Cayo Perico Heist Finale", "reward": "100% chance of finding the Panther Statue" },
-    { "action": "Complete The Cayo Perico Heist Finale", "reward": "Panther Tour Jacket" },
-    { "action": "Heists and Contact Missions", "reward": "Weekly completion bonuses reset" }
+    { "action": "Watch Twitch Streams (Aug 13-26)", "reward": "Sprunk/eCola Sweatsuit & up to GTA$2,000,000" },
+    { "action": "Southern San Andreas Super Autos", "reward": "FREE Declasse Hotring Sabre" },
+    { "action": "All Clothing Stores", "reward": "FREE Sprunk & eCola Bodysuits" }
   ],
   "discounts": {
     "seventy": [],
-    "sixty": [
-      "Paleto Bay Business Properties",
-      "Karin Kuruma (Armored)",
-      "Karin Kuruma"
-    ],
+    "sixty": [],
     "fifty": [],
     "forty": [
-      "High End Apartments",
-      "Benny's Conversion Upgrades"
+      "Hands On Car Wash",
+      "Bravado Hotring Hellfire",
+      "Karin Hotring Everon"
     ],
     "thirty": [
-      "Albany Cavalcade XL",
-      "BF Weevil",
-      "Brute Armored Boxville",
-      "Canis Castigator",
-      "Dinka Kanjo SJ",
-      "HVY Vetir",
-      "Lampadati Toro",
-      "Obey 8F Drafter",
-      "Pegassi Reaper",
-      "Pfister Comet Safari",
-      "Progen Itali GTB"
+      "Benefactor Stirling GT",
+      "Mammoth Patriot Mil-Spec",
+      "Nagasaki Weaponized Dinghy",
+      "Obey Tailgater S",
+      "Överflöd Autarch",
+      "Pegassi Osiris",
+      "Progen GP1",
+      "Shitzu Keitora",
+      "Vapid Clique Wagon"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Gangbanger Robbery", "name": "Lampadati Tigon", "type": "CLAIMABLE" },
-    { "robbery": "The McTony Robbery", "name": "Obey 10F", "type": "Top Tier" },
-    { "robbery": "The Duggan Robbery", "name": "Classique Broadway", "type": "Standard Tier" }
+    { "robbery": "The Podium Robbery", "name": "Truffade Z-Type", "type": "Standard Tier" },
+    { "robbery": "The Duggan Robbery", "name": "Übermacht Sentinel Classic", "type": "Low Tier" },
+    { "robbery": "The Gangbanger Robbery", "name": "Vapid Caracara 4x4", "type": "Low Tier" }
   ],
   "simeonVehicles": [
-    "Albany Cavalcade XL",
-    "BF Weevil",
-    "Canis Castigator",
-    "Dinka Kanjo SJ",
-    "Obey 8F Drafter"
+    "Benefactor Stirling GT",
+    "Mammoth Patriot Mil-Spec",
+    "Obey Tailgater S",
+    "Progen GP1",
+    "Shitzu Keitora"
   ],
   "luxuryAutos": [
-    "Annis Hardy",
-    "Grotti Cartuccia GT"
+    "Benefactor LRC GT",
+    "Pfister X-treme"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Win in the LS Car Meet Series for four days in a row",
+    "prizeRideRequirement": "Place Top 4 in the LS Car Meet Series three days in a row",
     "testTrack": [
-      "Pegassi Reaper",
-      "Pfister Comet Safari",
-      "Progen Itali GTB"
+      "Överflöd Autarch",
+      "Pegassi Osiris",
+      "Vapid Clique Wagon"
     ],
-    "hsw": "Übermacht Sentinel XS"
+    "hsw": "Karin S95"
   },
   "timeTrials": {
-    "regular": "Fort Zancudo",
-    "hsw": "Ron Alternates to Elysian Island",
-    "premium": "Business Trip"
+    "regular": "End to End",
+    "hsw": "Terminal to Chiliad Mountain State Wilderness",
+    "premium": "A Sign of Things to Come"
   },
   "gunVan": [
-    "Heavy Rifle (50% OFF)",
-    "Combat Shotgun (30% OFF - GTA+ Members)",
-    "Service Carbine, Compact Rifle, Heavy Pistol, Battle Axe",
-    "Tear Gas, Grenades & Sticky Bombs"
+    "Unholy Hellbringer (FREE)",
+    "Battle Rifle (50% OFF)",
+    "Precision Rifle (40% OFF - GTA+ Members)",
+    "The Shocker, Up-n-Atomizer, Railgun, Widowmaker",
+    "Tear Gas, Molotovs & Sticky Bombs"
   ],
   "gtaPlus": {
-    "duration": "July 14 - August 12, 2026",
+    "duration": "August 13 - September 9, 2026",
     "freeVehicles": [
-      "Grotti Veleno GT (w/ Attack livery)",
-      "Black Oil Spill Prismatic Chameleon Body Paint",
-      "Black Oil Spill Prismatic Chameleon Wheel Paint"
+      "Gallivanter Warden",
+      "Light Purple Pearl Chameleon Paint",
+      "Light Purple Pearl Chameleon Wheel Paint"
     ],
     "clothing": [
-      "Orange Manor Bomber Zipped Jacket"
+      "Pink Sessanta Nove x Princess Robot Bubblegum Bomber Zipped",
+      "PRB Tee & PRB Shorts"
     ],
     "bonuses": [
-      "2X GTA$ and RP on HSW Time Trials"
+      "3X GTA$, RP, and Rep on Drift Races",
+      "2X GTA$ & RP on All FIB Files",
+      "2X GTA$ on Garment Factory Passive Income"
     ],
     "discounts": [
-      "GTA$2M Mansion Discount (Through Aug 5)",
-      "GTA$1M Art Studio Discount",
-      "50% OFF Benny's & HSW Conversions",
-      "50% OFF Colored Headlights"
+      "60% Off the Garment Factory",
+      "50% Off Drift Tuning Upgrades",
+      "50% Off Terrorbyte Bureau Tech"
     ],
     "vinewoodShowroom": [
-      "Benefactor LM87",
-      "Benefactor LRC GT",
-      "Declasse Scramjet",
-      "Grotti Cartuccia GT",
-      "Grotti Itali RSX (Monochrome)",
-      "Imponte Deluxo",
-      "Ocelot E-Stride",
-      "Pfister Astrale (Side Stripes)",
-      "Übermacht Revolter (Dolla Dolla)"
+      "Albany Merula",
+      "Annis Euros (Manga Classic Livery)",
+      "Benefactor Läufer",
+      "Declasse Impaler",
+      "Declasse Tampa GT (Los Santos Machine Livery)",
+      "Karin Sultan RS Classic",
+      "Pegassi Toreador (War Camo Livery)",
+      "Pegassi Weaponized Ignus",
+      "Truffade Thrax"
     ],
     "persistent": [
-      "FREE Taxi services",
-      "FREE CEO/VIP Abilities",
-      "FREE vehicle requests",
-      "Remote Business Staff Management",
+      "FREE Taxi services with shorter cooldowns",
+      "FREE access to all CEO/VIP Abilities",
+      "FREE access to all vehicle requests from the interaction menu",
+      "Remote Access to manage the staff of your businesses",
       "Extra Lucky Wheel Spin Every Day",
       "Claim All Business Earnings",
-      "Gun Van blipped with extra discounts",
-      "GTA$500,000 monthly",
-      "15% extra bonus on Shark Cards"
+      "Gun Van always blipped on the map with additional discounts",
+      "GTA$500,000 every month",
+      "15% extra bonus GTA$ for any Shark Card"
     ],
     "vinewoodClub": [
-      "Showroom: Premium vehicles (20% off)",
-      "Garage: 100 personal vehicle slots",
-      "Hangar Storage: 5 slots (No McKenzie req)",
-      "Workshop: Discounted mods",
-      "App: Collect earnings, buy ammo, request Car Club vehicles"
+      "Showroom: A rotating selection of premium vehicles with an extra 20% discount",
+      "Garage: Unique garage in Downtown Los Santos with 100 personal vehicle slots",
+      "Hangar Storage: Five storage slots that do not require purchasing McKenzie Field Hangar",
+      "Workshop: Discounted mods and no rank requirements",
+      "App: Collect your business earnings, buy ammo, request a Car Club vehicle, and purchase/claim Vinewood Car Club vehicles"
     ],
     "gamesLibrary": [
-      "GTA V & Online",
+      "Grand Theft Auto V & Online (PS5, Xbox Series X|S, PC)",
       "GTA III, Vice City - The Definitive Edition",
       "Bully",
       "Red Dead Redemption",
