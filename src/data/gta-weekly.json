@@ -1,13 +1,13 @@
 {
-  "eventTitle": "Brand Wars Event",
-  "weekEnding": "August 19, 2026",
-  "fibFile": "The Black Box File",
+  "eventTitle": "Brand Wars Event Continues",
+  "weekEnding": "August 26, 2026",
+  "fibFile": "The Brute Force File",
   "primaryTargets": [
-    "Gone to Seed",
-    "Chat on Fruit",
-    "Juiced"
+    "True Love",
+    "Pumpkin",
+    "A Winding Road Home"
   ],
-  "weeklyChallenge": "Complete three Business Battles to get the Impotent Rage Sweatsuit and a 2.5X Reward of GTA$250,000",
+  "weeklyChallenge": "Win 3 Races to get the Princess Racing Tracksuit along with GTA$250,000",
   "brandWars": {
     "duration": "August 13 - 26",
     "details": [
@@ -16,12 +16,14 @@
       "Earn Sprunk or eCola Sweatsuits",
       "Earn up to GTA$2,000,000 in Twitch Drops",
       "Claim FREE Sprunk & eCola Bodysuits at clothing stores",
-      "Claim FREE Sprunk x eCola livery & vanity plates at Vehicle Workshops"
+      "Claim FREE Sprunk x eCola livery & vanity plates at Vehicle Workshops",
+      "August 21-23: Earn 5X GTA$ and RP on VIP Work"
     ]
   },
-  "podium": "Pfister Astron",
-  "prizeRide": "Enus Deity",
+  "podium": "Declasse Granger 3600LX",
+  "prizeRide": "Enus Paragon R",
   "bonuses": [
+    { "category": "5X GTA$ & RP", "name": "VIP Work (August 21-23)", "value": "5X" },
     { "category": "4X GTA$ & RP", "name": "Hotring Circuit Series", "value": "4X" },
     { "category": "4X GTA$ & RP", "name": "Freemode Challenges & Events", "value": "4X" },
     { "category": "3X GTA$ & RP", "name": "Select Odd Jobs", "value": "3X" },
@@ -32,9 +34,8 @@
     "Sprunk and eCola vanity plates"
   ],
   "specialRewards": [
-    { "action": "Watch Twitch Streams (Aug 13-26)", "reward": "Sprunk/eCola Sweatsuit & up to GTA$2,000,000" },
-    { "action": "Southern San Andreas Super Autos", "reward": "FREE Declasse Hotring Sabre" },
-    { "action": "All Clothing Stores", "reward": "FREE Sprunk & eCola Bodysuits" }
+    { "action": "Available to Everyone", "reward": "New Gallivanter Warden (SUV)" },
+    { "action": "Select Heists and Missions", "reward": "Weekly completion bonuses reset for bigger initial payouts" }
   ],
   "discounts": {
     "free": [
@@ -44,58 +45,61 @@
     "sixty": [],
     "fifty": [],
     "forty": [
-      "Hands On Car Wash",
+      "Bail Office Properties, Upgrades and Modifications",
       "Bravado Hotring Hellfire",
+      "Declasse Scramjet",
       "Karin Hotring Everon"
     ],
     "thirty": [
-      "Benefactor Stirling GT",
-      "Mammoth Patriot Mil-Spec",
-      "Nagasaki Weaponized Dinghy",
-      "Obey Tailgater S",
-      "Överflöd Autarch",
-      "Pegassi Osiris",
-      "Progen GP1",
-      "Shitzu Keitora",
-      "Vapid Clique Wagon"
+      "Canis Terminus",
+      "Dinka RT3000",
+      "Dinka Veto Modern",
+      "Emperor ETR1",
+      "MTL Wastelander",
+      "Pfister Comet S2",
+      "Übermacht Sentinel Classic",
+      "Vapid Desert Raid",
+      "Vapid Trophy Truck",
+      "Western Reever",
+      "Willard Eudora"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Podium Robbery", "name": "Truffade Z-Type", "type": "Standard Tier" },
-    { "robbery": "The Duggan Robbery", "name": "Übermacht Sentinel Classic", "type": "Low Tier" },
-    { "robbery": "The Gangbanger Robbery", "name": "Vapid Caracara 4x4", "type": "Low Tier" }
+    { "robbery": "The McTony Robbery", "name": "Bravado Buffalo STX", "type": "Top Tier" },
+    { "robbery": "The Gangbanger Robbery", "name": "Willard Eudora", "type": "Standard Tier" },
+    { "robbery": "The Cargo Ship Robbery", "name": "Vapid Ellie", "type": "Low Tier" }
   ],
   "simeonVehicles": [
-    "Benefactor Stirling GT",
-    "Mammoth Patriot Mil-Spec",
-    "Obey Tailgater S",
-    "Progen GP1",
-    "Shitzu Keitora"
+    "Gallivanter Warden",
+    "Vapid Desert Raid",
+    "Willard Eudora",
+    "Canis Terminus",
+    "Emperor ETR1"
   ],
   "luxuryAutos": [
-    "Benefactor LRC GT",
-    "Pfister X-treme"
+    "Declasse Scramjet (Impotent Rage livery)",
+    "Declasse Scramjet (Princess Robot Bubblegum livery)"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 4 in the LS Car Meet Series three days in a row",
+    "prizeRideRequirement": "Place Top 3 in the LS Car Meet Series for two days in a row",
     "testTrack": [
-      "Överflöd Autarch",
-      "Pegassi Osiris",
-      "Vapid Clique Wagon"
+      "Pfister Comet S2",
+      "Dinka Veto Modern",
+      "Western Reever"
     ],
-    "hsw": "Karin S95"
+    "hsw": "Pfister Astron Custom"
   },
   "timeTrials": {
-    "regular": "End to End",
-    "hsw": "Terminal to Chiliad Mountain State Wilderness",
-    "premium": "A Sign of Things to Come"
+    "regular": "Fort Zancudo",
+    "hsw": "Pacific Bluffs to Mount Gordo",
+    "premium": "Taking Off"
   },
   "gunVan": [
-    "Unholy Hellbringer (FREE)",
-    "Battle Rifle (50% OFF)",
-    "Precision Rifle (40% OFF - GTA+ Members)",
-    "The Shocker, Up-n-Atomizer, Railgun, Widowmaker",
-    "Tear Gas, Molotovs & Sticky Bombs"
+    "Knife (FREE)",
+    "Unholy Hellbringer (40% OFF)",
+    "Railgun (40% OFF - GTA+ Members)",
+    "Up-n-Atomizer, The Shocker, Combat Shotgun, Heavy Sniper",
+    "Pump Shotgun, Molotovs, Pipe Bombs & Sticky Bombs"
   ],
   "gtaPlus": {
     "duration": "August 13 - September 9, 2026",
