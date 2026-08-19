@@ -1,19 +1,20 @@
 {
-  "locationId": 13,
-  "zone": "Gun Van Location #13",
-  "description": "LT Weld Supply Co. / Lester's Warehouse, Murrieta Heights",
-  "mapPath": "map_13.jpg",
+  "locationId": 17,
+  "zone": "Gun Van Location #17",
+  "description": "Terminal (southwest corner)",
+  "mapPath": "map_17.jpg",
   "inventory": [
-    "Service Carbine: -10 %",
-    "Heavy Rifle: -50 %",
-    "Combat Shotgun: -10 %",
-    "Compact Rifle: -10 %",
-    "Heavy Pistol: -10 %",
-    "Battle Axe: -10 %",
-    "Grenade: -10 %",
+    "Battle Rifle: -50 %",
+    "The Shocker: -10 %",
+    "Precision Rifle: -10 %",
+    "Railgun: -10 %",
+    "Widowmaker: -10 %",
+    "Unholy Hellbringer: FREE",
+    "Up-n-Atomizer: -10 %",
     "Tear Gas: -10 %",
+    "Molotov: -10 %",
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-08-13T08:02:46.088Z"
+  "updatedAt": "2026-08-19T07:22:22.478Z"
 }
