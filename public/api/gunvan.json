@@ -1,8 +1,8 @@
 {
-  "locationId": 17,
-  "zone": "Gun Van Location #17",
-  "description": "Terminal (southwest corner)",
-  "mapPath": "map_17.jpg",
+  "locationId": 16,
+  "zone": "Gun Van Location #16",
+  "description": "Fridgit, Forced Labor Place, La Mesa",
+  "mapPath": "map_16.jpg",
   "inventory": [
     "Battle Rifle: -50 %",
     "The Shocker: -10 %",
@@ -16,5 +16,5 @@
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-08-19T07:22:22.478Z"
+  "updatedAt": "2026-08-20T07:25:02.566Z"
 }
