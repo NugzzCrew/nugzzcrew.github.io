@@ -1,20 +1,21 @@
 {
-  "locationId": 16,
-  "zone": "Gun Van Location #16",
-  "description": "Fridgit, Forced Labor Place, La Mesa",
-  "mapPath": "map_16.jpg",
+  "locationId": 23,
+  "zone": "Gun Van Location #23",
+  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
+  "mapPath": "map_23.jpg",
   "inventory": [
-    "Battle Rifle: -50 %",
-    "The Shocker: -10 %",
-    "Precision Rifle: -10 %",
+    "Unholy Hellbringer: -40 %",
     "Railgun: -10 %",
-    "Widowmaker: -10 %",
-    "Unholy Hellbringer: FREE",
+    "Combat Shotgun: -10 %",
+    "Heavy Sniper: -10 %",
+    "Pump Shotgun: -10 %",
+    "Knife: FREE",
+    "The Shocker: -10 %",
     "Up-n-Atomizer: -10 %",
-    "Tear Gas: -10 %",
     "Molotov: -10 %",
+    "Pipe Bomb: -10 %",
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-08-20T07:25:02.566Z"
+  "updatedAt": "2026-08-21T07:26:00.784Z"
 }
