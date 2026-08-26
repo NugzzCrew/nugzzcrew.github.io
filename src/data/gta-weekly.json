@@ -1,105 +1,84 @@
 {
-  "eventTitle": "Brand Wars Event Continues",
-  "weekEnding": "August 26, 2026",
-  "fibFile": "The Brute Force File",
+  "eventTitle": "Transform Races & Drift Bonuses",
+  "weekEnding": "September 2, 2026",
+  "fibFile": "The Fine Art File",
   "primaryTargets": [
-    "True Love",
-    "Pumpkin",
-    "A Winding Road Home"
+    "Breathless",
+    "Twindifference",
+    "Teckels"
   ],
-  "weeklyChallenge": "Win 3 Races to get the Princess Racing Tracksuit along with GTA$250,000",
-  "brandWars": {
-    "duration": "August 13 - 26",
-    "details": [
-      "Link Twitch & Rockstar Games accounts",
-      "Watch participating Team Sprunk or Team eCola streamers",
-      "Earn Sprunk or eCola Sweatsuits",
-      "Earn up to GTA$2,000,000 in Twitch Drops",
-      "Claim FREE Sprunk & eCola Bodysuits at clothing stores",
-      "Claim FREE Sprunk x eCola livery & vanity plates at Vehicle Workshops",
-      "August 21-23: Earn 5X GTA$ and RP on VIP Work"
-    ]
-  },
-  "podium": "Declasse Granger 3600LX",
-  "prizeRide": "Enus Paragon R",
+  "weeklyChallenge": "Participate in three Drift Races to receive GTA$100,000.\nComplete a Drift Race in the Übermacht Cypher to receive the Glitch Camo drift livery within 72 hours.",
+  "podium": "Karin Sultan Classic",
+  "prizeRide": "Dinka Veto Classic",
   "bonuses": [
-    { "category": "5X GTA$ & RP", "name": "VIP Work (August 21-23)", "value": "5X" },
-    { "category": "4X GTA$ & RP", "name": "Hotring Circuit Series", "value": "4X" },
-    { "category": "4X GTA$ & RP", "name": "Freemode Challenges & Events", "value": "4X" },
-    { "category": "3X GTA$ & RP", "name": "Select Odd Jobs", "value": "3X" },
-    { "category": "3X GTA$ & RP", "name": "Community Series", "value": "3X" }
+    { "category": "6X GTA$ & RP", "name": "Drift and Transform Races (AUG 28-30)", "value": "6X" },
+    { "category": "3X GTA$ & RP", "name": "Random Transform Races", "value": "3X" },
+    { "category": "2X GTA$, RP & REP", "name": "Auto Shop Robbery Contracts", "value": "2X" },
+    { "category": "2X GTA$, RP & REP", "name": "Drift Races", "value": "2X" }
   ],
   "loginRewards": [
-    "Sprunk x eCola livery for the Declasse Hotring Sabre",
-    "Sprunk and eCola vanity plates"
+    "Five New Random Transform Tracks Added",
+    "Known Unknowns Track",
+    "Unknown Unknowns Track"
   ],
   "specialRewards": [
-    { "action": "Available to Everyone", "reward": "New Gallivanter Warden (SUV)" },
-    { "action": "Select Heists and Missions", "reward": "Weekly completion bonuses reset for bigger initial payouts" }
+    { "action": "New Drift Tuning Eligible", "reward": "Annis Elegy Retro" },
+    { "action": "New Drift Tuning Eligible", "reward": "Invetero Coquette" },
+    { "action": "New Drift Tuning Eligible", "reward": "Vapid Dominator GTT" }
   ],
   "discounts": {
-    "free": [
-      "Declasse Hotring Sabre"
-    ],
+    "free": [],
     "seventy": [],
     "sixty": [],
     "fifty": [],
-    "forty": [
-      "Bail Office Properties, Upgrades and Modifications",
-      "Bravado Hotring Hellfire",
-      "Declasse Scramjet",
-      "Karin Hotring Everon"
-    ],
+    "forty": [],
     "thirty": [
-      "Canis Terminus",
-      "Dinka RT3000",
-      "Dinka Veto Modern",
-      "Emperor ETR1",
-      "MTL Wastelander",
-      "Pfister Comet S2",
-      "Übermacht Sentinel Classic",
-      "Vapid Desert Raid",
-      "Vapid Trophy Truck",
-      "Western Reever",
-      "Willard Eudora"
+      "Annis ZR350",
+      "Buckingham Howard NX-25",
+      "Cheval Taipan",
+      "Invetero Coquette D5",
+      "Karin Technical Aqua",
+      "Obey I-Wagen",
+      "RC Bandito",
+      "Vapid Flash GT",
+      "Western Company Duster 300-H"
     ]
   },
   "salvageYard": [
-    { "robbery": "The McTony Robbery", "name": "Bravado Buffalo STX", "type": "Top Tier" },
-    { "robbery": "The Gangbanger Robbery", "name": "Willard Eudora", "type": "Standard Tier" },
-    { "robbery": "The Cargo Ship Robbery", "name": "Vapid Ellie", "type": "Low Tier" }
+    { "robbery": "The Podium Robbery", "name": "Dewbauchee Champion", "type": "Top Tier" },
+    { "robbery": "The Duggan Robbery", "name": "Obey Tailgater S", "type": "Standard Tier" },
+    { "robbery": "The Cargo Ship Robbery", "name": "Vapid Clique", "type": "Low Tier" }
   ],
   "simeonVehicles": [
-    "Gallivanter Warden",
-    "Vapid Desert Raid",
-    "Willard Eudora",
-    "Canis Terminus",
-    "Emperor ETR1"
+    "Albany V-STR",
+    "Fathom FR36",
+    "Invetero Coquette",
+    "Vapid Dominator FX",
+    "Vapid Dominator GTT"
   ],
   "luxuryAutos": [
-    "Declasse Scramjet (Impotent Rage livery)",
-    "Declasse Scramjet (Princess Robot Bubblegum livery)"
+    "Grotti Itali Classic",
+    "Pfister Astrale"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 3 in the LS Car Meet Series for two days in a row",
+    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for four days in a row",
     "testTrack": [
-      "Pfister Comet S2",
-      "Dinka Veto Modern",
-      "Western Reever"
+      "Cheval Taipan",
+      "Invetero Coquette D5",
+      "Vapid Flash GT"
     ],
-    "hsw": "Pfister Astron Custom"
+    "hsw": "Imponte Arbiter GT"
   },
   "timeTrials": {
-    "regular": "Fort Zancudo",
-    "hsw": "Pacific Bluffs to Mount Gordo",
-    "premium": "Taking Off"
+    "regular": "Storm Drain",
+    "hsw": "North Chumash to Palomino Highlands",
+    "premium": "Boots On The Ground"
   },
   "gunVan": [
-    "Knife (FREE)",
-    "Unholy Hellbringer (40% OFF)",
-    "Railgun (40% OFF - GTA+ Members)",
-    "Up-n-Atomizer, The Shocker, Combat Shotgun, Heavy Sniper",
-    "Pump Shotgun, Molotovs, Pipe Bombs & Sticky Bombs"
+    "Military Rifle (30% OFF)",
+    "Precision Rifle (40% OFF - GTA+ Members)",
+    "Railgun, Grenade Launcher, Heavy Pistol, Crowbar",
+    "Pipe Bombs, Tear Gas & Grenades"
   ],
   "gtaPlus": {
     "duration": "August 13 - September 9, 2026",
