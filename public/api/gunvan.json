@@ -1,8 +1,8 @@
 {
-  "locationId": 17,
-  "zone": "Gun Van Location #17",
-  "description": "Terminal (southwest corner)",
-  "mapPath": "map_17.jpg",
+  "locationId": 19,
+  "zone": "Gun Van Location #19",
+  "description": "Popular Street, La Mesa",
+  "mapPath": "map_19.jpg",
   "inventory": [
     "Military Rifle: -30 %",
     "Precision Rifle: -10 %",
@@ -15,5 +15,5 @@
     "Grenade: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-08-31T14:20:31.214Z"
+  "updatedAt": "2026-09-01T11:57:22.935Z"
 }
