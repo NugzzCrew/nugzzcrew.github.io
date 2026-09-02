@@ -1,84 +1,97 @@
 {
-  "eventTitle": "Transform Races & Drift Bonuses",
-  "weekEnding": "September 2, 2026",
-  "fibFile": "The Fine Art File",
+  "eventTitle": "Business Rivalries: Executive Spotlight",
+  "weekEnding": "September 9, 2026",
+  "fibFile": "The Project Breakaway File",
   "primaryTargets": [
-    "Breathless",
-    "Twindifference",
-    "Teckels"
+    "Consumato",
+    "Stacks Study V",
+    "Trust"
   ],
-  "weeklyChallenge": "Participate in three Drift Races to receive GTA$100,000.\nComplete a Drift Race in the Übermacht Cypher to receive the Glitch Camo drift livery within 72 hours.",
-  "podium": "Karin Sultan Classic",
-  "prizeRide": "Dinka Veto Classic",
+  "weeklyChallenge": "Earn GTA$1,000,000 from selling Special Cargo to get the Yeti x LS Customs Tracksuit and a 10X Reward of GTA$1,000,000",
+  "podium": "Declasse Impaler SZ",
+  "prizeRide": "Karin Woodlander",
   "bonuses": [
-    { "category": "6X GTA$ & RP", "name": "Drift and Transform Races (AUG 28-30)", "value": "6X" },
-    { "category": "3X GTA$ & RP", "name": "Random Transform Races", "value": "3X" },
-    { "category": "2X GTA$, RP & REP", "name": "Auto Shop Robbery Contracts", "value": "2X" },
-    { "category": "2X GTA$, RP & REP", "name": "Drift Races", "value": "2X" }
+    { "category": "4X GTA$ & RP", "name": "Special Vehicle Work", "value": "4X" },
+    { "category": "3X GTA$ & RP", "name": "Community Mission Series", "value": "3X" },
+    { "category": "2X GTA$ & RP", "name": "Madrazo Hits", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Export Mixed Goods Missions", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Diamond Adversary Series", "value": "2X" },
+    { "category": "2X SPEED", "name": "Staff Sourcing Special Cargo", "value": "2X SPEED" }
   ],
   "loginRewards": [
-    "Five New Random Transform Tracks Added",
-    "Known Unknowns Track",
-    "Unknown Unknowns Track"
+    "Six Figure Tee (Business Battle Crates)",
+    "Ride or Die Tee (Business Battle Crates)",
+    "Red and White Ammu-Nation Cap (Business Battle Crates)",
+    "Bourgeoix Tee (Business Battle Crates)"
   ],
   "specialRewards": [
-    { "action": "New Drift Tuning Eligible", "reward": "Annis Elegy Retro" },
-    { "action": "New Drift Tuning Eligible", "reward": "Invetero Coquette" },
-    { "action": "New Drift Tuning Eligible", "reward": "Vapid Dominator GTT" }
+    { "action": "Complete 1 Weekly Challenge over next 3 weeks (Play Sept 24–30)", "reward": "FREE Penaud La Coureuse (Sports) & HSW Upgrade" },
+    { "action": "Deliver Business Battle Crates", "reward": "Guaranteed Exclusive Clothing Rewards" }
   ],
   "discounts": {
-    "free": [],
-    "seventy": [],
+    "free": [
+      "Arcadius Business Center Executive Office"
+    ],
+    "seventy": [
+      "Coil Cyclone II"
+    ],
     "sixty": [],
     "fifty": [],
     "forty": [],
     "thirty": [
-      "Annis ZR350",
-      "Buckingham Howard NX-25",
-      "Cheval Taipan",
-      "Invetero Coquette D5",
-      "Karin Technical Aqua",
-      "Obey I-Wagen",
-      "RC Bandito",
-      "Vapid Flash GT",
-      "Western Company Duster 300-H"
+      "Buckingham Maverick",
+      "Coil Cyclone",
+      "Declasse Yosemite 1500",
+      "Dewbauchee Specter",
+      "Dewbauchee Vagner",
+      "Grotti Cheetah",
+      "HVY Insurgent Pick-Up",
+      "Karin 190z",
+      "Lampadati Novak",
+      "Mammoth Squaddie",
+      "Ocelot Jugular",
+      "Överflöd Entity XF",
+      "Übermacht Rhinehart",
+      "Vapid Dominator GTX",
+      "Vapid Ellie",
+      "Western Company Seabreeze"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Podium Robbery", "name": "Dewbauchee Champion", "type": "Top Tier" },
-    { "robbery": "The Duggan Robbery", "name": "Obey Tailgater S", "type": "Standard Tier" },
-    { "robbery": "The Cargo Ship Robbery", "name": "Vapid Clique", "type": "Low Tier" }
+    { "robbery": "The Duggan Robbery", "name": "Pfister Astron", "type": "Top Tier" },
+    { "robbery": "The Cargo Ship Robbery", "name": "Ocelot Jugular", "type": "Standard Tier" },
+    { "robbery": "The Gangbanger Robbery", "name": "Canis Kamacho", "type": "Low Tier" }
   ],
   "simeonVehicles": [
-    "Albany V-STR",
-    "Fathom FR36",
-    "Invetero Coquette",
-    "Vapid Dominator FX",
-    "Vapid Dominator GTT"
+    "Coil Cyclone",
+    "Dewbauchee Vagner",
+    "Grotti Cheetah",
+    "Karin 190z",
+    "Överflöd Entity XF"
   ],
   "luxuryAutos": [
-    "Grotti Itali Classic",
-    "Pfister Astrale"
+    "Benefactor LRC GT",
+    "Pfister X-treme"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for four days in a row",
+    "prizeRideRequirement": "Place Top 2 in the LS Car Meet Series",
     "testTrack": [
-      "Cheval Taipan",
-      "Invetero Coquette D5",
-      "Vapid Flash GT"
+      "Lampadati Novak",
+      "Ocelot Jugular",
+      "Vapid Dominator GTX"
     ],
-    "hsw": "Imponte Arbiter GT"
+    "hsw": "Declasse Vigero ZX Convertible"
   },
   "timeTrials": {
-    "regular": "Storm Drain",
-    "hsw": "North Chumash to Palomino Highlands",
-    "premium": "Boots On The Ground"
+    "regular": "Up Chiliad",
+    "hsw": "East Vinewood to Vespucci Beach",
+    "premium": "Downtown Underground"
   },
   "gunVan": [
-    "Military Rifle (30% OFF)",
-    "Precision Rifle (40% OFF - GTA+ Members)",
-    "Railgun, Grenade Launcher, Heavy Pistol, Crowbar",
-    "Pipe Bombs, Tear Gas & Grenades"
+    "Precision Rifle (50% OFF)",
+    "Stun Gun (30% OFF - GTA+ Members)",
+    "Railgun, Grenade Launcher, Flare Gun, Knife",
+    "Tear Gas, Molotovs & Sticky Bombs"
   ],
   "gtaPlus": {
     "duration": "August 13 - September 9, 2026",
@@ -137,7 +150,7 @@
       "Red Dead Redemption",
       "L.A. Noire",
       "GTA: Liberty City Stories & Chinatown Wars (Mobile)",
-      "20% discount for listed titles"
+      "20% discount on listed titles"
     ]
   }
 }
