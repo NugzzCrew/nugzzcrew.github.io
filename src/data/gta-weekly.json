@@ -93,6 +93,48 @@
     "Railgun, Grenade Launcher, Flare Gun, Knife",
     "Tear Gas, Molotovs & Sticky Bombs"
   ],
+  "businessRivalries": {
+    "duration": "September 3 - September 30, 2026",
+    "grandReward": "Complete any single Weekly Challenge between Sept 3-23, then log in Sept 24-30 to claim a FREE Penaud La Coureuse (Sports) + complimentary HSW Upgrade.",
+    "weeks": [
+      {
+        "dates": "Sept 3-9",
+        "title": "Executives Week",
+        "freeProperty": "Arcadius Business Center Office",
+        "challenge": "Sell $1,000,000 Special Cargo",
+        "reward": "GTA$1,000,000 + Yeti x LS Customs Tracksuit",
+        "highlights": "4X Special Vehicle Work | 2X Export Mixed Goods | 2X Cargo Staff Speed",
+        "featuredDiscount": "70% Off Coil Cyclone II"
+      },
+      {
+        "dates": "Sept 10-16",
+        "title": "Bikers Week",
+        "freeProperty": "Grapeseed Clubhouse",
+        "challenge": "Earn $1,000,000 selling all product",
+        "reward": "GTA$1,000,000 + Junk Tracksuit",
+        "highlights": "2X Clubhouse Contracts & MC Work | 2X Street Dealer & Bike Service (6X for GTA+)",
+        "featuredDiscount": "70% Off Karin S95"
+      },
+      {
+        "dates": "Sept 17-23",
+        "title": "Gunrunning Week",
+        "freeProperty": "Grapeseed Bunker",
+        "challenge": "Complete 3 Bunker Research Missions",
+        "reward": "GTA$1,000,000 + Camo Ammu-Nation Sweatsuit",
+        "highlights": "2X Payouts, RP & Research Speed | 2X Ammu-Nation & Safeguard Deliveries",
+        "featuredDiscount": "70% Off Pfister Astron Custom"
+      },
+      {
+        "dates": "Sept 24-30",
+        "title": "Nightclubs Week",
+        "freeProperty": "Elysian Island Nightclub",
+        "challenge": "Sell $1,000,000 across all businesses",
+        "reward": "GTA$1,000,000 + Retro Fruit Tracksuit",
+        "highlights": "2X Popularity on Management Missions | 2X Nightclub Goods & QuickiePharm",
+        "featuredDiscount": "70% Off Imponte Arbiter GT"
+      }
+    ]
+  },
   "gtaPlus": {
     "duration": "August 13 - September 9, 2026",
     "freeVehicles": [

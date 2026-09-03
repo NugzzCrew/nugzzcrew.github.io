@@ -16,7 +16,6 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
                 </h1>
                 <p class="text-zinc-400 font-bold uppercase tracking-widest mt-4">Event available through {gtaData.weekEnding || gtaData.weekending}</p>
             </div>
-            <!-- Added lowercase fallback for data parsing -->
             <div class="bg-gold/90 backdrop-blur-sm p-6 rounded-2xl text-black max-w-md shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)] border border-gold">
                 <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-1 opacity-70">Weekly Challenge</p>
                 <p class="font-black italic text-lg leading-tight uppercase whitespace-pre-line">{gtaData.weeklyChallenge || gtaData.weeklychallenge}</p>
@@ -113,28 +112,6 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
         </div>
     </div>
 
-    <!-- NEW MODULE: Brand Wars Event (Restored) -->
-    {(gtaData.brandWars || gtaData.brandwars) && (
-      <section class="bg-gradient-to-r from-green-900/40 to-red-900/40 backdrop-blur-md rounded-3xl p-8 border border-zinc-700/50 shadow-xl">
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-              <h2 class="text-3xl font-black uppercase italic text-white drop-shadow-md">
-                  Brand Wars: <span class="text-green-500">Sprunk</span> vs <span class="text-red-500">eCola</span>
-              </h2>
-              <span class="bg-black/60 text-gold px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-gold/30">
-                  {(gtaData.brandWars || gtaData.brandwars).duration}
-              </span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {(gtaData.brandWars || gtaData.brandwars).details.map(detail => (
-                  <div class="bg-black/40 border border-zinc-600/30 p-4 rounded-xl flex items-center gap-3">
-                      <i data-lucide="zap" class="text-gold w-4 h-4 shrink-0"></i>
-                      <p class="text-white text-xs font-bold uppercase tracking-tight">{detail}</p>
-                  </div>
-              ))}
-          </div>
-      </section>
-    )}
-
     <div class="grid md:grid-cols-3 gap-8">
         <div class="space-y-4">
             <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3 drop-shadow-md">
@@ -185,7 +162,7 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
         </div>
     </div>
 
-    <!-- Restored dynamic discounts section with FREE tier -->
+    <!-- Dynamic discounts section -->
     <section class="bg-zinc-900/40 backdrop-blur-md rounded-3xl p-8 border border-zinc-700/50 shadow-xl">
         <h2 class="text-2xl font-black uppercase italic text-white mb-8 border-l-4 border-gold pl-4 drop-shadow-md">Limited Time Discounts</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -240,7 +217,72 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
         </div>
     </section>
 
-    <!-- ROBUST GTA+ Rewards Section -->
+    <!-- NEW MONTH-LONG MODULE: Business Rivalries Event Breakdown -->
+    {(gtaData.businessRivalries || gtaData.businessrivalries) && (
+      <section class="bg-gradient-to-br from-zinc-900/80 via-black/80 to-zinc-900/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-12 border border-gold/40 shadow-2xl space-y-8">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-gold/20 pb-6">
+              <div>
+                  <h2 class="text-3xl md:text-4xl font-black italic uppercase tracking-tighter text-white drop-shadow-md">
+                      Business Rivalries <span class="text-gold">Month-Long Event</span>
+                  </h2>
+                  <p class="text-gold font-bold uppercase tracking-widest text-[10px] mt-1 italic">
+                      {(gtaData.businessRivalries || gtaData.businessrivalries).duration}
+                  </p>
+              </div>
+              <div class="bg-gold/90 text-black px-5 py-2 rounded-full font-black uppercase text-xs shadow-lg">
+                  Up to $4M+ Bonus Rewards
+              </div>
+          </div>
+
+          <!-- Grand Reward Banner -->
+          <div class="bg-black/60 border border-gold/30 p-6 rounded-2xl flex flex-col md:flex-row items-center gap-4 text-center md:text-left shadow-lg">
+              <i data-lucide="trophy" class="w-8 h-8 text-gold shrink-0"></i>
+              <div>
+                  <p class="text-gold font-black uppercase text-xs tracking-wider">Grand Completion Perk</p>
+                  <p class="text-zinc-200 text-xs font-bold uppercase leading-relaxed mt-0.5">
+                      {(gtaData.businessRivalries || gtaData.businessrivalries).grandReward}
+                  </p>
+              </div>
+          </div>
+
+          <!-- 4-Week Event Schedule Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {(gtaData.businessRivalries || gtaData.businessrivalries).weeks?.map(w => (
+                  <div class="bg-zinc-900/60 border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-between space-y-4 shadow-lg hover:border-gold/50 transition-colors">
+                      <div>
+                          <div class="flex justify-between items-center mb-2">
+                              <span class="text-[9px] text-gold font-black uppercase tracking-widest">{w.dates}</span>
+                              <span class="text-[8px] bg-green-500/20 text-green-400 border border-green-500/30 px-2 py-0.5 rounded font-black uppercase">FREE Property</span>
+                          </div>
+                          <h3 class="text-white font-black italic uppercase text-lg leading-tight">{w.title}</h3>
+                          <p class="text-green-400 text-xs font-bold uppercase mt-1">🏠 {w.freeProperty}</p>
+                      </div>
+
+                      <div class="space-y-2 pt-3 border-t border-zinc-800">
+                          <div>
+                              <p class="text-[9px] text-zinc-400 font-black uppercase">Weekly Challenge</p>
+                              <p class="text-zinc-200 text-[11px] font-bold uppercase leading-snug">{w.challenge}</p>
+                          </div>
+                          <div>
+                              <p class="text-[9px] text-gold font-black uppercase">Unlock Reward</p>
+                              <p class="text-gold text-[11px] font-black uppercase">{w.reward}</p>
+                          </div>
+                          <div>
+                              <p class="text-[9px] text-zinc-400 font-black uppercase">Spotlight Multipliers</p>
+                              <p class="text-zinc-300 text-[10px] font-bold uppercase">{w.highlights}</p>
+                          </div>
+                      </div>
+
+                      <div class="bg-red-950/40 border border-red-900/40 p-2.5 rounded-xl text-center mt-auto">
+                          <p class="text-red-400 text-[10px] font-black uppercase tracking-wider">{w.featuredDiscount}</p>
+                      </div>
+                  </div>
+              ))}
+          </div>
+      </section>
+    )}
+
+    <!-- GTA+ Rewards Section -->
     <section class="relative rounded-[2.5rem] overflow-hidden bg-black/60 backdrop-blur-xl border border-gold/40 shadow-2xl">
         <div class="bg-zinc-900/60 p-8 border-b border-gold/20">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -255,7 +297,6 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
         </div>
 
         <div class="p-8 md:p-12 space-y-12">
-            <!-- Row 1: Free Vehicles & Clothing -->
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="space-y-4">
                     <p class="text-gold font-black uppercase tracking-widest text-[10px] drop-shadow-sm flex items-center gap-2"><i data-lucide="car" class="w-4 h-4"></i> Free Vehicles & Paints</p>
@@ -271,7 +312,6 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
                 </div>
             </div>
             
-            <!-- Row 2: Multipliers & Showroom -->
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="space-y-4">
                     <p class="text-gold font-black uppercase tracking-widest text-[10px] drop-shadow-sm flex items-center gap-2"><i data-lucide="trending-up" class="w-4 h-4"></i> Active Multipliers & Discounts</p>
@@ -290,7 +330,6 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
                 </div>
             </div>
 
-            <!-- Row 3: Perks & Access -->
             <div class="grid md:grid-cols-2 gap-12 pt-8 border-t border-zinc-700/60">
                 <div class="space-y-6">
                     <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter drop-shadow-md">Member Persistent Perks</h3>
@@ -316,7 +355,6 @@ const eventTitle = gtaData.eventTitle || gtaData.eventtitle || "GTA Weekly Showc
                 </div>
             </div>
 
-            <!-- Row 4: Games Library -->
             {(gtaData.gtaPlus || gtaData.gtaplus)?.gamesLibrary && (
                 <div class="pt-8 border-t border-zinc-700/60 space-y-4">
                     <h3 class="text-xl font-black italic uppercase text-gold tracking-tighter drop-shadow-md flex items-center gap-2"><i data-lucide="gamepad-2" class="w-5 h-5"></i> GTA+ Games Library</h3>
