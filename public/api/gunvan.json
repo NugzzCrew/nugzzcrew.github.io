@@ -1,8 +1,8 @@
 {
-  "locationId": 19,
-  "zone": "Gun Van Location #19",
-  "description": "Popular Street, La Mesa",
-  "mapPath": "map_19.jpg",
+  "locationId": 7,
+  "zone": "Gun Van Location #7",
+  "description": "Paleto Forest Lumber Yard",
+  "mapPath": "map_7.jpg",
   "inventory": [
     "Stun Gun: -10 %",
     "Railgun: -10 %",
@@ -15,5 +15,5 @@
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-09-03T11:37:26.608Z"
+  "updatedAt": "2026-09-04T11:38:53.367Z"
 }
