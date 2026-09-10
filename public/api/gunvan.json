@@ -1,19 +1,19 @@
 {
-  "locationId": 23,
-  "zone": "Gun Van Location #23",
-  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
-  "mapPath": "map_23.jpg",
+  "locationId": 11,
+  "zone": "Gun Van Location #11",
+  "description": "Thomson Scrapyard",
+  "mapPath": "map_11.jpg",
   "inventory": [
-    "Stun Gun: -10 %",
     "Railgun: -10 %",
-    "Precision Rifle: -50 %",
-    "Grenade Launcher: -10 %",
-    "Flare Gun: -10 %",
-    "Knife: -10 %",
-    "Tear Gas: -10 %",
-    "Molotov: -10 %",
+    "Tactical SMG: -40 %",
+    "Compact EMP Launcher: -10 %",
+    "Double Barrel Shotgun: -10 %",
+    "Assault SMG: -10 %",
+    "Pipe Wrench: -10 %",
+    "Pipe Bomb: -10 %",
+    "Proximity Mine: -10 %",
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-09-09T11:46:01.654Z"
+  "updatedAt": "2026-09-10T11:44:07.879Z"
 }
