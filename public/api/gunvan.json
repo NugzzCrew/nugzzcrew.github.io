@@ -1,8 +1,8 @@
 {
-  "locationId": 11,
-  "zone": "Gun Van Location #11",
-  "description": "Thomson Scrapyard",
-  "mapPath": "map_11.jpg",
+  "locationId": 29,
+  "zone": "Gun Van Location #29",
+  "description": "Hearty Taco, Mirror Park",
+  "mapPath": "map_29.jpg",
   "inventory": [
     "Railgun: -10 %",
     "Tactical SMG: -40 %",
@@ -15,5 +15,5 @@
     "Sticky Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-09-10T11:44:07.879Z"
+  "updatedAt": "2026-09-11T11:44:03.985Z"
 }
