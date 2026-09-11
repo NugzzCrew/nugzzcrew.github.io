@@ -136,34 +136,33 @@
     "duration": "September 10 - October 7, 2026",
     "freeVehicles": [
       "Pegassi Horus",
-      "Gallivanter Warden",
-      "Light Purple Pearl Chameleon Paint",
-      "Light Purple Pearl Chameleon Wheel Paint"
+      "Velvet Iris Livery for Pegassi Horus",
+      "Cyan/Red Flip Chameleon Paint",
+      "Cyan/Red Flip Chameleon Wheel Paint"
     ],
     "clothing": [
-      "Pink Sessanta Nove x Princess Robot Bubblegum Bomber Zipped",
-      "PRB Tee & PRB Shorts"
+      "Bigness Patchwork Revere Jeans",
+      "Bigness Patchwork Revere Collar Shirt"
     ],
     "bonuses": [
-      "3X GTA$, RP, and Rep on Drift Races",
-      "2X GTA$ & RP on All FIB Files",
-      "2X GTA$ on Garment Factory Passive Income"
+      "3X GTA$ and RP on Bike Service (Clubhouse)",
+      "2X GTA$ on First Cluckin' Bell Farm Raid Finale Each Week",
+      "2X Cocaine Production Speeds at Cocaine Lockup & Nightclub"
     ],
     "discounts": [
-      "60% Off the Garment Factory",
-      "50% Off Drift Tuning Upgrades",
-      "50% Off Terrorbyte Bureau Tech"
+      "60% OFF Biker Business Properties, Upgrades, and Modifications",
+      "50% OFF Nagasaki Motorcycles (Shinobi, Shotaro, Stryder, Chimera, BF400)"
     ],
     "vinewoodShowroom": [
-      "Albany Merula",
-      "Annis Euros (Manga Classic Livery)",
-      "Benefactor Läufer",
-      "Declasse Impaler",
-      "Declasse Tampa GT (Los Santos Machine Livery)",
-      "Karin Sultan RS Classic",
-      "Pegassi Toreador (War Camo Livery)",
-      "Pegassi Weaponized Ignus",
-      "Truffade Thrax"
+      "Declasse Scramjet",
+      "Enus Jubilee",
+      "Enus Paragon S (Tentacle Camo Livery)",
+      "Grotti X80 Proto",
+      "Lampadati Corsita (Geometric Shape Livery)",
+      "Nagasaki Shotaro",
+      "Progen PR4",
+      "Übermacht Niobe (Race League Livery)",
+      "Vapid Caracara 4x4"
     ],
     "persistent": [
       "FREE Taxi services with shorter cooldowns",
@@ -184,13 +183,17 @@
       "App: Collect your business earnings, buy ammo, request a Car Club vehicle, and purchase/claim Vinewood Car Club vehicles"
     ],
     "gamesLibrary": [
-      "Grand Theft Auto V & Online (PS5, Xbox Series X|S, PC)",
-      "GTA III, Vice City - The Definitive Edition",
-      "Bully",
-      "Red Dead Redemption",
-      "L.A. Noire",
-      "GTA: Liberty City Stories & Chinatown Wars (Mobile)",
-      "20% discount on listed titles"
+      "Grand Theft Auto V (PS5, Xbox Series X|S & PC)",
+      "Grand Theft Auto Online (PS5 & Xbox Series X|S)",
+      "Grand Theft Auto Vice City - The Definitive Edition (App Store, Google Play, PlayStation, Xbox & PC)",
+      "Grand Theft Auto III - The Definitive Edition (App Store, Google Play, PlayStation, Xbox & PC)",
+      "Bully (App Store, Google Play, PlayStation, Xbox & PC)",
+      "Red Dead Redemption (PlayStation, Xbox & PC)",
+      "GTA: The Trilogy - The Definitive Edition (PlayStation, Xbox & PC)",
+      "L.A. Noire (PlayStation, Xbox & PC)",
+      "GTA: Liberty City Stories (App Store, Google Play)",
+      "GTA: Chinatown Wars (App Store, Google Play)",
+      "20% discount to purchase one/all listed titles on linked platform"
     ]
   }
 }
