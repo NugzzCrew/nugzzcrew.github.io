@@ -1,94 +1,98 @@
 {
-  "eventTitle": "Business Rivalries: Bikers Week",
-  "weekEnding": "September 16, 2026",
-  "fibFile": "The Black Box File",
+  "eventTitle": "Business Rivalries: Gunrunning Week",
+  "weekEnding": "September 23, 2026",
+  "fibFile": "The Brute Force File",
   "primaryTargets": [
-    "\"I Hear Voices\"",
-    "\"I, Fruit\"",
-    "\"Until Death\""
+    "Mi O Melee",
+    "To Beat About the Bush",
+    "Hare Oneself Think"
   ],
-  "weeklyChallenge": "Earn GTA$1,000,000 selling all kinds of product to bank an extra GTA$1,000,000 plus the Junk Tracksuit.",
-  "podium": "RUNE Zhaba",
-  "prizeRide": "Pfister Neon",
+  "weeklyChallenge": "Complete three Bunker Research Missions to get GTA$1,000,000 and the Camo Ammu-Nation Sweatsuit.",
+  "podium": "Vapid Dominator ASP",
+  "prizeRide": "Dinka LSCM Jester RR",
   "bonuses": [
     { "category": "3X GTA$ & RP", "name": "Community Mission Series", "value": "3X" },
-    { "category": "2X GTA$ & RP", "name": "Biker Clubhouse Contracts, MC Work and MC Challenges", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Featured Series: Hasta La Vista and Every Bullet Counts", "value": "2X" },
-    { "category": "2X GTA$", "name": "Street Dealer Sales", "value": "2X" },
-    { "category": "2X GTA$", "name": "Bike Service Missions (6X for GTA+ Members)", "value": "2X" }
+    { "category": "2X GTA$ & RP", "name": "Featured Series: Stockpile & Trap Door", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Ammu-Nation Contracts (Bunker Duneloader deliveries)", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Safeguard Deliveries (Bobcat Security & Gruppe Sechs depots)", "value": "2X" },
+    { "category": "2X GTA$, RP & RESEARCH", "name": "Bunker Research Missions (via Agent 14)", "value": "2X SPEED" }
   ],
   "loginRewards": [
+    "Dolla Dolla livery (Mammoth Avenger, Ocelot Ardent, Oppressor & Oppressor Mk II)",
     "Six Figure Tee (Business Battle Crates)",
     "Ride or Die Tee (Business Battle Crates)",
     "Red and White Ammu-Nation Cap (Business Battle Crates)",
     "Bourgeoix Tee (Business Battle Crates)"
   ],
   "specialRewards": [
+    { "action": "Available to Everyone", "reward": "Pegassi Horus now available for all players" },
     { "action": "Complete 1 Weekly Challenge over next 2 weeks (Play Sept 24–30)", "reward": "FREE Penaud La Coureuse (Sports) & HSW Upgrade" },
     { "action": "Deliver Business Battle Crates", "reward": "Guaranteed Exclusive Clothing Rewards" }
   ],
   "discounts": {
     "free": [
-      "Grapeseed Clubhouse"
+      "Grapeseed Bunker"
     ],
     "seventy": [
-      "Karin S95"
+      "Pfister Astron Custom"
     ],
     "sixty": [],
     "fifty": [],
     "forty": [],
     "thirty": [
-      "Buckingham Nimbus",
-      "Dinka Vindicator",
-      "Gallivanter Baller ST",
-      "Grotti Cheetah Classic",
-      "Karin Vivanite",
-      "Maibatsu Penumbra FF",
-      "Mammoth Patriot Stretch",
-      "Nagasaki Shinobi",
-      "Pegassi Vortex",
-      "Pfister Growler",
-      "Shitzu Defiler",
-      "Vapid Aleutian",
-      "Vulcar Warrener HKR",
-      "Western Rampant Rocket"
+      "Albany Hermes",
+      "Bravado Half-track",
+      "Buckingham Shamal",
+      "Grotti Bestia GTS",
+      "HVY Nightshark",
+      "Imponte Nightshade",
+      "Karin Everon",
+      "Lampadati Viseris",
+      "Ocelot XA-21",
+      "Pegassi Torero",
+      "Principe Lectro",
+      "Schyster Deviant",
+      "Shitzu Hakuchou Drag",
+      "Übermacht Niobe",
+      "Vom Feuer Anti-Aircraft Trailer",
+      "Western Company Rogue"
     ]
   },
   "salvageYard": [
-    { "robbery": "The McTony Robbery", "name": "Enus Jubilee", "type": "Top Tier" },
-    { "robbery": "The Cargo Ship Robbery", "name": "Benefactor Stirling GT", "type": "Standard Tier" },
-    { "robbery": "The Gangbanger Robbery", "name": "Dinka Blista Kanjo", "type": "Low Tier" }
+    { "robbery": "The McTony Robbery", "name": "Declasse Mamba", "type": "Standard Tier" },
+    { "robbery": "The Podium Robbery", "name": "Dinka Sugoi", "type": "Low Tier" },
+    { "robbery": "The Duggan Robbery", "name": "Karin Previon", "type": "Low Tier" }
   ],
   "simeonVehicles": [
-    "Dinka Vindicator",
-    "Nagasaki Shinobi",
-    "Pegassi Vortex",
-    "Shitzu Defiler",
-    "Western Rampant Rocket"
+    "Bravado Half-track",
+    "HVY Nightshark",
+    "Imponte Nightshade",
+    "Ocelot XA-21",
+    "Pegassi Torero"
   ],
   "luxuryAutos": [
-    "Grotti GT750",
-    "Vapid FMJ MK V"
+    "Pegassi Horus",
+    "Progen Luiva"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 4 in the LS Car Meet Series",
+    "prizeRideRequirement": "Win in the LS Car Meet Series for four days in a row",
     "testTrack": [
-      "Grotti Cheetah Classic",
-      "Pfister Growler",
-      "Vulcar Warrener HKR"
+      "Grotti Bestia GTS",
+      "Lampadati Viseris",
+      "Schyster Deviant"
     ],
-    "hsw": "Coil Cyclone II"
+    "hsw": "Bravado Banshee GTS"
   },
   "timeTrials": {
-    "regular": "Sawmill",
-    "hsw": "Del Perro Beach to Murietta Heights",
-    "premium": "Eight Figure Bonus"
+    "regular": "Cypress Flats",
+    "hsw": "Sandy Shores to La Puerta",
+    "premium": "Congestion Charge"
   },
   "gunVan": [
-    "Tactical SMG (40% OFF)",
-    "Railgun (40% OFF - GTA+ Members)",
-    "Compact EMP Launcher, Double Barrel Shotgun, Assault SMG",
-    "Pipe Wrench, Pipe Bombs, Proximity Mines & Sticky Bombs"
+    "Stun Gun (40% OFF)",
+    "Tactical SMG (30% OFF - GTA+ Members)",
+    "Compact EMP Launcher, Heavy Sniper, Pump Shotgun, Pipe Wrench",
+    "Tear Gas, Sticky Bombs & Molotovs"
   ],
   "businessRivalries": {
     "duration": "September 3 - September 30, 2026",
