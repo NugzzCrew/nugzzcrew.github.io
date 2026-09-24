@@ -1,19 +1,19 @@
 {
-  "locationId": 29,
-  "zone": "Gun Van Location #29",
-  "description": "Hearty Taco, Mirror Park",
-  "mapPath": "map_29.jpg",
+  "locationId": 25,
+  "zone": "Gun Van Location #25",
+  "description": "Caesars Auto Parking, Little Seoul",
+  "mapPath": "map_25.jpg",
   "inventory": [
     "Tactical SMG: -10 %",
-    "Stun Gun: -40 %",
-    "Compact EMP Launcher: -10 %",
-    "Heavy Sniper: -10 %",
-    "Pump Shotgun: -10 %",
-    "Pipe Wrench: -10 %",
+    "Battle Rifle: -50 %",
+    "Combat Shotgun: -10 %",
+    "Minigun: -10 %",
+    "Combat Pistol: -10 %",
+    "Switchblade: -10 %",
     "Tear Gas: -10 %",
-    "Sticky Bomb: -10 %",
     "Molotov: -10 %",
+    "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-09-23T12:01:24.003Z"
+  "updatedAt": "2026-09-24T12:07:21.758Z"
 }
