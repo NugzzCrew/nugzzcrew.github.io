@@ -1,8 +1,8 @@
 {
-  "locationId": 19,
-  "zone": "Gun Van Location #19",
-  "description": "Popular Street, La Mesa",
-  "mapPath": "map_19.jpg",
+  "locationId": 15,
+  "zone": "Gun Van Location #15",
+  "description": "Land Act Reservoir (north end)",
+  "mapPath": "map_15.jpg",
   "inventory": [
     "Tactical SMG: -10 %",
     "Battle Rifle: -50 %",
@@ -15,5 +15,5 @@
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-09-27T12:22:10.975Z"
+  "updatedAt": "2026-09-28T14:22:49.394Z"
 }
