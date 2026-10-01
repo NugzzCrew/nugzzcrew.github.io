@@ -1,19 +1,21 @@
 {
-  "locationId": 21,
-  "zone": "Gun Van Location #21",
-  "description": "Magellan Ave / Conquistador St, Vespucci Beach",
-  "mapPath": "map_21.jpg",
+  "locationId": 17,
+  "zone": "Gun Van Location #17",
+  "description": "Terminal (southwest corner)",
+  "mapPath": "map_17.jpg",
   "inventory": [
-    "Tactical SMG: -10 %",
-    "Battle Rifle: -50 %",
+    "Service Carbine: -30 %",
+    "Precision Rifle: -10 %",
     "Combat Shotgun: -10 %",
-    "Minigun: -10 %",
-    "Combat Pistol: -10 %",
-    "Switchblade: -10 %",
-    "Tear Gas: -10 %",
-    "Molotov: -10 %",
+    "Widowmaker: -10 %",
+    "Up-n-Atomizer: -10 %",
+    "Unholy Hellbringer: -10 %",
+    "Baseball Bat: FREE",
+    "Knife: -10 %",
+    "The Shocker: FREE",
+    "Unknown (hash: -1916886713): -10 %",
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-09-30T12:56:30.650Z"
+  "updatedAt": "2026-10-01T13:48:01.992Z"
 }
