@@ -1,8 +1,8 @@
 {
-  "locationId": 17,
-  "zone": "Gun Van Location #17",
-  "description": "Terminal (southwest corner)",
-  "mapPath": "map_17.jpg",
+  "locationId": 6,
+  "zone": "Gun Van Location #6",
+  "description": "Behind Ink Inc. Tattoos, Chumash Plaza",
+  "mapPath": "map_6.jpg",
   "inventory": [
     "Service Carbine: -30 %",
     "Precision Rifle: -10 %",
@@ -17,5 +17,5 @@
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-10-01T13:48:01.992Z"
+  "updatedAt": "2026-10-02T13:04:14.627Z"
 }
