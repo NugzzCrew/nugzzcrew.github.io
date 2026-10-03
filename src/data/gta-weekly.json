@@ -1,136 +1,133 @@
 {
-  "eventTitle": "Business Rivalries: Nightclubs Week",
-  "weekEnding": "September 30, 2026",
-  "fibFile": "The Fine Art File",
+  "eventTitle": "Halloween Season Begins",
+  "weekEnding": "October 7, 2026",
+  "fibFile": "The Project Breakaway File",
   "primaryTargets": [
-    "The Outcome of Endeavour",
-    "What are Melons?",
-    "In Excess of Success",
-    "The Girl With the Pearl Necklace"
+    "Chat on Fruit",
+    "Juiced",
+    "The Downfall of Rome"
   ],
-  "weeklyChallenge": "Sell GTA$1,000,000 across all businesses to receive GTA$1,000,000 and the Retro Fruit Tracksuit.",
-  "podium": "Ocelot Penetrator",
-  "prizeRide": "Pegassi Zorrusso",
+  "weeklyChallenge": "Secure two Bail Office Bounties to get the Green Vintage Skull Mask and GTA$100,000",
+  "podium": "Lampadati Cinquemila",
+  "prizeRide": "Vapid Dominator GTT",
   "bonuses": [
-    { "category": "2X GTA$ & RP", "name": "Nightclub Goods Missions (via Yohan)", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "QuickiePharm Deliveries", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Community Combat Series", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Featured Series: Deadline, Deadline Duet, Tiny Racers", "value": "2X" },
-    { "category": "2X POPULARITY", "name": "Nightclub Management Missions", "value": "2X" }
+    { "category": "3X GTA$ & RP", "name": "Halloween Featured Series (Slasher, Ramius - Slasher)", "value": "3X" },
+    { "category": "3X GTA$ & RP", "name": "Halloween Survivals (Ludendorff, Cayo Perico & Alien)", "value": "3X" },
+    { "category": "3X GTA$ & RP", "name": "San Andreas Super Sport & Community Race Series", "value": "3X" },
+    { "category": "2X GTA$ & RP", "name": "Bail Office Standard & Most Wanted Bounties", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Dispatch Work & UFO Business Battles", "value": "2X" },
+    { "category": "2X GTA$ & RP", "name": "Jack O' Lanterns", "value": "2X" },
+    { "category": "2X GTA$", "name": "Ghosts Exposed", "value": "2X" }
   ],
   "loginRewards": [
-    "Six Figure Tee (Business Battle Crates)",
-    "Ride or Die Tee (Business Battle Crates)",
-    "Red and White Ammu-Nation Cap (Business Battle Crates)",
-    "Bourgeoix Tee (Business Battle Crates)"
+    "Cheerleader Massacre 3 T-Shirt (Free at clothing stores through Oct 7)",
+    "Halloween Masks, Face Paints, Horns, Bobbleheads & Casino Decorations Unlocked"
   ],
   "specialRewards": [
-    { "action": "Completed a previous Weekly Challenge", "reward": "Claim FREE Penaud La Coureuse & HSW Upgrade" },
-    { "action": "Deliver Business Battle Crates", "reward": "Guaranteed Exclusive Clothing Rewards" }
+    { "action": "Complete 5 Security Contracts (through Oct 7)", "reward": "GTA$500,000 (within 72 hours)" },
+    { "action": "Complete all Weekly Challenges through Nov 4", "reward": "GTA$2,000,000 (within 72 hours)" }
   ],
   "discounts": {
-    "free": [
-      "Elysian Island Nightclub"
-    ],
-    "seventy": [
-      "Imponte Arbiter GT"
-    ],
+    "free": [],
+    "seventy": [],
     "sixty": [],
     "fifty": [],
-    "forty": [],
+    "forty": [
+      "Agency Properties, Upgrades & Modifications",
+      "Albany Brigham",
+      "Albany Fränken Stange",
+      "Albany Lurcher",
+      "Declasse Tornado Rat Rod",
+      "LCC Sanctus"
+    ],
     "thirty": [
-      "Benefactor Turreted Limo",
-      "Declasse Drift Yosemite",
-      "Dewbauchee JB 700W",
-      "Dinka Jester Classic",
-      "Enus Stafford",
-      "Grotti Stinger GT",
-      "HVY Menacer",
-      "Nagasaki Blazer Aqua",
-      "Nagasaki Outlaw",
-      "Pfister Comet SR",
-      "Truffade Nero",
-      "Vapid Caracara 4x4",
-      "Vapid GB200",
-      "Vapid Retinue Mk II",
-      "Vysser Neo"
+      "Benefactor Schlagen GT",
+      "Declasse Vigero ZX",
+      "Grotti Brioso 300",
+      "Lampadati Komoda",
+      "Nagasaki Buzzard Attack Chopper",
+      "Nagasaki Ultralight",
+      "Ocelot Ardent",
+      "Sea Sparrow",
+      "Western Powersurge"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Cargo Ship Robbery", "name": "Pfister Comet S2 Cabrio", "type": "Top Tier" },
-    { "robbery": "The Gangbanger Robbery", "name": "Mammoth Patriot Mil-Spec", "type": "Standard Tier" },
-    { "robbery": "The Podium Robbery", "name": "Karin Boor", "type": "Low Tier" }
+    { "robbery": "The Cargo Ship Robbery", "name": "Bravado Buffalo EVX", "type": "Top Tier" },
+    { "robbery": "The McTony Robbery", "name": "Karin Everon", "type": "Standard Tier" },
+    { "robbery": "The Duggan Robbery", "name": "Albany Fränken Stange", "type": "Standard Tier" }
   ],
   "simeonVehicles": [
-    "Dewbauchee JB 700W",
-    "Dinka Jester Classic",
-    "Enus Stafford",
-    "HVY Menacer",
-    "Vapid Speedo"
+    "Albany Brigham",
+    "Albany Fränken Stange",
+    "Albany Lurcher",
+    "Declasse Tornado Rat Rod",
+    "LCC Sanctus"
   ],
   "luxuryAutos": [
-    "Annis Minimus",
-    "Karin Everon RS"
+    "Dewbauchee Rapid GT X",
+    "Übermacht Sentinel XS4"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Win in the LS Car Meet Series for four days in a row",
+    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
     "testTrack": [
-      "Declasse Drift Yosemite",
-      "Vapid GB200",
-      "Vysser Neo"
+      "Ocelot Locust",
+      "Dewbauchee Seven-70",
+      "Declasse Vamos"
     ],
-    "hsw": "Imponte Arbiter GT"
+    "hsw": "Maibatsu MonstroCiti"
   },
   "timeTrials": {
-    "regular": "Up-n-Atom",
-    "hsw": "Textile City to Stab City",
-    "premium": "Across the Wilderness"
+    "regular": "Maze Bank Arena",
+    "hsw": "Ron Alternates to Elysian Island",
+    "premium": "Arms Race"
   },
   "gunVan": [
-    "Battle Rifle (50% OFF)",
-    "Tactical SMG (30% OFF - GTA+ Members)",
-    "Combat Shotgun, Minigun, Combat Pistol, Switchblade",
-    "Tear Gas, Molotovs & Pipe Bombs"
+    "Baseball Bat (FREE)",
+    "The Shocker (FREE)",
+    "Service Carbine (30% OFF)",
+    "Up-n-Atomizer, Unholy Hellbringer & Widowmaker (50% OFF for GTA+)",
+    "Precision Rifle, Combat Shotgun, El Strickler, Knife, Pipe Bombs"
   ],
-  "businessRivalries": {
-    "duration": "September 3 - September 30, 2026",
-    "grandReward": "Complete any single Weekly Challenge between Sept 3-23, then log in Sept 24-30 to claim a FREE Penaud La Coureuse (Sports) + complimentary HSW Upgrade.",
-    "weeks": [
+  "halloweenSeason": {
+    "duration": "October 1 - November 4, 2026",
+    "grandReward": "Complete all Weekly Challenges through November 4 to receive GTA$2,000,000 within 72 hours.",
+    "specialEvents": [
+      "Slashers & Clone Slasher",
+      "Phantom Car & Cerberus Surprise",
+      "Possessed Animals & Ghosts Exposed",
+      "Jack O'Lanterns & Peyote Plants"
+    ],
+    "roadmap": [
       {
-        "dates": "Sept 3-9",
-        "title": "Executives Week",
-        "freeProperty": "Arcadius Business Center Office",
-        "challenge": "Sell $1,000,000 Special Cargo",
-        "reward": "GTA$1,000,000 + Yeti x LS Customs Tracksuit",
-        "highlights": "4X Special Vehicle Work | 2X Export Mixed Goods | 2X Cargo Staff Speed",
-        "featuredDiscount": "70% Off Coil Cyclone II"
+        "dates": "October 1–7",
+        "challenge": "Secure two Bail Office Bounties",
+        "reward": "Green Vintage Skull Mask and GTA$100,000",
+        "apparel": "Cheerleader Massacre 3 T-Shirt"
       },
       {
-        "dates": "Sept 10-16",
-        "title": "Bikers Week",
-        "freeProperty": "Grapeseed Clubhouse",
-        "challenge": "Earn $1,000,000 selling all product",
-        "reward": "GTA$1,000,000 + Junk Tracksuit",
-        "highlights": "2X Clubhouse Contracts & MC Work | 2X Street Dealer & Bike Service (6X for GTA+)",
-        "featuredDiscount": "70% Off Karin S95"
+        "dates": "October 8–14",
+        "challenge": "Win in two Adversary modes",
+        "reward": "Pink Skull Emissive Mask and GTA$100,000",
+        "apparel": "Twilight Knife T-Shirt"
       },
       {
-        "dates": "Sept 17-23",
-        "title": "Gunrunning Week",
-        "freeProperty": "Grapeseed Bunker",
-        "challenge": "Complete 3 Bunker Research Missions",
-        "reward": "GTA$1,000,000 + Camo Ammu-Nation Sweatsuit",
-        "highlights": "2X Payouts, RP & Research Speed | 2X Ammu-Nation & Safeguard Deliveries",
-        "featuredDiscount": "70% Off Pfister Astron Custom"
+        "dates": "October 15–21",
+        "challenge": "Win three Races",
+        "reward": "Orange Glow Skeleton Onesie and GTA$100,000",
+        "apparel": "Butchery and Other Hobbies T-Shirt"
       },
       {
-        "dates": "Sept 24-30",
-        "title": "Nightclubs Week",
-        "freeProperty": "Elysian Island Nightclub",
-        "challenge": "Sell $1,000,000 across all businesses",
-        "reward": "GTA$1,000,000 + Retro Fruit Tracksuit",
-        "highlights": "2X Popularity on Management Missions | 2X Nightclub Goods & QuickiePharm",
-        "featuredDiscount": "70% Off Imponte Arbiter GT"
+        "dates": "October 22–28",
+        "challenge": "Complete all waves of a Survival",
+        "reward": "Gray Space Interloper Outfit and GTA$150,000",
+        "apparel": "White & Red Tech Demon Mask"
+      },
+      {
+        "dates": "October 29–November 4",
+        "challenge": "Complete 10 waves in a Survival without dying",
+        "reward": "Slasher Clown Outfit and GTA$250,000",
+        "apparel": "Brown Vintage Skull Mask and the Halloween Chute Bag"
       }
     ]
   },
