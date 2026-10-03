@@ -1,19 +1,21 @@
 {
-  "locationId": 29,
-  "zone": "Gun Van Location #29",
-  "description": "Hearty Taco, Mirror Park",
-  "mapPath": "map_29.jpg",
+  "locationId": 23,
+  "zone": "Gun Van Location #23",
+  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
+  "mapPath": "map_23.jpg",
   "inventory": [
-    "Tactical SMG: -10 %",
-    "Stun Gun: -40 %",
-    "Compact EMP Launcher: -10 %",
-    "Heavy Sniper: -10 %",
-    "Pump Shotgun: -10 %",
-    "Pipe Wrench: -10 %",
-    "Tear Gas: -10 %",
-    "Sticky Bomb: -10 %",
-    "Molotov: -10 %",
+    "Service Carbine: -30 %",
+    "Precision Rifle: -10 %",
+    "Combat Shotgun: -10 %",
+    "Widowmaker: -10 %",
+    "Up-n-Atomizer: -10 %",
+    "Unholy Hellbringer: -10 %",
+    "Baseball Bat: FREE",
+    "Knife: -10 %",
+    "The Shocker: FREE",
+    "Unknown (hash: -1916886713): -10 %",
+    "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-09-23T12:01:24.003Z"
+  "updatedAt": "2026-10-03T11:56:57.495Z"
 }
