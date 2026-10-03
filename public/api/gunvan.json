@@ -1,8 +1,8 @@
 {
-  "locationId": 6,
-  "zone": "Gun Van Location #6",
-  "description": "Behind Ink Inc. Tattoos, Chumash Plaza",
-  "mapPath": "map_6.jpg",
+  "locationId": 23,
+  "zone": "Gun Van Location #23",
+  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
+  "mapPath": "map_23.jpg",
   "inventory": [
     "Service Carbine: -30 %",
     "Precision Rifle: -10 %",
@@ -17,5 +17,5 @@
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-10-02T13:04:14.627Z"
+  "updatedAt": "2026-10-03T11:56:57.495Z"
 }
