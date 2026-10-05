@@ -1,8 +1,8 @@
 {
-  "locationId": 11,
-  "zone": "Gun Van Location #11",
-  "description": "Thomson Scrapyard",
-  "mapPath": "map_11.jpg",
+  "locationId": 7,
+  "zone": "Gun Van Location #7",
+  "description": "Paleto Forest Lumber Yard",
+  "mapPath": "map_7.jpg",
   "inventory": [
     "Service Carbine: -30 %",
     "Precision Rifle: -10 %",
@@ -17,5 +17,5 @@
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-10-04T12:47:36.090Z"
+  "updatedAt": "2026-10-05T15:11:53.253Z"
 }
