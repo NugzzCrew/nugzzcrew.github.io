@@ -1,8 +1,8 @@
 {
-  "locationId": 25,
-  "zone": "Gun Van Location #25",
-  "description": "Caesars Auto Parking, Little Seoul",
-  "mapPath": "map_25.jpg",
+  "locationId": 13,
+  "zone": "Gun Van Location #13",
+  "description": "LT Weld Supply Co. / Lester's Warehouse, Murrieta Heights",
+  "mapPath": "map_13.jpg",
   "inventory": [
     "Service Carbine: -30 %",
     "Precision Rifle: -10 %",
@@ -17,5 +17,5 @@
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-10-06T13:33:05.153Z"
+  "updatedAt": "2026-10-07T13:47:59.802Z"
 }
