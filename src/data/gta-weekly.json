@@ -1,31 +1,85 @@
 {
-  "eventTitle": "Halloween Season Begins",
-  "weekEnding": "October 7, 2026",
-  "fibFile": "The Project Breakaway File",
+  "eventTitle": "Halloween Week 2",
+  "weekEnding": "October 14, 2026",
+  "eventDates": "October 8–14, 2026",
+  "fibFile": "The Black Box File",
   "primaryTargets": [
-    "Chat on Fruit",
-    "Juiced",
-    "The Downfall of Rome"
+    "Pumpkin",
+    "A Winding Road Home",
+    "Winter, Nowhere in Particular"
   ],
-  "weeklyChallenge": "Secure two Bail Office Bounties to get the Green Vintage Skull Mask and GTA$100,000",
-  "podium": "Lampadati Cinquemila",
-  "prizeRide": "Vapid Dominator GTT",
+  "weeklyChallenge": "Win two Adversary Modes to receive the Pink Skull Emissive Mask and GTA$100,000",
+  "podium": "Annis Savestra",
+  "prizeRide": "Declasse Walton L35",
+  "prizeRideRequirement": "Place Top 4 in the LS Car Meet Series for two days in a row",
+  "weeklyRewards": [
+    "Play GTA Online through October 14 to receive the Twilight Knife T-Shirt",
+    "Complete five Payphone Hits through October 14 to receive GTA$500,000 within 72 hours of completion",
+    "Complete all Weekly Challenges through November 4 to receive GTA$2,000,000 within 72 hours of completion"
+  ],
   "bonuses": [
-    { "category": "3X GTA$ & RP", "name": "Halloween Featured Series (Slasher, Ramius - Slasher)", "value": "3X" },
-    { "category": "3X GTA$ & RP", "name": "Halloween Survivals (Ludendorff, Cayo Perico & Alien)", "value": "3X" },
-    { "category": "3X GTA$ & RP", "name": "San Andreas Super Sport & Community Race Series", "value": "3X" },
-    { "category": "2X GTA$ & RP", "name": "Bail Office Standard & Most Wanted Bounties", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Dispatch Work & UFO Business Battles", "value": "2X" },
-    { "category": "2X GTA$ & RP", "name": "Jack O' Lanterns", "value": "2X" },
-    { "category": "2X GTA$", "name": "Ghosts Exposed", "value": "2X" }
+    {
+      "category": "3X GTA$ & RP",
+      "name": "Halloween Featured Series: Slasher, Ramius - Slasher",
+      "value": "3X"
+    },
+    {
+      "category": "3X GTA$ & RP",
+      "name": "Halloween Survivals: Ludendorff Cemetery Survival, Cayo Perico Survival & Alien Survivals (6X for GTA+ Members)",
+      "value": "3X / 6X GTA+"
+    },
+    {
+      "category": "3X GTA$ & RP",
+      "name": "San Andreas Super Sport Series: Hotring Races & Random Transform Races",
+      "value": "3X"
+    },
+    {
+      "category": "3X GTA$ & RP",
+      "name": "Community Race Series",
+      "value": "3X"
+    },
+    {
+      "category": "2X GTA$ & RP",
+      "name": "Bail Office Standard and Most Wanted Targets",
+      "value": "2X"
+    },
+    {
+      "category": "2X GTA$ & RP",
+      "name": "Dispatch Work",
+      "value": "2X"
+    },
+    {
+      "category": "2X GTA$ & RP",
+      "name": "UFO Business Battles",
+      "value": "2X"
+    },
+    {
+      "category": "2X GTA$ & RP",
+      "name": "Jack O' Lanterns (4X for GTA+ Members)",
+      "value": "2X / 4X GTA+"
+    },
+    {
+      "category": "2X GTA$ & RP",
+      "name": "Ghosts Exposed (4X for GTA+ Members)",
+      "value": "2X / 4X GTA+"
+    }
   ],
   "loginRewards": [
-    "Cheerleader Massacre 3 T-Shirt (Free at clothing stores through Oct 7)",
-    "Halloween Masks, Face Paints, Horns, Bobbleheads & Casino Decorations Unlocked"
+    "Twilight Knife T-Shirt (Free for playing GTA Online through Oct 14)"
   ],
   "specialRewards": [
-    { "action": "Complete 5 Security Contracts (through Oct 7)", "reward": "GTA$500,000 (within 72 hours)" },
-    { "action": "Complete all Weekly Challenges through Nov 4", "reward": "GTA$2,000,000 (within 72 hours)" }
+    {
+      "action": "Complete 5 Payphone Hits through Oct 14",
+      "reward": "GTA$500,000 (within 72 hours)"
+    },
+    {
+      "action": "Win 2 Adversary Modes",
+      "reward": "Pink Skull Emissive Mask + GTA$100,000"
+    },
+    {
+      "action": "Complete all Weekly Challenges through Nov 4",
+      "reward": "GTA$2,000,000 (within 72 hours)"
+    }
   ],
   "discounts": {
     "free": [],
@@ -33,7 +87,7 @@
     "sixty": [],
     "fifty": [],
     "forty": [
-      "Agency Properties, Upgrades & Modifications",
+      "Agency Properties including Upgrades and Modifications",
       "Albany Brigham",
       "Albany Fränken Stange",
       "Albany Lurcher",
@@ -41,21 +95,55 @@
       "LCC Sanctus"
     ],
     "thirty": [
-      "Benefactor Schlagen GT",
-      "Declasse Vigero ZX",
-      "Grotti Brioso 300",
-      "Lampadati Komoda",
-      "Nagasaki Buzzard Attack Chopper",
-      "Nagasaki Ultralight",
-      "Ocelot Ardent",
-      "Sea Sparrow",
-      "Western Powersurge"
+      "Annis Remus",
+      "Benefactor Terrorbyte",
+      "BF Club",
+      "Bravado Greenwood",
+      "Dinka Jester RR",
+      "Emperor ETR1",
+      "Grotti Itali GTO",
+      "Karin Hotring Everon",
+      "Pegassi Tempesta",
+      "Übermacht SC1"
+    ]
+  },
+  "gunVan": [
+    "Precision Rifle",
+    "Combat Shotgun",
+    "El Strickler",
+    "Knife",
+    "Pipe Bombs",
+    "The Shocker (FREE)",
+    "Baseball Bat (FREE)",
+    "Service Carbine (30% OFF)",
+    "Up-n-Atomizer (50% OFF for GTA+ Members)",
+    "Unholy Hellbringer (50% OFF for GTA+ Members)",
+    "Widowmaker (50% OFF for GTA+ Members)"
+  ],
+  "rotatingContent": {
+    "fibPriorityFile": "The Black Box File",
+    "kortzCenterPrimaryTargets": [
+      "Pumpkin",
+      "A Winding Road Home",
+      "Winter, Nowhere in Particular"
     ]
   },
   "salvageYard": [
-    { "robbery": "The Cargo Ship Robbery", "name": "Bravado Buffalo EVX", "type": "Top Tier" },
-    { "robbery": "The McTony Robbery", "name": "Karin Everon", "type": "Standard Tier" },
-    { "robbery": "The Duggan Robbery", "name": "Albany Fränken Stange", "type": "Standard Tier" }
+    {
+      "robbery": "The McTony Robbery",
+      "name": "Pfister Growler",
+      "type": "Top Tier"
+    },
+    {
+      "robbery": "The Gangbanger Robbery",
+      "name": "Albany Fränken Stange",
+      "type": "Standard Tier"
+    },
+    {
+      "robbery": "The Podium Robbery",
+      "name": "Willard Eudora",
+      "type": "Low Tier"
+    }
   ],
   "simeonVehicles": [
     "Albany Brigham",
@@ -69,26 +157,20 @@
     "Übermacht Sentinel XS4"
   ],
   "lsCarMeet": {
-    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
+    "prizeRide": "Declasse Walton L35",
+    "prizeRideRequirement": "Place Top 4 in the LS Car Meet Series for two days in a row",
     "testTrack": [
-      "Ocelot Locust",
+      "Declasse Vamos",
       "Dewbauchee Seven-70",
-      "Declasse Vamos"
+      "Ocelot Locust"
     ],
     "hsw": "Maibatsu MonstroCiti"
   },
   "timeTrials": {
-    "regular": "Maze Bank Arena",
-    "hsw": "Ron Alternates to Elysian Island",
-    "premium": "Arms Race"
+    "regular": "Terminal to Chiliad Mountain State Wilderness",
+    "hsw": "Tongva Valley",
+    "premium": "The Commute"
   },
-  "gunVan": [
-    "Baseball Bat (FREE)",
-    "The Shocker (FREE)",
-    "Service Carbine (30% OFF)",
-    "Up-n-Atomizer, Unholy Hellbringer & Widowmaker (50% OFF for GTA+)",
-    "Precision Rifle, Combat Shotgun, El Strickler, Knife, Pipe Bombs"
-  ],
   "halloweenSeason": {
     "duration": "October 1 - November 4, 2026",
     "grandReward": "Complete all Weekly Challenges through November 4 to receive GTA$2,000,000 within 72 hours.",
@@ -107,7 +189,7 @@
       },
       {
         "dates": "October 8–14",
-        "challenge": "Win in two Adversary modes",
+        "challenge": "Win two Adversary Modes",
         "reward": "Pink Skull Emissive Mask and GTA$100,000",
         "apparel": "Twilight Knife T-Shirt"
       },
@@ -132,36 +214,41 @@
     ]
   },
   "gtaPlus": {
-    "duration": "September 10 - October 7, 2026",
+    "duration": "October 8 - November 4, 2026",
     "freeVehicles": [
-      "Pegassi Horus",
-      "Velvet Iris Livery for Pegassi Horus",
-      "Cyan/Red Flip Chameleon Paint",
-      "Cyan/Red Flip Chameleon Wheel Paint"
+      "Pegassi Oppressor",
+      "Free MTL Brigade 6x6",
+      "Skulls livery for Pegassi Oppressor",
+      "Red/Orange Flip Chameleon Paint",
+      "Red/Orange Flip Chameleon Wheel Paint"
     ],
     "clothing": [
-      "Bigness Patchwork Revere Jeans",
-      "Bigness Patchwork Revere Collar Shirt"
+      "Ride or Die Chore Jacket",
+      "Ride or Die Chore Jeans",
+      "Skeleton Bodysuit",
+      "Mummy Costume"
     ],
     "bonuses": [
-      "3X GTA$ and RP on Bike Service (Clubhouse)",
-      "2X GTA$ on First Cluckin' Bell Farm Raid Finale Each Week",
-      "2X Cocaine Production Speeds at Cocaine Lockup & Nightclub"
+      "4X GTA$ & RP on Alien Survivals, Cayo Perico Survival & Ludendorff Cemetery Survival",
+      "2X GTA$ & RP on Jack O' Lanterns",
+      "2X GTA$ & RP on Ghosts Exposed"
     ],
     "discounts": [
-      "60% OFF Biker Business Properties, Upgrades, and Modifications",
-      "50% OFF Nagasaki Motorcycles (Shinobi, Shotaro, Stryder, Chimera, BF400)"
+      "FREE Acid Lab Supplies",
+      "50% OFF Up-n-Atomizer",
+      "50% OFF Widowmaker",
+      "50% OFF Unholy Hellbringer"
     ],
     "vinewoodShowroom": [
-      "Declasse Scramjet",
-      "Enus Jubilee",
-      "Enus Paragon S (Tentacle Camo Livery)",
-      "Grotti X80 Proto",
-      "Lampadati Corsita (Geometric Shape Livery)",
-      "Nagasaki Shotaro",
-      "Progen PR4",
-      "Übermacht Niobe (Race League Livery)",
-      "Vapid Caracara 4x4"
+      "Albany Brigham with Love Fist livery",
+      "Bravado Buffalo STX",
+      "Declasse Weaponized Tampa with Stars livery",
+      "HVY APC with Skulls livery",
+      "Imponte Deluxo",
+      "LCC Sanctus",
+      "Pegassi Oppressor Mk II with Orange Shade Camo livery",
+      "Principe Deveste Eight",
+      "Vapid FMJ MK V with White Stripe"
     ],
     "persistent": [
       "FREE Taxi services with shorter cooldowns",
@@ -179,7 +266,7 @@
       "Garage: Unique garage in Downtown Los Santos with 100 personal vehicle slots",
       "Hangar Storage: Five storage slots that do not require purchasing McKenzie Field Hangar",
       "Workshop: Discounted mods and no rank requirements",
-      "App: Collect your business earnings, buy ammo, request a Car Club vehicle, and purchase/claim Vinewood Car Club vehicles"
+      "App: Collect your business earnings, buy ammo, request a Car Club vehicle, and purchase or claim Vinewood Car Club vehicles"
     ],
     "gamesLibrary": [
       "Grand Theft Auto V (PS5, Xbox Series X|S & PC)",
@@ -192,7 +279,7 @@
       "L.A. Noire (PlayStation, Xbox & PC)",
       "GTA: Liberty City Stories (App Store, Google Play)",
       "GTA: Chinatown Wars (App Store, Google Play)",
-      "20% discount to purchase one/all listed titles on linked platform"
+      "20% discount to purchase one/all the listed games on the platform linked to your GTA+ Membership (Console and PC Only)"
     ]
   }
 }
