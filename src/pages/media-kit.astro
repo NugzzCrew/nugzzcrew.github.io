@@ -3,50 +3,100 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Media Kit">
-<div class="media-kit-wrapper" style="background-color: #1a1a1a; color: #ffffff; padding: 3rem; font-family: Arial, sans-serif; max-width: 80rem; margin: 0 auto;">
-  <header style="text-align: center; margin-bottom: 3rem;">
-    <h1 style="color: #FFD700; font-size: 3rem; margin-bottom: 0.5rem; text-transform: uppercase;">Official Nugzz Crew</h1>
-    <h2 style="color: #cccccc; font-weight: normal;">Gaming Tutorials, DMO Methods & Custom Tools</h2>
-  </header>
+  <div class="page-shell">
+    <header class="page-head">
+      <h1 class="page-title">
+        <span class="text-white">Official</span> <span class="text-gold">Nugzz Crew</span>
+      </h1>
+      <p class="page-kicker">Media Kit & Sponsorship Opportunities</p>
+    </header>
 
-  <section style="display: flex; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 300px; background-color: #2a2a2a; padding: 2rem; border-radius: 8px; border-top: 4px solid #FFD700;">
-      <h3 style="color: #FFD700; margin-top: 0;">About The Channel</h3>
-      <p style="line-height: 1.6;">
-        The Official Nugzz Crew is a premier destination for advanced GTA V and RDR2 mechanics, save editors, and DMO methods. 
-        Beyond standard gameplay, the channel provides highly technical, step-by-step video tutorials complete with high-quality voiceovers and custom web tools that keep the "Fam Bam" community heavily engaged.
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-gold">
+        <h2 class="text-xl font-header uppercase tracking-tight text-gold mb-3">About The Channel</h2>
+        <p class="text-zinc-300 leading-relaxed text-sm md:text-base">
+          Official Nugzz Crew is a professional GTA Online glitch-hunting and community hub focused on advanced DMO methods, GCTF/GC2F techniques, save-editor workflows, vehicle customization, and high-quality step-by-step tutorials. 
+          Beyond standard gameplay, we build and maintain custom web tools that keep the Fam Bam highly engaged and returning daily.
+        </p>
+      </div>
+
+      <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-gold">
+        <h2 class="text-xl font-header uppercase tracking-tight text-gold mb-3">Audience & Reach</h2>
+        <ul class="space-y-2 text-zinc-300 text-sm md:text-base leading-relaxed">
+          <li><strong class="text-white">YouTube:</strong> 12.1K+ Subscribers • 1.4M+ Total Views • 1,300+ Videos</li>
+          <li><strong class="text-white">Streaming:</strong> Live 3–6 hours, 5–6 days per week (primarily Mon–Fri @ 4 PM PST)</li>
+          <li><strong class="text-white">Content Focus:</strong> Technical GTA V / RDR2 tutorials, DMO, merges, liveries, and community tools</li>
+          <li><strong class="text-white">Audience:</strong> Highly technical, dedicated gamers with strong retention on detailed how-to content</li>
+          <li><strong class="text-white">Community:</strong> Active Discord + custom website platform driving ongoing engagement</li>
+        </ul>
+      </div>
     </div>
-    <div style="flex: 1; min-width: 300px; background-color: #2a2a2a; padding: 2rem; border-radius: 8px; border-top: 4px solid #FFD700;">
-      <h3 style="color: #FFD700; margin-top: 0;">Audience & Reach</h3>
-      <ul style="line-height: 1.6; padding-left: 20px;">
-        <li><strong>YouTube:</strong> 12.1K+ Subscribers / 1.4M+ Total Views</li>
-        <li><strong>Content Output:</strong> 1.3K+ Videos across multiple platforms</li>
-        <li><strong>Streaming:</strong> Live 3-6 hours daily, 5-6 days a week</li>
-        <li><strong>Community:</strong> Active Discord Server & Custom Web Platform</li>
-        <li><strong>Audience Type:</strong> Highly technical, dedicated gamers who follow step-by-step instructions with high retention rates.</li>
+
+    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-gold mb-8">
+      <h2 class="text-xl font-header uppercase tracking-tight text-gold mb-3">Custom Tools & Engagement</h2>
+      <p class="text-zinc-300 leading-relaxed mb-4 text-sm md:text-base">
+        We differentiate from standard gaming channels by shipping production web tools that create daily reasons to return:
+      </p>
+      <ul class="space-y-2 text-zinc-300 text-sm md:text-base leading-relaxed list-disc list-inside">
+        <li><strong class="text-white">Emblem Creator</strong> — Image-to-Social Club emblem generator with live preview and copyable code</li>
+        <li><strong class="text-white">DMO Generator</strong> — Specialized tool for DMO / save-related workflows</li>
+        <li><strong class="text-white">Vehicle Customizer</strong> — Interactive plate, crew color, and tire design tools</li>
+        <li><strong class="text-white">GTA Resources & Gun Van Tracker</strong> — Live tracking and community resource hub</li>
+        <li><strong class="text-white">Private Discord Infrastructure</strong> — Ticketing, support systems, and direct community engagement</li>
       </ul>
     </div>
-  </section>
 
-  <section style="background-color: #2a2a2a; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; border-top: 4px solid #FFD700;">
-    <h3 style="color: #FFD700; margin-top: 0;">Community Tools & Engagement</h3>
-    <p style="line-height: 1.6;">
-      Unlike standard gaming channels, we build custom applications for our community, resulting in massive audience retention and loyalty:
-    </p>
-    <ul style="line-height: 1.6; padding-left: 20px;">
-      <li><strong>Custom Vehicle App:</strong> Interactive UI for plate styling, crew colors, and tire designs.</li>
-      <li><strong>Emblem Creator:</strong> Bespoke tools for Rockstar Social Club integration with live preview toggles.</li>
-      <li><strong>Private Support Infrastructure:</strong> Direct engagement via advanced Discord ticketing and honeypot systems.</li>
-    </ul>
-  </section>
+    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-gold mb-8">
+      <h2 class="text-xl font-header uppercase tracking-tight text-gold mb-4">Social Presence</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-sm">
+        <a href="https://www.youtube.com/@OfficialNugzzCrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">YT</span> YouTube
+        </a>
+        <a href="https://www.twitch.tv/officialnugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">TW</span> Twitch
+        </a>
+        <a href="https://kick.com/officialnugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">KK</span> Kick
+        </a>
+        <a href="https://discord.gg/officialnugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">DC</span> Discord
+        </a>
+        <a href="https://www.tiktok.com/@officialnugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">TT</span> TikTok
+        </a>
+        <a href="https://www.instagram.com/officialnugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">IG</span> Instagram
+        </a>
+        <a href="https://x.com/NugzzCrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">X</span> X / Twitter
+        </a>
+        <a href="https://www.facebook.com/nugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">FB</span> Facebook
+        </a>
+        <a href="https://www.snapchat.com/add/nugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">SC</span> Snapchat
+        </a>
+        <a href="https://suno.com/@officialnugzzcrew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">SU</span> Suno
+        </a>
+        <a href="https://officialnugzzcrew-shop.fourthwall.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">SH</span> Shop
+        </a>
+        <a href="https://socialclub.rockstargames.com/crew/official_nugzz_crew" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 bg-zinc-900/60 border border-zinc-800 rounded-xl hover:border-gold/60 hover:bg-zinc-900 transition-colors">
+          <span class="text-gold font-bold">RS</span> Rockstar Crew
+        </a>
+      </div>
+    </div>
 
-  <section style="text-align: center; margin-top: 2rem;">
-    <h3 style="color: #FFD700;">Sponsorship Opportunities</h3>
-    <p style="line-height: 1.6; max-width: 600px; margin: 0 auto 2rem auto;">
-      Available for 60-second pre-roll/mid-roll integrations, dedicated tutorial videos, stream overlays (Twitch/Kick), and custom website banner placements.
-    </p>
-    <a href="mailto:YOUR_EMAIL@DOMAIN.COM" style="background-color: #FFD700; color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.2rem;">Contact For Rates</a>
-  </section>
-</div>
+    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-gold text-center">
+      <h2 class="text-xl font-header uppercase tracking-tight text-gold mb-3">Sponsorship Opportunities</h2>
+      <p class="text-zinc-300 leading-relaxed max-w-2xl mx-auto mb-6 text-sm md:text-base">
+        Open for 60-second pre-roll and mid-roll integrations, dedicated tutorial videos, Twitch/Kick stream overlays and shout-outs, custom website banner and tool placements, Discord partnerships, and product giveaways. 
+        Ideal partners include VPNs, gaming chairs (e.g. Secretlab), peripherals, and gaming lifestyle brands seeking a loyal, technical GTA audience.
+      </p>
+      <a href="mailto:nugzzcrew@gmail.com" class="inline-block bg-gold text-black font-bold uppercase tracking-wider px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors text-sm md:text-base">
+        Contact For Rates — nugzzcrew@gmail.com
+      </a>
+    </div>
+  </div>
 </MainLayout>
