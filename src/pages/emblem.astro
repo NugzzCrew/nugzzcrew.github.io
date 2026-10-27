@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Emblem Creator">
+<MainLayout title="Emblem Creator" description="Convert any image or text into a Rockstar Social Club emblem code. Free online tool for Official Nugzz Crew.">
   <div class="max-w-[1400px] mx-auto py-8 px-4 md:px-6">
     
 <section class="mb-8">
@@ -10,31 +10,26 @@ import MainLayout from '../layouts/MainLayout.astro';
     Emblem <span class="text-gold">Creator</span>
   </h1>
   <p class="text-zinc-400 font-bold uppercase tracking-widest text-[10px] mt-1 italic">
-    Image and Text to Emblem Code
+    Image to Emblem Code
   </p>
 </section>
 
-<div class="flex flex-col lg:flex-row gap-6">
+<div class="flex flex-col lg:flex-row gap-6 items-stretch">
   
   <!-- Left Column: Settings -->
-  <div class="w-full lg:w-80 flex-shrink-0 space-y-6">
+  <div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-6">
     
     <!-- Source Module -->
     <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg">
-      <h2 class="text-[10px] text-zinc-500 font-black uppercase tracking-widest mb-4">Source</h2>
+      <h2 class="text-[10px] text-gold font-black uppercase tracking-widest mb-4">Source</h2>
       
-      <div class="flex bg-black rounded-xl p-1 border border-zinc-800 mb-4">
-        <button class="flex-1 bg-zinc-800 text-gold text-xs font-bold py-2 rounded-lg uppercase tracking-tight shadow-sm">Image</button>
-        <button class="flex-1 text-zinc-400 hover:text-white text-xs font-bold py-2 rounded-lg uppercase tracking-tight transition-colors">Text</button>
-      </div>
-
       <div class="relative border border-dashed border-zinc-600 rounded-xl p-3 hover:border-gold/50 transition-colors bg-black/40 group overflow-hidden">
         <input type="file" id="imageInput" accept="image/*" class="opacity-0 absolute inset-0 w-full h-full cursor-pointer z-20" />
         
         <div class="flex items-center gap-3 relative z-10 pointer-events-none">
-          <div class="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center shrink-0" id="sourceThumbContainer">
+          <div class="w-10 h-10 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center shrink-0 overflow-hidden" id="sourceThumbContainer">
             <i data-lucide="image" class="w-4 h-4 text-zinc-400" id="sourceIcon"></i>
-            <img id="sourceThumb" src="" class="hidden w-full h-full object-cover rounded-full" />
+            <img id="sourceThumb" src="" class="hidden w-full h-full object-cover" />
           </div>
           <div class="flex flex-col overflow-hidden">
             <span class="text-white font-mono text-xs font-bold truncate" id="uploadText">Select Image...</span>
@@ -45,67 +40,19 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
 
     <!-- Settings Module -->
-    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg space-y-5">
-      <div class="flex justify-between items-center">
-        <h2 class="text-[10px] text-zinc-500 font-black uppercase tracking-widest">Settings</h2>
+    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg flex-grow flex flex-col">
+      <div class="flex justify-between items-center mb-5">
+        <h2 class="text-[10px] text-gold font-black uppercase tracking-widest">Settings</h2>
       </div>
 
-      <!-- Resolution -->
-      <div class="space-y-2">
-        <label class="text-white text-xs font-bold flex items-center gap-1.5">
-          Resolution <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
-        </label>
-        <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="resolution">
-          <button data-value="auto" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
-          <button data-value="128" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">128</button>
-          <button data-value="256" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">256</button>
-          <button data-value="512" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">512</button>
-        </div>
-      </div>
-
-      <!-- Method -->
-      <div class="space-y-2">
-        <label class="text-white text-xs font-bold flex items-center gap-1.5">
-          Method <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
-        </label>
-        <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="method">
-          <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
-          <button data-value="rows" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Rows</button>
-          <button data-value="cols" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Cols</button>
-        </div>
-      </div>
-
-      <!-- Detail -->
-      <div class="space-y-2">
-        <label class="text-white text-xs font-bold flex items-center gap-1.5">
-          Detail <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
-        </label>
-        <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="detail">
-          <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
-          <button data-value="low" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Low</button>
-          <button data-value="med" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Med</button>
-          <button data-value="high" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">High</button>
-        </div>
-      </div>
-
-      <!-- Toggles -->
-      <div class="space-y-3 pt-3 border-t border-zinc-800">
+      <!-- Basic Style Toggles (Always Visible) -->
+      <div class="space-y-3 mb-4">
         <label class="flex items-center justify-between cursor-pointer">
           <span class="text-white text-xs font-bold flex items-center gap-1.5">
-            Auto-optimize <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
+            Circular Shape <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
           </span>
           <div class="relative">
-            <input type="checkbox" id="autoOptimize" class="sr-only peer" checked>
-            <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
-          </div>
-        </label>
-
-        <label class="flex items-center justify-between cursor-pointer">
-          <span class="text-white text-xs font-bold flex items-center gap-1.5">
-            Pixelization <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
-          </span>
-          <div class="relative">
-            <input type="checkbox" id="pixelization" class="sr-only peer">
+            <input type="checkbox" id="circularCrop" class="sr-only peer">
             <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
           </div>
         </label>
@@ -119,9 +66,78 @@ import MainLayout from '../layouts/MainLayout.astro';
             <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
           </div>
         </label>
+
+        <label class="flex items-center justify-between cursor-pointer">
+          <span class="text-white text-xs font-bold flex items-center gap-1.5">
+            Pixelization <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
+          </span>
+          <div class="relative">
+            <input type="checkbox" id="pixelization" class="sr-only peer">
+            <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+          </div>
+        </label>
       </div>
 
-      <button id="resetBtn" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] font-black uppercase tracking-widest py-3 rounded-xl transition-colors mt-2">
+      <!-- Advanced Settings Dropdown -->
+      <details class="group border-t border-zinc-800 pt-3 flex-grow">
+        <summary class="text-[10px] text-zinc-400 font-bold uppercase tracking-widest cursor-pointer flex items-center justify-between hover:text-gold transition-colors list-none">
+          Advanced Settings
+          <i data-lucide="chevron-down" class="w-3 h-3 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        
+        <div class="pt-4 space-y-4">
+          <!-- Auto-optimize -->
+          <label class="flex items-center justify-between cursor-pointer">
+            <span class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
+              Auto-optimize
+            </span>
+            <div class="relative">
+              <input type="checkbox" id="autoOptimize" class="sr-only peer" checked>
+              <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+            </div>
+          </label>
+
+          <!-- Resolution -->
+          <div class="space-y-2">
+            <label class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
+              Resolution
+            </label>
+            <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="resolution">
+              <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
+              <button data-value="128" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">128</button>
+              <button data-value="256" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">256</button>
+              <button data-value="512" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">512</button>
+            </div>
+          </div>
+
+          <!-- Method -->
+          <div class="space-y-2">
+            <label class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
+              Method
+            </label>
+            <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="method">
+              <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
+              <button data-value="rows" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Rows</button>
+              <button data-value="cols" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Cols</button>
+            </div>
+          </div>
+
+          <!-- Detail -->
+          <div class="space-y-2">
+            <label class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
+              Detail
+            </label>
+            <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="detail">
+              <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
+              <button data-value="low" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Low</button>
+              <button data-value="med" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Med</button>
+              <button data-value="high" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">High</button>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <button id="resetBtn" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] font-black uppercase tracking-widest py-3 rounded-xl transition-colors mt-auto pt-2">
         Reset to defaults
       </button>
     </div>
@@ -138,8 +154,14 @@ import MainLayout from '../layouts/MainLayout.astro';
         <span class="text-xs font-bold uppercase tracking-widest opacity-50">Upload an image to preview</span>
       </div>
 
-      <div id="processing" class="hidden absolute inset-0 bg-black/60 flex items-center justify-center">
-        <span class="text-gold text-xs font-bold uppercase tracking-widest">Generating...</span>
+      <div id="processing" class="hidden absolute inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center z-10 px-6">
+        <div class="w-full max-w-[280px] text-center">
+          <p id="progressLabel" class="text-gold text-xs font-black uppercase tracking-widest mb-3">Generating</p>
+          <div class="w-full h-2.5 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack">
+            <div id="progressBar" class="h-full w-0 bg-gold transition-[width] duration-200 ease-out"></div>
+          </div>
+          <p id="progressPct" class="text-zinc-400 text-[10px] font-mono mt-2 tracking-widest">0%</p>
+        </div>
       </div>
     </div>
   </div>
@@ -149,15 +171,12 @@ import MainLayout from '../layouts/MainLayout.astro';
     
     <!-- Output Module -->
     <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg flex flex-col flex-grow">
-      <h2 class="text-[10px] text-zinc-500 font-black uppercase tracking-widest mb-4">Output</h2>
+      <h2 class="text-[10px] text-gold font-black uppercase tracking-widest mb-4">Output</h2>
       
-      <div class="space-y-1 mb-4 hidden" id="outputStats">
+      <div class="mb-4 hidden" id="outputStats">
         <div class="flex justify-between text-[10px] font-mono font-bold">
           <span class="text-zinc-400">SIZE</span>
-          <span class="text-white"><span class="text-gold" id="sizeValue">0</span> / 1,600,000</span>
-        </div>
-        <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
-          <div id="sizeBar" class="bg-green-500 h-full w-[0%] shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+          <span class="text-gold" id="sizeValue">0</span>
         </div>
       </div>
 
@@ -179,38 +198,10 @@ import MainLayout from '../layouts/MainLayout.astro';
           <i data-lucide="chevron-down" class="w-3 h-3 group-open:rotate-180 transition-transform"></i>
           Show raw code
         </summary>
-        <div class="pt-3 flex-grow flex flex-col min-h-0">
-          <textarea id="outputCode" readonly class="w-full flex-grow min-h-[180px] bg-black border border-zinc-800 rounded-xl p-3 text-zinc-300 font-mono text-[9px] focus:outline-none focus:border-gold/50 resize-none" placeholder="// Generate an emblem to see the console code here"></textarea>
+        <div class="pt-3 flex-grow flex flex-col min-h-0 h-full">
+          <textarea id="outputCode" readonly class="w-full h-full min-h-[300px] bg-black border border-zinc-800 rounded-xl p-3 text-zinc-300 font-mono text-[9px] focus:outline-none focus:border-gold/50 resize-none" placeholder="// Generate an emblem to see the console code here"></textarea>
         </div>
       </details>
-    </div>
-
-    <!-- Mini Previews -->
-    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg">
-      <h2 class="text-[10px] text-zinc-500 font-black uppercase tracking-widest mb-6">Preview Sizes</h2>
-      
-      <div class="flex items-end justify-center gap-8 h-32 relative pb-6">
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-24 h-24 border border-zinc-700 rounded-full flex items-center justify-center overflow-hidden bg-black relative">
-            <canvas class="mini-preview hidden w-full h-full"></canvas>
-          </div>
-          <span class="text-[9px] text-zinc-500 font-mono absolute bottom-0">256</span>
-        </div>
-
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-16 h-16 border border-zinc-700 rounded-full flex items-center justify-center overflow-hidden bg-black relative">
-            <canvas class="mini-preview hidden w-full h-full"></canvas>
-          </div>
-          <span class="text-[9px] text-zinc-500 font-mono absolute bottom-0">128</span>
-        </div>
-
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-10 h-10 border border-zinc-700 rounded-full flex items-center justify-center overflow-hidden bg-black relative">
-            <canvas class="mini-preview hidden w-full h-full"></canvas>
-          </div>
-          <span class="text-[9px] text-zinc-500 font-mono absolute bottom-0">64</span>
-        </div>
-      </div>
     </div>
 
   </div>
@@ -219,47 +210,55 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   <!-- How to Apply on Social Club -->
   <div class="mt-8 w-full">
-    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg">
-      <h2 class="text-[10px] text-zinc-500 font-black uppercase tracking-widest mb-4">How to Apply on Social Club</h2>
+    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-6 shadow-lg">
+      <div class="flex flex-col lg:flex-row gap-8 items-center">
+        
+        <!-- Left: Instructions -->
+        <div class="w-full lg:w-1/2 order-2 lg:order-1">
+          <h2 class="text-[10px] text-gold font-black uppercase tracking-widest mb-5">How to Apply on Social Club</h2>
+          <ol class="space-y-3 text-zinc-300 text-[13px] leading-relaxed w-full">
+            <li class="flex gap-3">
+              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">1.</span>
+              <span>Navigate to the <a href="https://socialclub.rockstargames.com" target="_blank" rel="noopener" class="text-gold hover:underline">Rockstar Social Club</a>, log in, and go to your Crew Emblems page. Click <strong class="text-white">Create a New Emblem</strong>.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">2.</span>
+              <span>Open Developer Tools: press <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">F12</kbd> (or <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Ctrl+Shift+J</kbd>).</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">3.</span>
+              <span>Click the <strong class="text-white">Console</strong> tab. Look for the blinking cursor at the bottom.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">4.</span>
+              <span>If you see a paste warning, type <code class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">allow pasting</code> and press Enter.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">5.</span>
+              <span>Right-click at the cursor → <strong class="text-white">Paste</strong> (or <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Ctrl+V</kbd>), then press <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Enter</kbd>.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">6.</span>
+              <span>Close Developer Tools (<kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">F12</kbd>), click <strong class="text-white">Save</strong>, then <strong class="text-white">Publish</strong>.</span>
+            </li>
+          </ol>
+        </div>
 
-      <!-- Tutorial Video -->
-      <div class="mb-6 aspect-video w-full max-w-3xl mx-auto rounded-xl overflow-hidden border border-zinc-800 bg-black">
-        <iframe
-          class="w-full h-full"
-          src="https://www.youtube.com/embed/BI_bY-7ZICs"
-          title="Emblem Editor Tutorial"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <!-- Right: Video -->
+        <div class="w-full lg:w-1/2 order-1 lg:order-2">
+          <div class="aspect-video w-full rounded-xl overflow-hidden border border-zinc-800 bg-black">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/BI_bY-7ZICs"
+              title="Emblem Editor Tutorial"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
       </div>
-
-      <ol class="space-y-2.5 text-zinc-300 text-[13px] leading-snug">
-        <li class="flex gap-3">
-          <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">1.</span>
-          <span>Navigate to the <a href="https://socialclub.rockstargames.com" target="_blank" rel="noopener" class="text-gold hover:underline">Rockstar Social Club</a>, log in, and go to your Crew Emblems page. Click <strong class="text-white">Create a New Emblem</strong>.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">2.</span>
-          <span>Open Developer Tools: press <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">F12</kbd> (or <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Ctrl+Shift+J</kbd>).</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">3.</span>
-          <span>Click the <strong class="text-white">Console</strong> tab. Look for the blinking cursor at the bottom.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">4.</span>
-          <span>If you see a paste warning, type <code class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">allow pasting</code> and press Enter.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">5.</span>
-          <span>Right-click at the cursor → <strong class="text-white">Paste</strong> (or <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Ctrl+V</kbd>), then press <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Enter</kbd>.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">6.</span>
-          <span>Close Developer Tools (<kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">F12</kbd>), click <strong class="text-white">Save</strong>, then <strong class="text-white">Publish</strong>.</span>
-        </li>
-      </ol>
     </div>
   </div>
 
@@ -279,16 +278,15 @@ import MainLayout from '../layouts/MainLayout.astro';
     const mainPreview = document.getElementById('mainPreview');
     const previewPlaceholder = document.getElementById('previewPlaceholder');
     const processing = document.getElementById('processing');
-    const miniPreviews = document.querySelectorAll('.mini-preview');
     const outputStats = document.getElementById('outputStats');
     const readyStatus = document.getElementById('readyStatus');
     const copyBtn = document.getElementById('copyBtn');
     const outputCode = document.getElementById('outputCode');
     const sizeValue = document.getElementById('sizeValue');
-    const sizeBar = document.getElementById('sizeBar');
     const autoOptimize = document.getElementById('autoOptimize');
     const pixelization = document.getElementById('pixelization');
     const cropEdges = document.getElementById('cropEdges');
+    const circularCrop = document.getElementById('circularCrop');
     const resetBtn = document.getElementById('resetBtn');
 
     let currentImageData = null;
@@ -323,20 +321,44 @@ import MainLayout from '../layouts/MainLayout.astro';
       });
     });
 
-    [autoOptimize, pixelization, cropEdges].forEach(el => {
-      if (el) el.addEventListener('change', () => { if (currentImageData) generateEmblem(); });
+    [autoOptimize, pixelization, cropEdges, circularCrop].forEach(el => {
+      if (el) el.addEventListener('change', () => { 
+        if (currentImageData && document.getElementById('imageInput').files[0]) {
+            loadImageToData(document.getElementById('imageInput').files[0], (data) => {
+                currentImageData = data;
+                generateEmblem(); 
+            });
+        }
+      });
     });
 
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
-        setActive(document.querySelector('[data-setting="resolution"]'), '256');
+        setActive(document.querySelector('[data-setting="resolution"]'), 'auto');
         setActive(document.querySelector('[data-setting="method"]'), 'auto');
         setActive(document.querySelector('[data-setting="detail"]'), 'auto');
         autoOptimize.checked = true;
         pixelization.checked = false;
         cropEdges.checked = true;
-        if (currentImageData) generateEmblem();
+        circularCrop.checked = false;
+        
+        if (currentImageData && document.getElementById('imageInput').files[0]) {
+            loadImageToData(document.getElementById('imageInput').files[0], (data) => {
+                currentImageData = data;
+                generateEmblem(); 
+            });
+        }
       });
+    }
+
+    // Helper for aspect ratio drawing
+    function drawAspectFit(ctx, img, targetW, targetH, sX, sY, sW, sH) {
+      const scale = Math.min(targetW / sW, targetH / sH);
+      const dw = sW * scale;
+      const dh = sH * scale;
+      const ox = (targetW - dw) / 2;
+      const oy = (targetH - dh) / 2;
+      ctx.drawImage(img, sX, sY, sW, sH, ox, oy, dw, dh);
     }
 
     function loadImageToData(file, cb) {
@@ -346,7 +368,16 @@ import MainLayout from '../layouts/MainLayout.astro';
         canvas.width = 512;
         canvas.height = 512;
         const ctx = canvas.getContext('2d');
-        // optional crop empty edges
+        
+        ctx.clearRect(0, 0, 512, 512); // Ensure transparency base
+        
+        // Handle Circular crop mask BEFORE drawing
+        if (circularCrop && circularCrop.checked) {
+            ctx.beginPath();
+            ctx.arc(256, 256, 256, 0, Math.PI * 2);
+            ctx.clip();
+        }
+
         if (cropEdges.checked) {
           // simple content bounds
           const temp = document.createElement('canvas');
@@ -368,16 +399,12 @@ import MainLayout from '../layouts/MainLayout.astro';
           }
           if (maxX > minX && maxY > minY) {
             const w = maxX - minX + 1, h = maxY - minY + 1;
-            const scale = Math.min(512 / w, 512 / h);
-            const dw = w * scale, dh = h * scale;
-            const ox = (512 - dw) / 2, oy = (512 - dh) / 2;
-            ctx.clearRect(0, 0, 512, 512);
-            ctx.drawImage(img, minX, minY, w, h, ox, oy, dw, dh);
+            drawAspectFit(ctx, img, 512, 512, minX, minY, w, h);
           } else {
-            ctx.drawImage(img, 0, 0, 512, 512);
+            drawAspectFit(ctx, img, 512, 512, 0, 0, img.width, img.height);
           }
         } else {
-          ctx.drawImage(img, 0, 0, 512, 512);
+          drawAspectFit(ctx, img, 512, 512, 0, 0, img.width, img.height);
         }
         const data = ctx.getImageData(0, 0, 512, 512);
         cb(data);
@@ -385,11 +412,28 @@ import MainLayout from '../layouts/MainLayout.astro';
       img.src = URL.createObjectURL(file);
     }
 
+    const progressBar = document.getElementById('progressBar');
+    const progressLabel = document.getElementById('progressLabel');
+    const progressPct = document.getElementById('progressPct');
+    const progressTrack = document.getElementById('progressTrack');
+    let runId = 0;
+
+    function setProgress(pct, label) {
+      const clamped = Math.max(0, Math.min(100, Math.round(pct)));
+      if (progressBar) progressBar.style.width = clamped + '%';
+      if (progressPct) progressPct.textContent = clamped + '%';
+      if (progressTrack) progressTrack.setAttribute('aria-valuenow', String(clamped));
+      if (label && progressLabel) progressLabel.textContent = label;
+    }
+
     async function generateEmblem() {
       if (!currentImageData || typeof findBestEncode !== 'function') {
         outputCode.value = '// Engine not loaded';
+        processing.classList.add('hidden');
         return;
       }
+      const myRun = ++runId;
+      setProgress(4, 'Preparing image');
       processing.classList.remove('hidden');
       copyBtn.disabled = true;
 
@@ -401,12 +445,12 @@ import MainLayout from '../layouts/MainLayout.astro';
 
       const opts = {
         N: res === 'auto' ? 'auto' : parseInt(res, 10),
-        autoN: 512,                 // prefer higher resolution when budget allows
+        autoN: 512,
         method: method === 'auto' ? 'auto' : method,
         autofit: auto,
-        pareto: auto,               // max-SSIM search under budget (best quality)
+        pareto: auto,
         paretoLadder: [512, 384, 320, 256, 192, 160, 128, 96, 80, 64],
-        plOn: !pix,                 // keep piecewise-linear for gradients
+        plOn: !pix,
         budget: 1600000,
         precision: 3,
         overlap: 2,
@@ -421,25 +465,35 @@ import MainLayout from '../layouts/MainLayout.astro';
         toleranceLadder: typeof TUNING !== 'undefined' ? TUNING.toleranceLadder : undefined
       };
 
-      // map detail to tol for non-auto
       if (detail !== 'auto' && !auto) {
         const dMap = { low: 20, med: 59, high: 100 };
         opts.tol = typeof detailToTolerance === 'function' ? detailToTolerance(dMap[detail] || 59) : 520;
         opts.autofit = false;
       }
 
-      const yieldFn = typeof makeYield === 'function' ? makeYield() : () => Promise.resolve();
+      const baseYield = typeof makeYield === 'function' ? makeYield() : () => Promise.resolve();
+      let steps = 0;
+      const yieldFn = () => {
+        steps += 1;
+        const pct = Math.min(92, 8 + (1 - Math.exp(-steps / 40)) * 84);
+        if (myRun === runId) setProgress(pct, 'Encoding');
+        return baseYield();
+      };
       const raw = new Uint8ClampedArray(currentImageData.data);
 
       try {
-        const result = await findBestEncode(raw, 512, opts, yieldFn, false, () => false);
+        setProgress(8, 'Encoding');
+        const result = await findBestEncode(raw, 512, opts, yieldFn, false, () => myRun !== runId);
+        if (myRun !== runId) return;
         if (!result) {
           outputCode.value = '// No result';
+          setProgress(0, 'Failed');
           processing.classList.add('hidden');
           return;
         }
 
-        // render preview
+        setProgress(96, 'Rendering preview');
+
         if (typeof renderCoverage === 'function') {
           const rendered = renderCoverage(result, 512);
           const ctx = mainPreview.getContext('2d');
@@ -449,25 +503,13 @@ import MainLayout from '../layouts/MainLayout.astro';
           ctx.putImageData(id, 0, 0);
           mainPreview.classList.remove('hidden', 'scale-95');
           previewPlaceholder.classList.add('hidden');
-
-          // mini previews
-          miniPreviews.forEach((c, i) => {
-            const size = [256, 128, 64][i];
-            c.width = size;
-            c.height = size;
-            const mctx = c.getContext('2d');
-            mctx.drawImage(mainPreview, 0, 0, size, size);
-            c.classList.remove('hidden');
-          });
         }
 
         const size = result.enc || 0;
-        sizeValue.textContent = size.toLocaleString();
-        sizeBar.style.width = Math.min(100, (size / 1600000) * 100) + '%';
+        sizeValue.textContent = size.toLocaleString() + ' bytes';
         outputStats.classList.remove('hidden');
         readyStatus.classList.remove('hidden');
 
-        // Proper Social Club console payload
         const svgRaw = result.svg || '';
         const layerRaw = result.lmin || result.lfull || '[]';
         const svgB64 = btoa(unescape(encodeURIComponent(svgRaw)));
@@ -515,14 +557,16 @@ request.send(JSON.stringify({
         copyBtn.disabled = false;
         console.log('[Emblem] Payload ready, length:', snippet.length);
 
-        // Auto-open the raw code section so it's visible
         const details = outputCode.closest('details');
         if (details) details.open = true;
+        setProgress(100, 'Done');
       } catch (e) {
+        if (myRun !== runId) return;
         console.error('[Emblem] Generation failed:', e);
-        outputCode.value = '// Error: ' + e.message + '\n// Check browser console for details';
+        outputCode.value = '// Error: ' + (e && e.message ? e.message : e) + '\n// Check browser console for details';
+        setProgress(0, 'Failed');
       }
-      processing.classList.add('hidden');
+      if (myRun === runId) processing.classList.add('hidden');
     }
 
     if (imageInput) {
