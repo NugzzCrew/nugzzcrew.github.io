@@ -29,7 +29,7 @@ const unlockShots = fs.existsSync(unlockDir)
           </p>
         </header>
 
-        <div class="tilt-card bg-gold/90 backdrop-blur-sm p-6 rounded-2xl text-black max-w-md border border-gold">
+        <div id="challenge" class="jump tilt-card bg-gold/90 backdrop-blur-sm p-6 rounded-2xl text-black max-w-md border border-gold">
           <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-1 opacity-70">
             Weekly Challenge
           </p>
@@ -42,7 +42,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
     <div class="grid md:grid-cols-2 gap-6">
 
-      <div class="tilt-card bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-6 rounded-2xl">
+      <div id="rewards" class="jump tilt-card bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-6 rounded-2xl">
 
         <h3 class="text-white font-black uppercase italic mb-4 flex items-center gap-2">
           <i data-lucide="gift" class="text-gold w-5 h-5"></i>
@@ -67,7 +67,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
       </div>
 
-      <div class="tilt-card bg-gold/10 backdrop-blur-md border border-gold/30 p-6 rounded-2xl">
+      <div id="special" class="jump tilt-card bg-gold/10 backdrop-blur-md border border-gold/30 p-6 rounded-2xl">
 
         <h3 class="text-gold font-black uppercase italic mb-4 flex items-center gap-2 drop-shadow-sm">
           <i data-lucide="award" class="text-gold w-5 h-5"></i>
@@ -97,7 +97,7 @@ const unlockShots = fs.existsSync(unlockDir)
     </div>
 
     {unlockShots.length > 0 && (
-      <div class="space-y-4">
+      <div id="unlocks" class="jump space-y-4">
         <div class="flex flex-wrap justify-center gap-4">
           {unlockShots.map((file) => (
             <button type="button" class="unlock-shot cursor-zoom-in" data-full={`/images/unlocks/${file}`}>
@@ -116,7 +116,7 @@ const unlockShots = fs.existsSync(unlockDir)
       </div>
     )}
 
-    <div class="flex flex-wrap justify-center gap-3">
+    <div id="multipliers" class="jump flex flex-wrap justify-center gap-3">
       {gtaData.bonuses?.map(bonus => (
         <div class="tilt-card w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.5rem)] lg:w-auto lg:flex-1 lg:min-w-[160px] lg:max-w-[240px] bg-zinc-900/50 backdrop-blur-md border border-zinc-700/50 p-4 rounded-xl text-center hover:border-gold transition-colors flex flex-col justify-center items-center shadow-lg">
 
@@ -133,7 +133,7 @@ const unlockShots = fs.existsSync(unlockDir)
     </div>
 
     {halloween && (
-      <section class="bg-gradient-to-br from-zinc-900/80 via-black/80 to-zinc-900/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-12 border border-orange-500/40 shadow-2xl space-y-8">
+      <section id="halloween" class="jump bg-gradient-to-br from-zinc-900/80 via-black/80 to-zinc-900/80 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-12 border border-orange-500/40 shadow-2xl space-y-8">
 
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-orange-500/20 pb-6">
 
@@ -261,7 +261,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-      <div class="tilt-card glow-red border-red-500/40 bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-start">
+      <div id="fib" class="jump tilt-card glow-red border-red-500/40 bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-start">
         <div>
           <span class="text-[9px] text-red-500 font-black uppercase tracking-wider block mb-1">
             Intercepted Ledger
@@ -278,7 +278,7 @@ const unlockShots = fs.existsSync(unlockDir)
         </div>
       </div>
 
-      <div class="tilt-card glow-purple border-purple-400/40 bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-start">
+      <div id="kortz" class="jump tilt-card glow-purple border-purple-400/40 bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-start">
         <div>
           <span class="text-[9px] text-purple-400 font-black uppercase tracking-wider block mb-1">
             Kortz Center
@@ -297,7 +297,7 @@ const unlockShots = fs.existsSync(unlockDir)
         </div>
       </div>
 
-      <div class="tilt-card glow-blue border-blue-400/40 bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-start">
+      <div id="races" class="jump tilt-card glow-blue border-blue-400/40 bg-zinc-900/40 backdrop-blur-md border border-zinc-700/50 p-5 rounded-2xl flex flex-col justify-start">
         <div>
           <span class="text-[9px] text-blue-400 font-black uppercase tracking-wider block mb-1">
             Race & Trial Nodes
@@ -337,7 +337,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="space-y-4">
+      <div id="salvage" class="jump space-y-4">
 
         <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3 drop-shadow-md">
           Salvage Yard
@@ -365,7 +365,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
       </div>
 
-      <div class="space-y-4">
+      <div id="showrooms" class="jump space-y-4">
 
         <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3 drop-shadow-md">
           Showrooms
@@ -403,7 +403,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
       </div>
 
-      <div class="space-y-4">
+      <div id="carmeet" class="jump space-y-4">
 
         <h2 class="text-xl font-black uppercase italic text-white flex items-center gap-2 border-l-4 border-gold pl-3 drop-shadow-md">
           LS Car Meet
@@ -451,7 +451,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
     </div>
 
-    <section class="bg-zinc-900/40 backdrop-blur-md rounded-3xl p-8 border border-zinc-700/50">
+    <section id="discounts" class="jump bg-zinc-900/40 backdrop-blur-md rounded-3xl p-8 border border-zinc-700/50">
 
       <h2 class="text-2xl font-black uppercase italic text-white mb-8 border-l-4 border-gold pl-4 drop-shadow-md">
         Limited Time Discounts
@@ -558,7 +558,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
         </div>
 
-        <div class="lg:col-span-3 lg:border-l lg:border-zinc-700/60 lg:pl-8">
+        <div id="gunvan" class="jump lg:col-span-3 lg:border-l lg:border-zinc-700/60 lg:pl-8">
         <div>
           <span class="text-[9px] text-gold font-black uppercase tracking-wider block mb-1">
             Mobile Black Market
@@ -580,7 +580,7 @@ const unlockShots = fs.existsSync(unlockDir)
 
     </section>
 
-    <section class="relative rounded-[2.5rem] overflow-hidden bg-black/60 backdrop-blur-xl border border-gold/40 shadow-2xl">
+    <section id="gtaplus" class="jump relative rounded-[2.5rem] overflow-hidden bg-black/60 backdrop-blur-xl border border-gold/40 shadow-2xl">
 
       <div class="bg-zinc-900/60 p-8 border-b border-gold/20">
 
