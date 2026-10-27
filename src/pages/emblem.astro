@@ -147,7 +147,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   <div class="flex-grow flex flex-col min-h-[500px]">
     <div class="bg-black border border-zinc-800 rounded-2xl flex-grow relative overflow-hidden flex items-center justify-center p-8 shadow-inner" style="background-image: linear-gradient(45deg, #18181b 25%, transparent 25%), linear-gradient(-45deg, #18181b 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #18181b 75%), linear-gradient(-45deg, transparent 75%, #18181b 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
       
-      <canvas id="mainPreview" class="hidden max-w-full max-h-full object-contain filter drop-shadow-2xl scale-95 transition-transform duration-500"></canvas>
+      <canvas id="mainPreview" class="hidden max-w-full max-h-full object-contain filter drop-shadow-2xl transition-transform duration-500"></canvas>
       
       <div id="previewPlaceholder" class="text-zinc-600 flex flex-col items-center gap-4">
         <i data-lucide="image-plus" class="w-16 h-16 opacity-50"></i>
@@ -501,7 +501,12 @@ import MainLayout from '../layouts/MainLayout.astro';
           mainPreview.height = 512;
           const id = new ImageData(new Uint8ClampedArray(rendered), 512, 512);
           ctx.putImageData(id, 0, 0);
-          mainPreview.classList.remove('hidden', 'scale-95');
+          mainPreview.classList.remove('hidden');
+          if (circularCrop && circularCrop.checked) {
+            mainPreview.classList.add('rounded-full');
+          } else {
+            mainPreview.classList.remove('rounded-full');
+          }
           previewPlaceholder.classList.add('hidden');
         }
 
