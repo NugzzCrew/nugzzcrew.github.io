@@ -266,6 +266,63 @@ import MainLayout from '../layouts/MainLayout.astro';
 </div>
 </MainLayout>
 
+<<<<<<< HEAD
+=======
+<style>
+  .emblem-board {
+    display: grid;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  @media (min-width: 1024px) {
+    .emblem-board {
+      grid-template-columns: 20rem minmax(0, 1fr) 20rem;
+      grid-template-rows: auto minmax(16rem, 1fr);
+    }
+    .emblem-source { grid-column: 1; grid-row: 1; }
+    .emblem-settings { grid-column: 1; grid-row: 2; }
+    .emblem-preview { grid-column: 2; grid-row: 1 / span 2; }
+    .emblem-output { grid-column: 3; grid-row: 1 / span 2; }
+  }
+  .emblem-preview > div {
+    height: 100%;
+    min-height: 500px;
+  }
+  #mainPreview.is-circular {
+    border-radius: 50%;
+  }
+  .info-tip {
+    position: relative;
+    display: inline-flex;
+    cursor: help;
+  }
+  .info-pop {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 8px);
+    width: 210px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #09090b;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    color: #e4e4e7;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0;
+    text-transform: none;
+    z-index: 30;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  }
+  .info-tip:hover .info-pop,
+  .info-tip:focus .info-pop,
+  .info-tip:focus-within .info-pop {
+    display: block;
+  }
+</style>
+
+>>>>>>> 70c65c828d6afa642f2f0619aa8cd85c34e4ef07
 <script src="/emblem-engine.js" is:inline></script>
 <script is:inline>
   function initEmblemDashboard() {
@@ -313,7 +370,6 @@ import MainLayout from '../layouts/MainLayout.astro';
       });
     }
 
-    // Segmented control clicks
     document.querySelectorAll('[data-setting]').forEach(group => {
       group.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -323,19 +379,55 @@ import MainLayout from '../layouts/MainLayout.astro';
       });
     });
 
+<<<<<<< HEAD
     [autoOptimize, pixelization, cropEdges].forEach(el => {
       if (el) el.addEventListener('change', () => { if (currentImageData) generateEmblem(); });
     });
+=======
+    function syncCircularPreview() {
+      if (!mainPreview || !circularCrop) return;
+      mainPreview.classList.toggle('is-circular', circularCrop.checked);
+    }
+
+    if (circularCrop) {
+      circularCrop.addEventListener('change', () => {
+        syncCircularPreview();
+        const file = imageInput.files && imageInput.files[0];
+        if (file) {
+          loadImageToData(file, (data) => {
+            currentImageData = data;
+            generateEmblem();
+          });
+        } else if (currentImageData) {
+          generateEmblem();
+        }
+      });
+    }
+>>>>>>> 70c65c828d6afa642f2f0619aa8cd85c34e4ef07
 
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
         setActive(document.querySelector('[data-setting="resolution"]'), '256');
         setActive(document.querySelector('[data-setting="method"]'), 'auto');
         setActive(document.querySelector('[data-setting="detail"]'), 'auto');
+<<<<<<< HEAD
         autoOptimize.checked = true;
         pixelization.checked = false;
         cropEdges.checked = true;
         if (currentImageData) generateEmblem();
+=======
+        if (circularCrop) circularCrop.checked = false;
+        syncCircularPreview();
+        const file = imageInput.files && imageInput.files[0];
+        if (file) {
+          loadImageToData(file, (data) => {
+            currentImageData = data;
+            generateEmblem();
+          });
+        } else if (currentImageData) {
+          generateEmblem();
+        }
+>>>>>>> 70c65c828d6afa642f2f0619aa8cd85c34e4ef07
       });
     }
 
@@ -439,7 +531,6 @@ import MainLayout from '../layouts/MainLayout.astro';
           return;
         }
 
-        // render preview
         if (typeof renderCoverage === 'function') {
           const rendered = renderCoverage(result, 512);
           const ctx = mainPreview.getContext('2d');
@@ -447,6 +538,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           mainPreview.height = 512;
           const id = new ImageData(new Uint8ClampedArray(rendered), 512, 512);
           ctx.putImageData(id, 0, 0);
+          syncCircularPreview();
           mainPreview.classList.remove('hidden', 'scale-95');
           previewPlaceholder.classList.add('hidden');
 
@@ -467,7 +559,6 @@ import MainLayout from '../layouts/MainLayout.astro';
         outputStats.classList.remove('hidden');
         readyStatus.classList.remove('hidden');
 
-        // Proper Social Club console payload
         const svgRaw = result.svg || '';
         const layerRaw = result.lmin || result.lfull || '[]';
         const svgB64 = btoa(unescape(encodeURIComponent(svgRaw)));
@@ -513,9 +604,12 @@ request.send(JSON.stringify({
 
         outputCode.value = snippet;
         copyBtn.disabled = false;
+<<<<<<< HEAD
         console.log('[Emblem] Payload ready, length:', snippet.length);
+=======
+        setProgress(100);
+>>>>>>> 70c65c828d6afa642f2f0619aa8cd85c34e4ef07
 
-        // Auto-open the raw code section so it's visible
         const details = outputCode.closest('details');
         if (details) details.open = true;
       } catch (e) {
@@ -544,7 +638,6 @@ request.send(JSON.stringify({
 
         loadImageToData(file, (data) => {
           currentImageData = data;
-          // Clear any old placeholder immediately
           outputCode.value = `/* Generating emblem from ${file.name}... */\n// Please wait`;
           generateEmblem();
         });

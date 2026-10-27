@@ -100,11 +100,13 @@ const unlockShots = fs.existsSync(unlockDir)
       <div class="space-y-4">
         <div class="flex flex-wrap justify-center gap-4">
           {unlockShots.map((file) => (
-            <img
-              src={`/images/unlocks/${file}`}
-              alt=""
-              class="max-h-56 w-auto rounded-xl border border-zinc-700 bg-black object-contain"
-            />
+            <button type="button" class="unlock-shot cursor-zoom-in" data-full={`/images/unlocks/${file}`}>
+              <img
+                src={`/images/unlocks/${file}`}
+                alt=""
+                class="max-h-56 w-auto rounded-xl border border-zinc-700 bg-black object-contain"
+              />
+            </button>
           ))}
         </div>
         <p class="text-center text-[10px] uppercase tracking-widest text-zinc-500">
@@ -810,6 +812,10 @@ const unlockShots = fs.existsSync(unlockDir)
 
     </section>
 
+    <div id="unlock-lightbox" class="hidden fixed inset-0 z-[80] bg-black/85 items-center justify-center p-4">
+      <img id="unlock-lightbox-img" alt="" class="max-w-[94vw] max-h-[90vh] w-auto h-auto object-contain" />
+    </div>
+
   </div>
 </MainLayout>
 
@@ -820,6 +826,34 @@ const unlockShots = fs.existsSync(unlockDir)
     }
   }
 
+  function initUnlockLightbox() {
+    const box = document.getElementById('unlock-lightbox');
+    const full = document.getElementById('unlock-lightbox-img');
+    if (!box || !full || box.dataset.bound) return;
+    box.dataset.bound = '1';
+
+    function closeBox() {
+      box.classList.add('hidden');
+      box.classList.remove('flex');
+      full.removeAttribute('src');
+    }
+
+    document.querySelectorAll('.unlock-shot').forEach((shot) => {
+      shot.addEventListener('click', () => {
+        full.src = shot.dataset.full;
+        box.classList.remove('hidden');
+        box.classList.add('flex');
+      });
+    });
+
+    box.addEventListener('click', closeBox);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeBox();
+    });
+  }
+
   window.addEventListener('load', initGtaIcons);
+  window.addEventListener('load', initUnlockLightbox);
   document.addEventListener('astro:page-load', initGtaIcons);
+  document.addEventListener('astro:page-load', initUnlockLightbox);
 </script>
