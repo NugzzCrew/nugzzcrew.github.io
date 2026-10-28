@@ -367,7 +367,7 @@ const vehicleSets = [
 
         <div class="mt-2">
           <div id="wheelDisplay" class="relative w-full min-h-96 rounded-lg border border-zinc-700 overflow-hidden bg-black">
-            <div id="wheelGrid" class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 p-3 hidden"></div>
+            <div id="wheelGrid" class="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 gap-1 p-2 hidden"></div>
             <img id="wheelFull" src="" alt="Selected rim" class="w-full h-96 object-contain hidden" />
           </div>
         </div>
@@ -591,7 +591,7 @@ const vehicleSets = [
         wheelUrls.filter(w => w.category === cat && !w.tire).forEach(w => {
           if (!seen.has(w.name)) {
             seen.add(w.name);
-            tiles.push(`<img src="${w.url}" alt="${w.name}" data-style="${w.name}" class="w-full aspect-square object-contain bg-zinc-900 rounded cursor-pointer hover:ring-2 hover:ring-gold transition-all" title="${w.name}" />`);
+            tiles.push(`<img src="${w.url}" alt="${w.name}" data-style="${w.name}" class="w-full aspect-square object-contain bg-zinc-900 rounded cursor-pointer hover:ring-1 hover:ring-gold transition-all" title="${w.name}" />`);
           }
         });
         grid.innerHTML = tiles.join("");
