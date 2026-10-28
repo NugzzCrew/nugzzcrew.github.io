@@ -366,9 +366,9 @@ const vehicleSets = [
         </div>
 
         <div class="mt-2">
-          <div class="relative w-full h-96 rounded-lg border border-zinc-700 overflow-hidden bg-black flex items-center justify-center">
-            <img id="wheelFull" src="" alt="Full wheel grid" class="absolute inset-0 w-full h-full object-contain" />
-            <img id="tireFull" src="" alt="Full tire design overlay" class="absolute inset-0 w-full h-full object-contain hidden pointer-events-none" />
+          <div id="wheelDisplay" class="relative w-full min-h-96 rounded-lg border border-zinc-700 overflow-hidden bg-black">
+            <div id="wheelGrid" class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 p-3 hidden"></div>
+            <img id="wheelFull" src="" alt="Selected rim" class="w-full h-96 object-contain hidden" />
           </div>
         </div>
 
@@ -569,11 +569,50 @@ const vehicleSets = [
     const style = document.getElementById("rimStyle").value;
     const tireSel = document.getElementById("tires");
     const tireVal = tireSel ? tireSel.value : "";
+    const grid = document.getElementById("wheelGrid");
     const full = document.getElementById("wheelFull");
+
+    // Nothing selected — blank
+    if (!cat) {
+      grid.classList.add("hidden");
+      grid.innerHTML = "";
+      full.classList.add("hidden");
+      full.src = "";
+      return;
+    }
+
+    // Category selected, no style — show grid of all rims
+    if (!style || style === "" || style === "Stock") {
+      full.classList.add("hidden");
+      full.src = "";
+      if (typeof wheelUrls !== "undefined") {
+        const seen = new Set();
+        const tiles = [];
+        wheelUrls.filter(w => w.category === cat && !w.tire).forEach(w => {
+          if (!seen.has(w.name)) {
+            seen.add(w.name);
+            tiles.push(`<img src="${w.url}" alt="${w.name}" data-style="${w.name}" class="w-full aspect-square object-contain bg-zinc-900 rounded cursor-pointer hover:ring-2 hover:ring-gold transition-all" title="${w.name}" />`);
+          }
+        });
+        grid.innerHTML = tiles.join("");
+        grid.classList.remove("hidden");
+        // Click to select
+        grid.querySelectorAll("img").forEach(img => {
+          img.addEventListener("click", () => {
+            document.getElementById("rimStyle").value = img.dataset.style;
+            document.getElementById("rimStyle").dispatchEvent(new Event("change"));
+          });
+        });
+      }
+      return;
+    }
+
+    // Style selected — show single rim with tire design
+    grid.classList.add("hidden");
+    grid.innerHTML = "";
     let rimImg = "";
-    if (style && style !== "Stock" && cat && typeof wheelUrls !== "undefined") {
+    if (typeof wheelUrls !== "undefined") {
       const matches = wheelUrls.filter(w => w.category === cat && w.name === style);
-      // Prefer chrome, and match tire design if selected
       let candidates = matches;
       if (tireVal && tireVal !== "None" && tireVal !== "" && tireVal !== "N/A") {
         const suffixKey = cat + "|" + tireVal;
@@ -588,10 +627,10 @@ const vehicleSets = [
       const pick = chrome || base;
       if (pick && pick.url) rimImg = pick.url;
     }
-    if (rimImg) full.src = rimImg;
-    // Hide the old overlay — tire design is now in the main image
-    const tireFull = document.getElementById("tireFull");
-    if (tireFull) tireFull.classList.add("hidden");
+    if (rimImg) {
+      full.src = rimImg;
+      full.classList.remove("hidden");
+    }
   }
 
 
