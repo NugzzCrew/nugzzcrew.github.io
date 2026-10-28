@@ -1,21 +1,21 @@
 {
-  "eventTitle": "Halloween Week 4",
-  "weekEnding": "October 28, 2026",
-  "eventDates": "October 22–28, 2026",
-  "fibFile": "The Fine Art File",
+  "eventTitle": "Halloween Final Week",
+  "weekEnding": "November 4, 2026",
+  "eventDates": "October 29–November 4, 2026",
+  "fibFile": "The Project Breakaway File",
   "primaryTargets": [
-    "Stacks Study V",
-    "Trust",
-    "Brother Brother"
+    "I, Fruit",
+    "Until Death",
+    "Gone To Seed"
   ],
-  "weeklyChallenge": "Complete all waves of a Survival to get the Gray Interloper Outfit and GTA$150,000",
-  "podium": "Pfister Comet S2",
-  "prizeRide": "Grotti Itali Classic",
-  "prizeRideRequirement": "Place Top 2 in the LS Car Meet Series for two days in a row",
+  "weeklyChallenge": "Complete 10 waves in a Survival without dying to get the Slasher Clown Outfit and GTA$250,000",
+  "podium": "Progen GP1",
+  "prizeRide": "Karin Previon",
+  "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for two days in a row",
   "weeklyRewards": [
-    "Play GTA Online through October 28 to receive the White & Red Tech Demon Mask",
-    "Complete all three Short Trips before October 28 to receive GTA$500,000 within 72 hours of completion",
-    "Complete all Weekly Challenges through November 4 to receive GTA$2,000,000 within 72 hours of completion"
+    "Play GTA Online through November 4 to receive the Brown Vintage Skull Mask and the Halloween Chute Bag",
+    "Complete all Weekly Challenges through November 4 to receive GTA$2,000,000 within 72 hours of completion",
+    "Día de Muertos: Log in to receive the Día de Muertos Tee, Maritime Calaca Mask & Royal Calaca Mask"
   ],
   "bonuses": [
     {
@@ -36,46 +36,6 @@
     {
       "category": "3X GTA$ & RP",
       "name": "Community Mission Series (PS5, Xbox Series X|S & PC Enhanced)",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Alien Retribution by ShelbyGR",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Miss: Rise of the Beast by ajm_agrajag",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Final Extraction by Seangib",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "House Hunting by GTA Series Videos",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Last Ones Out | LSS by DarkSoulBlue",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "The Chiliad Anomaly by GTA Series Videos",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Sasquatch Hunters by II_TREIZIEME_II",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Biohazard Outbreak by lezou_playzzz",
       "value": "3X"
     },
     {
@@ -105,20 +65,21 @@
     }
   ],
   "loginRewards": [
-    "White & Red Tech Demon Mask (Free for playing GTA Online through Oct 28)"
+    "Brown Vintage Skull Mask and the Halloween Chute Bag (Free for playing GTA Online through Nov 4)",
+    "Día de Muertos Tee, Maritime Calaca Mask & Royal Calaca Mask (Log in)"
   ],
   "specialRewards": [
     {
-      "action": "Complete all three Short Trips before Oct 28",
-      "reward": "GTA$500,000 (within 72 hours)"
-    },
-    {
-      "action": "Complete all waves of a Survival",
-      "reward": "Gray Interloper Outfit + GTA$150,000"
+      "action": "Complete 10 waves in a Survival without dying",
+      "reward": "Slasher Clown Outfit + GTA$250,000"
     },
     {
       "action": "Complete all Weekly Challenges through Nov 4",
       "reward": "GTA$2,000,000 (within 72 hours)"
+    },
+    {
+      "action": "Log in for Día de Muertos",
+      "reward": "Día de Muertos Tee + Maritime Calaca Mask + Royal Calaca Mask"
     }
   ],
   "discounts": {
@@ -135,16 +96,15 @@
       "LCC Sanctus"
     ],
     "thirty": [
-      "Annis Euros X32",
-      "Bravado Dorado",
-      "Canis Freecrawler",
-      "Dinka Veto Classic",
-      "HVY Dump",
-      "Karin Boor",
-      "Ocelot Swinger",
-      "Pfister Astron",
-      "Vapid Desert Raid",
-      "Vulcar Nebula Turbo"
+      "Bravado Gauntlet Classic",
+      "Invetero Coquette D10",
+      "Karin Futo GTX",
+      "MTL Dune",
+      "Pegassi Infernus Classic",
+      "Shitzu Keitora",
+      "Übermacht Zion Classic",
+      "Vapid Firebolt ASP",
+      "Vapid FMJ"
     ]
   },
   "gunVan": [
@@ -161,27 +121,27 @@
     "Widowmaker (50% OFF for GTA+ Members)"
   ],
   "rotatingContent": {
-    "fibPriorityFile": "The Fine Art File",
+    "fibPriorityFile": "The Project Breakaway File",
     "kortzCenterPrimaryTargets": [
-      "Stacks Study V",
-      "Trust",
-      "Brother Brother"
+      "I, Fruit",
+      "Until Death",
+      "Gone To Seed"
     ]
   },
   "salvageYard": [
     {
-      "robbery": "The Duggan Robbery",
-      "name": "Ocelot Virtue",
+      "robbery": "The Gangbanger Robbery",
+      "name": "Lampadati Cinquemila",
       "type": "Top Tier"
     },
     {
-      "robbery": "The Cargo Ship Robbery",
-      "name": "Albany Fränken Stange",
+      "robbery": "The Podium Robbery",
+      "name": "Karin Boor",
       "type": "Standard Tier"
     },
     {
-      "robbery": "The McTony Robbery",
-      "name": "Vapid Caracara 4x4",
+      "robbery": "The Duggan Robbery",
+      "name": "Albany Fränken Stange",
       "type": "Low Tier"
     }
   ],
@@ -197,8 +157,8 @@
     "Übermacht Sentinel XS4"
   ],
   "lsCarMeet": {
-    "prizeRide": "Grotti Itali Classic",
-    "prizeRideRequirement": "Place Top 2 in the LS Car Meet Series for two days in a row",
+    "prizeRide": "Karin Previon",
+    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for two days in a row",
     "testTrack": [
       "Declasse Vamos",
       "Dewbauchee Seven-70",
@@ -207,9 +167,9 @@
     "hsw": "Maibatsu MonstroCiti"
   },
   "timeTrials": {
-    "regular": "Casino",
-    "hsw": "North Chumash to Palomino Highlands",
-    "premium": "Route 68"
+    "regular": "Route 68",
+    "hsw": "East Vinewood to Vespucci Beach",
+    "premium": "Wiwang Park"
   },
   "halloweenSeason": {
     "duration": "October 1 - November 4, 2026",
