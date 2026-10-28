@@ -61,10 +61,13 @@ const tireDesignMap = {
   "Tuner": []
 };
 
-// Map (category, display name) → letter suffix
-const tireLetterMap = {
-  "Bennys Bespoke|Atomic": "g", "Bennys Bespoke|Blue Lines": "f", "Bennys Bespoke|Classic White Wall": "c", "Bennys Bespoke|Red Lines": "e", "Bennys Bespoke|Retro White Wall": "d", "Bennys Bespoke|White Lines": "b",
-  "Bennys Originals|Atomic": "g", "Bennys Originals|Blue Lines": "f", "Bennys Originals|Classic White Wall": "c", "Bennys Originals|Red Lines": "e", "Bennys Originals|Retro White Wall": "d", "Bennys Originals|White Lines": "b",
+// Map (category, display name) → filename suffix pattern
+// Benny's: base has no letter, b=white lines, c=classic white wall, d=retro white wall, e=red lines, f=blue lines, g=atomic
+// Race: base has no letter, a=Atomic Blue/White, b=Atomic White, c=Fukaru White, d=Fukaru Red, e=Chepalle Yellow, f=Chepalle Green
+// Street/Track: a=no design, b=Atomic White, c=Atomic Yellow, d=Fukaru White, e=Fukaru Red, f=Chepalle Yellow, g=Chepalle Green
+const tireSuffixMap = {
+  "Bennys Bespoke|White Lines": "b", "Bennys Bespoke|Classic White Wall": "c", "Bennys Bespoke|Retro White Wall": "d", "Bennys Bespoke|Red Lines": "e", "Bennys Bespoke|Blue Lines": "f", "Bennys Bespoke|Atomic": "g",
+  "Bennys Originals|White Lines": "b", "Bennys Originals|Classic White Wall": "c", "Bennys Originals|Retro White Wall": "d", "Bennys Originals|Red Lines": "e", "Bennys Originals|Blue Lines": "f", "Bennys Originals|Atomic": "g",
   "Race|Atomic (Blue/White)": "a", "Race|Atomic (White)": "b", "Race|Fukaru White": "c", "Race|Fukaru Red": "d", "Race|Chepalle Yellow": "e", "Race|Chepalle Green": "f",
   "Street|Atomic White": "b", "Street|Atomic Yellow": "c", "Street|Fukaru White": "d", "Street|Fukaru Red": "e", "Street|Chepalle Yellow": "f", "Street|Chepalle Green": "g",
   "Track|Atomic White": "b", "Track|Atomic Yellow": "c", "Track|Fukaru White": "d", "Track|Fukaru Red": "e", "Track|Chepalle Yellow": "f", "Track|Chepalle Green": "g"
@@ -573,11 +576,11 @@ const vehicleSets = [
       // Prefer chrome, and match tire design if selected
       let candidates = matches;
       if (tireVal && tireVal !== "None" && tireVal !== "" && tireVal !== "N/A") {
-        const letterKey = cat + "|" + tireVal;
-        const letter = (typeof tireLetterMap !== "undefined") ? tireLetterMap[letterKey] : null;
-        if (letter) {
-          const letterMatch = matches.filter(w => w.file && w.file.includes(letter + ".webp"));
-          if (letterMatch.length) candidates = letterMatch;
+        const suffixKey = cat + "|" + tireVal;
+        const suffix = (typeof tireSuffixMap !== "undefined") ? tireSuffixMap[suffixKey] : null;
+        if (suffix) {
+          const suffixMatch = matches.filter(w => w.file && w.file.endsWith(suffix + ".webp"));
+          if (suffixMatch.length) candidates = suffixMatch;
         }
       }
       const chrome = candidates.find(w => w.chrome);
