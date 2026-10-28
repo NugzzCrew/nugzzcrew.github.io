@@ -76,7 +76,7 @@
   },
   {
     "file": "AlphaZ1.png",
-    "display": "Alpha Z1",
+    "display": "Alpha-Z1",
     "value": "AlphaZ1"
   },
   {
@@ -96,7 +96,7 @@
   },
   {
     "file": "AntiAircraftTrailer.png",
-    "display": "Anti Aircraft Trailer",
+    "display": "Anti-Aircraft Trailer",
     "value": "AntiAircraftTrailer"
   },
   {
@@ -181,7 +181,7 @@
   },
   {
     "file": "Armytanker.png",
-    "display": "Armytanker",
+    "display": "Army Trailer",
     "value": "Armytanker"
   },
   {
@@ -196,7 +196,7 @@
   },
   {
     "file": "AseaSnow.png",
-    "display": "Asea Snow",
+    "display": "Asea",
     "value": "AseaSnow"
   },
   {
@@ -241,22 +241,22 @@
   },
   {
     "file": "Avenger2.png",
-    "display": "Avenger2",
+    "display": "Avenger",
     "value": "Avenger2"
   },
   {
     "file": "Avenger3.png",
-    "display": "Avenger3",
+    "display": "Avenger",
     "value": "Avenger3"
   },
   {
     "file": "Avenger4.png",
-    "display": "Avenger4",
+    "display": "Avenger",
     "value": "Avenger4"
   },
   {
     "file": "B11Strikeforce.png",
-    "display": "B11 Strikeforce",
+    "display": "B-11 Strikeforce",
     "value": "B11Strikeforce"
   },
   {
@@ -276,17 +276,17 @@
   },
   {
     "file": "BallerLEArmored.png",
-    "display": "Baller LE Armored",
+    "display": "Baller LE (Armored)",
     "value": "BallerLEArmored"
   },
   {
     "file": "BallerLELWB.png",
-    "display": "Baller LELWB",
+    "display": "Baller LE LWB",
     "value": "BallerLELWB"
   },
   {
     "file": "BallerLELWBArmored.png",
-    "display": "Baller LELWB Armored",
+    "display": "Baller LE LWB (Armored)",
     "value": "BallerLELWBArmored"
   },
   {
@@ -296,12 +296,12 @@
   },
   {
     "file": "BallerSTD.png",
-    "display": "Baller STD",
+    "display": "Baller ST-D",
     "value": "BallerSTD"
   },
   {
     "file": "Baller2.png",
-    "display": "Baller2",
+    "display": "Baller",
     "value": "Baller2"
   },
   {
@@ -316,7 +316,7 @@
   },
   {
     "file": "Banshee900R.png",
-    "display": "Banshee900 R",
+    "display": "Banshee 900R",
     "value": "Banshee900R"
   },
   {
@@ -331,7 +331,7 @@
   },
   {
     "file": "Barracks3.png",
-    "display": "Barracks3",
+    "display": "Barracks",
     "value": "Barracks3"
   },
   {
@@ -341,12 +341,12 @@
   },
   {
     "file": "Bati801.png",
-    "display": "Bati801",
+    "display": "Bati 801",
     "value": "Bati801"
   },
   {
     "file": "Bati801RR-Sprunk.png",
-    "display": "Bati801 RR-Sprunk",
+    "display": "Bati 801RR",
     "value": "Bati801RR-Sprunk"
   },
   {
@@ -356,7 +356,7 @@
   },
   {
     "file": "BeeJayXL.png",
-    "display": "Bee Jay XL",
+    "display": "BeeJay XL",
     "value": "BeeJayXL"
   },
   {
@@ -366,7 +366,7 @@
   },
   {
     "file": "BensonCluckinBell.png",
-    "display": "Benson Cluckin Bell",
+    "display": "Benson (Cluckin' Bell)",
     "value": "BensonCluckinBell"
   },
   {
@@ -401,12 +401,12 @@
   },
   {
     "file": "Bison2.png",
-    "display": "Bison2",
+    "display": "Bison",
     "value": "Bison2"
   },
   {
     "file": "Bison3.png",
-    "display": "Bison3",
+    "display": "Bison",
     "value": "Bison3"
   },
   {
@@ -461,12 +461,12 @@
   },
   {
     "file": "BoatTrailer2.png",
-    "display": "Boat Trailer2",
+    "display": "Boat Trailer",
     "value": "BoatTrailer2"
   },
   {
     "file": "BoatTrailer3.png",
-    "display": "Boat Trailer3",
+    "display": "Boat Trailer",
     "value": "BoatTrailer3"
   },
   {
@@ -491,22 +491,22 @@
   },
   {
     "file": "BoxvilleLSDS.png",
-    "display": "Boxville LSDS",
+    "display": "Boxville (LSDS)",
     "value": "BoxvilleLSDS"
   },
   {
     "file": "Boxville2.png",
-    "display": "Boxville2",
+    "display": "Boxville",
     "value": "Boxville2"
   },
   {
     "file": "Boxville3.png",
-    "display": "Boxville3",
+    "display": "Boxville",
     "value": "Boxville3"
   },
   {
     "file": "Boxville4.png",
-    "display": "Boxville4",
+    "display": "Boxville",
     "value": "Boxville4"
   },
   {
@@ -526,7 +526,7 @@
   },
   {
     "file": "Brickade6x6.png",
-    "display": "Brickade6x6",
+    "display": "Brickade 6x6",
     "value": "Brickade6x6"
   },
   {
@@ -536,17 +536,17 @@
   },
   {
     "file": "BriosoRA.png",
-    "display": "Brioso RA",
+    "display": "Brioso R/A",
     "value": "BriosoRA"
   },
   {
     "file": "Brioso300.png",
-    "display": "Brioso300",
+    "display": "Brioso 300",
     "value": "Brioso300"
   },
   {
     "file": "Brioso300Widebody.png",
-    "display": "Brioso300 Widebody",
+    "display": "Brioso 300 Widebody",
     "value": "Brioso300Widebody"
   },
   {
@@ -606,27 +606,27 @@
   },
   {
     "file": "BurritoBailEnforcement.png",
-    "display": "Burrito Bail Enforcement",
+    "display": "Burrito (Bail Enforcement)",
     "value": "BurritoBailEnforcement"
   },
   {
     "file": "BurritoSnow.png",
-    "display": "Burrito Snow",
+    "display": "Burrito",
     "value": "BurritoSnow"
   },
   {
     "file": "Burrito2.png",
-    "display": "Burrito2",
+    "display": "Burrito",
     "value": "Burrito2"
   },
   {
     "file": "Burrito3.png",
-    "display": "Burrito3",
+    "display": "Burrito",
     "value": "Burrito3"
   },
   {
     "file": "Burrito4.png",
-    "display": "Burrito4",
+    "display": "Burrito",
     "value": "Burrito4"
   },
   {
@@ -651,12 +651,12 @@
   },
   {
     "file": "Caddy2.png",
-    "display": "Caddy2",
+    "display": "Caddy",
     "value": "Caddy2"
   },
   {
     "file": "Caddy3.png",
-    "display": "Caddy3",
+    "display": "Caddy",
     "value": "Caddy3"
   },
   {
@@ -681,7 +681,7 @@
   },
   {
     "file": "Caracara4x4.png",
-    "display": "Caracara4x4",
+    "display": "Caracara 4x4",
     "value": "Caracara4x4"
   },
   {
@@ -701,7 +701,7 @@
   },
   {
     "file": "CargoPlane2.png",
-    "display": "Cargo Plane2",
+    "display": "Cargo Plane",
     "value": "CargoPlane2"
   },
   {
@@ -711,12 +711,12 @@
   },
   {
     "file": "Cargobob2.png",
-    "display": "Cargobob2",
+    "display": "Cargobob",
     "value": "Cargobob2"
   },
   {
     "file": "Cargobob4.png",
-    "display": "Cargobob4",
+    "display": "Cargobob",
     "value": "Cargobob4"
   },
   {
@@ -741,7 +741,7 @@
   },
   {
     "file": "Cavalcade2.png",
-    "display": "Cavalcade2",
+    "display": "Cavalcade",
     "value": "Cavalcade2"
   },
   {
@@ -826,22 +826,22 @@
   },
   {
     "file": "CognoscentiArmored.png",
-    "display": "Cognoscenti Armored",
+    "display": "Cognoscenti (Armored)",
     "value": "CognoscentiArmored"
   },
   {
     "file": "CognoscentiCabrioUp.png",
-    "display": "Cognoscenti Cabrio Up",
+    "display": "Cognoscenti",
     "value": "CognoscentiCabrioUp"
   },
   {
     "file": "Cognoscenti55.png",
-    "display": "Cognoscenti55",
+    "display": "Cognoscenti 55",
     "value": "Cognoscenti55"
   },
   {
     "file": "Cognoscenti55Armored.png",
-    "display": "Cognoscenti55 Armored",
+    "display": "Cognoscenti 55 (Armored)",
     "value": "Cognoscenti55Armored"
   },
   {
@@ -891,7 +891,7 @@
   },
   {
     "file": "CoquetteBlackFin.png",
-    "display": "Coquette Black Fin",
+    "display": "Coquette BlackFin",
     "value": "CoquetteBlackFin"
   },
   {
@@ -936,7 +936,7 @@
   },
   {
     "file": "Cuban800.png",
-    "display": "Cuban800",
+    "display": "Cuban 800",
     "value": "Cuban800"
   },
   {
@@ -966,7 +966,7 @@
   },
   {
     "file": "Daemon2.png",
-    "display": "Daemon2",
+    "display": "Daemon",
     "value": "Daemon2"
   },
   {
@@ -1006,7 +1006,7 @@
   },
   {
     "file": "DH7IronMule.png",
-    "display": "DH7 Iron Mule",
+    "display": "DH-7 Iron Mule",
     "value": "DH7IronMule"
   },
   {
@@ -1026,7 +1026,7 @@
   },
   {
     "file": "Dilettante2.png",
-    "display": "Dilettante2",
+    "display": "Dilettante",
     "value": "Dilettante2"
   },
   {
@@ -1036,7 +1036,7 @@
   },
   {
     "file": "Docktrailer.png",
-    "display": "Docktrailer",
+    "display": "Trailer",
     "value": "Docktrailer"
   },
   {
@@ -1096,7 +1096,7 @@
   },
   {
     "file": "DoubleT.png",
-    "display": "Double T",
+    "display": "Double-T",
     "value": "DoubleT"
   },
   {
@@ -1116,82 +1116,82 @@
   },
   {
     "file": "DriftCypher.png",
-    "display": "Drift Cypher",
+    "display": "Cypher",
     "value": "DriftCypher"
   },
   {
     "file": "DriftDominatorFX.png",
-    "display": "Drift Dominator FX",
+    "display": "Dominator FX",
     "value": "DriftDominatorFX"
   },
   {
     "file": "DriftDominatorGT.png",
-    "display": "Drift Dominator GT",
+    "display": "Dominator GT",
     "value": "DriftDominatorGT"
   },
   {
     "file": "DriftDriftTampa.png",
-    "display": "Drift Drift Tampa",
+    "display": "Drift Tampa",
     "value": "DriftDriftTampa"
   },
   {
     "file": "DriftDriftYosemite.png",
-    "display": "Drift Drift Yosemite",
+    "display": "Drift Yosemite",
     "value": "DriftDriftYosemite"
   },
   {
     "file": "DriftEuros.png",
-    "display": "Drift Euros",
+    "display": "Euros",
     "value": "DriftEuros"
   },
   {
     "file": "DriftFR36.png",
-    "display": "Drift FR36",
+    "display": "FR36",
     "value": "DriftFR36"
   },
   {
     "file": "DriftFuto.png",
-    "display": "Drift Futo",
+    "display": "Futo",
     "value": "DriftFuto"
   },
   {
     "file": "DriftFutoGTX.png",
-    "display": "Drift Futo GTX",
+    "display": "Futo GTX",
     "value": "DriftFutoGTX"
   },
   {
     "file": "DriftGauntletHellfire.png",
-    "display": "Drift Gauntlet Hellfire",
+    "display": "Gauntlet Hellfire",
     "value": "DriftGauntletHellfire"
   },
   {
     "file": "DriftJesterRR.png",
-    "display": "Drift Jester RR",
+    "display": "Jester RR",
     "value": "DriftJesterRR"
   },
   {
     "file": "DriftKeitora.png",
-    "display": "Drift Keitora",
+    "display": "Keitora",
     "value": "DriftKeitora"
   },
   {
     "file": "DriftRemus.png",
-    "display": "Drift Remus",
+    "display": "Remus",
     "value": "DriftRemus"
   },
   {
     "file": "DriftRT3000.png",
-    "display": "Drift RT3000",
+    "display": "RT3000",
     "value": "DriftRT3000"
   },
   {
     "file": "DriftSentinelClassicWidebody.png",
-    "display": "Drift Sentinel Classic Widebody",
+    "display": "Sentinel Classic Widebody",
     "value": "DriftSentinelClassicWidebody"
   },
   {
     "file": "DriftSentinelXS.png",
-    "display": "Drift Sentinel XS",
+    "display": "Sentinel XS",
     "value": "DriftSentinelXS"
   },
   {
@@ -1201,7 +1201,7 @@
   },
   {
     "file": "DriftVorschlaghammer.png",
-    "display": "Drift Vorschlaghammer",
+    "display": "Vorschlaghammer",
     "value": "DriftVorschlaghammer"
   },
   {
@@ -1216,7 +1216,7 @@
   },
   {
     "file": "DriftZR350.png",
-    "display": "Drift ZR350",
+    "display": "ZR350",
     "value": "DriftZR350"
   },
   {
@@ -1226,17 +1226,17 @@
   },
   {
     "file": "Dubsta2.png",
-    "display": "Dubsta2",
+    "display": "Dubsta",
     "value": "Dubsta2"
   },
   {
     "file": "Dubsta6x6.png",
-    "display": "Dubsta6x6",
+    "display": "Dubsta 6x6",
     "value": "Dubsta6x6"
   },
   {
     "file": "DukeODeath.png",
-    "display": "Duke O Death",
+    "display": "Duke O'Death",
     "value": "DukeODeath"
   },
   {
@@ -1276,7 +1276,7 @@
   },
   {
     "file": "Duster300H.png",
-    "display": "Duster300 H",
+    "display": "Duster 300-H",
     "value": "Duster300H"
   },
   {
@@ -1311,12 +1311,12 @@
   },
   {
     "file": "EmperorSnow.png",
-    "display": "Emperor Snow",
+    "display": "Emperor",
     "value": "EmperorSnow"
   },
   {
     "file": "Emperor2.png",
-    "display": "Emperor2",
+    "display": "Emperor",
     "value": "Emperor2"
   },
   {
@@ -1391,7 +1391,7 @@
   },
   {
     "file": "F160Raiju.png",
-    "display": "F160 Raiju",
+    "display": "F-160 Raiju",
     "value": "F160Raiju"
   },
   {
@@ -1436,12 +1436,12 @@
   },
   {
     "file": "FCR1000.png",
-    "display": "FCR1000",
+    "display": "FCR 1000",
     "value": "FCR1000"
   },
   {
     "file": "FCR1000Custom.png",
-    "display": "FCR1000 Custom",
+    "display": "FCR 1000 Custom",
     "value": "FCR1000Custom"
   },
   {
@@ -1451,7 +1451,7 @@
   },
   {
     "file": "FelonGTDown.png",
-    "display": "Felon GT Down",
+    "display": "Felon",
     "value": "FelonGTDown"
   },
   {
@@ -1466,7 +1466,7 @@
   },
   {
     "file": "FH1-Hunter.png",
-    "display": "FH1-Hunter",
+    "display": "FH-1 Hunter",
     "value": "FH1-Hunter"
   },
   {
@@ -1476,7 +1476,7 @@
   },
   {
     "file": "FIB2.png",
-    "display": "FIB2",
+    "display": "FIB",
     "value": "FIB2"
   },
   {
@@ -1491,7 +1491,7 @@
   },
   {
     "file": "Firetruck.png",
-    "display": "Firetruck",
+    "display": "Fire Truck",
     "value": "Firetruck"
   },
   {
@@ -1521,7 +1521,7 @@
   },
   {
     "file": "FQ2.png",
-    "display": "FQ2",
+    "display": "FQ 2",
     "value": "FQ2"
   },
   {
@@ -1536,32 +1536,32 @@
   },
   {
     "file": "FreightCar.png",
-    "display": "Freight Car",
+    "display": "Freight Train",
     "value": "FreightCar"
   },
   {
     "file": "FreightCar2.png",
-    "display": "Freight Car2",
+    "display": "Freight Train",
     "value": "FreightCar2"
   },
   {
     "file": "FreightCar3.png",
-    "display": "Freight Car3",
+    "display": "Freight Train",
     "value": "FreightCar3"
   },
   {
     "file": "FreightCont1.png",
-    "display": "Freight Cont1",
+    "display": "Freight Train",
     "value": "FreightCont1"
   },
   {
     "file": "FreightCont2.png",
-    "display": "Freight Cont2",
+    "display": "Freight Train",
     "value": "FreightCont2"
   },
   {
     "file": "FreightGrain.png",
-    "display": "Freight Grain",
+    "display": "Freight Train",
     "value": "FreightGrain"
   },
   {
@@ -1571,7 +1571,7 @@
   },
   {
     "file": "FreightTrain2.png",
-    "display": "Freight Train2",
+    "display": "Freight Train",
     "value": "FreightTrain2"
   },
   {
@@ -1581,7 +1581,7 @@
   },
   {
     "file": "Frogger2FIB.png",
-    "display": "Frogger2 FIB",
+    "display": "Frogger",
     "value": "Frogger2FIB"
   },
   {
@@ -1686,7 +1686,7 @@
   },
   {
     "file": "GangBurrito2.png",
-    "display": "Gang Burrito2",
+    "display": "Gang Burrito",
     "value": "GangBurrito2"
   },
   {
@@ -1751,7 +1751,7 @@
   },
   {
     "file": "Granger3600LX.png",
-    "display": "Granger3600 LX",
+    "display": "Granger 3600LX",
     "value": "Granger3600LX"
   },
   {
@@ -1806,7 +1806,7 @@
   },
   {
     "file": "Halftrack.png",
-    "display": "Halftrack",
+    "display": "Half-track",
     "value": "Halftrack"
   },
   {
@@ -1876,7 +1876,7 @@
   },
   {
     "file": "Howard-NX25.png",
-    "display": "Howard-NX25",
+    "display": "Howard NX-25",
     "value": "Howard-NX25"
   },
   {
@@ -1896,7 +1896,7 @@
   },
   {
     "file": "IWagen.png",
-    "display": "I Wagen",
+    "display": "I-Wagen",
     "value": "IWagen"
   },
   {
@@ -1971,12 +1971,12 @@
   },
   {
     "file": "InsurgentPickUp.png",
-    "display": "Insurgent Pick Up",
+    "display": "Insurgent Pick-Up",
     "value": "InsurgentPickUp"
   },
   {
     "file": "InsurgentPickupCustom.png",
-    "display": "Insurgent Pickup Custom",
+    "display": "Insurgent Pick-Up Custom",
     "value": "InsurgentPickupCustom"
   },
   {
@@ -1986,7 +1986,7 @@
   },
   {
     "file": "Invade&PersuadeTank.png",
-    "display": "Invade&Persuade Tank",
+    "display": "Invade and Persuade Tank",
     "value": "Invade&PersuadeTank"
   },
   {
@@ -1996,7 +1996,7 @@
   },
   {
     "file": "IssiDown.png",
-    "display": "Issi Down",
+    "display": "Issi",
     "value": "IssiDown"
   },
   {
@@ -2041,12 +2041,12 @@
   },
   {
     "file": "JB700.png",
-    "display": "JB700",
+    "display": "JB 700",
     "value": "JB700"
   },
   {
     "file": "JB700W.png",
-    "display": "JB700W",
+    "display": "JB 700W",
     "value": "JB700W"
   },
   {
@@ -2061,7 +2061,7 @@
   },
   {
     "file": "JesterRacecar.png",
-    "display": "Jester Racecar",
+    "display": "Jester (Racecar)",
     "value": "JesterRacecar"
   },
   {
@@ -2136,7 +2136,7 @@
   },
   {
     "file": "KurumaArmored.png",
-    "display": "Kuruma Armored",
+    "display": "Kuruma (Armored)",
     "value": "KurumaArmored"
   },
   {
@@ -2166,12 +2166,12 @@
   },
   {
     "file": "LF22-Starling.png",
-    "display": "LF22-Starling",
+    "display": "LF-22 Starling",
     "value": "LF22-Starling"
   },
   {
     "file": "Liberator.png",
-    "display": "Liberator",
+    "display": "The Liberator",
     "value": "Liberator"
   },
   {
@@ -2191,7 +2191,7 @@
   },
   {
     "file": "LostSlamvan2.png",
-    "display": "Lost Slamvan2",
+    "display": "Lost Slamvan",
     "value": "LostSlamvan2"
   },
   {
@@ -2201,17 +2201,17 @@
   },
   {
     "file": "LSCMJesterRR.png",
-    "display": "LSCM Jester RR",
+    "display": "Jester RR",
     "value": "LSCMJesterRR"
   },
   {
     "file": "LSDWPBoxville.png",
-    "display": "LSDWP Boxville",
+    "display": "Boxville (LSDS)",
     "value": "LSDWPBoxville"
   },
   {
     "file": "LSWPBurrito.png",
-    "display": "LSWP Burrito",
+    "display": "Burrito",
     "value": "LSWPBurrito"
   },
   {
@@ -2291,7 +2291,7 @@
   },
   {
     "file": "MassacroRacecar.png",
-    "display": "Massacro Racecar",
+    "display": "Massacro (Racecar)",
     "value": "MassacroRacecar"
   },
   {
@@ -2311,12 +2311,12 @@
   },
   {
     "file": "Mesa3.png",
-    "display": "Mesa3",
+    "display": "Mesa",
     "value": "Mesa3"
   },
   {
     "file": "Metrotrain.png",
-    "display": "Metrotrain",
+    "display": "Freight Train",
     "value": "Metrotrain"
   },
   {
@@ -2351,7 +2351,7 @@
   },
   {
     "file": "Mixer2.png",
-    "display": "Mixer2",
+    "display": "Mixer",
     "value": "Mixer2"
   },
   {
@@ -2371,7 +2371,7 @@
   },
   {
     "file": "MonstroCiti.png",
-    "display": "Monstro Citi",
+    "display": "MonstroCiti",
     "value": "MonstroCiti"
   },
   {
@@ -2396,17 +2396,17 @@
   },
   {
     "file": "Mule2.png",
-    "display": "Mule2",
+    "display": "Mule",
     "value": "Mule2"
   },
   {
     "file": "Mule3.png",
-    "display": "Mule3",
+    "display": "Mule",
     "value": "Mule3"
   },
   {
     "file": "Mule5.png",
-    "display": "Mule5",
+    "display": "Mule",
     "value": "Mule5"
   },
   {
@@ -2536,7 +2536,7 @@
   },
   {
     "file": "OmnisEGT.png",
-    "display": "Omnis EGT",
+    "display": "Omnis e-GT",
     "value": "OmnisEGT"
   },
   {
@@ -2576,12 +2576,12 @@
   },
   {
     "file": "P45-Nokota.png",
-    "display": "P45-Nokota",
+    "display": "P-45 Nokota",
     "value": "P45-Nokota"
   },
   {
     "file": "P996LAZER.png",
-    "display": "P996 LAZER",
+    "display": "P-996 LAZER",
     "value": "P996LAZER"
   },
   {
@@ -2611,7 +2611,7 @@
   },
   {
     "file": "ParagonRArmored.png",
-    "display": "Paragon R Armored",
+    "display": "Paragon R (Armored)",
     "value": "ParagonRArmored"
   },
   {
@@ -2631,7 +2631,7 @@
   },
   {
     "file": "PatriotMilSpec.png",
-    "display": "Patriot Mil Spec",
+    "display": "Patriot Mil-Spec",
     "value": "PatriotMilSpec"
   },
   {
@@ -2641,12 +2641,12 @@
   },
   {
     "file": "Patriot.PNG",
-    "display": "Patriot.PNG",
+    "display": "Patriot",
     "value": "Patriot"
   },
   {
     "file": "PCJ600.png",
-    "display": "PCJ600",
+    "display": "PCJ 600",
     "value": "PCJ600"
   },
   {
@@ -2696,7 +2696,7 @@
   },
   {
     "file": "Phantom4.png",
-    "display": "Phantom4",
+    "display": "Phantom",
     "value": "Phantom4"
   },
   {
@@ -2736,7 +2736,7 @@
   },
   {
     "file": "PoliceBike2.png",
-    "display": "Police Bike2",
+    "display": "Police Bike",
     "value": "PoliceBike2"
   },
   {
@@ -2746,7 +2746,7 @@
   },
   {
     "file": "PoliceCruiser3.png",
-    "display": "Police Cruiser3",
+    "display": "Police Cruiser",
     "value": "PoliceCruiser3"
   },
   {
@@ -2756,7 +2756,7 @@
   },
   {
     "file": "PolicePrisonBus.png",
-    "display": "Police Prison Bus",
+    "display": "Prison Bus",
     "value": "PolicePrisonBus"
   },
   {
@@ -2771,7 +2771,7 @@
   },
   {
     "file": "Pony2.png",
-    "display": "Pony2",
+    "display": "Pony",
     "value": "Pony2"
   },
   {
@@ -2851,7 +2851,7 @@
   },
   {
     "file": "RampBuggy2.png",
-    "display": "Ramp Buggy2",
+    "display": "Ramp Buggy",
     "value": "RampBuggy2"
   },
   {
@@ -2876,12 +2876,12 @@
   },
   {
     "file": "RapidGT2.png",
-    "display": "Rapid GT2",
+    "display": "Rapid GT",
     "value": "RapidGT2"
   },
   {
     "file": "RapidGTX.png",
-    "display": "Rapid GTX",
+    "display": "Rapid GT X",
     "value": "RapidGTX"
   },
   {
@@ -2921,7 +2921,7 @@
   },
   {
     "file": "RE7B.png",
-    "display": "RE7 B",
+    "display": "RE-7B",
     "value": "RE7B"
   },
   {
@@ -3006,12 +3006,12 @@
   },
   {
     "file": "RM10-Bombushka.png",
-    "display": "RM10-Bombushka",
+    "display": "RM-10 Bombushka",
     "value": "RM10-Bombushka"
   },
   {
     "file": "RO86Alkonost.png",
-    "display": "RO86 Alkonost",
+    "display": "RO-86 Alkonost",
     "value": "RO86Alkonost"
   },
   {
@@ -3031,7 +3031,7 @@
   },
   {
     "file": "RomeroHearse-Front-GTAV.png",
-    "display": "Romero Hearse-Front-GTAV",
+    "display": "Romero Hearse",
     "value": "RomeroHearse-Front-GTAV"
   },
   {
@@ -3056,7 +3056,7 @@
   },
   {
     "file": "Ruffian-variant2.png",
-    "display": "Ruffian-variant2",
+    "display": "Ruffian",
     "value": "Ruffian-variant2"
   },
   {
@@ -3066,17 +3066,17 @@
   },
   {
     "file": "RuinerZZ8.png",
-    "display": "Ruiner ZZ8",
+    "display": "Ruiner ZZ-8",
     "value": "RuinerZZ8"
   },
   {
     "file": "Ruiner2000.png",
-    "display": "Ruiner2000",
+    "display": "Ruiner 2000",
     "value": "Ruiner2000"
   },
   {
     "file": "Ruiner3.png",
-    "display": "Ruiner3",
+    "display": "Ruiner",
     "value": "Ruiner3"
   },
   {
@@ -3091,7 +3091,7 @@
   },
   {
     "file": "Rumpo2.png",
-    "display": "Rumpo2",
+    "display": "Rumpo",
     "value": "Rumpo2"
   },
   {
@@ -3106,7 +3106,7 @@
   },
   {
     "file": "S80RR.png",
-    "display": "S80 RR",
+    "display": "S80RR",
     "value": "S80RR"
   },
   {
@@ -3131,17 +3131,17 @@
   },
   {
     "file": "SadlerSnow.png",
-    "display": "Sadler Snow",
+    "display": "Sadler",
     "value": "SadlerSnow"
   },
   {
     "file": "Sanchez-Sprunk.png",
-    "display": "Sanchez-Sprunk",
+    "display": "Sanchez",
     "value": "Sanchez-Sprunk"
   },
   {
     "file": "Sanchez2.png",
-    "display": "Sanchez2",
+    "display": "Sanchez",
     "value": "Sanchez2"
   },
   {
@@ -3186,7 +3186,7 @@
   },
   {
     "file": "SchafterLWBArmored.png",
-    "display": "Schafter LWB Armored",
+    "display": "Schafter LWB (Armored)",
     "value": "SchafterLWBArmored"
   },
   {
@@ -3196,7 +3196,7 @@
   },
   {
     "file": "SchafterV12Armored.png",
-    "display": "Schafter V12 Armored",
+    "display": "Schafter V12 (Armored)",
     "value": "SchafterV12Armored"
   },
   {
@@ -3281,7 +3281,7 @@
   },
   {
     "file": "Seven70.png",
-    "display": "Seven70",
+    "display": "Seven-70",
     "value": "Seven70"
   },
   {
@@ -3351,7 +3351,7 @@
   },
   {
     "file": "Sparrow2.png",
-    "display": "Sparrow2",
+    "display": "Sparrow",
     "value": "Sparrow2"
   },
   {
@@ -3376,7 +3376,7 @@
   },
   {
     "file": "SpeedoCustom2.png",
-    "display": "Speedo Custom2",
+    "display": "Speedo Custom",
     "value": "SpeedoCustom2"
   },
   {
@@ -3421,7 +3421,7 @@
   },
   {
     "file": "StingerTT.png",
-    "display": "Stinger TT",
+    "display": "Stinger",
     "value": "StingerTT"
   },
   {
@@ -3496,7 +3496,7 @@
   },
   {
     "file": "SunsetBleachPony.png",
-    "display": "Sunset Bleach Pony",
+    "display": "Pony",
     "value": "SunsetBleachPony"
   },
   {
@@ -3506,17 +3506,17 @@
   },
   {
     "file": "SuperVolito.png",
-    "display": "Super Volito",
+    "display": "SuperVolito",
     "value": "SuperVolito"
   },
   {
     "file": "SuperVolitoCarbon.png",
-    "display": "Super Volito Carbon",
+    "display": "SuperVolito Carbon",
     "value": "SuperVolitoCarbon"
   },
   {
     "file": "SuranoDown.png",
-    "display": "Surano Down",
+    "display": "Surano",
     "value": "SuranoDown"
   },
   {
@@ -3531,7 +3531,7 @@
   },
   {
     "file": "Surfer2.png",
-    "display": "Surfer2",
+    "display": "Surfer",
     "value": "Surfer2"
   },
   {
@@ -3546,7 +3546,7 @@
   },
   {
     "file": "SwiftClassic.png",
-    "display": "Swift Classic",
+    "display": "Swift",
     "value": "SwiftClassic"
   },
   {
@@ -3686,7 +3686,7 @@
   },
   {
     "file": "Tipper2.png",
-    "display": "Tipper2",
+    "display": "Tipper",
     "value": "Tipper2"
   },
   {
@@ -3696,12 +3696,12 @@
   },
   {
     "file": "Titan250D.png",
-    "display": "Titan250 D",
+    "display": "Titan 250 D",
     "value": "Titan250D"
   },
   {
     "file": "TM02Khanjali.png",
-    "display": "TM02 Khanjali",
+    "display": "TM-02 Khanjali",
     "value": "TM02Khanjali"
   },
   {
@@ -3726,7 +3726,7 @@
   },
   {
     "file": "TornadoCustomDown.png",
-    "display": "Tornado Custom Down",
+    "display": "Tornado",
     "value": "TornadoCustomDown"
   },
   {
@@ -3736,17 +3736,17 @@
   },
   {
     "file": "Tornado2Down.png",
-    "display": "Tornado2 Down",
+    "display": "Tornado",
     "value": "Tornado2Down"
   },
   {
     "file": "Tornado3.png",
-    "display": "Tornado3",
+    "display": "Tornado",
     "value": "Tornado3"
   },
   {
     "file": "Tornado4.png",
-    "display": "Tornado4",
+    "display": "Tornado",
     "value": "Tornado4"
   },
   {
@@ -3756,22 +3756,22 @@
   },
   {
     "file": "Tourbus.png",
-    "display": "Tourbus",
+    "display": "Tour Bus",
     "value": "Tourbus"
   },
   {
     "file": "Towtruck3.png",
-    "display": "Towtruck3",
+    "display": "Tow Truck",
     "value": "Towtruck3"
   },
   {
     "file": "Towtruck4.png",
-    "display": "Towtruck4",
+    "display": "Tow Truck",
     "value": "Towtruck4"
   },
   {
     "file": "Tr2.png",
-    "display": "Tr2",
+    "display": "Trailer",
     "value": "Tr2"
   },
   {
@@ -3781,42 +3781,42 @@
   },
   {
     "file": "TrailerSContainer.png",
-    "display": "Trailer S Container",
+    "display": "Trailer",
     "value": "TrailerSContainer"
   },
   {
     "file": "TrailerS2.png",
-    "display": "Trailer S2",
+    "display": "Trailer",
     "value": "TrailerS2"
   },
   {
     "file": "TrailerS3.png",
-    "display": "Trailer S3",
+    "display": "Trailer",
     "value": "TrailerS3"
   },
   {
     "file": "TrailerS5.png",
-    "display": "Trailer S5",
+    "display": "Trailer",
     "value": "TrailerS5"
   },
   {
     "file": "Trailer-SandRake.png",
-    "display": "Trailer-Sand Rake",
+    "display": "Trailer",
     "value": "Trailer-SandRake"
   },
   {
     "file": "Trailerlogs.png",
-    "display": "Trailer logs",
+    "display": "Trailer",
     "value": "Trailerlogs"
   },
   {
     "file": "Trailers4.png",
-    "display": "Trailers 4",
+    "display": "Trailer",
     "value": "Trailers4"
   },
   {
     "file": "Trailersmall.png",
-    "display": "Trailersmall",
+    "display": "Trailer",
     "value": "Trailersmall"
   },
   {
@@ -3826,7 +3826,7 @@
   },
   {
     "file": "Trflat.png",
-    "display": "Trflat",
+    "display": "Trailer",
     "value": "Trflat"
   },
   {
@@ -3856,7 +3856,7 @@
   },
   {
     "file": "TulipM100.png",
-    "display": "Tulip M100",
+    "display": "Tulip M-100",
     "value": "TulipM100"
   },
   {
@@ -3881,12 +3881,12 @@
   },
   {
     "file": "TVTrailer2.png",
-    "display": "TV Trailer2",
+    "display": "Trailer",
     "value": "TVTrailer2"
   },
   {
     "file": "Tvtrailer.png",
-    "display": "TV Trailer",
+    "display": "Trailer",
     "value": "Tvtrailer"
   },
   {
@@ -3911,27 +3911,27 @@
   },
   {
     "file": "UranusLozSpeed.png",
-    "display": "Uranus Loz Speed",
+    "display": "Uranus LozSpeed",
     "value": "UranusLozSpeed"
   },
   {
     "file": "UtilityTruckCrane.png",
-    "display": "Utility Truck Crane",
+    "display": "Utility Truck",
     "value": "UtilityTruckCrane"
   },
   {
     "file": "UtilityTruck2Box.png",
-    "display": "Utility Truck2 Box",
+    "display": "Utility Truck",
     "value": "UtilityTruck2Box"
   },
   {
     "file": "UtilityTruck3.png",
-    "display": "Utility Truck3",
+    "display": "Utility Truck",
     "value": "UtilityTruck3"
   },
   {
     "file": "V65-Molotok.png",
-    "display": "V65-Molotok",
+    "display": "V-65 Molotok",
     "value": "V65-Molotok"
   },
   {
@@ -3961,7 +3961,7 @@
   },
   {
     "file": "ValkyrieMOD0.png",
-    "display": "Valkyrie MOD0",
+    "display": "Valkyrie MOD.0",
     "value": "ValkyrieMOD0"
   },
   {
@@ -3981,7 +3981,7 @@
   },
   {
     "file": "Velum5Seater.png",
-    "display": "Velum 5 Seater",
+    "display": "Velum 5-Seater",
     "value": "Velum5Seater"
   },
   {
@@ -4076,7 +4076,7 @@
   },
   {
     "file": "Vivanite2.png",
-    "display": "Vivanite 2",
+    "display": "Vivanite",
     "value": "Vivanite2"
   },
   {
@@ -4116,7 +4116,7 @@
   },
   {
     "file": "VSTR.png",
-    "display": "VSTR",
+    "display": "V-STR",
     "value": "VSTR"
   },
   {
@@ -4186,7 +4186,7 @@
   },
   {
     "file": "WindsorDropUp.png",
-    "display": "Windsor Drop Up",
+    "display": "Windsor",
     "value": "WindsorDropUp"
   },
   {
@@ -4211,7 +4211,7 @@
   },
   {
     "file": "XA21.png",
-    "display": "XA21",
+    "display": "XA-21",
     "value": "XA21"
   },
   {
@@ -4221,12 +4221,12 @@
   },
   {
     "file": "XLSArmored.png",
-    "display": "XLS Armored",
+    "display": "XLS (Armored)",
     "value": "XLSArmored"
   },
   {
     "file": "Xtreme.png",
-    "display": "Xtreme",
+    "display": "X-treme",
     "value": "Xtreme"
   },
   {
@@ -4291,7 +4291,7 @@
   },
   {
     "file": "ZionCabrioUp.png",
-    "display": "Zion Cabrio Up",
+    "display": "Zion",
     "value": "ZionCabrioUp"
   },
   {
