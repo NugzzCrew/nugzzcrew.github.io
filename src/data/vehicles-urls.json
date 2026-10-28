@@ -222,18 +222,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/b8/b8081009/hero.webp?v=778beb70"
   },
   {
-    "file": "armytrailer_hero.webp",
-    "display": "Army Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/a7/a7ff33f5/hero.webp?v=6b83bf5f"
-  },
-  {
-    "file": "armytrailer2_hero.webp",
-    "display": "Army Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/9e/9e6b14d6/hero.webp?v=f7af5179"
-  },
-  {
     "file": "asbo_hero.webp",
     "display": "Asbo",
     "class": "compact",
@@ -244,12 +232,6 @@
     "display": "Asea",
     "class": "sedan",
     "url": "https://archive-media.l7y.ca/renders/vehicles/94/94204d89/hero.webp?v=eeb60ecd"
-  },
-  {
-    "file": "asea2_hero.webp",
-    "display": "Asea",
-    "class": "sedan",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/94/9441d8d5/hero.webp?v=c53d329d"
   },
   {
     "file": "asterope_hero.webp",
@@ -306,24 +288,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/81/81bd2ed0/hero.webp?v=bd4caae0"
   },
   {
-    "file": "avenger2_hero.webp",
-    "display": "Avenger",
-    "class": "plane",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/18/18606535/hero.webp?v=3bc0d1d3"
-  },
-  {
-    "file": "avenger3_hero.webp",
-    "display": "Avenger",
-    "class": "plane",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/e6/e68d8190/hero.webp?v=12bfa95d"
-  },
-  {
-    "file": "avenger4_hero.webp",
-    "display": "Avenger",
-    "class": "plane",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/fb/fbdeac32/hero.webp?v=db1f2672"
-  },
-  {
     "file": "avisa_hero.webp",
     "display": "Avisa",
     "class": "boat",
@@ -352,12 +316,6 @@
     "display": "Baller",
     "class": "suv",
     "url": "https://archive-media.l7y.ca/renders/vehicles/cf/cfca3668/hero.webp?v=a46c60d4"
-  },
-  {
-    "file": "baller2_hero.webp",
-    "display": "Baller",
-    "class": "suv",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/08/08852855/hero.webp?v=1e740b4b"
   },
   {
     "file": "baller3_hero.webp",
@@ -418,12 +376,6 @@
     "display": "Barracks",
     "class": "military",
     "url": "https://archive-media.l7y.ca/renders/vehicles/ce/ceea3f4b/hero.webp?v=3c0e4130"
-  },
-  {
-    "file": "barracks3_hero.webp",
-    "display": "Barracks",
-    "class": "military",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/25/2592b5cf/hero.webp?v=3ead7369"
   },
   {
     "file": "barracks2_hero.webp",
@@ -510,18 +462,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/fe/fefd644f/hero.webp?v=ac83ef7f"
   },
   {
-    "file": "bison2_hero.webp",
-    "display": "Bison",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/7b/7b8297c5/hero.webp?v=5b2226b3"
-  },
-  {
-    "file": "bison3_hero.webp",
-    "display": "Bison",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/67/67b3f020/hero.webp?v=539ea06b"
-  },
-  {
     "file": "blade_hero.webp",
     "display": "Blade",
     "class": "muscle",
@@ -582,18 +522,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/1f/1f3d44b5/hero.webp?v=c33c1edc"
   },
   {
-    "file": "boattrailer2_hero.webp",
-    "display": "Boat Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/6d/6d63dab0/hero.webp?v=66098fd1"
-  },
-  {
-    "file": "boattrailer3_hero.webp",
-    "display": "Boat Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/5b/5bbdb764/hero.webp?v=d47aae78"
-  },
-  {
     "file": "stockade4_hero.webp",
     "display": "Bobcat Security Stockade",
     "class": "commercial",
@@ -622,24 +550,6 @@
     "display": "Boxville",
     "class": "van",
     "url": "https://archive-media.l7y.ca/renders/vehicles/89/898eccea/hero.webp?v=f88e5160"
-  },
-  {
-    "file": "boxville2_hero.webp",
-    "display": "Boxville",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/f2/f21b33be/hero.webp?v=065186fd"
-  },
-  {
-    "file": "boxville3_hero.webp",
-    "display": "Boxville",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/07/07405e08/hero.webp?v=dfeffa9c"
-  },
-  {
-    "file": "boxville4_hero.webp",
-    "display": "Boxville",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/1a/1a79847a/hero.webp?v=8fe37a1a"
   },
   {
     "file": "boxville6_hero.webp",
@@ -774,24 +684,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/af/afbb2ca4/hero.webp?v=ed8bb965"
   },
   {
-    "file": "burrito3_hero.webp",
-    "display": "Burrito",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/98/98171bd3/hero.webp?v=b3165ae6"
-  },
-  {
-    "file": "burrito4_hero.webp",
-    "display": "Burrito",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/35/353b561d/hero.webp?v=dc5d4186"
-  },
-  {
-    "file": "burrito5_hero.webp",
-    "display": "Burrito",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/43/437cf2a0/hero.webp?v=6adc8a53"
-  },
-  {
     "file": "policet3_hero.webp",
     "display": "Burrito (Bail Enforcement)",
     "class": "emergency",
@@ -826,18 +718,6 @@
     "display": "Caddy",
     "class": "utility",
     "url": "https://archive-media.l7y.ca/renders/vehicles/44/44623884/hero.webp?v=78b6209a"
-  },
-  {
-    "file": "caddy2_hero.webp",
-    "display": "Caddy",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/df/dff0594c/hero.webp?v=ac3bef67"
-  },
-  {
-    "file": "caddy3_hero.webp",
-    "display": "Caddy",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/d2/d227bdbb/hero.webp?v=6fff63cc"
   },
   {
     "file": "calico_hero.webp",
@@ -894,34 +774,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/fc/fcfcb68b/hero.webp?v=07f453cd"
   },
   {
-    "file": "cargobob2_hero.webp",
-    "display": "Cargobob",
-    "class": "helicopter",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/60/60a7ea10/hero.webp?v=0dc5ce37"
-  },
-  {
-    "file": "cargobob3_hero.webp",
-    "display": "Cargobob",
-    "class": "helicopter",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/53/53174eef/hero.webp?v=b8379a70"
-  },
-  {
-    "file": "cargobob4_hero.webp",
-    "display": "Cargobob",
-    "class": "helicopter",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/78/78bc1a3c/hero.webp?v=9f4e183b"
-  },
-  {
     "file": "cargoplane_hero.webp",
     "display": "Cargo Plane",
     "class": "plane",
     "url": "https://archive-media.l7y.ca/renders/vehicles/15/15f27762/hero.webp?v=5b20eb40"
-  },
-  {
-    "file": "cargoplane2_hero.webp",
-    "display": "Cargo Plane",
-    "class": "plane",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/8b/8b4864e1/hero.webp?v=9ab3d1f0"
   },
   {
     "file": "cartuccia_hero.webp",
@@ -948,12 +804,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/77/779f23aa/hero.webp?v=69512bf6"
   },
   {
-    "file": "cavalcade2_hero.webp",
-    "display": "Cavalcade",
-    "class": "suv",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/d0/d0eb2be5/hero.webp?v=d780fbbd"
-  },
-  {
     "file": "cavalcade3_hero.webp",
     "display": "Cavalcade XL",
     "class": "suv",
@@ -972,22 +822,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/76/76bc2267/hero.webp?v=2f44b8b5"
   },
   {
-    "file": "driftchavosv6_hero.webp",
-    "display": "Chavos V6",
-    "class": "sedan",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/1b/1b49b0bc/hero.webp?v=2affdda1"
-  },
-  {
     "file": "cheburek_hero.webp",
     "display": "Cheburek",
     "class": "sport_classic",
     "url": "https://archive-media.l7y.ca/renders/vehicles/c5/c514aae0/hero.webp?v=5dffed71"
-  },
-  {
-    "file": "driftcheburek_hero.webp",
-    "display": "Cheburek",
-    "class": "sport_classic",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/a8/a8940cf3/hero.webp?v=ef51a308"
   },
   {
     "file": "cheetah_hero.webp",
@@ -1146,12 +984,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/06/067bc037/hero.webp?v=ed056c9b"
   },
   {
-    "file": "driftcoquette_hero.webp",
-    "display": "Coquette",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/25/250aad2f/hero.webp?v=af990a6b"
-  },
-  {
     "file": "coquette3_hero.webp",
     "display": "Coquette BlackFin",
     "class": "muscle",
@@ -1242,22 +1074,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/68/68a5d1ef/hero.webp?v=96568382"
   },
   {
-    "file": "driftcypher_hero.webp",
-    "display": "Cypher",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/0f/0f626001/hero.webp?v=4e0ba760"
-  },
-  {
     "file": "daemon_hero.webp",
     "display": "Daemon",
     "class": "motorcycle",
     "url": "https://archive-media.l7y.ca/renders/vehicles/77/77934cee/hero.webp?v=3c6affd6"
-  },
-  {
-    "file": "daemon2_hero.webp",
-    "display": "Daemon",
-    "class": "motorcycle",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/ac/ac4e93c9/hero.webp?v=bd1aebb5"
   },
   {
     "file": "coach_hero.webp",
@@ -1326,46 +1146,16 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/bc/bc993509/hero.webp?v=f6f0d080"
   },
   {
-    "file": "dilettante2_hero.webp",
-    "display": "Dilettante",
-    "class": "compact",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/64/64430650/hero.webp?v=c8dabf97"
-  },
-  {
     "file": "dinghy_hero.webp",
     "display": "Dinghy",
     "class": "boat",
     "url": "https://archive-media.l7y.ca/renders/vehicles/3d/3d961290/hero.webp?v=72537d39"
   },
   {
-    "file": "dinghy2_hero.webp",
-    "display": "Dinghy",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/10/107f392c/hero.webp?v=afdb3a87"
-  },
-  {
-    "file": "dinghy3_hero.webp",
-    "display": "Dinghy",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/1e/1e5e54ea/hero.webp?v=b01084db"
-  },
-  {
-    "file": "dinghy4_hero.webp",
-    "display": "Dinghy",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/33/33b47f96/hero.webp?v=d92ca939"
-  },
-  {
     "file": "handler_hero.webp",
     "display": "Dock Handler",
     "class": "industrial",
     "url": "https://archive-media.l7y.ca/renders/vehicles/1a/1a7fcefa/hero.webp?v=65e6c255"
-  },
-  {
-    "file": "docktrailer_hero.webp",
-    "display": "None",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/80/806efbee/hero.webp?v=cee2be1a"
   },
   {
     "file": "docktug_hero.webp",
@@ -1398,12 +1188,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/5e/5e2b66be/hero.webp?v=75a90141"
   },
   {
-    "file": "driftdominator10_hero.webp",
-    "display": "Dominator FX",
-    "class": "muscle",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/c7/c7fed061/hero.webp?v=a7b4c5d3"
-  },
-  {
     "file": "poldominator10_hero.webp",
     "display": "Dominator FX Interceptor",
     "class": "emergency",
@@ -1416,22 +1200,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/e5/e5b3aca1/hero.webp?v=72b767b6"
   },
   {
-    "file": "driftdominator9_hero.webp",
-    "display": "Dominator GT",
-    "class": "muscle",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/cc/ccfcc32f/hero.webp?v=dc5c4ce2"
-  },
-  {
     "file": "dominator8_hero.webp",
     "display": "Dominator GTT",
     "class": "muscle",
     "url": "https://archive-media.l7y.ca/renders/vehicles/2b/2be8b90a/hero.webp?v=27958425"
-  },
-  {
-    "file": "driftdominator8_hero.webp",
-    "display": "Dominator GTT",
-    "class": "muscle",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/de/deb666a2/hero.webp?v=69c50b19"
   },
   {
     "file": "dominator3_hero.webp",
@@ -1482,12 +1254,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/9a/9ae43988/hero.webp?v=96ee32c1"
   },
   {
-    "file": "tampa2_hero.webp",
-    "display": "Drift Tampa",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/c0/c0240885/hero.webp?v=c058e0df"
-  },
-  {
     "file": "driftl352_hero.webp",
     "display": "Drift Walton L35",
     "class": "off_road",
@@ -1500,22 +1266,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/9b/9bc400ef/hero.webp?v=679261ec"
   },
   {
-    "file": "yosemite2_hero.webp",
-    "display": "Drift Yosemite",
-    "class": "muscle",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/64/64f49967/hero.webp?v=ba995774"
-  },
-  {
     "file": "dubsta_hero.webp",
     "display": "Dubsta",
     "class": "suv",
     "url": "https://archive-media.l7y.ca/renders/vehicles/46/462fe277/hero.webp?v=4a901b94"
-  },
-  {
-    "file": "dubsta2_hero.webp",
-    "display": "Dubsta",
-    "class": "suv",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/e8/e882e5f6/hero.webp?v=a3682c76"
   },
   {
     "file": "dubsta3_hero.webp",
@@ -1590,12 +1344,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/2a/2a3164eb/hero.webp?v=9c753eab"
   },
   {
-    "file": "elegy_hero.webp",
-    "display": "Elegy Retro Custom",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/0b/0bba2261/hero.webp?v=9006bef6"
-  },
-  {
     "file": "elegy2_hero.webp",
     "display": "Elegy RH8",
     "class": "sport",
@@ -1618,18 +1366,6 @@
     "display": "Emperor",
     "class": "sedan",
     "url": "https://archive-media.l7y.ca/renders/vehicles/d7/d7278283/hero.webp?v=3b907492"
-  },
-  {
-    "file": "emperor2_hero.webp",
-    "display": "Emperor",
-    "class": "sedan",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/8f/8fc3aadc/hero.webp?v=4174c559"
-  },
-  {
-    "file": "emperor3_hero.webp",
-    "display": "Emperor",
-    "class": "sedan",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/b5/b5fcf74e/hero.webp?v=bacf046f"
   },
   {
     "file": "tribike2_hero.webp",
@@ -1696,12 +1432,6 @@
     "display": "Euros",
     "class": "sport",
     "url": "https://archive-media.l7y.ca/renders/vehicles/30/30f15228/hero.webp?v=14c6a23a"
-  },
-  {
-    "file": "euros_hero.webp",
-    "display": "Euros",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/79/7980bdd5/hero.webp?v=fd45a648"
   },
   {
     "file": "eurosx32_hero.webp",
@@ -1836,22 +1566,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/43/432ea949/hero.webp?v=306c5143"
   },
   {
-    "file": "fbi2_hero.webp",
-    "display": "FIB",
-    "class": "emergency",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/9d/9dc66994/hero.webp?v=8debe70b"
-  },
-  {
     "file": "tractor2_hero.webp",
     "display": "Fieldmaster",
     "class": "utility",
     "url": "https://archive-media.l7y.ca/renders/vehicles/84/843b73de/hero.webp?v=7ce69773"
-  },
-  {
-    "file": "tractor3_hero.webp",
-    "display": "Fieldmaster",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/56/562a97bd/hero.webp?v=6810caef"
   },
   {
     "file": "firebolt_hero.webp",
@@ -1914,12 +1632,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/a7/a7c9f9a7/hero.webp?v=5f1b3931"
   },
   {
-    "file": "fr36_hero.webp",
-    "display": "FR36",
-    "class": "coupe",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/e4/e43c11e5/hero.webp?v=0322bbd1"
-  },
-  {
     "file": "btype2_hero.webp",
     "display": "Fr\u00e4nken Stange",
     "class": "sport_classic",
@@ -1932,82 +1644,16 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/fc/fcc2f483/hero.webp?v=28a57a45"
   },
   {
-    "file": "freighttrailer_hero.webp",
-    "display": "None",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/d1/d1abb666/hero.webp?v=36b18ba0"
-  },
-  {
     "file": "freight_hero.webp",
     "display": "Freight Train",
     "class": "rail",
     "url": "https://archive-media.l7y.ca/renders/vehicles/3d/3d6aaa9b/hero.webp?v=1188484e"
   },
   {
-    "file": "freight2_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/e5/e5a41e08/hero.webp?v=0f4650a3"
-  },
-  {
-    "file": "freightcar_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/0a/0afd22a6/hero.webp?v=8f08a4e5"
-  },
-  {
-    "file": "freightcar2_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/bd/bdec3d99/hero.webp?v=1e62d665"
-  },
-  {
-    "file": "freightcar3_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/90/904ce25b/hero.webp?v=5da23b75"
-  },
-  {
-    "file": "freightcont1_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/36/36dcff98/hero.webp?v=87a55922"
-  },
-  {
-    "file": "freightcont2_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/0e/0e512e79/hero.webp?v=52ade5d5"
-  },
-  {
-    "file": "freightgrain_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/26/264d9262/hero.webp?v=68a84566"
-  },
-  {
-    "file": "metrotrain_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/33/33c9e158/hero.webp?v=30a66dcf"
-  },
-  {
-    "file": "tankercar_hero.webp",
-    "display": "Freight Train",
-    "class": "rail",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/22/22eddc30/hero.webp?v=e60d7b15"
-  },
-  {
     "file": "frogger_hero.webp",
     "display": "Frogger",
     "class": "helicopter",
     "url": "https://archive-media.l7y.ca/renders/vehicles/2c/2c634fbd/hero.webp?v=4964faee"
-  },
-  {
-    "file": "frogger2_hero.webp",
-    "display": "Frogger",
-    "class": "helicopter",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/74/742e9ac0/hero.webp?v=351e91bf"
   },
   {
     "file": "fugitive_hero.webp",
@@ -2040,22 +1686,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/b3/b327fa66/hero.webp?v=2753a71d"
   },
   {
-    "file": "futo_hero.webp",
-    "display": "Futo",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/78/7836ce2f/hero.webp?v=fa5dbbd4"
-  },
-  {
     "file": "driftfuto_hero.webp",
     "display": "Futo GTX",
     "class": "sport",
     "url": "https://archive-media.l7y.ca/renders/vehicles/f5/f52d92ee/hero.webp?v=462c2863"
-  },
-  {
-    "file": "futo2_hero.webp",
-    "display": "Futo GTX",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/a6/a6297cc8/hero.webp?v=c490428e"
   },
   {
     "file": "bruiser2_hero.webp",
@@ -2136,12 +1770,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/97/97fa4f36/hero.webp?v=9b52f99a"
   },
   {
-    "file": "gburrito2_hero.webp",
-    "display": "Gang Burrito",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/11/11aa0e14/hero.webp?v=b173a29e"
-  },
-  {
     "file": "gargoyle_hero.webp",
     "display": "Gargoyle",
     "class": "motorcycle",
@@ -2170,12 +1798,6 @@
     "display": "Gauntlet Hellfire",
     "class": "muscle",
     "url": "https://archive-media.l7y.ca/renders/vehicles/ea/ea76439f/hero.webp?v=42250edc"
-  },
-  {
-    "file": "gauntlet4_hero.webp",
-    "display": "Gauntlet Hellfire",
-    "class": "muscle",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/73/734c5e50/hero.webp?v=8c65601d"
   },
   {
     "file": "polgauntlet_hero.webp",
@@ -2302,12 +1924,6 @@
     "display": "Hardy",
     "class": "sedan",
     "url": "https://archive-media.l7y.ca/renders/vehicles/e8/e810b452/hero.webp?v=12363b5a"
-  },
-  {
-    "file": "hardy_hero.webp",
-    "display": "Hardy",
-    "class": "sedan",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/5e/5e315a37/hero.webp?v=c1175f0f"
   },
   {
     "file": "hauler_hero.webp",
@@ -2622,12 +2238,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/ea/ea61c64a/hero.webp?v=88b69ef2"
   },
   {
-    "file": "jester3_hero.webp",
-    "display": "Jester Classic",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/f3/f330cb6a/hero.webp?v=1044c5d5"
-  },
-  {
     "file": "jester2_hero.webp",
     "display": "Jester (Racecar)",
     "class": "sport",
@@ -2638,12 +2248,6 @@
     "display": "Jester RR",
     "class": "sport",
     "url": "https://archive-media.l7y.ca/renders/vehicles/96/96e6932d/hero.webp?v=2496582e"
-  },
-  {
-    "file": "jester4_hero.webp",
-    "display": "Jester RR",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/a1/a1b3a871/hero.webp?v=a79a3c7e"
   },
   {
     "file": "jester5_hero.webp",
@@ -2716,12 +2320,6 @@
     "display": "Keitora",
     "class": "utility",
     "url": "https://archive-media.l7y.ca/renders/vehicles/a3/a34f2f09/hero.webp?v=e91641d4"
-  },
-  {
-    "file": "keitora_hero.webp",
-    "display": "Keitora",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/e8/e8039fa7/hero.webp?v=96d5fed4"
   },
   {
     "file": "khamelion_hero.webp",
@@ -2982,18 +2580,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/36/36848602/hero.webp?v=59fd802b"
   },
   {
-    "file": "mesa2_hero.webp",
-    "display": "Mesa",
-    "class": "suv",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/d3/d36a4b44/hero.webp?v=0417d49c"
-  },
-  {
-    "file": "mesa3_hero.webp",
-    "display": "Mesa",
-    "class": "off_road",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/84/84f42e51/hero.webp?v=c1bb7a01"
-  },
-  {
     "file": "michelli_hero.webp",
     "display": "Michelli GT",
     "class": "sport_classic",
@@ -3028,12 +2614,6 @@
     "display": "Mixer",
     "class": "industrial",
     "url": "https://archive-media.l7y.ca/renders/vehicles/d1/d138a6bb/hero.webp?v=1dbb3321"
-  },
-  {
-    "file": "mixer2_hero.webp",
-    "display": "Mixer",
-    "class": "industrial",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/1c/1c534995/hero.webp?v=8a58efc2"
   },
   {
     "file": "trailerlarge_hero.webp",
@@ -3078,24 +2658,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/35/35ed670b/hero.webp?v=fb44d81d"
   },
   {
-    "file": "mule2_hero.webp",
-    "display": "Mule",
-    "class": "commercial",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/c1/c1632beb/hero.webp?v=e778757a"
-  },
-  {
-    "file": "mule3_hero.webp",
-    "display": "Mule",
-    "class": "commercial",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/85/85a5b471/hero.webp?v=d76276d6"
-  },
-  {
-    "file": "mule5_hero.webp",
-    "display": "Mule",
-    "class": "commercial",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/50/501ac93c/hero.webp?v=f5c9a77d"
-  },
-  {
     "file": "mule4_hero.webp",
     "display": "Mule Custom",
     "class": "commercial",
@@ -3106,12 +2668,6 @@
     "display": "Nebula Turbo",
     "class": "sport_classic",
     "url": "https://archive-media.l7y.ca/renders/vehicles/64/64c1c8aa/hero.webp?v=ae9b04c3"
-  },
-  {
-    "file": "nebula_hero.webp",
-    "display": "Nebula Turbo",
-    "class": "sport_classic",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/cb/cb642637/hero.webp?v=8608327c"
   },
   {
     "file": "nemesis_hero.webp",
@@ -3438,12 +2994,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/80/809aa4cb/hero.webp?v=c4699cf3"
   },
   {
-    "file": "phantom4_hero.webp",
-    "display": "Phantom",
-    "class": "commercial",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/f8/f84b48d1/hero.webp?v=0af3d6d9"
-  },
-  {
     "file": "phantom3_hero.webp",
     "display": "Phantom Custom",
     "class": "commercial",
@@ -3498,28 +3048,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/fd/fdefaec3/hero.webp?v=4e927054"
   },
   {
-    "file": "policeb2_hero.webp",
-    "display": "Police Bike",
-    "class": "emergency",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/8d/8d780d37/hero.webp?v=f588dfc7"
-  },
-  {
     "file": "police_hero.webp",
     "display": "Police Cruiser",
     "class": "emergency",
     "url": "https://archive-media.l7y.ca/renders/vehicles/79/79fbb0c5/hero.webp?v=9ebe0692"
-  },
-  {
-    "file": "police2_hero.webp",
-    "display": "Police Cruiser",
-    "class": "emergency",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/9f/9f05f101/hero.webp?v=9b47ee3b"
-  },
-  {
-    "file": "police3_hero.webp",
-    "display": "Police Cruiser",
-    "class": "emergency",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/71/71fa16ea/hero.webp?v=ec9db755"
   },
   {
     "file": "polmav_hero.webp",
@@ -3562,12 +3094,6 @@
     "display": "Pony",
     "class": "van",
     "url": "https://archive-media.l7y.ca/renders/vehicles/f8/f8de29a8/hero.webp?v=e9136f9c"
-  },
-  {
-    "file": "pony2_hero.webp",
-    "display": "Pony",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/38/38408341/hero.webp?v=c54f7f82"
   },
   {
     "file": "postlude_hero.webp",
@@ -3636,12 +3162,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/88/885f3671/hero.webp?v=ba461a24"
   },
   {
-    "file": "proptrailer_hero.webp",
-    "display": "None",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/15/153e1b0a/hero.webp?v=f673da65"
-  },
-  {
     "file": "pyro_hero.webp",
     "display": "Pyro",
     "class": "plane",
@@ -3678,34 +3198,16 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/ce/ceb28249/hero.webp?v=630ff2ee"
   },
   {
-    "file": "dune5_hero.webp",
-    "display": "Ramp Buggy",
-    "class": "off_road",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/ed/ed62bfa9/hero.webp?v=e8dd5a6a"
-  },
-  {
     "file": "rancherxl_hero.webp",
     "display": "Rancher XL",
     "class": "off_road",
     "url": "https://archive-media.l7y.ca/renders/vehicles/62/6210cbb0/hero.webp?v=1f4f8709"
   },
   {
-    "file": "rancherxl2_hero.webp",
-    "display": "Rancher XL",
-    "class": "off_road",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/73/7341576b/hero.webp?v=d0e4c628"
-  },
-  {
     "file": "rapidgt_hero.webp",
     "display": "Rapid GT",
     "class": "sport",
     "url": "https://archive-media.l7y.ca/renders/vehicles/8c/8cb29a14/hero.webp?v=15a773a3"
-  },
-  {
-    "file": "rapidgt2_hero.webp",
-    "display": "Rapid GT",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/67/679450af/hero.webp?v=eb02cae8"
   },
   {
     "file": "rapidgt3_hero.webp",
@@ -3808,12 +3310,6 @@
     "display": "Remus",
     "class": "sport",
     "url": "https://archive-media.l7y.ca/renders/vehicles/9f/9f3273f4/hero.webp?v=e001ca26"
-  },
-  {
-    "file": "remus_hero.webp",
-    "display": "Remus",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/52/5216ad5e/hero.webp?v=5e2ff2fc"
   },
   {
     "file": "rentalbus_hero.webp",
@@ -3924,12 +3420,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/67/67278b2e/hero.webp?v=4f5e5ed5"
   },
   {
-    "file": "rt3000_hero.webp",
-    "display": "RT3000",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/e5/e505cf99/hero.webp?v=56ec7482"
-  },
-  {
     "file": "rubble_hero.webp",
     "display": "Rubble",
     "class": "industrial",
@@ -3948,12 +3438,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/f2/f26ceff9/hero.webp?v=adaa313e"
   },
   {
-    "file": "ruiner3_hero.webp",
-    "display": "Ruiner",
-    "class": "muscle",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/2e/2e5afd37/hero.webp?v=65fcc750"
-  },
-  {
     "file": "ruiner2_hero.webp",
     "display": "Ruiner 2000",
     "class": "muscle",
@@ -3970,12 +3454,6 @@
     "display": "Rumpo",
     "class": "van",
     "url": "https://archive-media.l7y.ca/renders/vehicles/45/4543b74d/hero.webp?v=40fb3837"
-  },
-  {
-    "file": "rumpo2_hero.webp",
-    "display": "Rumpo",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/96/961afef7/hero.webp?v=5e015e90"
   },
   {
     "file": "rumpo3_hero.webp",
@@ -4024,12 +3502,6 @@
     "display": "Sadler",
     "class": "utility",
     "url": "https://archive-media.l7y.ca/renders/vehicles/dc/dc434e51/hero.webp?v=3a3dc66e"
-  },
-  {
-    "file": "sadler2_hero.webp",
-    "display": "Sadler",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/2b/2bc345d1/hero.webp?v=402bdda6"
   },
   {
     "file": "sanchez2_hero.webp",
@@ -4152,18 +3624,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/c2/c2974024/hero.webp?v=551dd937"
   },
   {
-    "file": "seashark2_hero.webp",
-    "display": "Seashark",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/db/db4388e4/hero.webp?v=bd002363"
-  },
-  {
-    "file": "seashark3_hero.webp",
-    "display": "Seashark",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/ed/ed762d49/hero.webp?v=8c797a52"
-  },
-  {
     "file": "seasparrow_hero.webp",
     "display": "Sea Sparrow",
     "class": "helicopter",
@@ -4200,12 +3660,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/c5/c530d126/hero.webp?v=806eb616"
   },
   {
-    "file": "sentinel4_hero.webp",
-    "display": "Sentinel Classic Widebody",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/af/af1fa439/hero.webp?v=7255349f"
-  },
-  {
     "file": "sentinel5_hero.webp",
     "display": "Sentinel GTS",
     "class": "sport",
@@ -4216,12 +3670,6 @@
     "display": "Sentinel XS",
     "class": "coupe",
     "url": "https://archive-media.l7y.ca/renders/vehicles/c4/c4069f5a/hero.webp?v=a3172860"
-  },
-  {
-    "file": "sentinel_hero.webp",
-    "display": "Sentinel XS",
-    "class": "coupe",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/50/50732c82/hero.webp?v=846e5839"
   },
   {
     "file": "sentinel6_hero.webp",
@@ -4320,12 +3768,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/49/494752f7/hero.webp?v=76a8c79a"
   },
   {
-    "file": "seasparrow3_hero.webp",
-    "display": "Sparrow",
-    "class": "helicopter",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/5f/5f017e6b/hero.webp?v=2e3df498"
-  },
-  {
     "file": "specter_hero.webp",
     "display": "Specter",
     "class": "sport",
@@ -4344,12 +3786,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/0d/0dc60d2b/hero.webp?v=e289ef3d"
   },
   {
-    "file": "speeder2_hero.webp",
-    "display": "Speeder",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/1a/1a144f2a/hero.webp?v=c8463afc"
-  },
-  {
     "file": "speedo_hero.webp",
     "display": "Speedo",
     "class": "van",
@@ -4360,12 +3796,6 @@
     "display": "Speedo Custom",
     "class": "van",
     "url": "https://archive-media.l7y.ca/renders/vehicles/0d/0d17099d/hero.webp?v=50e5f693"
-  },
-  {
-    "file": "speedo5_hero.webp",
-    "display": "Speedo Custom",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/fd/fd546a18/hero.webp?v=b038750e"
   },
   {
     "file": "buffalo3_hero.webp",
@@ -4426,12 +3856,6 @@
     "display": "Stockade",
     "class": "commercial",
     "url": "https://archive-media.l7y.ca/renders/vehicles/68/6827cf72/hero.webp?v=e96dfca2"
-  },
-  {
-    "file": "stockade3_hero.webp",
-    "display": "Stockade",
-    "class": "commercial",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/f3/f337ab36/hero.webp?v=5ef6965e"
   },
   {
     "file": "stratum_hero.webp",
@@ -4548,12 +3972,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/29/29b0da97/hero.webp?v=11b670d7"
   },
   {
-    "file": "surfer2_hero.webp",
-    "display": "Surfer",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/b1/b1d80e06/hero.webp?v=f1e24bcc"
-  },
-  {
     "file": "surfer3_hero.webp",
     "display": "Surfer Custom",
     "class": "van",
@@ -4636,12 +4054,6 @@
     "display": "Tampa GT",
     "class": "muscle",
     "url": "https://archive-media.l7y.ca/renders/vehicles/a6/a617546c/hero.webp?v=7a1fa6b1"
-  },
-  {
-    "file": "tanker2_hero.webp",
-    "display": "None",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/74/74998082/hero.webp?v=babf3120"
   },
   {
     "file": "taxi_hero.webp",
@@ -4734,12 +4146,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/02/02e19879/hero.webp?v=cf1b8cec"
   },
   {
-    "file": "tiptruck2_hero.webp",
-    "display": "Tipper",
-    "class": "industrial",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/c7/c7824e5e/hero.webp?v=626b952f"
-  },
-  {
     "file": "titan_hero.webp",
     "display": "Titan",
     "class": "plane",
@@ -4782,24 +4188,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/1b/1bb290bc/hero.webp?v=116db467"
   },
   {
-    "file": "tornado2_hero.webp",
-    "display": "Tornado",
-    "class": "sport_classic",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/5b/5b42a5c4/hero.webp?v=93a42a24"
-  },
-  {
-    "file": "tornado3_hero.webp",
-    "display": "Tornado",
-    "class": "sport_classic",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/69/690a4153/hero.webp?v=b94130c8"
-  },
-  {
-    "file": "tornado4_hero.webp",
-    "display": "Tornado",
-    "class": "sport_classic",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/86/86cf7cdd/hero.webp?v=42f5df10"
-  },
-  {
     "file": "tornado5_hero.webp",
     "display": "Tornado Custom",
     "class": "sport_classic",
@@ -4816,12 +4204,6 @@
     "display": "Toro",
     "class": "boat",
     "url": "https://archive-media.l7y.ca/renders/vehicles/3f/3fd5aa2f/hero.webp?v=e6e8cd29"
-  },
-  {
-    "file": "toro2_hero.webp",
-    "display": "Toro",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/36/362cac6d/hero.webp?v=0d82ec29"
   },
   {
     "file": "toros_hero.webp",
@@ -4842,24 +4224,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/b1/b12314e0/hero.webp?v=7d809526"
   },
   {
-    "file": "towtruck2_hero.webp",
-    "display": "Tow Truck",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/e5/e5a2d6c6/hero.webp?v=69b2f733"
-  },
-  {
-    "file": "towtruck3_hero.webp",
-    "display": "Tow Truck",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/d7/d7f8bb72/hero.webp?v=d52e3063"
-  },
-  {
-    "file": "towtruck4_hero.webp",
-    "display": "Tow Truck",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/ca/ca3c1ff9/hero.webp?v=2bbdb509"
-  },
-  {
     "file": "tractor_hero.webp",
     "display": "Tractor",
     "class": "utility",
@@ -4872,106 +4236,10 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/17/174cb172/hero.webp?v=b5eae625"
   },
   {
-    "file": "tanker_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/d4/d46f4737/hero.webp?v=09923838"
-  },
-  {
-    "file": "tr2_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/7b/7be032c6/hero.webp?v=10641a12"
-  },
-  {
-    "file": "tr3_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/6a/6a59902d/hero.webp?v=9f10416d"
-  },
-  {
-    "file": "tr4_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/7c/7cab34d0/hero.webp?v=046da8a3"
-  },
-  {
-    "file": "trailerlogs_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/78/782a236d/hero.webp?v=2f7a1500"
-  },
-  {
-    "file": "trailers_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/cb/cbb2be0e/hero.webp?v=9b93dfd5"
-  },
-  {
-    "file": "trailers2_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/a1/a1da3c91/hero.webp?v=4d365040"
-  },
-  {
-    "file": "trailers3_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/85/8548036d/hero.webp?v=35159f7d"
-  },
-  {
-    "file": "trailers4_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/be/be66f5aa/hero.webp?v=c3621144"
-  },
-  {
-    "file": "trailers5_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/b0/b075d9c8/hero.webp?v=e285ff15"
-  },
-  {
-    "file": "trailersmall_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/2a/2a72beab/hero.webp?v=582bff54"
-  },
-  {
-    "file": "trflat_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/af/af62f6b2/hero.webp?v=3d649e94"
-  },
-  {
-    "file": "trflat2_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/37/37921980/hero.webp?v=22e5b15f"
-  },
-  {
-    "file": "tvtrailer_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/96/967620be/hero.webp?v=22d08621"
-  },
-  {
-    "file": "tvtrailer2_hero.webp",
-    "display": "Trailer",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/1c/1c136af8/hero.webp?v=5fe5a825"
-  },
-  {
     "file": "trash_hero.webp",
     "display": "Trashmaster",
     "class": "service",
     "url": "https://archive-media.l7y.ca/renders/vehicles/72/72435a19/hero.webp?v=92474ea2"
-  },
-  {
-    "file": "trash2_hero.webp",
-    "display": "Trashmaster",
-    "class": "service",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/b5/b527915c/hero.webp?v=627c3138"
   },
   {
     "file": "tribike3_hero.webp",
@@ -4990,12 +4258,6 @@
     "display": "Tropic",
     "class": "boat",
     "url": "https://archive-media.l7y.ca/renders/vehicles/11/1149422f/hero.webp?v=00c20adf"
-  },
-  {
-    "file": "tropic2_hero.webp",
-    "display": "Tropic",
-    "class": "boat",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/56/56590fe9/hero.webp?v=15d4a895"
   },
   {
     "file": "tropos_hero.webp",
@@ -5086,18 +4348,6 @@
     "display": "Utility Truck",
     "class": "utility",
     "url": "https://archive-media.l7y.ca/renders/vehicles/1e/1ed0a534/hero.webp?v=c358e19a"
-  },
-  {
-    "file": "utillitruck2_hero.webp",
-    "display": "Utility Truck",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/34/34e6bf6b/hero.webp?v=9677e004"
-  },
-  {
-    "file": "utillitruck3_hero.webp",
-    "display": "Utility Truck",
-    "class": "utility",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/7f/7f2153df/hero.webp?v=d223d7da"
   },
   {
     "file": "molotok_hero.webp",
@@ -5280,12 +4530,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/ae/ae2cc02a/hero.webp?v=2f72e511"
   },
   {
-    "file": "vivanite2_hero.webp",
-    "display": "Vivanite",
-    "class": "service",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/1e/1e41b223/hero.webp?v=d67fb8ec"
-  },
-  {
     "file": "volatol_hero.webp",
     "display": "Volatol",
     "class": "plane",
@@ -5320,12 +4564,6 @@
     "display": "Vorschlaghammer",
     "class": "sedan",
     "url": "https://archive-media.l7y.ca/renders/vehicles/f7/f771092e/hero.webp?v=6651b72a"
-  },
-  {
-    "file": "vorschlaghammer_hero.webp",
-    "display": "Vorschlaghammer",
-    "class": "sedan",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/b6/b614798d/hero.webp?v=0719ba04"
   },
   {
     "file": "vortex_hero.webp",
@@ -5532,12 +4770,6 @@
     "url": "https://archive-media.l7y.ca/renders/vehicles/58/589a840c/hero.webp?v=33c0cd9c"
   },
   {
-    "file": "youga5_hero.webp",
-    "display": "Youga Custom",
-    "class": "van",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/87/871160f9/hero.webp?v=1c5c4660"
-  },
-  {
     "file": "zeno_hero.webp",
     "display": "Zeno",
     "class": "super",
@@ -5596,12 +4828,6 @@
     "display": "ZR350",
     "class": "sport",
     "url": "https://archive-media.l7y.ca/renders/vehicles/72/72a6cebe/hero.webp?v=c3e01eb9"
-  },
-  {
-    "file": "zr350_hero.webp",
-    "display": "ZR350",
-    "class": "sport",
-    "url": "https://archive-media.l7y.ca/renders/vehicles/91/91373058/hero.webp?v=6ad328eb"
   },
   {
     "file": "ztype_hero.webp",
