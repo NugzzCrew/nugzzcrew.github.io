@@ -623,7 +623,16 @@ const vehicleSets = [
       document.getElementById("tires").disabled = true;
       return; 
     }
-    sel.innerHTML = '<option value="">-- Select --</option>' + (wheelCategories[cat] || []).map((s) => `<option value="${s}">${s}</option>`).join("");
+    // Pull unique style names from wheelUrls so they match the URL data exactly
+    let styles = [];
+    if (typeof wheelUrls !== "undefined") {
+      const seen = new Set();
+      wheelUrls.filter(w => w.category === cat).forEach(w => {
+        if (!seen.has(w.name)) { seen.add(w.name); styles.push(w.name); }
+      });
+    }
+    if (!styles.length) styles = wheelCategories[cat] || [];
+    sel.innerHTML = '<option value="">-- Select --</option>' + styles.map((s) => `<option value="${s}">${s}</option>`).join("");
     populateTiresForCategory(cat);
     updateRimThumb();
     const wrap = document.getElementById("activatorWrapper");
