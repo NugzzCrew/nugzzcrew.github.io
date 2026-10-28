@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import colors from "../data/colors.json";
 import vehicles from "../data/vehicles.json";
 import rimData from "../data/rim-data.json";
+import vehicleUrls from "../data/vehicles-urls.json";
+import wheelUrls from "../data/wheels-urls.json";
 
 const unselectedSecondary = colors.filter((c) => !c.secondary);
 const allUnselected = colors.filter(
@@ -467,7 +469,7 @@ const vehicleSets = [
   </div>
 </MainLayout>
 
-<script is:inline define:vars={{ colors, unselectedSecondary, allUnselected, wheelCategories, lightColors, tireDesignMap, vehicles, rimPaths }}>
+<script is:inline define:vars={{ colors, unselectedSecondary, allUnselected, wheelCategories, lightColors, tireDesignMap, vehicles, rimPaths, vehicleUrls, wheelUrls }}>
   const globalHexMap = {};
   colors.forEach((c) => {
     const key = c.texture + "|" + c.name;
@@ -628,12 +630,20 @@ const vehicleSets = [
     const cat = document.getElementById("wheelCategory").value;
     const style = document.getElementById("rimStyle").value;
     const full = document.getElementById("wheelFull");
-    let rimImg = `/images/wheels/${slugify(cat || "Bennys Bespoke")}.png`;
-    if (style && style !== "Stock" && cat && typeof rimPaths !== "undefined") {
+    let rimImg = "";
+    if (style && style !== "Stock" && cat && typeof wheelUrls !== "undefined") {
+      // Prefer chrome (wheel2) match, then any match by category + name
+      const matches = wheelUrls.filter(w => w.category === cat && w.name === style);
+      const chrome = matches.find(w => w.chrome);
+      const base = matches.find(w => !w.tire) || matches[0];
+      const pick = chrome || base;
+      if (pick && pick.url) rimImg = pick.url;
+    }
+    if (!rimImg && typeof rimPaths !== "undefined") {
       const key = cat + "|" + style;
       if (rimPaths[key]) rimImg = rimPaths[key];
     }
-    full.src = rimImg;
+    if (rimImg) full.src = rimImg;
     updateTireOverlay();
   }
 
@@ -1129,11 +1139,15 @@ Tire Design: ${formattedTire}${activatorOutput}`;
     document.getElementById("vehicleSelectedLabel").textContent = `Selected: ${v.display}`;
     const img = document.getElementById("vehiclePreviewImg");
     const wrap = document.getElementById("vehiclePreviewWrap");
-    if (v.file) {
+    // Prefer external URL if available
+    const urlEntry = (typeof vehicleUrls !== "undefined") ? vehicleUrls.find(u => u.display === v.display) : null;
+    if (urlEntry && urlEntry.url) {
+      img.src = urlEntry.url;
+    } else if (v.file) {
       img.src = `/images/Vehicles/${v.file}`;
-      img.alt = v.display;
-      wrap.classList.remove("hidden");
     }
+    img.alt = v.display;
+    wrap.classList.remove("hidden");
     document.getElementById("vehicleDropdown").classList.add("hidden");
     updateNextButton();
   }
