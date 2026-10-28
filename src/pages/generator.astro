@@ -46,93 +46,28 @@ const windowTints = ["Clear", "Green"];
 const neonOptions = ["None", "Match Headlights", "Pure White", "Blue", "Electric Blue", "Mint Green", "Lime Green", "Yellow", "Golden Shower", "Orange", "Red", "Pony Pink", "Hot Pink", "Purple", "Black Light", "Custom RGB"];
 
 const tireDesignMap = {
-  "Bennys Bespoke": {
-    folder: "bennys",
-    options: [
-      { name: "Atomic", file: "Atomic-Bennys.png" },
-      { name: "Bluelines", file: "Bluelines-Bennys.png" },
-      { name: "Classic White Wall", file: "ClassicWhiteWall-Bennys.png" },
-      { name: "Redlines", file: "Redlines-Bennys.png" },
-      { name: "Retro White Wall", file: "RetroWhiteWall-Bennys.png" },
-      { name: "White Lines", file: "WhiteLines-Bennys.png" }
-    ]
-  },
-  "Bennys Originals": {
-    folder: "bennys",
-    options: [
-      { name: "Atomic", file: "Atomic-Bennys.png" },
-      { name: "Bluelines", file: "Bluelines-Bennys.png" },
-      { name: "Classic White Wall", file: "ClassicWhiteWall-Bennys.png" },
-      { name: "Redlines", file: "Redlines-Bennys.png" },
-      { name: "Retro White Wall", file: "RetroWhiteWall-Bennys.png" },
-      { name: "White Lines", file: "WhiteLines-Bennys.png" }
-    ]
-  },
-  "Bike": {
-    folder: "bike",
-    options: [{ name: "Custom Tires", file: "CustomTires-Bike.png" }]
-  },
-  "High End": {
-    folder: "high-end",
-    options: [{ name: "Custom Tires", file: "CustomTires-HighEnd.png" }]
-  },
-  "Lowrider": {
-    folder: "lowrider",
-    options: [{ name: "Custom Tires", file: "CustomTires-Lowrider.png" }]
-  },
-  "Muscle": {
-    folder: "muscle",
-    options: [{ name: "Custom Tires", file: "CustomTires-Muscle.png" }]
-  },
-  "Offroad": {
-    folder: "offroad",
-    options: [{ name: "Custom Tires", file: "CustomTires-Offroad.png" }]
-  },
-  "Race": {
-    folder: "race",
-    options: [
-      { name: "Atomic Logo", file: "AtomicLogo-Race.png" },
-      { name: "Atomic", file: "AtomicRace.png" },
-      { name: "Chapalle Green", file: "ChapalleGreen-Race.png" },
-      { name: "Chapalle Yellow", file: "ChapalleYellow-Race.png" },
-      { name: "Fukaru Red", file: "FukaruRed-Race.png" },
-      { name: "Fukaru White", file: "FukaruWhite-Race.png" }
-    ]
-  },
-  "Sport": {
-    folder: "sport",
-    options: [{ name: "Custom Tires", file: "CustomTires-Sport.png" }]
-  },
-  "Street": {
-    folder: "street",
-    options: [
-      { name: "Atomic", file: "Atomic-Street.png" },
-      { name: "Atomic Yellow", file: "AtomicYellow-Street.png" },
-      { name: "Chepalle Green", file: "ChepalleGreen-Street.png" },
-      { name: "Chepalle Yellow", file: "ChepalleYellow-Street.png" },
-      { name: "Fukaru Red", file: "FukaruRed-Street.png" },
-      { name: "Fukaru White", file: "FukaruWhite-Street.png" }
-    ]
-  },
-  "SUV": {
-    folder: "suv",
-    options: [{ name: "Custom Tires", file: "CustomTires-SUV.png" }]
-  },
-  "Track": {
-    folder: "track",
-    options: [
-      { name: "Atomic", file: "Atomic-Track.png" },
-      { name: "Atomic Yellow", file: "AtomicYellow-Track.png" },
-      { name: "Chepalle Green", file: "ChepalleGreen-Track.png" },
-      { name: "Chepalle Yellow", file: "ChepalleYellow-Track.png" },
-      { name: "Fukaru Red", file: "FukaruRed-Track.png" },
-      { name: "Fukaru White", file: "FukaruWhite-Track.png" }
-    ]
-  },
-  "Tuner": {
-    folder: "tuner",
-    options: [{ name: "Custom Tires", file: "CustomTires-Tuner.png" }]
-  }
+  "Bennys Bespoke": ["Atomic", "Blue Lines", "Classic White Wall", "Red Lines", "Retro White Wall", "White Lines"],
+  "Bennys Originals": ["Atomic", "Blue Lines", "Classic White Wall", "Red Lines", "Retro White Wall", "White Lines"],
+  "Bike": [],
+  "High End": [],
+  "Lowrider": [],
+  "Muscle": [],
+  "Offroad": [],
+  "Race": ["Atomic (Blue/White)", "Atomic (White)", "Fukaru White", "Fukaru Red", "Chepalle Yellow", "Chepalle Green"],
+  "Sport": [],
+  "Street": ["Atomic White", "Atomic Yellow", "Fukaru White", "Fukaru Red", "Chepalle Yellow", "Chepalle Green"],
+  "SUV": [],
+  "Track": ["Atomic White", "Atomic Yellow", "Fukaru White", "Fukaru Red", "Chepalle Yellow", "Chepalle Green"],
+  "Tuner": []
+};
+
+// Map (category, display name) → letter suffix
+const tireLetterMap = {
+  "Bennys Bespoke|Atomic": "g", "Bennys Bespoke|Blue Lines": "f", "Bennys Bespoke|Classic White Wall": "c", "Bennys Bespoke|Red Lines": "e", "Bennys Bespoke|Retro White Wall": "d", "Bennys Bespoke|White Lines": "b",
+  "Bennys Originals|Atomic": "g", "Bennys Originals|Blue Lines": "f", "Bennys Originals|Classic White Wall": "c", "Bennys Originals|Red Lines": "e", "Bennys Originals|Retro White Wall": "d", "Bennys Originals|White Lines": "b",
+  "Race|Atomic (Blue/White)": "a", "Race|Atomic (White)": "b", "Race|Fukaru White": "c", "Race|Fukaru Red": "d", "Race|Chepalle Yellow": "e", "Race|Chepalle Green": "f",
+  "Street|Atomic White": "b", "Street|Atomic Yellow": "c", "Street|Fukaru White": "d", "Street|Fukaru Red": "e", "Street|Chepalle Yellow": "f", "Street|Chepalle Green": "g",
+  "Track|Atomic White": "b", "Track|Atomic Yellow": "c", "Track|Fukaru White": "d", "Track|Fukaru Red": "e", "Track|Chepalle Yellow": "f", "Track|Chepalle Green": "g"
 };
 
 const tireSmokeOptions = ["Match Headlights", "Match Neon", "Patriot", "Custom RGB"];
@@ -429,7 +364,7 @@ const vehicleSets = [
 
         <div class="mt-2">
           <div class="relative w-full h-96 rounded-lg border border-zinc-700 overflow-hidden bg-black flex items-center justify-center">
-            <img id="wheelFull" src="/images/wheels/bennys-bespoke.png" alt="Full wheel grid" class="absolute inset-0 w-full h-full object-contain" />
+            <img id="wheelFull" src="" alt="Full wheel grid" class="absolute inset-0 w-full h-full object-contain" />
             <img id="tireFull" src="" alt="Full tire design overlay" class="absolute inset-0 w-full h-full object-contain hidden pointer-events-none" />
           </div>
         </div>
@@ -629,62 +564,51 @@ const vehicleSets = [
   function updateRimThumb() {
     const cat = document.getElementById("wheelCategory").value;
     const style = document.getElementById("rimStyle").value;
+    const tireSel = document.getElementById("tires");
+    const tireVal = tireSel ? tireSel.value : "";
     const full = document.getElementById("wheelFull");
     let rimImg = "";
     if (style && style !== "Stock" && cat && typeof wheelUrls !== "undefined") {
-      // Prefer chrome (wheel2) match, then any match by category + name
       const matches = wheelUrls.filter(w => w.category === cat && w.name === style);
-      const chrome = matches.find(w => w.chrome);
-      const base = matches.find(w => !w.tire) || matches[0];
+      // Prefer chrome, and match tire design if selected
+      let candidates = matches;
+      if (tireVal && tireVal !== "None" && tireVal !== "" && tireVal !== "N/A") {
+        const letterKey = cat + "|" + tireVal;
+        const letter = (typeof tireLetterMap !== "undefined") ? tireLetterMap[letterKey] : null;
+        if (letter) {
+          const letterMatch = matches.filter(w => w.file && w.file.includes(letter + ".webp"));
+          if (letterMatch.length) candidates = letterMatch;
+        }
+      }
+      const chrome = candidates.find(w => w.chrome);
+      const base = candidates.find(w => !w.tire) || candidates[0];
       const pick = chrome || base;
       if (pick && pick.url) rimImg = pick.url;
     }
-    if (!rimImg && typeof rimPaths !== "undefined") {
-      const key = cat + "|" + style;
-      if (rimPaths[key]) rimImg = rimPaths[key];
-    }
     if (rimImg) full.src = rimImg;
-    updateTireOverlay();
-  }
-
-  function updateTireOverlay() {
-    const tireSelect = document.getElementById("tires");
-    const rimStyle = document.getElementById("rimStyle").value;
-    const selectedOption = tireSelect.options[tireSelect.selectedIndex];
+    // Hide the old overlay — tire design is now in the main image
     const tireFull = document.getElementById("tireFull");
-
-    const file = selectedOption ? selectedOption.getAttribute("data-file") : null;
-    const folder = selectedOption ? selectedOption.getAttribute("data-folder") : null;
-
-    if (!rimStyle || rimStyle === "Stock" || !file || file === "none" || !folder) {
-      tireFull.classList.add("hidden");
-      tireFull.src = "";
-      return;
-    }
-
-    const tireImgPath = `/images/wheels/rims/tiredesign/${folder}/${file}`;
-
-    tireFull.src = tireImgPath;
-    tireFull.classList.remove("hidden");
+    if (tireFull) tireFull.classList.add("hidden");
   }
+
+
 
   function populateTiresForCategory(cat) {
     const tireSelect = document.getElementById("tires");
     
-    const categoryData = tireDesignMap[cat];
+    const options = tireDesignMap[cat] || [];
 
-    if (!categoryData || !categoryData.options || categoryData.options.length === 0) {
-      tireSelect.innerHTML = '<option value="None" data-file="none" selected>N/A</option>';
+    if (!options.length) {
+      tireSelect.innerHTML = '<option value="None" selected>None</option>';
       tireSelect.disabled = true;
     } else {
       tireSelect.disabled = false;
-      const folder = categoryData.folder;
-      let optionsHtml = '<option value="None" data-file="none">None</option>';
-      optionsHtml += categoryData.options.map(d => `<option value="${d.name}" data-file="${d.file}" data-folder="${folder}">${d.name}</option>`).join("");
+      let optionsHtml = '<option value="None">None</option>';
+      optionsHtml += options.map(name => `<option value="${name}">${name}</option>`).join("");
       tireSelect.innerHTML = optionsHtml;
     }
 
-    updateTireOverlay();
+    updateRimThumb();
   }
 
   function populateRims() {
@@ -768,7 +692,7 @@ const vehicleSets = [
   });
 
   document.getElementById("wheelCategory").addEventListener("change", populateRims);
-  document.getElementById("tires").addEventListener("change", updateTireOverlay);
+  document.getElementById("tires").addEventListener("change", updateRimThumb);
 
   const checkPaintCustom = () => {
     const pCustom = document.getElementById("primary").value === "Custom";
