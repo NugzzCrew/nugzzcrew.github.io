@@ -518,10 +518,10 @@ import MainLayout from '../layouts/MainLayout.astro';
         const svgB64 = btoa(unescape(encodeURIComponent(svgRaw)));
         const layerB64 = btoa(unescape(encodeURIComponent(layerRaw)));
 
-        const snippet = `/* OFFICIAL NUGZZ CREW EMBLEM
- * Source: ${currentFileName}
+        const snippet = `/* Generated with Emblem Creator
+ * Official Nugzz Crew
+ * File: ${currentFileName}
  * Size: ${size.toLocaleString()} bytes
- * Paste into Social Club emblem editor console (F12)
  */
 
 var svgData = ${JSON.stringify(svgB64)};
