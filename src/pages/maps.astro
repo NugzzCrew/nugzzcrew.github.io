@@ -3,7 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Game Maps">
-  <div class="maps-container">
+  <div class="page-shell">
     <header class="page-head">
       <h1 class="page-title">
         <span class="text-white">Game</span> <span class="text-gold">Maps</span>
@@ -61,20 +61,3 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </div>
 </MainLayout>
-
-<style>
-  .maps-container {
-    width: 100%;
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem 1rem 1rem;
-  }
-
-  @media (min-width: 768px) {
-    .maps-container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-</style>
