@@ -412,7 +412,7 @@ const vehicleSets = [
 </MainLayout>
 
 <script is:inline define:vars={{ colors, unselectedSecondary, allUnselected, wheelCategories, lightColors, tireDesignMap, vehicles, rimPaths }}>
-  const driftVehicles = ["Chavos V6", "Cheburek", "Cypher", "Dominator FX", "Dominator GT", "Drift Tampa", "Drift Yosemite", "Euros", "FR36", "Futo", "Futo GTX", "Gauntlet Hellfire", "Hardy", "Jester Classic", "Jester RR", "Keitora", "Nebula Turbo", "Remus", "RT3000", "Sentinel Classic Widebody", "Sentinel XS", "Vorschlaghammer", "ZR-350", "ZR350"];
+  const driftVehicles = ["Chavos V6", "Cheburek", "Cypher", "Dominator FX", "Dominator GT", "Drift Tampa", "Drift Yosemite", "Euros", "Fr36", "Futo", "Futo Gtx", "Gauntlet Hellfire", "Hardy", "Jester Classic", "Jester RR", "Keitora", "Nebula", "Remus", "RT 3000", "Sentinel Classic Widebody", "Sentinel XS", "Vorschlaghammer", "Zr350"];
 
   function checkDriftOption(displayName) {
     const wrapper = document.getElementById("driftWrapper");
@@ -1115,6 +1115,7 @@ Tire Design: ${formattedTire}${activatorOutput}`;
     document.getElementById("vehicle").value = v.value;
     document.getElementById("vehicleSearch").value = v.display;
     document.getElementById("vehicleSelectedLabel").textContent = `Selected: ${v.display}`;
+    checkDriftOption(v.display);
     const img = document.getElementById("vehiclePreviewImg");
     const wrap = document.getElementById("vehiclePreviewWrap");
     if (v.file) {
