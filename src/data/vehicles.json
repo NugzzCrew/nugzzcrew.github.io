@@ -1,4032 +1,4472 @@
 [
   {
-    "file": "tenf_hero.webp",
+    "file": "10f.webp",
     "display": "10F",
     "value": "10F"
   },
   {
-    "file": "tenf2_hero.webp",
+    "file": "10f_widebody.webp",
     "display": "10F Widebody",
     "value": "10FWidebody"
   },
   {
-    "file": "z190_hero.webp",
-    "display": "190z",
-    "value": "190z"
+    "file": "190z.webp",
+    "display": "190Z",
+    "value": "190Z"
   },
   {
-    "file": "r300_hero.webp",
+    "file": "300r.webp",
     "display": "300R",
     "value": "300R"
   },
   {
-    "file": "pfister811_hero.webp",
+    "file": "811.webp",
     "display": "811",
     "value": "811"
   },
   {
-    "file": "drafter_hero.webp",
-    "display": "8F Drafter",
-    "value": "8FDrafter"
-  },
-  {
-    "file": "ninef_hero.webp",
+    "file": "9f.webp",
     "display": "9F",
     "value": "9F"
   },
   {
-    "file": "ninef2_hero.webp",
+    "file": "9f_cabrio.webp",
     "display": "9F Cabrio",
     "value": "9FCabrio"
   },
   {
-    "file": "adder_hero.webp",
+    "file": "Burrito(bail enforcement).webp",
+    "display": "Burrito(Bail Enforcement)",
+    "value": "Burrito(BailEnforcement)"
+  },
+  {
+    "file": "adder.webp",
     "display": "Adder",
     "value": "Adder"
   },
   {
-    "file": "airbus_hero.webp",
-    "display": "Airport Bus",
-    "value": "AirportBus"
+    "file": "airbus.webp",
+    "display": "Airbus",
+    "value": "Airbus"
   },
   {
-    "file": "airtug_hero.webp",
+    "file": "airtug.webp",
     "display": "Airtug",
     "value": "Airtug"
   },
   {
-    "file": "akula_hero.webp",
+    "file": "akula.webp",
     "display": "Akula",
     "value": "Akula"
   },
   {
-    "file": "akuma_hero.webp",
+    "file": "akuma.webp",
     "display": "Akuma",
     "value": "Akuma"
   },
   {
-    "file": "aleutian_hero.webp",
+    "file": "aleutian.webp",
     "display": "Aleutian",
     "value": "Aleutian"
   },
   {
-    "file": "alpha_hero.webp",
+    "file": "alkonost.webp",
+    "display": "Alkonost",
+    "value": "Alkonost"
+  },
+  {
+    "file": "alpha.webp",
     "display": "Alpha",
     "value": "Alpha"
   },
   {
-    "file": "alphaz1_hero.webp",
-    "display": "Alpha-Z1",
-    "value": "AlphaZ1"
+    "file": "alphaz1.webp",
+    "display": "Alphaz1",
+    "value": "Alphaz1"
   },
   {
-    "file": "ambulance_hero.webp",
+    "file": "ambulance.webp",
     "display": "Ambulance",
     "value": "Ambulance"
   },
   {
-    "file": "annihilator_hero.webp",
+    "file": "anit-aircraft_trailer.webp",
+    "display": "Anit-Aircraft Trailer",
+    "value": "Anit-AircraftTrailer"
+  },
+  {
+    "file": "annihilator.webp",
     "display": "Annihilator",
     "value": "Annihilator"
   },
   {
-    "file": "annihilator2_hero.webp",
-    "display": "Annihilator Stealth",
-    "value": "AnnihilatorStealth"
+    "file": "annihilator2.webp",
+    "display": "Annihilator2",
+    "value": "Annihilator2"
   },
   {
-    "file": "trailersmall2_hero.webp",
-    "display": "Anti-Aircraft Trailer",
-    "value": "AntiAircraftTrailer"
+    "file": "apc.webp",
+    "display": "Apc",
+    "value": "Apc"
   },
   {
-    "file": "apc_hero.webp",
-    "display": "APC",
-    "value": "APC"
+    "file": "apocolypse_bruiser.webp",
+    "display": "Apocolypse Bruiser",
+    "value": "ApocolypseBruiser"
   },
   {
-    "file": "bruiser_hero.webp",
-    "display": "Apocalypse Bruiser",
-    "value": "ApocalypseBruiser"
+    "file": "apocolypse_brutus.webp",
+    "display": "Apocolypse Brutus",
+    "value": "ApocolypseBrutus"
   },
   {
-    "file": "brutus_hero.webp",
-    "display": "Apocalypse Brutus",
-    "value": "ApocalypseBrutus"
+    "file": "apocolypse_cerberus.webp",
+    "display": "Apocolypse Cerberus",
+    "value": "ApocolypseCerberus"
   },
   {
-    "file": "cerberus_hero.webp",
-    "display": "Apocalypse Cerberus",
-    "value": "ApocalypseCerberus"
+    "file": "apocolypse_deathbike.webp",
+    "display": "Apocolypse Deathbike",
+    "value": "ApocolypseDeathbike"
   },
   {
-    "file": "deathbike_hero.webp",
-    "display": "Apocalypse Deathbike",
-    "value": "ApocalypseDeathbike"
+    "file": "apocolypse_dominator.webp",
+    "display": "Apocolypse Dominator",
+    "value": "ApocolypseDominator"
   },
   {
-    "file": "dominator4_hero.webp",
-    "display": "Apocalypse Dominator",
-    "value": "ApocalypseDominator"
+    "file": "apocolypse_impaler.webp",
+    "display": "Apocolypse Impaler",
+    "value": "ApocolypseImpaler"
   },
   {
-    "file": "impaler2_hero.webp",
-    "display": "Apocalypse Impaler",
-    "value": "ApocalypseImpaler"
+    "file": "apocolypse_imperator.webp",
+    "display": "Apocolypse Imperator",
+    "value": "ApocolypseImperator"
   },
   {
-    "file": "imperator_hero.webp",
-    "display": "Apocalypse Imperator",
-    "value": "ApocalypseImperator"
+    "file": "apocolypse_issi.webp",
+    "display": "Apocolypse Issi",
+    "value": "ApocolypseIssi"
   },
   {
-    "file": "issi4_hero.webp",
-    "display": "Apocalypse Issi",
-    "value": "ApocalypseIssi"
+    "file": "apocolypse_sashquatch.webp",
+    "display": "Apocolypse Sashquatch",
+    "value": "ApocolypseSashquatch"
   },
   {
-    "file": "monster3_hero.webp",
-    "display": "Apocalypse Sasquatch",
-    "value": "ApocalypseSasquatch"
+    "file": "apocolypse_scarab.webp",
+    "display": "Apocolypse Scarab",
+    "value": "ApocolypseScarab"
   },
   {
-    "file": "scarab_hero.webp",
-    "display": "Apocalypse Scarab",
-    "value": "ApocalypseScarab"
+    "file": "apocolypse_slamvan.webp",
+    "display": "Apocolypse Slamvan",
+    "value": "ApocolypseSlamvan"
   },
   {
-    "file": "slamvan4_hero.webp",
-    "display": "Apocalypse Slamvan",
-    "value": "ApocalypseSlamvan"
+    "file": "apocolypse_zr380.webp",
+    "display": "Apocolypse Zr380",
+    "value": "ApocolypseZr380"
   },
   {
-    "file": "zr380_hero.webp",
-    "display": "Apocalypse ZR380",
-    "value": "ApocalypseZR380"
-  },
-  {
-    "file": "arbitergt_hero.webp",
+    "file": "arbiter_gt.webp",
     "display": "Arbiter GT",
     "value": "ArbiterGT"
   },
   {
-    "file": "ardent_hero.webp",
+    "file": "ardent.webp",
     "display": "Ardent",
     "value": "Ardent"
   },
   {
-    "file": "boxville5_hero.webp",
+    "file": "armored_boxville.webp",
     "display": "Armored Boxville",
     "value": "ArmoredBoxville"
   },
   {
-    "file": "armytanker_hero.webp",
+    "file": "army_tanker.webp",
+    "display": "Army Tanker",
+    "value": "ArmyTanker"
+  },
+  {
+    "file": "army_trailer.webp",
     "display": "Army Trailer",
     "value": "ArmyTrailer"
   },
   {
-    "file": "asbo_hero.webp",
+    "file": "army_trailer2.webp",
+    "display": "Army Trailer2",
+    "value": "ArmyTrailer2"
+  },
+  {
+    "file": "asbo.webp",
     "display": "Asbo",
     "value": "Asbo"
   },
   {
-    "file": "asea_hero.webp",
+    "file": "asea.webp",
     "display": "Asea",
     "value": "Asea"
   },
   {
-    "file": "asterope_hero.webp",
+    "file": "asea_snow.webp",
+    "display": "Asea Snow",
+    "value": "AseaSnow"
+  },
+  {
+    "file": "asterope.webp",
     "display": "Asterope",
     "value": "Asterope"
   },
   {
-    "file": "asterope2_hero.webp",
+    "file": "asterope_gz.webp",
     "display": "Asterope GZ",
     "value": "AsteropeGZ"
   },
   {
-    "file": "astrale_hero.webp",
+    "file": "astrale.webp",
     "display": "Astrale",
     "value": "Astrale"
   },
   {
-    "file": "astron_hero.webp",
+    "file": "astron.webp",
     "display": "Astron",
     "value": "Astron"
   },
   {
-    "file": "astron2_hero.webp",
+    "file": "astron_custom.webp",
     "display": "Astron Custom",
     "value": "AstronCustom"
   },
   {
-    "file": "blimp_hero.webp",
-    "display": "Atomic Blimp",
-    "value": "AtomicBlimp"
-  },
-  {
-    "file": "autarch_hero.webp",
+    "file": "autarch.webp",
     "display": "Autarch",
     "value": "Autarch"
   },
   {
-    "file": "avarus_hero.webp",
+    "file": "avarus.webp",
     "display": "Avarus",
     "value": "Avarus"
   },
   {
-    "file": "avenger_hero.webp",
+    "file": "avenger.webp",
     "display": "Avenger",
     "value": "Avenger"
   },
   {
-    "file": "avisa_hero.webp",
+    "file": "avisa.webp",
     "display": "Avisa",
     "value": "Avisa"
   },
   {
-    "file": "strikeforce_hero.webp",
-    "display": "B-11 Strikeforce",
-    "value": "B11Strikeforce"
-  },
-  {
-    "file": "bagger_hero.webp",
+    "file": "bagger.webp",
     "display": "Bagger",
     "value": "Bagger"
   },
   {
-    "file": "baletrailer_hero.webp",
+    "file": "baletrailer.webp",
     "display": "Baletrailer",
     "value": "Baletrailer"
   },
   {
-    "file": "baller_hero.webp",
+    "file": "baller.webp",
     "display": "Baller",
     "value": "Baller"
   },
   {
-    "file": "baller3_hero.webp",
+    "file": "baller2.webp",
+    "display": "Baller2",
+    "value": "Baller2"
+  },
+  {
+    "file": "baller_Le(armored).webp",
+    "display": "Baller Le(Armored)",
+    "value": "BallerLe(Armored)"
+  },
+  {
+    "file": "baller_Le_lwb(armored).webp",
+    "display": "Baller LE Lwb(Armored)",
+    "value": "BallerLELwb(Armored)"
+  },
+  {
+    "file": "baller_le.webp",
     "display": "Baller LE",
     "value": "BallerLE"
   },
   {
-    "file": "baller5_hero.webp",
-    "display": "Baller LE (Armored)",
-    "value": "BallerLEArmored"
+    "file": "baller_le_lwb.webp",
+    "display": "Baller LE Lwb",
+    "value": "BallerLELwb"
   },
   {
-    "file": "baller4_hero.webp",
-    "display": "Baller LE LWB",
-    "value": "BallerLELWB"
-  },
-  {
-    "file": "baller6_hero.webp",
-    "display": "Baller LE LWB (Armored)",
-    "value": "BallerLELWBArmored"
-  },
-  {
-    "file": "baller7_hero.webp",
+    "file": "baller_st.webp",
     "display": "Baller ST",
     "value": "BallerST"
   },
   {
-    "file": "baller8_hero.webp",
-    "display": "Baller ST-D",
-    "value": "BallerSTD"
+    "file": "baller_std.webp",
+    "display": "Baller Std",
+    "value": "BallerStd"
   },
   {
-    "file": "banshee_hero.webp",
+    "file": "banshee.webp",
     "display": "Banshee",
     "value": "Banshee"
   },
   {
-    "file": "banshee2_hero.webp",
+    "file": "banshee_900r.webp",
     "display": "Banshee 900R",
     "value": "Banshee900R"
   },
   {
-    "file": "banshee3_hero.webp",
-    "display": "Banshee GTS",
-    "value": "BansheeGTS"
+    "file": "banshee_gts.webp",
+    "display": "Banshee Gts",
+    "value": "BansheeGts"
   },
   {
-    "file": "barracks_hero.webp",
+    "file": "barracks.webp",
     "display": "Barracks",
     "value": "Barracks"
   },
   {
-    "file": "barracks2_hero.webp",
-    "display": "Barracks Semi",
-    "value": "BarracksSemi"
+    "file": "barracks2.webp",
+    "display": "Barracks2",
+    "value": "Barracks2"
   },
   {
-    "file": "barrage_hero.webp",
+    "file": "barracks3.webp",
+    "display": "Barracks3",
+    "value": "Barracks3"
+  },
+  {
+    "file": "barrage.webp",
     "display": "Barrage",
     "value": "Barrage"
   },
   {
-    "file": "bati_hero.webp",
+    "file": "bati_801.webp",
     "display": "Bati 801",
     "value": "Bati801"
   },
   {
-    "file": "bati2_hero.webp",
-    "display": "Bati 801RR",
-    "value": "Bati801RR"
+    "file": "bati_801rr.webp",
+    "display": "Bati 801Rr",
+    "value": "Bati801Rr"
   },
   {
-    "file": "dukes3_hero.webp",
+    "file": "beater_dukes.webp",
     "display": "Beater Dukes",
     "value": "BeaterDukes"
   },
   {
-    "file": "bjxl_hero.webp",
-    "display": "BeeJay XL",
-    "value": "BeeJayXL"
+    "file": "beejay_xl.webp",
+    "display": "Beejay XL",
+    "value": "BeejayXL"
   },
   {
-    "file": "benson_hero.webp",
+    "file": "benson.webp",
     "display": "Benson",
     "value": "Benson"
   },
   {
-    "file": "benson2_hero.webp",
-    "display": "Benson (Cluckin' Bell)",
-    "value": "BensonCluckin'Bell"
+    "file": "benson2.webp",
+    "display": "Benson2",
+    "value": "Benson2"
   },
   {
-    "file": "besra_hero.webp",
+    "file": "besra.webp",
     "display": "Besra",
     "value": "Besra"
   },
   {
-    "file": "bestiagts_hero.webp",
-    "display": "Bestia GTS",
-    "value": "BestiaGTS"
+    "file": "bestia_gts.webp",
+    "display": "Bestia Gts",
+    "value": "BestiaGts"
   },
   {
-    "file": "bf400_hero.webp",
-    "display": "BF400",
-    "value": "BF400"
+    "file": "bf400.webp",
+    "display": "Bf400",
+    "value": "Bf400"
   },
   {
-    "file": "biff_hero.webp",
+    "file": "bf_injection.webp",
+    "display": "BF Injection",
+    "value": "BFInjection"
+  },
+  {
+    "file": "biff.webp",
     "display": "Biff",
     "value": "Biff"
   },
   {
-    "file": "bifta_hero.webp",
+    "file": "bifta.webp",
     "display": "Bifta",
     "value": "Bifta"
   },
   {
-    "file": "bison_hero.webp",
+    "file": "bison.webp",
     "display": "Bison",
     "value": "Bison"
   },
   {
-    "file": "blade_hero.webp",
+    "file": "bison2.webp",
+    "display": "Bison2",
+    "value": "Bison2"
+  },
+  {
+    "file": "bison3.webp",
+    "display": "Bison3",
+    "value": "Bison3"
+  },
+  {
+    "file": "blade.webp",
     "display": "Blade",
     "value": "Blade"
   },
   {
-    "file": "blazer_hero.webp",
+    "file": "blazer(hotrod).webp",
+    "display": "Blazer(Hotrod)",
+    "value": "Blazer(Hotrod)"
+  },
+  {
+    "file": "blazer(lifeguard).webp",
+    "display": "Blazer(Lifeguard)",
+    "value": "Blazer(Lifeguard)"
+  },
+  {
+    "file": "blazer.webp",
     "display": "Blazer",
     "value": "Blazer"
   },
   {
-    "file": "blazer5_hero.webp",
+    "file": "blazer_aqua.webp",
     "display": "Blazer Aqua",
     "value": "BlazerAqua"
   },
   {
-    "file": "blazer2_hero.webp",
-    "display": "Blazer Lifeguard",
-    "value": "BlazerLifeguard"
-  },
-  {
-    "file": "blimp3_hero.webp",
+    "file": "blimp.webp",
     "display": "Blimp",
     "value": "Blimp"
   },
   {
-    "file": "blista_hero.webp",
+    "file": "blimp2.webp",
+    "display": "Blimp2",
+    "value": "Blimp2"
+  },
+  {
+    "file": "blimp3.webp",
+    "display": "Blimp3",
+    "value": "Blimp3"
+  },
+  {
+    "file": "blist_kanjo.webp",
+    "display": "Blist Kanjo",
+    "value": "BlistKanjo"
+  },
+  {
+    "file": "blista.webp",
     "display": "Blista",
     "value": "Blista"
   },
   {
-    "file": "blista2_hero.webp",
+    "file": "blista_compact.webp",
     "display": "Blista Compact",
     "value": "BlistaCompact"
   },
   {
-    "file": "kanjo_hero.webp",
-    "display": "Blista Kanjo",
-    "value": "BlistaKanjo"
+    "file": "bmx.webp",
+    "display": "Bmx",
+    "value": "Bmx"
   },
   {
-    "file": "bmx_hero.webp",
-    "display": "BMX",
-    "value": "BMX"
+    "file": "boattrailer.webp",
+    "display": "Boattrailer",
+    "value": "Boattrailer"
   },
   {
-    "file": "boattrailer_hero.webp",
-    "display": "Boat Trailer",
-    "value": "BoatTrailer"
+    "file": "boattrailer2.webp",
+    "display": "Boattrailer2",
+    "value": "Boattrailer2"
   },
   {
-    "file": "stockade4_hero.webp",
-    "display": "Bobcat Security Stockade",
-    "value": "BobcatSecurityStockade"
+    "file": "boattrailer3.webp",
+    "display": "Boattrailer3",
+    "value": "Boattrailer3"
   },
   {
-    "file": "bobcatxl_hero.webp",
+    "file": "bobcat_xl.webp",
     "display": "Bobcat XL",
     "value": "BobcatXL"
   },
   {
-    "file": "bodhi2_hero.webp",
+    "file": "bodhi.webp",
     "display": "Bodhi",
     "value": "Bodhi"
   },
   {
-    "file": "boor_hero.webp",
+    "file": "bombushka.webp",
+    "display": "Bombushka",
+    "value": "Bombushka"
+  },
+  {
+    "file": "boor.webp",
     "display": "Boor",
     "value": "Boor"
   },
   {
-    "file": "boxville_hero.webp",
+    "file": "boxville.webp",
     "display": "Boxville",
     "value": "Boxville"
   },
   {
-    "file": "boxville6_hero.webp",
-    "display": "Boxville (LSDS)",
-    "value": "BoxvilleLSDS"
+    "file": "boxville2.webp",
+    "display": "Boxville2",
+    "value": "Boxville2"
   },
   {
-    "file": "openwheel1_hero.webp",
-    "display": "BR8",
-    "value": "BR8"
+    "file": "boxville3.webp",
+    "display": "Boxville3",
+    "value": "Boxville3"
   },
   {
-    "file": "brawler_hero.webp",
+    "file": "boxville4.webp",
+    "display": "Boxville4",
+    "value": "Boxville4"
+  },
+  {
+    "file": "boxville6.webp",
+    "display": "Boxville6",
+    "value": "Boxville6"
+  },
+  {
+    "file": "br8.webp",
+    "display": "Br8",
+    "value": "Br8"
+  },
+  {
+    "file": "brawler.webp",
     "display": "Brawler",
     "value": "Brawler"
   },
   {
-    "file": "brickade_hero.webp",
-    "display": "Brickade",
-    "value": "Brickade"
+    "file": "brickade_6x6.webp",
+    "display": "Brickade 6X6",
+    "value": "Brickade6X6"
   },
   {
-    "file": "brickade2_hero.webp",
-    "display": "Brickade 6x6",
-    "value": "Brickade6x6"
-  },
-  {
-    "file": "brigham_hero.webp",
+    "file": "brigham.webp",
     "display": "Brigham",
     "value": "Brigham"
   },
   {
-    "file": "brioso2_hero.webp",
+    "file": "brioso_300.webp",
     "display": "Brioso 300",
     "value": "Brioso300"
   },
   {
-    "file": "brioso3_hero.webp",
+    "file": "brioso_300_widebody.webp",
     "display": "Brioso 300 Widebody",
     "value": "Brioso300Widebody"
   },
   {
-    "file": "brioso_hero.webp",
-    "display": "Brioso R/A",
-    "value": "BriosoR/A"
+    "file": "brioso_ra.webp",
+    "display": "Brioso RA",
+    "value": "BriosoRA"
   },
   {
-    "file": "broadway_hero.webp",
+    "file": "broadway.webp",
     "display": "Broadway",
     "value": "Broadway"
   },
   {
-    "file": "buccaneer_hero.webp",
+    "file": "buccaneer.webp",
     "display": "Buccaneer",
     "value": "Buccaneer"
   },
   {
-    "file": "buccaneer2_hero.webp",
+    "file": "buccaneer_custom.webp",
     "display": "Buccaneer Custom",
     "value": "BuccaneerCustom"
   },
   {
-    "file": "buffalo_hero.webp",
+    "file": "buffalo.webp",
     "display": "Buffalo",
     "value": "Buffalo"
   },
   {
-    "file": "polbuffalo_hero.webp",
+    "file": "buffalo_cruiser.webp",
     "display": "Buffalo Cruiser",
     "value": "BuffaloCruiser"
   },
   {
-    "file": "buffalo5_hero.webp",
-    "display": "Buffalo EVX",
-    "value": "BuffaloEVX"
+    "file": "buffalo_evx.webp",
+    "display": "Buffalo Evx",
+    "value": "BuffaloEvx"
   },
   {
-    "file": "buffalo2_hero.webp",
+    "file": "buffalo_fib.webp",
+    "display": "Buffalo Fib",
+    "value": "BuffaloFib"
+  },
+  {
+    "file": "buffalo_s.webp",
     "display": "Buffalo S",
     "value": "BuffaloS"
   },
   {
-    "file": "buffalo4_hero.webp",
-    "display": "Buffalo STX",
-    "value": "BuffaloSTX"
+    "file": "buffalo_stx.webp",
+    "display": "Buffalo Stx",
+    "value": "BuffaloStx"
   },
   {
-    "file": "polbuffalo6_hero.webp",
-    "display": "Buffalo STX Pursuit",
-    "value": "BuffaloSTXPursuit"
+    "file": "buffalo_stx_pursuit.webp",
+    "display": "Buffalo Stx Pursuit",
+    "value": "BuffaloStxPursuit"
   },
   {
-    "file": "burrito2_hero.webp",
-    "display": "Bugstars Burrito",
-    "value": "BugstarsBurrito"
+    "file": "bulldozer.webp",
+    "display": "Bulldozer",
+    "value": "Bulldozer"
   },
   {
-    "file": "bullet_hero.webp",
+    "file": "bullet.webp",
     "display": "Bullet",
     "value": "Bullet"
   },
   {
-    "file": "stalion2_hero.webp",
-    "display": "Burger Shot Stallion",
-    "value": "BurgerShotStallion"
+    "file": "burger_shot_stalion.webp",
+    "display": "Burger Shot Stalion",
+    "value": "BurgerShotStalion"
   },
   {
-    "file": "burrito_hero.webp",
+    "file": "burrito(bugstars).webp",
+    "display": "Burrito(Bugstars)",
+    "value": "Burrito(Bugstars)"
+  },
+  {
+    "file": "burrito(mcgill-olsen).webp",
+    "display": "Burrito(Mcgill-Olsen)",
+    "value": "Burrito(Mcgill-Olsen)"
+  },
+  {
+    "file": "burrito(water&power).webp",
+    "display": "Burrito(Water&Power)",
+    "value": "Burrito(Water&Power)"
+  },
+  {
+    "file": "burrito.webp",
     "display": "Burrito",
     "value": "Burrito"
   },
   {
-    "file": "policet3_hero.webp",
-    "display": "Burrito (Bail Enforcement)",
-    "value": "BurritoBailEnforcement"
+    "file": "burrito_snow.webp",
+    "display": "Burrito Snow",
+    "value": "BurritoSnow"
   },
   {
-    "file": "bus_hero.webp",
+    "file": "bus.webp",
     "display": "Bus",
     "value": "Bus"
   },
   {
-    "file": "buzzard2_hero.webp",
+    "file": "buzzard.webp",
     "display": "Buzzard",
     "value": "Buzzard"
   },
   {
-    "file": "buzzard_hero.webp",
-    "display": "Buzzard Attack Chopper",
-    "value": "BuzzardAttackChopper"
+    "file": "cablecar.webp",
+    "display": "Cablecar",
+    "value": "Cablecar"
   },
   {
-    "file": "cablecar_hero.webp",
-    "display": "Cable Car",
-    "value": "CableCar"
-  },
-  {
-    "file": "caddy_hero.webp",
+    "file": "caddy.webp",
     "display": "Caddy",
     "value": "Caddy"
   },
   {
-    "file": "calico_hero.webp",
-    "display": "Calico GTF",
-    "value": "CalicoGTF"
+    "file": "caddy2.webp",
+    "display": "Caddy2",
+    "value": "Caddy2"
   },
   {
-    "file": "camper_hero.webp",
+    "file": "caddy3.webp",
+    "display": "Caddy3",
+    "value": "Caddy3"
+  },
+  {
+    "file": "calico.webp",
+    "display": "Calico",
+    "value": "Calico"
+  },
+  {
+    "file": "camper.webp",
     "display": "Camper",
     "value": "Camper"
   },
   {
-    "file": "caracara_hero.webp",
-    "display": "Caracara",
-    "value": "Caracara"
+    "file": "caracara(armored).webp",
+    "display": "Caracara(Armored)",
+    "value": "Caracara(Armored)"
   },
   {
-    "file": "caracara2_hero.webp",
-    "display": "Caracara 4x4",
-    "value": "Caracara4x4"
+    "file": "caracara_4x4.webp",
+    "display": "Caracara 4X4",
+    "value": "Caracara4X4"
   },
   {
-    "file": "caracara3_hero.webp",
-    "display": "Caracara (Armored)",
-    "value": "CaracaraArmored"
+    "file": "caracara_6X6.webp",
+    "display": "Caracara 6X6",
+    "value": "Caracara6X6"
   },
   {
-    "file": "polcaracara_hero.webp",
+    "file": "caracara_pursuit.webp",
     "display": "Caracara Pursuit",
     "value": "CaracaraPursuit"
   },
   {
-    "file": "carbonizzare_hero.webp",
-    "display": "Carbonizzare",
-    "value": "Carbonizzare"
-  },
-  {
-    "file": "carbonrs_hero.webp",
+    "file": "carbon_rs.webp",
     "display": "Carbon RS",
     "value": "CarbonRS"
   },
   {
-    "file": "cargobob_hero.webp",
+    "file": "carbonizzare.webp",
+    "display": "Carbonizzare",
+    "value": "Carbonizzare"
+  },
+  {
+    "file": "cargobob.webp",
     "display": "Cargobob",
     "value": "Cargobob"
   },
   {
-    "file": "cargoplane_hero.webp",
-    "display": "Cargo Plane",
-    "value": "CargoPlane"
+    "file": "cargobob_jetsam.webp",
+    "display": "Cargobob Jetsam",
+    "value": "CargobobJetsam"
   },
   {
-    "file": "cartuccia_hero.webp",
-    "display": "Cartuccia GT",
-    "value": "CartucciaGT"
+    "file": "cargoplane.webp",
+    "display": "Cargoplane",
+    "value": "Cargoplane"
   },
   {
-    "file": "casco_hero.webp",
+    "file": "cartuccia.webp",
+    "display": "Cartuccia",
+    "value": "Cartuccia"
+  },
+  {
+    "file": "casco.webp",
     "display": "Casco",
     "value": "Casco"
   },
   {
-    "file": "castigator_hero.webp",
+    "file": "castigator.webp",
     "display": "Castigator",
     "value": "Castigator"
   },
   {
-    "file": "cavalcade_hero.webp",
+    "file": "cavalcade.webp",
     "display": "Cavalcade",
     "value": "Cavalcade"
   },
   {
-    "file": "cavalcade3_hero.webp",
+    "file": "cavalcade2.webp",
+    "display": "Cavalcade2",
+    "value": "Cavalcade2"
+  },
+  {
+    "file": "cavalcade_xl.webp",
     "display": "Cavalcade XL",
     "value": "CavalcadeXL"
   },
   {
-    "file": "champion_hero.webp",
+    "file": "champion.webp",
     "display": "Champion",
     "value": "Champion"
   },
   {
-    "file": "chavosv6_hero.webp",
+    "file": "chavos_v6.webp",
     "display": "Chavos V6",
     "value": "ChavosV6"
   },
   {
-    "file": "cheburek_hero.webp",
+    "file": "cheburek.webp",
     "display": "Cheburek",
     "value": "Cheburek"
   },
   {
-    "file": "cheetah_hero.webp",
+    "file": "cheetah.webp",
     "display": "Cheetah",
     "value": "Cheetah"
   },
   {
-    "file": "cheetah2_hero.webp",
+    "file": "cheetah_classic.webp",
     "display": "Cheetah Classic",
     "value": "CheetahClassic"
   },
   {
-    "file": "chernobog_hero.webp",
+    "file": "chernobog.webp",
     "display": "Chernobog",
     "value": "Chernobog"
   },
   {
-    "file": "chimera_hero.webp",
+    "file": "chimera.webp",
     "display": "Chimera",
     "value": "Chimera"
   },
   {
-    "file": "chino_hero.webp",
+    "file": "chino.webp",
     "display": "Chino",
     "value": "Chino"
   },
   {
-    "file": "chino2_hero.webp",
+    "file": "chino_custom.webp",
     "display": "Chino Custom",
     "value": "ChinoCustom"
   },
   {
-    "file": "cinquemila_hero.webp",
+    "file": "cinquemila.webp",
     "display": "Cinquemila",
     "value": "Cinquemila"
   },
   {
-    "file": "cliffhanger_hero.webp",
+    "file": "cliffhanger.webp",
     "display": "Cliffhanger",
     "value": "Cliffhanger"
   },
   {
-    "file": "clique_hero.webp",
+    "file": "clique.webp",
     "display": "Clique",
     "value": "Clique"
   },
   {
-    "file": "clique2_hero.webp",
+    "file": "clique_wagon.webp",
     "display": "Clique Wagon",
     "value": "CliqueWagon"
   },
   {
-    "file": "speedo2_hero.webp",
+    "file": "clown_van.webp",
     "display": "Clown Van",
     "value": "ClownVan"
   },
   {
-    "file": "club_hero.webp",
+    "file": "club.webp",
     "display": "Club",
     "value": "Club"
   },
   {
-    "file": "cognoscenti_hero.webp",
+    "file": "coach.webp",
+    "display": "Coach",
+    "value": "Coach"
+  },
+  {
+    "file": "cognoscenti(armored).webp",
+    "display": "Cognoscenti(Armored)",
+    "value": "Cognoscenti(Armored)"
+  },
+  {
+    "file": "cognoscenti.webp",
     "display": "Cognoscenti",
     "value": "Cognoscenti"
   },
   {
-    "file": "cog55_hero.webp",
+    "file": "cognoscenti_55(armored).webp",
+    "display": "Cognoscenti 55(Armored)",
+    "value": "Cognoscenti55(Armored)"
+  },
+  {
+    "file": "cognoscenti_55.webp",
     "display": "Cognoscenti 55",
     "value": "Cognoscenti55"
   },
   {
-    "file": "cog552_hero.webp",
-    "display": "Cognoscenti 55 (Armored)",
-    "value": "Cognoscenti55Armored"
-  },
-  {
-    "file": "cognoscenti2_hero.webp",
-    "display": "Cognoscenti (Armored)",
-    "value": "CognoscentiArmored"
-  },
-  {
-    "file": "cogcabrio_hero.webp",
+    "file": "cognoscenti_cabrio.webp",
     "display": "Cognoscenti Cabrio",
     "value": "CognoscentiCabrio"
   },
   {
-    "file": "comet2_hero.webp",
+    "file": "comet.webp",
     "display": "Comet",
     "value": "Comet"
   },
   {
-    "file": "comet3_hero.webp",
+    "file": "comet_retro_custom.webp",
     "display": "Comet Retro Custom",
     "value": "CometRetroCustom"
   },
   {
-    "file": "comet6_hero.webp",
+    "file": "comet_s2.webp",
     "display": "Comet S2",
     "value": "CometS2"
   },
   {
-    "file": "comet7_hero.webp",
-    "display": "Comet S2 Cabrio",
-    "value": "CometS2Cabrio"
-  },
-  {
-    "file": "comet4_hero.webp",
+    "file": "comet_safari.webp",
     "display": "Comet Safari",
     "value": "CometSafari"
   },
   {
-    "file": "comet5_hero.webp",
+    "file": "comet_sr.webp",
     "display": "Comet SR",
     "value": "CometSR"
   },
   {
-    "file": "conada_hero.webp",
+    "file": "comet_sr_cabrio.webp",
+    "display": "Comet SR Cabrio",
+    "value": "CometSRCabrio"
+  },
+  {
+    "file": "conada.webp",
     "display": "Conada",
     "value": "Conada"
   },
   {
-    "file": "contender_hero.webp",
+    "file": "contender.webp",
     "display": "Contender",
     "value": "Contender"
   },
   {
-    "file": "coquette_hero.webp",
+    "file": "coquette.webp",
     "display": "Coquette",
     "value": "Coquette"
   },
   {
-    "file": "coquette3_hero.webp",
-    "display": "Coquette BlackFin",
-    "value": "CoquetteBlackFin"
+    "file": "coquette_blackfin.webp",
+    "display": "Coquette Blackfin",
+    "value": "CoquetteBlackfin"
   },
   {
-    "file": "coquette2_hero.webp",
+    "file": "coquette_classic.webp",
     "display": "Coquette Classic",
     "value": "CoquetteClassic"
   },
   {
-    "file": "coquette5_hero.webp",
+    "file": "coquette_d1.webp",
     "display": "Coquette D1",
     "value": "CoquetteD1"
   },
   {
-    "file": "coquette4_hero.webp",
+    "file": "coquette_d10.webp",
     "display": "Coquette D10",
     "value": "CoquetteD10"
   },
   {
-    "file": "polcoquette4_hero.webp",
+    "file": "coquette_d10_pursuit.webp",
     "display": "Coquette D10 Pursuit",
     "value": "CoquetteD10Pursuit"
   },
   {
-    "file": "coquette6_hero.webp",
+    "file": "coquette_d5.webp",
     "display": "Coquette D5",
     "value": "CoquetteD5"
   },
   {
-    "file": "corsita_hero.webp",
+    "file": "corsita.webp",
     "display": "Corsita",
     "value": "Corsita"
   },
   {
-    "file": "cruiser_hero.webp",
+    "file": "cruiser.webp",
     "display": "Cruiser",
     "value": "Cruiser"
   },
   {
-    "file": "crusader_hero.webp",
+    "file": "crusader.webp",
     "display": "Crusader",
     "value": "Crusader"
   },
   {
-    "file": "cuban800_hero.webp",
-    "display": "Cuban 800",
+    "file": "cuban800.webp",
+    "display": "Cuban800",
     "value": "Cuban800"
   },
   {
-    "file": "flatbed2_hero.webp",
-    "display": "Custom Flatbed",
-    "value": "CustomFlatbed"
-  },
-  {
-    "file": "cutter_hero.webp",
+    "file": "cutter.webp",
     "display": "Cutter",
     "value": "Cutter"
   },
   {
-    "file": "cyclone_hero.webp",
+    "file": "cyclone.webp",
     "display": "Cyclone",
     "value": "Cyclone"
   },
   {
-    "file": "cyclone2_hero.webp",
-    "display": "Cyclone II",
-    "value": "CycloneII"
+    "file": "cyclone2.webp",
+    "display": "Cyclone2",
+    "value": "Cyclone2"
   },
   {
-    "file": "cypher_hero.webp",
+    "file": "cypher.webp",
     "display": "Cypher",
     "value": "Cypher"
   },
   {
-    "file": "daemon_hero.webp",
+    "file": "daemon.webp",
     "display": "Daemon",
     "value": "Daemon"
   },
   {
-    "file": "coach_hero.webp",
-    "display": "Dashound",
-    "value": "Dashound"
+    "file": "daemon2.webp",
+    "display": "Daemon2",
+    "value": "Daemon2"
   },
   {
-    "file": "defiler_hero.webp",
+    "file": "defiler.webp",
     "display": "Defiler",
     "value": "Defiler"
   },
   {
-    "file": "deity_hero.webp",
+    "file": "deity.webp",
     "display": "Deity",
     "value": "Deity"
   },
   {
-    "file": "deluxo_hero.webp",
+    "file": "deluxo.webp",
     "display": "Deluxo",
     "value": "Deluxo"
   },
   {
-    "file": "trophytruck2_hero.webp",
+    "file": "desert_raid.webp",
     "display": "Desert Raid",
     "value": "DesertRaid"
   },
   {
-    "file": "deveste_hero.webp",
-    "display": "Deveste Eight",
-    "value": "DevesteEight"
+    "file": "deveste.webp",
+    "display": "Deveste",
+    "value": "Deveste"
   },
   {
-    "file": "deviant_hero.webp",
+    "file": "deviant.webp",
     "display": "Deviant",
     "value": "Deviant"
   },
   {
-    "file": "cargobob5_hero.webp",
-    "display": "DH-7 Iron Mule",
-    "value": "DH7IronMule"
+    "file": "diablous.webp",
+    "display": "Diablous",
+    "value": "Diablous"
   },
   {
-    "file": "diablous_hero.webp",
-    "display": "Diabolus",
-    "value": "Diabolus"
+    "file": "diablous_custom.webp",
+    "display": "Diablous Custom",
+    "value": "DiablousCustom"
   },
   {
-    "file": "diablous2_hero.webp",
-    "display": "Diabolus Custom",
-    "value": "DiabolusCustom"
+    "file": "dilettante(patrol).webp",
+    "display": "Dilettante(Patrol)",
+    "value": "Dilettante(Patrol)"
   },
   {
-    "file": "dilettante_hero.webp",
+    "file": "dilettante.webp",
     "display": "Dilettante",
     "value": "Dilettante"
   },
   {
-    "file": "dinghy_hero.webp",
+    "file": "dinghy.webp",
     "display": "Dinghy",
     "value": "Dinghy"
   },
   {
-    "file": "handler_hero.webp",
-    "display": "Dock Handler",
-    "value": "DockHandler"
+    "file": "dinghy2.webp",
+    "display": "Dinghy2",
+    "value": "Dinghy2"
   },
   {
-    "file": "docktug_hero.webp",
+    "file": "dinghy3.webp",
+    "display": "Dinghy3",
+    "value": "Dinghy3"
+  },
+  {
+    "file": "dinghy4.webp",
+    "display": "Dinghy4",
+    "value": "Dinghy4"
+  },
+  {
+    "file": "dinghy5.webp",
+    "display": "Dinghy5",
+    "value": "Dinghy5"
+  },
+  {
+    "file": "docktrailer.webp",
+    "display": "Docktrailer",
+    "value": "Docktrailer"
+  },
+  {
+    "file": "docktug.webp",
     "display": "Docktug",
     "value": "Docktug"
   },
   {
-    "file": "dodo_hero.webp",
+    "file": "dodo.webp",
     "display": "Dodo",
     "value": "Dodo"
   },
   {
-    "file": "dominator_hero.webp",
+    "file": "dominator.webp",
     "display": "Dominator",
     "value": "Dominator"
   },
   {
-    "file": "dominator7_hero.webp",
-    "display": "Dominator ASP",
-    "value": "DominatorASP"
+    "file": "dominator_asp.webp",
+    "display": "Dominator Asp",
+    "value": "DominatorAsp"
   },
   {
-    "file": "dominator10_hero.webp",
+    "file": "dominator_fx.webp",
     "display": "Dominator FX",
     "value": "DominatorFX"
   },
   {
-    "file": "poldominator10_hero.webp",
-    "display": "Dominator FX Interceptor",
-    "value": "DominatorFXInterceptor"
-  },
-  {
-    "file": "dominator9_hero.webp",
+    "file": "dominator_gt.webp",
     "display": "Dominator GT",
     "value": "DominatorGT"
   },
   {
-    "file": "dominator8_hero.webp",
-    "display": "Dominator GTT",
-    "value": "DominatorGTT"
+    "file": "dominator_gtt.webp",
+    "display": "Dominator Gtt",
+    "value": "DominatorGtt"
   },
   {
-    "file": "dominator3_hero.webp",
-    "display": "Dominator GTX",
-    "value": "DominatorGTX"
+    "file": "dominator_gtx.webp",
+    "display": "Dominator Gtx",
+    "value": "DominatorGtx"
   },
   {
-    "file": "dorado_hero.webp",
+    "file": "dorado.webp",
     "display": "Dorado",
     "value": "Dorado"
   },
   {
-    "file": "poldorado_hero.webp",
+    "file": "dorado_cruiser.webp",
     "display": "Dorado Cruiser",
     "value": "DoradoCruiser"
   },
   {
-    "file": "double_hero.webp",
+    "file": "double-t.webp",
     "display": "Double-T",
-    "value": "DoubleT"
+    "value": "Double-T"
   },
   {
-    "file": "bulldozer_hero.webp",
-    "display": "Dozer",
-    "value": "Dozer"
+    "file": "dr1.webp",
+    "display": "Dr1",
+    "value": "Dr1"
   },
   {
-    "file": "openwheel2_hero.webp",
-    "display": "DR1",
-    "value": "DR1"
+    "file": "drafter.webp",
+    "display": "Drafter",
+    "value": "Drafter"
   },
   {
-    "file": "draugur_hero.webp",
+    "file": "draugur.webp",
     "display": "Draugur",
     "value": "Draugur"
   },
   {
-    "file": "drifttampa_hero.webp",
+    "file": "drift_tampa.webp",
     "display": "Drift Tampa",
     "value": "DriftTampa"
   },
   {
-    "file": "driftl352_hero.webp",
-    "display": "Drift Walton L35",
-    "value": "DriftWaltonL35"
-  },
-  {
-    "file": "driftyosemite_hero.webp",
+    "file": "drift_yosemite.webp",
     "display": "Drift Yosemite",
     "value": "DriftYosemite"
   },
   {
-    "file": "dubsta_hero.webp",
+    "file": "dubsta.webp",
     "display": "Dubsta",
     "value": "Dubsta"
   },
   {
-    "file": "dubsta3_hero.webp",
-    "display": "Dubsta 6x6",
-    "value": "Dubsta6x6"
+    "file": "dubsta2.webp",
+    "display": "Dubsta2",
+    "value": "Dubsta2"
   },
   {
-    "file": "dukes2_hero.webp",
+    "file": "dubsta_6x6.webp",
+    "display": "Dubsta 6X6",
+    "value": "Dubsta6X6"
+  },
+  {
+    "file": "duke_o'death.webp",
     "display": "Duke O'Death",
     "value": "DukeO'Death"
   },
   {
-    "file": "dukes_hero.webp",
+    "file": "dukes.webp",
     "display": "Dukes",
     "value": "Dukes"
   },
   {
-    "file": "dump_hero.webp",
+    "file": "dump.webp",
     "display": "Dump",
     "value": "Dump"
   },
   {
-    "file": "rallytruck_hero.webp",
-    "display": "Dune",
-    "value": "Dune"
-  },
-  {
-    "file": "dune_hero.webp",
+    "file": "dune_buggy.webp",
     "display": "Dune Buggy",
     "value": "DuneBuggy"
   },
   {
-    "file": "dune3_hero.webp",
-    "display": "Dune FAV",
-    "value": "DuneFAV"
+    "file": "dune_fav.webp",
+    "display": "Dune Fav",
+    "value": "DuneFav"
   },
   {
-    "file": "dloader_hero.webp",
+    "file": "duneloader.webp",
     "display": "Duneloader",
     "value": "Duneloader"
   },
   {
-    "file": "duster_hero.webp",
+    "file": "duster.webp",
     "display": "Duster",
     "value": "Duster"
   },
   {
-    "file": "duster2_hero.webp",
-    "display": "Duster 300-H",
+    "file": "duster_300_h.webp",
+    "display": "Duster 300 H",
     "value": "Duster300H"
   },
   {
-    "file": "dynasty_hero.webp",
+    "file": "dynasty.webp",
     "display": "Dynasty",
     "value": "Dynasty"
   },
   {
-    "file": "driftelegy_hero.webp",
+    "file": "elegy_retro_custom.webp",
     "display": "Elegy Retro Custom",
     "value": "ElegyRetroCustom"
   },
   {
-    "file": "elegy2_hero.webp",
-    "display": "Elegy RH8",
-    "value": "ElegyRH8"
+    "file": "elegy_rh8.webp",
+    "display": "Elegy Rh8",
+    "value": "ElegyRh8"
   },
   {
-    "file": "ellie_hero.webp",
+    "file": "ellie.webp",
     "display": "Ellie",
     "value": "Ellie"
   },
   {
-    "file": "emerus_hero.webp",
+    "file": "emerus.webp",
     "display": "Emerus",
     "value": "Emerus"
   },
   {
-    "file": "emperor_hero.webp",
+    "file": "emperor(rusted).webp",
+    "display": "Emperor(Rusted)",
+    "value": "Emperor(Rusted)"
+  },
+  {
+    "file": "emperor.webp",
     "display": "Emperor",
     "value": "Emperor"
   },
   {
-    "file": "tribike2_hero.webp",
-    "display": "Endurex Race Bike",
-    "value": "EndurexRaceBike"
+    "file": "emperor_snow.webp",
+    "display": "Emperor Snow",
+    "value": "EmperorSnow"
   },
   {
-    "file": "enduro_hero.webp",
+    "file": "enduro.webp",
     "display": "Enduro",
     "value": "Enduro"
   },
   {
-    "file": "entity3_hero.webp",
+    "file": "entity_mt.webp",
     "display": "Entity MT",
     "value": "EntityMT"
   },
   {
-    "file": "entityxf_hero.webp",
+    "file": "entity_xf.webp",
     "display": "Entity XF",
     "value": "EntityXF"
   },
   {
-    "file": "entity2_hero.webp",
-    "display": "Entity XXR",
-    "value": "EntityXXR"
+    "file": "entity_xxr.webp",
+    "display": "Entity Xxr",
+    "value": "EntityXxr"
   },
   {
-    "file": "envisage_hero.webp",
+    "file": "envisage.webp",
     "display": "Envisage",
     "value": "Envisage"
   },
   {
-    "file": "esskey_hero.webp",
+    "file": "esskey.webp",
     "display": "Esskey",
     "value": "Esskey"
   },
   {
-    "file": "estride_hero.webp",
-    "display": "E-Stride",
-    "value": "EStride"
+    "file": "estride.webp",
+    "display": "Estride",
+    "value": "Estride"
   },
   {
-    "file": "sheava_hero.webp",
-    "display": "ETR1",
-    "value": "ETR1"
+    "file": "etr1.webp",
+    "display": "Etr1",
+    "value": "Etr1"
   },
   {
-    "file": "eudora_hero.webp",
+    "file": "eudora.webp",
     "display": "Eudora",
     "value": "Eudora"
   },
   {
-    "file": "drifteuros_hero.webp",
+    "file": "euros.webp",
     "display": "Euros",
     "value": "Euros"
   },
   {
-    "file": "eurosx32_hero.webp",
+    "file": "euros_x32.webp",
     "display": "Euros X32",
     "value": "EurosX32"
   },
   {
-    "file": "everon_hero.webp",
+    "file": "everon.webp",
     "display": "Everon",
     "value": "Everon"
   },
   {
-    "file": "everon3_hero.webp",
+    "file": "everon_rs.webp",
     "display": "Everon RS",
     "value": "EveronRS"
   },
   {
-    "file": "exemplar_hero.webp",
+    "file": "exemplar.webp",
     "display": "Exemplar",
     "value": "Exemplar"
   },
   {
-    "file": "raiju_hero.webp",
-    "display": "F-160 Raiju",
-    "value": "F160Raiju"
-  },
-  {
-    "file": "f620_hero.webp",
+    "file": "f620.webp",
     "display": "F620",
     "value": "F620"
   },
   {
-    "file": "faction_hero.webp",
+    "file": "faction.webp",
     "display": "Faction",
     "value": "Faction"
   },
   {
-    "file": "faction2_hero.webp",
+    "file": "faction_custom.webp",
     "display": "Faction Custom",
     "value": "FactionCustom"
   },
   {
-    "file": "faction3_hero.webp",
-    "display": "Faction Custom Donk",
-    "value": "FactionCustomDonk"
+    "file": "faction_donk.webp",
+    "display": "Faction Donk",
+    "value": "FactionDonk"
   },
   {
-    "file": "fagaloa_hero.webp",
+    "file": "fagaloa.webp",
     "display": "Fagaloa",
     "value": "Fagaloa"
   },
   {
-    "file": "faggio2_hero.webp",
+    "file": "faggio.webp",
     "display": "Faggio",
     "value": "Faggio"
   },
   {
-    "file": "faggio3_hero.webp",
+    "file": "faggio_mod.webp",
     "display": "Faggio Mod",
     "value": "FaggioMod"
   },
   {
-    "file": "faggio_hero.webp",
+    "file": "faggio_sport.webp",
     "display": "Faggio Sport",
     "value": "FaggioSport"
   },
   {
-    "file": "fcr_hero.webp",
-    "display": "FCR 1000",
-    "value": "FCR1000"
+    "file": "fcr_1000.webp",
+    "display": "Fcr 1000",
+    "value": "Fcr1000"
   },
   {
-    "file": "fcr2_hero.webp",
-    "display": "FCR 1000 Custom",
-    "value": "FCR1000Custom"
+    "file": "fcr_1000_custom.webp",
+    "display": "Fcr 1000 Custom",
+    "value": "Fcr1000Custom"
   },
   {
-    "file": "felon_hero.webp",
+    "file": "felon.webp",
     "display": "Felon",
     "value": "Felon"
   },
   {
-    "file": "felon2_hero.webp",
+    "file": "felon_gt.webp",
     "display": "Felon GT",
     "value": "FelonGT"
   },
   {
-    "file": "feltzer2_hero.webp",
+    "file": "feltzer.webp",
     "display": "Feltzer",
     "value": "Feltzer"
   },
   {
-    "file": "feltzer3_hero.webp",
-    "display": "Feltzer Classic",
-    "value": "FeltzerClassic"
+    "file": "firebolt.webp",
+    "display": "Firebolt",
+    "value": "Firebolt"
   },
   {
-    "file": "pbus2_hero.webp",
-    "display": "Festival Bus",
-    "value": "FestivalBus"
+    "file": "firetruk.webp",
+    "display": "Firetruk",
+    "value": "Firetruk"
   },
   {
-    "file": "hunter_hero.webp",
-    "display": "FH-1 Hunter",
-    "value": "FH1Hunter"
-  },
-  {
-    "file": "fbi_hero.webp",
-    "display": "FIB",
-    "value": "FIB"
-  },
-  {
-    "file": "tractor2_hero.webp",
-    "display": "Fieldmaster",
-    "value": "Fieldmaster"
-  },
-  {
-    "file": "firebolt_hero.webp",
-    "display": "Firebolt ASP",
-    "value": "FireboltASP"
-  },
-  {
-    "file": "firetruk_hero.webp",
-    "display": "Fire Truck",
-    "value": "FireTruck"
-  },
-  {
-    "file": "fixter_hero.webp",
+    "file": "fixter.webp",
     "display": "Fixter",
     "value": "Fixter"
   },
   {
-    "file": "flashgt_hero.webp",
+    "file": "flash_gt.webp",
     "display": "Flash GT",
     "value": "FlashGT"
   },
   {
-    "file": "flatbed_hero.webp",
+    "file": "flatbed.webp",
     "display": "Flatbed",
     "value": "Flatbed"
   },
   {
-    "file": "fmj_hero.webp",
-    "display": "FMJ",
-    "value": "FMJ"
+    "file": "flatbed2.webp",
+    "display": "Flatbed2",
+    "value": "Flatbed2"
   },
   {
-    "file": "fmj2_hero.webp",
-    "display": "FMJ MK V",
-    "value": "FMJMKV"
+    "file": "fmj.webp",
+    "display": "Fmj",
+    "value": "Fmj"
   },
   {
-    "file": "forklift_hero.webp",
+    "file": "fmj_mk_v.webp",
+    "display": "Fmj MK V",
+    "value": "FmjMKV"
+  },
+  {
+    "file": "forklift.webp",
     "display": "Forklift",
     "value": "Forklift"
   },
   {
-    "file": "fq2_hero.webp",
-    "display": "FQ 2",
-    "value": "FQ2"
+    "file": "fq2.webp",
+    "display": "Fq2",
+    "value": "Fq2"
   },
   {
-    "file": "driftfr36_hero.webp",
-    "display": "FR36",
-    "value": "FR36"
+    "file": "fr36.webp",
+    "display": "Fr36",
+    "value": "Fr36"
   },
   {
-    "file": "btype2_hero.webp",
-    "display": "Fr\u00e4nken Stange",
-    "value": "Fr\u00e4nkenStange"
+    "file": "frankenstange.webp",
+    "display": "Frankenstange",
+    "value": "Frankenstange"
   },
   {
-    "file": "freecrawler_hero.webp",
+    "file": "freecrawler.webp",
     "display": "Freecrawler",
     "value": "Freecrawler"
   },
   {
-    "file": "freight_hero.webp",
-    "display": "Freight Train",
-    "value": "FreightTrain"
+    "file": "freight.webp",
+    "display": "Freight",
+    "value": "Freight"
   },
   {
-    "file": "frogger_hero.webp",
+    "file": "freight2.webp",
+    "display": "Freight2",
+    "value": "Freight2"
+  },
+  {
+    "file": "freightcar.webp",
+    "display": "Freightcar",
+    "value": "Freightcar"
+  },
+  {
+    "file": "freightcar2.webp",
+    "display": "Freightcar2",
+    "value": "Freightcar2"
+  },
+  {
+    "file": "freightcar3.webp",
+    "display": "Freightcar3",
+    "value": "Freightcar3"
+  },
+  {
+    "file": "freightcont1.webp",
+    "display": "Freightcont1",
+    "value": "Freightcont1"
+  },
+  {
+    "file": "freightcont2.webp",
+    "display": "Freightcont2",
+    "value": "Freightcont2"
+  },
+  {
+    "file": "freightgrain.webp",
+    "display": "Freightgrain",
+    "value": "Freightgrain"
+  },
+  {
+    "file": "freighttrailer.webp",
+    "display": "Freighttrailer",
+    "value": "Freighttrailer"
+  },
+  {
+    "file": "frogger.webp",
     "display": "Frogger",
     "value": "Frogger"
   },
   {
-    "file": "fugitive_hero.webp",
+    "file": "frogger2.webp",
+    "display": "Frogger2",
+    "value": "Frogger2"
+  },
+  {
+    "file": "fugitive.webp",
     "display": "Fugitive",
     "value": "Fugitive"
   },
   {
-    "file": "furia_hero.webp",
+    "file": "furia.webp",
     "display": "Furia",
     "value": "Furia"
   },
   {
-    "file": "furoregt_hero.webp",
+    "file": "furore_gt.webp",
     "display": "Furore GT",
     "value": "FuroreGT"
   },
   {
-    "file": "fusilade_hero.webp",
+    "file": "fusilade.webp",
     "display": "Fusilade",
     "value": "Fusilade"
   },
   {
-    "file": "driftfuto2_hero.webp",
+    "file": "futo.webp",
     "display": "Futo",
     "value": "Futo"
   },
   {
-    "file": "driftfuto_hero.webp",
-    "display": "Futo GTX",
-    "value": "FutoGTX"
+    "file": "futo_gtx.webp",
+    "display": "Futo Gtx",
+    "value": "FutoGtx"
   },
   {
-    "file": "bruiser2_hero.webp",
-    "display": "Future Shock Bruiser",
-    "value": "FutureShockBruiser"
+    "file": "futureshock_bruiser.webp",
+    "display": "Futureshock Bruiser",
+    "value": "FutureshockBruiser"
   },
   {
-    "file": "brutus2_hero.webp",
-    "display": "Future Shock Brutus",
-    "value": "FutureShockBrutus"
+    "file": "futureshock_brutus.webp",
+    "display": "Futureshock Brutus",
+    "value": "FutureshockBrutus"
   },
   {
-    "file": "cerberus2_hero.webp",
-    "display": "Future Shock Cerberus",
-    "value": "FutureShockCerberus"
+    "file": "futureshock_cerberus.webp",
+    "display": "Futureshock Cerberus",
+    "value": "FutureshockCerberus"
   },
   {
-    "file": "deathbike2_hero.webp",
-    "display": "Future Shock Deathbike",
-    "value": "FutureShockDeathbike"
+    "file": "futureshock_deathbike.webp",
+    "display": "Futureshock Deathbike",
+    "value": "FutureshockDeathbike"
   },
   {
-    "file": "dominator5_hero.webp",
-    "display": "Future Shock Dominator",
-    "value": "FutureShockDominator"
+    "file": "futureshock_dominator.webp",
+    "display": "Futureshock Dominator",
+    "value": "FutureshockDominator"
   },
   {
-    "file": "impaler3_hero.webp",
-    "display": "Future Shock Impaler",
-    "value": "FutureShockImpaler"
+    "file": "futureshock_impaler.webp",
+    "display": "Futureshock Impaler",
+    "value": "FutureshockImpaler"
   },
   {
-    "file": "imperator2_hero.webp",
-    "display": "Future Shock Imperator",
-    "value": "FutureShockImperator"
+    "file": "futureshock_imperator.webp",
+    "display": "Futureshock Imperator",
+    "value": "FutureshockImperator"
   },
   {
-    "file": "issi5_hero.webp",
-    "display": "Future Shock Issi",
-    "value": "FutureShockIssi"
+    "file": "futureshock_issi.webp",
+    "display": "Futureshock Issi",
+    "value": "FutureshockIssi"
   },
   {
-    "file": "monster4_hero.webp",
-    "display": "Future Shock Sasquatch",
-    "value": "FutureShockSasquatch"
+    "file": "futureshock_sashquatch.webp",
+    "display": "Futureshock Sashquatch",
+    "value": "FutureshockSashquatch"
   },
   {
-    "file": "scarab2_hero.webp",
-    "display": "Future Shock Scarab",
-    "value": "FutureShockScarab"
+    "file": "futureshock_scarab.webp",
+    "display": "Futureshock Scarab",
+    "value": "FutureshockScarab"
   },
   {
-    "file": "slamvan5_hero.webp",
-    "display": "Future Shock Slamvan",
-    "value": "FutureShockSlamvan"
+    "file": "futureshock_slamvan.webp",
+    "display": "Futureshock Slamvan",
+    "value": "FutureshockSlamvan"
   },
   {
-    "file": "zr3802_hero.webp",
-    "display": "Future Shock ZR380",
-    "value": "FutureShockZR380"
+    "file": "futureshock_zr380.webp",
+    "display": "Futureshock Zr380",
+    "value": "FutureshockZr380"
   },
   {
-    "file": "gburrito_hero.webp",
+    "file": "gang_burrito(lost mc).webp",
+    "display": "Gang Burrito(Lost Mc)",
+    "value": "GangBurrito(LostMc)"
+  },
+  {
+    "file": "gang_burrito.webp",
     "display": "Gang Burrito",
     "value": "GangBurrito"
   },
   {
-    "file": "gargoyle_hero.webp",
+    "file": "gargoyle.webp",
     "display": "Gargoyle",
     "value": "Gargoyle"
   },
   {
-    "file": "gauntlet_hero.webp",
+    "file": "gauntlet.webp",
     "display": "Gauntlet",
     "value": "Gauntlet"
   },
   {
-    "file": "gauntlet3_hero.webp",
+    "file": "gauntlet_classic.webp",
     "display": "Gauntlet Classic",
     "value": "GauntletClassic"
   },
   {
-    "file": "gauntlet5_hero.webp",
-    "display": "Gauntlet Classic Custom",
-    "value": "GauntletClassicCustom"
+    "file": "gauntlet_custom.webp",
+    "display": "Gauntlet Custom",
+    "value": "GauntletCustom"
   },
   {
-    "file": "driftgauntlet4_hero.webp",
+    "file": "gauntlet_hellfire.webp",
     "display": "Gauntlet Hellfire",
     "value": "GauntletHellfire"
   },
   {
-    "file": "polgauntlet_hero.webp",
+    "file": "gauntlet_interceptor.webp",
     "display": "Gauntlet Interceptor",
     "value": "GauntletInterceptor"
   },
   {
-    "file": "gb200_hero.webp",
-    "display": "GB200",
+    "file": "gb_200.webp",
+    "display": "GB 200",
     "value": "GB200"
   },
   {
-    "file": "glendale_hero.webp",
+    "file": "glendale.webp",
     "display": "Glendale",
     "value": "Glendale"
   },
   {
-    "file": "glendale2_hero.webp",
+    "file": "glendale_custom.webp",
     "display": "Glendale Custom",
     "value": "GlendaleCustom"
   },
   {
-    "file": "blista3_hero.webp",
-    "display": "Go Go Monkey Blista",
-    "value": "GoGoMonkeyBlista"
+    "file": "go_go_monkey_blista.webp",
+    "display": "GO GO Monkey Blista",
+    "value": "GOGOMonkeyBlista"
   },
   {
-    "file": "gp1_hero.webp",
-    "display": "GP1",
-    "value": "GP1"
+    "file": "gp1.webp",
+    "display": "Gp1",
+    "value": "Gp1"
   },
   {
-    "file": "graintrailer_hero.webp",
+    "file": "graintrailer.webp",
     "display": "Graintrailer",
     "value": "Graintrailer"
   },
   {
-    "file": "granger_hero.webp",
+    "file": "granger.webp",
     "display": "Granger",
     "value": "Granger"
   },
   {
-    "file": "granger2_hero.webp",
-    "display": "Granger 3600LX",
-    "value": "Granger3600LX"
+    "file": "granger_3600lx.webp",
+    "display": "Granger 3600Lx",
+    "value": "Granger3600Lx"
   },
   {
-    "file": "greenwood_hero.webp",
+    "file": "granger_fib.webp",
+    "display": "Granger Fib",
+    "value": "GrangerFib"
+  },
+  {
+    "file": "greenwood.webp",
     "display": "Greenwood",
     "value": "Greenwood"
   },
   {
-    "file": "polgreenwood_hero.webp",
+    "file": "greenwood_cruiser.webp",
     "display": "Greenwood Cruiser",
     "value": "GreenwoodCruiser"
   },
   {
-    "file": "gresley_hero.webp",
+    "file": "gresley.webp",
     "display": "Gresley",
     "value": "Gresley"
   },
   {
-    "file": "growler_hero.webp",
+    "file": "growler.webp",
     "display": "Growler",
     "value": "Growler"
   },
   {
-    "file": "gt500_hero.webp",
-    "display": "GT500",
+    "file": "gt_500.webp",
+    "display": "GT 500",
     "value": "GT500"
   },
   {
-    "file": "gt750_hero.webp",
-    "display": "GT750",
+    "file": "gt_750.webp",
+    "display": "GT 750",
     "value": "GT750"
   },
   {
-    "file": "guardian_hero.webp",
+    "file": "guardian.webp",
     "display": "Guardian",
     "value": "Guardian"
   },
   {
-    "file": "habanero_hero.webp",
+    "file": "habanero.webp",
     "display": "Habanero",
     "value": "Habanero"
   },
   {
-    "file": "hakuchou_hero.webp",
+    "file": "hakuchou.webp",
     "display": "Hakuchou",
     "value": "Hakuchou"
   },
   {
-    "file": "hakuchou2_hero.webp",
+    "file": "hakuchou_drag.webp",
     "display": "Hakuchou Drag",
     "value": "HakuchouDrag"
   },
   {
-    "file": "halftrack_hero.webp",
-    "display": "Half-track",
+    "file": "halftrack.webp",
+    "display": "Halftrack",
     "value": "Halftrack"
   },
   {
-    "file": "drifthardy_hero.webp",
+    "file": "handler.webp",
+    "display": "Handler",
+    "value": "Handler"
+  },
+  {
+    "file": "hardy.webp",
     "display": "Hardy",
     "value": "Hardy"
   },
   {
-    "file": "hauler_hero.webp",
+    "file": "hauler.webp",
     "display": "Hauler",
     "value": "Hauler"
   },
   {
-    "file": "hauler2_hero.webp",
-    "display": "Hauler Custom",
-    "value": "HaulerCustom"
+    "file": "hauler2.webp",
+    "display": "Hauler2",
+    "value": "Hauler2"
   },
   {
-    "file": "havok_hero.webp",
+    "file": "havok.webp",
     "display": "Havok",
     "value": "Havok"
   },
   {
-    "file": "hellion_hero.webp",
+    "file": "hellion.webp",
     "display": "Hellion",
     "value": "Hellion"
   },
   {
-    "file": "hermes_hero.webp",
+    "file": "hermes.webp",
     "display": "Hermes",
     "value": "Hermes"
   },
   {
-    "file": "hexer_hero.webp",
+    "file": "hexer.webp",
     "display": "Hexer",
     "value": "Hexer"
   },
   {
-    "file": "maverick2_hero.webp",
-    "display": "Higgins Helitours Maverick",
-    "value": "HigginsHelitoursMaverick"
+    "file": "holiday_hauler.webp",
+    "display": "Holiday Hauler",
+    "value": "HolidayHauler"
   },
   {
-    "file": "horus_hero.webp",
+    "file": "holiday_hauler_trailer.webp",
+    "display": "Holiday Hauler Trailer",
+    "value": "HolidayHaulerTrailer"
+  },
+  {
+    "file": "horus.webp",
     "display": "Horus",
     "value": "Horus"
   },
   {
-    "file": "hotknife_hero.webp",
+    "file": "hotknife.webp",
     "display": "Hotknife",
     "value": "Hotknife"
   },
   {
-    "file": "everon2_hero.webp",
+    "file": "hotring_everon.webp",
     "display": "Hotring Everon",
     "value": "HotringEveron"
   },
   {
-    "file": "gauntlet6_hero.webp",
+    "file": "hotring_hellfire.webp",
     "display": "Hotring Hellfire",
     "value": "HotringHellfire"
   },
   {
-    "file": "hotring_hero.webp",
+    "file": "hotring_sabre.webp",
     "display": "Hotring Sabre",
     "value": "HotringSabre"
   },
   {
-    "file": "blazer3_hero.webp",
-    "display": "Hot Rod Blazer",
-    "value": "HotRodBlazer"
+    "file": "howard.webp",
+    "display": "Howard",
+    "value": "Howard"
   },
   {
-    "file": "howard_hero.webp",
-    "display": "Howard NX-25",
-    "value": "HowardNX25"
+    "file": "hunter.webp",
+    "display": "Hunter",
+    "value": "Hunter"
   },
   {
-    "file": "huntley_hero.webp",
-    "display": "Huntley S",
-    "value": "HuntleyS"
+    "file": "huntley.webp",
+    "display": "Huntley",
+    "value": "Huntley"
   },
   {
-    "file": "hustler_hero.webp",
+    "file": "hustler.webp",
     "display": "Hustler",
     "value": "Hustler"
   },
   {
-    "file": "hydra_hero.webp",
+    "file": "hydra.webp",
     "display": "Hydra",
     "value": "Hydra"
   },
   {
-    "file": "ignus_hero.webp",
+    "file": "i_wagen.webp",
+    "display": "I Wagen",
+    "value": "IWagen"
+  },
+  {
+    "file": "ignus.webp",
     "display": "Ignus",
     "value": "Ignus"
   },
   {
-    "file": "polignus_hero.webp",
+    "file": "ignus_pursuit.webp",
     "display": "Ignus Pursuit",
     "value": "IgnusPursuit"
   },
   {
-    "file": "imorgon_hero.webp",
+    "file": "imorgon.webp",
     "display": "Imorgon",
     "value": "Imorgon"
   },
   {
-    "file": "impaler_hero.webp",
+    "file": "impaler.webp",
     "display": "Impaler",
     "value": "Impaler"
   },
   {
-    "file": "impaler6_hero.webp",
+    "file": "impaler_lx.webp",
     "display": "Impaler LX",
     "value": "ImpalerLX"
   },
   {
-    "file": "polimpaler6_hero.webp",
+    "file": "impaler_lx_cruiser.webp",
     "display": "Impaler LX Cruiser",
     "value": "ImpalerLXCruiser"
   },
   {
-    "file": "impaler5_hero.webp",
+    "file": "impaler_sz.webp",
     "display": "Impaler SZ",
     "value": "ImpalerSZ"
   },
   {
-    "file": "polimpaler5_hero.webp",
+    "file": "impaler_sz_cruiser.webp",
     "display": "Impaler SZ Cruiser",
     "value": "ImpalerSZCruiser"
   },
   {
-    "file": "inductor_hero.webp",
+    "file": "inductor.webp",
     "display": "Inductor",
     "value": "Inductor"
   },
   {
-    "file": "infernus_hero.webp",
+    "file": "inductor2.webp",
+    "display": "Inductor2",
+    "value": "Inductor2"
+  },
+  {
+    "file": "infernus.webp",
     "display": "Infernus",
     "value": "Infernus"
   },
   {
-    "file": "infernus2_hero.webp",
+    "file": "infernus_classic.webp",
     "display": "Infernus Classic",
     "value": "InfernusClassic"
   },
   {
-    "file": "ingot_hero.webp",
+    "file": "ingot.webp",
     "display": "Ingot",
     "value": "Ingot"
   },
   {
-    "file": "bfinjection_hero.webp",
-    "display": "Injection",
-    "value": "Injection"
-  },
-  {
-    "file": "innovation_hero.webp",
+    "file": "innovation.webp",
     "display": "Innovation",
     "value": "Innovation"
   },
   {
-    "file": "insurgent2_hero.webp",
+    "file": "insurgent.webp",
     "display": "Insurgent",
     "value": "Insurgent"
   },
   {
-    "file": "insurgent_hero.webp",
-    "display": "Insurgent Pick-Up",
-    "value": "InsurgentPickUp"
+    "file": "insurgent_pickup_custom.webp",
+    "display": "Insurgent Pickup Custom",
+    "value": "InsurgentPickupCustom"
   },
   {
-    "file": "insurgent3_hero.webp",
-    "display": "Insurgent Pick-Up Custom",
-    "value": "InsurgentPickUpCustom"
-  },
-  {
-    "file": "intruder_hero.webp",
+    "file": "intruder.webp",
     "display": "Intruder",
     "value": "Intruder"
   },
   {
-    "file": "minitank_hero.webp",
-    "display": "Invade and Persuade Tank",
-    "value": "InvadeandPersuadeTank"
+    "file": "iron_mule.webp",
+    "display": "Iron Mule",
+    "value": "IronMule"
   },
   {
-    "file": "issi2_hero.webp",
+    "file": "issi.webp",
     "display": "Issi",
     "value": "Issi"
   },
   {
-    "file": "issi3_hero.webp",
+    "file": "issi_classic.webp",
     "display": "Issi Classic",
     "value": "IssiClassic"
   },
   {
-    "file": "issi8_hero.webp",
+    "file": "issi_rally.webp",
     "display": "Issi Rally",
     "value": "IssiRally"
   },
   {
-    "file": "issi7_hero.webp",
+    "file": "issi_sport.webp",
     "display": "Issi Sport",
     "value": "IssiSport"
   },
   {
-    "file": "itali2_hero.webp",
+    "file": "itali_classic.webp",
     "display": "Itali Classic",
     "value": "ItaliClassic"
   },
   {
-    "file": "italigtb_hero.webp",
-    "display": "Itali GTB",
-    "value": "ItaliGTB"
+    "file": "itali_gtb.webp",
+    "display": "Itali Gtb",
+    "value": "ItaliGtb"
   },
   {
-    "file": "italigtb2_hero.webp",
-    "display": "Itali GTB Custom",
-    "value": "ItaliGTBCustom"
+    "file": "itali_gtb_custom.webp",
+    "display": "Itali Gtb Custom",
+    "value": "ItaliGtbCustom"
   },
   {
-    "file": "italigto_hero.webp",
-    "display": "Itali GTO",
-    "value": "ItaliGTO"
+    "file": "itali_gto.webp",
+    "display": "Itali Gto",
+    "value": "ItaliGto"
   },
   {
-    "file": "stingertt_hero.webp",
-    "display": "Itali GTO Stinger TT",
-    "value": "ItaliGTOStingerTT"
+    "file": "itali_gto_stinger_tt.webp",
+    "display": "Itali Gto Stinger TT",
+    "value": "ItaliGtoStingerTT"
   },
   {
-    "file": "italirsx_hero.webp",
-    "display": "Itali RSX",
-    "value": "ItaliRSX"
+    "file": "itali_rsx.webp",
+    "display": "Itali Rsx",
+    "value": "ItaliRsx"
   },
   {
-    "file": "iwagen_hero.webp",
-    "display": "I-Wagen",
-    "value": "IWagen"
-  },
-  {
-    "file": "jackal_hero.webp",
+    "file": "jackal.webp",
     "display": "Jackal",
     "value": "Jackal"
   },
   {
-    "file": "jb700_hero.webp",
+    "file": "jb_700.webp",
     "display": "JB 700",
     "value": "JB700"
   },
   {
-    "file": "jb7002_hero.webp",
+    "file": "jb_700w.webp",
     "display": "JB 700W",
     "value": "JB700W"
   },
   {
-    "file": "jester_hero.webp",
+    "file": "jester(racecar).webp",
+    "display": "Jester(Racecar)",
+    "value": "Jester(Racecar)"
+  },
+  {
+    "file": "jester.webp",
     "display": "Jester",
     "value": "Jester"
   },
   {
-    "file": "driftjester3_hero.webp",
+    "file": "jester_classic.webp",
     "display": "Jester Classic",
     "value": "JesterClassic"
   },
   {
-    "file": "jester2_hero.webp",
-    "display": "Jester (Racecar)",
-    "value": "JesterRacecar"
-  },
-  {
-    "file": "driftjester_hero.webp",
+    "file": "jester_rr.webp",
     "display": "Jester RR",
     "value": "JesterRR"
   },
   {
-    "file": "jester5_hero.webp",
+    "file": "jester_rr_widebody.webp",
     "display": "Jester RR Widebody",
     "value": "JesterRRWidebody"
   },
   {
-    "file": "jet_hero.webp",
+    "file": "jet.webp",
     "display": "Jet",
     "value": "Jet"
   },
   {
-    "file": "jetmax_hero.webp",
+    "file": "jetmax.webp",
     "display": "Jetmax",
     "value": "Jetmax"
   },
   {
-    "file": "journey_hero.webp",
+    "file": "journey.webp",
     "display": "Journey",
     "value": "Journey"
   },
   {
-    "file": "journey2_hero.webp",
-    "display": "Journey II",
-    "value": "JourneyII"
+    "file": "journey2.webp",
+    "display": "Journey2",
+    "value": "Journey2"
   },
   {
-    "file": "jubilee_hero.webp",
+    "file": "jubilee.webp",
     "display": "Jubilee",
     "value": "Jubilee"
   },
   {
-    "file": "jugular_hero.webp",
+    "file": "jugular.webp",
     "display": "Jugular",
     "value": "Jugular"
   },
   {
-    "file": "inductor2_hero.webp",
-    "display": "Junk Energy Inductor",
-    "value": "JunkEnergyInductor"
-  },
-  {
-    "file": "kalahari_hero.webp",
+    "file": "kalahari.webp",
     "display": "Kalahari",
     "value": "Kalahari"
   },
   {
-    "file": "kamacho_hero.webp",
+    "file": "kamacho.webp",
     "display": "Kamacho",
     "value": "Kamacho"
   },
   {
-    "file": "kanjosj_hero.webp",
+    "file": "kanjo_sj.webp",
     "display": "Kanjo SJ",
     "value": "KanjoSJ"
   },
   {
-    "file": "driftkeitora_hero.webp",
+    "file": "keitora.webp",
     "display": "Keitora",
     "value": "Keitora"
   },
   {
-    "file": "khamelion_hero.webp",
+    "file": "khamelion.webp",
     "display": "Khamelion",
     "value": "Khamelion"
   },
   {
-    "file": "komoda_hero.webp",
+    "file": "khanjali.webp",
+    "display": "Khanjali",
+    "value": "Khanjali"
+  },
+  {
+    "file": "komoda.webp",
     "display": "Komoda",
     "value": "Komoda"
   },
   {
-    "file": "kosatka_hero.webp",
+    "file": "kosatka.webp",
     "display": "Kosatka",
     "value": "Kosatka"
   },
   {
-    "file": "submersible2_hero.webp",
-    "display": "Kraken",
-    "value": "Kraken"
-  },
-  {
-    "file": "krieger_hero.webp",
+    "file": "krieger.webp",
     "display": "Krieger",
     "value": "Krieger"
   },
   {
-    "file": "patrolboat_hero.webp",
-    "display": "Kurtz 31 Patrol Boat",
-    "value": "Kurtz31PatrolBoat"
+    "file": "kuruma(armored).webp",
+    "display": "Kuruma(Armored)",
+    "value": "Kuruma(Armored)"
   },
   {
-    "file": "kuruma_hero.webp",
+    "file": "kuruma.webp",
     "display": "Kuruma",
     "value": "Kuruma"
   },
   {
-    "file": "kuruma2_hero.webp",
-    "display": "Kuruma (Armored)",
-    "value": "KurumaArmored"
+    "file": "la_coureuse.webp",
+    "display": "LA Coureuse",
+    "value": "LACoureuse"
   },
   {
-    "file": "coureur_hero.webp",
-    "display": "La Coureuse",
-    "value": "LaCoureuse"
-  },
-  {
-    "file": "landstalker_hero.webp",
+    "file": "landstalker.webp",
     "display": "Landstalker",
     "value": "Landstalker"
   },
   {
-    "file": "landstalker2_hero.webp",
+    "file": "landstalker_xl.webp",
     "display": "Landstalker XL",
     "value": "LandstalkerXL"
   },
   {
-    "file": "laufer_hero.webp",
-    "display": "L\u00e4ufer",
-    "value": "L\u00e4ufer"
+    "file": "laufer.webp",
+    "display": "Laufer",
+    "value": "Laufer"
   },
   {
-    "file": "mower_hero.webp",
-    "display": "Lawn Mower",
-    "value": "LawnMower"
+    "file": "lazer.webp",
+    "display": "Lazer",
+    "value": "Lazer"
   },
   {
-    "file": "lectro_hero.webp",
+    "file": "lectro.webp",
     "display": "Lectro",
     "value": "Lectro"
   },
   {
-    "file": "starling_hero.webp",
-    "display": "LF-22 Starling",
-    "value": "LF22Starling"
+    "file": "liberator.webp",
+    "display": "Liberator",
+    "value": "Liberator"
   },
   {
-    "file": "lguard_hero.webp",
-    "display": "Lifeguard",
-    "value": "Lifeguard"
+    "file": "lifegaurd.webp",
+    "display": "Lifegaurd",
+    "value": "Lifegaurd"
   },
   {
-    "file": "lm87_hero.webp",
-    "display": "LM87",
-    "value": "LM87"
+    "file": "lm87.webp",
+    "display": "Lm87",
+    "value": "Lm87"
   },
   {
-    "file": "locust_hero.webp",
+    "file": "locust.webp",
     "display": "Locust",
     "value": "Locust"
   },
   {
-    "file": "longfin_hero.webp",
+    "file": "longfin.webp",
     "display": "Longfin",
     "value": "Longfin"
   },
   {
-    "file": "slamvan2_hero.webp",
+    "file": "lost_slamvan.webp",
     "display": "Lost Slamvan",
     "value": "LostSlamvan"
   },
   {
-    "file": "lrcgt_hero.webp",
-    "display": "LRC GT",
-    "value": "LRCGT"
+    "file": "lrc_gt.webp",
+    "display": "Lrc GT",
+    "value": "LrcGT"
   },
   {
-    "file": "cheetah3_hero.webp",
-    "display": "LSCM Cheetah Classic",
-    "value": "LSCMCheetahClassic"
+    "file": "lscm_cheetah_classic.webp",
+    "display": "Lscm Cheetah Classic",
+    "value": "LscmCheetahClassic"
   },
   {
-    "file": "luiva_hero.webp",
+    "file": "luiva.webp",
     "display": "Luiva",
     "value": "Luiva"
   },
   {
-    "file": "lurcher_hero.webp",
+    "file": "lurcher.webp",
     "display": "Lurcher",
     "value": "Lurcher"
   },
   {
-    "file": "luxor_hero.webp",
+    "file": "luxor.webp",
     "display": "Luxor",
     "value": "Luxor"
   },
   {
-    "file": "luxor2_hero.webp",
+    "file": "luxor_deluxe.webp",
     "display": "Luxor Deluxe",
     "value": "LuxorDeluxe"
   },
   {
-    "file": "lynx_hero.webp",
+    "file": "lynx.webp",
     "display": "Lynx",
     "value": "Lynx"
   },
   {
-    "file": "stunt_hero.webp",
-    "display": "Mallard",
-    "value": "Mallard"
-  },
-  {
-    "file": "mamba_hero.webp",
+    "file": "mamba.webp",
     "display": "Mamba",
     "value": "Mamba"
   },
   {
-    "file": "mammatus_hero.webp",
+    "file": "mammatus.webp",
     "display": "Mammatus",
     "value": "Mammatus"
   },
   {
-    "file": "manana_hero.webp",
+    "file": "manana.webp",
     "display": "Manana",
     "value": "Manana"
   },
   {
-    "file": "manana2_hero.webp",
+    "file": "manana_custom.webp",
     "display": "Manana Custom",
     "value": "MananaCustom"
   },
   {
-    "file": "manchez_hero.webp",
+    "file": "manchez.webp",
     "display": "Manchez",
     "value": "Manchez"
   },
   {
-    "file": "manchez2_hero.webp",
+    "file": "manchez_scout.webp",
     "display": "Manchez Scout",
     "value": "ManchezScout"
   },
   {
-    "file": "manchez3_hero.webp",
+    "file": "manchez_scout_c.webp",
     "display": "Manchez Scout C",
     "value": "ManchezScoutC"
   },
   {
-    "file": "marquis_hero.webp",
+    "file": "mariachi_tornado.webp",
+    "display": "Mariachi Tornado",
+    "value": "MariachiTornado"
+  },
+  {
+    "file": "marquis.webp",
     "display": "Marquis",
     "value": "Marquis"
   },
   {
-    "file": "marshall_hero.webp",
+    "file": "marshall.webp",
     "display": "Marshall",
     "value": "Marshall"
   },
   {
-    "file": "massacro_hero.webp",
+    "file": "massacro(racecar).webp",
+    "display": "Massacro(Racecar)",
+    "value": "Massacro(Racecar)"
+  },
+  {
+    "file": "massacro.webp",
     "display": "Massacro",
     "value": "Massacro"
   },
   {
-    "file": "massacro2_hero.webp",
-    "display": "Massacro (Racecar)",
-    "value": "MassacroRacecar"
-  },
-  {
-    "file": "maverick_hero.webp",
+    "file": "maverick.webp",
     "display": "Maverick",
     "value": "Maverick"
   },
   {
-    "file": "menacer_hero.webp",
+    "file": "maverick2.webp",
+    "display": "Maverick2",
+    "value": "Maverick2"
+  },
+  {
+    "file": "menacer.webp",
     "display": "Menacer",
     "value": "Menacer"
   },
   {
-    "file": "merula_hero.webp",
+    "file": "merula.webp",
     "display": "Merula",
     "value": "Merula"
   },
   {
-    "file": "mesa_hero.webp",
+    "file": "mesa(merrywether).webp",
+    "display": "Mesa(Merrywether)",
+    "value": "Mesa(Merrywether)"
+  },
+  {
+    "file": "mesa.webp",
     "display": "Mesa",
     "value": "Mesa"
   },
   {
-    "file": "michelli_hero.webp",
-    "display": "Michelli GT",
-    "value": "MichelliGT"
+    "file": "mesa_snow.webp",
+    "display": "Mesa Snow",
+    "value": "MesaSnow"
   },
   {
-    "file": "miljet_hero.webp",
+    "file": "metrotrain.webp",
+    "display": "Metrotrain",
+    "value": "Metrotrain"
+  },
+  {
+    "file": "michelli.webp",
+    "display": "Michelli",
+    "value": "Michelli"
+  },
+  {
+    "file": "miljet.webp",
     "display": "Miljet",
     "value": "Miljet"
   },
   {
-    "file": "minimus_hero.webp",
+    "file": "minimus.webp",
     "display": "Minimus",
     "value": "Minimus"
   },
   {
-    "file": "minivan_hero.webp",
+    "file": "minitank.webp",
+    "display": "Minitank",
+    "value": "Minitank"
+  },
+  {
+    "file": "minivan.webp",
     "display": "Minivan",
     "value": "Minivan"
   },
   {
-    "file": "minivan2_hero.webp",
+    "file": "minivan_custom.webp",
     "display": "Minivan Custom",
     "value": "MinivanCustom"
   },
   {
-    "file": "mixer_hero.webp",
+    "file": "mixer.webp",
     "display": "Mixer",
     "value": "Mixer"
   },
   {
-    "file": "trailerlarge_hero.webp",
-    "display": "Mobile Operations Center",
-    "value": "MobileOperationsCenter"
+    "file": "mixer2.webp",
+    "display": "Mixer2",
+    "value": "Mixer2"
   },
   {
-    "file": "mogul_hero.webp",
+    "file": "mogul.webp",
     "display": "Mogul",
     "value": "Mogul"
   },
   {
-    "file": "monroe_hero.webp",
+    "file": "molotok.webp",
+    "display": "Molotok",
+    "value": "Molotok"
+  },
+  {
+    "file": "monroe.webp",
     "display": "Monroe",
     "value": "Monroe"
   },
   {
-    "file": "monstrociti_hero.webp",
-    "display": "MonstroCiti",
-    "value": "MonstroCiti"
+    "file": "monstrociti.webp",
+    "display": "Monstrociti",
+    "value": "Monstrociti"
   },
   {
-    "file": "moonbeam_hero.webp",
+    "file": "moonbeam.webp",
     "display": "Moonbeam",
     "value": "Moonbeam"
   },
   {
-    "file": "moonbeam2_hero.webp",
+    "file": "moonbeam_custom.webp",
     "display": "Moonbeam Custom",
     "value": "MoonbeamCustom"
   },
   {
-    "file": "mule_hero.webp",
+    "file": "mower.webp",
+    "display": "Mower",
+    "value": "Mower"
+  },
+  {
+    "file": "mtl_dune.webp",
+    "display": "Mtl Dune",
+    "value": "MtlDune"
+  },
+  {
+    "file": "mule.webp",
     "display": "Mule",
     "value": "Mule"
   },
   {
-    "file": "mule4_hero.webp",
+    "file": "mule2.webp",
+    "display": "Mule2",
+    "value": "Mule2"
+  },
+  {
+    "file": "mule3.webp",
+    "display": "Mule3",
+    "value": "Mule3"
+  },
+  {
+    "file": "mule5.webp",
+    "display": "Mule5",
+    "value": "Mule5"
+  },
+  {
+    "file": "mule_custom.webp",
     "display": "Mule Custom",
     "value": "MuleCustom"
   },
   {
-    "file": "driftnebula_hero.webp",
-    "display": "Nebula Turbo",
-    "value": "NebulaTurbo"
+    "file": "nebula.webp",
+    "display": "Nebula",
+    "value": "Nebula"
   },
   {
-    "file": "nemesis_hero.webp",
+    "file": "nemesis.webp",
     "display": "Nemesis",
     "value": "Nemesis"
   },
   {
-    "file": "neo_hero.webp",
+    "file": "neo.webp",
     "display": "Neo",
     "value": "Neo"
   },
   {
-    "file": "neon_hero.webp",
+    "file": "neon.webp",
     "display": "Neon",
     "value": "Neon"
   },
   {
-    "file": "nero_hero.webp",
+    "file": "nero.webp",
     "display": "Nero",
     "value": "Nero"
   },
   {
-    "file": "nero2_hero.webp",
+    "file": "nero_custom.webp",
     "display": "Nero Custom",
     "value": "NeroCustom"
   },
   {
-    "file": "nightblade_hero.webp",
+    "file": "nightblade.webp",
     "display": "Nightblade",
     "value": "Nightblade"
   },
   {
-    "file": "bruiser3_hero.webp",
+    "file": "nightmare_bruiser.webp",
     "display": "Nightmare Bruiser",
     "value": "NightmareBruiser"
   },
   {
-    "file": "brutus3_hero.webp",
+    "file": "nightmare_brutus.webp",
     "display": "Nightmare Brutus",
     "value": "NightmareBrutus"
   },
   {
-    "file": "cerberus3_hero.webp",
+    "file": "nightmare_cerberus.webp",
     "display": "Nightmare Cerberus",
     "value": "NightmareCerberus"
   },
   {
-    "file": "deathbike3_hero.webp",
+    "file": "nightmare_deathbike.webp",
     "display": "Nightmare Deathbike",
     "value": "NightmareDeathbike"
   },
   {
-    "file": "dominator6_hero.webp",
+    "file": "nightmare_dominator.webp",
     "display": "Nightmare Dominator",
     "value": "NightmareDominator"
   },
   {
-    "file": "impaler4_hero.webp",
+    "file": "nightmare_impaler.webp",
     "display": "Nightmare Impaler",
     "value": "NightmareImpaler"
   },
   {
-    "file": "imperator3_hero.webp",
+    "file": "nightmare_imperator.webp",
     "display": "Nightmare Imperator",
     "value": "NightmareImperator"
   },
   {
-    "file": "issi6_hero.webp",
+    "file": "nightmare_issi.webp",
     "display": "Nightmare Issi",
     "value": "NightmareIssi"
   },
   {
-    "file": "monster5_hero.webp",
-    "display": "Nightmare Sasquatch",
-    "value": "NightmareSasquatch"
+    "file": "nightmare_sashquatch.webp",
+    "display": "Nightmare Sashquatch",
+    "value": "NightmareSashquatch"
   },
   {
-    "file": "scarab3_hero.webp",
+    "file": "nightmare_scarab.webp",
     "display": "Nightmare Scarab",
     "value": "NightmareScarab"
   },
   {
-    "file": "slamvan6_hero.webp",
+    "file": "nightmare_slamvan.webp",
     "display": "Nightmare Slamvan",
     "value": "NightmareSlamvan"
   },
   {
-    "file": "zr3803_hero.webp",
-    "display": "Nightmare ZR380",
-    "value": "NightmareZR380"
+    "file": "nightmare_zr3803.webp",
+    "display": "Nightmare Zr3803",
+    "value": "NightmareZr3803"
   },
   {
-    "file": "nightshade_hero.webp",
+    "file": "nightshade.webp",
     "display": "Nightshade",
     "value": "Nightshade"
   },
   {
-    "file": "nightshark_hero.webp",
+    "file": "nightshark.webp",
     "display": "Nightshark",
     "value": "Nightshark"
   },
   {
-    "file": "nimbus_hero.webp",
+    "file": "nimbus.webp",
     "display": "Nimbus",
     "value": "Nimbus"
   },
   {
-    "file": "niobe_hero.webp",
+    "file": "niobe.webp",
     "display": "Niobe",
     "value": "Niobe"
   },
   {
-    "file": "novak_hero.webp",
+    "file": "nokota.webp",
+    "display": "Nokota",
+    "value": "Nokota"
+  },
+  {
+    "file": "novak.webp",
     "display": "Novak",
     "value": "Novak"
   },
   {
-    "file": "omnis_hero.webp",
+    "file": "omnis.webp",
     "display": "Omnis",
     "value": "Omnis"
   },
   {
-    "file": "omnisegt_hero.webp",
-    "display": "Omnis e-GT",
-    "value": "OmniseGT"
+    "file": "omnis_e-gt.webp",
+    "display": "Omnis E-Gt",
+    "value": "OmnisE-Gt"
   },
   {
-    "file": "oppressor_hero.webp",
+    "file": "oppressor.webp",
     "display": "Oppressor",
     "value": "Oppressor"
   },
   {
-    "file": "oppressor2_hero.webp",
-    "display": "Oppressor Mk II",
-    "value": "OppressorMkII"
+    "file": "oppressor_mk_2.webp",
+    "display": "Oppressor MK 2",
+    "value": "OppressorMK2"
   },
   {
-    "file": "oracle2_hero.webp",
+    "file": "oracle.webp",
     "display": "Oracle",
     "value": "Oracle"
   },
   {
-    "file": "oracle_hero.webp",
+    "file": "oracle_xs.webp",
     "display": "Oracle XS",
     "value": "OracleXS"
   },
   {
-    "file": "osiris_hero.webp",
+    "file": "osiris.webp",
     "display": "Osiris",
     "value": "Osiris"
   },
   {
-    "file": "outlaw_hero.webp",
+    "file": "outlaw.webp",
     "display": "Outlaw",
     "value": "Outlaw"
   },
   {
-    "file": "polfaction2_hero.webp",
+    "file": "outreach_faction.webp",
     "display": "Outreach Faction",
     "value": "OutreachFaction"
   },
   {
-    "file": "nokota_hero.webp",
-    "display": "P-45 Nokota",
-    "value": "P45Nokota"
+    "file": "p4r.webp",
+    "display": "P4R",
+    "value": "P4R"
   },
   {
-    "file": "lazer_hero.webp",
-    "display": "P-996 LAZER",
-    "value": "P996LAZER"
-  },
-  {
-    "file": "packer_hero.webp",
+    "file": "packer.webp",
     "display": "Packer",
     "value": "Packer"
   },
   {
-    "file": "panthere_hero.webp",
+    "file": "panthere.webp",
     "display": "Panthere",
     "value": "Panthere"
   },
   {
-    "file": "panto_hero.webp",
+    "file": "panto.webp",
     "display": "Panto",
     "value": "Panto"
   },
   {
-    "file": "paradise_hero.webp",
+    "file": "paradise.webp",
     "display": "Paradise",
     "value": "Paradise"
   },
   {
-    "file": "paragon_hero.webp",
+    "file": "paragon_r(armored).webp",
+    "display": "Paragon R(Armored)",
+    "value": "ParagonR(Armored)"
+  },
+  {
+    "file": "paragon_r.webp",
     "display": "Paragon R",
     "value": "ParagonR"
   },
   {
-    "file": "paragon2_hero.webp",
-    "display": "Paragon R (Armored)",
-    "value": "ParagonRArmored"
-  },
-  {
-    "file": "paragon3_hero.webp",
+    "file": "paragon_s.webp",
     "display": "Paragon S",
     "value": "ParagonS"
   },
   {
-    "file": "pariah_hero.webp",
+    "file": "pariah.webp",
     "display": "Pariah",
     "value": "Pariah"
   },
   {
-    "file": "pranger_hero.webp",
+    "file": "park_ranger.webp",
     "display": "Park Ranger",
     "value": "ParkRanger"
   },
   {
-    "file": "patriot_hero.webp",
+    "file": "party_bus.webp",
+    "display": "Party Bus",
+    "value": "PartyBus"
+  },
+  {
+    "file": "patriot.webp",
     "display": "Patriot",
     "value": "Patriot"
   },
   {
-    "file": "patriot3_hero.webp",
+    "file": "patriot_mil-spec.webp",
     "display": "Patriot Mil-Spec",
-    "value": "PatriotMilSpec"
+    "value": "PatriotMil-Spec"
   },
   {
-    "file": "patriot2_hero.webp",
+    "file": "patriot_stretch.webp",
     "display": "Patriot Stretch",
     "value": "PatriotStretch"
   },
   {
-    "file": "pcj_hero.webp",
-    "display": "PCJ 600",
-    "value": "PCJ600"
+    "file": "patrolboat.webp",
+    "display": "Patrolboat",
+    "value": "Patrolboat"
   },
   {
-    "file": "penetrator_hero.webp",
+    "file": "pcj.webp",
+    "display": "Pcj",
+    "value": "Pcj"
+  },
+  {
+    "file": "penetrator.webp",
     "display": "Penetrator",
     "value": "Penetrator"
   },
   {
-    "file": "penumbra_hero.webp",
+    "file": "penumbra.webp",
     "display": "Penumbra",
     "value": "Penumbra"
   },
   {
-    "file": "penumbra2_hero.webp",
+    "file": "penumbra_ff.webp",
     "display": "Penumbra FF",
     "value": "PenumbraFF"
   },
   {
-    "file": "peyote_hero.webp",
+    "file": "peyote.webp",
     "display": "Peyote",
     "value": "Peyote"
   },
   {
-    "file": "peyote3_hero.webp",
+    "file": "peyote_custom.webp",
     "display": "Peyote Custom",
     "value": "PeyoteCustom"
   },
   {
-    "file": "peyote2_hero.webp",
+    "file": "peyote_gasser.webp",
     "display": "Peyote Gasser",
     "value": "PeyoteGasser"
   },
   {
-    "file": "phantom_hero.webp",
+    "file": "phantom.webp",
     "display": "Phantom",
     "value": "Phantom"
   },
   {
-    "file": "phantom3_hero.webp",
-    "display": "Phantom Custom",
-    "value": "PhantomCustom"
+    "file": "phantom3.webp",
+    "display": "Phantom3",
+    "value": "Phantom3"
   },
   {
-    "file": "phantom2_hero.webp",
+    "file": "phantom_wedge.webp",
     "display": "Phantom Wedge",
     "value": "PhantomWedge"
   },
   {
-    "file": "phoenix_hero.webp",
+    "file": "phoenix.webp",
     "display": "Phoenix",
     "value": "Phoenix"
   },
   {
-    "file": "picador_hero.webp",
+    "file": "picador.webp",
     "display": "Picador",
     "value": "Picador"
   },
   {
-    "file": "pigalle_hero.webp",
+    "file": "pigalle.webp",
     "display": "Pigalle",
     "value": "Pigalle"
   },
   {
-    "file": "pipistrello_hero.webp",
+    "file": "pipistrello.webp",
     "display": "Pipistrello",
     "value": "Pipistrello"
   },
   {
-    "file": "dominator2_hero.webp",
+    "file": "pisswasser_dominator.webp",
     "display": "Pisswasser Dominator",
     "value": "PisswasserDominator"
   },
   {
-    "file": "pizzaboy_hero.webp",
-    "display": "Pizza Boy",
-    "value": "PizzaBoy"
+    "file": "pizzaboy.webp",
+    "display": "Pizzaboy",
+    "value": "Pizzaboy"
   },
   {
-    "file": "policeb_hero.webp",
+    "file": "police.webp",
+    "display": "Police",
+    "value": "Police"
+  },
+  {
+    "file": "police2.webp",
+    "display": "Police2",
+    "value": "Police2"
+  },
+  {
+    "file": "police3.webp",
+    "display": "Police3",
+    "value": "Police3"
+  },
+  {
+    "file": "police_bike.webp",
     "display": "Police Bike",
     "value": "PoliceBike"
   },
   {
-    "file": "police_hero.webp",
-    "display": "Police Cruiser",
-    "value": "PoliceCruiser"
-  },
-  {
-    "file": "polmav_hero.webp",
+    "file": "police_maverick.webp",
     "display": "Police Maverick",
     "value": "PoliceMaverick"
   },
   {
-    "file": "predator_hero.webp",
-    "display": "Police Predator",
-    "value": "PolicePredator"
+    "file": "police_rancher_snow.webp",
+    "display": "Police Rancher Snow",
+    "value": "PoliceRancherSnow"
   },
   {
-    "file": "policeold1_hero.webp",
-    "display": "Police Rancher",
-    "value": "PoliceRancher"
+    "file": "police_roadcruiser_snow.webp",
+    "display": "Police Roadcruiser Snow",
+    "value": "PoliceRoadcruiserSnow"
   },
   {
-    "file": "riot_hero.webp",
-    "display": "Police Riot",
-    "value": "PoliceRiot"
-  },
-  {
-    "file": "policeold2_hero.webp",
-    "display": "Police Roadcruiser",
-    "value": "PoliceRoadcruiser"
-  },
-  {
-    "file": "policet_hero.webp",
+    "file": "police_transporter.webp",
     "display": "Police Transporter",
     "value": "PoliceTransporter"
   },
   {
-    "file": "pony_hero.webp",
+    "file": "pony.webp",
     "display": "Pony",
     "value": "Pony"
   },
   {
-    "file": "postlude_hero.webp",
+    "file": "pony2.webp",
+    "display": "Pony2",
+    "value": "Pony2"
+  },
+  {
+    "file": "postlude.webp",
     "display": "Postlude",
     "value": "Postlude"
   },
   {
-    "file": "pounder_hero.webp",
+    "file": "pounder.webp",
     "display": "Pounder",
     "value": "Pounder"
   },
   {
-    "file": "pounder2_hero.webp",
+    "file": "pounder_custom.webp",
     "display": "Pounder Custom",
     "value": "PounderCustom"
   },
   {
-    "file": "powersurge_hero.webp",
+    "file": "powersurge.webp",
     "display": "Powersurge",
     "value": "Powersurge"
   },
   {
-    "file": "formula_hero.webp",
-    "display": "PR4",
-    "value": "PR4"
-  },
-  {
-    "file": "prairie_hero.webp",
+    "file": "prairie.webp",
     "display": "Prairie",
     "value": "Prairie"
   },
   {
-    "file": "premier_hero.webp",
+    "file": "predator.webp",
+    "display": "Predator",
+    "value": "Predator"
+  },
+  {
+    "file": "premier.webp",
     "display": "Premier",
     "value": "Premier"
   },
   {
-    "file": "previon_hero.webp",
+    "file": "previon.webp",
     "display": "Previon",
     "value": "Previon"
   },
   {
-    "file": "primo_hero.webp",
+    "file": "primo.webp",
     "display": "Primo",
     "value": "Primo"
   },
   {
-    "file": "primo2_hero.webp",
+    "file": "primo_custom.webp",
     "display": "Primo Custom",
     "value": "PrimoCustom"
   },
   {
-    "file": "pbus_hero.webp",
+    "file": "prison_bus.webp",
     "display": "Prison Bus",
     "value": "PrisonBus"
   },
   {
-    "file": "pyro_hero.webp",
+    "file": "proptrailer.webp",
+    "display": "Proptrailer",
+    "value": "Proptrailer"
+  },
+  {
+    "file": "pyro.webp",
     "display": "Pyro",
     "value": "Pyro"
   },
   {
-    "file": "formula2_hero.webp",
+    "file": "r88.webp",
     "display": "R88",
     "value": "R88"
   },
   {
-    "file": "radi_hero.webp",
+    "file": "radius.webp",
     "display": "Radius",
     "value": "Radius"
   },
   {
-    "file": "raiden_hero.webp",
+    "file": "raiden.webp",
     "display": "Raiden",
     "value": "Raiden"
   },
   {
-    "file": "rrocket_hero.webp",
-    "display": "Rampant Rocket",
-    "value": "RampantRocket"
+    "file": "raiju.webp",
+    "display": "Raiju",
+    "value": "Raiju"
   },
   {
-    "file": "dune4_hero.webp",
+    "file": "raketrailer.webp",
+    "display": "Raketrailer",
+    "value": "Raketrailer"
+  },
+  {
+    "file": "ramp_buggy(enclosed).webp",
+    "display": "Ramp Buggy(Enclosed)",
+    "value": "RampBuggy(Enclosed)"
+  },
+  {
+    "file": "ramp_buggy.webp",
     "display": "Ramp Buggy",
     "value": "RampBuggy"
   },
   {
-    "file": "rancherxl_hero.webp",
+    "file": "rancher_xl.webp",
     "display": "Rancher XL",
     "value": "RancherXL"
   },
   {
-    "file": "rapidgt_hero.webp",
+    "file": "rancher_xl_snow.webp",
+    "display": "Rancher XL Snow",
+    "value": "RancherXLSnow"
+  },
+  {
+    "file": "rapid_gt(convertible).webp",
+    "display": "Rapid Gt(Convertible)",
+    "value": "RapidGt(Convertible)"
+  },
+  {
+    "file": "rapid_gt.webp",
     "display": "Rapid GT",
     "value": "RapidGT"
   },
   {
-    "file": "rapidgt3_hero.webp",
+    "file": "rapid_gt_classic.webp",
     "display": "Rapid GT Classic",
     "value": "RapidGTClassic"
   },
   {
-    "file": "rapidgt4_hero.webp",
+    "file": "rapid_gt_x.webp",
     "display": "Rapid GT X",
     "value": "RapidGTX"
   },
   {
-    "file": "raptor_hero.webp",
+    "file": "raptor.webp",
     "display": "Raptor",
     "value": "Raptor"
   },
   {
-    "file": "ratbike_hero.webp",
-    "display": "Rat Bike",
-    "value": "RatBike"
+    "file": "rat-truck.webp",
+    "display": "Rat-Truck",
+    "value": "Rat-Truck"
   },
   {
-    "file": "ratel_hero.webp",
+    "file": "rat_rod.webp",
+    "display": "Rat Rod",
+    "value": "RatRod"
+  },
+  {
+    "file": "ratbike.webp",
+    "display": "Ratbike",
+    "value": "Ratbike"
+  },
+  {
+    "file": "ratel.webp",
     "display": "Ratel",
     "value": "Ratel"
   },
   {
-    "file": "ratloader_hero.webp",
-    "display": "Rat-Loader",
-    "value": "RatLoader"
+    "file": "ratloader.webp",
+    "display": "Ratloader",
+    "value": "Ratloader"
   },
   {
-    "file": "ratloader2_hero.webp",
-    "display": "Rat-Truck",
-    "value": "RatTruck"
+    "file": "rcbandito.webp",
+    "display": "Rcbandito",
+    "value": "Rcbandito"
   },
   {
-    "file": "rcbandito_hero.webp",
-    "display": "RC Bandito",
-    "value": "RCBandito"
+    "file": "re-7b.webp",
+    "display": "Re-7B",
+    "value": "Re-7B"
   },
   {
-    "file": "riot2_hero.webp",
-    "display": "RCV",
-    "value": "RCV"
-  },
-  {
-    "file": "le7b_hero.webp",
-    "display": "RE-7B",
-    "value": "RE7B"
-  },
-  {
-    "file": "reaper_hero.webp",
+    "file": "reaper.webp",
     "display": "Reaper",
     "value": "Reaper"
   },
   {
-    "file": "rebel2_hero.webp",
+    "file": "rebel(rusted).webp",
+    "display": "Rebel(Rusted)",
+    "value": "Rebel(Rusted)"
+  },
+  {
+    "file": "rebel.webp",
     "display": "Rebel",
     "value": "Rebel"
   },
   {
-    "file": "rebla_hero.webp",
-    "display": "Rebla GTS",
-    "value": "ReblaGTS"
+    "file": "rebla.webp",
+    "display": "Rebla",
+    "value": "Rebla"
   },
   {
-    "file": "gauntlet2_hero.webp",
+    "file": "redwood_gauntlet.webp",
     "display": "Redwood Gauntlet",
     "value": "RedwoodGauntlet"
   },
   {
-    "file": "reever_hero.webp",
+    "file": "reever.webp",
     "display": "Reever",
     "value": "Reever"
   },
   {
-    "file": "regina_hero.webp",
+    "file": "regina.webp",
     "display": "Regina",
     "value": "Regina"
   },
   {
-    "file": "driftremus_hero.webp",
+    "file": "remus.webp",
     "display": "Remus",
     "value": "Remus"
   },
   {
-    "file": "rentalbus_hero.webp",
-    "display": "Rental Shuttle Bus",
-    "value": "RentalShuttleBus"
+    "file": "rentalbus.webp",
+    "display": "Rentalbus",
+    "value": "Rentalbus"
   },
   {
-    "file": "retinue_hero.webp",
+    "file": "retinue.webp",
     "display": "Retinue",
     "value": "Retinue"
   },
   {
-    "file": "retinue2_hero.webp",
-    "display": "Retinue Mk II",
-    "value": "RetinueMkII"
+    "file": "retinue_mk_2.webp",
+    "display": "Retinue MK 2",
+    "value": "RetinueMK2"
   },
   {
-    "file": "revolter_hero.webp",
+    "file": "revolter.webp",
     "display": "Revolter",
     "value": "Revolter"
   },
   {
-    "file": "rhapsody_hero.webp",
+    "file": "rhapsody.webp",
     "display": "Rhapsody",
     "value": "Rhapsody"
   },
   {
-    "file": "rhinehart_hero.webp",
+    "file": "rhinehart.webp",
     "display": "Rhinehart",
     "value": "Rhinehart"
   },
   {
-    "file": "rhino_hero.webp",
-    "display": "Rhino Tank",
-    "value": "RhinoTank"
+    "file": "rhino.webp",
+    "display": "Rhino",
+    "value": "Rhino"
   },
   {
-    "file": "riata_hero.webp",
+    "file": "riata.webp",
     "display": "Riata",
     "value": "Riata"
   },
   {
-    "file": "ripley_hero.webp",
+    "file": "riot.webp",
+    "display": "Riot",
+    "value": "Riot"
+  },
+  {
+    "file": "riot2.webp",
+    "display": "Riot2",
+    "value": "Riot2"
+  },
+  {
+    "file": "ripley.webp",
     "display": "Ripley",
     "value": "Ripley"
   },
   {
-    "file": "bombushka_hero.webp",
-    "display": "RM-10 Bombushka",
-    "value": "RM10Bombushka"
-  },
-  {
-    "file": "alkonost_hero.webp",
-    "display": "RO-86 Alkonost",
-    "value": "RO86Alkonost"
-  },
-  {
-    "file": "voltic2_hero.webp",
+    "file": "rocket_voltic.webp",
     "display": "Rocket Voltic",
     "value": "RocketVoltic"
   },
   {
-    "file": "rocoto_hero.webp",
+    "file": "rocoto.webp",
     "display": "Rocoto",
     "value": "Rocoto"
   },
   {
-    "file": "rogue_hero.webp",
+    "file": "rogue.webp",
     "display": "Rogue",
     "value": "Rogue"
   },
   {
-    "file": "romero_hero.webp",
-    "display": "Romero Hearse",
-    "value": "RomeroHearse"
+    "file": "romero.webp",
+    "display": "Romero",
+    "value": "Romero"
   },
   {
-    "file": "btype_hero.webp",
+    "file": "roosevelt.webp",
     "display": "Roosevelt",
     "value": "Roosevelt"
   },
   {
-    "file": "btype3_hero.webp",
+    "file": "roosevelt_valor.webp",
     "display": "Roosevelt Valor",
     "value": "RooseveltValor"
   },
   {
-    "file": "driftrt3000_hero.webp",
-    "display": "RT3000",
+    "file": "rrocket.webp",
+    "display": "Rrocket",
+    "value": "Rrocket"
+  },
+  {
+    "file": "rt_3000.webp",
+    "display": "RT 3000",
     "value": "RT3000"
   },
   {
-    "file": "rubble_hero.webp",
+    "file": "rubble.webp",
     "display": "Rubble",
     "value": "Rubble"
   },
   {
-    "file": "ruffian_hero.webp",
+    "file": "ruffian.webp",
     "display": "Ruffian",
     "value": "Ruffian"
   },
   {
-    "file": "ruiner_hero.webp",
+    "file": "ruiner.webp",
     "display": "Ruiner",
     "value": "Ruiner"
   },
   {
-    "file": "ruiner2_hero.webp",
+    "file": "ruiner_200(rusted).webp",
+    "display": "Ruiner 200(Rusted)",
+    "value": "Ruiner200(Rusted)"
+  },
+  {
+    "file": "ruiner_2000.webp",
     "display": "Ruiner 2000",
     "value": "Ruiner2000"
   },
   {
-    "file": "ruiner4_hero.webp",
-    "display": "Ruiner ZZ-8",
-    "value": "RuinerZZ8"
+    "file": "ruiner_zz-8.webp",
+    "display": "Ruiner Zz-8",
+    "value": "RuinerZz-8"
   },
   {
-    "file": "rumpo_hero.webp",
+    "file": "rumpo.webp",
     "display": "Rumpo",
     "value": "Rumpo"
   },
   {
-    "file": "rumpo3_hero.webp",
+    "file": "rumpo2.webp",
+    "display": "Rumpo2",
+    "value": "Rumpo2"
+  },
+  {
+    "file": "rumpo_custom.webp",
     "display": "Rumpo Custom",
     "value": "RumpoCustom"
   },
   {
-    "file": "ruston_hero.webp",
+    "file": "ruston.webp",
     "display": "Ruston",
     "value": "Ruston"
   },
   {
-    "file": "rebel_hero.webp",
-    "display": "Rusty Rebel",
-    "value": "RustyRebel"
+    "file": "s80.webp",
+    "display": "S80",
+    "value": "S80"
   },
   {
-    "file": "s80_hero.webp",
-    "display": "S80RR",
-    "value": "S80RR"
-  },
-  {
-    "file": "s95_hero.webp",
+    "file": "s95.webp",
     "display": "S95",
     "value": "S95"
   },
   {
-    "file": "sabregt_hero.webp",
+    "file": "sabre_turbo.webp",
     "display": "Sabre Turbo",
     "value": "SabreTurbo"
   },
   {
-    "file": "sabregt2_hero.webp",
+    "file": "sabre_turbo_custom.webp",
     "display": "Sabre Turbo Custom",
     "value": "SabreTurboCustom"
   },
   {
-    "file": "sadler_hero.webp",
+    "file": "sadler.webp",
     "display": "Sadler",
     "value": "Sadler"
   },
   {
-    "file": "sanchez2_hero.webp",
+    "file": "sadler_snow.webp",
+    "display": "Sadler Snow",
+    "value": "SadlerSnow"
+  },
+  {
+    "file": "sanchez.webp",
     "display": "Sanchez",
     "value": "Sanchez"
   },
   {
-    "file": "sanchez_hero.webp",
-    "display": "Sanchez (livery)",
-    "value": "Sanchezlivery"
+    "file": "sanchez_livery.webp",
+    "display": "Sanchez Livery",
+    "value": "SanchezLivery"
   },
   {
-    "file": "sanctus_hero.webp",
+    "file": "sanctus.webp",
     "display": "Sanctus",
     "value": "Sanctus"
   },
   {
-    "file": "sandking2_hero.webp",
-    "display": "Sandking SWB",
-    "value": "SandkingSWB"
+    "file": "sandking.webp",
+    "display": "Sandking",
+    "value": "Sandking"
   },
   {
-    "file": "sandking_hero.webp",
+    "file": "sandking_xl.webp",
     "display": "Sandking XL",
     "value": "SandkingXL"
   },
   {
-    "file": "savage_hero.webp",
+    "file": "savage.webp",
     "display": "Savage",
     "value": "Savage"
   },
   {
-    "file": "savestra_hero.webp",
+    "file": "savestra.webp",
     "display": "Savestra",
     "value": "Savestra"
   },
   {
-    "file": "sc1_hero.webp",
-    "display": "SC1",
-    "value": "SC1"
+    "file": "sc1.webp",
+    "display": "Sc1",
+    "value": "Sc1"
   },
   {
-    "file": "schafter2_hero.webp",
+    "file": "schafter.webp",
     "display": "Schafter",
     "value": "Schafter"
   },
   {
-    "file": "schafter4_hero.webp",
-    "display": "Schafter LWB",
-    "value": "SchafterLWB"
+    "file": "schafter_lwb(armored).webp",
+    "display": "Schafter Lwb(Armored)",
+    "value": "SchafterLwb(Armored)"
   },
   {
-    "file": "schafter6_hero.webp",
-    "display": "Schafter LWB (Armored)",
-    "value": "SchafterLWBArmored"
+    "file": "schafter_lwb.webp",
+    "display": "Schafter Lwb",
+    "value": "SchafterLwb"
   },
   {
-    "file": "schafter3_hero.webp",
+    "file": "schafter_v12(armored).webp",
+    "display": "Schafter V12(Armored)",
+    "value": "SchafterV12(Armored)"
+  },
+  {
+    "file": "schafter_v12.webp",
     "display": "Schafter V12",
     "value": "SchafterV12"
   },
   {
-    "file": "schafter5_hero.webp",
-    "display": "Schafter V12 (Armored)",
-    "value": "SchafterV12Armored"
+    "file": "schlagen.webp",
+    "display": "Schlagen",
+    "value": "Schlagen"
   },
   {
-    "file": "schlagen_hero.webp",
-    "display": "Schlagen GT",
-    "value": "SchlagenGT"
+    "file": "schwarzer.webp",
+    "display": "Schwarzer",
+    "value": "Schwarzer"
   },
   {
-    "file": "schwarzer_hero.webp",
-    "display": "Schwartzer",
-    "value": "Schwartzer"
-  },
-  {
-    "file": "scorcher_hero.webp",
+    "file": "scorcher.webp",
     "display": "Scorcher",
     "value": "Scorcher"
   },
   {
-    "file": "scramjet_hero.webp",
+    "file": "scramjet.webp",
     "display": "Scramjet",
     "value": "Scramjet"
   },
   {
-    "file": "scrap_hero.webp",
-    "display": "Scrap Truck",
-    "value": "ScrapTruck"
+    "file": "scrap.webp",
+    "display": "Scrap",
+    "value": "Scrap"
   },
   {
-    "file": "seabreeze_hero.webp",
+    "file": "seabreeze.webp",
     "display": "Seabreeze",
     "value": "Seabreeze"
   },
   {
-    "file": "seashark_hero.webp",
+    "file": "seashark.webp",
     "display": "Seashark",
     "value": "Seashark"
   },
   {
-    "file": "seasparrow_hero.webp",
-    "display": "Sea Sparrow",
-    "value": "SeaSparrow"
+    "file": "seashark2.webp",
+    "display": "Seashark2",
+    "value": "Seashark2"
   },
   {
-    "file": "seminole_hero.webp",
+    "file": "seashark3.webp",
+    "display": "Seashark3",
+    "value": "Seashark3"
+  },
+  {
+    "file": "seasparrow.webp",
+    "display": "Seasparrow",
+    "value": "Seasparrow"
+  },
+  {
+    "file": "seminole.webp",
     "display": "Seminole",
     "value": "Seminole"
   },
   {
-    "file": "seminole2_hero.webp",
+    "file": "seminole_frontier.webp",
     "display": "Seminole Frontier",
     "value": "SeminoleFrontier"
   },
   {
-    "file": "sentinel2_hero.webp",
+    "file": "sentinel.webp",
     "display": "Sentinel",
     "value": "Sentinel"
   },
   {
-    "file": "sentinel3_hero.webp",
+    "file": "sentinel_classic.webp",
     "display": "Sentinel Classic",
     "value": "SentinelClassic"
   },
   {
-    "file": "driftsentinel_hero.webp",
+    "file": "sentinel_classic_widebody.webp",
     "display": "Sentinel Classic Widebody",
     "value": "SentinelClassicWidebody"
   },
   {
-    "file": "sentinel5_hero.webp",
-    "display": "Sentinel GTS",
-    "value": "SentinelGTS"
+    "file": "sentinel_gts.webp",
+    "display": "Sentinel Gts",
+    "value": "SentinelGts"
   },
   {
-    "file": "driftsentinel2_hero.webp",
+    "file": "sentinel_xs.webp",
     "display": "Sentinel XS",
     "value": "SentinelXS"
   },
   {
-    "file": "sentinel6_hero.webp",
-    "display": "Sentinel XS4",
-    "value": "SentinelXS4"
+    "file": "sentinel_xs4.webp",
+    "display": "Sentinel Xs4",
+    "value": "SentinelXs4"
   },
   {
-    "file": "serrano_hero.webp",
+    "file": "serrano.webp",
     "display": "Serrano",
     "value": "Serrano"
   },
   {
-    "file": "seven70_hero.webp",
+    "file": "seven-70.webp",
     "display": "Seven-70",
-    "value": "Seven70"
+    "value": "Seven-70"
   },
   {
-    "file": "shamal_hero.webp",
+    "file": "shamal.webp",
     "display": "Shamal",
     "value": "Shamal"
   },
   {
-    "file": "sheriff_hero.webp",
-    "display": "Sheriff Cruiser",
-    "value": "SheriffCruiser"
+    "file": "sheriff.webp",
+    "display": "Sheriff",
+    "value": "Sheriff"
   },
   {
-    "file": "sheriff2_hero.webp",
-    "display": "Sheriff SUV",
-    "value": "SheriffSUV"
+    "file": "sheriff2.webp",
+    "display": "Sheriff2",
+    "value": "Sheriff2"
   },
   {
-    "file": "shinobi_hero.webp",
+    "file": "shinobi.webp",
     "display": "Shinobi",
     "value": "Shinobi"
   },
   {
-    "file": "shotaro_hero.webp",
+    "file": "shotaro.webp",
     "display": "Shotaro",
     "value": "Shotaro"
   },
   {
-    "file": "skylift_hero.webp",
+    "file": "skylift.webp",
     "display": "Skylift",
     "value": "Skylift"
   },
   {
-    "file": "slamtruck_hero.webp",
+    "file": "slamtruck.webp",
     "display": "Slamtruck",
     "value": "Slamtruck"
   },
   {
-    "file": "slamvan_hero.webp",
+    "file": "slamvan.webp",
     "display": "Slamvan",
     "value": "Slamvan"
   },
   {
-    "file": "slamvan3_hero.webp",
+    "file": "slamvan_custom.webp",
     "display": "Slamvan Custom",
     "value": "SlamvanCustom"
   },
   {
-    "file": "sm722_hero.webp",
-    "display": "SM722",
-    "value": "SM722"
+    "file": "sm722.webp",
+    "display": "Sm722",
+    "value": "Sm722"
   },
   {
-    "file": "sovereign_hero.webp",
+    "file": "sovereign.webp",
     "display": "Sovereign",
     "value": "Sovereign"
   },
   {
-    "file": "dune2_hero.webp",
+    "file": "space_docker.webp",
     "display": "Space Docker",
     "value": "SpaceDocker"
   },
   {
-    "file": "seasparrow2_hero.webp",
+    "file": "sparrow.webp",
     "display": "Sparrow",
     "value": "Sparrow"
   },
   {
-    "file": "specter_hero.webp",
+    "file": "specter.webp",
     "display": "Specter",
     "value": "Specter"
   },
   {
-    "file": "specter2_hero.webp",
+    "file": "specter_custom.webp",
     "display": "Specter Custom",
     "value": "SpecterCustom"
   },
   {
-    "file": "speeder_hero.webp",
+    "file": "speeder.webp",
     "display": "Speeder",
     "value": "Speeder"
   },
   {
-    "file": "speedo_hero.webp",
+    "file": "speeder2.webp",
+    "display": "Speeder2",
+    "value": "Speeder2"
+  },
+  {
+    "file": "speedo.webp",
     "display": "Speedo",
     "value": "Speedo"
   },
   {
-    "file": "speedo4_hero.webp",
+    "file": "speedo5.webp",
+    "display": "Speedo5",
+    "value": "Speedo5"
+  },
+  {
+    "file": "speedo_custom.webp",
     "display": "Speedo Custom",
     "value": "SpeedoCustom"
   },
   {
-    "file": "buffalo3_hero.webp",
+    "file": "sprunk_buffalo.webp",
     "display": "Sprunk Buffalo",
     "value": "SprunkBuffalo"
   },
   {
-    "file": "squaddie_hero.webp",
+    "file": "squaddie.webp",
     "display": "Squaddie",
     "value": "Squaddie"
   },
   {
-    "file": "squalo_hero.webp",
+    "file": "squalo.webp",
     "display": "Squalo",
     "value": "Squalo"
   },
   {
-    "file": "stafford_hero.webp",
+    "file": "stafford.webp",
     "display": "Stafford",
     "value": "Stafford"
   },
   {
-    "file": "stalion_hero.webp",
-    "display": "Stallion",
-    "value": "Stallion"
+    "file": "stalion.webp",
+    "display": "Stalion",
+    "value": "Stalion"
   },
   {
-    "file": "stanier_hero.webp",
+    "file": "stanier.webp",
     "display": "Stanier",
     "value": "Stanier"
   },
   {
-    "file": "police5_hero.webp",
+    "file": "stanier_le_cruiser.webp",
     "display": "Stanier LE Cruiser",
     "value": "StanierLECruiser"
   },
   {
-    "file": "stinger_hero.webp",
+    "file": "starling.webp",
+    "display": "Starling",
+    "value": "Starling"
+  },
+  {
+    "file": "stinger.webp",
     "display": "Stinger",
     "value": "Stinger"
   },
   {
-    "file": "stingergt_hero.webp",
+    "file": "stinger_gt.webp",
     "display": "Stinger GT",
     "value": "StingerGT"
   },
   {
-    "file": "stockade_hero.webp",
+    "file": "stinger_tt.webp",
+    "display": "Stinger TT",
+    "value": "StingerTT"
+  },
+  {
+    "file": "stirling_gt.webp",
+    "display": "Stirling GT",
+    "value": "StirlingGT"
+  },
+  {
+    "file": "stockade.webp",
     "display": "Stockade",
     "value": "Stockade"
   },
   {
-    "file": "stratum_hero.webp",
+    "file": "stockade4.webp",
+    "display": "Stockade4",
+    "value": "Stockade4"
+  },
+  {
+    "file": "stockade_snow.webp",
+    "display": "Stockade Snow",
+    "value": "StockadeSnow"
+  },
+  {
+    "file": "stratum.webp",
     "display": "Stratum",
     "value": "Stratum"
   },
   {
-    "file": "streamer216_hero.webp",
+    "file": "streamer216.webp",
     "display": "Streamer216",
     "value": "Streamer216"
   },
   {
-    "file": "blazer4_hero.webp",
+    "file": "street_blazer.webp",
     "display": "Street Blazer",
     "value": "StreetBlazer"
   },
   {
-    "file": "streiter_hero.webp",
+    "file": "streiter.webp",
     "display": "Streiter",
     "value": "Streiter"
   },
   {
-    "file": "stretch_hero.webp",
+    "file": "stretch.webp",
     "display": "Stretch",
     "value": "Stretch"
   },
   {
-    "file": "stromberg_hero.webp",
+    "file": "strikeforce.webp",
+    "display": "Strikeforce",
+    "value": "Strikeforce"
+  },
+  {
+    "file": "stromberg.webp",
     "display": "Stromberg",
     "value": "Stromberg"
   },
   {
-    "file": "stryder_hero.webp",
+    "file": "stryder.webp",
     "display": "Stryder",
     "value": "Stryder"
   },
   {
-    "file": "submersible_hero.webp",
+    "file": "stunt.webp",
+    "display": "Stunt",
+    "value": "Stunt"
+  },
+  {
+    "file": "submersible.webp",
     "display": "Submersible",
     "value": "Submersible"
   },
   {
-    "file": "sugoi_hero.webp",
+    "file": "submersible2.webp",
+    "display": "Submersible2",
+    "value": "Submersible2"
+  },
+  {
+    "file": "sugoi.webp",
     "display": "Sugoi",
     "value": "Sugoi"
   },
   {
-    "file": "sultan_hero.webp",
+    "file": "sultan.webp",
     "display": "Sultan",
     "value": "Sultan"
   },
   {
-    "file": "sultan2_hero.webp",
+    "file": "sultan_classic.webp",
     "display": "Sultan Classic",
     "value": "SultanClassic"
   },
   {
-    "file": "sultanrs_hero.webp",
+    "file": "sultan_rs.webp",
     "display": "Sultan RS",
     "value": "SultanRS"
   },
   {
-    "file": "sultan3_hero.webp",
+    "file": "sultan_rs_classic.webp",
     "display": "Sultan RS Classic",
     "value": "SultanRSClassic"
   },
   {
-    "file": "suntrap_hero.webp",
+    "file": "suntrap.webp",
     "display": "Suntrap",
     "value": "Suntrap"
   },
   {
-    "file": "superd_hero.webp",
+    "file": "super_diamond.webp",
     "display": "Super Diamond",
     "value": "SuperDiamond"
   },
   {
-    "file": "supervolito_hero.webp",
-    "display": "SuperVolito",
-    "value": "SuperVolito"
+    "file": "supervolito.webp",
+    "display": "Supervolito",
+    "value": "Supervolito"
   },
   {
-    "file": "supervolito2_hero.webp",
-    "display": "SuperVolito Carbon",
-    "value": "SuperVolitoCarbon"
+    "file": "supervolito_carbon.webp",
+    "display": "Supervolito Carbon",
+    "value": "SupervolitoCarbon"
   },
   {
-    "file": "surano_hero.webp",
+    "file": "surano.webp",
     "display": "Surano",
     "value": "Surano"
   },
   {
-    "file": "surfer_hero.webp",
+    "file": "surfer(rusted).webp",
+    "display": "Surfer(Rusted)",
+    "value": "Surfer(Rusted)"
+  },
+  {
+    "file": "surfer.webp",
     "display": "Surfer",
     "value": "Surfer"
   },
   {
-    "file": "surfer3_hero.webp",
+    "file": "surfer_custom.webp",
     "display": "Surfer Custom",
     "value": "SurferCustom"
   },
   {
-    "file": "surge_hero.webp",
+    "file": "surge.webp",
     "display": "Surge",
     "value": "Surge"
   },
   {
-    "file": "suzume_hero.webp",
+    "file": "suzume.webp",
     "display": "Suzume",
     "value": "Suzume"
   },
   {
-    "file": "swift_hero.webp",
+    "file": "swift.webp",
     "display": "Swift",
     "value": "Swift"
   },
   {
-    "file": "swift2_hero.webp",
-    "display": "Swift Deluxe",
-    "value": "SwiftDeluxe"
+    "file": "swift2.webp",
+    "display": "Swift2",
+    "value": "Swift2"
   },
   {
-    "file": "swinger_hero.webp",
+    "file": "swinger.webp",
     "display": "Swinger",
     "value": "Swinger"
   },
   {
-    "file": "t20_hero.webp",
+    "file": "t20.webp",
     "display": "T20",
     "value": "T20"
   },
   {
-    "file": "taco_hero.webp",
-    "display": "Taco Van",
-    "value": "TacoVan"
+    "file": "taco.webp",
+    "display": "Taco",
+    "value": "Taco"
   },
   {
-    "file": "tahoma_hero.webp",
-    "display": "Tahoma Coupe",
-    "value": "TahomaCoupe"
+    "file": "tahoma.webp",
+    "display": "Tahoma",
+    "value": "Tahoma"
   },
   {
-    "file": "tailgater_hero.webp",
+    "file": "tailgater.webp",
     "display": "Tailgater",
     "value": "Tailgater"
   },
   {
-    "file": "tailgater2_hero.webp",
+    "file": "tailgater_s.webp",
     "display": "Tailgater S",
     "value": "TailgaterS"
   },
   {
-    "file": "taipan_hero.webp",
+    "file": "taipan.webp",
     "display": "Taipan",
     "value": "Taipan"
   },
   {
-    "file": "tampa_hero.webp",
+    "file": "tampa.webp",
     "display": "Tampa",
     "value": "Tampa"
   },
   {
-    "file": "tampa4_hero.webp",
+    "file": "tampa_gt.webp",
     "display": "Tampa GT",
     "value": "TampaGT"
   },
   {
-    "file": "taxi_hero.webp",
+    "file": "tanker.webp",
+    "display": "Tanker",
+    "value": "Tanker"
+  },
+  {
+    "file": "tanker2.webp",
+    "display": "Tanker2",
+    "value": "Tanker2"
+  },
+  {
+    "file": "tankercar.webp",
+    "display": "Tankercar",
+    "value": "Tankercar"
+  },
+  {
+    "file": "taxi.webp",
     "display": "Taxi",
     "value": "Taxi"
   },
   {
-    "file": "technical_hero.webp",
+    "file": "technical.webp",
     "display": "Technical",
     "value": "Technical"
   },
   {
-    "file": "technical2_hero.webp",
+    "file": "technical_aqua.webp",
     "display": "Technical Aqua",
     "value": "TechnicalAqua"
   },
   {
-    "file": "technical3_hero.webp",
+    "file": "technical_custom.webp",
     "display": "Technical Custom",
     "value": "TechnicalCustom"
   },
   {
-    "file": "tempesta_hero.webp",
+    "file": "tempesta.webp",
     "display": "Tempesta",
     "value": "Tempesta"
   },
   {
-    "file": "terminus_hero.webp",
+    "file": "terminus.webp",
     "display": "Terminus",
     "value": "Terminus"
   },
   {
-    "file": "polterminus_hero.webp",
+    "file": "terminus_patrol.webp",
     "display": "Terminus Patrol",
     "value": "TerminusPatrol"
   },
   {
-    "file": "terbyte_hero.webp",
+    "file": "terrorbyte.webp",
     "display": "Terrorbyte",
     "value": "Terrorbyte"
   },
   {
-    "file": "tezeract_hero.webp",
+    "file": "tezeract.webp",
     "display": "Tezeract",
     "value": "Tezeract"
   },
   {
-    "file": "monster_hero.webp",
-    "display": "The Liberator",
-    "value": "TheLiberator"
-  },
-  {
-    "file": "thrax_hero.webp",
+    "file": "thrax.webp",
     "display": "Thrax",
     "value": "Thrax"
   },
   {
-    "file": "thrust_hero.webp",
+    "file": "thrust.webp",
     "display": "Thrust",
     "value": "Thrust"
   },
   {
-    "file": "thruster_hero.webp",
+    "file": "thruster.webp",
     "display": "Thruster",
     "value": "Thruster"
   },
   {
-    "file": "tigon_hero.webp",
+    "file": "tigon.webp",
     "display": "Tigon",
     "value": "Tigon"
   },
   {
-    "file": "tiptruck_hero.webp",
-    "display": "Tipper",
-    "value": "Tipper"
+    "file": "tiptruck.webp",
+    "display": "Tiptruck",
+    "value": "Tiptruck"
   },
   {
-    "file": "titan_hero.webp",
+    "file": "tiptruck2.webp",
+    "display": "Tiptruck2",
+    "value": "Tiptruck2"
+  },
+  {
+    "file": "titan.webp",
     "display": "Titan",
     "value": "Titan"
   },
   {
-    "file": "titan2_hero.webp",
+    "file": "titan_250_d.webp",
     "display": "Titan 250 D",
     "value": "Titan250D"
   },
   {
-    "file": "khanjali_hero.webp",
-    "display": "TM-02 Khanjali",
-    "value": "TM02Khanjali"
-  },
-  {
-    "file": "toreador_hero.webp",
+    "file": "toreador.webp",
     "display": "Toreador",
     "value": "Toreador"
   },
   {
-    "file": "torero_hero.webp",
+    "file": "torero.webp",
     "display": "Torero",
     "value": "Torero"
   },
   {
-    "file": "torero2_hero.webp",
+    "file": "torero_xo.webp",
     "display": "Torero XO",
     "value": "ToreroXO"
   },
   {
-    "file": "tornado_hero.webp",
+    "file": "tornado(rusted).webp",
+    "display": "Tornado(Rusted)",
+    "value": "Tornado(Rusted)"
+  },
+  {
+    "file": "tornado(softtop).webp",
+    "display": "Tornado(Softtop)",
+    "value": "Tornado(Softtop)"
+  },
+  {
+    "file": "tornado.webp",
     "display": "Tornado",
     "value": "Tornado"
   },
   {
-    "file": "tornado5_hero.webp",
+    "file": "tornado_custom.webp",
     "display": "Tornado Custom",
     "value": "TornadoCustom"
   },
   {
-    "file": "tornado6_hero.webp",
-    "display": "Tornado Rat Rod",
-    "value": "TornadoRatRod"
-  },
-  {
-    "file": "toro_hero.webp",
+    "file": "toro.webp",
     "display": "Toro",
     "value": "Toro"
   },
   {
-    "file": "toros_hero.webp",
+    "file": "toro2.webp",
+    "display": "Toro2",
+    "value": "Toro2"
+  },
+  {
+    "file": "toros.webp",
     "display": "Toros",
     "value": "Toros"
   },
   {
-    "file": "tourbus_hero.webp",
-    "display": "Tour Bus",
-    "value": "TourBus"
+    "file": "tourbus.webp",
+    "display": "Tourbus",
+    "value": "Tourbus"
   },
   {
-    "file": "towtruck_hero.webp",
-    "display": "Tow Truck",
-    "value": "TowTruck"
+    "file": "towtruck.webp",
+    "display": "Towtruck",
+    "value": "Towtruck"
   },
   {
-    "file": "tractor_hero.webp",
+    "file": "towtruck2.webp",
+    "display": "Towtruck2",
+    "value": "Towtruck2"
+  },
+  {
+    "file": "towtruck3.webp",
+    "display": "Towtruck3",
+    "value": "Towtruck3"
+  },
+  {
+    "file": "towtruck4.webp",
+    "display": "Towtruck4",
+    "value": "Towtruck4"
+  },
+  {
+    "file": "tr2.webp",
+    "display": "Tr2",
+    "value": "Tr2"
+  },
+  {
+    "file": "tr3.webp",
+    "display": "Tr3",
+    "value": "Tr3"
+  },
+  {
+    "file": "tr4.webp",
+    "display": "Tr4",
+    "value": "Tr4"
+  },
+  {
+    "file": "tractor.webp",
     "display": "Tractor",
     "value": "Tractor"
   },
   {
-    "file": "raketrailer_hero.webp",
-    "display": "Trailer",
-    "value": "Trailer"
+    "file": "tractor2.webp",
+    "display": "Tractor2",
+    "value": "Tractor2"
   },
   {
-    "file": "trash_hero.webp",
-    "display": "Trashmaster",
-    "value": "Trashmaster"
+    "file": "tractor3.webp",
+    "display": "Tractor3",
+    "value": "Tractor3"
   },
   {
-    "file": "tribike3_hero.webp",
-    "display": "Tri-Cycles Race Bike",
-    "value": "TriCyclesRaceBike"
+    "file": "trailerlarge.webp",
+    "display": "Trailerlarge",
+    "value": "Trailerlarge"
   },
   {
-    "file": "trophytruck_hero.webp",
-    "display": "Trophy Truck",
-    "value": "TrophyTruck"
+    "file": "trailerlogs.webp",
+    "display": "Trailerlogs",
+    "value": "Trailerlogs"
   },
   {
-    "file": "tropic_hero.webp",
+    "file": "trailers.webp",
+    "display": "Trailers",
+    "value": "Trailers"
+  },
+  {
+    "file": "trailers2.webp",
+    "display": "Trailers2",
+    "value": "Trailers2"
+  },
+  {
+    "file": "trailers3.webp",
+    "display": "Trailers3",
+    "value": "Trailers3"
+  },
+  {
+    "file": "trailers4.webp",
+    "display": "Trailers4",
+    "value": "Trailers4"
+  },
+  {
+    "file": "trailersmall.webp",
+    "display": "Trailersmall",
+    "value": "Trailersmall"
+  },
+  {
+    "file": "trash.webp",
+    "display": "Trash",
+    "value": "Trash"
+  },
+  {
+    "file": "trash2.webp",
+    "display": "Trash2",
+    "value": "Trash2"
+  },
+  {
+    "file": "trflat.webp",
+    "display": "Trflat",
+    "value": "Trflat"
+  },
+  {
+    "file": "trflat2.webp",
+    "display": "Trflat2",
+    "value": "Trflat2"
+  },
+  {
+    "file": "tribike.webp",
+    "display": "Tribike",
+    "value": "Tribike"
+  },
+  {
+    "file": "tribike2.webp",
+    "display": "Tribike2",
+    "value": "Tribike2"
+  },
+  {
+    "file": "tribike3.webp",
+    "display": "Tribike3",
+    "value": "Tribike3"
+  },
+  {
+    "file": "trophytruck.webp",
+    "display": "Trophytruck",
+    "value": "Trophytruck"
+  },
+  {
+    "file": "tropic.webp",
     "display": "Tropic",
     "value": "Tropic"
   },
   {
-    "file": "tropos_hero.webp",
-    "display": "Tropos Rallye",
-    "value": "TroposRallye"
+    "file": "tropic2.webp",
+    "display": "Tropic2",
+    "value": "Tropic2"
   },
   {
-    "file": "tug_hero.webp",
+    "file": "tropos.webp",
+    "display": "Tropos",
+    "value": "Tropos"
+  },
+  {
+    "file": "tug.webp",
     "display": "Tug",
     "value": "Tug"
   },
   {
-    "file": "tula_hero.webp",
+    "file": "tula.webp",
     "display": "Tula",
     "value": "Tula"
   },
   {
-    "file": "tulip_hero.webp",
+    "file": "tulip.webp",
     "display": "Tulip",
     "value": "Tulip"
   },
   {
-    "file": "tulip2_hero.webp",
+    "file": "tulip_m-100.webp",
     "display": "Tulip M-100",
-    "value": "TulipM100"
+    "value": "TulipM-100"
   },
   {
-    "file": "turismo2_hero.webp",
+    "file": "turismo_classic.webp",
     "display": "Turismo Classic",
     "value": "TurismoClassic"
   },
   {
-    "file": "turismo3_hero.webp",
+    "file": "turismo_omaggio.webp",
     "display": "Turismo Omaggio",
     "value": "TurismoOmaggio"
   },
   {
-    "file": "turismor_hero.webp",
+    "file": "turismo_r.webp",
     "display": "Turismo R",
     "value": "TurismoR"
   },
   {
-    "file": "limo2_hero.webp",
+    "file": "turreted_limo.webp",
     "display": "Turreted Limo",
     "value": "TurretedLimo"
   },
   {
-    "file": "tyrant_hero.webp",
+    "file": "tvtrailer.webp",
+    "display": "Tvtrailer",
+    "value": "Tvtrailer"
+  },
+  {
+    "file": "tvtrailer2.webp",
+    "display": "Tvtrailer2",
+    "value": "Tvtrailer2"
+  },
+  {
+    "file": "tyrant.webp",
     "display": "Tyrant",
     "value": "Tyrant"
   },
   {
-    "file": "tyrus_hero.webp",
+    "file": "tyrus.webp",
     "display": "Tyrus",
     "value": "Tyrus"
   },
   {
-    "file": "microlight_hero.webp",
+    "file": "ultralight.webp",
     "display": "Ultralight",
     "value": "Ultralight"
   },
   {
-    "file": "police4_hero.webp",
+    "file": "unmarked_cruiser.webp",
     "display": "Unmarked Cruiser",
     "value": "UnmarkedCruiser"
   },
   {
-    "file": "uranus_hero.webp",
-    "display": "Uranus LozSpeed",
-    "value": "UranusLozSpeed"
+    "file": "uranus.webp",
+    "display": "Uranus",
+    "value": "Uranus"
   },
   {
-    "file": "utillitruck_hero.webp",
-    "display": "Utility Truck",
-    "value": "UtilityTruck"
+    "file": "utillitruck.webp",
+    "display": "Utillitruck",
+    "value": "Utillitruck"
   },
   {
-    "file": "molotok_hero.webp",
-    "display": "V-65 Molotok",
-    "value": "V65Molotok"
+    "file": "utillitruck2.webp",
+    "display": "Utillitruck2",
+    "value": "Utillitruck2"
   },
   {
-    "file": "vacca_hero.webp",
+    "file": "utillitruck3.webp",
+    "display": "Utillitruck3",
+    "value": "Utillitruck3"
+  },
+  {
+    "file": "v-str.webp",
+    "display": "V-Str",
+    "value": "V-Str"
+  },
+  {
+    "file": "vacca.webp",
     "display": "Vacca",
     "value": "Vacca"
   },
   {
-    "file": "vader_hero.webp",
+    "file": "vader.webp",
     "display": "Vader",
     "value": "Vader"
   },
   {
-    "file": "vagner_hero.webp",
+    "file": "vagner.webp",
     "display": "Vagner",
     "value": "Vagner"
   },
   {
-    "file": "vagrant_hero.webp",
+    "file": "vagrant.webp",
     "display": "Vagrant",
     "value": "Vagrant"
   },
   {
-    "file": "valkyrie_hero.webp",
+    "file": "valkyrie.webp",
     "display": "Valkyrie",
     "value": "Valkyrie"
   },
   {
-    "file": "valkyrie2_hero.webp",
-    "display": "Valkyrie MOD.0",
-    "value": "ValkyrieMOD.0"
-  },
-  {
-    "file": "vamos_hero.webp",
+    "file": "vamos.webp",
     "display": "Vamos",
     "value": "Vamos"
   },
   {
-    "file": "vectre_hero.webp",
+    "file": "vectre.webp",
     "display": "Vectre",
     "value": "Vectre"
   },
   {
-    "file": "velenogt_hero.webp",
+    "file": "veleno_gt.webp",
     "display": "Veleno GT",
     "value": "VelenoGT"
   },
   {
-    "file": "velum_hero.webp",
+    "file": "velum.webp",
     "display": "Velum",
     "value": "Velum"
   },
   {
-    "file": "velum2_hero.webp",
-    "display": "Velum 5-Seater",
-    "value": "Velum5Seater"
-  },
-  {
-    "file": "verlierer2_hero.webp",
+    "file": "verlierer.webp",
     "display": "Verlierer",
     "value": "Verlierer"
   },
   {
-    "file": "verus_hero.webp",
+    "file": "verus.webp",
     "display": "Verus",
     "value": "Verus"
   },
   {
-    "file": "vestra_hero.webp",
+    "file": "vestra.webp",
     "display": "Vestra",
     "value": "Vestra"
   },
   {
-    "file": "vetir_hero.webp",
+    "file": "vetir.webp",
     "display": "Vetir",
     "value": "Vetir"
   },
   {
-    "file": "veto_hero.webp",
-    "display": "Veto Classic",
-    "value": "VetoClassic"
+    "file": "veto.webp",
+    "display": "Veto",
+    "value": "Veto"
   },
   {
-    "file": "veto2_hero.webp",
+    "file": "veto_modern.webp",
     "display": "Veto Modern",
     "value": "VetoModern"
   },
   {
-    "file": "vigero_hero.webp",
+    "file": "vigero.webp",
     "display": "Vigero",
     "value": "Vigero"
   },
   {
-    "file": "vigero2_hero.webp",
+    "file": "vigero_zx.webp",
     "display": "Vigero ZX",
     "value": "VigeroZX"
   },
   {
-    "file": "vigero3_hero.webp",
+    "file": "vigero_zx_convertible.webp",
     "display": "Vigero ZX Convertible",
     "value": "VigeroZXConvertible"
   },
   {
-    "file": "vigilante_hero.webp",
+    "file": "vigilante.webp",
     "display": "Vigilante",
     "value": "Vigilante"
   },
   {
-    "file": "vindicator_hero.webp",
+    "file": "vindicator.webp",
     "display": "Vindicator",
     "value": "Vindicator"
   },
   {
-    "file": "virgo_hero.webp",
+    "file": "virgo.webp",
     "display": "Virgo",
     "value": "Virgo"
   },
   {
-    "file": "virgo3_hero.webp",
+    "file": "virgo_classic.webp",
     "display": "Virgo Classic",
     "value": "VirgoClassic"
   },
   {
-    "file": "virgo2_hero.webp",
+    "file": "virgo_classic_custom.webp",
     "display": "Virgo Classic Custom",
     "value": "VirgoClassicCustom"
   },
   {
-    "file": "virtue_hero.webp",
+    "file": "virtue.webp",
     "display": "Virtue",
     "value": "Virtue"
   },
   {
-    "file": "viseris_hero.webp",
+    "file": "viseris.webp",
     "display": "Viseris",
     "value": "Viseris"
   },
   {
-    "file": "visione_hero.webp",
+    "file": "visione.webp",
     "display": "Visione",
     "value": "Visione"
   },
   {
-    "file": "vivanite_hero.webp",
+    "file": "vivanite(knowway).webp",
+    "display": "Vivanite(Knowway)",
+    "value": "Vivanite(Knowway)"
+  },
+  {
+    "file": "vivanite.webp",
     "display": "Vivanite",
     "value": "Vivanite"
   },
   {
-    "file": "volatol_hero.webp",
+    "file": "volatol.webp",
     "display": "Volatol",
     "value": "Volatol"
   },
   {
-    "file": "volatus_hero.webp",
+    "file": "volatus.webp",
     "display": "Volatus",
     "value": "Volatus"
   },
   {
-    "file": "voltic_hero.webp",
+    "file": "voltic.webp",
     "display": "Voltic",
     "value": "Voltic"
   },
   {
-    "file": "voodoo2_hero.webp",
-    "display": "Voodoo",
-    "value": "Voodoo"
+    "file": "voodoo(rusted).webp",
+    "display": "Voodoo(Rusted)",
+    "value": "Voodoo(Rusted)"
   },
   {
-    "file": "voodoo_hero.webp",
+    "file": "voodoo_custom.webp",
     "display": "Voodoo Custom",
     "value": "VoodooCustom"
   },
   {
-    "file": "driftvorschlag_hero.webp",
+    "file": "vorschlaghammer.webp",
     "display": "Vorschlaghammer",
     "value": "Vorschlaghammer"
   },
   {
-    "file": "vortex_hero.webp",
+    "file": "vortex.webp",
     "display": "Vortex",
     "value": "Vortex"
   },
   {
-    "file": "vstr_hero.webp",
-    "display": "V-STR",
-    "value": "VSTR"
-  },
-  {
-    "file": "l35_hero.webp",
+    "file": "walton_l35.webp",
     "display": "Walton L35",
     "value": "WaltonL35"
   },
   {
-    "file": "l352_hero.webp",
+    "file": "walton_l35_stock.webp",
     "display": "Walton L35 Stock",
     "value": "WaltonL35Stock"
   },
   {
-    "file": "warden_hero.webp",
+    "file": "warden.webp",
     "display": "Warden",
     "value": "Warden"
   },
   {
-    "file": "warrener_hero.webp",
+    "file": "warrener.webp",
     "display": "Warrener",
     "value": "Warrener"
   },
   {
-    "file": "warrener2_hero.webp",
-    "display": "Warrener HKR",
-    "value": "WarrenerHKR"
+    "file": "warrener_hkr.webp",
+    "display": "Warrener Hkr",
+    "value": "WarrenerHkr"
   },
   {
-    "file": "washington_hero.webp",
+    "file": "washington.webp",
     "display": "Washington",
     "value": "Washington"
   },
   {
-    "file": "wastelander_hero.webp",
+    "file": "wastelander.webp",
     "display": "Wastelander",
     "value": "Wastelander"
   },
   {
-    "file": "conada2_hero.webp",
+    "file": "weaponized_conada.webp",
     "display": "Weaponized Conada",
     "value": "WeaponizedConada"
   },
   {
-    "file": "dinghy5_hero.webp",
-    "display": "Weaponized Dinghy",
-    "value": "WeaponizedDinghy"
+    "file": "weaponzied_ignus.webp",
+    "display": "Weaponzied Ignus",
+    "value": "WeaponziedIgnus"
   },
   {
-    "file": "ignus2_hero.webp",
-    "display": "Weaponized Ignus",
-    "value": "WeaponizedIgnus"
+    "file": "weaponzied_tampa.webp",
+    "display": "Weaponzied Tampa",
+    "value": "WeaponziedTampa"
   },
   {
-    "file": "tampa3_hero.webp",
-    "display": "Weaponized Tampa",
-    "value": "WeaponizedTampa"
-  },
-  {
-    "file": "weevil_hero.webp",
+    "file": "weevil.webp",
     "display": "Weevil",
     "value": "Weevil"
   },
   {
-    "file": "weevil2_hero.webp",
+    "file": "weevil_custom.webp",
     "display": "Weevil Custom",
     "value": "WeevilCustom"
   },
   {
-    "file": "tribike_hero.webp",
-    "display": "Whippet Race Bike",
-    "value": "WhippetRaceBike"
-  },
-  {
-    "file": "windsor_hero.webp",
+    "file": "windsor.webp",
     "display": "Windsor",
     "value": "Windsor"
   },
   {
-    "file": "windsor2_hero.webp",
+    "file": "windsor_drop.webp",
     "display": "Windsor Drop",
     "value": "WindsorDrop"
   },
   {
-    "file": "winky_hero.webp",
+    "file": "winky.webp",
     "display": "Winky",
     "value": "Winky"
   },
   {
-    "file": "wolfsbane_hero.webp",
+    "file": "wolfsbane.webp",
     "display": "Wolfsbane",
     "value": "Wolfsbane"
   },
   {
-    "file": "woodlander_hero.webp",
+    "file": "woodlander.webp",
     "display": "Woodlander",
     "value": "Woodlander"
   },
   {
-    "file": "prototipo_hero.webp",
+    "file": "x80_proto.webp",
     "display": "X80 Proto",
     "value": "X80Proto"
   },
   {
-    "file": "xa21_hero.webp",
-    "display": "XA-21",
-    "value": "XA21"
+    "file": "xa-21.webp",
+    "display": "Xa-21",
+    "value": "Xa-21"
   },
   {
-    "file": "blimp2_hero.webp",
-    "display": "Xero Blimp",
-    "value": "XeroBlimp"
+    "file": "xls(armored).webp",
+    "display": "Xls(Armored)",
+    "value": "Xls(Armored)"
   },
   {
-    "file": "xls_hero.webp",
-    "display": "XLS",
-    "value": "XLS"
+    "file": "xls.webp",
+    "display": "Xls",
+    "value": "Xls"
   },
   {
-    "file": "xls2_hero.webp",
-    "display": "XLS (Armored)",
-    "value": "XLSArmored"
-  },
-  {
-    "file": "xtreme_hero.webp",
-    "display": "X-treme",
+    "file": "xtreme.webp",
+    "display": "Xtreme",
     "value": "Xtreme"
   },
   {
-    "file": "yosemite_hero.webp",
+    "file": "yosemite.webp",
     "display": "Yosemite",
     "value": "Yosemite"
   },
   {
-    "file": "yosemite1500_hero.webp",
+    "file": "yosemite_1500.webp",
     "display": "Yosemite 1500",
     "value": "Yosemite1500"
   },
   {
-    "file": "yosemite3_hero.webp",
+    "file": "yosemite_rancher.webp",
     "display": "Yosemite Rancher",
     "value": "YosemiteRancher"
   },
   {
-    "file": "youga_hero.webp",
+    "file": "youga.webp",
     "display": "Youga",
     "value": "Youga"
   },
   {
-    "file": "youga2_hero.webp",
+    "file": "youga_classic.webp",
     "display": "Youga Classic",
     "value": "YougaClassic"
   },
   {
-    "file": "youga3_hero.webp",
-    "display": "Youga Classic 4x4",
-    "value": "YougaClassic4x4"
+    "file": "youga_classic_4x4.webp",
+    "display": "Youga Classic 4X4",
+    "value": "YougaClassic4X4"
   },
   {
-    "file": "youga4_hero.webp",
+    "file": "youga_custom.webp",
     "display": "Youga Custom",
     "value": "YougaCustom"
   },
   {
-    "file": "zeno_hero.webp",
+    "file": "zeno.webp",
     "display": "Zeno",
     "value": "Zeno"
   },
   {
-    "file": "zentorno_hero.webp",
+    "file": "zentorno.webp",
     "display": "Zentorno",
     "value": "Zentorno"
   },
   {
-    "file": "zhaba_hero.webp",
+    "file": "zhaba.webp",
     "display": "Zhaba",
     "value": "Zhaba"
   },
   {
-    "file": "zion_hero.webp",
+    "file": "zion.webp",
     "display": "Zion",
     "value": "Zion"
   },
   {
-    "file": "zion2_hero.webp",
+    "file": "zion_cabrio.webp",
     "display": "Zion Cabrio",
     "value": "ZionCabrio"
   },
   {
-    "file": "zion3_hero.webp",
+    "file": "zion_classic.webp",
     "display": "Zion Classic",
     "value": "ZionClassic"
   },
   {
-    "file": "zombiea_hero.webp",
+    "file": "zombie_bobber.webp",
     "display": "Zombie Bobber",
     "value": "ZombieBobber"
   },
   {
-    "file": "zombieb_hero.webp",
+    "file": "zombie_chopper.webp",
     "display": "Zombie Chopper",
     "value": "ZombieChopper"
   },
   {
-    "file": "zorrusso_hero.webp",
+    "file": "zorrusso.webp",
     "display": "Zorrusso",
     "value": "Zorrusso"
   },
   {
-    "file": "driftzr350_hero.webp",
-    "display": "ZR350",
-    "value": "ZR350"
+    "file": "zr350.webp",
+    "display": "Zr350",
+    "value": "Zr350"
   },
   {
-    "file": "ztype_hero.webp",
-    "display": "Z-Type",
-    "value": "ZType"
+    "file": "ztype.webp",
+    "display": "Ztype",
+    "value": "Ztype"
   }
 ]

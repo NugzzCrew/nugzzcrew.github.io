@@ -3,8 +3,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import colors from "../data/colors.json";
 import vehicles from "../data/vehicles.json";
 import rimData from "../data/rim-data.json";
-import vehicleUrls from "../data/vehicles-urls.json";
-import wheelUrls from "../data/wheels-urls.json";
 
 const unselectedSecondary = colors.filter((c) => !c.secondary);
 const allUnselected = colors.filter(
@@ -134,6 +132,12 @@ const vehicleSets = [
           <p id="vehicleSelectedLabel" class="text-[10px] text-zinc-400 mt-2 min-h-[1.2em]"></p>
           <div id="vehiclePreviewWrap" class="mt-3 hidden">
             <img id="vehiclePreviewImg" src="" alt="Vehicle" class="max-h-40 mx-auto rounded-lg border border-zinc-700 bg-black object-contain" />
+          </div>
+          <div id="driftWrapper" class="hidden mt-3 p-3 bg-zinc-800/50 rounded-lg border border-zinc-700">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="driftCheck" class="w-4 h-4 accent-gold" />
+              <span class="text-[10px] text-gold uppercase font-black tracking-widest">Drift Version</span>
+            </label>
           </div>
           <input type="hidden" id="vehicle" />
         </div>
@@ -407,7 +411,19 @@ const vehicleSets = [
   </div>
 </MainLayout>
 
-<script is:inline define:vars={{ colors, unselectedSecondary, allUnselected, wheelCategories, lightColors, tireDesignMap, tireSuffixMap, vehicles, rimPaths, vehicleUrls, wheelUrls }}>
+<script is:inline define:vars={{ colors, unselectedSecondary, allUnselected, wheelCategories, lightColors, tireDesignMap, vehicles, rimPaths }}>
+  const driftVehicles = ["Chavos V6", "Cheburek", "Cypher", "Dominator FX", "Dominator GT", "Drift Tampa", "Drift Yosemite", "Euros", "FR36", "Futo", "Futo GTX", "Gauntlet Hellfire", "Hardy", "Jester Classic", "Jester RR", "Keitora", "Nebula Turbo", "Remus", "RT3000", "Sentinel Classic Widebody", "Sentinel XS", "Vorschlaghammer", "ZR-350", "ZR350"];
+
+  function checkDriftOption(displayName) {
+    const wrapper = document.getElementById("driftWrapper");
+    if (driftVehicles.some(d => displayName.toLowerCase().includes(d.toLowerCase()))) {
+      wrapper.classList.remove("hidden");
+    } else {
+      wrapper.classList.add("hidden");
+      document.getElementById("driftCheck").checked = false;
+    }
+  }
+
   const globalHexMap = {};
   colors.forEach((c) => {
     const key = c.texture + "|" + c.name;
@@ -585,15 +601,13 @@ const vehicleSets = [
     if (!style || style === "" || style === "Stock") {
       full.classList.add("hidden");
       full.src = "";
-      if (typeof wheelUrls !== "undefined") {
-        const seen = new Set();
-        const tiles = [];
-        wheelUrls.filter(w => w.category === cat && !w.tire).forEach(w => {
-          if (!seen.has(w.name)) {
-            seen.add(w.name);
-            tiles.push(`<img src="${w.url}" alt="${w.name}" data-style="${w.name}" class="w-full aspect-square object-contain bg-zinc-900 rounded cursor-pointer hover:ring-1 hover:ring-gold transition-all" title="${w.name}" />`);
-          }
-        });
+      const folderMap = {"Bennys Bespoke": "bennysbespoke", "Bennys Originals": "bennysoriginals", "High End": "highend"};
+      const folder = folderMap[cat] || cat.toLowerCase().replace(/ /g, "");
+      const styles = wheelCategories[cat] || [];
+      const tiles = styles.filter(s => s !== "Stock").map(s => {
+        const filename = cat.replace(/ /g, "_") + "_" + s.replace(/ /g, "_") + ".webp";
+        return `<img src="/images/wheels/${folder}/${filename}" alt="${s}" data-style="${s}" class="w-full aspect-square object-contain bg-zinc-900 rounded cursor-pointer hover:ring-1 hover:ring-gold transition-all" title="${s}" />`;
+      });
         grid.innerHTML = tiles.join("");
         grid.classList.remove("hidden");
         // Click to select
@@ -607,30 +621,19 @@ const vehicleSets = [
       return;
     }
 
-    // Style selected — show single rim with tire design
+    // Style selected — show single rim with tire design from local files
     grid.classList.add("hidden");
     grid.innerHTML = "";
-    let rimImg = "";
-    if (typeof wheelUrls !== "undefined") {
-      const matches = wheelUrls.filter(w => w.category === cat && w.name === style);
-      let candidates = matches;
-      if (tireVal && tireVal !== "None" && tireVal !== "" && tireVal !== "N/A") {
-        const suffixKey = cat + "|" + tireVal;
-        const suffix = (typeof tireSuffixMap !== "undefined") ? tireSuffixMap[suffixKey] : null;
-        if (suffix) {
-          const suffixMatch = matches.filter(w => w.file && w.file.endsWith(suffix + ".webp"));
-          if (suffixMatch.length) candidates = suffixMatch;
-        }
-      }
-      const chrome = candidates.find(w => w.chrome);
-      const base = candidates.find(w => !w.tire) || candidates[0];
-      const pick = chrome || base;
-      if (pick && pick.url) rimImg = pick.url;
+    const catFolder = cat.toLowerCase().replace(/ /g, "").replace("bennys", "bennys");
+    const folderMap = {"Bennys Bespoke": "bennysbespoke", "Bennys Originals": "bennysoriginals", "High End": "highend"};
+    const folder = folderMap[cat] || cat.toLowerCase().replace(/ /g, "");
+    let filename = cat.replace(/ /g, "_") + "_" + style.replace(/ /g, "_");
+    if (tireVal && tireVal !== "None" && tireVal !== "") {
+      filename += "_" + tireVal.replace(/ /g, "_");
     }
-    if (rimImg) {
-      full.src = rimImg;
-      full.classList.remove("hidden");
-    }
+    filename += ".webp";
+    full.src = `/images/wheels/${folder}/${filename}`;
+    full.classList.remove("hidden");
   }
 
 
@@ -1114,11 +1117,7 @@ Tire Design: ${formattedTire}${activatorOutput}`;
     document.getElementById("vehicleSelectedLabel").textContent = `Selected: ${v.display}`;
     const img = document.getElementById("vehiclePreviewImg");
     const wrap = document.getElementById("vehiclePreviewWrap");
-    // Prefer external URL if available
-    const urlEntry = (typeof vehicleUrls !== "undefined") ? vehicleUrls.find(u => u.display === v.display) : null;
-    if (urlEntry && urlEntry.url) {
-      img.src = urlEntry.url;
-    } else if (v.file) {
+    if (v.file) {
       img.src = `/images/Vehicles/${v.file}`;
     }
     img.alt = v.display;
