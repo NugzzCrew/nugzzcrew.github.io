@@ -1043,11 +1043,11 @@ Neon: ${formatNeon(get("neon"))}
 Primary: ${formatPaint(pVal, pVal === "Custom", get("primaryTexture"))}
 Secondary: ${formatPaint(sVal, sVal === "Custom", get("secondaryTexture"))}
 Pearlescent: ${formatColor(get("pearl"))}
-Rim Category: ${get("wheelCategory")}
-Rim Style: ${get("rimStyle")}${activatorOutput}
+Rims: ${get("wheelCategory")}, ${get("rimStyle")}${activatorOutput}
 Rim Color: ${formatColor(get("rimColor"))}
 Tire Design: ${formattedTire}
-Tire Smoke: ${finalSmoke}`;
+Tire Smoke: ${finalSmoke}
+Livery: ${get("livery") || "None"}`;
     
     document.getElementById("output").textContent = out;
     const builder = document.getElementById("dmo-builder");
