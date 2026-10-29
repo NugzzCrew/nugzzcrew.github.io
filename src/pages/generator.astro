@@ -1094,7 +1094,7 @@ Tire Design: ${formattedTire}${activatorOutput}`;
     const q = filter.trim().toLowerCase();
     const matches = vehicles.filter(v => 
       v.display.toLowerCase().includes(q) || v.value.toLowerCase().includes(q)
-    ).slice(0, 40);
+    );
 
     if (matches.length === 0) {
       dd.classList.add("hidden");
