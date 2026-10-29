@@ -1089,6 +1089,7 @@ Tire Design: ${formattedTire}${activatorOutput}`;
   }
 
   function renderVehicleDropdown(filter = "") {
+    console.log("renderVehicleDropdown called, filter:", filter, "vehicles:", typeof vehicles, vehicles?.length);
     const dd = document.getElementById("vehicleDropdown");
     const q = filter.trim().toLowerCase();
     const matches = vehicles.filter(v => 
