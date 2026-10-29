@@ -349,9 +349,10 @@ import MainLayout from '../layouts/MainLayout.astro';
       });
     }
 
-    // Helper for aspect ratio drawing with a small inset so nothing is cut at the edge
-    function drawAspectFit(ctx, img, targetW, targetH, sX, sY, sW, sH) {
-      const inset = 4; // keep content off the absolute edge
+    // Helper for aspect ratio drawing. Larger inset when circular so the clip never cuts content.
+    // Non-circular uses a safer inset so anti-aliased edges and slight bounds errors never clip.
+    function drawAspectFit(ctx, img, targetW, targetH, sX, sY, sW, sH, circular) {
+      const inset = circular ? 12 : 8;
       const availW = targetW - inset * 2;
       const availH = targetH - inset * 2;
       const scale = Math.min(availW / sW, availH / sH);
@@ -369,18 +370,20 @@ import MainLayout from '../layouts/MainLayout.astro';
         canvas.width = 512;
         canvas.height = 512;
         const ctx = canvas.getContext('2d');
+        const isCircular = circularCrop && circularCrop.checked;
         
-        ctx.clearRect(0, 0, 512, 512); // Ensure transparency base
+        ctx.clearRect(0, 0, 512, 512);
         
-        // Handle Circular crop mask BEFORE drawing
-        if (circularCrop && circularCrop.checked) {
+        // Circular clip uses a slightly smaller radius so anti-aliased edges aren't cut
+        if (isCircular) {
             ctx.beginPath();
-            ctx.arc(256, 256, 256, 0, Math.PI * 2);
+            ctx.arc(256, 256, 250, 0, Math.PI * 2);
             ctx.clip();
         }
 
-        if (cropEdges.checked) {
-          // simple content bounds
+        // Always draw the full image for non-circular (default) so edges are never cut.
+        // Crop-empty-edges only applies when circular is on, or when the user explicitly wants tight crop.
+        if (cropEdges.checked && isCircular) {
           const temp = document.createElement('canvas');
           temp.width = img.width;
           temp.height = img.height;
@@ -390,7 +393,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           let minX = img.width, minY = img.height, maxX = 0, maxY = 0;
           for (let y = 0; y < img.height; y++) {
             for (let x = 0; x < img.width; x++) {
-              if (id.data[(y * img.width + x) * 4 + 3] > 10) {
+              if (id.data[(y * img.width + x) * 4 + 3] > 24) {
                 if (x < minX) minX = x;
                 if (x > maxX) maxX = x;
                 if (y < minY) minY = y;
@@ -400,14 +403,23 @@ import MainLayout from '../layouts/MainLayout.astro';
           }
           if (maxX > minX && maxY > minY) {
             const w = maxX - minX + 1, h = maxY - minY + 1;
-            drawAspectFit(ctx, img, 512, 512, minX, minY, w, h);
+            drawAspectFit(ctx, img, 512, 512, minX, minY, w, h, isCircular);
           } else {
-            drawAspectFit(ctx, img, 512, 512, 0, 0, img.width, img.height);
+            drawAspectFit(ctx, img, 512, 512, 0, 0, img.width, img.height, isCircular);
           }
         } else {
-          drawAspectFit(ctx, img, 512, 512, 0, 0, img.width, img.height);
+          // Non-circular (default): always fit the full original image, no content-bounds crop
+          drawAspectFit(ctx, img, 512, 512, 0, 0, img.width, img.height, false);
         }
         const data = ctx.getImageData(0, 0, 512, 512);
+        cb(data);
+      };
+      img.src = URL.createObjectURL(file);
+    }
+        cb(data);
+      };
+      img.src = URL.createObjectURL(file);
+    }
         cb(data);
       };
       img.src = URL.createObjectURL(file);
