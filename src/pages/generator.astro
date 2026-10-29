@@ -1153,7 +1153,10 @@ Tire Design: ${formattedTire}${activatorOutput}`;
     renderVehicleDropdown(e.target.value);
   });
   searchEl.addEventListener("focus", (e) => {
-    if (e.target.value) renderVehicleDropdown(e.target.value);
+    renderVehicleDropdown(e.target.value || "");
+  });
+  searchEl.addEventListener("click", (e) => {
+    renderVehicleDropdown(e.target.value || "");
   });
 
   // Click outside to close
