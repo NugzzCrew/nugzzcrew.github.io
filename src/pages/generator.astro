@@ -1034,27 +1034,20 @@ const vehicleSets = [
 
     const out = `=== DMO SPECIFICATION ===
 
-[VEHICLE & PLATE]
-Vehicle / Set: ${selectedVehicle ? selectedVehicle.display : get("vehicle")}
+Vehicle: ${selectedVehicle ? selectedVehicle.display : get("vehicle")}
+Headlights: ${get("headlights")}
 Plate Style: ${get("plateStyle")}
 Plate Text: "${outPlate}"
-Window Tint: ${get("windows")}
-Livery: ${get("livery") || "None"}
-
-[COLORS & PAINTS]
+Windows: ${get("windows")}
+Neon: ${formatNeon(get("neon"))}
 Primary: ${formatPaint(pVal, pVal === "Custom", get("primaryTexture"))}
 Secondary: ${formatPaint(sVal, sVal === "Custom", get("secondaryTexture"))}
 Pearlescent: ${formatColor(get("pearl"))}
-Interior: ${formatColor(get("interior"))}
+Rim Category: ${get("wheelCategory")}
+Rim Style: ${get("rimStyle")}${activatorOutput}
 Rim Color: ${formatColor(get("rimColor"))}
-Headlight Color: ${get("headlights")}
-Neon Setup: ${formatNeon(get("neon"))}
-Tire Smoke: ${finalSmoke}
-
-[WHEELS]
-Category: ${get("wheelCategory")}
-Rim Style: ${get("rimStyle")}
-Tire Design: ${formattedTire}${activatorOutput}`;
+Tire Design: ${formattedTire}
+Tire Smoke: ${finalSmoke}`;
     
     document.getElementById("output").textContent = out;
     const builder = document.getElementById("dmo-builder");
