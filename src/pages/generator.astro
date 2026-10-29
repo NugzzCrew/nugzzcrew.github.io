@@ -628,7 +628,7 @@ const vehicleSets = [
     const folder = folderMap[cat] || cat.toLowerCase().replace(/ /g, "");
     let filename = cat.replace(/ /g, "_") + "_" + style.replace(/ /g, "_");
     if (tireVal && tireVal !== "None" && tireVal !== "") {
-      const cleanTire = tireVal.replace(/[()\/]/g, "").replace(/ /g, "_");
+      const cleanTire = tireVal.replace(/[()]/g, "").replace(/[\/]/g, "_").replace(/ /g, "_");
       filename += "_" + cleanTire;
     }
     filename += ".webp";
