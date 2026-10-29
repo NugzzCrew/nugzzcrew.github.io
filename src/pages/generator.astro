@@ -628,7 +628,8 @@ const vehicleSets = [
     const folder = folderMap[cat] || cat.toLowerCase().replace(/ /g, "");
     let filename = cat.replace(/ /g, "_") + "_" + style.replace(/ /g, "_");
     if (tireVal && tireVal !== "None" && tireVal !== "") {
-      filename += "_" + tireVal.replace(/ /g, "_");
+      const cleanTire = tireVal.replace(/[()\/]/g, "").replace(/ /g, "_");
+      filename += "_" + cleanTire;
     }
     filename += ".webp";
     full.src = `/images/wheels/${folder}/${filename}`;
