@@ -3,7 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Game Maps">
-  <div class="page-shell">
+  <div class="maps-container">
     <header class="page-head">
       <h1 class="page-title">
         <span class="text-white">Game</span> <span class="text-gold">Maps</span>
@@ -16,7 +16,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       Open them in a new tab while you play — perfect for collectibles, locations, routes, and planning.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- GTA Online -->
       <a id="gta" href="https://gtaweb.eu/gtao-map/ls/" target="_blank" rel="noopener noreferrer" class="jump group flex flex-col h-full bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 hover:border-gold/60 hover:bg-zinc-900/60 transition-all duration-300">
         <div class="flex items-center gap-3 mb-3">
@@ -63,12 +63,18 @@ import MainLayout from '../layouts/MainLayout.astro';
 </MainLayout>
 
 <style>
-  /* Force consistent alignment with the rest of the site */
-  .page-shell {
-    max-width: 80rem !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+  .maps-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 1rem 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .maps-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 </style>
