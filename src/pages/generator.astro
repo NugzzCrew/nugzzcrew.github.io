@@ -4,9 +4,9 @@ import colors from "../data/colors.json";
 import vehicles from "../data/vehicles.json";
 import rimData from "../data/rim-data.json";
 
-const unselectedSecondary = colors.filter((c) => !c.secondary);
+const unselectedSecondary = colors.filter((c) => c.secondary === "unselected");
 const allUnselected = colors.filter(
-  (c) => !c.primary || !c.secondary || !c.pearl || !c.rim || !c.interior,
+  (c) => c.primary === "unselected" || c.secondary === "unselected" || c.pearl === "unselected" || c.rim === "unselected"
 );
 
 const wheelCategories = rimData.categories;
