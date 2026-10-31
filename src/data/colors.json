@@ -3,1449 +3,1449 @@
     "name": "Chrome",
     "texture": "Chrome",
     "hex": "#000000",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "MP100",
     "texture": "Hidden",
     "hex": "#FFD859",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Black",
     "texture": "Matte",
     "hex": "#050505",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Blue",
     "texture": "Matte",
     "hex": "#0F1E73",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Brown",
     "texture": "Matte",
     "hex": "#6B5F54",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Blue",
     "texture": "Matte",
     "hex": "#030E2E",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Dark Earth",
     "texture": "Matte",
     "hex": "#3B352D",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Dark Red",
     "texture": "Matte",
     "hex": "#360000",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Desert Tan",
     "texture": "Matte",
     "hex": "#706656",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Foliage Green",
     "texture": "Matte",
     "hex": "#2B302B",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Forest Green",
     "texture": "Matte",
     "hex": "#121710",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Gray",
     "texture": "Matte",
     "hex": "#121212",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Green",
     "texture": "Matte",
     "hex": "#243022",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Ice White",
     "texture": "Matte",
     "hex": "#D9D9D9",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Light Gray",
     "texture": "Matte",
     "hex": "#2F3233",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Lime Green",
     "texture": "Matte",
     "hex": "#418503",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Midnight Blue",
     "texture": "Matte",
     "hex": "#001C32",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Midnight Purple",
     "texture": "Matte",
     "hex": "#050008",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Olive Drab",
     "texture": "Matte",
     "hex": "#323325",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Orange",
     "texture": "Matte",
     "hex": "#AB3F00",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Red",
     "texture": "Matte",
     "hex": "#780000",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Schafter Purple",
     "texture": "Matte",
     "hex": "#320642",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Yellow",
     "texture": "Matte",
     "hex": "#DE7E00",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Anthracite Gray",
     "texture": "Metallic",
     "hex": "#121110",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "BeechWood Brown",
     "texture": "Metallic",
     "hex": "#241309",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Bison Brown",
     "texture": "Metallic",
     "hex": "#221918",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Black",
     "texture": "Metallic",
     "hex": "#080808",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Black Steel",
     "texture": "Metallic",
     "hex": "#1C1E21",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Blaze Red",
     "texture": "Metallic",
     "hex": "#611009",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Bleached Brown",
     "texture": "Metallic",
     "hex": "#998D73",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Blue",
     "texture": "Metallic",
     "hex": "#001B57",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Bluish Silver",
     "texture": "Metallic",
     "hex": "#777C87",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Bright Green",
     "texture": "Metallic",
     "hex": "#003805",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Bright Purple",
     "texture": "Metallic",
     "hex": "#320642",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Bronze",
     "texture": "Metallic",
     "hex": "#4A341B",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Cabernet Red",
     "texture": "Metallic",
     "hex": "#26030B",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Candy Red",
     "texture": "Metallic",
     "hex": "#630012",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Carbon Black",
     "texture": "Metallic",
     "hex": "#080808",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Cast Iron Silver",
     "texture": "Metallic",
     "hex": "#23292E",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Champagne",
     "texture": "Metallic",
     "hex": "#57514B",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Chocolate Brown",
     "texture": "Metallic",
     "hex": "#120D07",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Cream",
     "texture": "Metallic",
     "hex": "#CFC0A5",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Creek Brown",
     "texture": "Metallic",
     "hex": "#262117",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Dark Blue",
     "texture": "Metallic",
     "hex": "#001029",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Green",
     "texture": "Metallic",
     "hex": "#001207",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Steel",
     "texture": "Metallic",
     "hex": "#292C2E",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Dew Yellow/Yellow Bird",
     "texture": "Metallic",
     "hex": "#A2A827",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Diamond Blue",
     "texture": "Metallic",
     "hex": "#95B2DB",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Feltzer Brown",
     "texture": "Metallic",
     "hex": "#291B06",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Formula Red",
     "texture": "Metallic",
     "hex": "#6B0000",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Frost White",
     "texture": "Metallic",
     "hex": "#B3B9C9",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Galaxy Blue",
     "texture": "Metallic",
     "hex": "#000D14",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Garnet Red",
     "texture": "Metallic",
     "hex": "#470E0E",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Gasoline Green",
     "texture": "Metallic",
     "hex": "#0B4145",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Gold",
     "texture": "Metallic",
     "hex": "#6E4F2D",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Grace Red",
     "texture": "Metallic",
     "hex": "#4A0A0A",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Graphite",
     "texture": "Metallic",
     "hex": "#0F0F0F",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Harbor Blue",
     "texture": "Metallic",
     "hex": "#272D3B",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Ice White",
     "texture": "Metallic",
     "hex": "#F0F0F0",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Lava Red",
     "texture": "Metallic",
     "hex": "#6B0B00",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Light Blue",
     "texture": "Metallic",
     "hex": "#395A83",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Lime Green",
     "texture": "Metallic",
     "hex": "#568F00",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Maple Brown",
     "texture": "Metallic",
     "hex": "#332111",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Mariner Blue",
     "texture": "Metallic",
     "hex": "#3B4E78",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Midnight Blue",
     "texture": "Metallic",
     "hex": "#000108",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Midnight Purple/V Dark Blue",
     "texture": "Metallic",
     "hex": "#050008",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Midnight Purple",
     "texture": "Metallic",
     "hex": "#050009",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Midnight Silver",
     "texture": "Metallic",
     "hex": "#1F2226",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Moss Brown",
     "texture": "Metallic",
     "hex": "#37382B",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Nautical Blue",
     "texture": "Metallic",
     "hex": "#1C3140",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Olive Green",
     "texture": "Metallic",
     "hex": "#1F261E",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Orange",
     "texture": "Metallic",
     "hex": "#BD4800",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Pea Green/Securicor Green",
     "texture": "Metallic",
     "hex": "#47783C",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Pfister Pink",
     "texture": "Metallic",
     "hex": "#8F2F55",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Race Yellow",
     "texture": "Metallic",
     "hex": "#D9A600",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Racing Blue",
     "texture": "Metallic",
     "hex": "#0E316D",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Racing Green",
     "texture": "Metallic",
     "hex": "#001A0B",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Red",
     "texture": "Metallic",
     "hex": "#690000",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Rolled Steel",
     "texture": "Metallic",
     "hex": "#515459",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Saddle Brown",
     "texture": "Metallic",
     "hex": "#3D3023",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Sandy Brown",
     "texture": "Metallic",
     "hex": "#6E6246",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Saxon Blue",
     "texture": "Metallic",
     "hex": "#1C2F4F",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Schafter Purple",
     "texture": "Metallic",
     "hex": "#1A182E",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Sea Green",
     "texture": "Metallic",
     "hex": "#00211E",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Shadow Silver",
     "texture": "Metallic",
     "hex": "#323B47",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Sienna Brown",
     "texture": "Metallic",
     "hex": "#3B1700",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Silver",
     "texture": "Metallic",
     "hex": "#5A5E66",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Spinnaker Purple",
     "texture": "Metallic",
     "hex": "#161629",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Stone Silver",
     "texture": "Metallic",
     "hex": "#333333",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Straw Brown",
     "texture": "Metallic",
     "hex": "#5E5343",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Sunrise Orange",
     "texture": "Metallic",
     "hex": "#802800",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Sunset Red",
     "texture": "Metallic",
     "hex": "#380C00",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Surf Blue",
     "texture": "Metallic",
     "hex": "#3E627A",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Torino Red",
     "texture": "Metallic",
     "hex": "#8A0B00",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Ultra Blue",
     "texture": "Metallic",
     "hex": "#0055C4",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Wine Red",
     "texture": "Metallic",
     "hex": "#080000",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Woodbeach Brown",
     "texture": "Metallic",
     "hex": "#575036",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "unselected"
   },
   {
     "name": "Yellow",
     "texture": "Metallic",
     "hex": "#F5890F",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Brushed Aluminium",
     "texture": "Metals",
     "hex": "#5E646B",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Brushed Black Steel",
     "texture": "Metals",
     "hex": "#1A1E21",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Brushed Gold",
     "texture": "Metals",
     "hex": "#47391B",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Brushed Steel",
     "texture": "Metals",
     "hex": "#3B4045",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Pure Gold",
     "texture": "Metals",
     "hex": "#47391B",
-    "primary": true,
-    "secondary": false,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Epsilon Blue",
     "texture": "Other",
     "hex": "#6690B5",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Green Bright",
     "texture": "Other",
     "hex": "#69BD45",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Hunter Green",
     "texture": "Other",
     "hex": "#565751",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Pure White",
     "texture": "Other",
     "hex": "#FFFFFF",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Alloy",
     "texture": "Rim",
     "hex": "#414347",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Bright Orange",
     "texture": "Rim",
     "hex": "#C26610",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Fluorescent Blue",
     "texture": "Rim",
     "hex": "#00AEEF",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Hot Pink",
     "texture": "Rim",
     "hex": "#B01259",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Salmon Pink",
     "texture": "Rim",
     "hex": "#F69799",
-    "primary": true,
-    "secondary": false,
-    "pearl": false,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "selected",
+    "pearl": "selected",
+    "rim": "selected"
   },
   {
     "name": "Police Blue",
     "texture": "Utility",
     "hex": "#2A77A1",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Black",
     "texture": "Utility",
     "hex": "#080808",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Black Poly",
     "texture": "Utility",
     "hex": "#121212",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Blue",
     "texture": "Utility",
     "hex": "#152A52",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Bright Blue/Slate Blue",
     "texture": "Utility",
     "hex": "#1F1FA1",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Bright Red",
     "texture": "Utility",
     "hex": "#8C0404",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Brown",
     "texture": "Utility",
     "hex": "#1F1709",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Blue",
     "texture": "Utility",
     "hex": "#09142E",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Green",
     "texture": "Utility",
     "hex": "#0F1F15",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Dark Silver",
     "texture": "Utility",
     "hex": "#202224",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Garnet Red",
     "texture": "Utility",
     "hex": "#4A1000",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Green",
     "texture": "Utility",
     "hex": "#023613",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Gun Metal",
     "texture": "Utility",
     "hex": "#23292E",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Light Brown",
     "texture": "Utility",
     "hex": "#665847",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Lightning Blue",
     "texture": "Utility",
     "hex": "#152563",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Maui Blue Poly",
     "texture": "Utility",
     "hex": "#223BA1",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Medium Brown",
     "texture": "Utility",
     "hex": "#3D311D",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Midnight Blue",
     "texture": "Utility",
     "hex": "#0F1021",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Off White",
     "texture": "Utility",
     "hex": "#999999",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Red",
     "texture": "Utility",
     "hex": "#520000",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Sea Foam Blue",
     "texture": "Utility",
     "hex": "#324654",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Shawdow Silver",
     "texture": "Utility",
     "hex": "#323B47",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Silver",
     "texture": "Utility",
     "hex": "#575961",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Baby Blue",
     "texture": "Worn",
     "hex": "#3B6796",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Black",
     "texture": "Worn",
     "hex": "#0F1012",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Blue",
     "texture": "Worn",
     "hex": "#303C5E",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Blue Silver",
     "texture": "Worn",
     "hex": "#697187",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Brown",
     "texture": "Worn",
     "hex": "#241E1A",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Blue",
     "texture": "Worn",
     "hex": "#2A3754",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Brown",
     "texture": "Worn",
     "hex": "#171413",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": false
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "selected"
   },
   {
     "name": "Dark Green",
     "texture": "Worn",
     "hex": "#162419",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Dark Red",
     "texture": "Worn",
     "hex": "#210804",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Golden Red",
     "texture": "Worn",
     "hex": "#754231",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Graphite",
     "texture": "Worn",
     "hex": "#212121",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Green",
     "texture": "Worn",
     "hex": "#2A3625",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Honey Beige",
     "texture": "Worn",
     "hex": "#615F55",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Light Orange",
     "texture": "Worn",
     "hex": "#C45C33",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Off White",
     "texture": "Worn",
     "hex": "#B0B0B0",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Olive Army Green",
     "texture": "Worn",
     "hex": "#3F4228",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Orange",
     "texture": "Worn",
     "hex": "#B56519",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Orange 2",
     "texture": "Worn",
     "hex": "#C96E34",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Red",
     "texture": "Worn",
     "hex": "#592525",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Sea Wash",
     "texture": "Worn",
     "hex": "#455C56",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Shadow Silver",
     "texture": "Worn",
     "hex": "#3B4654",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Silver",
     "texture": "Worn",
     "hex": "#888A99",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Silver Grey",
     "texture": "Worn",
     "hex": "#5B5D5E",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Straw Beige",
     "texture": "Worn",
     "hex": "#3B372F",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "Taxi Yellow",
     "texture": "Worn",
     "hex": "#BA8425",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   },
   {
     "name": "White",
     "texture": "Worn",
     "hex": "#F0F0F0",
-    "primary": true,
-    "secondary": true,
-    "pearl": true,
-    "rim": true
+    "primary": "unselected",
+    "secondary": "unselected",
+    "pearl": "unselected",
+    "rim": "unselected"
   }
 ]

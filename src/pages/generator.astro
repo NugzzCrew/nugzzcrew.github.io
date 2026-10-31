@@ -570,7 +570,7 @@ const vehicleSets = [
   
   function populatePrimary() { document.getElementById("primary").innerHTML = '<option value="">-- Select --</option><option value="Custom">Custom RGB / HEX</option>' + colors.map(makeOption).join(""); }
   function populateSecondary() { document.getElementById("secondary").innerHTML = '<option value="">-- Select --</option><option value="Custom">Custom RGB / HEX</option>' + unselectedSecondary.map(makeOption).join(""); }
-  function populateUnselectedOnly(selectId, flag) { document.getElementById(selectId).innerHTML = '<option value="">-- Select --</option>' + allUnselected.filter((c) => !c[flag]).map(makeOption).join(""); }
+  function populateUnselectedOnly(selectId, flag) { document.getElementById(selectId).innerHTML = '<option value="">-- Select --</option>' + allUnselected.filter((c) => c[flag] === "unselected").map(makeOption).join(""); }
 
   function slugify(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
   
