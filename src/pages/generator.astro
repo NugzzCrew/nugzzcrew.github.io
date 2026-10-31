@@ -690,7 +690,7 @@ const vehicleSets = [
   }
 
   function refreshPreviews() {
-    ["primary", "secondary", "pearl", "interior", "rimColor", "headlights", "neon"].forEach((id) => {
+    ["primary", "secondary", "pearl", "rimColor", "headlights", "neon"].forEach((id) => {
       const box = document.getElementById(id + "Prev");
       if (box) box.style.backgroundColor = getColorForPreview(id);
     });
@@ -728,7 +728,7 @@ const vehicleSets = [
     }
   }
 
-  ["primary", "secondary", "pearl", "interior", "rimColor", "headlights"].forEach(id => {
+  ["primary", "secondary", "pearl", "rimColor", "headlights"].forEach(id => {
     document.getElementById(id).addEventListener("change", refreshPreviews);
   });
 
@@ -901,7 +901,7 @@ const vehicleSets = [
     const pearls = getOpts("pearl").filter(v => getHslFromVal(v).s > 0.35);
     document.getElementById("pearl").value = pickRandom(pearls) || getOpts("pearl")[0];
     
-    document.getElementById("interior").value = pickRandom(getOpts("interior")) || "";
+    const intEl = document.getElementById("interior"); if (intEl) intEl.value = pickRandom(getOpts("interior")) || "";
     document.getElementById("rimColor").value = pickRandom(getOpts("rimColor")) || "";
 
     document.getElementById("headlights").value = pickRandom(getOpts("headlights").filter(h => h !== "White" && h !== "Pure White"));
@@ -932,7 +932,7 @@ const vehicleSets = [
       let hsl = getHslFromVal(v);
       return hsl.s < 0.3 || hsl.l < 0.2 || hsl.l > 0.8;
     });
-    document.getElementById("interior").value = pickRandom(realInts) || "";
+    const intEl2 = document.getElementById("interior"); if (intEl2) intEl2.value = pickRandom(realInts) || "";
     document.getElementById("rimColor").value = pickRandom(realInts) || "";
 
     document.getElementById("headlights").value = Math.random() > 0.5 ? "White" : "Pure White";
@@ -1191,7 +1191,7 @@ Livery: ${get("livery") || "None"}`;
 
 
     populatePrimary(); populateSecondary();
-  populateUnselectedOnly("pearl", "pearl"); populateUnselectedOnly("interior", "interior"); populateUnselectedOnly("rimColor", "rim");
+  populateUnselectedOnly("pearl", "pearl"); populateUnselectedOnly("rimColor", "rim");
   updatePlatePreview(); 
 </script>
 
