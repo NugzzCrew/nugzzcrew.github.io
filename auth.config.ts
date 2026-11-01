@@ -7,6 +7,7 @@ export default defineConfig({
     Discord({
       clientId: import.meta.env.DISCORD_CLIENT_ID,
       clientSecret: import.meta.env.DISCORD_CLIENT_SECRET,
+      issuer: "https://discord.com",
     }),
     Google({
       clientId: import.meta.env.GOOGLE_CLIENT_ID,
