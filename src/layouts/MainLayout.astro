@@ -11,10 +11,8 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isHomePage = path === '/' || path === '/index.html';
 const session = await getSession(Astro.request);
 
-// Use your verified Channel ID with the join trigger
 const channelJoinUrl = "https://www.youtube.com/channel/UCYNmnbEgm3G0m4avmwz_4Eg/join?v=dummy";
 
-// Updated to use your local PNG files located in public/images/
 const socials = [
   { name: 'YouTube', url: channelJoinUrl, img: 'YouTube Logo.png' },
   { name: 'Twitch', url: 'https://www.twitch.tv/officialnugzzcrew', img: 'Twitch Logo.png' }, 
@@ -71,18 +69,70 @@ const socials = [
                     <a href="/media-kit" class="hover:text-gold transition-colors">Media Kit</a>
                 </div>
 
-                <!-- Account button (top right) -->
-                <a
-                  href="/account"
+                <!-- Sign in / Account button (opens modal) -->
+                <button
+                  id="account-btn"
+                  type="button"
                   class="ml-auto shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/60 text-xs uppercase tracking-widest font-bold text-zinc-300 hover:border-gold hover:text-gold transition-colors"
                 >
                   {session?.user?.image ? (
                     <img src={session.user.image} alt="" class="w-5 h-5 rounded-full" />
                   ) : null}
                   <span>{session?.user ? (session.user.name || 'Account') : 'Sign In'}</span>
-                </a>
+                </button>
             </div>
         </nav>
+
+        <!-- Auth Modal -->
+        <div id="auth-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 p-4">
+          <div class="w-full max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-2xl">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="font-header text-gold uppercase tracking-wide text-lg">
+                {session?.user ? 'Account' : 'Sign In'}
+              </h2>
+              <button id="auth-modal-close" type="button" class="text-zinc-400 hover:text-gold text-xl leading-none">&times;</button>
+            </div>
+
+            {session?.user ? (
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  {session.user.image && (
+                    <img src={session.user.image} alt="" class="w-10 h-10 rounded-full" />
+                  )}
+                  <div>
+                    <p class="text-white font-medium">{session.user.name}</p>
+                    <p class="text-zinc-400 text-sm">{session.user.email}</p>
+                  </div>
+                </div>
+                <button
+                  id="signout-btn"
+                  type="button"
+                  class="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-zinc-300 hover:border-gold hover:text-gold transition-colors text-sm uppercase tracking-widest"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <div class="space-y-3">
+                <p class="text-zinc-400 text-sm">Link your accounts for DMO tickets and live stream features.</p>
+                <button
+                  id="discord-btn"
+                  type="button"
+                  class="w-full px-4 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-colors"
+                >
+                  Continue with Discord
+                </button>
+                <button
+                  id="google-btn"
+                  type="button"
+                  class="w-full px-4 py-3 bg-white hover:bg-zinc-100 text-black rounded-lg font-medium transition-colors"
+                >
+                  Continue with Google
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
 
         <div id="nav-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
         <aside
@@ -106,7 +156,6 @@ const socials = [
                 <a href="/maps" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">Game Maps</a>
                 <a href="/emblem" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">Emblem Creator</a>
                 <a href="/media-kit" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">Media Kit</a>
-                <a href="/account" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">Account</a>
             </div>
         </aside>
         
@@ -181,6 +230,38 @@ const socials = [
           window.addEventListener('load', initMenu);
           document.addEventListener('astro:page-load', initMenu);
         </script>
+
+        <script>
+          import { signIn, signOut } from 'auth-astro/client';
+
+          const modal = document.getElementById('auth-modal');
+          const openBtn = document.getElementById('account-btn');
+          const closeBtn = document.getElementById('auth-modal-close');
+          const discordBtn = document.getElementById('discord-btn');
+          const googleBtn = document.getElementById('google-btn');
+          const signoutBtn = document.getElementById('signout-btn');
+
+          function openModal() {
+            modal?.classList.remove('hidden');
+            modal?.classList.add('flex');
+          }
+          function closeModal() {
+            modal?.classList.add('hidden');
+            modal?.classList.remove('flex');
+          }
+
+          openBtn?.addEventListener('click', openModal);
+          closeBtn?.addEventListener('click', closeModal);
+          modal?.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+          });
+
+          const callbackUrl = window.location.href;
+
+          discordBtn?.addEventListener('click', () => signIn('discord', { callbackUrl }));
+          googleBtn?.addEventListener('click', () => signIn('google', { callbackUrl }));
+          signoutBtn?.addEventListener('click', () => signOut({ callbackUrl }));
+        </script>
     </body>
 </html>
 
@@ -203,8 +284,6 @@ const socials = [
         padding: 0;
         min-height: 100vh;
         overflow-x: hidden !important;
-
-        /* ---FIXED BACKGROUND PATH ---*/
         background-image: url('/Texture-LS-Map-Black.jpg');
         background-repeat: repeat;
         background-size: 2048px 2048px;
