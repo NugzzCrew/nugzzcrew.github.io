@@ -5,11 +5,18 @@ interface Props {
 
 const { title } = Astro.props;
 import '../styles/global.css';
-import { getSession } from 'auth-astro/server';
+
+let session = null;
+try {
+  const { getSession } = await import('auth-astro/server');
+  session = await getSession(Astro.request);
+} catch (e) {
+  // Ignore during static builds or when AUTH_SECRET is missing
+  session = null;
+}
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isHomePage = path === '/' || path === '/index.html';
-const session = await getSession(Astro.request);
 
 const channelJoinUrl = "https://www.youtube.com/channel/UCYNmnbEgm3G0m4avmwz_4Eg/join?v=dummy";
 
