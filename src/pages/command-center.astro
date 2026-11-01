@@ -115,8 +115,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   function connectBot() {
     // Change this to your Streamer.bot WebSocket URL
-    ws = new WebSocket("wss.officialnugzzcrew.com/");
-
+   ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
     ws.onopen = () => {
       ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
       checkCurrentStatus();
