@@ -12,10 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/node": "^10.1.4",
+    "@astrojs/node": "^11.1.9",
     "@auth/core": "^0.37.4",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.3.1",
+    "astro": "^7.4.4",
     "auth-astro": "^4.2.0",
     "lucide-astro": "^0.556.0",
     "puppeteer": "^25.0.4",
