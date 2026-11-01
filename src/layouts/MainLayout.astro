@@ -6,15 +6,6 @@ interface Props {
 const { title } = Astro.props;
 import '../styles/global.css';
 
-let session = null;
-try {
-  const { getSession } = await import('auth-astro/server');
-  session = await getSession(Astro.request);
-} catch (e) {
-  // Ignore during static builds or when AUTH_SECRET is missing
-  session = null;
-}
-
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isHomePage = path === '/' || path === '/index.html';
 
@@ -43,6 +34,7 @@ const socials = [
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <link rel="icon" type="image/png" href="/Logo.png" />
         <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
     </head>
     <body class="bg-black text-white antialiased">
         <nav id="site-header" class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800 px-3 py-3 md:px-4">
@@ -77,14 +69,12 @@ const socials = [
                 </div>
 
                 <button
-                  id="account-btn"
+                  id="auth-btn"
                   type="button"
+                  onclick="openAuthModal()"
                   class="ml-auto shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/60 text-xs uppercase tracking-widest font-bold text-zinc-300 hover:border-gold hover:text-gold transition-colors"
                 >
-                  {session?.user?.image ? (
-                    <img src={session.user.image} alt="" class="w-5 h-5 rounded-full" />
-                  ) : null}
-                  <span>{session?.user ? (session.user.name || 'Account') : 'Sign In'}</span>
+                  <span>Sign In</span>
                 </button>
             </div>
         </nav>
@@ -92,50 +82,10 @@ const socials = [
         <div id="auth-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 p-4">
           <div class="w-full max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-2xl">
             <div class="flex items-center justify-between mb-4">
-              <h2 class="font-header text-gold uppercase tracking-wide text-lg">
-                {session?.user ? 'Account' : 'Sign In'}
-              </h2>
-              <button id="auth-modal-close" type="button" class="text-zinc-400 hover:text-gold text-xl leading-none">&times;</button>
+              <h2 class="font-header text-gold uppercase tracking-wide text-lg">Account</h2>
+              <button type="button" onclick="closeAuthModal()" class="text-zinc-400 hover:text-gold text-xl leading-none">&times;</button>
             </div>
-
-            {session?.user ? (
-              <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                  {session.user.image && (
-                    <img src={session.user.image} alt="" class="w-10 h-10 rounded-full" />
-                  )}
-                  <div>
-                    <p class="text-white font-medium">{session.user.name}</p>
-                    <p class="text-zinc-400 text-sm">{session.user.email}</p>
-                  </div>
-                </div>
-                <button
-                  id="signout-btn"
-                  type="button"
-                  class="w-full px-4 py-2.5 bg-zinc-800 border border-zinc-700 rounded-lg text-zinc-300 hover:border-gold hover:text-gold transition-colors text-sm uppercase tracking-widest"
-                >
-                  Sign Out
-                </button>
-              </div>
-            ) : (
-              <div class="space-y-3">
-                <p class="text-zinc-400 text-sm">Link your accounts for DMO tickets and live stream features.</p>
-                <button
-                  id="discord-btn"
-                  type="button"
-                  class="w-full px-4 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-colors"
-                >
-                  Continue with Discord
-                </button>
-                <button
-                  id="google-btn"
-                  type="button"
-                  class="w-full px-4 py-3 bg-white hover:bg-zinc-100 text-black rounded-lg font-medium transition-colors"
-                >
-                  Continue with Google
-                </button>
-              </div>
-            )}
+            <div id="auth-modal-content"></div>
           </div>
         </div>
 
@@ -236,37 +186,7 @@ const socials = [
           document.addEventListener('astro:page-load', initMenu);
         </script>
 
-        <script>
-          import { signIn, signOut } from 'auth-astro/client';
-
-          const modal = document.getElementById('auth-modal');
-          const openBtn = document.getElementById('account-btn');
-          const closeBtn = document.getElementById('auth-modal-close');
-          const discordBtn = document.getElementById('discord-btn');
-          const googleBtn = document.getElementById('google-btn');
-          const signoutBtn = document.getElementById('signout-btn');
-
-          function openModal() {
-            modal?.classList.remove('hidden');
-            modal?.classList.add('flex');
-          }
-          function closeModal() {
-            modal?.classList.add('hidden');
-            modal?.classList.remove('flex');
-          }
-
-          openBtn?.addEventListener('click', openModal);
-          closeBtn?.addEventListener('click', closeModal);
-          modal?.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-          });
-
-          const callbackUrl = window.location.href;
-
-          discordBtn?.addEventListener('click', () => signIn('discord', { callbackUrl }));
-          googleBtn?.addEventListener('click', () => signIn('google', { callbackUrl }));
-          signoutBtn?.addEventListener('click', () => signOut({ callbackUrl }));
-        </script>
+        <script is:inline src="/js/auth.js"></script>
     </body>
 </html>
 
