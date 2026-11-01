@@ -8,6 +8,9 @@ export default defineConfig({
   site: 'https://officialnugzzcrew.com',
   base: '/',
   output: 'static',
+  build: {
+    format: 'file',
+  },
   adapter: node({
     mode: 'standalone',
   }),
