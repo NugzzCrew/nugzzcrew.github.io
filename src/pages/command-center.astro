@@ -24,7 +24,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           ></iframe>
           <img
             id="offline-placeholder"
-            src="/images/offline.png"
+            src="/images/offline-placeholder.webp"
             alt="Offline"
             class="absolute inset-0 w-full h-full object-cover"
           />
@@ -57,18 +57,14 @@ import MainLayout from '../layouts/MainLayout.astro';
           Fun Stuff & Games <span class="text-gold">▼</span>
         </h3>
         <div class="btn-grid collapsible-content grid grid-cols-2 gap-2 mb-4">
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('2) Join Game (Command)')" disabled>Join Whammy</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('Plinko 2 -  Join Game (Command)')" disabled>Join Plinko</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('Barrel Roll')" disabled>Barrel Roll</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('Shoryuken')" disabled>Shoryuken</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('Scorpion')" disabled>Scorpion</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop')" disabled>BallDrop</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop BlackHole')" disabled>BallDrop BlackHole</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop Explode')" disabled>BallDrop Explode</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('Bombs Away')" disabled>Bombs Away</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('Skeletor')" disabled>Skeletor</button>
-                    <button class="cmd-btn stream-cmd" onclick="sendAction('GTA Wasted')" disabled>GTA Wasted</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Join Whammy')" disabled>Join Whammy</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Join Plinko')" disabled>Join Plinko</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Barrel Roll')" disabled>Barrel Roll</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Shoryuken')" disabled>Shoryuken</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Scorpion')" disabled>Scorpion</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop')" disabled>BallDrop</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('GTA Wasted')" disabled>GTA Wasted</button>
         </div>
 
         <!-- Media Controls -->
@@ -87,8 +83,8 @@ import MainLayout from '../layouts/MainLayout.astro';
         <h3 class="collapsible-header text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
           Album Selection <span class="text-gold">▼</span>
         </h3>
-        <div class="btn-grid collapsible-content grid grid-cols-1 gap-2">
-<button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Ashes')" disabled>Ashes</button>
+        <div class="btn-grid collapsible-content grid grid-cols-2 gap-2">
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Ashes')" disabled>Ashes</button>
           <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Glitch')" disabled>Glitch</button>
           <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Lofi')" disabled>Lofi</button>
           <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Dim Sum')" disabled>Dim Sum</button>
@@ -119,7 +115,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   function connectBot() {
     // Change this to your Streamer.bot WebSocket URL
-    ws = new WebSocket("wss.officialnugzzcrew.com/");
+    ws = new WebSocket("wss://your-streamerbot-domain.com/");
 
     ws.onopen = () => {
       ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
@@ -256,7 +252,21 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <style>
   .cmd-btn {
-    @apply px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-zinc-300 text-sm hover:border-gold hover:text-gold transition-colors disabled:opacity-40 disabled:cursor-not-allowed;
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(39 39 42);
+    border: 1px solid rgb(63 63 70);
+    border-radius: 0.5rem;
+    color: rgb(212 212 216);
+    font-size: 0.875rem;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .cmd-btn:hover:not(:disabled) {
+    border-color: #D4AF37;
+    color: #D4AF37;
+  }
+  .cmd-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
   }
   .collapsible-content.hidden {
     display: none;
