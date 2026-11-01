@@ -1,0 +1,264 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Command Center">
+  <div class="page-shell">
+    <header class="page-head">
+      <h1 class="page-title">
+        <span class="text-white">Command</span> <span class="text-gold">Center</span>
+      </h1>
+      <p class="page-kicker">Streamer.bot Controls</p>
+    </header>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+      <!-- Stream + Theater -->
+      <div class="lg:col-span-2 space-y-4">
+        <div id="stream-stage" class="relative bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden border-t-4 border-t-gold aspect-video">
+          <iframe
+            id="yt-video-frame"
+            class="w-full h-full"
+            src="about:blank"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+          <img
+            id="offline-placeholder"
+            src="/images/offline.png"
+            alt="Offline"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <button
+            id="theatre-toggle-btn"
+            type="button"
+            class="absolute top-3 right-3 px-3 py-1.5 bg-black/70 border border-zinc-700 rounded-lg text-xs uppercase tracking-widest text-zinc-300 hover:border-gold hover:text-gold"
+          >
+            Theater Mode
+          </button>
+        </div>
+
+        <!-- YouTube Chat -->
+        <div id="chat-wrapper" class="hidden bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden">
+          <iframe
+            id="yt-chat-frame"
+            class="w-full h-[500px]"
+            src="about:blank"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Command Center -->
+      <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-5 border-t-4 border-t-gold">
+        <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2">Command Center</h2>
+        <p id="status-msg" class="text-sm text-zinc-400 mb-4">Connecting to Streamer.bot...</p>
+
+        <!-- Fun Stuff -->
+        <h3 class="collapsible-header text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+          Fun Stuff & Games <span class="text-gold">▼</span>
+        </h3>
+        <div class="btn-grid collapsible-content grid grid-cols-2 gap-2 mb-4">
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('2) Join Game (Command)')" disabled>Join Whammy</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('Plinko 2 -  Join Game (Command)')" disabled>Join Plinko</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('Barrel Roll')" disabled>Barrel Roll</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('Shoryuken')" disabled>Shoryuken</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('Scorpion')" disabled>Scorpion</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop')" disabled>BallDrop</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop BlackHole')" disabled>BallDrop BlackHole</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop Explode')" disabled>BallDrop Explode</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('Bombs Away')" disabled>Bombs Away</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('Skeletor')" disabled>Skeletor</button>
+                    <button class="cmd-btn stream-cmd" onclick="sendAction('GTA Wasted')" disabled>GTA Wasted</button>
+        </div>
+
+        <!-- Media Controls -->
+        <h3 class="collapsible-header text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+          Media Controls <span class="text-gold">▼</span>
+        </h3>
+        <div class="media-bar collapsible-content flex gap-2 mb-4">
+          <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Previous')" disabled>⏮</button>
+          <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Stop')" disabled>⏹</button>
+          <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Play')" disabled>▶</button>
+          <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Pause')" disabled>⏸</button>
+          <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Skip')" disabled>⏭</button>
+        </div>
+
+        <!-- Albums -->
+        <h3 class="collapsible-header text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+          Album Selection <span class="text-gold">▼</span>
+        </h3>
+        <div class="btn-grid collapsible-content grid grid-cols-1 gap-2">
+<button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Ashes')" disabled>Ashes</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Glitch')" disabled>Glitch</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Lofi')" disabled>Lofi</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Dim Sum')" disabled>Dim Sum</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Gangsta')" disabled>Gangsta</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Los Santos')" disabled>Los Santos</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Neon')" disabled>Neon</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Funk')" disabled>Funk</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Outlaws')" disabled>Outlaws</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Rowdy')" disabled>Rowdy</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Lonesome')" disabled>Lonesome</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Nugzz')" disabled>Nugzz</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Wasteland Holler')" disabled>Wasteland Holler</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LS Chronicles')" disabled>LS Chronicles</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Favorites')" disabled>Favorites</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Coastal')" disabled>Coastal</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Echoes')" disabled>Echoes</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Naked')" disabled>Naked</button>
+          <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Empire')" disabled>Empire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<script is:inline>
+  let ws;
+  let isStreamLive = false;
+
+  function connectBot() {
+    // Change this to your Streamer.bot WebSocket URL
+    ws = new WebSocket("wss.officialnugzzcrew.com/");
+
+    ws.onopen = () => {
+      ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
+      checkCurrentStatus();
+    };
+
+    ws.onmessage = (event) => {
+      try {
+        const msg = JSON.parse(event.data);
+        if (msg.event?.type === "Custom" && msg.data?.data) {
+          const customData = JSON.parse(msg.data.data);
+          if (customData.name === "LiveStatusUpdate") {
+            updateStreamState(customData.isLive);
+            handleLiveStatus(customData);
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
+    ws.onclose = () => {
+      const statusMsg = document.getElementById("status-msg");
+      if (statusMsg) statusMsg.textContent = "Offline: Streamer's PC not reachable.";
+      setTimeout(connectBot, 5000);
+    };
+  }
+
+  function checkCurrentStatus() {
+    if (ws?.readyState === WebSocket.OPEN) {
+      ws.send(JSON.stringify({ request: "DoAction", action: { name: "Web_Request_Status" }, id: "StatusCheck" }));
+    }
+  }
+
+  function updateStreamState(live) {
+    isStreamLive = live;
+    const msgEl = document.getElementById("status-msg");
+    const buttons = document.querySelectorAll(".stream-cmd");
+    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+
+    if (!msgEl) return;
+
+    if (ws?.readyState === WebSocket.OPEN && user) {
+      if (live) {
+        buttons.forEach(btn => btn.disabled = false);
+        msgEl.textContent = "Bot Connected (Stream Online)";
+        msgEl.style.color = "#4ade80";
+      } else {
+        buttons.forEach(btn => btn.disabled = true);
+        msgEl.textContent = "Bot Connected (Stream Offline)";
+        msgEl.style.color = "#a1a1aa";
+      }
+    } else {
+      buttons.forEach(btn => btn.disabled = true);
+      msgEl.textContent = user ? "Connecting to Streamer.bot..." : "Sign in to trigger commands.";
+    }
+  }
+
+  function handleLiveStatus(data) {
+    const videoFrame = document.getElementById("yt-video-frame");
+    const placeholder = document.getElementById("offline-placeholder");
+    const chatFrame = document.getElementById("yt-chat-frame");
+    const chatWrapper = document.getElementById("chat-wrapper");
+
+    if (data.videoId) {
+      if (videoFrame && !videoFrame.src.includes(data.videoId)) {
+        videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1`;
+        videoFrame.style.display = "block";
+      }
+      if (placeholder) placeholder.style.display = "none";
+      if (chatFrame && chatWrapper) {
+        chatFrame.src = `https://www.youtube.com/live_chat?v=${data.videoId}&embed_domain=${location.hostname}&dark_theme=1`;
+        chatWrapper.classList.remove("hidden");
+      }
+    } else {
+      if (videoFrame) {
+        videoFrame.src = "about:blank";
+        videoFrame.style.display = "none";
+      }
+      if (placeholder) placeholder.style.display = "block";
+      if (chatWrapper) chatWrapper.classList.add("hidden");
+    }
+  }
+
+  function sendAction(actionName, extraCommand = null) {
+    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+    if (!ws || ws.readyState !== WebSocket.OPEN) {
+      alert("Not connected to Command Center.");
+      return;
+    }
+    if (!user) {
+      alert("Please sign in to use commands.");
+      return;
+    }
+
+    const payload = {
+      request: "DoAction",
+      action: { name: actionName },
+      args: {
+        isWebsocketRequest: "True",
+        userId: user.youtubeId,
+        userProfileUrl: user.picture,
+        userName: user.name,
+        userType: "youtube"
+      },
+      id: "WebCommandCenter"
+    };
+
+    if (extraCommand) {
+      payload.args.commandName = extraCommand;
+      payload.args.command = extraCommand;
+    }
+
+    ws.send(JSON.stringify(payload));
+  }
+
+  function toggleSection(el) {
+    const content = el.nextElementSibling;
+    content.classList.toggle("hidden");
+  }
+
+  document.getElementById("theatre-toggle-btn")?.addEventListener("click", () => {
+    const stage = document.getElementById("stream-stage");
+    stage?.classList.toggle("fixed");
+    stage?.classList.toggle("inset-0");
+    stage?.classList.toggle("z-[90]");
+    stage?.classList.toggle("aspect-auto");
+  });
+
+  window.addEventListener("load", () => {
+    connectBot();
+  });
+</script>
+
+<style>
+  .cmd-btn {
+    @apply px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-zinc-300 text-sm hover:border-gold hover:text-gold transition-colors disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .collapsible-content.hidden {
+    display: none;
+  }
+</style>
