@@ -12,7 +12,6 @@ import MainLayout from '../layouts/MainLayout.astro';
     </header>
 
     <div class="grid lg:grid-cols-3 gap-6">
-      <!-- Stream + Theater -->
       <div class="lg:col-span-2 space-y-4">
         <div id="stream-stage" class="relative bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden border-t-4 border-t-gold aspect-video">
           <iframe
@@ -37,7 +36,6 @@ import MainLayout from '../layouts/MainLayout.astro';
           </button>
         </div>
 
-        <!-- YouTube Chat -->
         <div id="chat-wrapper" class="hidden bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden">
           <iframe
             id="yt-chat-frame"
@@ -47,12 +45,10 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
       </div>
 
-      <!-- Command Center -->
       <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-5 border-t-4 border-t-gold">
         <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2">Command Center</h2>
         <p id="status-msg" class="text-sm text-zinc-400 mb-4">Connecting to Streamer.bot...</p>
 
-        <!-- Fun Stuff -->
         <h3 class="collapsible-header text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
           Fun Stuff & Games <span class="text-gold">▼</span>
         </h3>
@@ -67,7 +63,6 @@ import MainLayout from '../layouts/MainLayout.astro';
           <button class="cmd-btn stream-cmd" onclick="sendAction('GTA Wasted')" disabled>GTA Wasted</button>
         </div>
 
-        <!-- Media Controls -->
         <h3 class="collapsible-header text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
           Media Controls <span class="text-gold">▼</span>
         </h3>
@@ -79,7 +74,6 @@ import MainLayout from '../layouts/MainLayout.astro';
           <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Skip')" disabled>⏭</button>
         </div>
 
-        <!-- Albums -->
         <h3 class="collapsible-header text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
           Album Selection <span class="text-gold">▼</span>
         </h3>
@@ -114,9 +108,10 @@ import MainLayout from '../layouts/MainLayout.astro';
   let isStreamLive = false;
 
   function connectBot() {
-    // Change this to your Streamer.bot WebSocket URL
-   ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+    ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+
     ws.onopen = () => {
+      console.log("WebSocket connected");
       ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
       checkCurrentStatus();
     };
@@ -124,22 +119,32 @@ import MainLayout from '../layouts/MainLayout.astro';
     ws.onmessage = (event) => {
       try {
         const msg = JSON.parse(event.data);
+        console.log("WS message:", msg);
+
         if (msg.event?.type === "Custom" && msg.data?.data) {
-          const customData = JSON.parse(msg.data.data);
+          let customData = msg.data.data;
+          if (typeof customData === "string") {
+            customData = JSON.parse(customData);
+          }
           if (customData.name === "LiveStatusUpdate") {
             updateStreamState(customData.isLive);
             handleLiveStatus(customData);
           }
         }
       } catch (e) {
-        console.error(e);
+        console.error("WS parse error:", e, event.data);
       }
     };
 
     ws.onclose = () => {
+      console.log("WebSocket closed");
       const statusMsg = document.getElementById("status-msg");
       if (statusMsg) statusMsg.textContent = "Offline: Streamer's PC not reachable.";
       setTimeout(connectBot, 5000);
+    };
+
+    ws.onerror = (err) => {
+      console.error("WebSocket error:", err);
     };
   }
 
