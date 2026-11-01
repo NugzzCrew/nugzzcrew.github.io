@@ -24,7 +24,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           ></iframe>
           <img
             id="offline-placeholder"
-            src="/images/offline-placeholder.webp"
+            src="/images/offline.png"
             alt="Offline"
             class="absolute inset-0 w-full h-full object-cover"
           />
@@ -115,7 +115,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   function connectBot() {
     // Change this to your Streamer.bot WebSocket URL
-    ws = new WebSocket("wss://your-streamerbot-domain.com/");
+    ws = new WebSocket("wss.officialnugzzcrew.com/");
 
     ws.onopen = () => {
       ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
