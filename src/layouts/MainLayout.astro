@@ -37,43 +37,42 @@ const socials = [
         <script src="https://accounts.google.com/gsi/client" async defer></script>
     </head>
     <body class="bg-black text-white antialiased">
-        <nav id="site-header" class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800 px-3 py-3 md:px-4">
-            <div class="header-row max-w-7xl mx-auto flex items-center gap-3">
+        <nav id="site-header" class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800">
+            <div class="header-inner">
                 <button
                     id="menu-toggle"
                     type="button"
                     aria-label="Open menu"
                     aria-expanded="false"
-                    class="nav-burger items-center justify-center w-11 h-11 text-zinc-300 hover:text-gold shrink-0"
+                    class="nav-burger"
                 >
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
 
-                <a href="/" class="brand-link flex items-center gap-2 group transition-opacity hover:opacity-90 min-w-0">
-                    <img src="/Logo.png" alt="Logo" class="w-7 h-7 md:w-9 md:h-9 object-contain shrink-0" />
+                <a href="/" class="brand-link">
+                    <img src="/Logo.png" alt="Logo" class="brand-logo" />
                     <span class="brand-mark font-header uppercase tracking-tighter whitespace-nowrap">
                         <span class="text-white">Official</span> <span class="text-gold">Nugzz Crew</span>
                     </span>
                 </a>
 
-                <div class="nav-desktop flex-1 justify-center gap-4 text-[9px] md:text-xs uppercase font-bold tracking-widest text-zinc-400">
-                    {!isHomePage && <a href="/" class="hover:text-gold transition-colors">Home</a>}
-                    <a href="/crew-controls" class="hover:text-gold transition-colors">Crew Controls</a>
-                    <a href="/gta" class="hover:text-gold transition-colors">GTA Bonuses</a>
-                    <a href="/generator" class="hover:text-gold transition-colors">DMO Gen</a>
-                    <a href="/gtaresources" class="hover:text-gold transition-colors">GTA Resources</a>
-                    <a href="/maps" class="hover:text-gold transition-colors">Game Maps</a>
-                    <a href="/emblem" class="hover:text-gold transition-colors">Emblem Creator</a>
-                    <a href="/media-kit" class="hover:text-gold transition-colors">Media Kit</a>
+                <div class="nav-desktop">
+                    <a href="/crew-controls" class="nav-link-desktop">Crew Controls</a>
+                    <a href="/gta" class="nav-link-desktop">GTA Bonuses</a>
+                    <a href="/generator" class="nav-link-desktop">DMO Gen</a>
+                    <a href="/gtaresources" class="nav-link-desktop">GTA Resources</a>
+                    <a href="/maps" class="nav-link-desktop">Game Maps</a>
+                    <a href="/emblem" class="nav-link-desktop">Emblem Creator</a>
+                    <a href="/media-kit" class="nav-link-desktop">Media Kit</a>
                 </div>
 
                 <button
                   id="auth-btn"
                   type="button"
                   onclick="openAuthModal()"
-                  class="ml-auto shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/60 text-xs uppercase tracking-widest font-bold text-zinc-300 hover:border-gold hover:text-gold transition-colors"
+                  class="auth-btn"
                 >
                   <span>Sign In</span>
                 </button>
@@ -105,7 +104,6 @@ const socials = [
                 </button>
             </div>
             <div class="flex flex-col p-5 gap-2">
-                {!isHomePage && <a href="/" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">Home</a>}
                 <a href="/crew-controls" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">Crew Controls</a>
                 <a href="/gta" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">GTA Bonuses</a>
                 <a href="/generator" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">DMO Gen</a>
