@@ -79,8 +79,8 @@ body {
 #main-content :is(.rounded-2xl, .rounded-3xl, .rounded-\[2\.5rem\]) {
   box-shadow: 0 0 50px -12px rgba(212, 175, 55, 0.35);
 }
-#main-content :is(.rounded-2xl, .rounded-3xl, .rounded-\[2\.5rem\]) :is(.rounded-xl, .rounded-2xl, .rounded-3xl, .rounded-\[2\.5rem\]) {
-  box-shadow: none;
+#main-content {
+  padding-top: 5rem;
 }
 
 .page-shell {
