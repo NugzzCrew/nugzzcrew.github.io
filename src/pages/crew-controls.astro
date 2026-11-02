@@ -154,26 +154,3 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   window.addEventListener("load", connectBot);
 </script>
-
-<style>
-  .cmd-btn {
-    padding: 0.5rem 0.75rem;
-    background-color: rgb(39 39 42);
-    border: 1px solid rgb(63 63 70);
-    border-radius: 0.5rem;
-    color: rgb(212 212 216);
-    font-size: 0.875rem;
-    transition: border-color 0.15s, color 0.15s;
-  }
-  .cmd-btn:hover:not(:disabled) {
-    border-color: #D4AF37;
-    color: #D4AF37;
-  }
-  .cmd-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-  .collapsible-content.hidden {
-    display: none;
-  }
-</style>
