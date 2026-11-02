@@ -1,6 +1,5 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-const channelJoinUrl = "https://www.youtube.com/channel/UCYNmnbEgm3G0m4avmwz_4Eg/join?v=dummy";
 ---
 
 <MainLayout title="Home">
@@ -13,110 +12,213 @@ const channelJoinUrl = "https://www.youtube.com/channel/UCYNmnbEgm3G0m4avmwz_4Eg
         Streaming, GTA Updates, and the best community in the world.
       </p>
     </header>
-    
-    <!-- Video Wrapper -->
-    <div id="video-container" class="jump relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 mb-12 overflow-hidden bg-black">
-      <img 
-        id="offline-placeholder" 
-        src="/images/offline.png" 
-        alt="Stream is currently offline" 
-        style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 10;" 
-      />
-      <iframe 
-        id="yt-video-frame" 
-        src="about:blank" 
-        allowfullscreen 
-        style="display: none; width: 100%; height: 100%; position: relative; z-index: 20;">
-      </iframe>
-      <button id="theater-btn" type="button" class="absolute bottom-3 right-3 z-30 bg-black/80 hover:bg-black text-white text-xs uppercase tracking-widest px-3 py-1.5 rounded-lg border border-zinc-600 hover:border-gold">Theater</button>
-    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12">
-        <a href="/gta" class="tilt-card p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold group text-left">
-          <h2 class="text-xl md:text-2xl uppercase font-black italic"><span class="text-white">GTA</span> <span class="text-gold">Bonuses &rarr;</span></h2>
-          <p class="text-zinc-500 mt-2 text-sm md:text-base">Get the latest on bonuses, car meets, and robberies.</p>
-        </a>
-  
-        <a href={channelJoinUrl} target="_blank" rel="noopener noreferrer" class="tilt-card p-6 md:p-8 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-gold group text-left block">
-          <h2 class="text-xl md:text-2xl uppercase font-black italic"><span class="text-white">The</span> <span class="text-gold">Fam Bam &rarr;</span></h2>
-          <p class="text-zinc-500 mt-2 text-sm md:text-base">Catch every live stream and join the best community on YouTube.</p>
-        </a>
+    <!-- Stream + Chat -->
+    <div class="grid lg:grid-cols-3 gap-6 mb-8">
+      <div class="lg:col-span-2">
+        <div id="video-container" class="jump relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-black border-t-4 border-t-gold">
+          <img
+            id="offline-placeholder"
+            src="/images/offline.png"
+            alt="Stream is currently offline"
+            class="absolute inset-0 w-full h-full object-cover"
+            style="z-index:10;"
+          />
+          <iframe
+            id="yt-video-frame"
+            class="w-full h-full"
+            src="about:blank"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            style="display:none; position:relative; z-index:20;"
+          ></iframe>
+          <button
+            id="theater-btn"
+            type="button"
+            class="absolute bottom-3 right-3 z-30 bg-black/80 hover:bg-black text-white text-xs uppercase tracking-widest px-3 py-1.5 rounded-lg border border-zinc-600 hover:border-gold"
+          >
+            Theater
+          </button>
+        </div>
+
+        <!-- Quick Commands -->
+        <div class="mt-4 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-4 border-t-4 border-t-gold max-h-48 overflow-y-auto">
+          <h3 class="font-header text-gold uppercase tracking-wide text-sm mb-3">Quick Commands</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <button class="cmd-btn stream-cmd" onclick="sendAction('2) Join Game (Command)')" disabled>Join Whammy</button>
+            <button class="cmd-btn stream-cmd" onclick="sendAction('Plinko 2 -  Join Game (Command)')" disabled>Join Plinko</button>
+            <button class="cmd-btn stream-cmd" onclick="sendAction('Barrel Roll')" disabled>Barrel Roll</button>
+            <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
+            <button class="cmd-btn stream-cmd" onclick="sendAction('Shoryuken')" disabled>Shoryuken</button>
+            <button class="cmd-btn stream-cmd" onclick="sendAction('Scorpion')" disabled>Scorpion</button>
+            <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop')" disabled>BallDrop</button>
+            <button class="cmd-btn stream-cmd" onclick="sendAction('GTA Wasted')" disabled>GTA Wasted</button>
+          </div>
+        </div>
       </div>
+
+      <!-- Chat -->
+      <div id="chat-wrapper" class="hidden bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden border-t-4 border-t-gold">
+        <iframe
+          id="yt-chat-frame"
+          class="w-full h-full min-h-[500px]"
+          src="about:blank"
+        ></iframe>
+      </div>
+    </div>
   </section>
 </MainLayout>
 
 <script is:inline>
+  let ws;
+
   function connectBot() {
-      const ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+    ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
-      ws.onopen = () => {
-          // Subscribe to custom events
-          ws.send(JSON.stringify({ "request": "Subscribe", "events": { "general": ["Custom"] }, "id": "SubRequest" }));
-          
-          // Request status immediately
-          setTimeout(() => {
-            ws.send(JSON.stringify({ "request": "DoAction", "action": { "name": "Web_Request_Status" }, "id": "StatusCheck" }));
-          }, 1000);
-      };
+    ws.onopen = () => {
+      ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
+      setTimeout(() => {
+        ws.send(JSON.stringify({ request: "DoAction", action: { name: "Web_Request_Status" }, id: "StatusCheck" }));
+      }, 1000);
+    };
 
-      ws.onmessage = (event) => {
-          try {
-              const msg = JSON.parse(event.data);
-              
-              // Handle nested data structure
-              if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
-                  const data = msg.data.data;
-                  const videoFrame = document.getElementById('yt-video-frame');
-                  const placeholderImg = document.getElementById('offline-placeholder');
-                  
-                  if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
-                      videoFrame.style.display = 'block';
-                      videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
-                      placeholderImg.style.display = 'none';
-                  } else {
-                      videoFrame.style.display = 'none';
-                      videoFrame.src = "about:blank";
-                      placeholderImg.style.display = 'block';
-                  }
-              }
-          } catch (e) { console.log("Parsing error:", e); }
-      };
-      
-      ws.onclose = () => setTimeout(connectBot, 5000);
+    ws.onmessage = (event) => {
+      try {
+        const msg = JSON.parse(event.data);
+        if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
+          const data = msg.data.data;
+          handleLiveStatus(data);
+          updateStreamState(data.isLive);
+        }
+      } catch (e) {
+        console.log("Parsing error:", e);
+      }
+    };
+
+    ws.onclose = () => setTimeout(connectBot, 5000);
   }
-  window.addEventListener('load', connectBot);
 
-  const theaterBtn = document.getElementById('theater-btn');
-  const videoContainer = document.getElementById('video-container');
+  function handleLiveStatus(data) {
+    const videoFrame = document.getElementById("yt-video-frame");
+    const placeholder = document.getElementById("offline-placeholder");
+    const chatFrame = document.getElementById("yt-chat-frame");
+    const chatWrapper = document.getElementById("chat-wrapper");
+
+    if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
+      if (videoFrame) {
+        videoFrame.style.display = "block";
+        videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
+      }
+      if (placeholder) placeholder.style.display = "none";
+      if (chatFrame && chatWrapper) {
+        chatFrame.src = `https://www.youtube.com/live_chat?v=${data.videoId}&embed_domain=${location.hostname}&dark_theme=1`;
+        chatWrapper.classList.remove("hidden");
+      }
+    } else {
+      if (videoFrame) {
+        videoFrame.style.display = "none";
+        videoFrame.src = "about:blank";
+      }
+      if (placeholder) placeholder.style.display = "block";
+      if (chatWrapper) chatWrapper.classList.add("hidden");
+    }
+  }
+
+  function updateStreamState(live) {
+    const buttons = document.querySelectorAll(".stream-cmd");
+    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+    if (ws?.readyState === WebSocket.OPEN && user) {
+      buttons.forEach(btn => btn.disabled = !live);
+    } else {
+      buttons.forEach(btn => btn.disabled = true);
+    }
+  }
+
+  function sendAction(actionName, extraCommand = null) {
+    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+    if (!ws || ws.readyState !== WebSocket.OPEN) {
+      alert("Not connected to Streamer.bot.");
+      return;
+    }
+    if (!user) {
+      alert("Please sign in to use commands.");
+      return;
+    }
+    const payload = {
+      request: "DoAction",
+      action: { name: actionName },
+      args: {
+        isWebsocketRequest: "True",
+        userId: user.youtubeId,
+        userProfileUrl: user.picture,
+        userName: user.name,
+        userType: "youtube"
+      },
+      id: "WebCommandCenter"
+    };
+    if (extraCommand) {
+      payload.args.commandName = extraCommand;
+      payload.args.command = extraCommand;
+    }
+    ws.send(JSON.stringify(payload));
+  }
+
+  window.addEventListener("load", connectBot);
+
+  const theaterBtn = document.getElementById("theater-btn");
+  const videoContainer = document.getElementById("video-container");
   let isTheater = false;
   let theaterSlot = null;
+
   function setTheater(on) {
     if (!videoContainer || !theaterBtn || on === isTheater) return;
     isTheater = on;
     if (on) {
-      theaterSlot = document.createComment('theater-slot');
+      theaterSlot = document.createComment("theater-slot");
       videoContainer.parentNode.insertBefore(theaterSlot, videoContainer);
       document.body.appendChild(videoContainer);
-      videoContainer.classList.add('is-theater');
-      document.body.style.overflow = 'hidden';
-      theaterBtn.textContent = 'Exit';
+      videoContainer.classList.add("is-theater");
+      document.body.style.overflow = "hidden";
+      theaterBtn.textContent = "Exit";
     } else {
-      videoContainer.classList.remove('is-theater');
+      videoContainer.classList.remove("is-theater");
       if (theaterSlot && theaterSlot.parentNode) {
         theaterSlot.parentNode.insertBefore(videoContainer, theaterSlot);
         theaterSlot.remove();
         theaterSlot = null;
       }
-      document.body.style.overflow = '';
-      theaterBtn.textContent = 'Theater';
+      document.body.style.overflow = "";
+      theaterBtn.textContent = "Theater";
     }
   }
-  theaterBtn?.addEventListener('click', (e) => {
+
+  theaterBtn?.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
     setTheater(!isTheater);
   });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isTheater) setTheater(false);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isTheater) setTheater(false);
   });
 </script>
+
+<style>
+  .cmd-btn {
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(39 39 42);
+    border: 1px solid rgb(63 63 70);
+    border-radius: 0.5rem;
+    color: rgb(212 212 216);
+    font-size: 0.875rem;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .cmd-btn:hover:not(:disabled) {
+    border-color: #D4AF37;
+    color: #D4AF37;
+  }
+  .cmd-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+</style>

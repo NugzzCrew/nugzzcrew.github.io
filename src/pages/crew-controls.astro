@@ -1,0 +1,179 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Crew Controls">
+  <div class="page-shell">
+    <header class="page-head">
+      <h1 class="page-title">
+        <span class="text-white">Crew</span> <span class="text-gold">Controls</span>
+      </h1>
+      <p class="page-kicker">Fam Bam Command Center</p>
+    </header>
+
+    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-5 border-t-4 border-t-gold">
+      <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2">All Commands</h2>
+      <p id="status-msg" class="text-sm text-zinc-400 mb-4">Connecting to Streamer.bot...</p>
+
+      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+        Fun Stuff & Games <span class="text-gold">▼</span>
+      </h3>
+      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2) Join Game (Command)')" disabled>Join Whammy</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Plinko 2 -  Join Game (Command)')" disabled>Join Plinko</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Barrel Roll')" disabled>Barrel Roll</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Shoryuken')" disabled>Shoryuken</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Scorpion')" disabled>Scorpion</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop')" disabled>BallDrop</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop BlackHole')" disabled>BallDrop BlackHole</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('BallDrop Explode')" disabled>BallDrop Explode</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Bombs Away')" disabled>Bombs Away</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Skeletor')" disabled>Skeletor</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('GTA Wasted')" disabled>GTA Wasted</button>
+      </div>
+
+      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+        Media Controls <span class="text-gold">▼</span>
+      </h3>
+      <div class="media-bar collapsible-content flex gap-2 mb-4">
+        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Previous')" disabled>⏮</button>
+        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Stop')" disabled>⏹</button>
+        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Play')" disabled>▶</button>
+        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Pause')" disabled>⏸</button>
+        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Skip')" disabled>⏭</button>
+      </div>
+
+      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+        Album Selection <span class="text-gold">▼</span>
+      </h3>
+      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Ashes')" disabled>Ashes</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Glitch')" disabled>Glitch</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Lofi')" disabled>Lofi</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Dim Sum')" disabled>Dim Sum</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Gangsta')" disabled>Gangsta</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Los Santos')" disabled>Los Santos</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Neon')" disabled>Neon</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Funk')" disabled>Funk</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Outlaws')" disabled>Outlaws</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Rowdy')" disabled>Rowdy</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Lonesome')" disabled>Lonesome</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Nugzz')" disabled>Nugzz</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Wasteland Holler')" disabled>Wasteland Holler</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LS Chronicles')" disabled>LS Chronicles</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Favorites')" disabled>Favorites</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Coastal')" disabled>Coastal</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Echoes')" disabled>Echoes</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Naked')" disabled>Naked</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Empire')" disabled>Empire</button>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<script is:inline>
+  let ws;
+
+  function connectBot() {
+    ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+
+    ws.onopen = () => {
+      ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
+      setTimeout(() => {
+        ws.send(JSON.stringify({ request: "DoAction", action: { name: "Web_Request_Status" }, id: "StatusCheck" }));
+      }, 500);
+    };
+
+    ws.onmessage = (event) => {
+      try {
+        const msg = JSON.parse(event.data);
+        if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
+          updateStreamState(msg.data.data.isLive);
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
+    ws.onclose = () => {
+      const el = document.getElementById("status-msg");
+      if (el) el.textContent = "Offline: Streamer's PC not reachable.";
+      setTimeout(connectBot, 5000);
+    };
+  }
+
+  function updateStreamState(live) {
+    const msgEl = document.getElementById("status-msg");
+    const buttons = document.querySelectorAll(".stream-cmd");
+    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+    if (!msgEl) return;
+
+    if (ws?.readyState === WebSocket.OPEN && user) {
+      buttons.forEach(btn => btn.disabled = !live);
+      msgEl.textContent = live ? "Bot Connected (Stream Online)" : "Bot Connected (Stream Offline)";
+      msgEl.style.color = live ? "#4ade80" : "#a1a1aa";
+    } else {
+      buttons.forEach(btn => btn.disabled = true);
+      msgEl.textContent = user ? "Connecting to Streamer.bot..." : "Sign in to trigger commands.";
+    }
+  }
+
+  function sendAction(actionName, extraCommand = null) {
+    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+    if (!ws || ws.readyState !== WebSocket.OPEN) {
+      alert("Not connected to Crew Controls.");
+      return;
+    }
+    if (!user) {
+      alert("Please sign in to use commands.");
+      return;
+    }
+    const payload = {
+      request: "DoAction",
+      action: { name: actionName },
+      args: {
+        isWebsocketRequest: "True",
+        userId: user.youtubeId,
+        userProfileUrl: user.picture,
+        userName: user.name,
+        userType: "youtube"
+      },
+      id: "WebCommandCenter"
+    };
+    if (extraCommand) {
+      payload.args.commandName = extraCommand;
+      payload.args.command = extraCommand;
+    }
+    ws.send(JSON.stringify(payload));
+  }
+
+  function toggleSection(el) {
+    el.nextElementSibling.classList.toggle("hidden");
+  }
+
+  window.addEventListener("load", connectBot);
+</script>
+
+<style>
+  .cmd-btn {
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(39 39 42);
+    border: 1px solid rgb(63 63 70);
+    border-radius: 0.5rem;
+    color: rgb(212 212 216);
+    font-size: 0.875rem;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .cmd-btn:hover:not(:disabled) {
+    border-color: #D4AF37;
+    color: #D4AF37;
+  }
+  .cmd-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .collapsible-content.hidden {
+    display: none;
+  }
+</style>
