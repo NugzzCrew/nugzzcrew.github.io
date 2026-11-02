@@ -219,6 +219,42 @@ body {
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
+/* ========== Shared card / theme classes ========== */
+/* Use these on every card/box so color & style changes stay in one place */
+
+.nugzz-card {
+  background-color: rgb(24 24 27 / 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(39 39 42);
+  border-top: 4px solid #D4AF37;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.nugzz-card:hover {
+  border-color: rgb(212 175 55 / 0.6);
+  background-color: rgb(24 24 27 / 0.6);
+}
+
+/* Event / themed variants (top border + matching glow) */
+.nugzz-card-orange {
+  border-top-color: #f97316;
+}
+.nugzz-card-orange:hover {
+  border-color: rgb(249 115 22 / 0.6);
+}
+
+.nugzz-card-red {
+  border-top-color: #ef4444;
+}
+.nugzz-card-purple {
+  border-top-color: #c084fc;
+}
+.nugzz-card-blue {
+  border-top-color: #60a5fa;
+}
+
 /* ========== Shared component styles ========== */
 
 .cmd-btn {
