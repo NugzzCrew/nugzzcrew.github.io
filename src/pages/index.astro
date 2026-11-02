@@ -42,7 +42,12 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
 
         <!-- Quick Commands -->
-        <div class="mt-4 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-4 border-t-4 border-t-gold max-h-48 overflow-y-auto">
+        <div class="mt-4 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-4 border-t-4 border-t-gold">
+          <div class="text-center mb-3">
+            <a href="/crew-controls" class="text-gold hover:text-gold-bright uppercase tracking-widest text-xs font-bold transition-colors">
+              Crew Commands →
+            </a>
+          </div>
           <h3 class="font-header text-gold uppercase tracking-wide text-sm mb-3">Quick Commands</h3>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
             <button class="cmd-btn stream-cmd" onclick="sendAction('2) Join Game (Command)')" disabled>Join Whammy</button>
