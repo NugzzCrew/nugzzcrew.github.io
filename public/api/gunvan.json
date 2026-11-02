@@ -1,24 +1,22 @@
 {
-  "locationId": 9,
-  "zone": "Gun Van Location #9",
-  "description": "Palmer-Taylor Power Station",
-  "mapPath": "map_9.jpg",
+  "locationId": 27,
+  "zone": "Gun Van Location #27",
+  "description": "Hookies, North Chumash",
+  "mapPath": "map_27.jpg",
   "inventory": [
-    "Combat Shotgun: -10 %",
+    "Service Carbine: -30 %",
     "Precision Rifle: -10 %",
-    "Railgun: -50 %",
-    "Compact Rifle: -10 %",
-    "MG: -10 %",
-    "Machete: -10 %",
-    "Tear Gas: -10 %",
-    "Grenade: -10 %",
-    "Proximity Mine: -10 %",
-    "Super Light Armor: -10 %",
-    "Light Armor: -10 %",
-    "Standard Armor: -10 %",
-    "Heavy Armor: -10 %",
-    "Super Heavy Armor: -10 %"
+    "Combat Shotgun: -10 %",
+    "Widowmaker: -10 %",
+    "Up-n-Atomizer: -10 %",
+    "Unholy Hellbringer: -10 %",
+    "Baseball Bat: FREE",
+    "Knife: -10 %",
+    "The Shocker: FREE",
+    "Unknown (hash: -1916886713): -10 %",
+    "Pipe Bomb: -10 %",
+    "Body armor: -10 %"
   ],
-  "updatedAt": "2026-11-01T13:45:59.015Z",
-  "source": "gtamap.net"
+  "updatedAt": "2026-11-02T06:41:02.131Z",
+  "source": "GTALens"
 }
