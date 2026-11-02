@@ -14,8 +14,8 @@ import MainLayout from '../layouts/MainLayout.astro';
     </header>
 
     <!-- Stream + Chat -->
-    <div class="grid lg:grid-cols-3 gap-6 mb-8">
-      <div class="lg:col-span-2">
+    <div id="stream-grid" class="stream-grid mb-8">
+      <div class="stream-main">
         <div id="video-container" class="jump relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-black border-t-4 border-t-gold">
           <img
             id="offline-placeholder"
@@ -58,7 +58,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
 
       <!-- Chat -->
-      <div id="chat-wrapper" class="hidden bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden border-t-4 border-t-gold">
+      <div id="chat-wrapper" class="hidden stream-chat bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden border-t-4 border-t-gold">
         <iframe
           id="yt-chat-frame"
           class="w-full h-full min-h-[500px]"

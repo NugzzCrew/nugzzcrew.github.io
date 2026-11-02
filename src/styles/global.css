@@ -243,9 +243,35 @@ body {
   display: none;
 }
 
-/* Simple Icons baseline fix */
-.si {
-  display: inline-block;
-  line-height: 1;
-  vertical-align: middle;
+/* ========== Stream / Chat layout (home page) ========== */
+/* Centered when chat is hidden; side-by-side when chat is visible */
+.stream-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.stream-main {
+  width: 100%;
+  max-width: 56rem; /* ~2/3 of a max-w-7xl container */
+}
+
+@media (min-width: 1024px) {
+  .stream-grid:has(#chat-wrapper:not(.hidden)) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  .stream-grid:has(#chat-wrapper:not(.hidden)) .stream-main {
+    max-width: none;
+  }
+}
+
+.stream-chat {
+  width: 100%;
+  min-height: 500px;
 }
