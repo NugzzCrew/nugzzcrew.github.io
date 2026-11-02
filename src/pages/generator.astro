@@ -93,17 +93,15 @@ const vehicleSets = [
       <p class="page-kicker">Step-by-Step Spec Builder</p>
     </header>
 
-    <!-- Step Progress Bar -->
-    <div id="dmo-builder" class="jump">
-    <div class="flex justify-between mb-8 border-b border-zinc-800 pb-4">
-      <button id="nav-step-1" class="step-nav text-gold font-black uppercase text-xs tracking-widest cursor-pointer">1. Vehicle</button>
-      <button id="nav-step-2" class="step-nav text-zinc-500 font-black uppercase text-xs tracking-widest cursor-pointer hover:text-zinc-300">2. Plate</button>
-      <button id="nav-step-3" class="step-nav text-zinc-500 font-black uppercase text-xs tracking-widest cursor-pointer hover:text-zinc-300">3. Colors</button>
-      <button id="nav-step-4" class="step-nav text-zinc-500 font-black uppercase text-xs tracking-widest cursor-pointer hover:text-zinc-300">4. Wheels</button>
-    </div>
-
     <!-- Main Content Container -->
-    <div class="bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800 space-y-6 min-h-[500px] flex flex-col justify-between">
+    <div id="dmo-builder" class="jump bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800 border-t-4 border-t-gold space-y-6 min-h-[500px] flex flex-col justify-between">
+      <!-- Step Progress Bar (inside the box) -->
+      <div class="flex justify-between mb-6 border-b border-zinc-800 pb-4">
+        <button id="nav-step-1" class="step-nav text-gold font-black uppercase text-xs tracking-widest cursor-pointer">1. Vehicle</button>
+        <button id="nav-step-2" class="step-nav text-zinc-500 font-black uppercase text-xs tracking-widest cursor-pointer hover:text-zinc-300">2. Plate</button>
+        <button id="nav-step-3" class="step-nav text-zinc-500 font-black uppercase text-xs tracking-widest cursor-pointer hover:text-zinc-300">3. Colors</button>
+        <button id="nav-step-4" class="step-nav text-zinc-500 font-black uppercase text-xs tracking-widest cursor-pointer hover:text-zinc-300">4. Wheels</button>
+      </div>
       
       <!-- STEP 1: VEHICLE -->
       <div id="step-1" class="step-section space-y-6">
@@ -392,10 +390,9 @@ const vehicleSets = [
         </div>
       </div>
     </div>
-    </div>
 
     <!-- FINAL OUTPUT (Hidden until Generated) -->
-    <div id="outputContainer" class="mt-8 bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800 hidden">
+    <div id="outputContainer" class="mt-8 bg-zinc-900/40 p-6 rounded-3xl border border-zinc-800 border-t-4 border-t-gold hidden">
       <h2 class="text-sm font-black uppercase tracking-widest text-gold mb-4">Final Spec</h2>
       <pre id="output" class="text-[10px] text-zinc-300 font-mono whitespace-pre-wrap break-all bg-black/50 p-4 rounded-xl border border-zinc-800 min-h-[300px]"></pre>
       <button id="copy" type="button" class="mt-4 w-full bg-gold hover:bg-gold/90 text-black font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all">Copy</button>

@@ -255,7 +255,7 @@ body {
 
 .stream-main {
   width: 100%;
-  max-width: 56rem; /* ~2/3 of a max-w-7xl container */
+  /* full width of page-shell so it matches every other page */
 }
 
 @media (min-width: 1024px) {
