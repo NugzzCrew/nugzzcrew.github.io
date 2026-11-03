@@ -91,6 +91,22 @@ const socials = [
                 >
                   <span>Sign In</span>
                 </button>
+                <script is:inline>
+                  (function() {
+                    try {
+                      const raw = localStorage.getItem("nugzzUser");
+                      if (raw) {
+                        const user = JSON.parse(raw);
+                        const btn = document.getElementById("auth-btn");
+                        if (btn && user && user.name) {
+                          btn.innerHTML = user.picture
+                            ? `<img src="${user.picture}" class="w-5 h-5 rounded-full" alt="" /> <span>${user.name}</span>`
+                            : `<span>${user.name}</span>`;
+                        }
+                      }
+                    } catch (e) {}
+                  })();
+                </script>
             </div>
         </nav>
 
