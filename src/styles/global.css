@@ -189,15 +189,15 @@ body {
   body { background-attachment: scroll; }
 }
 
-/* ========== Header layout (true center: logo left | nav center | auth right) ========== */
+/* ========== Header layout (absolute-centered nav, brand never truncated) ========== */
 .header-inner {
   max-width: 80rem;
   margin-inline: auto;
   padding: 0.75rem 1.25rem;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  display: flex;
   align-items: center;
-  gap: 1.5rem;
+  position: relative;
+  gap: 1rem;
   min-height: 4rem;
   width: 100%;
 }
@@ -206,19 +206,21 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  justify-self: start;
-  min-width: 0;
-  max-width: 100%;
+  flex-shrink: 0;
+  z-index: 2;
 }
 
 .header-center {
-  justify-self: center;
-  min-width: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .header-right {
-  justify-self: end;
-  min-width: 0;
+  margin-left: auto;
+  flex-shrink: 0;
+  z-index: 2;
 }
 
 .nav-burger {
@@ -237,9 +239,6 @@ body {
   flex-direction: row !important;
   align-items: center !important;
   gap: 0.5rem;
-  min-width: 0;
-  max-width: 100%;
-  flex-shrink: 1;
   text-decoration: none;
 }
 .brand-link:hover { opacity: 0.9; }
@@ -262,20 +261,19 @@ body {
 }
 
 .brand-mark {
-  font-size: clamp(12px, 0.9vw, 15px) !important;
+  font-size: clamp(13px, 1vw, 16px) !important;
   line-height: 1 !important;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
 }
-@media (max-width: 1099px) {
+/* Hide brand text on medium desktop so it never collides with the centered nav */
+@media (max-width: 1399px) {
   .brand-mark {
-    font-size: clamp(13px, 4vw, 16px) !important;
+    display: none;
   }
 }
 @media (min-width: 1400px) {
   .brand-mark {
+    display: inline;
     font-size: 16px !important;
   }
 }
@@ -283,24 +281,23 @@ body {
 .nav-desktop {
   display: none;
   align-items: center;
-  gap: 1rem;
-  font-size: 0.65rem;
+  gap: 1.15rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.11em;
   color: rgb(161 161 170);
 }
 @media (min-width: 1100px) {
   .nav-desktop {
     display: flex !important;
     flex-direction: row !important;
-    gap: 1rem !important;
   }
 }
 @media (min-width: 1280px) {
   .nav-desktop {
     font-size: 0.72rem;
-    gap: 1.35rem !important;
+    gap: 1.4rem !important;
   }
 }
 @media (min-width: 1440px) {
@@ -340,13 +337,13 @@ body {
 
 @media (max-width: 1099px) {
   .header-inner {
-    grid-template-columns: auto 1fr auto;
     gap: 0.75rem;
     padding-inline: 0.75rem;
   }
   .header-center { display: none; }
   .nav-burger { display: flex !important; }
   .nav-desktop { display: none !important; }
+  .brand-mark { display: inline !important; } /* always show full name on mobile/tablet */
 }
 @media (min-width: 1100px) {
   .nav-burger { display: none !important; }
