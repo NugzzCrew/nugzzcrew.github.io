@@ -99,7 +99,7 @@ const primaryLinks = [
                       id="auth-btn"
                       type="button"
                       onclick="openAuthModal()"
-                      class="auth-btn"
+                      class="auth-btn flex items-center gap-2 px-2 sm:px-3 py-1"
                     >
                       <span>Sign In</span>
                     </button>
@@ -114,8 +114,8 @@ const primaryLinks = [
                         const btn = document.getElementById("auth-btn");
                         if (btn && user && user.name) {
                           btn.innerHTML = user.picture
-                            ? `<img src="${user.picture}" class="w-5 h-5 rounded-full" alt="" /> <span>${user.name}</span>`
-                            : `<span>${user.name}</span>`;
+                            ? `<img src="${user.picture}" class="w-7 h-7 sm:w-6 sm:h-6 rounded-full object-cover" alt="" /> <span class="hidden sm:inline">${user.name}</span>`
+                            : `<span class="hidden sm:inline">${user.name}</span><span class="sm:hidden text-xs uppercase tracking-wide">Me</span>`;
                         }
                       }
                     } catch (e) {}
@@ -124,18 +124,18 @@ const primaryLinks = [
             </div>
         </nav>
 
-        <!-- Live Banner -->
-        <div id="live-banner" class="hidden fixed top-16 left-0 right-0 z-40 bg-red-950/95 border-b border-red-700 text-white text-sm">
-          <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-3">
-            <div class="flex items-center gap-2">
-              <span class="relative flex h-2.5 w-2.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+        <!-- Live Banner (dismissable) -->
+        <div id="live-banner" class="hidden fixed top-[72px] left-0 right-0 z-40 bg-red-950/95 border-b border-red-600 text-white text-sm shadow-md" role="status" aria-live="polite">
+          <div class="max-w-7xl mx-auto px-4 py-1.5 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="relative flex h-2 w-2 flex-shrink-0">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
               </span>
-              <span class="font-bold uppercase tracking-wider text-red-200">LIVE</span>
-              <a href="/live-hub" class="hover:underline">We're live — Jump into the Live Hub</a>
+              <span class="font-bold uppercase tracking-wider text-red-200 flex-shrink-0">LIVE</span>
+              <a href="/live-hub" class="truncate hover:underline text-red-100">We're live — Open Live Hub</a>
             </div>
-            <button id="live-banner-dismiss" type="button" class="text-red-300 hover:text-white text-lg leading-none px-2" aria-label="Dismiss">&times;</button>
+            <button id="live-banner-dismiss" type="button" class="flex-shrink-0 text-red-300 hover:text-white text-xl leading-none px-2 -mr-1" aria-label="Dismiss live banner">&times;</button>
           </div>
         </div>
 
@@ -274,8 +274,10 @@ const primaryLinks = [
                       if (banner) {
                         if (isLive && !sessionStorage.getItem('liveBannerDismissed')) {
                           banner.classList.remove("hidden");
+                          document.body.classList.add("has-live-banner");
                         } else {
                           banner.classList.add("hidden");
+                          document.body.classList.remove("has-live-banner");
                         }
                       }
                       document.getElementById("live-word-desktop")?.classList.toggle("is-live", isLive);
@@ -292,7 +294,9 @@ const primaryLinks = [
             if (dismiss) {
               dismiss.addEventListener("click", () => {
                 sessionStorage.setItem('liveBannerDismissed', '1');
-                document.getElementById("live-banner")?.classList.add("hidden");
+                const banner = document.getElementById("live-banner");
+                if (banner) banner.classList.add("hidden");
+                document.body.classList.remove("has-live-banner");
               });
             }
           })();
