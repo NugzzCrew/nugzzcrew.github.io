@@ -8,12 +8,68 @@ import MainLayout from '../layouts/MainLayout.astro';
       <h1 class="page-title">
         <span class="text-white">Crew</span> <span class="text-gold">Controls</span>
       </h1>
-      <p class="page-kicker">Fam Bam Command Center</p>
+      <p class="page-kicker">Fam Bam Command Center — Live Stream + Chat + Commands</p>
     </header>
 
-    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-5 border-t-4 border-t-gold">
-      <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2">All Commands</h2>
-      <p id="status-msg" class="text-sm text-zinc-400 mb-4">Connecting to Streamer.bot...</p>
+    <!-- Stream Stage: Video + Chat -->
+    <div id="stream-stage" class="mb-8">
+      <div class="flex flex-col lg:flex-row gap-4 items-stretch">
+        <!-- Video -->
+        <div class="flex-1 min-w-0">
+          <div id="video-container" class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-black border-t-4 border-t-gold">
+            <img
+              id="offline-placeholder"
+              src="/images/offline.png"
+              alt="Stream is currently offline"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="z-index:10;"
+            />
+            <iframe
+              id="yt-video-frame"
+              class="w-full h-full"
+              src="about:blank"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+              style="display:none; position:relative; z-index:20;"
+            ></iframe>
+            <button
+              id="theater-btn"
+              type="button"
+              class="absolute bottom-3 right-3 z-30 bg-black/80 hover:bg-black text-white text-xs uppercase tracking-widest px-3 py-1.5 rounded-lg border border-zinc-600 hover:border-gold"
+            >
+              Theater
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat (same height as video) -->
+        <div id="chat-wrapper" class="hidden lg:block lg:w-[380px] xl:w-[420px] flex-shrink-0">
+          <div class="h-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold">
+            <iframe
+              id="yt-chat-frame"
+              class="w-full h-full min-h-[400px] lg:min-h-0"
+              src="about:blank"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile chat toggle / full width below on small screens -->
+      <div id="chat-wrapper-mobile" class="lg:hidden mt-4 hidden">
+        <div class="rounded-xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold">
+          <iframe
+            id="yt-chat-frame-mobile"
+            class="w-full h-[500px]"
+            src="about:blank"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commands (centered below) -->
+    <div class="nugzz-card max-w-4xl mx-auto">
+      <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center">Command Center</h2>
+      <p id="status-msg" class="text-sm text-zinc-400 mb-4 text-center">Connecting to Streamer.bot...</p>
 
       <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
         Fun Stuff & Games <span class="text-gold">▼</span>
@@ -36,12 +92,12 @@ import MainLayout from '../layouts/MainLayout.astro';
       <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
         Media Controls <span class="text-gold">▼</span>
       </h3>
-      <div class="media-bar collapsible-content flex gap-2 mb-4">
-        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Previous')" disabled>⏮</button>
-        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Stop')" disabled>⏹</button>
-        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Play')" disabled>▶</button>
-        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Pause')" disabled>⏸</button>
-        <button class="cmd-btn stream-cmd flex-1" onclick="sendAction('Media Skip')" disabled>⏭</button>
+      <div class="media-bar collapsible-content flex gap-2 mb-4 justify-center">
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Media Previous')" disabled>⏮</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Media Stop')" disabled>⏹</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Media Play')" disabled>▶</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Media Pause')" disabled>⏸</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Media Skip')" disabled>⏭</button>
       </div>
 
       <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
@@ -82,17 +138,19 @@ import MainLayout from '../layouts/MainLayout.astro';
       ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
       setTimeout(() => {
         ws.send(JSON.stringify({ request: "DoAction", action: { name: "Web_Request_Status" }, id: "StatusCheck" }));
-      }, 500);
+      }, 1000);
     };
 
     ws.onmessage = (event) => {
       try {
         const msg = JSON.parse(event.data);
         if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
-          updateStreamState(msg.data.data.isLive);
+          const data = msg.data.data;
+          handleLiveStatus(data);
+          updateStreamState(data.isLive);
         }
       } catch (e) {
-        console.error(e);
+        console.log("Parsing error:", e);
       }
     };
 
@@ -101,6 +159,36 @@ import MainLayout from '../layouts/MainLayout.astro';
       if (el) el.textContent = "Offline: Streamer's PC not reachable.";
       setTimeout(connectBot, 5000);
     };
+  }
+
+  function handleLiveStatus(data) {
+    const videoFrame = document.getElementById("yt-video-frame");
+    const placeholder = document.getElementById("offline-placeholder");
+    const chatFrame = document.getElementById("yt-chat-frame");
+    const chatFrameMobile = document.getElementById("yt-chat-frame-mobile");
+    const chatWrapper = document.getElementById("chat-wrapper");
+    const chatWrapperMobile = document.getElementById("chat-wrapper-mobile");
+
+    if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
+      if (videoFrame) {
+        videoFrame.style.display = "block";
+        videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
+      }
+      if (placeholder) placeholder.style.display = "none";
+      const chatSrc = `https://www.youtube.com/live_chat?v=${data.videoId}&embed_domain=${location.hostname}&dark_theme=1`;
+      if (chatFrame) chatFrame.src = chatSrc;
+      if (chatFrameMobile) chatFrameMobile.src = chatSrc;
+      if (chatWrapper) chatWrapper.classList.remove("hidden");
+      if (chatWrapperMobile) chatWrapperMobile.classList.remove("hidden");
+    } else {
+      if (videoFrame) {
+        videoFrame.style.display = "none";
+        videoFrame.src = "about:blank";
+      }
+      if (placeholder) placeholder.style.display = "block";
+      if (chatWrapper) chatWrapper.classList.add("hidden");
+      if (chatWrapperMobile) chatWrapperMobile.classList.add("hidden");
+    }
   }
 
   function updateStreamState(live) {
@@ -153,4 +241,42 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   window.addEventListener("load", connectBot);
+
+  // Theater Mode
+  const theaterBtn = document.getElementById("theater-btn");
+  const videoContainer = document.getElementById("video-container");
+  let isTheater = false;
+  let theaterSlot = null;
+
+  function setTheater(on) {
+    if (!videoContainer || !theaterBtn || on === isTheater) return;
+    isTheater = on;
+    if (on) {
+      theaterSlot = document.createComment("theater-slot");
+      videoContainer.parentNode.insertBefore(theaterSlot, videoContainer);
+      document.body.appendChild(videoContainer);
+      videoContainer.classList.add("is-theater");
+      document.body.style.overflow = "hidden";
+      theaterBtn.textContent = "Exit";
+    } else {
+      videoContainer.classList.remove("is-theater");
+      if (theaterSlot && theaterSlot.parentNode) {
+        theaterSlot.parentNode.insertBefore(videoContainer, theaterSlot);
+        theaterSlot.remove();
+        theaterSlot = null;
+      }
+      document.body.style.overflow = "";
+      theaterBtn.textContent = "Theater";
+    }
+  }
+
+  theaterBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setTheater(!isTheater);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isTheater) setTheater(false);
+  });
 </script>

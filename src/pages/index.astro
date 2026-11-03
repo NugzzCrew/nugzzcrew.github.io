@@ -13,198 +13,78 @@ import MainLayout from '../layouts/MainLayout.astro';
       </p>
     </header>
 
-    <!-- Stream + Chat -->
-    <div id="stream-grid" class="stream-grid mb-8">
-      <div class="stream-main">
-        <div id="video-container" class="jump relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-black border-t-4 border-t-gold">
-          <img
-            id="offline-placeholder"
-            src="/images/offline.png"
-            alt="Stream is currently offline"
-            class="absolute inset-0 w-full h-full object-cover"
-            style="z-index:10;"
-          />
-          <iframe
-            id="yt-video-frame"
-            class="w-full h-full"
-            src="about:blank"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-            style="display:none; position:relative; z-index:20;"
-          ></iframe>
-          <button
-            id="theater-btn"
-            type="button"
-            class="absolute bottom-3 right-3 z-30 bg-black/80 hover:bg-black text-white text-xs uppercase tracking-widest px-3 py-1.5 rounded-lg border border-zinc-600 hover:border-gold"
-          >
-            Theater
-          </button>
+    <!-- Current Working Videos Showcase -->
+    <div class="mb-10">
+      <h2 class="font-header text-gold uppercase tracking-wide text-xl mb-4 text-center">Current Working Videos</h2>
+      <p class="text-center text-zinc-400 text-sm mb-6">Featured playlists from the Official Nugzz Crew YouTube home page.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Money Glitches -->
+        <div class="nugzz-card">
+          <h3 class="font-header text-gold uppercase tracking-wide text-lg mb-3">Money Glitches</h3>
+          <div class="aspect-video rounded-lg overflow-hidden border border-zinc-800">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/videoseries?list=PLs8voOllOroX0PQZ2Hk70k57OeiZS0wtH"
+              title="Money Glitches Playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <a href="https://www.youtube.com/playlist?list=PLs8voOllOroX0PQZ2Hk70k57OeiZS0wtH" target="_blank" rel="noopener" class="mt-3 inline-block text-gold hover:text-gold-bright text-sm uppercase tracking-widest">Watch Full Playlist →</a>
         </div>
 
-        <!-- Quick Commands -->
-        <div class="mt-4 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-4 border-t-4 border-t-gold">
-          <div class="text-center mb-3">
-            <a href="/crew-controls" class="text-gold hover:text-gold-bright uppercase tracking-widest text-xs font-bold transition-colors">
-              Crew Commands →
-            </a>
+        <!-- DMO / Save Editor -->
+        <div class="nugzz-card">
+          <h3 class="font-header text-gold uppercase tracking-wide text-lg mb-3">DMO / Save Editor Methods</h3>
+          <div class="aspect-video rounded-lg overflow-hidden border border-zinc-800">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/videoseries?list=PLs8voOllOroVRP6PfVAMkT-18BQIAO_Nv"
+              title="DMO Methods Playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
-          <h3 class="font-header text-gold uppercase tracking-wide text-sm mb-3">Quick Commands</h3>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            <button class="cmd-btn stream-cmd" onclick="sendAction('2) Join Game (Command)')" disabled>Join Whammy</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('Plinko 2 -  Join Game (Command)')" disabled>Join Plinko</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('Barrel Roll')" disabled>Barrel Roll</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('Shoryuken')" disabled>Shoryuken</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('Scorpion')" disabled>Scorpion</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('Skeletor')" disabled>Skeletor</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('Kickflip')" disabled>Kickflip</button>
-            <button class="cmd-btn stream-cmd" onclick="sendAction('GTA Wasted')" disabled>GTA Wasted</button>
+          <a href="https://www.youtube.com/playlist?list=PLs8voOllOroVRP6PfVAMkT-18BQIAO_Nv" target="_blank" rel="noopener" class="mt-3 inline-block text-gold hover:text-gold-bright text-sm uppercase tracking-widest">Watch Full Playlist →</a>
+        </div>
+
+        <!-- GCTF / GC2F -->
+        <div class="nugzz-card">
+          <h3 class="font-header text-gold uppercase tracking-wide text-lg mb-3">GCTF / GC2F Methods</h3>
+          <div class="aspect-video rounded-lg overflow-hidden border border-zinc-800">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/videoseries?list=PLs8voOllOroXXjw8T41POLAClqPDnyvhh"
+              title="GCTF Methods Playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
+          <a href="https://www.youtube.com/playlist?list=PLs8voOllOroXXjw8T41POLAClqPDnyvhh" target="_blank" rel="noopener" class="mt-3 inline-block text-gold hover:text-gold-bright text-sm uppercase tracking-widest">Watch Full Playlist →</a>
+        </div>
+
+        <!-- Merge Methods -->
+        <div class="nugzz-card">
+          <h3 class="font-header text-gold uppercase tracking-wide text-lg mb-3">Merge Methods</h3>
+          <div class="aspect-video rounded-lg overflow-hidden border border-zinc-800">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/videoseries?list=PLs8voOllOroXOkToRkfZEhGrSjNzrouYs"
+              title="Merge Methods Playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <a href="https://www.youtube.com/playlist?list=PLs8voOllOroXOkToRkfZEhGrSjNzrouYs" target="_blank" rel="noopener" class="mt-3 inline-block text-gold hover:text-gold-bright text-sm uppercase tracking-widest">Watch Full Playlist →</a>
         </div>
       </div>
+    </div>
 
-      <!-- Chat -->
-      <div id="chat-wrapper" class="hidden stream-chat bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden border-t-4 border-t-gold">
-        <iframe
-          id="yt-chat-frame"
-          class="w-full h-full min-h-[500px]"
-          src="about:blank"
-        ></iframe>
-      </div>
+    <div class="text-center mt-8">
+      <a href="/crew-controls" class="inline-block bg-zinc-900/60 border border-zinc-700 hover:border-gold text-gold hover:text-gold-bright uppercase tracking-widest text-sm font-bold px-6 py-3 rounded-xl transition-colors">
+        Go to Crew Controls (Live Stream + Commands)
+      </a>
     </div>
   </section>
 </MainLayout>
-
-<script is:inline>
-  let ws;
-
-  function connectBot() {
-    ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
-
-    ws.onopen = () => {
-      ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
-      setTimeout(() => {
-        ws.send(JSON.stringify({ request: "DoAction", action: { name: "Web_Request_Status" }, id: "StatusCheck" }));
-      }, 1000);
-    };
-
-    ws.onmessage = (event) => {
-      try {
-        const msg = JSON.parse(event.data);
-        if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
-          const data = msg.data.data;
-          handleLiveStatus(data);
-          updateStreamState(data.isLive);
-        }
-      } catch (e) {
-        console.log("Parsing error:", e);
-      }
-    };
-
-    ws.onclose = () => setTimeout(connectBot, 5000);
-  }
-
-  function handleLiveStatus(data) {
-    const videoFrame = document.getElementById("yt-video-frame");
-    const placeholder = document.getElementById("offline-placeholder");
-    const chatFrame = document.getElementById("yt-chat-frame");
-    const chatWrapper = document.getElementById("chat-wrapper");
-
-    if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
-      if (videoFrame) {
-        videoFrame.style.display = "block";
-        videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
-      }
-      if (placeholder) placeholder.style.display = "none";
-      if (chatFrame && chatWrapper) {
-        chatFrame.src = `https://www.youtube.com/live_chat?v=${data.videoId}&embed_domain=${location.hostname}&dark_theme=1`;
-        chatWrapper.classList.remove("hidden");
-      }
-    } else {
-      if (videoFrame) {
-        videoFrame.style.display = "none";
-        videoFrame.src = "about:blank";
-      }
-      if (placeholder) placeholder.style.display = "block";
-      if (chatWrapper) chatWrapper.classList.add("hidden");
-    }
-  }
-
-  function updateStreamState(live) {
-    const buttons = document.querySelectorAll(".stream-cmd");
-    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
-    if (ws?.readyState === WebSocket.OPEN && user) {
-      buttons.forEach(btn => btn.disabled = !live);
-    } else {
-      buttons.forEach(btn => btn.disabled = true);
-    }
-  }
-
-  function sendAction(actionName, extraCommand = null) {
-    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
-    if (!ws || ws.readyState !== WebSocket.OPEN) {
-      alert("Not connected to Streamer.bot.");
-      return;
-    }
-    if (!user) {
-      alert("Please sign in to use commands.");
-      return;
-    }
-    const payload = {
-      request: "DoAction",
-      action: { name: actionName },
-      args: {
-        isWebsocketRequest: "True",
-        userId: user.youtubeId,
-        userProfileUrl: user.picture,
-        userName: user.name,
-        userType: "youtube"
-      },
-      id: "WebCommandCenter"
-    };
-    if (extraCommand) {
-      payload.args.commandName = extraCommand;
-      payload.args.command = extraCommand;
-    }
-    ws.send(JSON.stringify(payload));
-  }
-
-  window.addEventListener("load", connectBot);
-
-  const theaterBtn = document.getElementById("theater-btn");
-  const videoContainer = document.getElementById("video-container");
-  let isTheater = false;
-  let theaterSlot = null;
-
-  function setTheater(on) {
-    if (!videoContainer || !theaterBtn || on === isTheater) return;
-    isTheater = on;
-    if (on) {
-      theaterSlot = document.createComment("theater-slot");
-      videoContainer.parentNode.insertBefore(theaterSlot, videoContainer);
-      document.body.appendChild(videoContainer);
-      videoContainer.classList.add("is-theater");
-      document.body.style.overflow = "hidden";
-      theaterBtn.textContent = "Exit";
-    } else {
-      videoContainer.classList.remove("is-theater");
-      if (theaterSlot && theaterSlot.parentNode) {
-        theaterSlot.parentNode.insertBefore(videoContainer, theaterSlot);
-        theaterSlot.remove();
-        theaterSlot = null;
-      }
-      document.body.style.overflow = "";
-      theaterBtn.textContent = "Theater";
-    }
-  }
-
-  theaterBtn?.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setTheater(!isTheater);
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isTheater) setTheater(false);
-  });
-</script>
