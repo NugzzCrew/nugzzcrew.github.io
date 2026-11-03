@@ -2,8 +2,8 @@
 let googleTokenClient;
 let currentUser = null;
 
-const GOOGLE_CLIENT_ID = "717371328718-mgij7mhc1pktqgg818orfh0158srr977.apps.googleusercontent.com";
-const DISCORD_CLIENT_ID = "1566499953977856040";
+const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
+const DISCORD_CLIENT_ID = "YOUR_DISCORD_CLIENT_ID";
 const DISCORD_REDIRECT = "https://officialnugzzcrew.com/";
 
 function setupGoogle() {
@@ -58,8 +58,8 @@ function updateAuthUI() {
 
   if (currentUser) {
     btn.innerHTML = currentUser.picture
-      ? `<img src="${currentUser.picture}" class="w-5 h-5 rounded-full" alt="" /> <span>${currentUser.name}</span>`
-      : `<span>${currentUser.name}</span>`;
+      ? `<img src="${currentUser.picture}" class="w-7 h-7 sm:w-6 sm:h-6 rounded-full object-cover" alt="" /> <span class="hidden sm:inline">${currentUser.name}</span>`
+      : `<span class="hidden sm:inline">${currentUser.name}</span><span class="sm:hidden text-xs uppercase tracking-wide">Me</span>`;
   } else {
     btn.innerHTML = `<span>Sign In</span>`;
   }
@@ -162,6 +162,8 @@ async function handleDiscordCallback() {
       id: discordUser.id,
       username: discordUser.username,
       avatar: discordUser.avatar,
+      accessToken: tokenData.access_token,
+      expiresAt: Date.now() + (tokenData.expires_in || 604800) * 1000,
     };
     saveUser(currentUser);
   }
