@@ -71,6 +71,21 @@ import MainLayout from '../layouts/MainLayout.astro';
       <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center">Command Center</h2>
       <p id="status-msg" class="text-sm text-zinc-400 mb-4 text-center">Connecting to Streamer.bot...</p>
 
+      <!-- Music Controls -->
+      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+        Music Controls <span class="text-gold">▼</span>
+      </h3>
+      <div class="media-bar collapsible-content flex flex-wrap gap-2 mb-4 justify-center">
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Play')" disabled>Play</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Pause')" disabled>Pause</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Stop')" disabled>Stop</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Skip')" disabled>Skip</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Previous')" disabled>Previous</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Show')" disabled>Show</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Hide')" disabled>Hide</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('AddFav')" disabled>Add Fav</button>
+      </div>
+
       <!-- Info & Rules -->
       <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
         Info & Rules <span class="text-gold">▼</span>
@@ -320,21 +335,6 @@ import MainLayout from '../layouts/MainLayout.astro';
         <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Fly By)')" disabled>Fly By</button>
         <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Mothman)')" disabled>Mothman</button>
         <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Don't Smoke Crack)')" disabled>Don't Smoke Crack</button>
-      </div>
-
-      <!-- Music Controls -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
-        Music Controls <span class="text-gold">▼</span>
-      </h3>
-      <div class="media-bar collapsible-content flex flex-wrap gap-2 mb-4 justify-center">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Play')" disabled>Play</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pause')" disabled>Pause</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Stop')" disabled>Stop</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Skip')" disabled>Skip</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Previous')" disabled>Previous</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Show')" disabled>Show</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Hide')" disabled>Hide</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('AddFav')" disabled>Add Fav</button>
       </div>
 
       <!-- Albums -->
