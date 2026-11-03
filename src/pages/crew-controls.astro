@@ -11,11 +11,11 @@ import MainLayout from '../layouts/MainLayout.astro';
       <p class="page-kicker">Fam Bam Command Center — Live Stream + Chat + Commands</p>
     </header>
 
-    <!-- Stream Stage: Video + Chat -->
-    <div id="stream-stage" class="mb-8">
-      <div class="flex flex-col lg:flex-row gap-4 items-stretch">
-        <!-- Video -->
-        <div class="flex-1 min-w-0">
+    <!-- Stream Stage -->
+    <div id="stream-stage" class="mb-8 flex flex-col items-center">
+      <div id="video-chat-row" class="w-full max-w-6xl flex flex-col lg:flex-row gap-4 items-stretch justify-center">
+        <!-- Video column -->
+        <div id="video-col" class="w-full max-w-4xl mx-auto transition-all">
           <div id="video-container" class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-black border-t-4 border-t-gold">
             <img
               id="offline-placeholder"
@@ -42,32 +42,32 @@ import MainLayout from '../layouts/MainLayout.astro';
           </div>
         </div>
 
-        <!-- Chat (same height as video) -->
-        <div id="chat-wrapper" class="hidden lg:block lg:w-[380px] xl:w-[420px] flex-shrink-0">
+        <!-- Desktop Chat (hidden by default) -->
+        <div id="chat-wrapper" class="hidden lg:w-[380px] xl:w-[400px] flex-shrink-0">
           <div class="h-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold">
             <iframe
               id="yt-chat-frame"
-              class="w-full h-full min-h-[400px] lg:min-h-0"
+              class="w-full h-full"
               src="about:blank"
             ></iframe>
           </div>
         </div>
       </div>
 
-      <!-- Mobile chat toggle / full width below on small screens -->
-      <div id="chat-wrapper-mobile" class="lg:hidden mt-4 hidden">
+      <!-- Mobile Chat (hidden by default) -->
+      <div id="chat-wrapper-mobile" class="lg:hidden mt-4 w-full max-w-4xl hidden">
         <div class="rounded-xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold">
           <iframe
             id="yt-chat-frame-mobile"
-            class="w-full h-[500px]"
+            class="w-full h-[480px]"
             src="about:blank"
           ></iframe>
         </div>
       </div>
     </div>
 
-    <!-- Commands (centered below) -->
-    <div class="nugzz-card max-w-4xl mx-auto">
+    <!-- Commands (width matched to video) -->
+    <div id="commands-container" class="nugzz-card w-full max-w-4xl mx-auto">
       <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center">Command Center</h2>
       <p id="status-msg" class="text-sm text-zinc-400 mb-4 text-center">Connecting to Streamer.bot...</p>
 
@@ -168,26 +168,53 @@ import MainLayout from '../layouts/MainLayout.astro';
     const chatFrameMobile = document.getElementById("yt-chat-frame-mobile");
     const chatWrapper = document.getElementById("chat-wrapper");
     const chatWrapperMobile = document.getElementById("chat-wrapper-mobile");
+    const videoCol = document.getElementById("video-col");
+    const commands = document.getElementById("commands-container");
 
-    if (data.isLive === true && data.videoId && data.videoId.trim() !== "") {
+    const isLive = data.isLive === true && data.videoId && data.videoId.trim() !== "";
+
+    if (isLive) {
       if (videoFrame) {
         videoFrame.style.display = "block";
         videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
       }
       if (placeholder) placeholder.style.display = "none";
+
       const chatSrc = `https://www.youtube.com/live_chat?v=${data.videoId}&embed_domain=${location.hostname}&dark_theme=1`;
       if (chatFrame) chatFrame.src = chatSrc;
       if (chatFrameMobile) chatFrameMobile.src = chatSrc;
+
       if (chatWrapper) chatWrapper.classList.remove("hidden");
       if (chatWrapperMobile) chatWrapperMobile.classList.remove("hidden");
+
+      // Expand layout when live
+      if (videoCol) {
+        videoCol.classList.remove("max-w-4xl", "mx-auto");
+        videoCol.classList.add("flex-1", "min-w-0");
+      }
+      if (commands) {
+        commands.classList.remove("max-w-4xl");
+        commands.classList.add("max-w-6xl");
+      }
     } else {
       if (videoFrame) {
         videoFrame.style.display = "none";
         videoFrame.src = "about:blank";
       }
       if (placeholder) placeholder.style.display = "block";
+
       if (chatWrapper) chatWrapper.classList.add("hidden");
       if (chatWrapperMobile) chatWrapperMobile.classList.add("hidden");
+
+      // Centered offline layout
+      if (videoCol) {
+        videoCol.classList.add("max-w-4xl", "mx-auto");
+        videoCol.classList.remove("flex-1", "min-w-0");
+      }
+      if (commands) {
+        commands.classList.add("max-w-4xl");
+        commands.classList.remove("max-w-6xl");
+      }
     }
   }
 
