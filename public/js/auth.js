@@ -2,8 +2,8 @@
 let googleTokenClient;
 let currentUser = null;
 
-const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
-const DISCORD_CLIENT_ID = "YOUR_DISCORD_CLIENT_ID";
+const GOOGLE_CLIENT_ID = "717371328718-mgij7mhc1pktqgg818orfh0158srr977.apps.googleusercontent.com";
+const DISCORD_CLIENT_ID = "1566499953977856040";
 const DISCORD_REDIRECT = "https://officialnugzzcrew.com/";
 
 function setupGoogle() {
