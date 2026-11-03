@@ -195,9 +195,9 @@ body {
   margin-inline: auto;
   padding: 0.75rem 1.25rem;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   min-height: 4rem;
   width: 100%;
 }
@@ -208,14 +208,17 @@ body {
   gap: 0.75rem;
   justify-self: start;
   min-width: 0;
+  max-width: 100%;
 }
 
 .header-center {
   justify-self: center;
+  min-width: 0;
 }
 
 .header-right {
   justify-self: end;
+  min-width: 0;
 }
 
 .nav-burger {
@@ -235,7 +238,8 @@ body {
   align-items: center !important;
   gap: 0.5rem;
   min-width: 0;
-  flex-shrink: 0;
+  max-width: 100%;
+  flex-shrink: 1;
   text-decoration: none;
 }
 .brand-link:hover { opacity: 0.9; }
@@ -258,34 +262,48 @@ body {
 }
 
 .brand-mark {
-  font-size: clamp(13px, 1.1vw, 17px) !important;
+  font-size: clamp(12px, 0.9vw, 15px) !important;
   line-height: 1 !important;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 @media (max-width: 1099px) {
   .brand-mark {
     font-size: clamp(13px, 4vw, 16px) !important;
   }
 }
+@media (min-width: 1400px) {
+  .brand-mark {
+    font-size: 16px !important;
+  }
+}
 
 .nav-desktop {
   display: none;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
   font-size: 0.65rem;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: rgb(161 161 170);
 }
 @media (min-width: 1100px) {
   .nav-desktop {
     display: flex !important;
     flex-direction: row !important;
-    gap: 1.25rem !important;
+    gap: 1rem !important;
   }
 }
 @media (min-width: 1280px) {
+  .nav-desktop {
+    font-size: 0.72rem;
+    gap: 1.35rem !important;
+  }
+}
+@media (min-width: 1440px) {
   .nav-desktop {
     font-size: 0.75rem;
     gap: 1.5rem !important;
