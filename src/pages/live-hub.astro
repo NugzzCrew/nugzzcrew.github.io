@@ -115,23 +115,42 @@ import MainLayout from '../layouts/MainLayout.astro';
         <button class="cmd-btn stream-cmd" onclick="sendAction('MagicSlot')" disabled>Magic Slot</button>
       </div>
 
-      <!-- Maps & Links -->
+      <!-- Links -->
       <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
-        Maps & Links <span class="text-gold">▼</span>
+        Links <span class="text-gold">▼</span>
       </h3>
       <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GTAMap')" disabled>GTA Map</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('RDOMap')" disabled>RDO Map</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('FO76Map')" disabled>FO76 Map</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Bodystyle')" disabled>Body Style</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Livery')" disabled>Livery</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Colors')" disabled>Colors</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Spawncolors')" disabled>Spawn Colors</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Arcade')" disabled>Arcade</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Arena')" disabled>Arena</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('HowTo')" disabled>How To</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Glitches')" disabled>Glitches</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Crew')" disabled>Crew</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Arcade Trophies')" disabled>Arcade Trophies</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Arena Trophies')" disabled>Arena Trophies</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - BGCTF')" disabled>BGCTF</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Color Shenanigans')" disabled>Color Shenanigans</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - DMO')" disabled>DMO</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - FO76 Map')" disabled>FO76 Map</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GATF Avenger')" disabled>GATF Avenger</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF')" disabled>GCTF</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF AA Trailer')" disabled>GCTF AA Trailer</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF Aircraft/Planes')" disabled>GCTF Aircraft</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF Facility Vehicles')" disabled>GCTF Facility</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF NightClub')" disabled>GCTF NightClub</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF Special Vehicles')" disabled>GCTF Special</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GTA Map')" disabled>GTA Map</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GTA Series')" disabled>GTA Series</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GTAV How To Playlist')" disabled>How To Playlist</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Glitch List')" disabled>Glitch List</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Job TP')" disabled>Job TP</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Join')" disabled>Join</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Liveries')" disabled>Liveries</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Magic Slot')" disabled>Magic Slot</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Merge')" disabled>Merge</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Pokemon')" disabled>Pokemon</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - RDO Map')" disabled>RDO Map</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Rim Flip Spreadsheet')" disabled>Rim Flip Sheet</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Search Bar')" disabled>Search Bar</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Social Club Crew')" disabled>Social Club Crew</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Stream Commands')" disabled>Stream Commands</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Vehicle Shenanigans')" disabled>Vehicle Shenanigans</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Vehicle Spawn Colors')" disabled>Spawn Colors</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Website & Socials')" disabled>Website & Socials</button>
       </div>
 
       <!-- TTS Voices -->
@@ -139,25 +158,25 @@ import MainLayout from '../layouts/MainLayout.astro';
         TTS Voices <span class="text-gold">▼</span>
       </h3>
       <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Australian Female')" disabled>Aus Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Australian Male')" disabled>Aus Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('British Female')" disabled>Brit Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('British Male')" disabled>Brit Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Hindi Male')" disabled>Hindi Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Hindi Female')" disabled>Hindi Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Female')" disabled>Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Male')" disabled>Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('French Female')" disabled>French Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('French Male')" disabled>French Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Italian Male')" disabled>Italian Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Italian Female')" disabled>Italian Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Japanese Female')" disabled>JP Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Japanese Male')" disabled>JP Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Russian Female')" disabled>Russian Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Russian Male')" disabled>Russian Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Spanish Female')" disabled>Spanish Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Spanish Male')" disabled>Spanish Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Custom TTS')" disabled>Custom TTS</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('1 - Check User Voice')" disabled>Check User Voice</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Australian Female')" disabled>Aus Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Australian Male')" disabled>Aus Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command British Female')" disabled>Brit Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command British Male')" disabled>Brit Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Female')" disabled>Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command French Female')" disabled>French Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command French Male')" disabled>French Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Hindi Female')" disabled>Hindi Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Hindi Male')" disabled>Hindi Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Italian Female')" disabled>Italian Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Italian Male')" disabled>Italian Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Japanese Female')" disabled>JP Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Japanese Male')" disabled>JP Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Male')" disabled>Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Russian Female')" disabled>Russian Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Russian Male')" disabled>Russian Male</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Spanish Female')" disabled>Spanish Female</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Spanish Male')" disabled>Spanish Male</button>
       </div>
 
       <!-- Leaderboards -->
@@ -165,12 +184,22 @@ import MainLayout from '../layouts/MainLayout.astro';
         Leaderboards <span class="text-gold">▼</span>
       </h3>
       <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBWT')" disabled>Watch Time</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBP')" disabled>Points</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG')" disabled>Gifters</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBRC')" disabled>Roll Call</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LB$')" disabled>Big Spenders</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBXP')" disabled>Monthly XP</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Watchtime')" disabled>Top 5 Watchtime</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Points')" disabled>Top 5 Points</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Gifters')" disabled>Top 5 Gifters</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Roll Call')" disabled>Top 5 Roll Call</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Big Spenders')" disabled>Top 5 Big Spenders</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Monthly XP')" disabled>Top 5 Monthly XP</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Rank')" disabled>Top 5 Rank</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 1')" disabled>Top Gen 1</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 2')" disabled>Top Gen 2</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 3')" disabled>Top Gen 3</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 4')" disabled>Top Gen 4</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 5')" disabled>Top Gen 5</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 6')" disabled>Top Gen 6</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 7')" disabled>Top Gen 7</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 8')" disabled>Top Gen 8</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 9')" disabled>Top Gen 9</button>
       </div>
 
       <!-- Colors -->
@@ -241,61 +270,56 @@ import MainLayout from '../layouts/MainLayout.astro';
         Soundbytes <span class="text-gold">▼</span>
       </h3>
       <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('420')" disabled>420</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Weed')" disabled>Weed</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('AnotherOne')" disabled>Another One</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('BongRip')" disabled>Bong Rip</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Bruh')" disabled>Bruh</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('CB')" disabled>CB</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('ComeOn')" disabled>Come On</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('DMMB')" disabled>DMMB</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Beggar')" disabled>Beggar</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('DJhorn')" disabled>DJ Horn</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('DFIU')" disabled>DFIU</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Dont Smoke Crack')" disabled>Dont Smoke Crack</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('EMF')" disabled>EMF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Flight')" disabled>Flight</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('FogHorn')" disabled>Fog Horn</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('FuckYou')" disabled>Fuck You</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GTFOH')" disabled>GTFOH</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Ghey')" disabled>Ghey</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Goat')" disabled>Goat</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GoKart')" disabled>Go Kart</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GBQ')" disabled>GBQ</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Helicopter')" disabled>Helicopter</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('High5')" disabled>High 5</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Hydrate')" disabled>Hydrate</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Juice')" disabled>Juice</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Kifflom')" disabled>Kifflom</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LG')" disabled>LG</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Meow')" disabled>Meow</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('MiniMap')" disabled>Mini Map</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Mothman')" disabled>Mothman</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Nobody')" disabled>Nobody</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('NumbNuts')" disabled>Numb Nuts</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Orb')" disabled>Orb</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('OHFY')" disabled>OHFY</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Piss')" disabled>Piss</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Restarded')" disabled>Restarded</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Rigged')" disabled>Rigged</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('RightMeow')" disabled>Right Meow</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('RuhRow')" disabled>Ruh Row</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Raggy')" disabled>Raggy</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Security')" disabled>Security</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Sheesh')" disabled>Sheesh</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('SlowClap')" disabled>Slow Clap</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Slurpage')" disabled>Slurpage</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('SMFOM')" disabled>SMFOM</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Stupid')" disabled>Stupid</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('ShowMe')" disabled>Show Me</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Tarzan')" disabled>Tarzan</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Ted')" disabled>Ted</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Titties')" disabled>Titties</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('WaterBoy')" disabled>Water Boy</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('WAYD')" disabled>WAYD</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('WTFO')" disabled>WTFO</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('YGLT')" disabled>YGLT</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('YKAG')" disabled>YKAG</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Another One)')" disabled>Another One</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Beg)')" disabled>Beg</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Bong Rip)')" disabled>Bong Rip</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (BRUH)')" disabled>BRUH</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (ChaChing)')" disabled>ChaChing</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Come On)')" disabled>Come On</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (DJ Horn)')" disabled>DJ Horn</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Don't Fuck it Up)')" disabled>Don't Fuck it Up</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Drink)')" disabled>Drink</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (English MF)')" disabled>English MF</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Fuck You)')" disabled>Fuck You</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Ghey)')" disabled>Ghey</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Go Kart)')" disabled>Go Kart</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Goat)')" disabled>Goat</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (GTFOH)')" disabled>GTFOH</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Kifflom)')" disabled>Kifflom</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (LAYMM)')" disabled>LAYMM</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Let's Go)')" disabled>Let's Go</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Nobody)')" disabled>Nobody</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Numbnuts)')" disabled>Numbnuts</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (OHFY)')" disabled>OHFY</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Orb)')" disabled>Orb</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (PE)')" disabled>PE</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Rigged)')" disabled>Rigged</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Right Meow)')" disabled>Right Meow</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (RRR)')" disabled>RRR</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Security)')" disabled>Security</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Sheesh)')" disabled>Sheesh</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Slow Clap)')" disabled>Slow Clap</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (SMFOM)')" disabled>SMFOM</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (SMTM)')" disabled>SMTM</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Stupid)')" disabled>Stupid</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (SWED)')" disabled>SWED</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Ted)')" disabled>Ted</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Titties)')" disabled>Titties</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (WAYD)')" disabled>WAYD</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (WTFO)')" disabled>WTFO</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (YKAG)')" disabled>YKAG</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Charlie Brown)')" disabled>Charlie Brown</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Helicopter)')" disabled>Helicopter</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Slurpage)')" disabled>Slurpage</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Juice)')" disabled>Juice</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Tarzan)')" disabled>Tarzan</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Your Fired)')" disabled>Your Fired</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Gotta Be Quicker)')" disabled>Gotta Be Quicker</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (You Gonna Learn Today)')" disabled>You Gonna Learn Today</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Stop Makin Fun Of Me)')" disabled>Stop Makin Fun Of Me</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Fly By)')" disabled>Fly By</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Mothman)')" disabled>Mothman</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Don't Smoke Crack)')" disabled>Don't Smoke Crack</button>
       </div>
 
       <!-- Music Controls -->
