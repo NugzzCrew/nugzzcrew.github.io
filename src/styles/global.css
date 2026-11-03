@@ -447,13 +447,6 @@ body {
   min-height: 500px;
 }
 
-
-  .auth-btn img {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-
 @media (max-width: 639px) {
   .auth-btn span {
     display: none !important;
