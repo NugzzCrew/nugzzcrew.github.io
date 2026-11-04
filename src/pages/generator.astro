@@ -839,19 +839,28 @@ const vehicleSets = [
         id="output"
         class="text-[10px] text-zinc-300 font-mono whitespace-pre-wrap break-all bg-black/50 p-4 rounded-xl border border-zinc-800 min-h-[300px]">
       </pre>
-      <button
-        id="copy"
-        type="button"
-        class="mt-4 w-full bg-gold hover:bg-gold/90 text-black font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all"
-        >Copy</button
-      >
-      <a
-        href="https://discord.com/channels/999413076505936023/1277822812534607882"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-3 block w-full text-center bg-zinc-800 hover:bg-zinc-700 text-white font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all"
-        >Open the Discord channel</a
-      >
+
+      <div class="mt-4 space-y-3">
+        <button
+          id="copy"
+          type="button"
+          class="w-full bg-gold hover:bg-gold/90 text-black font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all"
+          >Copy</button
+        >
+        <button
+          id="createTicket"
+          type="button"
+          class="hidden w-full bg-[#5865F2] hover:bg-[#4752C4] text-white font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all"
+          >Create Discord Ticket</button
+        >
+        <div id="ticketStatus" class="hidden text-sm text-center"></div>
+        <button
+          id="openDiscord"
+          type="button"
+          class="block w-full text-center bg-zinc-800 hover:bg-zinc-700 text-white font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all"
+          >Open Discord + Copy Spec</button
+        >
+      </div>
     </div>
   </div>
 </MainLayout>
@@ -1735,6 +1744,25 @@ Livery: ${get("livery") || "None"}`;
     document
       .getElementById("outputContainer")
       .scrollIntoView({ behavior: "smooth" });
+
+    // Show Create Ticket button if Discord is linked
+    const createBtn = document.getElementById("createTicket");
+    const statusEl = document.getElementById("ticketStatus");
+    if (createBtn && statusEl) {
+      try {
+        const raw = localStorage.getItem("nugzzUser");
+        const user = raw ? JSON.parse(raw) : null;
+        if (user?.discord?.id) {
+          createBtn.classList.remove("hidden");
+          statusEl.classList.add("hidden");
+          statusEl.textContent = "";
+        } else {
+          createBtn.classList.add("hidden");
+        }
+      } catch {
+        createBtn.classList.add("hidden");
+      }
+    }
   });
 
   document.getElementById("copy").addEventListener("click", () => {
@@ -1747,6 +1775,70 @@ Livery: ${get("livery") || "None"}`;
         setTimeout(() => (btn.textContent = orig), 1500);
       });
   });
+
+  // ========== CREATE DISCORD TICKET ==========
+  const TICKET_API_URL = "https://YOUR-SUBDOMAIN.discloud.app/api/dmo-ticket"; // replace with your Discloud URL
+
+  document
+    .getElementById("createTicket")
+    ?.addEventListener("click", async () => {
+      const btn = document.getElementById("createTicket");
+      const statusEl = document.getElementById("ticketStatus");
+      const spec = document.getElementById("output").textContent;
+      if (!spec) return;
+
+      let user;
+      try {
+        user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+      } catch {
+        user = null;
+      }
+      if (!user?.discord?.id) {
+        statusEl.textContent = "Please sign in and link Discord first.";
+        statusEl.className = "text-sm text-center text-red-400";
+        statusEl.classList.remove("hidden");
+        return;
+      }
+
+      const vehicleName = selectedVehicle
+        ? selectedVehicle.display
+        : document.getElementById("vehicle")?.value || "";
+
+      btn.disabled = true;
+      const orig = btn.textContent;
+      btn.textContent = "Creating...";
+      statusEl.classList.add("hidden");
+
+      try {
+        const res = await fetch(TICKET_API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            discordId: user.discord.id,
+            discordUsername: user.discord.username || user.name || "user",
+            vehicle: vehicleName,
+            spec,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          throw new Error(data.error || "Failed to create ticket");
+        }
+        statusEl.innerHTML = `Ticket created! <a href="${data.url}" target="_blank" rel="noopener" class="text-gold underline">Open channel</a>`;
+        statusEl.className = "text-sm text-center text-green-400";
+        statusEl.classList.remove("hidden");
+        btn.textContent = "Ticket Created";
+      } catch (err) {
+        statusEl.textContent =
+          err.message ||
+          "Could not create ticket. Use the Copy button instead.";
+        statusEl.className = "text-sm text-center text-red-400";
+        statusEl.classList.remove("hidden");
+        btn.disabled = false;
+        btn.textContent = orig;
+      }
+    });
+  // ========== END CREATE DISCORD TICKET ==========
 
   // ========== VEHICLE / SET SELECTOR ==========
   // vehicles is provided by define:vars from src/data/vehicles.json
@@ -1914,4 +2006,25 @@ Livery: ${get("livery") || "None"}`;
   populateUnselectedOnly("pearl", "pearl");
   populateUnselectedOnly("rimColor", "rim");
   updatePlatePreview();
+
+  // Open Discord + Copy Spec
+  document
+    .getElementById("openDiscord")
+    ?.addEventListener("click", async () => {
+      const spec = document.getElementById("output")?.textContent || "";
+      if (spec) {
+        try {
+          await navigator.clipboard.writeText(spec);
+        } catch (e) {}
+      }
+      const channel = "999413076505936023/1277822812534607882";
+      const appUrl = "discord://discord.com/channels/" + channel;
+      const webUrl = "https://discord.com/channels/" + channel;
+      // Try app first
+      window.location.href = appUrl;
+      // Fallback to browser after short delay if app didn't open
+      setTimeout(() => {
+        window.open(webUrl, "_blank");
+      }, 1500);
+    });
 </script>
