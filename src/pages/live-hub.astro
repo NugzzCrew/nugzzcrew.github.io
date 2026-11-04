@@ -1,22 +1,29 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Live Hub">
   <div class="page-shell">
     <header class="page-head">
       <h1 class="page-title">
-        <span class="text-white">Live</span> <span class="text-gold">Hub</span>
+        <span class="text-white">Live</span>
+        <span class="text-gold">Hub</span>
       </h1>
       <p class="page-kicker">Fam Bam Live Hub — Stream, Chat & Commands</p>
     </header>
 
     <!-- Stream Stage -->
     <div id="stream-stage" class="mb-8 flex flex-col items-center">
-      <div id="video-chat-row" class="w-full max-w-6xl flex flex-col lg:flex-row gap-4 items-stretch justify-center">
+      <div
+        id="video-chat-row"
+        class="w-full max-w-6xl flex flex-col lg:flex-row gap-4 items-stretch justify-center"
+      >
         <!-- Video column -->
         <div id="video-col" class="w-full max-w-4xl mx-auto transition-all">
-          <div id="video-container" class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-black border-t-4 border-t-gold">
+          <div
+            id="video-container"
+            class="relative aspect-video w-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-black border-t-4 border-t-gold"
+          >
             <img
               id="offline-placeholder"
               src="/images/offline.png"
@@ -30,8 +37,7 @@ import MainLayout from '../layouts/MainLayout.astro';
               src="about:blank"
               allow="autoplay; encrypted-media"
               allowfullscreen
-              style="display:none; position:relative; z-index:20;"
-            ></iframe>
+              style="display:none; position:relative; z-index:20;"></iframe>
             <button
               id="theater-btn"
               type="button"
@@ -43,361 +49,1303 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
 
         <!-- Desktop Chat (hidden by default) -->
-        <div id="chat-wrapper" class="hidden lg:w-[380px] xl:w-[400px] flex-shrink-0">
-          <div class="h-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold">
-            <iframe
-              id="yt-chat-frame"
-              class="w-full h-full"
-              src="about:blank"
+        <div
+          id="chat-wrapper"
+          class="hidden lg:w-[380px] xl:w-[400px] flex-shrink-0"
+        >
+          <div
+            class="h-full rounded-xl md:rounded-2xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold"
+          >
+            <iframe id="yt-chat-frame" class="w-full h-full" src="about:blank"
             ></iframe>
           </div>
         </div>
       </div>
 
       <!-- Mobile Chat (hidden by default) -->
-      <div id="chat-wrapper-mobile" class="lg:hidden mt-4 w-full max-w-4xl hidden">
-        <div class="rounded-xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold">
+      <div
+        id="chat-wrapper-mobile"
+        class="lg:hidden mt-4 w-full max-w-4xl hidden"
+      >
+        <div
+          class="rounded-xl border border-zinc-800 overflow-hidden bg-zinc-900/40 border-t-4 border-t-gold"
+        >
           <iframe
             id="yt-chat-frame-mobile"
             class="w-full h-[480px]"
-            src="about:blank"
-          ></iframe>
+            src="about:blank"></iframe>
         </div>
       </div>
     </div>
 
     <!-- Commands -->
     <div id="commands-container" class="nugzz-card w-full max-w-4xl mx-auto">
-      <h2 class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center">Command Center</h2>
-      <p id="status-msg" class="text-sm text-zinc-400 mb-4 text-center">Connecting to Streamer.bot...</p>
+      <h2
+        class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center"
+      >
+        Crew Controls
+      </h2>
+      <p id="status-msg" class="text-sm text-zinc-400 mb-4 text-center">
+        Connecting to Streamer.bot...
+      </p>
 
       <!-- Music Controls -->
       <div class="mb-6 flex justify-center">
-        <div class="inline-flex items-center gap-1 sm:gap-2 bg-zinc-900/70 border border-zinc-700 rounded-full px-3 py-2 shadow-inner">
-          <button class="music-btn stream-cmd" onclick="sendAction('Media Previous')" title="Previous" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+        <div
+          class="inline-flex items-center gap-1 sm:gap-2 bg-zinc-900/70 border border-zinc-700 rounded-full px-3 py-2 shadow-inner"
+        >
+          <button
+            class="music-btn stream-cmd"
+            onclick="sendAction('Media Previous')"
+            title="Previous"
+            disabled
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+              ><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"></path></svg
+            >
           </button>
-          <button class="music-btn stream-cmd" onclick="sendAction('Media Play')" title="Play" disabled>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <button
+            class="music-btn stream-cmd"
+            onclick="sendAction('Media Play')"
+            title="Play"
+            disabled
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+              ><path d="M8 5v14l11-7z"></path></svg
+            >
           </button>
-          <button class="music-btn stream-cmd" onclick="sendAction('Media Pause')" title="Pause" disabled>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+          <button
+            class="music-btn stream-cmd"
+            onclick="sendAction('Media Pause')"
+            title="Pause"
+            disabled
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+              ><path d="M6 19h4V5H6zm8-14v14h4V5z"></path></svg
+            >
           </button>
-          <button class="music-btn stream-cmd" onclick="sendAction('Media Stop')" title="Stop" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+          <button
+            class="music-btn stream-cmd"
+            onclick="sendAction('Media Stop')"
+            title="Stop"
+            disabled
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+              ><path d="M6 6h12v12H6z"></path></svg
+            >
           </button>
-          <button class="music-btn stream-cmd" onclick="sendAction('Media Skip')" title="Skip" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6zm10 0V6h2v12z"/></svg>
+          <button
+            class="music-btn stream-cmd"
+            onclick="sendAction('Media Skip')"
+            title="Skip"
+            disabled
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+              ><path d="M6 18l8.5-6L6 6zm10 0V6h2v12z"></path></svg
+            >
           </button>
           <span class="w-px h-6 bg-zinc-600 mx-1"></span>
-          <button class="music-btn stream-cmd text-xs uppercase tracking-wider" onclick="sendAction('Media Show')" title="Show Media" disabled>Show</button>
-          <button class="music-btn stream-cmd text-xs uppercase tracking-wider" onclick="sendAction('Media Hide')" title="Hide Media" disabled>Hide</button>
+          <button
+            class="music-btn stream-cmd text-xs uppercase tracking-wider"
+            onclick="sendAction('Media Show')"
+            title="Show Media"
+            disabled>Show</button
+          >
+          <button
+            class="music-btn stream-cmd text-xs uppercase tracking-wider"
+            onclick="sendAction('Media Hide')"
+            title="Hide Media"
+            disabled>Hide</button
+          >
         </div>
       </div>
 
       <!-- Info & Rules -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Info & Rules <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Rules')" disabled>Rules</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Commands')" disabled>Commands</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Clean')" disabled>Clean</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Scratched')" disabled>Scratched</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Membership')" disabled>Membership</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Gamertag')" disabled>Gamertag</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('PSN')" disabled>PSN</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Age')" disabled>Age</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Rules')"
+          disabled>Rules</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Commands')"
+          disabled>Commands</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Clean')"
+          disabled>Clean</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Scratched')"
+          disabled>Scratched</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Membership')"
+          disabled>Membership</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Gamertag')"
+          disabled>Gamertag</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('PSN')" disabled
+          >PSN</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Age')" disabled
+          >Age</button
+        >
       </div>
 
       <!-- Loyalty & Points -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Loyalty & Points <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('CheckIn')" disabled>Check In</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('RollCall')" disabled>Roll Call</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Points')" disabled>Points</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('WT')" disabled>Watch Time</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('WhoGifted')" disabled>Who Gifted</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('CheckIn')"
+          disabled>Check In</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('RollCall')"
+          disabled>Roll Call</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Points')"
+          disabled>Points</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('WT')" disabled
+          >Watch Time</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('WhoGifted')"
+          disabled>Who Gifted</button
+        >
       </div>
 
       <!-- GTA Methods -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         GTA Methods <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('DMO')" disabled>DMO</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GFTF')" disabled>GFTF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GCTF')" disabled>GCTF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('BGCTF')" disabled>BGCTF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GATF')" disabled>GATF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('SV')" disabled>SV</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('AA')" disabled>AA</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Aircraft')" disabled>Aircraft</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GNTF')" disabled>GNTF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('MagicSlot')" disabled>Magic Slot</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('DMO')" disabled
+          >DMO</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('GFTF')" disabled
+          >GFTF</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('GCTF')" disabled
+          >GCTF</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('BGCTF')"
+          disabled>BGCTF</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('GATF')" disabled
+          >GATF</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('SV')" disabled
+          >SV</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('AA')" disabled
+          >AA</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Aircraft')"
+          disabled>Aircraft</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('GNTF')" disabled
+          >GNTF</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('MagicSlot')"
+          disabled>Magic Slot</button
+        >
       </div>
 
       <!-- Links -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Links <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Arcade Trophies')" disabled>Arcade Trophies</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Arena Trophies')" disabled>Arena Trophies</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - BGCTF')" disabled>BGCTF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Color Shenanigans')" disabled>Color Shenanigans</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - DMO')" disabled>DMO</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - FO76 Map')" disabled>FO76 Map</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GATF Avenger')" disabled>GATF Avenger</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF')" disabled>GCTF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF AA Trailer')" disabled>GCTF AA Trailer</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF Aircraft/Planes')" disabled>GCTF Aircraft</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF Facility Vehicles')" disabled>GCTF Facility</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF NightClub')" disabled>GCTF NightClub</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GCTF Special Vehicles')" disabled>GCTF Special</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GTA Map')" disabled>GTA Map</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GTA Series')" disabled>GTA Series</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - GTAV How To Playlist')" disabled>How To Playlist</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Glitch List')" disabled>Glitch List</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Job TP')" disabled>Job TP</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Join')" disabled>Join</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Liveries')" disabled>Liveries</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Magic Slot')" disabled>Magic Slot</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Merge')" disabled>Merge</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Pokemon')" disabled>Pokemon</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - RDO Map')" disabled>RDO Map</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Rim Flip Spreadsheet')" disabled>Rim Flip Sheet</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Search Bar')" disabled>Search Bar</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Social Club Crew')" disabled>Social Club Crew</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Stream Commands')" disabled>Stream Commands</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Vehicle Shenanigans')" disabled>Vehicle Shenanigans</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Vehicle Spawn Colors')" disabled>Spawn Colors</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Link - Website & Socials')" disabled>Website & Socials</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Arcade Trophies')"
+          disabled>Arcade Trophies</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Arena Trophies')"
+          disabled>Arena Trophies</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - BGCTF')"
+          disabled>BGCTF</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Color Shenanigans')"
+          disabled>Color Shenanigans</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - DMO')"
+          disabled>DMO</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - FO76 Map')"
+          disabled>FO76 Map</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GATF Avenger')"
+          disabled>GATF Avenger</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GCTF')"
+          disabled>GCTF</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GCTF AA Trailer')"
+          disabled>GCTF AA Trailer</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GCTF Aircraft/Planes')"
+          disabled>GCTF Aircraft</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GCTF Facility Vehicles')"
+          disabled>GCTF Facility</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GCTF NightClub')"
+          disabled>GCTF NightClub</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GCTF Special Vehicles')"
+          disabled>GCTF Special</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GTA Map')"
+          disabled>GTA Map</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GTA Series')"
+          disabled>GTA Series</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - GTAV How To Playlist')"
+          disabled>How To Playlist</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Glitch List')"
+          disabled>Glitch List</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Job TP')"
+          disabled>Job TP</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Join')"
+          disabled>Join</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Liveries')"
+          disabled>Liveries</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Magic Slot')"
+          disabled>Magic Slot</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Merge')"
+          disabled>Merge</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Pokemon')"
+          disabled>Pokemon</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - RDO Map')"
+          disabled>RDO Map</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Rim Flip Spreadsheet')"
+          disabled>Rim Flip Sheet</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Search Bar')"
+          disabled>Search Bar</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Social Club Crew')"
+          disabled>Social Club Crew</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Stream Commands')"
+          disabled>Stream Commands</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Vehicle Shenanigans')"
+          disabled>Vehicle Shenanigans</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Vehicle Spawn Colors')"
+          disabled>Spawn Colors</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Link - Website & Socials')"
+          disabled>Website & Socials</button
+        >
       </div>
 
       <!-- TTS Voices -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         TTS Voices <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('1 - Check User Voice')" disabled>Check User Voice</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Australian Female')" disabled>Aus Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Australian Male')" disabled>Aus Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command British Female')" disabled>Brit Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command British Male')" disabled>Brit Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Female')" disabled>Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command French Female')" disabled>French Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command French Male')" disabled>French Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Hindi Female')" disabled>Hindi Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Hindi Male')" disabled>Hindi Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Italian Female')" disabled>Italian Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Italian Male')" disabled>Italian Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Japanese Female')" disabled>JP Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Japanese Male')" disabled>JP Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Male')" disabled>Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Russian Female')" disabled>Russian Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Russian Male')" disabled>Russian Male</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Spanish Female')" disabled>Spanish Female</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('2 - Command Spanish Male')" disabled>Spanish Male</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('1 - Check User Voice')"
+          disabled>Check User Voice</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Australian Female')"
+          disabled>Aus Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Australian Male')"
+          disabled>Aus Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command British Female')"
+          disabled>Brit Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command British Male')"
+          disabled>Brit Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Female')"
+          disabled>Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command French Female')"
+          disabled>French Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command French Male')"
+          disabled>French Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Hindi Female')"
+          disabled>Hindi Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Hindi Male')"
+          disabled>Hindi Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Italian Female')"
+          disabled>Italian Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Italian Male')"
+          disabled>Italian Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Japanese Female')"
+          disabled>JP Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Japanese Male')"
+          disabled>JP Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Male')"
+          disabled>Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Russian Female')"
+          disabled>Russian Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Russian Male')"
+          disabled>Russian Male</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Spanish Female')"
+          disabled>Spanish Female</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('2 - Command Spanish Male')"
+          disabled>Spanish Male</button
+        >
       </div>
 
       <!-- Leaderboards -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Leaderboards <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Watchtime')" disabled>Top 5 Watchtime</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Points')" disabled>Top 5 Points</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Gifters')" disabled>Top 5 Gifters</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Roll Call')" disabled>Top 5 Roll Call</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Big Spenders')" disabled>Top 5 Big Spenders</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Monthly XP')" disabled>Top 5 Monthly XP</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top 5 Rank')" disabled>Top 5 Rank</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 1')" disabled>Top Gen 1</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 2')" disabled>Top Gen 2</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 3')" disabled>Top Gen 3</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 4')" disabled>Top Gen 4</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 5')" disabled>Top Gen 5</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 6')" disabled>Top Gen 6</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 7')" disabled>Top Gen 7</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 8')" disabled>Top Gen 8</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Top Gen 9')" disabled>Top Gen 9</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top 5 Watchtime')"
+          disabled>Top 5 Watchtime</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top 5 Points')"
+          disabled>Top 5 Points</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top 5 Gifters')"
+          disabled>Top 5 Gifters</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top 5 Roll Call')"
+          disabled>Top 5 Roll Call</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top 5 Big Spenders')"
+          disabled>Top 5 Big Spenders</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top 5 Monthly XP')"
+          disabled>Top 5 Monthly XP</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top 5 Rank')"
+          disabled>Top 5 Rank</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 1')"
+          disabled>Top Gen 1</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 2')"
+          disabled>Top Gen 2</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 3')"
+          disabled>Top Gen 3</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 4')"
+          disabled>Top Gen 4</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 5')"
+          disabled>Top Gen 5</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 6')"
+          disabled>Top Gen 6</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 7')"
+          disabled>Top Gen 7</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 8')"
+          disabled>Top Gen 8</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Top Gen 9')"
+          disabled>Top Gen 9</button
+        >
       </div>
 
       <!-- Colors -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Colors <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('White')" disabled>White</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Black')" disabled>Black</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Blue')" disabled>Blue</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Red')" disabled>Red</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Orange')" disabled>Orange</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Green')" disabled>Green</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pink')" disabled>Pink</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Purple')" disabled>Purple</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Yellow')" disabled>Yellow</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Sunset')" disabled>Sunset</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Halloween')" disabled>Halloween</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Fortnite')" disabled>Fortnite</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('NugzzCrew')" disabled>Nugzz Crew</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('RDR2')" disabled>RDR2</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('White')"
+          disabled>White</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Black')"
+          disabled>Black</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Blue')" disabled
+          >Blue</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Red')" disabled
+          >Red</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Orange')"
+          disabled>Orange</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Green')"
+          disabled>Green</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Pink')" disabled
+          >Pink</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Purple')"
+          disabled>Purple</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Yellow')"
+          disabled>Yellow</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Sunset')"
+          disabled>Sunset</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Halloween')"
+          disabled>Halloween</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Fortnite')"
+          disabled>Fortnite</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('NugzzCrew')"
+          disabled>Nugzz Crew</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('RDR2')" disabled
+          >RDR2</button
+        >
       </div>
 
       <!-- Textures -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Textures <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Dolla')" disabled>Dolla</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('MC Nova')" disabled>MC Nova</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Nova')" disabled>Nova</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Trees')" disabled>Trees</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Conveyor')" disabled>Conveyor</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Stars')" disabled>Stars</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Skulls')" disabled>Skulls</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Galaxy')" disabled>Galaxy</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Coins')" disabled>Coins</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Hunting Camo')" disabled>Hunting Camo</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('KnuckleDuster')" disabled>Knuckle Duster</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Tartan')" disabled>Tartan</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Blue Tartan')" disabled>Blue Tartan</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Wrap')" disabled>Wrap</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Candy Cane')" disabled>Candy Cane</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Dolla')"
+          disabled>Dolla</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('MC Nova')"
+          disabled>MC Nova</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Nova')" disabled
+          >Nova</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Trees')"
+          disabled>Trees</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Conveyor')"
+          disabled>Conveyor</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Stars')"
+          disabled>Stars</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Skulls')"
+          disabled>Skulls</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Galaxy')"
+          disabled>Galaxy</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Coins')"
+          disabled>Coins</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Hunting Camo')"
+          disabled>Hunting Camo</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('KnuckleDuster')"
+          disabled>Knuckle Duster</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Tartan')"
+          disabled>Tartan</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Blue Tartan')"
+          disabled>Blue Tartan</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Wrap')" disabled
+          >Wrap</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Candy Cane')"
+          disabled>Candy Cane</button
+        >
       </div>
 
       <!-- Games & Actions -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Games & Actions <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Spin')" disabled>Spin</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('CEOGhost')" disabled>CEO Ghost</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('BarrelRoll')" disabled>Barrel Roll</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Kickflip')" disabled>Kickflip</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Scorpion')" disabled>Scorpion</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Shoryuken')" disabled>Shoryuken</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Skeletor')" disabled>Skeletor</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Clown')" disabled>Clown</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('ImStupid')" disabled>ImStupid</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Racer')" disabled>Racer</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Spin')" disabled
+          >Spin</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('CEOGhost')"
+          disabled>CEO Ghost</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('BarrelRoll')"
+          disabled>Barrel Roll</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Haduken')"
+          disabled>Haduken</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Kickflip')"
+          disabled>Kickflip</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Scorpion')"
+          disabled>Scorpion</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Shoryuken')"
+          disabled>Shoryuken</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Skeletor')"
+          disabled>Skeletor</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Clown')"
+          disabled>Clown</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('ImStupid')"
+          disabled>ImStupid</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Racer')"
+          disabled>Racer</button
+        >
       </div>
 
       <!-- Soundbytes -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Soundbytes <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Another One)')" disabled>Another One</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Beg)')" disabled>Beg</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Bong Rip)')" disabled>Bong Rip</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (BRUH)')" disabled>BRUH</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (ChaChing)')" disabled>ChaChing</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Come On)')" disabled>Come On</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (DJ Horn)')" disabled>DJ Horn</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Don't Fuck it Up)')" disabled>Don't Fuck it Up</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Drink)')" disabled>Drink</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (English MF)')" disabled>English MF</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Fuck You)')" disabled>Fuck You</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Ghey)')" disabled>Ghey</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Go Kart)')" disabled>Go Kart</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Goat)')" disabled>Goat</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (GTFOH)')" disabled>GTFOH</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Kifflom)')" disabled>Kifflom</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (LAYMM)')" disabled>LAYMM</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Let's Go)')" disabled>Let's Go</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Nobody)')" disabled>Nobody</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Numbnuts)')" disabled>Numbnuts</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (OHFY)')" disabled>OHFY</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Orb)')" disabled>Orb</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (PE)')" disabled>PE</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Rigged)')" disabled>Rigged</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Right Meow)')" disabled>Right Meow</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (RRR)')" disabled>RRR</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Security)')" disabled>Security</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Sheesh)')" disabled>Sheesh</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Slow Clap)')" disabled>Slow Clap</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (SMFOM)')" disabled>SMFOM</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (SMTM)')" disabled>SMTM</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Stupid)')" disabled>Stupid</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (SWED)')" disabled>SWED</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Ted)')" disabled>Ted</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Titties)')" disabled>Titties</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (WAYD)')" disabled>WAYD</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (WTFO)')" disabled>WTFO</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (YKAG)')" disabled>YKAG</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Charlie Brown)')" disabled>Charlie Brown</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Helicopter)')" disabled>Helicopter</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Slurpage)')" disabled>Slurpage</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Juice)')" disabled>Juice</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Tarzan)')" disabled>Tarzan</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Your Fired)')" disabled>Your Fired</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Gotta Be Quicker)')" disabled>Gotta Be Quicker</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (You Gonna Learn Today)')" disabled>You Gonna Learn Today</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Stop Makin Fun Of Me)')" disabled>Stop Makin Fun Of Me</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Fly By)')" disabled>Fly By</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Mothman)')" disabled>Mothman</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Soundbyte (Don't Smoke Crack)')" disabled>Don't Smoke Crack</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Another One)')"
+          disabled>Another One</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Beg)')"
+          disabled>Beg</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Bong Rip)')"
+          disabled>Bong Rip</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (BRUH)')"
+          disabled>BRUH</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (ChaChing)')"
+          disabled>ChaChing</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Come On)')"
+          disabled>Come On</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (DJ Horn)')"
+          disabled>DJ Horn</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Don't Fuck it Up)')"
+          disabled>Don't Fuck it Up</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Drink)')"
+          disabled>Drink</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (English MF)')"
+          disabled>English MF</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Fuck You)')"
+          disabled>Fuck You</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Ghey)')"
+          disabled>Ghey</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Go Kart)')"
+          disabled>Go Kart</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Goat)')"
+          disabled>Goat</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (GTFOH)')"
+          disabled>GTFOH</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Kifflom)')"
+          disabled>Kifflom</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (LAYMM)')"
+          disabled>LAYMM</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Let's Go)')"
+          disabled>Let's Go</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Nobody)')"
+          disabled>Nobody</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Numbnuts)')"
+          disabled>Numbnuts</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (OHFY)')"
+          disabled>OHFY</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Orb)')"
+          disabled>Orb</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (PE)')"
+          disabled>PE</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Rigged)')"
+          disabled>Rigged</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Right Meow)')"
+          disabled>Right Meow</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (RRR)')"
+          disabled>RRR</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Security)')"
+          disabled>Security</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Sheesh)')"
+          disabled>Sheesh</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Slow Clap)')"
+          disabled>Slow Clap</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (SMFOM)')"
+          disabled>SMFOM</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (SMTM)')"
+          disabled>SMTM</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Stupid)')"
+          disabled>Stupid</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (SWED)')"
+          disabled>SWED</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Ted)')"
+          disabled>Ted</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Titties)')"
+          disabled>Titties</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (WAYD)')"
+          disabled>WAYD</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (WTFO)')"
+          disabled>WTFO</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (YKAG)')"
+          disabled>YKAG</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Charlie Brown)')"
+          disabled>Charlie Brown</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Helicopter)')"
+          disabled>Helicopter</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Slurpage)')"
+          disabled>Slurpage</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Juice)')"
+          disabled>Juice</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Tarzan)')"
+          disabled>Tarzan</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Your Fired)')"
+          disabled>Your Fired</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Gotta Be Quicker)')"
+          disabled>Gotta Be Quicker</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (You Gonna Learn Today)')"
+          disabled>You Gonna Learn Today</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Stop Makin Fun Of Me)')"
+          disabled>Stop Makin Fun Of Me</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Fly By)')"
+          disabled>Fly By</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Mothman)')"
+          disabled>Mothman</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Soundbyte (Don't Smoke Crack)')"
+          disabled>Don't Smoke Crack</button
+        >
       </div>
 
       <!-- Albums -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Albums <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Dim')" disabled>Dim</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Glitch')" disabled>Glitch</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LoFi')" disabled>LoFi</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Gangsta')" disabled>Gangsta</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Neon')" disabled>Neon</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Lonesome')" disabled>Lonesome</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Funk')" disabled>Funk</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Coastal')" disabled>Coastal</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Empire')" disabled>Empire</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Echoes')" disabled>Echoes</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Ashes')" disabled>Ashes</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LS Nights')" disabled>LS Nights</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LSC')" disabled>LSC</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Outlaws')" disabled>Outlaws</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Rowdy')" disabled>Rowdy</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Nugzz')" disabled>Nugzz</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Wasteland')" disabled>Wasteland</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Victory')" disabled>Victory</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Naked')" disabled>Naked</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Favorites')" disabled>Favorites</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Dim')"
+          disabled>Dim</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Glitch')"
+          disabled>Glitch</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'LoFi')"
+          disabled>LoFi</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Gangsta')"
+          disabled>Gangsta</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Neon')"
+          disabled>Neon</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Lonesome')"
+          disabled>Lonesome</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Funk')"
+          disabled>Funk</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Coastal')"
+          disabled>Coastal</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Empire')"
+          disabled>Empire</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Echoes')"
+          disabled>Echoes</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Ashes')"
+          disabled>Ashes</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'LS Nights')"
+          disabled>LS Nights</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'LSC')"
+          disabled>LSC</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Outlaws')"
+          disabled>Outlaws</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Rowdy')"
+          disabled>Rowdy</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Nugzz')"
+          disabled>Nugzz</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Wasteland')"
+          disabled>Wasteland</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Victory')"
+          disabled>Victory</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Naked')"
+          disabled>Naked</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Select Album', 'Favorites')"
+          disabled>Favorites</button
+        >
       </div>
 
       <!-- Pokémon -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
+      <h3
+        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+        onclick="toggleSection(this)"
+      >
         Pokémon <span class="text-gold">▼</span>
       </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Catch')" disabled>Catch</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokeparty')" disabled>Pokeparty</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex1')" disabled>Pokedex 1</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex2')" disabled>Pokedex 2</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex3')" disabled>Pokedex 3</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex4')" disabled>Pokedex 4</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex5')" disabled>Pokedex 5</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex6')" disabled>Pokedex 6</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex7')" disabled>Pokedex 7</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex8')" disabled>Pokedex 8</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pokedex9')" disabled>Pokedex 9</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG1')" disabled>LBG1</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG2')" disabled>LBG2</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG3')" disabled>LBG3</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG4')" disabled>LBG4</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG5')" disabled>LBG5</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG6')" disabled>LBG6</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG7')" disabled>LBG7</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG8')" disabled>LBG8</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG9')" disabled>LBG9</button>
+      <div
+        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+      >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Catch')"
+          disabled>Catch</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokeparty')"
+          disabled>Pokeparty</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex1')"
+          disabled>Pokedex 1</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex2')"
+          disabled>Pokedex 2</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex3')"
+          disabled>Pokedex 3</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex4')"
+          disabled>Pokedex 4</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex5')"
+          disabled>Pokedex 5</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex6')"
+          disabled>Pokedex 6</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex7')"
+          disabled>Pokedex 7</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex8')"
+          disabled>Pokedex 8</button
+        >
+        <button
+          class="cmd-btn stream-cmd"
+          onclick="sendAction('Pokedex9')"
+          disabled>Pokedex 9</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG1')" disabled
+          >LBG1</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG2')" disabled
+          >LBG2</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG3')" disabled
+          >LBG3</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG4')" disabled
+          >LBG4</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG5')" disabled
+          >LBG5</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG6')" disabled
+          >LBG6</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG7')" disabled
+          >LBG7</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG8')" disabled
+          >LBG8</button
+        >
+        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG9')" disabled
+          >LBG9</button
+        >
       </div>
-
     </div>
   </div>
 </MainLayout>
@@ -409,16 +1357,32 @@ import MainLayout from '../layouts/MainLayout.astro';
     ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
 
     ws.onopen = () => {
-      ws.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "SubRequest" }));
+      ws.send(
+        JSON.stringify({
+          request: "Subscribe",
+          events: { general: ["Custom"] },
+          id: "SubRequest",
+        }),
+      );
       setTimeout(() => {
-        ws.send(JSON.stringify({ request: "DoAction", action: { name: "Web_Request_Status" }, id: "StatusCheck" }));
+        ws.send(
+          JSON.stringify({
+            request: "DoAction",
+            action: { name: "Web_Request_Status" },
+            id: "StatusCheck",
+          }),
+        );
       }, 1000);
     };
 
     ws.onmessage = (event) => {
       try {
         const msg = JSON.parse(event.data);
-        if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
+        if (
+          msg.data &&
+          msg.data.data &&
+          msg.data.data.name === "LiveStatusUpdate"
+        ) {
           const data = msg.data.data;
           handleLiveStatus(data);
           updateStreamState(data.isLive);
@@ -445,7 +1409,8 @@ import MainLayout from '../layouts/MainLayout.astro';
     const videoCol = document.getElementById("video-col");
     const commands = document.getElementById("commands-container");
 
-    const isLive = data.isLive === true && data.videoId && data.videoId.trim() !== "";
+    const isLive =
+      data.isLive === true && data.videoId && data.videoId.trim() !== "";
 
     if (isLive) {
       if (videoFrame) {
@@ -497,12 +1462,16 @@ import MainLayout from '../layouts/MainLayout.astro';
     if (!msgEl) return;
 
     if (ws?.readyState === WebSocket.OPEN && user) {
-      buttons.forEach(btn => btn.disabled = !live);
-      msgEl.textContent = live ? "Bot Connected (Stream Online)" : "Bot Connected (Stream Offline)";
+      buttons.forEach((btn) => (btn.disabled = !live));
+      msgEl.textContent = live
+        ? "Bot Connected (Stream Online)"
+        : "Bot Connected (Stream Offline)";
       msgEl.style.color = live ? "#4ade80" : "#a1a1aa";
     } else {
-      buttons.forEach(btn => btn.disabled = true);
-      msgEl.textContent = user ? "Connecting to Streamer.bot..." : "Sign in to trigger commands.";
+      buttons.forEach((btn) => (btn.disabled = true));
+      msgEl.textContent = user
+        ? "Connecting to Streamer.bot..."
+        : "Sign in to trigger commands.";
     }
   }
 
@@ -510,7 +1479,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   let cooldownRemaining = 0;
 
   function setButtonsDisabled(disabled) {
-    document.querySelectorAll(".stream-cmd").forEach(btn => {
+    document.querySelectorAll(".stream-cmd").forEach((btn) => {
       btn.disabled = disabled;
     });
   }
@@ -528,7 +1497,8 @@ import MainLayout from '../layouts/MainLayout.astro';
         clearInterval(cooldownTimer);
         cooldownTimer = null;
         setButtonsDisabled(false);
-        if (msgEl) msgEl.textContent = original || "Bot Connected (Stream Online)";
+        if (msgEl)
+          msgEl.textContent = original || "Bot Connected (Stream Online)";
       }
     }, 1000);
   }
@@ -555,9 +1525,9 @@ import MainLayout from '../layouts/MainLayout.astro';
         userName: user.name,
         userType: "youtube",
         discordId: user.discord?.id || "",
-        discordUsername: user.discord?.username || ""
+        discordUsername: user.discord?.username || "",
       },
-      id: "WebCommandCenter"
+      id: "WebCommandCenter",
     };
     if (extraCommand) {
       payload.args.commandName = extraCommand;
