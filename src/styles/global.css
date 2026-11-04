@@ -461,3 +461,29 @@ body {
     height: 2rem;
   }
 }
+
+/* Music control bar */
+.music-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  color: rgb(212 212 216);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.music-btn:hover:not(:disabled) {
+  color: #D4AF37;
+  background: rgb(39 39 42 / 0.6);
+}
+.music-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.music-btn svg {
+  pointer-events: none;
+}

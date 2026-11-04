@@ -72,18 +72,27 @@ import MainLayout from '../layouts/MainLayout.astro';
       <p id="status-msg" class="text-sm text-zinc-400 mb-4 text-center">Connecting to Streamer.bot...</p>
 
       <!-- Music Controls -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
-        Music Controls <span class="text-gold">▼</span>
-      </h3>
-      <div class="media-bar collapsible-content flex flex-wrap gap-2 mb-4 justify-center">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Play')" disabled>Play</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pause')" disabled>Pause</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Stop')" disabled>Stop</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Skip')" disabled>Skip</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Previous')" disabled>Previous</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Show')" disabled>Show</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Hide')" disabled>Hide</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('AddFav')" disabled>Add Fav</button>
+      <div class="mb-6 flex justify-center">
+        <div class="inline-flex items-center gap-1 sm:gap-2 bg-zinc-900/70 border border-zinc-700 rounded-full px-3 py-2 shadow-inner">
+          <button class="music-btn stream-cmd" onclick="sendAction('Media Previous')" title="Previous" disabled>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+          </button>
+          <button class="music-btn stream-cmd" onclick="sendAction('Media Play')" title="Play" disabled>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="music-btn stream-cmd" onclick="sendAction('Media Pause')" title="Pause" disabled>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+          </button>
+          <button class="music-btn stream-cmd" onclick="sendAction('Media Stop')" title="Stop" disabled>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+          </button>
+          <button class="music-btn stream-cmd" onclick="sendAction('Media Skip')" title="Skip" disabled>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6zm10 0V6h2v12z"/></svg>
+          </button>
+          <span class="w-px h-6 bg-zinc-600 mx-1"></span>
+          <button class="music-btn stream-cmd text-xs uppercase tracking-wider" onclick="sendAction('Media Show')" title="Show Media" disabled>Show</button>
+          <button class="music-btn stream-cmd text-xs uppercase tracking-wider" onclick="sendAction('Media Hide')" title="Hide Media" disabled>Hide</button>
+        </div>
       </div>
 
       <!-- Info & Rules -->
@@ -342,26 +351,26 @@ import MainLayout from '../layouts/MainLayout.astro';
         Albums <span class="text-gold">▼</span>
       </h3>
       <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Dim')" disabled>Dim</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Glitch')" disabled>Glitch</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LoFi')" disabled>LoFi</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Gangsta')" disabled>Gangsta</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Neon')" disabled>Neon</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Lonesome')" disabled>Lonesome</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Funk')" disabled>Funk</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Coastal')" disabled>Coastal</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Empire')" disabled>Empire</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Echoes')" disabled>Echoes</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Ashes')" disabled>Ashes</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LS Nights')" disabled>LS Nights</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LSC')" disabled>LSC</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Outlaws')" disabled>Outlaws</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Rowdy')" disabled>Rowdy</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Nugzz')" disabled>Nugzz</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Wasteland')" disabled>Wasteland</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Victory')" disabled>Victory</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Naked')" disabled>Naked</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Favorites')" disabled>Favorites</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Dim')" disabled>Dim</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Glitch')" disabled>Glitch</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LoFi')" disabled>LoFi</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Gangsta')" disabled>Gangsta</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Neon')" disabled>Neon</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Lonesome')" disabled>Lonesome</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Funk')" disabled>Funk</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Coastal')" disabled>Coastal</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Empire')" disabled>Empire</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Echoes')" disabled>Echoes</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Ashes')" disabled>Ashes</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LS Nights')" disabled>LS Nights</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'LSC')" disabled>LSC</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Outlaws')" disabled>Outlaws</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Rowdy')" disabled>Rowdy</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Nugzz')" disabled>Nugzz</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Wasteland')" disabled>Wasteland</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Victory')" disabled>Victory</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Naked')" disabled>Naked</button>
+        <button class="cmd-btn stream-cmd" onclick="sendAction('Select Album', 'Favorites')" disabled>Favorites</button>
       </div>
 
       <!-- Pokémon -->
@@ -388,23 +397,6 @@ import MainLayout from '../layouts/MainLayout.astro';
         <button class="cmd-btn stream-cmd" onclick="sendAction('LBG9')" disabled>LBG9</button>
       </div>
 
-      <!-- Face Filters -->
-      <h3 class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between" onclick="toggleSection(this)">
-        Face Filters <span class="text-gold">▼</span>
-      </h3>
-      <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Alien')" disabled>Alien</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Baby')" disabled>Baby</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Banana')" disabled>Banana</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Cry')" disabled>Cry</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GasMask')" disabled>Gas Mask</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('GOT')" disabled>GOT</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Joker')" disabled>Joker</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Shook')" disabled>Shook</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Trump')" disabled>Trump</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Scuba')" disabled>Scuba</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Vader')" disabled>Vader</button>
-      </div>
     </div>
   </div>
 </MainLayout>
@@ -513,6 +505,33 @@ import MainLayout from '../layouts/MainLayout.astro';
     }
   }
 
+  let cooldownTimer = null;
+  let cooldownRemaining = 0;
+
+  function setButtonsDisabled(disabled) {
+    document.querySelectorAll(".stream-cmd").forEach(btn => {
+      btn.disabled = disabled;
+    });
+  }
+
+  function startCooldown() {
+    if (cooldownTimer) clearInterval(cooldownTimer);
+    cooldownRemaining = 15;
+    setButtonsDisabled(true);
+    const msgEl = document.getElementById("status-msg");
+    const original = msgEl ? msgEl.textContent : "";
+    cooldownTimer = setInterval(() => {
+      cooldownRemaining--;
+      if (msgEl) msgEl.textContent = `Cooldown: ${cooldownRemaining}s`;
+      if (cooldownRemaining <= 0) {
+        clearInterval(cooldownTimer);
+        cooldownTimer = null;
+        setButtonsDisabled(false);
+        if (msgEl) msgEl.textContent = original || "Bot Connected (Stream Online)";
+      }
+    }, 1000);
+  }
+
   function sendAction(actionName, extraCommand = null) {
     const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
     if (!ws || ws.readyState !== WebSocket.OPEN) {
@@ -523,6 +542,8 @@ import MainLayout from '../layouts/MainLayout.astro';
       alert("Please sign in to use commands.");
       return;
     }
+    if (cooldownRemaining > 0) return;
+
     const payload = {
       request: "DoAction",
       action: { name: actionName },
@@ -540,6 +561,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       payload.args.command = extraCommand;
     }
     ws.send(JSON.stringify(payload));
+    startCooldown();
   }
 
   function toggleSection(el) {
