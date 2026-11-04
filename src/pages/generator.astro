@@ -847,13 +847,7 @@ const vehicleSets = [
           class="w-full bg-gold hover:bg-gold/90 text-black font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all"
           >Copy</button
         >
-        <button
-          id="createTicket"
-          type="button"
-          class="hidden w-full bg-[#5865F2] hover:bg-[#4752C4] text-white font-black uppercase py-3 rounded-xl text-xs tracking-widest transition-all"
-          >Create Discord Ticket</button
-        >
-        <div id="ticketStatus" class="hidden text-sm text-center"></div>
+
         <button
           id="openDiscord"
           type="button"
@@ -1776,70 +1770,6 @@ Livery: ${get("livery") || "None"}`;
       });
   });
 
-  // ========== CREATE DISCORD TICKET ==========
-  const TICKET_API_URL = "https://YOUR-SUBDOMAIN.discloud.app/api/dmo-ticket"; // replace with your Discloud URL
-
-  document
-    .getElementById("createTicket")
-    ?.addEventListener("click", async () => {
-      const btn = document.getElementById("createTicket");
-      const statusEl = document.getElementById("ticketStatus");
-      const spec = document.getElementById("output").textContent;
-      if (!spec) return;
-
-      let user;
-      try {
-        user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
-      } catch {
-        user = null;
-      }
-      if (!user?.discord?.id) {
-        statusEl.textContent = "Please sign in and link Discord first.";
-        statusEl.className = "text-sm text-center text-red-400";
-        statusEl.classList.remove("hidden");
-        return;
-      }
-
-      const vehicleName = selectedVehicle
-        ? selectedVehicle.display
-        : document.getElementById("vehicle")?.value || "";
-
-      btn.disabled = true;
-      const orig = btn.textContent;
-      btn.textContent = "Creating...";
-      statusEl.classList.add("hidden");
-
-      try {
-        const res = await fetch(TICKET_API_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            discordId: user.discord.id,
-            discordUsername: user.discord.username || user.name || "user",
-            vehicle: vehicleName,
-            spec,
-          }),
-        });
-        const data = await res.json();
-        if (!res.ok || !data.ok) {
-          throw new Error(data.error || "Failed to create ticket");
-        }
-        statusEl.innerHTML = `Ticket created! <a href="${data.url}" target="_blank" rel="noopener" class="text-gold underline">Open channel</a>`;
-        statusEl.className = "text-sm text-center text-green-400";
-        statusEl.classList.remove("hidden");
-        btn.textContent = "Ticket Created";
-      } catch (err) {
-        statusEl.textContent =
-          err.message ||
-          "Could not create ticket. Use the Copy button instead.";
-        statusEl.className = "text-sm text-center text-red-400";
-        statusEl.classList.remove("hidden");
-        btn.disabled = false;
-        btn.textContent = orig;
-      }
-    });
-  // ========== END CREATE DISCORD TICKET ==========
-
   // ========== VEHICLE / SET SELECTOR ==========
   // vehicles is provided by define:vars from src/data/vehicles.json
   const setsList = [
@@ -2020,11 +1950,11 @@ Livery: ${get("livery") || "None"}`;
       const channel = "999413076505936023/1277822812534607882";
       const appUrl = "discord://discord.com/channels/" + channel;
       const webUrl = "https://discord.com/channels/" + channel;
-      // Try app first
+      // Try Discord app first
       window.location.href = appUrl;
-      // Fallback to browser after short delay if app didn't open
+      // Fallback: open browser tab (comes to front) if app didn't take focus
       setTimeout(() => {
         window.open(webUrl, "_blank");
-      }, 1500);
+      }, 800);
     });
 </script>
