@@ -275,7 +275,6 @@ import MainLayout from '../layouts/MainLayout.astro';
       </h3>
       <div class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
         <button class="cmd-btn stream-cmd" onclick="sendAction('Spin')" disabled>Spin</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Spin2')" disabled>Spin 2</button>
         <button class="cmd-btn stream-cmd" onclick="sendAction('CEOGhost')" disabled>CEO Ghost</button>
         <button class="cmd-btn stream-cmd" onclick="sendAction('BarrelRoll')" disabled>Barrel Roll</button>
         <button class="cmd-btn stream-cmd" onclick="sendAction('Haduken')" disabled>Haduken</button>
@@ -286,7 +285,6 @@ import MainLayout from '../layouts/MainLayout.astro';
         <button class="cmd-btn stream-cmd" onclick="sendAction('Clown')" disabled>Clown</button>
         <button class="cmd-btn stream-cmd" onclick="sendAction('ImStupid')" disabled>ImStupid</button>
         <button class="cmd-btn stream-cmd" onclick="sendAction('Racer')" disabled>Racer</button>
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Shoot')" disabled>Shoot</button>
       </div>
 
       <!-- Soundbytes -->
@@ -550,9 +548,11 @@ import MainLayout from '../layouts/MainLayout.astro';
       args: {
         isWebsocketRequest: "True",
         userId: user.youtubeId,
-        userProfileUrl: user.picture,
+        userProfileUrl: user.picture || "",
         userName: user.name,
-        userType: "youtube"
+        userType: "youtube",
+        discordId: user.discord?.id || "",
+        discordUsername: user.discord?.username || ""
       },
       id: "WebCommandCenter"
     };
