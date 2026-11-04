@@ -1,8 +1,8 @@
 {
-  "locationId": 23,
-  "zone": "Gun Van Location #23",
-  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
-  "mapPath": "map_23.jpg",
+  "locationId": 11,
+  "zone": "Gun Van Location #11",
+  "description": "Thomson Scrapyard",
+  "mapPath": "map_11.jpg",
   "inventory": [
     "Service Carbine: -30 %",
     "Precision Rifle: -10 %",
@@ -17,6 +17,6 @@
     "Pipe Bomb: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-11-03T14:34:44.384Z",
+  "updatedAt": "2026-11-04T14:49:06.272Z",
   "source": "GTALens"
 }
