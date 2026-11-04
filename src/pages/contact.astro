@@ -1,71 +1,96 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Contact">
   <div class="page-shell">
     <header class="page-head">
       <h1 class="page-title">
-        <span class="text-white">Contact</span> <span class="text-gold">Us</span>
+        <span class="text-white">Contact</span>
+        <span class="text-gold">Us</span>
       </h1>
       <p class="page-kicker">Questions, feedback, or data requests</p>
     </header>
 
     <div class="flex justify-center">
       <div class="nugzz-card p-6 md:p-8 max-w-xl w-full">
-      <form
-        action="https://api.web3forms.com/submit"
-        method="POST"
-        class="space-y-4"
-      >
-        <input type="hidden" name="access_key" value="64151b85-a2c7-49c0-a215-95324f8d414a" />
-        <input type="hidden" name="redirect" value="https://officialnugzzcrew.com/thank-you" />
-        <input type="hidden" name="subject" value="New Contact Form Submission - Official Nugzz Crew" />
-
-        <div>
-          <label for="name" class="block text-sm uppercase tracking-widest text-zinc-400 mb-1">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:border-gold focus:outline-none"
-          />
-        </div>
-
-        <div>
-          <label for="email" class="block text-sm uppercase tracking-widest text-zinc-400 mb-1">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:border-gold focus:outline-none"
-          />
-        </div>
-
-        <div>
-          <label for="message" class="block text-sm uppercase tracking-widest text-zinc-400 mb-1">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:border-gold focus:outline-none"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full bg-gold text-black font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-yellow-500 transition-colors"
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="space-y-4"
         >
-          Send Message
-        </button>
-      </form>
+          <input
+            type="hidden"
+            name="access_key"
+            value="64151b85-a2c7-49c0-a215-95324f8d414a"
+          />
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://officialnugzzcrew.com/thank-you"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Contact Form Submission - Official Nugzz Crew"
+          />
 
-      <p class="text-zinc-500 text-sm mt-4">
-        We typically respond within 1–2 business days.
-      </p>
+          <div>
+            <label
+              for="name"
+              class="block text-sm uppercase tracking-widest text-zinc-400 mb-1"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:border-gold focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label
+              for="email"
+              class="block text-sm uppercase tracking-widest text-zinc-400 mb-1"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:border-gold focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label
+              for="message"
+              class="block text-sm uppercase tracking-widest text-zinc-400 mb-1"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:border-gold focus:outline-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-gold text-black font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-yellow-500 transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <p class="text-zinc-500 text-sm mt-4">
+          We typically respond within 1–2 business days.
+        </p>
       </div>
     </div>
   </div>

@@ -1,8 +1,11 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Emblem Creator" description="Convert any image or text into a Rockstar Social Club emblem code. Free online tool for Official Nugzz Crew.">
+<MainLayout
+  title="Emblem Creator"
+  description="Convert any image or text into a Rockstar Social Club emblem code. Free online tool for Official Nugzz Crew."
+>
   <div class="page-shell">
     <header class="page-head">
       <h1 class="page-title">
@@ -12,255 +15,525 @@ import MainLayout from '../layouts/MainLayout.astro';
       <p class="page-kicker">Image to Emblem Code</p>
     </header>
 
-<div class="flex flex-col lg:flex-row gap-6 items-stretch">
-  
-  <!-- Left Column: Settings -->
-  <div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-6">
-    
-    <!-- Source Module -->
-    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg border-t-4 border-t-gold">
-      <h2 class="text-[10px] text-gold font-black uppercase tracking-widest mb-4">Source</h2>
-      
-      <div class="relative border border-dashed border-zinc-600 rounded-xl p-3 hover:border-gold/50 transition-colors bg-black/40 group overflow-hidden">
-        <input type="file" id="imageInput" accept="image/*" class="opacity-0 absolute inset-0 w-full h-full cursor-pointer z-20" />
-        
-        <div class="flex items-center gap-3 relative z-10 pointer-events-none">
-          <div class="w-10 h-10 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center shrink-0 overflow-hidden" id="sourceThumbContainer">
-            <i data-lucide="image" class="w-4 h-4 text-zinc-400" id="sourceIcon"></i>
-            <img id="sourceThumb" src="" class="hidden w-full h-full object-cover" />
-          </div>
-          <div class="flex flex-col overflow-hidden">
-            <span class="text-white font-mono text-xs font-bold truncate" id="uploadText">Select Image...</span>
-            <span class="text-zinc-500 text-[9px] uppercase tracking-wider mt-0.5" id="uploadSubtext">Click to browse</span>
+    <div class="flex flex-col lg:flex-row gap-6 items-stretch">
+      <!-- Left Column: Settings -->
+      <div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-6">
+        <!-- Source Module -->
+        <div
+          class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg border-t-4 border-t-gold"
+        >
+          <h2
+            class="text-[10px] text-gold font-black uppercase tracking-widest mb-4"
+          >
+            Source
+          </h2>
+
+          <div
+            class="relative border border-dashed border-zinc-600 rounded-xl p-3 hover:border-gold/50 transition-colors bg-black/40 group overflow-hidden"
+          >
+            <input
+              type="file"
+              id="imageInput"
+              accept="image/*"
+              class="opacity-0 absolute inset-0 w-full h-full cursor-pointer z-20"
+            />
+
+            <div
+              class="flex items-center gap-3 relative z-10 pointer-events-none"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center shrink-0 overflow-hidden"
+                id="sourceThumbContainer"
+              >
+                <i
+                  data-lucide="image"
+                  class="w-4 h-4 text-zinc-400"
+                  id="sourceIcon"></i>
+                <img
+                  id="sourceThumb"
+                  src=""
+                  class="hidden w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col overflow-hidden">
+                <span
+                  class="text-white font-mono text-xs font-bold truncate"
+                  id="uploadText">Select Image...</span
+                >
+                <span
+                  class="text-zinc-500 text-[9px] uppercase tracking-wider mt-0.5"
+                  id="uploadSubtext">Click to browse</span
+                >
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Settings Module -->
-    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg flex-grow flex flex-col border-t-4 border-t-gold">
-      <div class="flex justify-between items-center mb-5">
-        <h2 class="text-[10px] text-gold font-black uppercase tracking-widest">Settings</h2>
-      </div>
-
-      <!-- Basic Style Toggles (Always Visible) -->
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center justify-between cursor-pointer">
-          <span class="text-white text-xs font-bold flex items-center gap-1.5">
-            Circular Shape <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
-          </span>
-          <div class="relative">
-            <input type="checkbox" id="circularCrop" class="sr-only peer">
-            <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+        <!-- Settings Module -->
+        <div
+          class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg flex-grow flex flex-col border-t-4 border-t-gold"
+        >
+          <div class="flex justify-between items-center mb-5">
+            <h2
+              class="text-[10px] text-gold font-black uppercase tracking-widest"
+            >
+              Settings
+            </h2>
           </div>
-        </label>
 
-        <label class="flex items-center justify-between cursor-pointer">
-          <span class="text-white text-xs font-bold flex items-center gap-1.5">
-            Crop empty edges <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
-          </span>
-          <div class="relative">
-            <input type="checkbox" id="cropEdges" class="sr-only peer" checked>
-            <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
-          </div>
-        </label>
-
-        <label class="flex items-center justify-between cursor-pointer">
-          <span class="text-white text-xs font-bold flex items-center gap-1.5">
-            Pixelization <i data-lucide="info" class="w-3 h-3 text-zinc-500"></i>
-          </span>
-          <div class="relative">
-            <input type="checkbox" id="pixelization" class="sr-only peer">
-            <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
-          </div>
-        </label>
-      </div>
-
-      <!-- Advanced Settings Dropdown -->
-      <details class="group border-t border-zinc-800 pt-3 flex-grow">
-        <summary class="text-[10px] text-zinc-400 font-bold uppercase tracking-widest cursor-pointer flex items-center justify-between hover:text-gold transition-colors list-none">
-          Advanced Settings
-          <i data-lucide="chevron-down" class="w-3 h-3 group-open:rotate-180 transition-transform"></i>
-        </summary>
-        
-        <div class="pt-4 space-y-4">
-          <!-- Auto-optimize -->
-          <label class="flex items-center justify-between cursor-pointer">
-            <span class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
-              Auto-optimize
-            </span>
-            <div class="relative">
-              <input type="checkbox" id="autoOptimize" class="sr-only peer" checked>
-              <div class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
-            </div>
-          </label>
-
-          <!-- Resolution -->
-          <div class="space-y-2">
-            <label class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
-              Resolution
+          <!-- Basic Style Toggles (Always Visible) -->
+          <div class="space-y-3 mb-4">
+            <label class="flex items-center justify-between cursor-pointer">
+              <span
+                class="text-white text-xs font-bold flex items-center gap-1.5"
+              >
+                Circular Shape <i
+                  data-lucide="info"
+                  class="w-3 h-3 text-zinc-500"></i>
+              </span>
+              <div class="relative">
+                <input type="checkbox" id="circularCrop" class="sr-only peer" />
+                <div
+                  class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"
+                >
+                </div>
+              </div>
             </label>
-            <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="resolution">
-              <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
-              <button data-value="128" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">128</button>
-              <button data-value="256" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">256</button>
-              <button data-value="512" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">512</button>
-            </div>
-          </div>
 
-          <!-- Method -->
-          <div class="space-y-2">
-            <label class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
-              Method
+            <label class="flex items-center justify-between cursor-pointer">
+              <span
+                class="text-white text-xs font-bold flex items-center gap-1.5"
+              >
+                Crop empty edges <i
+                  data-lucide="info"
+                  class="w-3 h-3 text-zinc-500"></i>
+              </span>
+              <div class="relative">
+                <input
+                  type="checkbox"
+                  id="cropEdges"
+                  class="sr-only peer"
+                  checked
+                />
+                <div
+                  class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"
+                >
+                </div>
+              </div>
             </label>
-            <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="method">
-              <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
-              <button data-value="rows" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Rows</button>
-              <button data-value="cols" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Cols</button>
-            </div>
-          </div>
 
-          <!-- Detail -->
-          <div class="space-y-2">
-            <label class="text-zinc-300 text-xs font-bold flex items-center gap-1.5">
-              Detail
+            <label class="flex items-center justify-between cursor-pointer">
+              <span
+                class="text-white text-xs font-bold flex items-center gap-1.5"
+              >
+                Pixelization <i data-lucide="info" class="w-3 h-3 text-zinc-500"
+                ></i>
+              </span>
+              <div class="relative">
+                <input type="checkbox" id="pixelization" class="sr-only peer" />
+                <div
+                  class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"
+                >
+                </div>
+              </div>
             </label>
-            <div class="flex bg-black rounded-lg p-1 border border-zinc-800" data-setting="detail">
-              <button data-value="auto" class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase">Auto</button>
-              <button data-value="low" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Low</button>
-              <button data-value="med" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">Med</button>
-              <button data-value="high" class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase">High</button>
+          </div>
+
+          <!-- Advanced Settings Dropdown -->
+          <details class="group border-t border-zinc-800 pt-3 flex-grow">
+            <summary
+              class="text-[10px] text-zinc-400 font-bold uppercase tracking-widest cursor-pointer flex items-center justify-between hover:text-gold transition-colors list-none"
+            >
+              Advanced Settings
+              <i
+                data-lucide="chevron-down"
+                class="w-3 h-3 group-open:rotate-180 transition-transform"></i>
+            </summary>
+
+            <div class="pt-4 space-y-4">
+              <!-- Auto-optimize -->
+              <label class="flex items-center justify-between cursor-pointer">
+                <span
+                  class="text-zinc-300 text-xs font-bold flex items-center gap-1.5"
+                >
+                  Auto-optimize
+                </span>
+                <div class="relative">
+                  <input
+                    type="checkbox"
+                    id="autoOptimize"
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="w-8 h-4 bg-zinc-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-gold after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all"
+                  >
+                  </div>
+                </div>
+              </label>
+
+              <!-- Resolution -->
+              <div class="space-y-2">
+                <label
+                  class="text-zinc-300 text-xs font-bold flex items-center gap-1.5"
+                >
+                  Resolution
+                </label>
+                <div
+                  class="flex bg-black rounded-lg p-1 border border-zinc-800"
+                  data-setting="resolution"
+                >
+                  <button
+                    data-value="auto"
+                    class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >Auto</button
+                  >
+                  <button
+                    data-value="128"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >128</button
+                  >
+                  <button
+                    data-value="256"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >256</button
+                  >
+                  <button
+                    data-value="512"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >512</button
+                  >
+                </div>
+              </div>
+
+              <!-- Method -->
+              <div class="space-y-2">
+                <label
+                  class="text-zinc-300 text-xs font-bold flex items-center gap-1.5"
+                >
+                  Method
+                </label>
+                <div
+                  class="flex bg-black rounded-lg p-1 border border-zinc-800"
+                  data-setting="method"
+                >
+                  <button
+                    data-value="auto"
+                    class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >Auto</button
+                  >
+                  <button
+                    data-value="rows"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >Rows</button
+                  >
+                  <button
+                    data-value="cols"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >Cols</button
+                  >
+                </div>
+              </div>
+
+              <!-- Detail -->
+              <div class="space-y-2">
+                <label
+                  class="text-zinc-300 text-xs font-bold flex items-center gap-1.5"
+                >
+                  Detail
+                </label>
+                <div
+                  class="flex bg-black rounded-lg p-1 border border-zinc-800"
+                  data-setting="detail"
+                >
+                  <button
+                    data-value="auto"
+                    class="flex-1 bg-zinc-800 text-gold text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >Auto</button
+                  >
+                  <button
+                    data-value="low"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >Low</button
+                  >
+                  <button
+                    data-value="med"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >Med</button
+                  >
+                  <button
+                    data-value="high"
+                    class="flex-1 text-zinc-400 hover:text-white text-[10px] font-bold py-1.5 rounded-md uppercase"
+                    >High</button
+                  >
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <button
+            id="resetBtn"
+            class="w-full bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] font-black uppercase tracking-widest py-3 rounded-xl transition-colors mt-auto pt-2"
+          >
+            Reset to defaults
+          </button>
+        </div>
+      </div>
+
+      <!-- Center Column: Preview Grid -->
+      <div class="flex-grow flex flex-col min-h-[500px]">
+        <div
+          class="bg-black border border-zinc-800 rounded-2xl flex-grow relative flex items-center justify-center p-6 md:p-8 shadow-inner"
+          style="background-image: linear-gradient(45deg, #18181b 25%, transparent 25%), linear-gradient(-45deg, #18181b 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #18181b 75%), linear-gradient(-45deg, transparent 75%, #18181b 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;"
+        >
+          <canvas
+            id="mainPreview"
+            class="hidden max-w-full max-h-full object-contain filter drop-shadow-2xl transition-transform duration-500"
+          ></canvas>
+
+          <div
+            id="previewPlaceholder"
+            class="text-zinc-600 flex flex-col items-center gap-4"
+          >
+            <i data-lucide="image-plus" class="w-16 h-16 opacity-50"></i>
+            <span class="text-xs font-bold uppercase tracking-widest opacity-50"
+              >Upload an image to preview</span
+            >
+          </div>
+
+          <div
+            id="processing"
+            class="hidden absolute inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center z-10 px-6"
+          >
+            <div class="w-full max-w-[280px] text-center">
+              <p
+                id="progressLabel"
+                class="text-gold text-xs font-black uppercase tracking-widest mb-3"
+              >
+                Generating
+              </p>
+              <div
+                class="w-full h-2.5 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                id="progressTrack"
+              >
+                <div
+                  id="progressBar"
+                  class="h-full w-0 bg-gold transition-[width] duration-200 ease-out"
+                >
+                </div>
+              </div>
+              <p
+                id="progressPct"
+                class="text-zinc-400 text-[10px] font-mono mt-2 tracking-widest"
+              >
+                0%
+              </p>
             </div>
           </div>
         </div>
-      </details>
-
-      <button id="resetBtn" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white text-[10px] font-black uppercase tracking-widest py-3 rounded-xl transition-colors mt-auto pt-2">
-        Reset to defaults
-      </button>
-    </div>
-  </div>
-
-  <!-- Center Column: Preview Grid -->
-  <div class="flex-grow flex flex-col min-h-[500px]">
-    <div class="bg-black border border-zinc-800 rounded-2xl flex-grow relative flex items-center justify-center p-6 md:p-8 shadow-inner" style="background-image: linear-gradient(45deg, #18181b 25%, transparent 25%), linear-gradient(-45deg, #18181b 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #18181b 75%), linear-gradient(-45deg, transparent 75%, #18181b 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
-      
-      <canvas id="mainPreview" class="hidden max-w-full max-h-full object-contain filter drop-shadow-2xl transition-transform duration-500"></canvas>
-      
-      <div id="previewPlaceholder" class="text-zinc-600 flex flex-col items-center gap-4">
-        <i data-lucide="image-plus" class="w-16 h-16 opacity-50"></i>
-        <span class="text-xs font-bold uppercase tracking-widest opacity-50">Upload an image to preview</span>
       </div>
 
-      <div id="processing" class="hidden absolute inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center z-10 px-6">
-        <div class="w-full max-w-[280px] text-center">
-          <p id="progressLabel" class="text-gold text-xs font-black uppercase tracking-widest mb-3">Generating</p>
-          <div class="w-full h-2.5 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack">
-            <div id="progressBar" class="h-full w-0 bg-gold transition-[width] duration-200 ease-out"></div>
+      <!-- Right Column: Output -->
+      <div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-6">
+        <!-- Output Module -->
+        <div
+          class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg flex flex-col flex-grow border-t-4 border-t-gold"
+        >
+          <h2
+            class="text-[10px] text-gold font-black uppercase tracking-widest mb-4"
+          >
+            Output
+          </h2>
+
+          <div class="mb-4 hidden" id="outputStats">
+            <div class="flex justify-between text-[10px] font-mono font-bold">
+              <span class="text-zinc-400">SIZE</span>
+              <span class="text-gold" id="sizeValue">0</span>
+            </div>
           </div>
-          <p id="progressPct" class="text-zinc-400 text-[10px] font-mono mt-2 tracking-widest">0%</p>
+
+          <div
+            class="bg-black/50 border border-green-500/30 rounded-xl p-4 mb-4 hidden"
+            id="readyStatus"
+          >
+            <div class="flex items-center gap-2 mb-1">
+              <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse">
+              </div>
+              <span
+                class="text-green-500 text-xs font-black uppercase tracking-tight"
+                >Ready to copy</span
+              >
+            </div>
+            <p class="text-zinc-400 text-[10px] leading-tight">
+              Copy the code and paste it into the editor console.
+            </p>
+          </div>
+
+          <button
+            id="copyBtn"
+            disabled
+            class="w-full bg-white hover:bg-gray-200 text-black disabled:bg-zinc-800 disabled:text-zinc-600 font-black uppercase text-sm py-4 rounded-xl transition-colors tracking-tighter mb-4 shadow-md flex items-center justify-center gap-2"
+          >
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span>Copy Code</span>
+          </button>
+
+          <details
+            class="group border-t border-zinc-800 pt-3 flex-grow flex flex-col"
+            open
+          >
+            <summary
+              class="text-[10px] text-zinc-400 font-bold uppercase tracking-widest cursor-pointer flex items-center gap-2 hover:text-gold transition-colors list-none"
+            >
+              <i
+                data-lucide="chevron-down"
+                class="w-3 h-3 group-open:rotate-180 transition-transform"></i>
+              Show raw code
+            </summary>
+            <div class="pt-3 flex-grow flex flex-col min-h-0 h-full">
+              <textarea
+                id="outputCode"
+                readonly
+                class="w-full h-full min-h-[300px] bg-black border border-zinc-800 rounded-xl p-3 text-zinc-300 font-mono text-[9px] focus:outline-none focus:border-gold/50 resize-none"
+                placeholder="// Generate an emblem to see the console code here"
+              ></textarea>
+            </div>
+          </details>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Right Column: Output -->
-  <div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-6">
-    
-    <!-- Output Module -->
-    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-5 shadow-lg flex flex-col flex-grow border-t-4 border-t-gold">
-      <h2 class="text-[10px] text-gold font-black uppercase tracking-widest mb-4">Output</h2>
-      
-      <div class="mb-4 hidden" id="outputStats">
-        <div class="flex justify-between text-[10px] font-mono font-bold">
-          <span class="text-zinc-400">SIZE</span>
-          <span class="text-gold" id="sizeValue">0</span>
-        </div>
-      </div>
+    <!-- How to Apply on Social Club -->
+    <div id="howto" class="jump mt-8 w-full">
+      <div
+        class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-6 shadow-lg border-t-4 border-t-gold"
+      >
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <!-- Left: Instructions -->
+          <div class="w-full lg:w-1/2 order-2 lg:order-1">
+            <h2
+              class="text-[10px] text-gold font-black uppercase tracking-widest mb-5"
+            >
+              How to Apply on Social Club
+            </h2>
+            <ol
+              class="space-y-3 text-zinc-300 text-[13px] leading-relaxed w-full"
+            >
+              <li class="flex gap-3">
+                <span
+                  class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5"
+                  >1.</span
+                >
+                <span
+                  >Navigate to the <a
+                    href="https://socialclub.rockstargames.com"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-gold hover:underline">Rockstar Social Club</a
+                  >, log in, and go to your Crew Emblems page. Click <strong
+                    class="text-white">Create a New Emblem</strong
+                  >.</span
+                >
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5"
+                  >2.</span
+                >
+                <span
+                  >Open Developer Tools: press <kbd
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >F12</kbd
+                  > (or <kbd
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >Ctrl+Shift+J</kbd
+                  > on Windows / <kbd
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >Cmd+Option+J</kbd
+                  > on Mac).</span
+                >
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5"
+                  >3.</span
+                >
+                <span
+                  >Click the <strong class="text-white">Console</strong> tab. Look
+                  for the blinking cursor at the bottom.</span
+                >
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5"
+                  >4.</span
+                >
+                <span
+                  >If you see a paste warning, type <code
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >allow pasting</code
+                  > and press Enter.</span
+                >
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5"
+                  >5.</span
+                >
+                <span
+                  >Right-click at the cursor → <strong class="text-white"
+                    >Paste</strong
+                  > (or <kbd
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >Ctrl+V</kbd
+                  > on Windows / <kbd
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >Cmd+V</kbd
+                  > on Mac), then press <kbd
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >Enter</kbd
+                  >.</span
+                >
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5"
+                  >6.</span
+                >
+                <span
+                  >Close Developer Tools (<kbd
+                    class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono"
+                    >F12</kbd
+                  >), click <strong class="text-white">Save</strong>, then <strong
+                    class="text-white">Publish</strong
+                  >.</span
+                >
+              </li>
+            </ol>
+          </div>
 
-      <div class="bg-black/50 border border-green-500/30 rounded-xl p-4 mb-4 hidden" id="readyStatus">
-        <div class="flex items-center gap-2 mb-1">
-          <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-          <span class="text-green-500 text-xs font-black uppercase tracking-tight">Ready to copy</span>
-        </div>
-        <p class="text-zinc-400 text-[10px] leading-tight">Copy the code and paste it into the editor console.</p>
-      </div>
-
-      <button id="copyBtn" disabled class="w-full bg-white hover:bg-gray-200 text-black disabled:bg-zinc-800 disabled:text-zinc-600 font-black uppercase text-sm py-4 rounded-xl transition-colors tracking-tighter mb-4 shadow-md flex items-center justify-center gap-2">
-        <i data-lucide="copy" class="w-4 h-4"></i>
-        <span>Copy Code</span>
-      </button>
-
-      <details class="group border-t border-zinc-800 pt-3 flex-grow flex flex-col" open>
-        <summary class="text-[10px] text-zinc-400 font-bold uppercase tracking-widest cursor-pointer flex items-center gap-2 hover:text-gold transition-colors list-none">
-          <i data-lucide="chevron-down" class="w-3 h-3 group-open:rotate-180 transition-transform"></i>
-          Show raw code
-        </summary>
-        <div class="pt-3 flex-grow flex flex-col min-h-0 h-full">
-          <textarea id="outputCode" readonly class="w-full h-full min-h-[300px] bg-black border border-zinc-800 rounded-xl p-3 text-zinc-300 font-mono text-[9px] focus:outline-none focus:border-gold/50 resize-none" placeholder="// Generate an emblem to see the console code here"></textarea>
-        </div>
-      </details>
-    </div>
-
-  </div>
-
-</div>
-
-  <!-- How to Apply on Social Club -->
-  <div id="howto" class="jump mt-8 w-full">
-    <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-700/50 rounded-2xl p-6 shadow-lg border-t-4 border-t-gold">
-      <div class="flex flex-col lg:flex-row gap-8 items-center">
-        
-        <!-- Left: Instructions -->
-        <div class="w-full lg:w-1/2 order-2 lg:order-1">
-          <h2 class="text-[10px] text-gold font-black uppercase tracking-widest mb-5">How to Apply on Social Club</h2>
-          <ol class="space-y-3 text-zinc-300 text-[13px] leading-relaxed w-full">
-            <li class="flex gap-3">
-              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">1.</span>
-              <span>Navigate to the <a href="https://socialclub.rockstargames.com" target="_blank" rel="noopener" class="text-gold hover:underline">Rockstar Social Club</a>, log in, and go to your Crew Emblems page. Click <strong class="text-white">Create a New Emblem</strong>.</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">2.</span>
-              <span>Open Developer Tools: press <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">F12</kbd> (or <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Ctrl+Shift+J</kbd> on Windows / <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Cmd+Option+J</kbd> on Mac).</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">3.</span>
-              <span>Click the <strong class="text-white">Console</strong> tab. Look for the blinking cursor at the bottom.</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">4.</span>
-              <span>If you see a paste warning, type <code class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">allow pasting</code> and press Enter.</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">5.</span>
-              <span>Right-click at the cursor → <strong class="text-white">Paste</strong> (or <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Ctrl+V</kbd> on Windows / <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Cmd+V</kbd> on Mac), then press <kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">Enter</kbd>.</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="text-gold font-mono text-xs font-bold shrink-0 mt-0.5">6.</span>
-              <span>Close Developer Tools (<kbd class="px-1.5 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-[10px] font-mono">F12</kbd>), click <strong class="text-white">Save</strong>, then <strong class="text-white">Publish</strong>.</span>
-            </li>
-          </ol>
-        </div>
-
-        <!-- Right: Video -->
-        <div class="w-full lg:w-1/2 order-1 lg:order-2">
-          <div class="aspect-video w-full rounded-xl overflow-hidden border border-zinc-800 bg-black">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/BI_bY-7ZICs"
-              title="Emblem Editor Tutorial"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+          <!-- Right: Video -->
+          <div class="w-full lg:w-1/2 order-1 lg:order-2">
+            <div
+              class="aspect-video w-full rounded-xl overflow-hidden border border-zinc-800 bg-black"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/BI_bY-7ZICs"
+                title="Emblem Editor Tutorial"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
-</div>
 </MainLayout>
 
 <script src="/emblem-engine.js" is:inline></script>
@@ -268,90 +541,116 @@ import MainLayout from '../layouts/MainLayout.astro';
   function initEmblemDashboard() {
     if (window.lucide) window.lucide.createIcons();
 
-    const imageInput = document.getElementById('imageInput');
-    const sourceThumb = document.getElementById('sourceThumb');
-    const sourceIcon = document.getElementById('sourceIcon');
-    const uploadText = document.getElementById('uploadText');
-    const uploadSubtext = document.getElementById('uploadSubtext');
-    const mainPreview = document.getElementById('mainPreview');
-    const previewPlaceholder = document.getElementById('previewPlaceholder');
-    const processing = document.getElementById('processing');
-    const outputStats = document.getElementById('outputStats');
-    const readyStatus = document.getElementById('readyStatus');
-    const copyBtn = document.getElementById('copyBtn');
-    const outputCode = document.getElementById('outputCode');
-    const sizeValue = document.getElementById('sizeValue');
-    const autoOptimize = document.getElementById('autoOptimize');
-    const pixelization = document.getElementById('pixelization');
-    const cropEdges = document.getElementById('cropEdges');
-    const circularCrop = document.getElementById('circularCrop');
-    const resetBtn = document.getElementById('resetBtn');
+    const imageInput = document.getElementById("imageInput");
+    const sourceThumb = document.getElementById("sourceThumb");
+    const sourceIcon = document.getElementById("sourceIcon");
+    const uploadText = document.getElementById("uploadText");
+    const uploadSubtext = document.getElementById("uploadSubtext");
+    const mainPreview = document.getElementById("mainPreview");
+    const previewPlaceholder = document.getElementById("previewPlaceholder");
+    const processing = document.getElementById("processing");
+    const outputStats = document.getElementById("outputStats");
+    const readyStatus = document.getElementById("readyStatus");
+    const copyBtn = document.getElementById("copyBtn");
+    const outputCode = document.getElementById("outputCode");
+    const sizeValue = document.getElementById("sizeValue");
+    const autoOptimize = document.getElementById("autoOptimize");
+    const pixelization = document.getElementById("pixelization");
+    const cropEdges = document.getElementById("cropEdges");
+    const circularCrop = document.getElementById("circularCrop");
+    const resetBtn = document.getElementById("resetBtn");
 
     let currentImageData = null;
-    let currentFileName = '';
+    let currentFileName = "";
 
     function getSetting(name) {
       const group = document.querySelector(`[data-setting="${name}"]`);
       if (!group) return null;
-      const active = group.querySelector('.bg-zinc-800');
+      const active = group.querySelector(".bg-zinc-800");
       return active ? active.dataset.value : null;
     }
 
     function setActive(group, value) {
-      const buttons = group.querySelectorAll('button');
-      buttons.forEach(b => {
-        b.classList.remove('bg-zinc-800', 'text-gold');
-        b.classList.add('text-zinc-400');
+      const buttons = group.querySelectorAll("button");
+      buttons.forEach((b) => {
+        b.classList.remove("bg-zinc-800", "text-gold");
+        b.classList.add("text-zinc-400");
         if (b.dataset.value === value) {
-          b.classList.remove('text-zinc-400');
-          b.classList.add('bg-zinc-800', 'text-gold');
+          b.classList.remove("text-zinc-400");
+          b.classList.add("bg-zinc-800", "text-gold");
         }
       });
     }
 
     // Segmented control clicks
-    document.querySelectorAll('[data-setting]').forEach(group => {
-      group.querySelectorAll('button').forEach(btn => {
-        btn.addEventListener('click', () => {
+    document.querySelectorAll("[data-setting]").forEach((group) => {
+      group.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("click", () => {
           setActive(group, btn.dataset.value);
           if (currentImageData) generateEmblem();
         });
       });
     });
 
-    [autoOptimize, pixelization, cropEdges, circularCrop].forEach(el => {
-      if (el) el.addEventListener('change', () => { 
-        if (currentImageData && document.getElementById('imageInput').files[0]) {
-            loadImageToData(document.getElementById('imageInput').files[0], (data) => {
+    [autoOptimize, pixelization, cropEdges, circularCrop].forEach((el) => {
+      if (el)
+        el.addEventListener("change", () => {
+          if (
+            currentImageData &&
+            document.getElementById("imageInput").files[0]
+          ) {
+            loadImageToData(
+              document.getElementById("imageInput").files[0],
+              (data) => {
                 currentImageData = data;
-                generateEmblem(); 
-            });
-        }
-      });
+                generateEmblem();
+              },
+            );
+          }
+        });
     });
 
     if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        setActive(document.querySelector('[data-setting="resolution"]'), 'auto');
-        setActive(document.querySelector('[data-setting="method"]'), 'auto');
-        setActive(document.querySelector('[data-setting="detail"]'), 'auto');
+      resetBtn.addEventListener("click", () => {
+        setActive(
+          document.querySelector('[data-setting="resolution"]'),
+          "auto",
+        );
+        setActive(document.querySelector('[data-setting="method"]'), "auto");
+        setActive(document.querySelector('[data-setting="detail"]'), "auto");
         autoOptimize.checked = true;
         pixelization.checked = false;
         cropEdges.checked = true;
         circularCrop.checked = false;
-        
-        if (currentImageData && document.getElementById('imageInput').files[0]) {
-            loadImageToData(document.getElementById('imageInput').files[0], (data) => {
-                currentImageData = data;
-                generateEmblem(); 
-            });
+
+        if (
+          currentImageData &&
+          document.getElementById("imageInput").files[0]
+        ) {
+          loadImageToData(
+            document.getElementById("imageInput").files[0],
+            (data) => {
+              currentImageData = data;
+              generateEmblem();
+            },
+          );
         }
       });
     }
 
     // Helper for aspect ratio drawing. Larger inset when circular so the clip never cuts content.
     // Non-circular uses a safer inset so anti-aliased edges and slight bounds errors never clip.
-    function drawAspectFit(ctx, img, targetW, targetH, sX, sY, sW, sH, circular) {
+    function drawAspectFit(
+      ctx,
+      img,
+      targetW,
+      targetH,
+      sX,
+      sY,
+      sW,
+      sH,
+      circular,
+    ) {
       const inset = circular ? 12 : 8;
       const availW = targetW - inset * 2;
       const availH = targetH - inset * 2;
@@ -366,31 +665,34 @@ import MainLayout from '../layouts/MainLayout.astro';
     function loadImageToData(file, cb) {
       const img = new Image();
       img.onload = () => {
-        const canvas = document.createElement('canvas');
+        const canvas = document.createElement("canvas");
         canvas.width = 512;
         canvas.height = 512;
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext("2d");
         const isCircular = circularCrop && circularCrop.checked;
-        
+
         ctx.clearRect(0, 0, 512, 512);
-        
+
         // Circular clip uses a slightly smaller radius so anti-aliased edges aren't cut
         if (isCircular) {
-            ctx.beginPath();
-            ctx.arc(256, 256, 250, 0, Math.PI * 2);
-            ctx.clip();
+          ctx.beginPath();
+          ctx.arc(256, 256, 250, 0, Math.PI * 2);
+          ctx.clip();
         }
 
         // Always draw the full image for non-circular (default) so edges are never cut.
         // Crop-empty-edges only applies when circular is on, or when the user explicitly wants tight crop.
         if (cropEdges.checked && isCircular) {
-          const temp = document.createElement('canvas');
+          const temp = document.createElement("canvas");
           temp.width = img.width;
           temp.height = img.height;
-          const tctx = temp.getContext('2d');
+          const tctx = temp.getContext("2d");
           tctx.drawImage(img, 0, 0);
           const id = tctx.getImageData(0, 0, img.width, img.height);
-          let minX = img.width, minY = img.height, maxX = 0, maxY = 0;
+          let minX = img.width,
+            minY = img.height,
+            maxX = 0,
+            maxY = 0;
           for (let y = 0; y < img.height; y++) {
             for (let x = 0; x < img.width; x++) {
               if (id.data[(y * img.width + x) * 4 + 3] > 24) {
@@ -402,10 +704,21 @@ import MainLayout from '../layouts/MainLayout.astro';
             }
           }
           if (maxX > minX && maxY > minY) {
-            const w = maxX - minX + 1, h = maxY - minY + 1;
+            const w = maxX - minX + 1,
+              h = maxY - minY + 1;
             drawAspectFit(ctx, img, 512, 512, minX, minY, w, h, isCircular);
           } else {
-            drawAspectFit(ctx, img, 512, 512, 0, 0, img.width, img.height, isCircular);
+            drawAspectFit(
+              ctx,
+              img,
+              512,
+              512,
+              0,
+              0,
+              img.width,
+              img.height,
+              isCircular,
+            );
           }
         } else {
           // Non-circular (default): always fit the full original image, no content-bounds crop
@@ -417,41 +730,42 @@ import MainLayout from '../layouts/MainLayout.astro';
       img.src = URL.createObjectURL(file);
     }
 
-    const progressBar = document.getElementById('progressBar');
-    const progressLabel = document.getElementById('progressLabel');
-    const progressPct = document.getElementById('progressPct');
-    const progressTrack = document.getElementById('progressTrack');
+    const progressBar = document.getElementById("progressBar");
+    const progressLabel = document.getElementById("progressLabel");
+    const progressPct = document.getElementById("progressPct");
+    const progressTrack = document.getElementById("progressTrack");
     let runId = 0;
 
     function setProgress(pct, label) {
       const clamped = Math.max(0, Math.min(100, Math.round(pct)));
-      if (progressBar) progressBar.style.width = clamped + '%';
-      if (progressPct) progressPct.textContent = clamped + '%';
-      if (progressTrack) progressTrack.setAttribute('aria-valuenow', String(clamped));
+      if (progressBar) progressBar.style.width = clamped + "%";
+      if (progressPct) progressPct.textContent = clamped + "%";
+      if (progressTrack)
+        progressTrack.setAttribute("aria-valuenow", String(clamped));
       if (label && progressLabel) progressLabel.textContent = label;
     }
 
     async function generateEmblem() {
-      if (!currentImageData || typeof findBestEncode !== 'function') {
-        outputCode.value = '// Engine not loaded';
-        processing.classList.add('hidden');
+      if (!currentImageData || typeof findBestEncode !== "function") {
+        outputCode.value = "// Engine not loaded";
+        processing.classList.add("hidden");
         return;
       }
       const myRun = ++runId;
-      setProgress(4, 'Preparing image');
-      processing.classList.remove('hidden');
+      setProgress(4, "Preparing image");
+      processing.classList.remove("hidden");
       copyBtn.disabled = true;
 
-      const res = getSetting('resolution');
-      const method = getSetting('method');
-      const detail = getSetting('detail');
+      const res = getSetting("resolution");
+      const method = getSetting("method");
+      const detail = getSetting("detail");
       const auto = autoOptimize.checked;
       const pix = pixelization.checked;
 
       const opts = {
-        N: res === 'auto' ? 'auto' : parseInt(res, 10),
+        N: res === "auto" ? "auto" : parseInt(res, 10),
         autoN: 512,
-        method: method === 'auto' ? 'auto' : method,
+        method: method === "auto" ? "auto" : method,
         autofit: auto,
         pareto: auto,
         paretoLadder: [512, 384, 320, 256, 192, 160, 128, 96, 80, 64],
@@ -459,7 +773,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         budget: 1250000,
         precision: 3,
         overlap: 2,
-        alphaMode: 'keep',
+        alphaMode: "keep",
         dither: false,
         smoothPct: 0,
         noise: 0,
@@ -467,61 +781,73 @@ import MainLayout from '../layouts/MainLayout.astro';
         contrast: 0,
         saturation: 100,
         ladder: [512, 384, 256, 192, 128],
-        toleranceLadder: typeof TUNING !== 'undefined' ? TUNING.toleranceLadder : undefined
+        toleranceLadder:
+          typeof TUNING !== "undefined" ? TUNING.toleranceLadder : undefined,
       };
 
-      if (detail !== 'auto' && !auto) {
+      if (detail !== "auto" && !auto) {
         const dMap = { low: 20, med: 59, high: 100 };
-        opts.tol = typeof detailToTolerance === 'function' ? detailToTolerance(dMap[detail] || 59) : 520;
+        opts.tol =
+          typeof detailToTolerance === "function"
+            ? detailToTolerance(dMap[detail] || 59)
+            : 520;
         opts.autofit = false;
       }
 
-      const baseYield = typeof makeYield === 'function' ? makeYield() : () => Promise.resolve();
+      const baseYield =
+        typeof makeYield === "function" ? makeYield() : () => Promise.resolve();
       let steps = 0;
       const yieldFn = () => {
         steps += 1;
         const pct = Math.min(92, 8 + (1 - Math.exp(-steps / 40)) * 84);
-        if (myRun === runId) setProgress(pct, 'Encoding');
+        if (myRun === runId) setProgress(pct, "Encoding");
         return baseYield();
       };
       const raw = new Uint8ClampedArray(currentImageData.data);
 
       try {
-        setProgress(8, 'Encoding');
-        const result = await findBestEncode(raw, 512, opts, yieldFn, false, () => myRun !== runId);
+        setProgress(8, "Encoding");
+        const result = await findBestEncode(
+          raw,
+          512,
+          opts,
+          yieldFn,
+          false,
+          () => myRun !== runId,
+        );
         if (myRun !== runId) return;
         if (!result) {
-          outputCode.value = '// No result';
-          setProgress(0, 'Failed');
-          processing.classList.add('hidden');
+          outputCode.value = "// No result";
+          setProgress(0, "Failed");
+          processing.classList.add("hidden");
           return;
         }
 
-        setProgress(96, 'Rendering preview');
+        setProgress(96, "Rendering preview");
 
-        if (typeof renderCoverage === 'function') {
+        if (typeof renderCoverage === "function") {
           const rendered = renderCoverage(result, 512);
-          const ctx = mainPreview.getContext('2d');
+          const ctx = mainPreview.getContext("2d");
           mainPreview.width = 512;
           mainPreview.height = 512;
           const id = new ImageData(new Uint8ClampedArray(rendered), 512, 512);
           ctx.putImageData(id, 0, 0);
-          mainPreview.classList.remove('hidden');
+          mainPreview.classList.remove("hidden");
           if (circularCrop && circularCrop.checked) {
-            mainPreview.classList.add('rounded-full');
+            mainPreview.classList.add("rounded-full");
           } else {
-            mainPreview.classList.remove('rounded-full');
+            mainPreview.classList.remove("rounded-full");
           }
-          previewPlaceholder.classList.add('hidden');
+          previewPlaceholder.classList.add("hidden");
         }
 
         const size = result.enc || 0;
-        sizeValue.textContent = size.toLocaleString() + ' bytes';
-        outputStats.classList.remove('hidden');
-        readyStatus.classList.remove('hidden');
+        sizeValue.textContent = size.toLocaleString() + " bytes";
+        outputStats.classList.remove("hidden");
+        readyStatus.classList.remove("hidden");
 
-        const svgRaw = result.svg || '';
-        const layerRaw = result.lmin || result.lfull || '[]';
+        const svgRaw = result.svg || "";
+        const layerRaw = result.lmin || result.lfull || "[]";
         const svgB64 = btoa(unescape(encodeURIComponent(svgRaw)));
         const layerB64 = btoa(unescape(encodeURIComponent(layerRaw)));
 
@@ -565,34 +891,37 @@ request.send(JSON.stringify({
 
         outputCode.value = snippet;
         copyBtn.disabled = false;
-        console.log('[Emblem] Payload ready, length:', snippet.length);
+        console.log("[Emblem] Payload ready, length:", snippet.length);
 
-        const details = outputCode.closest('details');
+        const details = outputCode.closest("details");
         if (details) details.open = true;
-        setProgress(100, 'Done');
+        setProgress(100, "Done");
       } catch (e) {
         if (myRun !== runId) return;
-        console.error('[Emblem] Generation failed:', e);
-        outputCode.value = '// Error: ' + (e && e.message ? e.message : e) + '\n// Check browser console for details';
-        setProgress(0, 'Failed');
+        console.error("[Emblem] Generation failed:", e);
+        outputCode.value =
+          "// Error: " +
+          (e && e.message ? e.message : e) +
+          "\n// Check browser console for details";
+        setProgress(0, "Failed");
       }
-      if (myRun === runId) processing.classList.add('hidden');
+      if (myRun === runId) processing.classList.add("hidden");
     }
 
     if (imageInput) {
-      imageInput.addEventListener('change', (e) => {
+      imageInput.addEventListener("change", (e) => {
         const file = e.target.files[0];
         if (!file) return;
         currentFileName = file.name;
         uploadText.textContent = file.name;
-        uploadSubtext.textContent = 'Change image';
-        uploadText.classList.add('text-gold');
-        sourceIcon.classList.add('hidden');
+        uploadSubtext.textContent = "Change image";
+        uploadText.classList.add("text-gold");
+        sourceIcon.classList.add("hidden");
 
         const reader = new FileReader();
         reader.onload = (ev) => {
           sourceThumb.src = ev.target.result;
-          sourceThumb.classList.remove('hidden');
+          sourceThumb.classList.remove("hidden");
         };
         reader.readAsDataURL(file);
 
@@ -606,19 +935,20 @@ request.send(JSON.stringify({
     }
 
     if (copyBtn) {
-      copyBtn.addEventListener('click', async () => {
+      copyBtn.addEventListener("click", async () => {
         const text = outputCode.value;
-        if (!text || text.startsWith('//')) return;
+        if (!text || text.startsWith("//")) return;
 
         try {
           await navigator.clipboard.writeText(text);
         } catch {
           outputCode.select();
-          document.execCommand('copy');
+          document.execCommand("copy");
         }
 
         const orig = copyBtn.innerHTML;
-        copyBtn.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-green-500"></i><span class="text-green-500">Copied!</span>';
+        copyBtn.innerHTML =
+          '<i data-lucide="check" class="w-4 h-4 text-green-500"></i><span class="text-green-500">Copied!</span>';
         if (window.lucide) window.lucide.createIcons();
         setTimeout(() => {
           copyBtn.innerHTML = orig;
@@ -628,6 +958,6 @@ request.send(JSON.stringify({
     }
   }
 
-  window.addEventListener('load', initEmblemDashboard);
-  document.addEventListener('astro:page-load', initEmblemDashboard);
+  window.addEventListener("load", initEmblemDashboard);
+  document.addEventListener("astro:page-load", initEmblemDashboard);
 </script>
