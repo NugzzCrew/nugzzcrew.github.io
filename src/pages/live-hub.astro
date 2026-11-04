@@ -83,11 +83,34 @@ import MainLayout from "../layouts/MainLayout.astro";
       <h2
         class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center"
       >
-        Crew Controls
+        Command Center
       </h2>
       <p id="status-msg" class="text-sm text-zinc-400 mb-4 text-center">
         Connecting to Streamer.bot...
       </p>
+
+      <!-- Owner Debug Tools (only visible to channel owner) -->
+      <div id="owner-debug-tools" class="owner-debug-tools hidden mb-4">
+        <label class="owner-debug-toggle">
+          <input type="checkbox" id="owner-force-enable" />
+          <span>Force commands enabled (offline preview)</span>
+        </label>
+        <div class="owner-video-override">
+          <label for="owner-video-id">Test Video ID:</label>
+          <input
+            type="text"
+            id="owner-video-id"
+            placeholder="paste YouTube video ID"
+            maxlength="20"
+          />
+          <button type="button" id="owner-load-video" class="cmd-btn"
+            >Load</button
+          >
+          <button type="button" id="owner-clear-video" class="cmd-btn"
+            >Clear</button
+          >
+        </div>
+      </div>
 
       <!-- Music Controls -->
       <div class="mb-6 flex justify-center">
@@ -1399,6 +1422,12 @@ import MainLayout from "../layouts/MainLayout.astro";
     };
   }
 
+  // Owner channel ID — replace with Official Nugzz Crew YouTube channel ID
+  const OWNER_CHANNEL_ID = "UCYNmnbEgm3G0m4avmwz_4Eg";
+  let ownerForceEnable = false;
+  let ownerOverrideVideoId = null;
+  let currentLiveVideoId = null;
+
   function handleLiveStatus(data) {
     const videoFrame = document.getElementById("yt-video-frame");
     const placeholder = document.getElementById("offline-placeholder");
@@ -1409,17 +1438,31 @@ import MainLayout from "../layouts/MainLayout.astro";
     const videoCol = document.getElementById("video-col");
     const commands = document.getElementById("commands-container");
 
-    const isLive =
-      data.isLive === true && data.videoId && data.videoId.trim() !== "";
+    const incomingId = (data.videoId || "").trim();
+
+    // Owner override is absolute — don't fight the custom video
+    if (ownerOverrideVideoId) {
+      updateStreamState(data.isLive === true);
+      return;
+    }
+
+    // Already showing this exact video — skip reload to prevent flicker
+    if (incomingId !== "" && currentLiveVideoId === incomingId) {
+      updateStreamState(data.isLive === true);
+      return;
+    }
+
+    const isLive = data.isLive === true && incomingId !== "";
 
     if (isLive) {
+      currentLiveVideoId = incomingId;
       if (videoFrame) {
         videoFrame.style.display = "block";
-        videoFrame.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1&mute=1`;
+        videoFrame.src = `https://www.youtube.com/embed/${incomingId}?autoplay=1&mute=1`;
       }
       if (placeholder) placeholder.style.display = "none";
 
-      const chatSrc = `https://www.youtube.com/live_chat?v=${data.videoId}&embed_domain=${location.hostname}&dark_theme=1`;
+      const chatSrc = `https://www.youtube.com/live_chat?v=${incomingId}&embed_domain=${location.hostname}&dark_theme=1`;
       if (chatFrame) chatFrame.src = chatSrc;
       if (chatFrameMobile) chatFrameMobile.src = chatSrc;
 
@@ -1435,6 +1478,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         commands.classList.add("max-w-6xl");
       }
     } else {
+      currentLiveVideoId = null;
       if (videoFrame) {
         videoFrame.style.display = "none";
         videoFrame.src = "about:blank";
@@ -1455,23 +1499,91 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
   }
 
+  function applyOwnerVideoOverride(videoId) {
+    const videoFrame = document.getElementById("yt-video-frame");
+    const chatFrame = document.getElementById("yt-chat-frame");
+    const chatFrameMobile = document.getElementById("yt-chat-frame-mobile");
+    const placeholder = document.getElementById("offline-placeholder");
+    const chatWrapper = document.getElementById("chat-wrapper");
+    const chatWrapperMobile = document.getElementById("chat-wrapper-mobile");
+
+    currentLiveVideoId = videoId;
+    if (videoFrame) {
+      videoFrame.style.display = "block";
+      videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+    }
+    if (placeholder) placeholder.style.display = "none";
+    const chatSrc = `https://www.youtube.com/live_chat?v=${videoId}&embed_domain=${location.hostname}&dark_theme=1`;
+    if (chatFrame) chatFrame.src = chatSrc;
+    if (chatFrameMobile) chatFrameMobile.src = chatSrc;
+    if (chatWrapper) chatWrapper.classList.remove("hidden");
+    if (chatWrapperMobile) chatWrapperMobile.classList.remove("hidden");
+  }
+
+  function clearOwnerVideoOverride() {
+    ownerOverrideVideoId = null;
+    currentLiveVideoId = null;
+    const videoFrame = document.getElementById("yt-video-frame");
+    const chatFrame = document.getElementById("yt-chat-frame");
+    const chatFrameMobile = document.getElementById("yt-chat-frame-mobile");
+    const placeholder = document.getElementById("offline-placeholder");
+    const chatWrapper = document.getElementById("chat-wrapper");
+    const chatWrapperMobile = document.getElementById("chat-wrapper-mobile");
+
+    if (videoFrame) {
+      videoFrame.style.display = "none";
+      videoFrame.src = "about:blank";
+    }
+    if (chatFrame) chatFrame.src = "about:blank";
+    if (chatFrameMobile) chatFrameMobile.src = "about:blank";
+    if (chatWrapper) chatWrapper.classList.add("hidden");
+    if (chatWrapperMobile) chatWrapperMobile.classList.add("hidden");
+    if (placeholder) placeholder.style.display = "block";
+    const input = document.getElementById("owner-video-id");
+    if (input) input.value = "";
+  }
+
   function updateStreamState(live) {
     const msgEl = document.getElementById("status-msg");
     const buttons = document.querySelectorAll(".stream-cmd");
     const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+    const isOwner = user && user.youtubeId === OWNER_CHANNEL_ID;
+    const debugTools = document.getElementById("owner-debug-tools");
+
+    if (debugTools) {
+      debugTools.classList.toggle("hidden", !isOwner);
+    }
+
     if (!msgEl) return;
 
-    if (ws?.readyState === WebSocket.OPEN && user) {
-      buttons.forEach((btn) => (btn.disabled = !live));
-      msgEl.textContent = live
-        ? "Bot Connected (Stream Online)"
-        : "Bot Connected (Stream Offline)";
-      msgEl.style.color = live ? "#4ade80" : "#a1a1aa";
+    const isConnected = ws && ws.readyState === WebSocket.OPEN;
+    const allowCommands =
+      isConnected && user && (live || (isOwner && ownerForceEnable));
+
+    if (allowCommands) {
+      buttons.forEach((btn) => (btn.disabled = false));
+      if (isOwner && !live && ownerForceEnable) {
+        msgEl.textContent = ownerOverrideVideoId
+          ? "Owner Debug — Custom video loaded + commands enabled."
+          : "Bot Connected (Owner Force-Enable). Commands enabled for preview.";
+        msgEl.style.color = "#4ade80";
+      } else if (live) {
+        msgEl.textContent = "Bot Connected (Stream Online)";
+        msgEl.style.color = "#4ade80";
+      } else {
+        msgEl.textContent = "Bot Connected (Stream Offline)";
+        msgEl.style.color = "#a1a1aa";
+      }
     } else {
       buttons.forEach((btn) => (btn.disabled = true));
-      msgEl.textContent = user
-        ? "Connecting to Streamer.bot..."
-        : "Sign in to trigger commands.";
+      if (!user) {
+        msgEl.textContent = "Sign in to trigger commands.";
+      } else if (!isConnected) {
+        msgEl.textContent = "Connecting to Streamer.bot...";
+      } else {
+        msgEl.textContent = "Bot Connected (Stream Offline)";
+      }
+      msgEl.style.color = "#a1a1aa";
     }
   }
 
@@ -1541,7 +1653,42 @@ import MainLayout from "../layouts/MainLayout.astro";
     el.nextElementSibling.classList.toggle("hidden");
   }
 
-  window.addEventListener("load", connectBot);
+  window.addEventListener("load", () => {
+    connectBot();
+
+    // Owner debug tools
+    const forceCheckbox = document.getElementById("owner-force-enable");
+    const loadBtn = document.getElementById("owner-load-video");
+    const clearBtn = document.getElementById("owner-clear-video");
+    const videoInput = document.getElementById("owner-video-id");
+
+    if (forceCheckbox) {
+      forceCheckbox.addEventListener("change", (e) => {
+        ownerForceEnable = e.target.checked;
+        updateStreamState(false); // will re-evaluate based on flag
+      });
+    }
+    if (loadBtn) {
+      loadBtn.addEventListener("click", () => {
+        const id = videoInput && videoInput.value.trim();
+        if (!id) return;
+        ownerOverrideVideoId = id;
+        applyOwnerVideoOverride(id);
+        updateStreamState(false);
+      });
+    }
+    if (videoInput) {
+      videoInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && loadBtn) loadBtn.click();
+      });
+    }
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        clearOwnerVideoOverride();
+        updateStreamState(false);
+      });
+    }
+  });
 
   // Theater Mode
   const theaterBtn = document.getElementById("theater-btn");
