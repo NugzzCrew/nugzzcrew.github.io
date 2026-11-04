@@ -125,7 +125,7 @@ const primaryLinks = [
         </nav>
 
         <!-- Live Banner (dismissable) -->
-        <div id="live-banner" class="hidden fixed top-[72px] left-0 right-0 z-40 bg-red-950/95 border-b border-red-600 text-white text-sm shadow-md" role="status" aria-live="polite">
+        <div id="live-banner" class="hidden fixed top-[4.5rem] left-0 right-0 z-40 bg-red-950/95 border-b border-red-600 text-white text-sm shadow-md" role="status" aria-live="polite">
           <div class="max-w-7xl mx-auto px-4 py-1.5 flex items-center justify-between gap-3">
             <div class="flex items-center gap-2 min-w-0">
               <span class="relative flex h-2 w-2 flex-shrink-0">
@@ -254,7 +254,6 @@ const primaryLinks = [
     
         <script is:inline>
           (function() {
-            if (sessionStorage.getItem('liveBannerDismissed')) return;
             let bannerWs;
             function checkLive() {
               try {
@@ -270,9 +269,16 @@ const primaryLinks = [
                     const msg = JSON.parse(event.data);
                     if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
                       const isLive = msg.data.data.isLive === true;
+
+                      // Header LIVE word always reflects live state
+                      document.getElementById("live-word-desktop")?.classList.toggle("is-live", isLive);
+                      document.getElementById("live-word-mobile")?.classList.toggle("is-live", isLive);
+
+                      // Banner only shows if live AND not dismissed this session
                       const banner = document.getElementById("live-banner");
+                      const dismissed = sessionStorage.getItem('liveBannerDismissed') === '1';
                       if (banner) {
-                        if (isLive && !sessionStorage.getItem('liveBannerDismissed')) {
+                        if (isLive && !dismissed) {
                           banner.classList.remove("hidden");
                           document.body.classList.add("has-live-banner");
                         } else {
@@ -280,8 +286,6 @@ const primaryLinks = [
                           document.body.classList.remove("has-live-banner");
                         }
                       }
-                      document.getElementById("live-word-desktop")?.classList.toggle("is-live", isLive);
-                      document.getElementById("live-word-mobile")?.classList.toggle("is-live", isLive);
                     }
                   } catch (e) {}
                 };
@@ -290,6 +294,7 @@ const primaryLinks = [
             }
             checkLive();
 
+            // Dismiss only hides the banner — header LIVE stays independent
             const dismiss = document.getElementById("live-banner-dismiss");
             if (dismiss) {
               dismiss.addEventListener("click", () => {
