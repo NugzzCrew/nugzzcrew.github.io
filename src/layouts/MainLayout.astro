@@ -4,308 +4,504 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import '../styles/global.css';
+import "../styles/global.css";
 
-const path = Astro.url.pathname.replace(/\/$/, '') || '/';
-const isHomePage = path === '/' || path === '/index.html';
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isHomePage = path === "/" || path === "/index.html";
 
-const channelJoinUrl = "https://www.youtube.com/channel/UCYNmnbEgm3G0m4avmwz_4Eg/join?v=dummy";
+const channelJoinUrl =
+  "https://www.youtube.com/channel/UCYNmnbEgm3G0m4avmwz_4Eg/join?v=dummy";
 
 const socials = [
-  { name: 'YouTube', url: channelJoinUrl, img: 'YouTube Logo.png' },
-  { name: 'Twitch', url: 'https://www.twitch.tv/officialnugzzcrew', img: 'Twitch Logo.png' }, 
-  { name: 'Kick', url: 'https://kick.com/officialnugzzcrew', img: 'Kick Logo.png' }, 
-  { name: 'Discord', url: 'https://discord.gg/officialnugzzcrew', img: 'Discord Logo.png' },
-  { name: 'TikTok', url: 'https://www.tiktok.com/@officialnugzzcrew', img: 'TikTok Logo.png' }, 
-  { name: 'Instagram', url: 'https://www.instagram.com/officialnugzzcrew', img: 'IG Logo.png' },
-  { name: 'X', url: 'https://x.com/NugzzCrew', img: 'X Logo.png' }, 
-  { name: 'Facebook', url: 'https://www.facebook.com/nugzzcrew', img: 'FB Logo.png' },
-  { name: 'Snapchat', url: 'https://www.snapchat.com/add/nugzzcrew', img: 'SnapChat Logo.png' },
-  { name: 'Suno', url: 'https://suno.com/@officialnugzzcrew', img: 'Suno Logo.png' },
-  { name: 'Shop', url: 'https://officialnugzzcrew-shop.fourthwall.com', img: 'FourthWall Logo.png' },
-  { name: 'Crew', url: 'https://socialclub.rockstargames.com/crew/official_nugzz_crew', img: 'Rockstar Logo.png' },
+  { name: "YouTube", url: channelJoinUrl, img: "YouTube Logo.png" },
+  {
+    name: "Twitch",
+    url: "https://www.twitch.tv/officialnugzzcrew",
+    img: "Twitch Logo.png",
+  },
+  {
+    name: "Kick",
+    url: "https://kick.com/officialnugzzcrew",
+    img: "Kick Logo.png",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.gg/officialnugzzcrew",
+    img: "Discord Logo.png",
+  },
+  {
+    name: "TikTok",
+    url: "https://www.tiktok.com/@officialnugzzcrew",
+    img: "TikTok Logo.png",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/officialnugzzcrew",
+    img: "IG Logo.png",
+  },
+  { name: "X", url: "https://x.com/NugzzCrew", img: "X Logo.png" },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/nugzzcrew",
+    img: "FB Logo.png",
+  },
+  {
+    name: "Snapchat",
+    url: "https://www.snapchat.com/add/nugzzcrew",
+    img: "SnapChat Logo.png",
+  },
+  {
+    name: "Suno",
+    url: "https://suno.com/@officialnugzzcrew",
+    img: "Suno Logo.png",
+  },
+  {
+    name: "Shop",
+    url: "https://officialnugzzcrew-shop.fourthwall.com",
+    img: "FourthWall Logo.png",
+  },
+  {
+    name: "Crew",
+    url: "https://socialclub.rockstargames.com/crew/official_nugzz_crew",
+    img: "Rockstar Logo.png",
+  },
 ];
 
 // Primary nav links (keep these short and high-traffic)
 const primaryLinks = [
-  { href: '/live-hub', label: 'Live Hub', live: true },
-  { href: '/gta', label: 'GTA Bonuses' },
-  { href: '/generator', label: 'DMO Gen' },
-  { href: '/gtaresources', label: 'GTA Resources' },
-  { href: '/maps', label: 'Game Maps' },
-  { href: '/emblem', label: 'Emblem Creator' },
+  { href: "/live-hub", label: "Live Hub", live: true },
+  { href: "/gta", label: "GTA Bonuses" },
+  { href: "/generator", label: "DMO Gen" },
+  { href: "/gtaresources", label: "GTA Resources" },
+  { href: "/maps", label: "Game Maps" },
+  { href: "/emblem", label: "Emblem Creator" },
 ];
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{title} | Official Nugzz Crew</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-        <link rel="icon" type="image/png" href="/Logo.png" />
-        <script src="https://unpkg.com/lucide@latest"></script>
-        <script src="https://accounts.google.com/gsi/client" async defer></script>
-    
-        <style>
-          .live-word.is-live {
-            color: #ef4444 !important;
-            animation: live-flash 1s ease-in-out infinite;
-            text-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
-          }
-          @keyframes live-flash {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.45; }
-          }
-        </style>
+  <head>
+    <meta charset="utf-8" />
+    <title>{title} | Official Nugzz Crew</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <link rel="icon" type="image/png" href="/Logo.png" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-    </head>
-    <body class="bg-black text-white antialiased">
-        <nav id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800">
-            <div class="header-inner">
-                <!-- Left: Logo + Brand -->
-                <div class="header-left">
-                    <button
-                        id="menu-toggle"
-                        type="button"
-                        aria-label="Open menu"
-                        aria-expanded="false"
-                        class="nav-burger"
-                    >
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+    <style>
+      .live-word.is-live {
+        color: #ef4444 !important;
+        animation: live-flash 1s ease-in-out infinite;
+        text-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+      }
+      @keyframes live-flash {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.45;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white antialiased">
+    <nav
+      id="site-header"
+      class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800"
+    >
+      <div class="header-inner">
+        <!-- Left: Logo + Brand -->
+        <div class="header-left">
+          <button
+            id="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            class="nav-burger"
+          >
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
 
-                    <a href="/" class="brand-link">
-                        <img src="/Logo.png" alt="Logo" class="brand-logo" />
-                        <span class="brand-mark font-header uppercase tracking-tighter whitespace-nowrap">
-                            <span class="text-white">Official</span> <span class="text-gold">Nugzz Crew</span>
-                        </span>
-                    </a>
-                </div>
-
-                <!-- Center: Primary Nav (desktop) -->
-                <div class="header-center nav-desktop">
-                    {primaryLinks.map((link) => (
-                        <a href={link.href} class="nav-link-desktop">
-                            {link.live ? <><span id="live-word-desktop" class="live-word">Live</span> Hub</> : link.label}
-                        </a>
-                    ))}
-                </div>
-
-                <!-- Right: Auth -->
-                <div class="header-right">
-                    <button
-                      id="auth-btn"
-                      type="button"
-                      onclick="openAuthModal()"
-                      class="auth-btn flex items-center gap-2 px-2 sm:px-3 py-1"
-                    >
-                      <span>Sign In</span>
-                    </button>
-                </div>
-
-                <script is:inline>
-                  (function() {
-                    try {
-                      const raw = localStorage.getItem("nugzzUser");
-                      if (raw) {
-                        const user = JSON.parse(raw);
-                        const btn = document.getElementById("auth-btn");
-                        if (btn && user && user.name) {
-                          btn.innerHTML = user.picture
-                            ? `<img src="${user.picture}" class="w-7 h-7 sm:w-6 sm:h-6 rounded-full object-cover" alt="" /> <span class="hidden sm:inline">${user.name}</span>`
-                            : `<span class="hidden sm:inline">${user.name}</span><span class="sm:hidden text-xs uppercase tracking-wide">Me</span>`;
-                        }
-                      }
-                    } catch (e) {}
-                  })();
-                </script>
-            </div>
-        </nav>
-
-        <!-- Live Banner (dismissable) -->
-        <div id="live-banner" class="hidden fixed top-[4.5rem] left-0 right-0 z-40 bg-red-950/95 border-b border-red-600 text-white text-sm shadow-md" role="status" aria-live="polite">
-          <div class="max-w-7xl mx-auto px-4 py-1.5 flex items-center justify-between gap-3">
-            <div class="flex items-center gap-2 min-w-0">
-              <span class="relative flex h-2 w-2 flex-shrink-0">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-              </span>
-              <span class="font-bold uppercase tracking-wider text-red-200 flex-shrink-0">LIVE</span>
-              <a href="/live-hub" class="truncate hover:underline text-red-100">We're live — Open Live Hub</a>
-            </div>
-            <button id="live-banner-dismiss" type="button" class="flex-shrink-0 text-red-300 hover:text-white text-xl leading-none px-2 -mr-1" aria-label="Dismiss live banner">&times;</button>
-          </div>
+          <a href="/" class="brand-link">
+            <img src="/Logo.png" alt="Logo" class="brand-logo" />
+            <span
+              class="brand-mark font-header uppercase tracking-tighter whitespace-nowrap"
+            >
+              <span class="text-white">Official</span>
+              <span class="text-gold">Nugzz Crew</span>
+            </span>
+          </a>
         </div>
 
-        <div id="auth-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 p-4">
-          <div class="w-full max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-2xl">
-            <div class="flex items-center justify-between mb-4">
-              <h2 class="font-header text-gold uppercase tracking-wide text-lg">Account</h2>
-              <button type="button" onclick="closeAuthModal()" class="text-zinc-400 hover:text-gold text-xl leading-none">&times;</button>
-            </div>
-            <div id="auth-modal-content"></div>
-          </div>
+        <!-- Center: Primary Nav (desktop) -->
+        <div class="header-center nav-desktop">
+          {
+            primaryLinks.map((link) => (
+              <a href={link.href} class="nav-link-desktop">
+                {link.live ? (
+                  <>
+                    <span id="live-word-desktop" class="live-word">
+                      Live
+                    </span>{" "}
+                    Hub
+                  </>
+                ) : (
+                  link.label
+                )}
+              </a>
+            ))
+          }
         </div>
 
-        <div id="nav-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
-        <aside
-            id="nav-menu"
-            class="fixed top-0 left-0 h-full w-80 max-w-[90vw] bg-black/98 border-r border-zinc-800 z-50 -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
-            aria-hidden="true"
-        >
-            <div id="menu-header" class="flex items-center justify-between px-5 border-b border-zinc-800 min-h-[72px]">
-                <span class="font-header text-gold text-base uppercase tracking-wider">Menu</span>
-                <button id="menu-close" type="button" aria-label="Close menu" class="text-zinc-400 hover:text-gold">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="flex flex-col p-5 gap-2">
-                {primaryLinks.map((link) => (
-                    <a href={link.href} class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">
-                        {link.live ? <><span id="live-word-mobile" class="live-word">Live</span> Hub</> : link.label}
-                    </a>
-                ))}
-                <!-- Secondary links can be added here later -->
-                <a href="/media-kit" class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold">Media Kit</a>
-            </div>
-        </aside>
-        
-        <main id="main-content" class="relative z-10">
-            <slot /> 
-        </main>
-
-        {!isHomePage && (
-            <div class="text-center py-8">
-                <a href="/" class="inline-block px-6 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-gold hover:border-gold hover:bg-zinc-800 transition-all uppercase tracking-widest text-sm font-bold">
-                    &larr; Back To Home
-                </a>
-            </div>
-        )}
-
-        <footer class="pt-3 pb-3 md:pt-4 md:pb-4 text-center text-zinc-600 text-[10px] uppercase tracking-widest border-t border-zinc-900 mt-12">
-            <div class="flex justify-center flex-wrap gap-3 md:gap-4 mb-2">
-                {socials.map((social) => (
-                    <a href={social.url} target="_blank" rel="noopener noreferrer" class="group transition-opacity hover:opacity-100" title={social.name}>
-                        <div class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
-                            <img src={`/images/${social.img}`} alt={`${social.name} Logo`} class="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity" />
-                        </div>
-                    </a>
-                ))}
-            </div>
-            <div class="flex justify-center flex-wrap gap-x-4 gap-y-1 mb-2 text-[9px] md:text-[10px]">
-                <a href="/privacy" class="hover:text-gold transition-colors">Privacy Policy</a>
-                <span class="text-zinc-700">|</span>
-                <a href="/terms" class="hover:text-gold transition-colors">Terms of Service</a>
-                <span class="text-zinc-700">|</span>
-                <a href="/contact" class="hover:text-gold transition-colors">Contact</a>
-                <span class="text-zinc-700">|</span>
-                <a href="/media-kit" class="hover:text-gold transition-colors">Media Kit</a>
-            </div>
-            &copy; 2026 Official Nugzz Crew | Built for The Fam Bam
-        </footer>
+        <!-- Right: Auth -->
+        <div class="header-right">
+          <button
+            id="auth-btn"
+            type="button"
+            onclick="openAuthModal()"
+            class="auth-btn flex items-center gap-2 px-2 sm:px-3 py-1"
+          >
+            <span>Sign In</span>
+          </button>
+        </div>
 
         <script is:inline>
-          function initIcons() { if (window.lucide) window.lucide.createIcons(); }
-          window.addEventListener('load', initIcons);
-          document.addEventListener('astro:page-load', initIcons);
-
-          function initMenu() {
-            const toggle = document.getElementById('menu-toggle');
-            const closeBtn = document.getElementById('menu-close');
-            const menu = document.getElementById('nav-menu');
-            const overlay = document.getElementById('nav-overlay');
-            if (!toggle || !menu || !overlay || toggle.dataset.bound) return;
-            toggle.dataset.bound = '1';
-
-            function openMenu() {
-              menu.classList.remove('-translate-x-full');
-              menu.setAttribute('aria-hidden', 'false');
-              overlay.classList.remove('hidden');
-              toggle.setAttribute('aria-expanded', 'true');
-              document.body.style.overflow = 'hidden';
-            }
-
-            function closeMenu() {
-              menu.classList.add('-translate-x-full');
-              menu.setAttribute('aria-hidden', 'true');
-              overlay.classList.add('hidden');
-              toggle.setAttribute('aria-expanded', 'false');
-              document.body.style.overflow = '';
-            }
-
-            toggle.addEventListener('click', openMenu);
-            closeBtn?.addEventListener('click', closeMenu);
-            overlay.addEventListener('click', closeMenu);
-            document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', closeMenu));
-            document.addEventListener('keydown', (e) => {
-              if (e.key === 'Escape') closeMenu();
-            });
-          }
-
-          window.addEventListener('load', initMenu);
-          document.addEventListener('astro:page-load', initMenu);
-        </script>
-
-        <script is:inline src="/js/auth.js"></script>
-    
-        <script is:inline>
-          (function() {
-            let bannerWs;
-            function checkLive() {
-              try {
-                bannerWs = new WebSocket("wss://wss.officialnugzzcrew.com/");
-                bannerWs.onopen = () => {
-                  bannerWs.send(JSON.stringify({ request: "Subscribe", events: { general: ["Custom"] }, id: "BannerSub" }));
-                  setTimeout(() => {
-                    bannerWs.send(JSON.stringify({ request: "DoAction", action: { name: "Web_Request_Status" }, id: "BannerStatus" }));
-                  }, 800);
-                };
-                bannerWs.onmessage = (event) => {
-                  try {
-                    const msg = JSON.parse(event.data);
-                    if (msg.data && msg.data.data && msg.data.data.name === "LiveStatusUpdate") {
-                      const isLive = msg.data.data.isLive === true;
-
-                      // Header LIVE word always reflects live state
-                      document.getElementById("live-word-desktop")?.classList.toggle("is-live", isLive);
-                      document.getElementById("live-word-mobile")?.classList.toggle("is-live", isLive);
-
-                      // Banner only shows if live AND not dismissed this session
-                      const banner = document.getElementById("live-banner");
-                      const dismissed = sessionStorage.getItem('liveBannerDismissed') === '1';
-                      if (banner) {
-                        if (isLive && !dismissed) {
-                          banner.classList.remove("hidden");
-                          document.body.classList.add("has-live-banner");
-                        } else {
-                          banner.classList.add("hidden");
-                          document.body.classList.remove("has-live-banner");
-                        }
-                      }
-                    }
-                  } catch (e) {}
-                };
-                bannerWs.onclose = () => setTimeout(checkLive, 8000);
-              } catch (e) {}
-            }
-            checkLive();
-
-            // Dismiss only hides the banner — header LIVE stays independent
-            const dismiss = document.getElementById("live-banner-dismiss");
-            if (dismiss) {
-              dismiss.addEventListener("click", () => {
-                sessionStorage.setItem('liveBannerDismissed', '1');
-                const banner = document.getElementById("live-banner");
-                if (banner) banner.classList.add("hidden");
-                document.body.classList.remove("has-live-banner");
-              });
-            }
+          (function () {
+            try {
+              const raw = localStorage.getItem("nugzzUser");
+              if (raw) {
+                const user = JSON.parse(raw);
+                const btn = document.getElementById("auth-btn");
+                if (btn && user && user.name) {
+                  btn.innerHTML = user.picture
+                    ? `<img src="${user.picture}" class="w-7 h-7 sm:w-6 sm:h-6 rounded-full object-cover" alt="" /> <span class="hidden sm:inline">${user.name}</span>`
+                    : `<span class="hidden sm:inline">${user.name}</span><span class="sm:hidden text-xs uppercase tracking-wide">Me</span>`;
+                }
+              }
+            } catch (e) {}
           })();
         </script>
+      </div>
+    </nav>
 
-    </body>
+    <!-- Live Banner (dismissable) -->
+    <div
+      id="live-banner"
+      class="hidden fixed top-[4.5rem] left-0 right-0 z-40 bg-red-950/95 border-b border-red-600 text-white text-sm shadow-md"
+      role="status"
+      aria-live="polite"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-1.5 flex items-center justify-between gap-3"
+      >
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="relative flex h-2 w-2 flex-shrink-0">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"
+            ></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"
+            ></span>
+          </span>
+          <span
+            class="font-bold uppercase tracking-wider text-red-200 flex-shrink-0"
+            >LIVE</span
+          >
+          <a href="/live-hub" class="truncate hover:underline text-red-100"
+            >We're live — Open Live Hub</a
+          >
+        </div>
+        <button
+          id="live-banner-dismiss"
+          type="button"
+          class="flex-shrink-0 text-red-300 hover:text-white text-xl leading-none px-2 -mr-1"
+          aria-label="Dismiss live banner">&times;</button
+        >
+      </div>
+    </div>
+
+    <div
+      id="auth-modal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 p-4"
+    >
+      <div
+        class="w-full max-w-sm rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-2xl"
+      >
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-header text-gold uppercase tracking-wide text-lg">
+            Account
+          </h2>
+          <button
+            type="button"
+            onclick="closeAuthModal()"
+            class="text-zinc-400 hover:text-gold text-xl leading-none"
+            >&times;</button
+          >
+        </div>
+        <div id="auth-modal-content"></div>
+      </div>
+    </div>
+
+    <div id="nav-overlay" class="fixed inset-0 bg-black/60 z-40 hidden"></div>
+    <aside
+      id="nav-menu"
+      class="fixed top-0 left-0 h-full w-80 max-w-[90vw] bg-black/98 border-r border-zinc-800 z-50 -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+      aria-hidden="true"
+    >
+      <div
+        id="menu-header"
+        class="flex items-center justify-between px-5 border-b border-zinc-800 min-h-[72px]"
+      >
+        <span class="font-header text-gold text-base uppercase tracking-wider"
+          >Menu</span
+        >
+        <button
+          id="menu-close"
+          type="button"
+          aria-label="Close menu"
+          class="text-zinc-400 hover:text-gold"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col p-5 gap-2">
+        {
+          primaryLinks.map((link) => (
+            <a
+              href={link.href}
+              class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold"
+            >
+              {link.live ? (
+                <>
+                  <span id="live-word-mobile" class="live-word">
+                    Live
+                  </span>{" "}
+                  Hub
+                </>
+              ) : (
+                link.label
+              )}
+            </a>
+          ))
+        }
+        <!-- Secondary links can be added here later -->
+        <a
+          href="/media-kit"
+          class="nav-link px-5 py-4 rounded-lg text-zinc-300 hover:text-gold hover:bg-zinc-900/70 uppercase tracking-widest text-base font-bold"
+          >Media Kit</a
+        >
+      </div>
+    </aside>
+
+    <main id="main-content" class="relative z-10">
+      <slot />
+    </main>
+
+    {
+      !isHomePage && (
+        <div class="text-center py-8">
+          <a
+            href="/"
+            class="inline-block px-6 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-gold hover:border-gold hover:bg-zinc-800 transition-all uppercase tracking-widest text-sm font-bold"
+          >
+            &larr; Back To Home
+          </a>
+        </div>
+      )
+    }
+
+    <footer
+      class="pt-3 pb-3 md:pt-4 md:pb-4 text-center text-zinc-600 text-[10px] uppercase tracking-widest border-t border-zinc-900 mt-12"
+    >
+      <div class="flex justify-center flex-wrap gap-3 md:gap-4 mb-2">
+        {
+          socials.map((social) => (
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group transition-opacity hover:opacity-100"
+              title={social.name}
+            >
+              <div class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <img
+                  src={`/images/${social.img}`}
+                  alt={`${social.name} Logo`}
+                  class="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                />
+              </div>
+            </a>
+          ))
+        }
+      </div>
+      <div
+        class="flex justify-center flex-wrap gap-x-4 gap-y-1 mb-2 text-[9px] md:text-[10px]"
+      >
+        <a href="/privacy" class="hover:text-gold transition-colors"
+          >Privacy Policy</a
+        >
+        <span class="text-zinc-700">|</span>
+        <a href="/terms" class="hover:text-gold transition-colors"
+          >Terms of Service</a
+        >
+        <span class="text-zinc-700">|</span>
+        <a href="/contact" class="hover:text-gold transition-colors">Contact</a>
+        <span class="text-zinc-700">|</span>
+        <a href="/media-kit" class="hover:text-gold transition-colors"
+          >Media Kit</a
+        >
+      </div>
+      &copy; 2026 Official Nugzz Crew | Built for The Fam Bam
+    </footer>
+
+    <script is:inline>
+      function initIcons() {
+        if (window.lucide) window.lucide.createIcons();
+      }
+      window.addEventListener("load", initIcons);
+      document.addEventListener("astro:page-load", initIcons);
+
+      function initMenu() {
+        const toggle = document.getElementById("menu-toggle");
+        const closeBtn = document.getElementById("menu-close");
+        const menu = document.getElementById("nav-menu");
+        const overlay = document.getElementById("nav-overlay");
+        if (!toggle || !menu || !overlay || toggle.dataset.bound) return;
+        toggle.dataset.bound = "1";
+
+        function openMenu() {
+          menu.classList.remove("-translate-x-full");
+          menu.setAttribute("aria-hidden", "false");
+          overlay.classList.remove("hidden");
+          toggle.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          menu.classList.add("-translate-x-full");
+          menu.setAttribute("aria-hidden", "true");
+          overlay.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        }
+
+        toggle.addEventListener("click", openMenu);
+        closeBtn?.addEventListener("click", closeMenu);
+        overlay.addEventListener("click", closeMenu);
+        document
+          .querySelectorAll(".nav-link")
+          .forEach((link) => link.addEventListener("click", closeMenu));
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeMenu();
+        });
+      }
+
+      window.addEventListener("load", initMenu);
+      document.addEventListener("astro:page-load", initMenu);
+    </script>
+
+    <script is:inline src="/js/auth.js"></script>
+
+    <script is:inline>
+      (function () {
+        let bannerWs;
+        function checkLive() {
+          try {
+            bannerWs = new WebSocket("wss://wss.officialnugzzcrew.com/");
+            bannerWs.onopen = () => {
+              bannerWs.send(
+                JSON.stringify({
+                  request: "Subscribe",
+                  events: { general: ["Custom"] },
+                  id: "BannerSub",
+                }),
+              );
+              setTimeout(() => {
+                bannerWs.send(
+                  JSON.stringify({
+                    request: "DoAction",
+                    action: { name: "Web_Request_Status" },
+                    id: "BannerStatus",
+                  }),
+                );
+              }, 800);
+            };
+            bannerWs.onmessage = (event) => {
+              try {
+                const msg = JSON.parse(event.data);
+                if (
+                  msg.data &&
+                  msg.data.data &&
+                  msg.data.data.name === "LiveStatusUpdate"
+                ) {
+                  const isLive = msg.data.data.isLive === true;
+
+                  // Header LIVE word always reflects live state
+                  document
+                    .getElementById("live-word-desktop")
+                    ?.classList.toggle("is-live", isLive);
+                  document
+                    .getElementById("live-word-mobile")
+                    ?.classList.toggle("is-live", isLive);
+
+                  // Banner only shows if live AND not dismissed this session
+                  const banner = document.getElementById("live-banner");
+                  const dismissed =
+                    sessionStorage.getItem("liveBannerDismissed") === "1";
+                  if (banner) {
+                    if (isLive && !dismissed) {
+                      banner.classList.remove("hidden");
+                      document.body.classList.add("has-live-banner");
+                    } else {
+                      banner.classList.add("hidden");
+                      document.body.classList.remove("has-live-banner");
+                    }
+                  }
+                }
+              } catch (e) {}
+            };
+            bannerWs.onclose = () => setTimeout(checkLive, 8000);
+          } catch (e) {}
+        }
+        checkLive();
+
+        // Dismiss only hides the banner — header LIVE stays independent
+        const dismiss = document.getElementById("live-banner-dismiss");
+        if (dismiss) {
+          dismiss.addEventListener("click", () => {
+            sessionStorage.setItem("liveBannerDismissed", "1");
+            const banner = document.getElementById("live-banner");
+            if (banner) banner.classList.add("hidden");
+            document.body.classList.remove("has-live-banner");
+          });
+        }
+      })();
+    </script>
+  </body>
 </html>

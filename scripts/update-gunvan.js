@@ -55,7 +55,7 @@ async function getPageText(browser, url, waitMs = 6000, retries = 2) {
             return text;
         } catch (err) {
             console.warn(`Attempt ${attempt} failed for ${url}: ${err.message}`);
-            try { await page.close(); } catch {}
+            try { await page.close(); } catch { }
             if (attempt > retries) throw err;
             await new Promise(r => setTimeout(r, 3000));
         }
