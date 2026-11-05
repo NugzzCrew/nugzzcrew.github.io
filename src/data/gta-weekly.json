@@ -162,41 +162,36 @@
     "premium": "At the Races"
   },
   "gtaPlus": {
-    "duration": "October 8 - November 4, 2026",
+    "duration": "November 5 - December 9, 2026",
     "freeVehicles": [
-      "Pegassi Oppressor",
-      "Free MTL Brigade 6x6",
-      "Skulls livery for Pegassi Oppressor",
-      "Red/Orange Flip Chameleon Paint",
-      "Red/Orange Flip Chameleon Wheel Paint"
+      "Grotti Itali RSX",
+      "White Prismatic Pearl Chameleon Paint",
+      "White Prismatic Pearl Chameleon Wheel Paint"
     ],
     "clothing": [
-      "Ride or Die Chore Jacket",
-      "Ride or Die Chore Jeans",
-      "Skeleton Bodysuit",
-      "Mummy Costume"
+      "Pop Art Revere Collar",
+      "Sod Off Painting for your Mansion",
+      "Blagueurs Baseball Bat & Snakeskin Knife Weapon Finishes at the Gun Van"
     ],
     "bonuses": [
-      "4X GTA$ & RP on Alien Survivals, Cayo Perico Survival & Ludendorff Cemetery Survival",
-      "2X GTA$ & RP on Jack O' Lanterns",
-      "2X GTA$ & RP on Ghosts Exposed"
+      "2X GTA$ & RP on Contact Missions (4X between November 12 and December 2)",
+      "2X GTA$ & RP on Import/Export Sell Missions",
+      "2X Speed on Staff Sourced Special Cargo"
     ],
     "discounts": [
-      "FREE Acid Lab Supplies",
-      "50% OFF Up-n-Atomizer",
-      "50% OFF Widowmaker",
-      "50% OFF Unholy Hellbringer"
+      "75% OFF Body Armor and Ammo (including Mk II Ammo, stacks with Gun Van discounts)",
+      "60% OFF Warehouses and Vehicle Warehouses"
     ],
     "vinewoodShowroom": [
-      "Albany Brigham with Love Fist livery",
-      "Bravado Buffalo STX",
-      "Declasse Weaponized Tampa with Stars livery",
-      "HVY APC with Skulls livery",
-      "Imponte Deluxo",
-      "LCC Sanctus",
-      "Pegassi Oppressor Mk II with Orange Shade Camo livery",
-      "Principe Deveste Eight",
-      "Vapid FMJ MK V with White Stripe"
+      "Bravado Banshee GTS",
+      "Declasse Scramjet",
+      "Declasse Vigero ZX with E99 livery",
+      "Grotti Stinger TT with Knuckleduster Sport livery",
+      "Obey 10F",
+      "Pegassi Ignus Pursuit",
+      "Pegassi Tezeract",
+      "Pegassi Weaponized Ignus",
+      "Pegassi Zentorno with Rockstar Motorsport livery"
     ],
     "persistent": [
       "FREE Taxi services with shorter cooldowns",
@@ -211,23 +206,22 @@
     ],
     "vinewoodClub": [
       "Showroom: A rotating selection of premium vehicles with an extra 20% discount",
-      "Garage: Unique garage in Downtown Los Santos with 100 personal vehicle slots",
-      "Hangar Storage: Five storage slots that do not require purchasing McKenzie Field Hangar",
+      "Garage: Unique garage in Downtown Los Santos with 100 personal vehicle slots and its own Vehicle Workshop",
+      "Hangar Storage: Own the McKenzie Field Hangar to get 20 additional Personal Aircraft storage slots at your LSIA or Fort Zancudo Smuggler Hangar (15 for non-Members)",
       "Workshop: Discounted mods and no rank requirements",
       "App: Collect your business earnings, buy ammo, request a Car Club vehicle, and purchase or claim Vinewood Car Club vehicles"
     ],
     "gamesLibrary": [
       "Grand Theft Auto V (PS5, Xbox Series X|S & PC)",
+      "Red Dead Redemption (PlayStation, Xbox & PC)",
       "Grand Theft Auto Online (PS5 & Xbox Series X|S)",
       "Grand Theft Auto Vice City - The Definitive Edition (App Store, Google Play, PlayStation, Xbox & PC)",
       "Grand Theft Auto III - The Definitive Edition (App Store, Google Play, PlayStation, Xbox & PC)",
       "Bully (App Store, Google Play, PlayStation, Xbox & PC)",
-      "Red Dead Redemption (PlayStation, Xbox & PC)",
       "GTA: The Trilogy - The Definitive Edition (PlayStation, Xbox & PC)",
       "L.A. Noire (PlayStation, Xbox & PC)",
       "GTA: Liberty City Stories (App Store, Google Play)",
-      "GTA: Chinatown Wars (App Store, Google Play)",
-      "20% discount to purchase one/all the listed games on the platform linked to your GTA+ Membership (Console and PC Only)"
+      "GTA: Chinatown Wars (App Store, Google Play)"
     ]
   }
 }
