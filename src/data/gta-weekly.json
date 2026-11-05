@@ -1,85 +1,74 @@
 {
-  "eventTitle": "Halloween Final Week",
-  "weekEnding": "November 4, 2026",
-  "eventDates": "October 29–November 4, 2026",
-  "fibFile": "The Project Breakaway File",
+  "eventTitle": "Heist Event Week",
+  "weekEnding": "November 11, 2026",
+  "eventDates": "November 5–11, 2026",
+  "fibFile": "The Black Box File",
   "primaryTargets": [
-    "I, Fruit",
-    "Until Death",
-    "Gone To Seed"
+    "The Outcome of Endeavour",
+    "To Beat About the Bush",
+    "Hare Oneself Think",
+    "True Love"
   ],
-  "weeklyChallenge": "Complete 10 waves in a Survival without dying to get the Slasher Clown Outfit and GTA$250,000",
-  "podium": "Progen GP1",
-  "prizeRide": "Karin Previon",
-  "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for two days in a row",
+  "weeklyChallenge": "Win an Adversary Mode to get GTA$100,000",
+  "podium": "Överflöd Entity XXR",
+  "prizeRide": "Annis Hellion",
+  "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
   "weeklyRewards": [
-    "Play GTA Online through November 4 to receive the Brown Vintage Skull Mask and the Halloween Chute Bag",
-    "Complete all Weekly Challenges through November 4 to receive GTA$2,000,000 within 72 hours of completion",
-    "Día de Muertos: Log in to receive the Día de Muertos Tee, Maritime Calaca Mask & Royal Calaca Mask"
+    "Log in to receive The Great Circle Back Mansion Painting Decoration",
+    "Guaranteed Panther Statue Primary Target in your first run of The Cayo Perico Heist",
+    "Guaranteed The Outcome of Endeavour Primary Target Painting in your first run of The Kortz Center Heist"
   ],
   "bonuses": [
     {
       "category": "3X GTA$ & RP",
-      "name": "Halloween Featured Series: Slasher, Ramius - Slasher",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Halloween Survivals: Ludendorff Cemetery Survival, Cayo Perico Survival & Alien Survivals (6X for GTA+ Members)",
-      "value": "3X / 6X GTA+"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "San Andreas Super Sport Series: Hotring Races & Random Transform Races",
-      "value": "3X"
-    },
-    {
-      "category": "3X GTA$ & RP",
-      "name": "Community Mission Series (PS5, Xbox Series X|S & PC Enhanced)",
+      "name": "Mansion Raid",
       "value": "3X"
     },
     {
       "category": "2X GTA$ & RP",
-      "name": "Bail Office Standard and Most Wanted Targets",
+      "name": "Community Race Series",
       "value": "2X"
     },
     {
-      "category": "2X GTA$ & RP",
-      "name": "Dispatch Work",
-      "value": "2X"
+      "category": "2X First-Time Completion Bonus",
+      "name": "All Original Heists",
+      "value": "2X First-Time"
     },
     {
-      "category": "2X GTA$ & RP",
-      "name": "UFO Business Battles",
-      "value": "2X"
+      "category": "2X First-Time Completion Bonus",
+      "name": "The Doomsday Heist (all Acts)",
+      "value": "2X First-Time"
     },
     {
-      "category": "2X GTA$ & RP",
-      "name": "Jack O' Lanterns (4X for GTA+ Members)",
-      "value": "2X / 4X GTA+"
+      "category": "2X First-Time Completion Bonus",
+      "name": "The Diamond Casino Heist",
+      "value": "2X First-Time"
     },
     {
-      "category": "2X GTA$ & RP",
-      "name": "Ghosts Exposed (4X for GTA+ Members)",
-      "value": "2X / 4X GTA+"
+      "category": "2X First-Time Completion Bonus",
+      "name": "KnoWay Out",
+      "value": "2X First-Time"
     }
   ],
   "loginRewards": [
-    "Brown Vintage Skull Mask and the Halloween Chute Bag (Free for playing GTA Online through Nov 4)",
-    "Día de Muertos Tee, Maritime Calaca Mask & Royal Calaca Mask (Log in)"
+    "The Great Circle Back Mansion Painting Decoration (Log in)"
   ],
   "specialRewards": [
     {
-      "action": "Complete 10 waves in a Survival without dying",
-      "reward": "Slasher Clown Outfit + GTA$250,000"
+      "action": "Win an Adversary Mode",
+      "reward": "GTA$100,000"
     },
     {
-      "action": "Complete all Weekly Challenges through Nov 4",
-      "reward": "GTA$2,000,000 (within 72 hours)"
+      "action": "First run of The Cayo Perico Heist",
+      "reward": "Guaranteed Panther Statue Primary Target"
     },
     {
-      "action": "Log in for Día de Muertos",
-      "reward": "Día de Muertos Tee + Maritime Calaca Mask + Royal Calaca Mask"
+      "action": "First run of The Kortz Center Heist",
+      "reward": "Guaranteed The Outcome of Endeavour Painting"
+    },
+    {
+      "action": "First-time completion of Original Heists / Doomsday / Casino / KnoWay Out",
+      "reward": "2X GTA$ Completion Bonus"
     }
   ],
   "discounts": {
@@ -88,198 +77,88 @@
     "sixty": [],
     "fifty": [],
     "forty": [
-      "Agency Properties including Upgrades and Modifications",
-      "Albany Brigham",
-      "Albany Fränken Stange",
-      "Albany Lurcher",
-      "Declasse Tornado Rat Rod",
-      "LCC Sanctus"
+      "Casino Master Penthouse including Upgrades and Modifications",
+      "Facility Properties including Upgrades and Modifications",
+      "High-End Apartments"
     ],
     "thirty": [
-      "Bravado Gauntlet Classic",
-      "Invetero Coquette D10",
-      "Karin Futo GTX",
-      "MTL Dune",
-      "Pegassi Infernus Classic",
-      "Shitzu Keitora",
-      "Übermacht Zion Classic",
-      "Vapid Firebolt ASP",
-      "Vapid FMJ"
+      "Benefactor Vorschlaghammer",
+      "Cheval Taipan",
+      "Dinka Blista Kanjo",
+      "Grotti Cheetah",
+      "HVY Insurgent",
+      "Invetero Coquette D5",
+      "Maibatsu Penumbra FF",
+      "Pegassi Reaper",
+      "Western Company Besra",
+      "Western Rampant Rocket",
+      "Grotti Veleno GT (25% OFF – First Time Vehicle Discount)"
     ]
   },
   "gunVan": [
-    "Precision Rifle",
-    "Combat Shotgun",
     "El Strickler",
-    "Knife",
-    "Baseball Bat",
+    "Sweeper Shotgun",
+    "Widowmaker",
+    "Knuckle Dusters",
+    "Proximity Mines",
     "Pipe Bombs",
-    "The Shocker (FREE)",
-    "Service Carbine (30% OFF)",
-    "Up-n-Atomizer (50% OFF for GTA+ Members)",
-    "Unholy Hellbringer (50% OFF for GTA+ Members)",
-    "Widowmaker (50% OFF for GTA+ Members)"
+    "Molotovs",
+    "Baseball Bat (FREE)",
+    "Knife (FREE)",
+    "Precision Rifle (50% OFF)",
+    "Compact EMP Launcher (40% OFF for GTA+ Members)",
+    "Armor (80% OFF for GTA+ Members)"
   ],
   "rotatingContent": {
-    "fibPriorityFile": "The Project Breakaway File",
+    "fibPriorityFile": "The Black Box File",
     "kortzCenterPrimaryTargets": [
-      "I, Fruit",
-      "Until Death",
-      "Gone To Seed"
+      "The Outcome of Endeavour",
+      "To Beat About the Bush",
+      "Hare Oneself Think",
+      "True Love"
     ]
   },
   "salvageYard": [
     {
-      "robbery": "The Gangbanger Robbery",
-      "name": "Lampadati Cinquemila",
-      "type": "Top Tier"
-    },
-    {
       "robbery": "The Podium Robbery",
-      "name": "Karin Boor",
+      "name": "Annis Hellion",
       "type": "Standard Tier"
     },
     {
-      "robbery": "The Duggan Robbery",
-      "name": "Albany Fränken Stange",
+      "robbery": "The Cargo Ship Robbery",
+      "name": "Truffade Z-Type",
       "type": "Low Tier"
+    },
+    {
+      "robbery": "The McTony Robbery",
+      "name": "Lampadati Cinquemila",
+      "type": "Top Tier"
     }
   ],
   "simeonVehicles": [
-    "Albany Brigham",
-    "Albany Fränken Stange",
-    "Albany Lurcher",
-    "Declasse Tornado Rat Rod",
-    "LCC Sanctus"
+    "Dinka Blista Kanjo",
+    "Grotti Cheetah",
+    "Invetero Coquette D5",
+    "Maibatsu Penumbra FF",
+    "Benefactor Vorschlaghammer"
   ],
   "luxuryAutos": [
-    "Dewbauchee Rapid GT X",
-    "Übermacht Sentinel XS4"
+    "Grotti Veleno GT",
+    "Grotti GT750"
   ],
   "lsCarMeet": {
-    "prizeRide": "Karin Previon",
-    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for two days in a row",
+    "prizeRide": "Annis Hellion",
+    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
     "testTrack": [
-      "Declasse Vamos",
-      "Dewbauchee Seven-70",
-      "Ocelot Locust"
+      "Cheval Taipan",
+      "HVY Insurgent",
+      "Pegassi Reaper"
     ],
-    "hsw": "Maibatsu MonstroCiti"
+    "hsw": "Grotti Brioso R/A"
   },
   "timeTrials": {
-    "regular": "Route 68",
-    "hsw": "East Vinewood to Vespucci Beach",
-    "premium": "Wiwang Park"
-  },
-  "halloweenSeason": {
-    "duration": "October 1 - November 4, 2026",
-    "grandReward": "Complete all Weekly Challenges through November 4 to receive GTA$2,000,000 within 72 hours.",
-    "specialEvents": [
-      "Slashers & Clone Slasher",
-      "Phantom Car & Cerberus Surprise",
-      "Possessed Animals & Ghosts Exposed",
-      "Jack O'Lanterns & Peyote Plants"
-    ],
-    "roadmap": [
-      {
-        "dates": "October 1–7",
-        "challenge": "Secure two Bail Office Bounties",
-        "reward": "Green Vintage Skull Mask and GTA$100,000",
-        "apparel": "Cheerleader Massacre 3 T-Shirt"
-      },
-      {
-        "dates": "October 8–14",
-        "challenge": "Win two Adversary Modes",
-        "reward": "Pink Skull Emissive Mask and GTA$100,000",
-        "apparel": "Twilight Knife T-Shirt"
-      },
-      {
-        "dates": "October 15–21",
-        "challenge": "Win three Races",
-        "reward": "Orange Glow Skeleton Onesie and GTA$100,000",
-        "apparel": "Butchery and Other Hobbies T-Shirt"
-      },
-      {
-        "dates": "October 22–28",
-        "challenge": "Complete all waves of a Survival",
-        "reward": "Gray Interloper Outfit and GTA$150,000",
-        "apparel": "White & Red Tech Demon Mask"
-      },
-      {
-        "dates": "October 29–November 4",
-        "challenge": "Complete 10 waves in a Survival without dying",
-        "reward": "Slasher Clown Outfit and GTA$250,000",
-        "apparel": "Brown Vintage Skull Mask and the Halloween Chute Bag"
-      }
-    ]
-  },
-  "gtaPlus": {
-    "duration": "October 8 - November 4, 2026",
-    "freeVehicles": [
-      "Pegassi Oppressor",
-      "Free MTL Brigade 6x6",
-      "Skulls livery for Pegassi Oppressor",
-      "Red/Orange Flip Chameleon Paint",
-      "Red/Orange Flip Chameleon Wheel Paint"
-    ],
-    "clothing": [
-      "Ride or Die Chore Jacket",
-      "Ride or Die Chore Jeans",
-      "Skeleton Bodysuit",
-      "Mummy Costume"
-    ],
-    "bonuses": [
-      "4X GTA$ & RP on Alien Survivals, Cayo Perico Survival & Ludendorff Cemetery Survival",
-      "2X GTA$ & RP on Jack O' Lanterns",
-      "2X GTA$ & RP on Ghosts Exposed"
-    ],
-    "discounts": [
-      "FREE Acid Lab Supplies",
-      "50% OFF Up-n-Atomizer",
-      "50% OFF Widowmaker",
-      "50% OFF Unholy Hellbringer"
-    ],
-    "vinewoodShowroom": [
-      "Albany Brigham with Love Fist livery",
-      "Bravado Buffalo STX",
-      "Declasse Weaponized Tampa with Stars livery",
-      "HVY APC with Skulls livery",
-      "Imponte Deluxo",
-      "LCC Sanctus",
-      "Pegassi Oppressor Mk II with Orange Shade Camo livery",
-      "Principe Deveste Eight",
-      "Vapid FMJ MK V with White Stripe"
-    ],
-    "persistent": [
-      "FREE Taxi services with shorter cooldowns",
-      "FREE access to all CEO/VIP Abilities",
-      "FREE access to all vehicle requests from the interaction menu",
-      "Remote Access to manage the staff of your businesses",
-      "Extra Lucky Wheel Spin Every Day",
-      "Claim All Business Earnings",
-      "Gun Van always blipped on the map with additional discounts",
-      "GTA$500,000 every month",
-      "15% extra bonus GTA$ for any Shark Card"
-    ],
-    "vinewoodClub": [
-      "Showroom: A rotating selection of premium vehicles with an extra 20% discount",
-      "Garage: Unique garage in Downtown Los Santos with 100 personal vehicle slots",
-      "Hangar Storage: Five storage slots that do not require purchasing McKenzie Field Hangar",
-      "Workshop: Discounted mods and no rank requirements",
-      "App: Collect your business earnings, buy ammo, request a Car Club vehicle, and purchase or claim Vinewood Car Club vehicles"
-    ],
-    "gamesLibrary": [
-      "Grand Theft Auto V (PS5, Xbox Series X|S & PC)",
-      "Grand Theft Auto Online (PS5 & Xbox Series X|S)",
-      "Grand Theft Auto Vice City - The Definitive Edition (App Store, Google Play, PlayStation, Xbox & PC)",
-      "Grand Theft Auto III - The Definitive Edition (App Store, Google Play, PlayStation, Xbox & PC)",
-      "Bully (App Store, Google Play, PlayStation, Xbox & PC)",
-      "Red Dead Redemption (PlayStation, Xbox & PC)",
-      "GTA: The Trilogy - The Definitive Edition (PlayStation, Xbox & PC)",
-      "L.A. Noire (PlayStation, Xbox & PC)",
-      "GTA: Liberty City Stories (App Store, Google Play)",
-      "GTA: Chinatown Wars (App Store, Google Play)",
-      "20% discount to purchase one/all the listed games on the platform linked to your GTA+ Membership (Console and PC Only)"
-    ]
+    "regular": "LSIA",
+    "hsw": "Del Perro Beach to Murietta Heights",
+    "premium": "At the Races"
   }
 }
