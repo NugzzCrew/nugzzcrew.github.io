@@ -1627,15 +1627,21 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
     if (cooldownRemaining > 0) return;
 
+    const displayName = user.name || "";
     const payload = {
       request: "DoAction",
       action: { name: actionName },
       args: {
         isWebsocketRequest: "True",
+        // Core identity — cover every name your actions might look for
         userId: user.youtubeId,
+        user: displayName, // some actions use %user%
+        userName: displayName, // some actions use %userName%
+        displayName: displayName, // fallback
         userProfileUrl: user.picture || "",
-        userName: user.name,
+        profileImageUrl: user.picture || "",
         userType: "youtube",
+        // Discord (if linked)
         discordId: user.discord?.id || "",
         discordUsername: user.discord?.username || "",
       },
@@ -1644,6 +1650,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     if (extraCommand) {
       payload.args.commandName = extraCommand;
       payload.args.command = extraCommand;
+      payload.args.rawInput = extraCommand; // some actions read %rawInput%
+      payload.args.message = extraCommand;
     }
     ws.send(JSON.stringify(payload));
     startCooldown();
