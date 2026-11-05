@@ -4,7 +4,7 @@
   /* Define Nugzz Gold for Tailwind */
   --color-gold: #D4AF37;
   --color-gold-bright: #FFD700;
-
+  
   /* Define HighSpeed Font for Tailwind */
   --font-header: "HighSpeed", ui-sans-serif, system-ui, sans-serif;
 }
@@ -21,10 +21,8 @@
   body {
     @apply bg-black text-white;
   }
-
-  h1,
-  h2,
-  h3 {
+  
+  h1, h2, h3 {
     font-family: 'HighSpeed', sans-serif;
     @apply text-white uppercase tracking-wider;
   }
@@ -41,7 +39,6 @@
 
   /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
@@ -54,9 +51,7 @@
 
 /* ========== Global layout & utilities (moved from MainLayout) ========== */
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -64,8 +59,7 @@ html {
   scrollbar-gutter: stable;
 }
 
-html,
-body {
+html, body {
   max-width: 100%;
   overflow-x: hidden !important;
 }
@@ -85,7 +79,6 @@ body {
 #main-content :is(.rounded-2xl, .rounded-3xl, .rounded-\[2\.5rem\]) {
   box-shadow: 0 0 50px -12px rgba(212, 175, 55, 0.35);
 }
-
 #site-header {
   position: fixed !important;
   top: 0 !important;
@@ -138,7 +131,6 @@ body {
   transform: scale(1);
   transition: transform 0.7s ease, opacity 0.5s ease;
 }
-
 .group:hover .van-map {
   transform: scale(2);
 }
@@ -147,12 +139,10 @@ body {
   border-color: #ef4444 !important;
   box-shadow: 0 0 42px -6px rgba(239, 68, 68, 0.8) !important;
 }
-
 .glow-purple:hover {
   border-color: #c084fc !important;
   box-shadow: 0 0 42px -6px rgba(192, 132, 252, 0.8) !important;
 }
-
 .glow-blue:hover {
   border-color: #60a5fa !important;
   box-shadow: 0 0 42px -6px rgba(96, 165, 250, 0.8) !important;
@@ -175,7 +165,6 @@ body {
   justify-content: center !important;
   background: #000 !important;
 }
-
 #video-container.is-theater #offline-placeholder {
   position: relative !important;
   width: auto !important;
@@ -184,13 +173,11 @@ body {
   max-height: 86dvh !important;
   object-fit: contain !important;
 }
-
 #video-container.is-theater #yt-video-frame {
   position: relative !important;
   width: min(96vw, calc(86dvh * 16 / 9)) !important;
   height: min(86dvh, calc(96vw * 9 / 16)) !important;
 }
-
 #video-container.is-theater #theater-btn {
   position: absolute !important;
   top: 16px !important;
@@ -199,9 +186,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
+  body { background-attachment: scroll; }
 }
 
 /* ========== Header layout (absolute-centered nav, brand never truncated) ========== */
@@ -247,10 +232,7 @@ body {
   color: rgb(212 212 216);
   flex-shrink: 0;
 }
-
-.nav-burger:hover {
-  color: #D4AF37;
-}
+.nav-burger:hover { color: #D4AF37; }
 
 .brand-link {
   display: flex !important;
@@ -259,10 +241,7 @@ body {
   gap: 0.5rem;
   text-decoration: none;
 }
-
-.brand-link:hover {
-  opacity: 0.9;
-}
+.brand-link:hover { opacity: 0.9; }
 
 .brand-logo {
   width: 2rem !important;
@@ -272,7 +251,6 @@ body {
   object-fit: contain !important;
   flex-shrink: 0;
 }
-
 @media (min-width: 768px) {
   .brand-logo {
     width: 2.25rem !important;
@@ -287,14 +265,12 @@ body {
   line-height: 1 !important;
   white-space: nowrap;
 }
-
 /* Hide brand text on medium desktop so it never collides with the centered nav */
 @media (max-width: 1399px) {
   .brand-mark {
     display: none;
   }
 }
-
 @media (min-width: 1400px) {
   .brand-mark {
     display: inline;
@@ -312,21 +288,18 @@ body {
   letter-spacing: 0.11em;
   color: rgb(161 161 170);
 }
-
 @media (min-width: 1100px) {
   .nav-desktop {
     display: flex !important;
     flex-direction: row !important;
   }
 }
-
 @media (min-width: 1280px) {
   .nav-desktop {
     font-size: 0.72rem;
     gap: 1.4rem !important;
   }
 }
-
 @media (min-width: 1440px) {
   .nav-desktop {
     font-size: 0.75rem;
@@ -339,10 +312,7 @@ body {
   transition: color 0.15s;
   text-decoration: none;
 }
-
-.nav-link-desktop:hover {
-  color: #D4AF37;
-}
+.nav-link-desktop:hover { color: #D4AF37; }
 
 .auth-btn {
   flex-shrink: 0;
@@ -360,7 +330,6 @@ body {
   color: rgb(212 212 216);
   cursor: pointer;
 }
-
 .auth-btn:hover {
   border-color: #D4AF37;
   color: #D4AF37;
@@ -371,30 +340,13 @@ body {
     gap: 0.75rem;
     padding-inline: 0.75rem;
   }
-
-  .header-center {
-    display: none;
-  }
-
-  .nav-burger {
-    display: flex !important;
-  }
-
-  .nav-desktop {
-    display: none !important;
-  }
-
-  .brand-mark {
-    display: inline !important;
-  }
-
-  /* always show full name on mobile/tablet */
+  .header-center { display: none; }
+  .nav-burger { display: flex !important; }
+  .nav-desktop { display: none !important; }
+  .brand-mark { display: inline !important; } /* always show full name on mobile/tablet */
 }
-
 @media (min-width: 1100px) {
-  .nav-burger {
-    display: none !important;
-  }
+  .nav-burger { display: none !important; }
 }
 
 .text-gold-bright {
@@ -424,7 +376,6 @@ body {
 .nugzz-card-orange {
   border-top-color: #f97316;
 }
-
 .nugzz-card-orange:hover {
   border-color: rgb(249 115 22 / 0.6);
 }
@@ -432,11 +383,9 @@ body {
 .nugzz-card-red {
   border-top-color: #ef4444;
 }
-
 .nugzz-card-purple {
   border-top-color: #c084fc;
 }
-
 .nugzz-card-blue {
   border-top-color: #60a5fa;
 }
@@ -452,12 +401,10 @@ body {
   font-size: 0.875rem;
   transition: border-color 0.15s, color 0.15s;
 }
-
 .cmd-btn:hover:not(:disabled) {
   border-color: #D4AF37;
   color: #D4AF37;
 }
-
 .cmd-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
@@ -504,13 +451,11 @@ body {
   .auth-btn span {
     display: none !important;
   }
-
   .auth-btn {
     padding: 0.25rem;
     gap: 0;
     border-radius: 9999px;
   }
-
   .auth-btn img {
     width: 2rem;
     height: 2rem;
@@ -531,17 +476,14 @@ body {
   cursor: pointer;
   transition: color 0.15s, background 0.15s;
 }
-
 .music-btn:hover:not(:disabled) {
   color: #D4AF37;
   background: rgb(39 39 42 / 0.6);
 }
-
 .music-btn:disabled {
   opacity: 0.35;
   cursor: not-allowed;
 }
-
 .music-btn svg {
   pointer-events: none;
 }
@@ -549,12 +491,11 @@ body {
 /* Owner debug tools */
 .owner-debug-tools {
   padding: 0.75rem 1rem;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0,0,0,0.35);
   border: 1px solid rgb(63 63 70);
   border-radius: 0.5rem;
   font-size: 0.8rem;
 }
-
 .owner-debug-toggle {
   display: flex;
   align-items: center;
@@ -562,14 +503,12 @@ body {
   margin-bottom: 0.5rem;
   cursor: pointer;
 }
-
 .owner-video-override {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-
 .owner-video-override input {
   flex: 1;
   min-width: 140px;
@@ -581,8 +520,31 @@ body {
   color: white;
   font-size: 0.8rem;
 }
-
 .owner-video-override .cmd-btn {
   padding: 0.25rem 0.6rem;
   font-size: 0.75rem;
+}
+
+/* ========== Unlock photo thumbnails (consistent size) ========== */
+.unlock-shot {
+  display: block;
+  width: 14rem;
+  height: 14rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(63 63 70);
+  background: black;
+  flex-shrink: 0;
+}
+.unlock-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 640px) {
+  .unlock-shot {
+    width: 10rem;
+    height: 10rem;
+  }
 }
