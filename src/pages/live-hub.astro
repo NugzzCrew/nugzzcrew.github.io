@@ -79,7 +79,17 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
 
     <!-- Commands -->
-    <div id="commands-container" class="nugzz-card w-full max-w-4xl mx-auto">
+    <div id="commands-container" class="nugzz-card w-full max-w-4xl mx-auto relative">
+      <!-- Link Discord Button -->
+      <button
+        id="link-discord-btn"
+        class="absolute top-4 right-4 bg-zinc-800 hover:bg-zinc-700 text-gold text-xs uppercase tracking-widest px-3 py-1.5 rounded border border-zinc-600 hover:border-gold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        onclick="handleLinkDiscord()"
+        disabled
+      >
+        Link Discord
+      </button>
+
       <h2
         class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center"
       >
@@ -478,7 +488,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           class="cmd-btn stream-cmd"
           onclick="sendAction('Link - Website & Socials')"
           disabled>Website & Socials</button
-        >
       </div>
 
       <!-- TTS Voices -->
@@ -585,7 +594,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           class="cmd-btn stream-cmd"
           onclick="sendAction('2 - Command Spanish Male')"
           disabled>Spanish Male</button
-        >
       </div>
 
       <!-- Leaderboards -->
@@ -677,7 +685,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           class="cmd-btn stream-cmd"
           onclick="sendAction('Top Gen 9')"
           disabled>Top Gen 9</button
-        >
       </div>
 
       <!-- Colors -->
@@ -751,7 +758,6 @@ import MainLayout from "../layouts/MainLayout.astro";
         >
         <button class="cmd-btn stream-cmd" onclick="sendAction('RDR2')" disabled
           >RDR2</button
-        >
       </div>
 
       <!-- Textures -->
@@ -834,7 +840,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           class="cmd-btn stream-cmd"
           onclick="sendAction('Candy Cane')"
           disabled>Candy Cane</button
-        >
       </div>
 
       <!-- Games & Actions -->
@@ -899,7 +904,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           class="cmd-btn stream-cmd"
           onclick="sendAction('Racer')"
           disabled>Racer</button
-        >
       </div>
 
       <!-- Soundbytes -->
@@ -949,7 +953,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         >
         <button
           class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Don't Fuck it Up)')"
+          onclick="sendAction('Soundbyte (Don\'t Fuck it Up)')"
           disabled>Don't Fuck it Up</button
         >
         <button
@@ -999,7 +1003,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         >
         <button
           class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Let's Go)')"
+          onclick="sendAction('Soundbyte (Let\'s Go)')"
           disabled>Let's Go</button
         >
         <button
@@ -1159,9 +1163,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         >
         <button
           class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Don't Smoke Crack)')"
+          onclick="sendAction('Soundbyte (Don\'t Smoke Crack)')"
           disabled>Don't Smoke Crack</button
-        >
       </div>
 
       <!-- Albums -->
@@ -1273,7 +1276,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           class="cmd-btn stream-cmd"
           onclick="sendAction('Select Album', 'Favorites')"
           disabled>Favorites</button
-        >
       </div>
 
       <!-- Pokémon -->
@@ -1367,7 +1369,6 @@ import MainLayout from "../layouts/MainLayout.astro";
         >
         <button class="cmd-btn stream-cmd" onclick="sendAction('LBG9')" disabled
           >LBG9</button
-        >
       </div>
     </div>
   </div>
@@ -1395,6 +1396,8 @@ import MainLayout from "../layouts/MainLayout.astro";
             id: "StatusCheck",
           }),
         );
+        // Force evaluation of Discord button right after WS connection
+        updateStreamState(currentLiveVideoId !== null);
       }, 1000);
     };
 
@@ -1418,11 +1421,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     ws.onclose = () => {
       const el = document.getElementById("status-msg");
       if (el) el.textContent = "Offline: Streamer's PC not reachable.";
+      updateStreamState(false);
       setTimeout(connectBot, 5000);
     };
   }
 
-  // Owner channel ID — replace with Official Nugzz Crew YouTube channel ID
   const OWNER_CHANNEL_ID = "UCYNmnbEgm3G0m4avmwz_4Eg";
   let ownerForceEnable = false;
   let ownerOverrideVideoId = null;
@@ -1440,13 +1443,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     const incomingId = (data.videoId || "").trim();
 
-    // Owner override is absolute — don't fight the custom video
     if (ownerOverrideVideoId) {
       updateStreamState(data.isLive === true);
       return;
     }
 
-    // Already showing this exact video — skip reload to prevent flicker
     if (incomingId !== "" && currentLiveVideoId === incomingId) {
       updateStreamState(data.isLive === true);
       return;
@@ -1546,17 +1547,23 @@ import MainLayout from "../layouts/MainLayout.astro";
   function updateStreamState(live) {
     const msgEl = document.getElementById("status-msg");
     const buttons = document.querySelectorAll(".stream-cmd");
+    const linkDiscordBtn = document.getElementById("link-discord-btn");
     const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
     const isOwner = user && user.youtubeId === OWNER_CHANNEL_ID;
     const debugTools = document.getElementById("owner-debug-tools");
+    const isConnected = ws && ws.readyState === WebSocket.OPEN;
 
     if (debugTools) {
       debugTools.classList.toggle("hidden", !isOwner);
     }
 
+    // Link Discord is active whenever connected to bot, regardless of live stream status or user auth status
+    if (linkDiscordBtn) {
+      linkDiscordBtn.disabled = !isConnected;
+    }
+
     if (!msgEl) return;
 
-    const isConnected = ws && ws.readyState === WebSocket.OPEN;
     const allowCommands =
       isConnected && user && (live || (isOwner && ownerForceEnable));
 
@@ -1585,6 +1592,41 @@ import MainLayout from "../layouts/MainLayout.astro";
       }
       msgEl.style.color = "#a1a1aa";
     }
+  }
+
+  function handleLinkDiscord() {
+    if (!ws || ws.readyState !== WebSocket.OPEN) {
+      alert("Not connected to Streamer.bot.");
+      return;
+    }
+
+    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
+
+    // Check if both YouTube and Discord are available in local storage
+    if (!user || !user.youtubeId || !user.discord || !user.discord.id) {
+      const authPrompt = confirm("You need to be signed in to YouTube and have Discord linked to proceed. Click OK to log in/authorize.");
+      if (authPrompt) {
+        // Adjust this route to match your actual authentication flow
+        window.location.href = "/login";
+      }
+      return;
+    }
+
+    const payload = {
+      request: "DoAction",
+      action: { name: "Link Discord From Website" },
+      args: {
+        youtubeName: user.name || "",
+        youtubeId: user.youtubeId || "",
+        userProfileUrl: user.picture || "",
+        discordName: user.discord.username || "",
+        discordId: user.discord.id || ""
+      },
+      id: "WebLinkDiscord"
+    };
+
+    ws.send(JSON.stringify(payload));
+    alert("Discord link sent to Streamer.bot!");
   }
 
   let cooldownTimer = null;
@@ -1633,15 +1675,13 @@ import MainLayout from "../layouts/MainLayout.astro";
       action: { name: actionName },
       args: {
         isWebsocketRequest: "True",
-        // Core identity — cover every name your actions might look for
         userId: user.youtubeId,
-        user: displayName, // some actions use %user%
-        userName: displayName, // some actions use %userName%
-        displayName: displayName, // fallback
+        user: displayName, 
+        userName: displayName, 
+        displayName: displayName, 
         userProfileUrl: user.picture || "",
         profileImageUrl: user.picture || "",
         userType: "youtube",
-        // Discord (if linked)
         discordId: user.discord?.id || "",
         discordUsername: user.discord?.username || "",
       },
@@ -1650,7 +1690,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     if (extraCommand) {
       payload.args.commandName = extraCommand;
       payload.args.command = extraCommand;
-      payload.args.rawInput = extraCommand; // some actions read %rawInput%
+      payload.args.rawInput = extraCommand; 
       payload.args.message = extraCommand;
     }
     ws.send(JSON.stringify(payload));
@@ -1664,7 +1704,6 @@ import MainLayout from "../layouts/MainLayout.astro";
   window.addEventListener("load", () => {
     connectBot();
 
-    // Owner debug tools
     const forceCheckbox = document.getElementById("owner-force-enable");
     const loadBtn = document.getElementById("owner-load-video");
     const clearBtn = document.getElementById("owner-clear-video");
@@ -1673,7 +1712,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     if (forceCheckbox) {
       forceCheckbox.addEventListener("change", (e) => {
         ownerForceEnable = e.target.checked;
-        updateStreamState(false); // will re-evaluate based on flag
+        updateStreamState(false); 
       });
     }
     if (loadBtn) {
@@ -1698,7 +1737,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
   });
 
-  // Theater Mode
   const theaterBtn = document.getElementById("theater-btn");
   const videoContainer = document.getElementById("video-container");
   let isTheater = false;
