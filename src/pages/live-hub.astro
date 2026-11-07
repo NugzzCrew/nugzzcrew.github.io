@@ -743,7 +743,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     if (linkDiscordBtn) {
-      linkDiscordBtn.disabled = !isConnected;
+      const alreadyLinked = user && localStorage.getItem(`discordLinked_${user.youtubeId}`) === "true";
+      if (alreadyLinked) {
+        linkDiscordBtn.disabled = true;
+        linkDiscordBtn.innerHTML = 'Linked <span class="text-green-400">✓</span>';
+      } else {
+        linkDiscordBtn.disabled = !isConnected;
+        linkDiscordBtn.innerHTML = 'Link Discord';
+      }
     }
 
     if (!msgEl) return;
@@ -808,7 +815,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     };
 
     ws.send(JSON.stringify(payload));
-    alert("Discord link sent to Streamer.bot!");
+    
+    // Prevent spamming and update UI
+    localStorage.setItem(`discordLinked_${user.youtubeId}`, "true");
+    const btn = document.getElementById("link-discord-btn");
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = 'Linked <span class="text-green-400">✓</span>';
+    }
   }
 
   let cooldownTimer = null;
