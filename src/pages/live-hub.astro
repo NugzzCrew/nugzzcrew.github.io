@@ -79,7 +79,20 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
 
     <!-- Commands -->
-    <div id="commands-container" class="nugzz-card w-full max-w-4xl mx-auto">
+    <div
+      id="commands-container"
+      class="nugzz-card w-full max-w-4xl mx-auto relative"
+    >
+      <!-- Link Discord Button -->
+      <button
+        id="link-discord-btn"
+        class="absolute top-4 right-4 bg-zinc-800 hover:bg-zinc-700 text-gold text-xs uppercase tracking-widest px-3 py-1.5 rounded border border-zinc-600 hover:border-gold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        onclick="handleLinkDiscord()"
+        disabled
+      >
+        Link Discord
+      </button>
+
       <h2
         class="font-header text-gold uppercase tracking-wide text-lg mb-2 text-center"
       >
@@ -479,1260 +492,1401 @@ import MainLayout from "../layouts/MainLayout.astro";
           onclick="sendAction('Link - Website & Socials')"
           disabled>Website & Socials</button
         >
-      </div>
 
-      <!-- TTS Voices -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        TTS Voices <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('1 - Check User Voice')"
-          disabled>Check User Voice</button
+        <!-- TTS Voices -->
+        <h3
+          class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+          onclick="toggleSection(this)"
         >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Australian Female')"
-          disabled>Aus Female</button
+          TTS Voices <span class="text-gold">▼</span>
+        </h3>
+        <div
+          class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
         >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Australian Male')"
-          disabled>Aus Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command British Female')"
-          disabled>Brit Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command British Male')"
-          disabled>Brit Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Female')"
-          disabled>Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command French Female')"
-          disabled>French Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command French Male')"
-          disabled>French Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Hindi Female')"
-          disabled>Hindi Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Hindi Male')"
-          disabled>Hindi Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Italian Female')"
-          disabled>Italian Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Italian Male')"
-          disabled>Italian Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Japanese Female')"
-          disabled>JP Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Japanese Male')"
-          disabled>JP Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Male')"
-          disabled>Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Russian Female')"
-          disabled>Russian Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Russian Male')"
-          disabled>Russian Male</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Spanish Female')"
-          disabled>Spanish Female</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('2 - Command Spanish Male')"
-          disabled>Spanish Male</button
-        >
-      </div>
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('1 - Check User Voice')"
+            disabled>Check User Voice</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Australian Female')"
+            disabled>Aus Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Australian Male')"
+            disabled>Aus Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command British Female')"
+            disabled>Brit Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command British Male')"
+            disabled>Brit Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Female')"
+            disabled>Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command French Female')"
+            disabled>French Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command French Male')"
+            disabled>French Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Hindi Female')"
+            disabled>Hindi Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Hindi Male')"
+            disabled>Hindi Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Italian Female')"
+            disabled>Italian Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Italian Male')"
+            disabled>Italian Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Japanese Female')"
+            disabled>JP Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Japanese Male')"
+            disabled>JP Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Male')"
+            disabled>Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Russian Female')"
+            disabled>Russian Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Russian Male')"
+            disabled>Russian Male</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Spanish Female')"
+            disabled>Spanish Female</button
+          >
+          <button
+            class="cmd-btn stream-cmd"
+            onclick="sendAction('2 - Command Spanish Male')"
+            disabled>Spanish Male</button
+          >
 
-      <!-- Leaderboards -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        Leaderboards <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top 5 Watchtime')"
-          disabled>Top 5 Watchtime</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top 5 Points')"
-          disabled>Top 5 Points</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top 5 Gifters')"
-          disabled>Top 5 Gifters</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top 5 Roll Call')"
-          disabled>Top 5 Roll Call</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top 5 Big Spenders')"
-          disabled>Top 5 Big Spenders</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top 5 Monthly XP')"
-          disabled>Top 5 Monthly XP</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top 5 Rank')"
-          disabled>Top 5 Rank</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 1')"
-          disabled>Top Gen 1</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 2')"
-          disabled>Top Gen 2</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 3')"
-          disabled>Top Gen 3</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 4')"
-          disabled>Top Gen 4</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 5')"
-          disabled>Top Gen 5</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 6')"
-          disabled>Top Gen 6</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 7')"
-          disabled>Top Gen 7</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 8')"
-          disabled>Top Gen 8</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Top Gen 9')"
-          disabled>Top Gen 9</button
-        >
-      </div>
+          <!-- Leaderboards -->
+          <h3
+            class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+            onclick="toggleSection(this)"
+          >
+            Leaderboards <span class="text-gold">▼</span>
+          </h3>
+          <div
+            class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+          >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top 5 Watchtime')"
+              disabled>Top 5 Watchtime</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top 5 Points')"
+              disabled>Top 5 Points</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top 5 Gifters')"
+              disabled>Top 5 Gifters</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top 5 Roll Call')"
+              disabled>Top 5 Roll Call</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top 5 Big Spenders')"
+              disabled>Top 5 Big Spenders</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top 5 Monthly XP')"
+              disabled>Top 5 Monthly XP</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top 5 Rank')"
+              disabled>Top 5 Rank</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 1')"
+              disabled>Top Gen 1</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 2')"
+              disabled>Top Gen 2</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 3')"
+              disabled>Top Gen 3</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 4')"
+              disabled>Top Gen 4</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 5')"
+              disabled>Top Gen 5</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 6')"
+              disabled>Top Gen 6</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 7')"
+              disabled>Top Gen 7</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 8')"
+              disabled>Top Gen 8</button
+            >
+            <button
+              class="cmd-btn stream-cmd"
+              onclick="sendAction('Top Gen 9')"
+              disabled>Top Gen 9</button
+            >
 
-      <!-- Colors -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        Colors <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('White')"
-          disabled>White</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Black')"
-          disabled>Black</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Blue')" disabled
-          >Blue</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Red')" disabled
-          >Red</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Orange')"
-          disabled>Orange</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Green')"
-          disabled>Green</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Pink')" disabled
-          >Pink</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Purple')"
-          disabled>Purple</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Yellow')"
-          disabled>Yellow</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Sunset')"
-          disabled>Sunset</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Halloween')"
-          disabled>Halloween</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Fortnite')"
-          disabled>Fortnite</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('NugzzCrew')"
-          disabled>Nugzz Crew</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('RDR2')" disabled
-          >RDR2</button
-        >
-      </div>
+            <!-- Colors -->
+            <h3
+              class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+              onclick="toggleSection(this)"
+            >
+              Colors <span class="text-gold">▼</span>
+            </h3>
+            <div
+              class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+            >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('White')"
+                disabled>White</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Black')"
+                disabled>Black</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Blue')"
+                disabled>Blue</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Red')"
+                disabled>Red</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Orange')"
+                disabled>Orange</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Green')"
+                disabled>Green</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Pink')"
+                disabled>Pink</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Purple')"
+                disabled>Purple</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Yellow')"
+                disabled>Yellow</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Sunset')"
+                disabled>Sunset</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Halloween')"
+                disabled>Halloween</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('Fortnite')"
+                disabled>Fortnite</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('NugzzCrew')"
+                disabled>Nugzz Crew</button
+              >
+              <button
+                class="cmd-btn stream-cmd"
+                onclick="sendAction('RDR2')"
+                disabled>RDR2</button
+              >
 
-      <!-- Textures -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        Textures <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Dolla')"
-          disabled>Dolla</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('MC Nova')"
-          disabled>MC Nova</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Nova')" disabled
-          >Nova</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Trees')"
-          disabled>Trees</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Conveyor')"
-          disabled>Conveyor</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Stars')"
-          disabled>Stars</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Skulls')"
-          disabled>Skulls</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Galaxy')"
-          disabled>Galaxy</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Coins')"
-          disabled>Coins</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Hunting Camo')"
-          disabled>Hunting Camo</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('KnuckleDuster')"
-          disabled>Knuckle Duster</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Tartan')"
-          disabled>Tartan</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Blue Tartan')"
-          disabled>Blue Tartan</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Wrap')" disabled
-          >Wrap</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Candy Cane')"
-          disabled>Candy Cane</button
-        >
-      </div>
+              <!-- Textures -->
+              <h3
+                class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+                onclick="toggleSection(this)"
+              >
+                Textures <span class="text-gold">▼</span>
+              </h3>
+              <div
+                class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+              >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Dolla')"
+                  disabled>Dolla</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('MC Nova')"
+                  disabled>MC Nova</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Nova')"
+                  disabled>Nova</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Trees')"
+                  disabled>Trees</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Conveyor')"
+                  disabled>Conveyor</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Stars')"
+                  disabled>Stars</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Skulls')"
+                  disabled>Skulls</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Galaxy')"
+                  disabled>Galaxy</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Coins')"
+                  disabled>Coins</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Hunting Camo')"
+                  disabled>Hunting Camo</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('KnuckleDuster')"
+                  disabled>Knuckle Duster</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Tartan')"
+                  disabled>Tartan</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Blue Tartan')"
+                  disabled>Blue Tartan</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Wrap')"
+                  disabled>Wrap</button
+                >
+                <button
+                  class="cmd-btn stream-cmd"
+                  onclick="sendAction('Candy Cane')"
+                  disabled>Candy Cane</button
+                >
 
-      <!-- Games & Actions -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        Games & Actions <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('Spin')" disabled
-          >Spin</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('CEOGhost')"
-          disabled>CEO Ghost</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Barrel Roll')"
-          disabled>Barrel Roll</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Haduken')"
-          disabled>Haduken</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Kickflip')"
-          disabled>Kickflip</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Scorpion')"
-          disabled>Scorpion</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Shoryuken')"
-          disabled>Shoryuken</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Skeletor')"
-          disabled>Skeletor</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Clown')"
-          disabled>Clown</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('ImStupid')"
-          disabled>ImStupid</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Racer')"
-          disabled>Racer</button
-        >
-      </div>
+                <!-- Games & Actions -->
+                <h3
+                  class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+                  onclick="toggleSection(this)"
+                >
+                  Games & Actions <span class="text-gold">▼</span>
+                </h3>
+                <div
+                  class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+                >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Spin')"
+                    disabled>Spin</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('CEOGhost')"
+                    disabled>CEO Ghost</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Barrel Roll')"
+                    disabled>Barrel Roll</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Haduken')"
+                    disabled>Haduken</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Kickflip')"
+                    disabled>Kickflip</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Scorpion')"
+                    disabled>Scorpion</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Shoryuken')"
+                    disabled>Shoryuken</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Skeletor')"
+                    disabled>Skeletor</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Clown')"
+                    disabled>Clown</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('ImStupid')"
+                    disabled>ImStupid</button
+                  >
+                  <button
+                    class="cmd-btn stream-cmd"
+                    onclick="sendAction('Racer')"
+                    disabled>Racer</button
+                  >
 
-      <!-- Soundbytes -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        Soundbytes <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Another One)')"
-          disabled>Another One</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Beg)')"
-          disabled>Beg</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Bong Rip)')"
-          disabled>Bong Rip</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (BRUH)')"
-          disabled>BRUH</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (ChaChing)')"
-          disabled>ChaChing</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Come On)')"
-          disabled>Come On</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (DJ Horn)')"
-          disabled>DJ Horn</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Don't Fuck it Up)')"
-          disabled>Don't Fuck it Up</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Drink)')"
-          disabled>Drink</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (English MF)')"
-          disabled>English MF</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Fuck You)')"
-          disabled>Fuck You</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Ghey)')"
-          disabled>Ghey</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Go Kart)')"
-          disabled>Go Kart</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Goat)')"
-          disabled>Goat</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (GTFOH)')"
-          disabled>GTFOH</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Kifflom)')"
-          disabled>Kifflom</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (LAYMM)')"
-          disabled>LAYMM</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Let's Go)')"
-          disabled>Let's Go</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Nobody)')"
-          disabled>Nobody</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Numbnuts)')"
-          disabled>Numbnuts</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (OHFY)')"
-          disabled>OHFY</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Orb)')"
-          disabled>Orb</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (PE)')"
-          disabled>PE</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Rigged)')"
-          disabled>Rigged</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Right Meow)')"
-          disabled>Right Meow</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (RRR)')"
-          disabled>RRR</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Security)')"
-          disabled>Security</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Sheesh)')"
-          disabled>Sheesh</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Slow Clap)')"
-          disabled>Slow Clap</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (SMFOM)')"
-          disabled>SMFOM</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (SMTM)')"
-          disabled>SMTM</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Stupid)')"
-          disabled>Stupid</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (SWED)')"
-          disabled>SWED</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Ted)')"
-          disabled>Ted</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Titties)')"
-          disabled>Titties</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (WAYD)')"
-          disabled>WAYD</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (WTFO)')"
-          disabled>WTFO</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (YKAG)')"
-          disabled>YKAG</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Charlie Brown)')"
-          disabled>Charlie Brown</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Helicopter)')"
-          disabled>Helicopter</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Slurpage)')"
-          disabled>Slurpage</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Juice)')"
-          disabled>Juice</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Tarzan)')"
-          disabled>Tarzan</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Your Fired)')"
-          disabled>Your Fired</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Gotta Be Quicker)')"
-          disabled>Gotta Be Quicker</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (You Gonna Learn Today)')"
-          disabled>You Gonna Learn Today</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Stop Makin Fun Of Me)')"
-          disabled>Stop Makin Fun Of Me</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Fly By)')"
-          disabled>Fly By</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Mothman)')"
-          disabled>Mothman</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Soundbyte (Don't Smoke Crack)')"
-          disabled>Don't Smoke Crack</button
-        >
-      </div>
+                  <!-- Soundbytes -->
+                  <h3
+                    class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+                    onclick="toggleSection(this)"
+                  >
+                    Soundbytes <span class="text-gold">▼</span>
+                  </h3>
+                  <div
+                    class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+                  >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Another One)')"
+                      disabled>Another One</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Beg)')"
+                      disabled>Beg</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Bong Rip)')"
+                      disabled>Bong Rip</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (BRUH)')"
+                      disabled>BRUH</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (ChaChing)')"
+                      disabled>ChaChing</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Come On)')"
+                      disabled>Come On</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (DJ Horn)')"
+                      disabled>DJ Horn</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Don\'t Fuck it Up)')"
+                      disabled>Don't Fuck it Up</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Drink)')"
+                      disabled>Drink</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (English MF)')"
+                      disabled>English MF</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Fuck You)')"
+                      disabled>Fuck You</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Ghey)')"
+                      disabled>Ghey</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Go Kart)')"
+                      disabled>Go Kart</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Goat)')"
+                      disabled>Goat</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (GTFOH)')"
+                      disabled>GTFOH</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Kifflom)')"
+                      disabled>Kifflom</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (LAYMM)')"
+                      disabled>LAYMM</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Let\'s Go)')"
+                      disabled>Let's Go</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Nobody)')"
+                      disabled>Nobody</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Numbnuts)')"
+                      disabled>Numbnuts</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (OHFY)')"
+                      disabled>OHFY</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Orb)')"
+                      disabled>Orb</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (PE)')"
+                      disabled>PE</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Rigged)')"
+                      disabled>Rigged</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Right Meow)')"
+                      disabled>Right Meow</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (RRR)')"
+                      disabled>RRR</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Security)')"
+                      disabled>Security</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Sheesh)')"
+                      disabled>Sheesh</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Slow Clap)')"
+                      disabled>Slow Clap</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (SMFOM)')"
+                      disabled>SMFOM</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (SMTM)')"
+                      disabled>SMTM</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Stupid)')"
+                      disabled>Stupid</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (SWED)')"
+                      disabled>SWED</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Ted)')"
+                      disabled>Ted</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Titties)')"
+                      disabled>Titties</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (WAYD)')"
+                      disabled>WAYD</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (WTFO)')"
+                      disabled>WTFO</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (YKAG)')"
+                      disabled>YKAG</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Charlie Brown)')"
+                      disabled>Charlie Brown</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Helicopter)')"
+                      disabled>Helicopter</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Slurpage)')"
+                      disabled>Slurpage</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Juice)')"
+                      disabled>Juice</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Tarzan)')"
+                      disabled>Tarzan</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Your Fired)')"
+                      disabled>Your Fired</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Gotta Be Quicker)')"
+                      disabled>Gotta Be Quicker</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (You Gonna Learn Today)')"
+                      disabled>You Gonna Learn Today</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Stop Makin Fun Of Me)')"
+                      disabled>Stop Makin Fun Of Me</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Fly By)')"
+                      disabled>Fly By</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Mothman)')"
+                      disabled>Mothman</button
+                    >
+                    <button
+                      class="cmd-btn stream-cmd"
+                      onclick="sendAction('Soundbyte (Don\'t Smoke Crack)')"
+                      disabled>Don't Smoke Crack</button
+                    >
 
-      <!-- Albums -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        Albums <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Dim')"
-          disabled>Dim</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Glitch')"
-          disabled>Glitch</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'LoFi')"
-          disabled>LoFi</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Gangsta')"
-          disabled>Gangsta</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Neon')"
-          disabled>Neon</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Lonesome')"
-          disabled>Lonesome</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Funk')"
-          disabled>Funk</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Coastal')"
-          disabled>Coastal</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Empire')"
-          disabled>Empire</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Echoes')"
-          disabled>Echoes</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Ashes')"
-          disabled>Ashes</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'LS Nights')"
-          disabled>LS Nights</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'LSC')"
-          disabled>LSC</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Outlaws')"
-          disabled>Outlaws</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Rowdy')"
-          disabled>Rowdy</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Nugzz')"
-          disabled>Nugzz</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Wasteland')"
-          disabled>Wasteland</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Victory')"
-          disabled>Victory</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Naked')"
-          disabled>Naked</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Select Album', 'Favorites')"
-          disabled>Favorites</button
-        >
-      </div>
+                    <!-- Albums -->
+                    <h3
+                      class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+                      onclick="toggleSection(this)"
+                    >
+                      Albums <span class="text-gold">▼</span>
+                    </h3>
+                    <div
+                      class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+                    >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Dim')"
+                        disabled>Dim</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Glitch')"
+                        disabled>Glitch</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'LoFi')"
+                        disabled>LoFi</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Gangsta')"
+                        disabled>Gangsta</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Neon')"
+                        disabled>Neon</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Lonesome')"
+                        disabled>Lonesome</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Funk')"
+                        disabled>Funk</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Coastal')"
+                        disabled>Coastal</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Empire')"
+                        disabled>Empire</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Echoes')"
+                        disabled>Echoes</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Ashes')"
+                        disabled>Ashes</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'LS Nights')"
+                        disabled>LS Nights</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'LSC')"
+                        disabled>LSC</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Outlaws')"
+                        disabled>Outlaws</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Rowdy')"
+                        disabled>Rowdy</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Nugzz')"
+                        disabled>Nugzz</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Wasteland')"
+                        disabled>Wasteland</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Victory')"
+                        disabled>Victory</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Naked')"
+                        disabled>Naked</button
+                      >
+                      <button
+                        class="cmd-btn stream-cmd"
+                        onclick="sendAction('Select Album', 'Favorites')"
+                        disabled>Favorites</button
+                      >
 
-      <!-- Pokémon -->
-      <h3
-        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
-        onclick="toggleSection(this)"
-      >
-        Pokémon <span class="text-gold">▼</span>
-      </h3>
-      <div
-        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
-      >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Catch')"
-          disabled>Catch</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokeparty')"
-          disabled>Pokeparty</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex1')"
-          disabled>Pokedex 1</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex2')"
-          disabled>Pokedex 2</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex3')"
-          disabled>Pokedex 3</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex4')"
-          disabled>Pokedex 4</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex5')"
-          disabled>Pokedex 5</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex6')"
-          disabled>Pokedex 6</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex7')"
-          disabled>Pokedex 7</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex8')"
-          disabled>Pokedex 8</button
-        >
-        <button
-          class="cmd-btn stream-cmd"
-          onclick="sendAction('Pokedex9')"
-          disabled>Pokedex 9</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG1')" disabled
-          >LBG1</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG2')" disabled
-          >LBG2</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG3')" disabled
-          >LBG3</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG4')" disabled
-          >LBG4</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG5')" disabled
-          >LBG5</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG6')" disabled
-          >LBG6</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG7')" disabled
-          >LBG7</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG8')" disabled
-          >LBG8</button
-        >
-        <button class="cmd-btn stream-cmd" onclick="sendAction('LBG9')" disabled
-          >LBG9</button
-        >
+                      <!-- Pokémon -->
+                      <h3
+                        class="text-sm uppercase tracking-widest text-zinc-300 mb-2 cursor-pointer flex items-center justify-between"
+                        onclick="toggleSection(this)"
+                      >
+                        Pokémon <span class="text-gold">▼</span>
+                      </h3>
+                      <div
+                        class="btn-grid collapsible-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4"
+                      >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Catch')"
+                          disabled>Catch</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokeparty')"
+                          disabled>Pokeparty</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex1')"
+                          disabled>Pokedex 1</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex2')"
+                          disabled>Pokedex 2</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex3')"
+                          disabled>Pokedex 3</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex4')"
+                          disabled>Pokedex 4</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex5')"
+                          disabled>Pokedex 5</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex6')"
+                          disabled>Pokedex 6</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex7')"
+                          disabled>Pokedex 7</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex8')"
+                          disabled>Pokedex 8</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('Pokedex9')"
+                          disabled>Pokedex 9</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG1')"
+                          disabled>LBG1</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG2')"
+                          disabled>LBG2</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG3')"
+                          disabled>LBG3</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG4')"
+                          disabled>LBG4</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG5')"
+                          disabled>LBG5</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG6')"
+                          disabled>LBG6</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG7')"
+                          disabled>LBG7</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG8')"
+                          disabled>LBG8</button
+                        >
+                        <button
+                          class="cmd-btn stream-cmd"
+                          onclick="sendAction('LBG9')"
+                          disabled>LBG9</button
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <script is:inline>
+                    let ws;
+
+                    function connectBot() {
+                      ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
+
+                      ws.onopen = () => {
+                        ws.send(
+                          JSON.stringify({
+                            request: "Subscribe",
+                            events: { general: ["Custom"] },
+                            id: "SubRequest",
+                          }),
+                        );
+                        setTimeout(() => {
+                          ws.send(
+                            JSON.stringify({
+                              request: "DoAction",
+                              action: { name: "Web_Request_Status" },
+                              id: "StatusCheck",
+                            }),
+                          );
+                          // Force evaluation of Discord button right after WS connection
+                          updateStreamState(currentLiveVideoId !== null);
+                        }, 1000);
+                      };
+
+                      ws.onmessage = (event) => {
+                        try {
+                          const msg = JSON.parse(event.data);
+                          if (
+                            msg.data &&
+                            msg.data.data &&
+                            msg.data.data.name === "LiveStatusUpdate"
+                          ) {
+                            const data = msg.data.data;
+                            handleLiveStatus(data);
+                            updateStreamState(data.isLive);
+                          }
+                        } catch (e) {
+                          console.log("Parsing error:", e);
+                        }
+                      };
+
+                      ws.onclose = () => {
+                        const el = document.getElementById("status-msg");
+                        if (el)
+                          el.textContent =
+                            "Offline: Streamer's PC not reachable.";
+                        updateStreamState(false);
+                        setTimeout(connectBot, 5000);
+                      };
+                    }
+
+                    const OWNER_CHANNEL_ID = "UCYNmnbEgm3G0m4avmwz_4Eg";
+                    let ownerForceEnable = false;
+                    let ownerOverrideVideoId = null;
+                    let currentLiveVideoId = null;
+
+                    function handleLiveStatus(data) {
+                      const videoFrame =
+                        document.getElementById("yt-video-frame");
+                      const placeholder = document.getElementById(
+                        "offline-placeholder",
+                      );
+                      const chatFrame =
+                        document.getElementById("yt-chat-frame");
+                      const chatFrameMobile = document.getElementById(
+                        "yt-chat-frame-mobile",
+                      );
+                      const chatWrapper =
+                        document.getElementById("chat-wrapper");
+                      const chatWrapperMobile = document.getElementById(
+                        "chat-wrapper-mobile",
+                      );
+                      const videoCol = document.getElementById("video-col");
+                      const commands =
+                        document.getElementById("commands-container");
+
+                      const incomingId = (data.videoId || "").trim();
+
+                      if (ownerOverrideVideoId) {
+                        updateStreamState(data.isLive === true);
+                        return;
+                      }
+
+                      if (
+                        incomingId !== "" &&
+                        currentLiveVideoId === incomingId
+                      ) {
+                        updateStreamState(data.isLive === true);
+                        return;
+                      }
+
+                      const isLive = data.isLive === true && incomingId !== "";
+
+                      if (isLive) {
+                        currentLiveVideoId = incomingId;
+                        if (videoFrame) {
+                          videoFrame.style.display = "block";
+                          videoFrame.src = `https://www.youtube.com/embed/${incomingId}?autoplay=1&mute=1`;
+                        }
+                        if (placeholder) placeholder.style.display = "none";
+
+                        const chatSrc = `https://www.youtube.com/live_chat?v=${incomingId}&embed_domain=${location.hostname}&dark_theme=1`;
+                        if (chatFrame) chatFrame.src = chatSrc;
+                        if (chatFrameMobile) chatFrameMobile.src = chatSrc;
+
+                        if (chatWrapper) chatWrapper.classList.remove("hidden");
+                        if (chatWrapperMobile)
+                          chatWrapperMobile.classList.remove("hidden");
+
+                        if (videoCol) {
+                          videoCol.classList.remove("max-w-4xl", "mx-auto");
+                          videoCol.classList.add("flex-1", "min-w-0");
+                        }
+                        if (commands) {
+                          commands.classList.remove("max-w-4xl");
+                          commands.classList.add("max-w-6xl");
+                        }
+                      } else {
+                        currentLiveVideoId = null;
+                        if (videoFrame) {
+                          videoFrame.style.display = "none";
+                          videoFrame.src = "about:blank";
+                        }
+                        if (placeholder) placeholder.style.display = "block";
+
+                        if (chatWrapper) chatWrapper.classList.add("hidden");
+                        if (chatWrapperMobile)
+                          chatWrapperMobile.classList.add("hidden");
+
+                        if (videoCol) {
+                          videoCol.classList.add("max-w-4xl", "mx-auto");
+                          videoCol.classList.remove("flex-1", "min-w-0");
+                        }
+                        if (commands) {
+                          commands.classList.add("max-w-4xl");
+                          commands.classList.remove("max-w-6xl");
+                        }
+                      }
+                    }
+
+                    function applyOwnerVideoOverride(videoId) {
+                      const videoFrame =
+                        document.getElementById("yt-video-frame");
+                      const chatFrame =
+                        document.getElementById("yt-chat-frame");
+                      const chatFrameMobile = document.getElementById(
+                        "yt-chat-frame-mobile",
+                      );
+                      const placeholder = document.getElementById(
+                        "offline-placeholder",
+                      );
+                      const chatWrapper =
+                        document.getElementById("chat-wrapper");
+                      const chatWrapperMobile = document.getElementById(
+                        "chat-wrapper-mobile",
+                      );
+
+                      currentLiveVideoId = videoId;
+                      if (videoFrame) {
+                        videoFrame.style.display = "block";
+                        videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+                      }
+                      if (placeholder) placeholder.style.display = "none";
+                      const chatSrc = `https://www.youtube.com/live_chat?v=${videoId}&embed_domain=${location.hostname}&dark_theme=1`;
+                      if (chatFrame) chatFrame.src = chatSrc;
+                      if (chatFrameMobile) chatFrameMobile.src = chatSrc;
+                      if (chatWrapper) chatWrapper.classList.remove("hidden");
+                      if (chatWrapperMobile)
+                        chatWrapperMobile.classList.remove("hidden");
+                    }
+
+                    function clearOwnerVideoOverride() {
+                      ownerOverrideVideoId = null;
+                      currentLiveVideoId = null;
+                      const videoFrame =
+                        document.getElementById("yt-video-frame");
+                      const chatFrame =
+                        document.getElementById("yt-chat-frame");
+                      const chatFrameMobile = document.getElementById(
+                        "yt-chat-frame-mobile",
+                      );
+                      const placeholder = document.getElementById(
+                        "offline-placeholder",
+                      );
+                      const chatWrapper =
+                        document.getElementById("chat-wrapper");
+                      const chatWrapperMobile = document.getElementById(
+                        "chat-wrapper-mobile",
+                      );
+
+                      if (videoFrame) {
+                        videoFrame.style.display = "none";
+                        videoFrame.src = "about:blank";
+                      }
+                      if (chatFrame) chatFrame.src = "about:blank";
+                      if (chatFrameMobile) chatFrameMobile.src = "about:blank";
+                      if (chatWrapper) chatWrapper.classList.add("hidden");
+                      if (chatWrapperMobile)
+                        chatWrapperMobile.classList.add("hidden");
+                      if (placeholder) placeholder.style.display = "block";
+                      const input = document.getElementById("owner-video-id");
+                      if (input) input.value = "";
+                    }
+
+                    function updateStreamState(live) {
+                      const msgEl = document.getElementById("status-msg");
+                      const buttons = document.querySelectorAll(".stream-cmd");
+                      const linkDiscordBtn =
+                        document.getElementById("link-discord-btn");
+                      const user = JSON.parse(
+                        localStorage.getItem("nugzzUser") || "null",
+                      );
+                      const isOwner =
+                        user && user.youtubeId === OWNER_CHANNEL_ID;
+                      const debugTools =
+                        document.getElementById("owner-debug-tools");
+                      const isConnected =
+                        ws && ws.readyState === WebSocket.OPEN;
+
+                      if (debugTools) {
+                        debugTools.classList.toggle("hidden", !isOwner);
+                      }
+
+                      // Link Discord is active whenever connected to bot, regardless of live stream status or user auth status
+                      if (linkDiscordBtn) {
+                        linkDiscordBtn.disabled = !isConnected;
+                      }
+
+                      if (!msgEl) return;
+
+                      const allowCommands =
+                        isConnected &&
+                        user &&
+                        (live || (isOwner && ownerForceEnable));
+
+                      if (allowCommands) {
+                        buttons.forEach((btn) => (btn.disabled = false));
+                        if (isOwner && !live && ownerForceEnable) {
+                          msgEl.textContent = ownerOverrideVideoId
+                            ? "Owner Debug — Custom video loaded + commands enabled."
+                            : "Bot Connected (Owner Force-Enable). Commands enabled for preview.";
+                          msgEl.style.color = "#4ade80";
+                        } else if (live) {
+                          msgEl.textContent = "Bot Connected (Stream Online)";
+                          msgEl.style.color = "#4ade80";
+                        } else {
+                          msgEl.textContent = "Bot Connected (Stream Offline)";
+                          msgEl.style.color = "#a1a1aa";
+                        }
+                      } else {
+                        buttons.forEach((btn) => (btn.disabled = true));
+                        if (!user) {
+                          msgEl.textContent = "Sign in to trigger commands.";
+                        } else if (!isConnected) {
+                          msgEl.textContent = "Connecting to Streamer.bot...";
+                        } else {
+                          msgEl.textContent = "Bot Connected (Stream Offline)";
+                        }
+                        msgEl.style.color = "#a1a1aa";
+                      }
+                    }
+
+                    function handleLinkDiscord() {
+                      if (!ws || ws.readyState !== WebSocket.OPEN) {
+                        alert("Not connected to Streamer.bot.");
+                        return;
+                      }
+
+                      const user = JSON.parse(
+                        localStorage.getItem("nugzzUser") || "null",
+                      );
+
+                      // Check if both YouTube and Discord are available in local storage
+                      if (
+                        !user ||
+                        !user.youtubeId ||
+                        !user.discord ||
+                        !user.discord.id
+                      ) {
+                        const authPrompt = confirm(
+                          "You need to be signed in to YouTube and have Discord linked to proceed. Click OK to log in/authorize.",
+                        );
+                        if (authPrompt) {
+                          // Adjust this route to match your actual authentication flow
+                          window.location.href = "/login";
+                        }
+                        return;
+                      }
+
+                      const payload = {
+                        request: "DoAction",
+                        action: { name: "Link Discord From Website" },
+                        args: {
+                          youtubeName: user.name || "",
+                          youtubeId: user.youtubeId || "",
+                          userProfileUrl: user.picture || "",
+                          discordName: user.discord.username || "",
+                          discordId: user.discord.id || "",
+                        },
+                        id: "WebLinkDiscord",
+                      };
+
+                      ws.send(JSON.stringify(payload));
+                      alert("Discord link sent to Streamer.bot!");
+                    }
+
+                    let cooldownTimer = null;
+                    let cooldownRemaining = 0;
+
+                    function setButtonsDisabled(disabled) {
+                      document
+                        .querySelectorAll(".stream-cmd")
+                        .forEach((btn) => {
+                          btn.disabled = disabled;
+                        });
+                    }
+
+                    function startCooldown() {
+                      if (cooldownTimer) clearInterval(cooldownTimer);
+                      cooldownRemaining = 15;
+                      setButtonsDisabled(true);
+                      const msgEl = document.getElementById("status-msg");
+                      const original = msgEl ? msgEl.textContent : "";
+                      cooldownTimer = setInterval(() => {
+                        cooldownRemaining--;
+                        if (msgEl)
+                          msgEl.textContent = `Cooldown: ${cooldownRemaining}s`;
+                        if (cooldownRemaining <= 0) {
+                          clearInterval(cooldownTimer);
+                          cooldownTimer = null;
+                          setButtonsDisabled(false);
+                          if (msgEl)
+                            msgEl.textContent =
+                              original || "Bot Connected (Stream Online)";
+                        }
+                      }, 1000);
+                    }
+
+                    function sendAction(actionName, extraCommand = null) {
+                      const user = JSON.parse(
+                        localStorage.getItem("nugzzUser") || "null",
+                      );
+                      if (!ws || ws.readyState !== WebSocket.OPEN) {
+                        alert("Not connected to Live Hub.");
+                        return;
+                      }
+                      if (!user) {
+                        alert("Please sign in to use commands.");
+                        return;
+                      }
+                      if (cooldownRemaining > 0) return;
+
+                      const displayName = user.name || "";
+                      const payload = {
+                        request: "DoAction",
+                        action: { name: actionName },
+                        args: {
+                          isWebsocketRequest: "True",
+                          userId: user.youtubeId,
+                          user: displayName,
+                          userName: displayName,
+                          displayName: displayName,
+                          userProfileUrl: user.picture || "",
+                          profileImageUrl: user.picture || "",
+                          userType: "youtube",
+                          discordId: user.discord?.id || "",
+                          discordUsername: user.discord?.username || "",
+                        },
+                        id: "WebCommandCenter",
+                      };
+                      if (extraCommand) {
+                        payload.args.commandName = extraCommand;
+                        payload.args.command = extraCommand;
+                        payload.args.rawInput = extraCommand;
+                        payload.args.message = extraCommand;
+                      }
+                      ws.send(JSON.stringify(payload));
+                      startCooldown();
+                    }
+
+                    function toggleSection(el) {
+                      el.nextElementSibling.classList.toggle("hidden");
+                    }
+
+                    window.addEventListener("load", () => {
+                      connectBot();
+
+                      const forceCheckbox =
+                        document.getElementById("owner-force-enable");
+                      const loadBtn =
+                        document.getElementById("owner-load-video");
+                      const clearBtn =
+                        document.getElementById("owner-clear-video");
+                      const videoInput =
+                        document.getElementById("owner-video-id");
+
+                      if (forceCheckbox) {
+                        forceCheckbox.addEventListener("change", (e) => {
+                          ownerForceEnable = e.target.checked;
+                          updateStreamState(false);
+                        });
+                      }
+                      if (loadBtn) {
+                        loadBtn.addEventListener("click", () => {
+                          const id = videoInput && videoInput.value.trim();
+                          if (!id) return;
+                          ownerOverrideVideoId = id;
+                          applyOwnerVideoOverride(id);
+                          updateStreamState(false);
+                        });
+                      }
+                      if (videoInput) {
+                        videoInput.addEventListener("keydown", (e) => {
+                          if (e.key === "Enter" && loadBtn) loadBtn.click();
+                        });
+                      }
+                      if (clearBtn) {
+                        clearBtn.addEventListener("click", () => {
+                          clearOwnerVideoOverride();
+                          updateStreamState(false);
+                        });
+                      }
+                    });
+
+                    const theaterBtn = document.getElementById("theater-btn");
+                    const videoContainer =
+                      document.getElementById("video-container");
+                    let isTheater = false;
+                    let theaterSlot = null;
+
+                    function setTheater(on) {
+                      if (!videoContainer || !theaterBtn || on === isTheater)
+                        return;
+                      isTheater = on;
+                      if (on) {
+                        theaterSlot = document.createComment("theater-slot");
+                        videoContainer.parentNode.insertBefore(
+                          theaterSlot,
+                          videoContainer,
+                        );
+                        document.body.appendChild(videoContainer);
+                        videoContainer.classList.add("is-theater");
+                        document.body.style.overflow = "hidden";
+                        theaterBtn.textContent = "Exit";
+                      } else {
+                        videoContainer.classList.remove("is-theater");
+                        if (theaterSlot && theaterSlot.parentNode) {
+                          theaterSlot.parentNode.insertBefore(
+                            videoContainer,
+                            theaterSlot,
+                          );
+                          theaterSlot.remove();
+                          theaterSlot = null;
+                        }
+                        document.body.style.overflow = "";
+                        theaterBtn.textContent = "Theater";
+                      }
+                    }
+
+                    theaterBtn?.addEventListener("click", (e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setTheater(!isTheater);
+                    });
+
+                    document.addEventListener("keydown", (e) => {
+                      if (e.key === "Escape" && isTheater) setTheater(false);
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</MainLayout>
-
-<script is:inline>
-  let ws;
-
-  function connectBot() {
-    ws = new WebSocket("wss://wss.officialnugzzcrew.com/");
-
-    ws.onopen = () => {
-      ws.send(
-        JSON.stringify({
-          request: "Subscribe",
-          events: { general: ["Custom"] },
-          id: "SubRequest",
-        }),
-      );
-      setTimeout(() => {
-        ws.send(
-          JSON.stringify({
-            request: "DoAction",
-            action: { name: "Web_Request_Status" },
-            id: "StatusCheck",
-          }),
-        );
-      }, 1000);
-    };
-
-    ws.onmessage = (event) => {
-      try {
-        const msg = JSON.parse(event.data);
-        if (
-          msg.data &&
-          msg.data.data &&
-          msg.data.data.name === "LiveStatusUpdate"
-        ) {
-          const data = msg.data.data;
-          handleLiveStatus(data);
-          updateStreamState(data.isLive);
-        }
-      } catch (e) {
-        console.log("Parsing error:", e);
-      }
-    };
-
-    ws.onclose = () => {
-      const el = document.getElementById("status-msg");
-      if (el) el.textContent = "Offline: Streamer's PC not reachable.";
-      setTimeout(connectBot, 5000);
-    };
-  }
-
-  // Owner channel ID — replace with Official Nugzz Crew YouTube channel ID
-  const OWNER_CHANNEL_ID = "UCYNmnbEgm3G0m4avmwz_4Eg";
-  let ownerForceEnable = false;
-  let ownerOverrideVideoId = null;
-  let currentLiveVideoId = null;
-
-  function handleLiveStatus(data) {
-    const videoFrame = document.getElementById("yt-video-frame");
-    const placeholder = document.getElementById("offline-placeholder");
-    const chatFrame = document.getElementById("yt-chat-frame");
-    const chatFrameMobile = document.getElementById("yt-chat-frame-mobile");
-    const chatWrapper = document.getElementById("chat-wrapper");
-    const chatWrapperMobile = document.getElementById("chat-wrapper-mobile");
-    const videoCol = document.getElementById("video-col");
-    const commands = document.getElementById("commands-container");
-
-    const incomingId = (data.videoId || "").trim();
-
-    // Owner override is absolute — don't fight the custom video
-    if (ownerOverrideVideoId) {
-      updateStreamState(data.isLive === true);
-      return;
-    }
-
-    // Already showing this exact video — skip reload to prevent flicker
-    if (incomingId !== "" && currentLiveVideoId === incomingId) {
-      updateStreamState(data.isLive === true);
-      return;
-    }
-
-    const isLive = data.isLive === true && incomingId !== "";
-
-    if (isLive) {
-      currentLiveVideoId = incomingId;
-      if (videoFrame) {
-        videoFrame.style.display = "block";
-        videoFrame.src = `https://www.youtube.com/embed/${incomingId}?autoplay=1&mute=1`;
-      }
-      if (placeholder) placeholder.style.display = "none";
-
-      const chatSrc = `https://www.youtube.com/live_chat?v=${incomingId}&embed_domain=${location.hostname}&dark_theme=1`;
-      if (chatFrame) chatFrame.src = chatSrc;
-      if (chatFrameMobile) chatFrameMobile.src = chatSrc;
-
-      if (chatWrapper) chatWrapper.classList.remove("hidden");
-      if (chatWrapperMobile) chatWrapperMobile.classList.remove("hidden");
-
-      if (videoCol) {
-        videoCol.classList.remove("max-w-4xl", "mx-auto");
-        videoCol.classList.add("flex-1", "min-w-0");
-      }
-      if (commands) {
-        commands.classList.remove("max-w-4xl");
-        commands.classList.add("max-w-6xl");
-      }
-    } else {
-      currentLiveVideoId = null;
-      if (videoFrame) {
-        videoFrame.style.display = "none";
-        videoFrame.src = "about:blank";
-      }
-      if (placeholder) placeholder.style.display = "block";
-
-      if (chatWrapper) chatWrapper.classList.add("hidden");
-      if (chatWrapperMobile) chatWrapperMobile.classList.add("hidden");
-
-      if (videoCol) {
-        videoCol.classList.add("max-w-4xl", "mx-auto");
-        videoCol.classList.remove("flex-1", "min-w-0");
-      }
-      if (commands) {
-        commands.classList.add("max-w-4xl");
-        commands.classList.remove("max-w-6xl");
-      }
-    }
-  }
-
-  function applyOwnerVideoOverride(videoId) {
-    const videoFrame = document.getElementById("yt-video-frame");
-    const chatFrame = document.getElementById("yt-chat-frame");
-    const chatFrameMobile = document.getElementById("yt-chat-frame-mobile");
-    const placeholder = document.getElementById("offline-placeholder");
-    const chatWrapper = document.getElementById("chat-wrapper");
-    const chatWrapperMobile = document.getElementById("chat-wrapper-mobile");
-
-    currentLiveVideoId = videoId;
-    if (videoFrame) {
-      videoFrame.style.display = "block";
-      videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
-    }
-    if (placeholder) placeholder.style.display = "none";
-    const chatSrc = `https://www.youtube.com/live_chat?v=${videoId}&embed_domain=${location.hostname}&dark_theme=1`;
-    if (chatFrame) chatFrame.src = chatSrc;
-    if (chatFrameMobile) chatFrameMobile.src = chatSrc;
-    if (chatWrapper) chatWrapper.classList.remove("hidden");
-    if (chatWrapperMobile) chatWrapperMobile.classList.remove("hidden");
-  }
-
-  function clearOwnerVideoOverride() {
-    ownerOverrideVideoId = null;
-    currentLiveVideoId = null;
-    const videoFrame = document.getElementById("yt-video-frame");
-    const chatFrame = document.getElementById("yt-chat-frame");
-    const chatFrameMobile = document.getElementById("yt-chat-frame-mobile");
-    const placeholder = document.getElementById("offline-placeholder");
-    const chatWrapper = document.getElementById("chat-wrapper");
-    const chatWrapperMobile = document.getElementById("chat-wrapper-mobile");
-
-    if (videoFrame) {
-      videoFrame.style.display = "none";
-      videoFrame.src = "about:blank";
-    }
-    if (chatFrame) chatFrame.src = "about:blank";
-    if (chatFrameMobile) chatFrameMobile.src = "about:blank";
-    if (chatWrapper) chatWrapper.classList.add("hidden");
-    if (chatWrapperMobile) chatWrapperMobile.classList.add("hidden");
-    if (placeholder) placeholder.style.display = "block";
-    const input = document.getElementById("owner-video-id");
-    if (input) input.value = "";
-  }
-
-  function updateStreamState(live) {
-    const msgEl = document.getElementById("status-msg");
-    const buttons = document.querySelectorAll(".stream-cmd");
-    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
-    const isOwner = user && user.youtubeId === OWNER_CHANNEL_ID;
-    const debugTools = document.getElementById("owner-debug-tools");
-
-    if (debugTools) {
-      debugTools.classList.toggle("hidden", !isOwner);
-    }
-
-    if (!msgEl) return;
-
-    const isConnected = ws && ws.readyState === WebSocket.OPEN;
-    const allowCommands =
-      isConnected && user && (live || (isOwner && ownerForceEnable));
-
-    if (allowCommands) {
-      buttons.forEach((btn) => (btn.disabled = false));
-      if (isOwner && !live && ownerForceEnable) {
-        msgEl.textContent = ownerOverrideVideoId
-          ? "Owner Debug — Custom video loaded + commands enabled."
-          : "Bot Connected (Owner Force-Enable). Commands enabled for preview.";
-        msgEl.style.color = "#4ade80";
-      } else if (live) {
-        msgEl.textContent = "Bot Connected (Stream Online)";
-        msgEl.style.color = "#4ade80";
-      } else {
-        msgEl.textContent = "Bot Connected (Stream Offline)";
-        msgEl.style.color = "#a1a1aa";
-      }
-    } else {
-      buttons.forEach((btn) => (btn.disabled = true));
-      if (!user) {
-        msgEl.textContent = "Sign in to trigger commands.";
-      } else if (!isConnected) {
-        msgEl.textContent = "Connecting to Streamer.bot...";
-      } else {
-        msgEl.textContent = "Bot Connected (Stream Offline)";
-      }
-      msgEl.style.color = "#a1a1aa";
-    }
-  }
-
-  let cooldownTimer = null;
-  let cooldownRemaining = 0;
-
-  function setButtonsDisabled(disabled) {
-    document.querySelectorAll(".stream-cmd").forEach((btn) => {
-      btn.disabled = disabled;
-    });
-  }
-
-  function startCooldown() {
-    if (cooldownTimer) clearInterval(cooldownTimer);
-    cooldownRemaining = 15;
-    setButtonsDisabled(true);
-    const msgEl = document.getElementById("status-msg");
-    const original = msgEl ? msgEl.textContent : "";
-    cooldownTimer = setInterval(() => {
-      cooldownRemaining--;
-      if (msgEl) msgEl.textContent = `Cooldown: ${cooldownRemaining}s`;
-      if (cooldownRemaining <= 0) {
-        clearInterval(cooldownTimer);
-        cooldownTimer = null;
-        setButtonsDisabled(false);
-        if (msgEl)
-          msgEl.textContent = original || "Bot Connected (Stream Online)";
-      }
-    }, 1000);
-  }
-
-  function sendAction(actionName, extraCommand = null) {
-    const user = JSON.parse(localStorage.getItem("nugzzUser") || "null");
-    if (!ws || ws.readyState !== WebSocket.OPEN) {
-      alert("Not connected to Live Hub.");
-      return;
-    }
-    if (!user) {
-      alert("Please sign in to use commands.");
-      return;
-    }
-    if (cooldownRemaining > 0) return;
-
-    const displayName = user.name || "";
-    const payload = {
-      request: "DoAction",
-      action: { name: actionName },
-      args: {
-        isWebsocketRequest: "True",
-        // Core identity — cover every name your actions might look for
-        userId: user.youtubeId,
-        user: displayName, // some actions use %user%
-        userName: displayName, // some actions use %userName%
-        displayName: displayName, // fallback
-        userProfileUrl: user.picture || "",
-        profileImageUrl: user.picture || "",
-        userType: "youtube",
-        // Discord (if linked)
-        discordId: user.discord?.id || "",
-        discordUsername: user.discord?.username || "",
-      },
-      id: "WebCommandCenter",
-    };
-    if (extraCommand) {
-      payload.args.commandName = extraCommand;
-      payload.args.command = extraCommand;
-      payload.args.rawInput = extraCommand; // some actions read %rawInput%
-      payload.args.message = extraCommand;
-    }
-    ws.send(JSON.stringify(payload));
-    startCooldown();
-  }
-
-  function toggleSection(el) {
-    el.nextElementSibling.classList.toggle("hidden");
-  }
-
-  window.addEventListener("load", () => {
-    connectBot();
-
-    // Owner debug tools
-    const forceCheckbox = document.getElementById("owner-force-enable");
-    const loadBtn = document.getElementById("owner-load-video");
-    const clearBtn = document.getElementById("owner-clear-video");
-    const videoInput = document.getElementById("owner-video-id");
-
-    if (forceCheckbox) {
-      forceCheckbox.addEventListener("change", (e) => {
-        ownerForceEnable = e.target.checked;
-        updateStreamState(false); // will re-evaluate based on flag
-      });
-    }
-    if (loadBtn) {
-      loadBtn.addEventListener("click", () => {
-        const id = videoInput && videoInput.value.trim();
-        if (!id) return;
-        ownerOverrideVideoId = id;
-        applyOwnerVideoOverride(id);
-        updateStreamState(false);
-      });
-    }
-    if (videoInput) {
-      videoInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" && loadBtn) loadBtn.click();
-      });
-    }
-    if (clearBtn) {
-      clearBtn.addEventListener("click", () => {
-        clearOwnerVideoOverride();
-        updateStreamState(false);
-      });
-    }
-  });
-
-  // Theater Mode
-  const theaterBtn = document.getElementById("theater-btn");
-  const videoContainer = document.getElementById("video-container");
-  let isTheater = false;
-  let theaterSlot = null;
-
-  function setTheater(on) {
-    if (!videoContainer || !theaterBtn || on === isTheater) return;
-    isTheater = on;
-    if (on) {
-      theaterSlot = document.createComment("theater-slot");
-      videoContainer.parentNode.insertBefore(theaterSlot, videoContainer);
-      document.body.appendChild(videoContainer);
-      videoContainer.classList.add("is-theater");
-      document.body.style.overflow = "hidden";
-      theaterBtn.textContent = "Exit";
-    } else {
-      videoContainer.classList.remove("is-theater");
-      if (theaterSlot && theaterSlot.parentNode) {
-        theaterSlot.parentNode.insertBefore(videoContainer, theaterSlot);
-        theaterSlot.remove();
-        theaterSlot = null;
-      }
-      document.body.style.overflow = "";
-      theaterBtn.textContent = "Theater";
-    }
-  }
-
-  theaterBtn?.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setTheater(!isTheater);
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isTheater) setTheater(false);
-  });
-</script>
+  </div></MainLayout
+>
