@@ -1,74 +1,82 @@
 {
-  "eventTitle": "Heist Event Week",
-  "weekEnding": "November 11, 2026",
-  "eventDates": "November 5–11, 2026",
-  "fibFile": "The Black Box File",
+  "eventTitle": "Supporting Characters Week",
+  "weekEnding": "December 2, 2026",
+  "eventDates": "November 12–December 2, 2026",
+  "fibFile": "The Brute Force File",
   "primaryTargets": [
-    "The Outcome of Endeavour",
-    "To Beat About the Bush",
-    "Hare Oneself Think",
-    "True Love"
+    "In Excess of Success",
+    "What are Melons?",
+    "Breathless"
   ],
-  "weeklyChallenge": "Win an Adversary Mode to get GTA$100,000",
-  "podium": "Överflöd Entity XXR",
-  "prizeRide": "Annis Hellion",
-  "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
+  "weeklyChallenge": "Win two Stunt Races to get GTA$100,000",
+  "podium": "Karin Everon",
+  "prizeRide": "Western Powersurge",
+  "prizeRideRequirement": "Place Top 4 in the LS Car Meet Series for two days in a row",
   "weeklyRewards": [
-    "Log in to receive The Great Circle Back Mansion Painting Decoration",
-    "Guaranteed Panther Statue Primary Target in your first run of The Cayo Perico Heist",
-    "Guaranteed The Outcome of Endeavour Primary Target Painting in your first run of The Kortz Center Heist"
+    "Win two Stunt Races to receive GTA$100,000",
+    "2X GTA$ & RP on all Contact Missions (4X for GTA+ Members through December 2)",
+    "4X GTA$ & RP on Freemode Challenges"
   ],
   "bonuses": [
     {
+      "category": "4X GTA$ & RP",
+      "name": "Freemode Challenges",
+      "value": "4X"
+    },
+    {
       "category": "3X GTA$ & RP",
-      "name": "Mansion Raid",
+      "name": "Stunt Race Series",
+      "value": "3X"
+    },
+    {
+      "category": "3X GTA$ & RP",
+      "name": "Community Series",
       "value": "3X"
     },
     {
       "category": "2X GTA$ & RP",
-      "name": "Community Race Series",
+      "name": "All Contact Missions via Madrazo, Gerald, Simeon, Lamar, Lester, Trevor & Ron (4X for GTA+ Members through December 2)",
+      "value": "2X / 4X GTA+"
+    },
+    {
+      "category": "2X GTA$ & RP",
+      "name": "Madrazo's Dispatch Services",
       "value": "2X"
     },
     {
-      "category": "2X First-Time Completion Bonus",
-      "name": "All Original Heists",
-      "value": "2X First-Time"
+      "category": "2X GTA$ & RP",
+      "name": "Gerald's Last Play",
+      "value": "2X"
     },
     {
-      "category": "2X First-Time Completion Bonus",
-      "name": "The Doomsday Heist (all Acts)",
-      "value": "2X First-Time"
+      "category": "2X GTA$ & RP",
+      "name": "Premium Deluxe Repo Work",
+      "value": "2X"
     },
     {
-      "category": "2X First-Time Completion Bonus",
-      "name": "The Diamond Casino Heist",
-      "value": "2X First-Time"
+      "category": "2X GTA$ & RP",
+      "name": "Lowriders",
+      "value": "2X"
     },
     {
-      "category": "2X First-Time Completion Bonus",
-      "name": "KnoWay Out",
-      "value": "2X First-Time"
+      "category": "2X GTA$ & RP",
+      "name": "Sumo (Remix) (Featured Series)",
+      "value": "2X"
     }
   ],
-  "loginRewards": [
-    "The Great Circle Back Mansion Painting Decoration (Log in)"
-  ],
+  "loginRewards": [],
   "specialRewards": [
     {
-      "action": "Win an Adversary Mode",
+      "action": "Win two Stunt Races",
       "reward": "GTA$100,000"
     },
     {
-      "action": "First run of The Cayo Perico Heist",
-      "reward": "Guaranteed Panther Statue Primary Target"
+      "action": "Complete Contact Missions (through Dec 2)",
+      "reward": "2X GTA$ & RP (4X for GTA+ Members)"
     },
     {
-      "action": "First run of The Kortz Center Heist",
-      "reward": "Guaranteed The Outcome of Endeavour Painting"
-    },
-    {
-      "action": "First-time completion of Original Heists / Doomsday / Casino / KnoWay Out",
-      "reward": "2X GTA$ Completion Bonus"
+      "action": "Complete Freemode Challenges",
+      "reward": "4X GTA$ & RP"
     }
   ],
   "discounts": {
@@ -76,90 +84,82 @@
     "seventy": [],
     "sixty": [],
     "fifty": [],
-    "forty": [
-      "Casino Master Penthouse including Upgrades and Modifications",
-      "Facility Properties including Upgrades and Modifications",
-      "High-End Apartments"
-    ],
+    "forty": [],
     "thirty": [
-      "Benefactor Vorschlaghammer",
-      "Cheval Taipan",
-      "Dinka Blista Kanjo",
-      "Grotti Cheetah",
-      "HVY Insurgent",
-      "Invetero Coquette D5",
-      "Maibatsu Penumbra FF",
-      "Pegassi Reaper",
-      "Western Company Besra",
-      "Western Rampant Rocket",
-      "Grotti Veleno GT (25% OFF – First Time Vehicle Discount)"
+      "Canis Castigator",
+      "Declasse Hotring Sabre",
+      "Declasse Impaler LX",
+      "Declasse Tahoma Coupe",
+      "Dewbauchee Vagner",
+      "Karin Vivanite",
+      "MTL Wastelander",
+      "Obey I-Wagen",
+      "Obey Tailgater S",
+      "Übermacht Rebla GTS"
     ]
   },
   "gunVan": [
-    "El Strickler",
-    "Sweeper Shotgun",
-    "Widowmaker",
-    "Knuckle Dusters",
-    "Proximity Mines",
-    "Pipe Bombs",
+    "Stun Gun",
+    "Up-n-Atomizer",
     "Molotovs",
+    "Sticky Bombs",
+    "Proximity Mines",
     "Baseball Bat (FREE)",
     "Knife (FREE)",
-    "Precision Rifle (50% OFF)",
-    "Compact EMP Launcher (40% OFF for GTA+ Members)",
+    "Tactical SMG (40% OFF)",
+    "Combat Shotgun (40% OFF for GTA+ Members)",
     "Armor (80% OFF for GTA+ Members)"
   ],
   "rotatingContent": {
-    "fibPriorityFile": "The Black Box File",
+    "fibPriorityFile": "The Brute Force File",
     "kortzCenterPrimaryTargets": [
-      "The Outcome of Endeavour",
-      "To Beat About the Bush",
-      "Hare Oneself Think",
-      "True Love"
+      "In Excess of Success",
+      "What are Melons?",
+      "Breathless"
     ]
   },
   "salvageYard": [
     {
-      "robbery": "The Podium Robbery",
-      "name": "Annis Hellion",
+      "robbery": "The Gangbanger Robbery",
+      "name": "Canis Seminole Frontier",
+      "type": "Top Tier"
+    },
+    {
+      "robbery": "The McTony Robbery",
+      "name": "Karin Hotring Everon",
       "type": "Standard Tier"
     },
     {
       "robbery": "The Cargo Ship Robbery",
-      "name": "Truffade Z-Type",
+      "name": "Grotti Stinger TT",
       "type": "Low Tier"
-    },
-    {
-      "robbery": "The McTony Robbery",
-      "name": "Lampadati Cinquemila",
-      "type": "Top Tier"
     }
   ],
   "simeonVehicles": [
-    "Dinka Blista Kanjo",
-    "Grotti Cheetah",
-    "Invetero Coquette D5",
-    "Maibatsu Penumbra FF",
-    "Benefactor Vorschlaghammer"
+    "Declasse Hotring Sabre",
+    "Karin Vivanite",
+    "Obey Tailgater S",
+    "Declasse Tahoma Coupe",
+    "Canis Castigator"
   ],
   "luxuryAutos": [
-    "Grotti Veleno GT",
-    "Grotti GT750"
+    "Declasse Tampa GT",
+    "Pfister Astrale"
   ],
   "lsCarMeet": {
-    "prizeRide": "Annis Hellion",
-    "prizeRideRequirement": "Place Top 5 in the LS Car Meet Series for three days in a row",
+    "prizeRide": "Western Powersurge",
+    "prizeRideRequirement": "Place Top 4 in the LS Car Meet Series for two days in a row",
     "testTrack": [
-      "Cheval Taipan",
-      "HVY Insurgent",
-      "Pegassi Reaper"
+      "Übermacht Rebla GTS",
+      "Declasse Impaler LX",
+      "Obey I-Wagen"
     ],
-    "hsw": "Grotti Brioso R/A"
+    "hsw": "Weeny Issi Rally"
   },
   "timeTrials": {
-    "regular": "LSIA",
-    "hsw": "Del Perro Beach to Murietta Heights",
-    "premium": "At the Races"
+    "regular": "Calafia Way",
+    "hsw": "Sandy Shores to La Puerta",
+    "premium": "Down the Drain"
   },
   "gtaPlus": {
     "duration": "November 5 - December 9, 2026",
