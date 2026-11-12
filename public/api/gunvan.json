@@ -1,8 +1,8 @@
 {
-  "locationId": 19,
-  "zone": "Gun Van Location #19",
-  "description": "Popular Street, La Mesa",
-  "mapPath": "map_19.jpg",
+  "locationId": 3,
+  "zone": "Gun Van Location #3",
+  "description": "Merle Abrahams' house, Sandy Shores",
+  "mapPath": "map_3.jpg",
   "inventory": [
     "Compact EMP Launcher: -10 %",
     "Precision Rifle: -50 %",
@@ -17,6 +17,6 @@
     "Molotov: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-11-09T16:47:07.240Z",
+  "updatedAt": "2026-11-11T14:40:24.501Z",
   "source": "GTALens"
 }
