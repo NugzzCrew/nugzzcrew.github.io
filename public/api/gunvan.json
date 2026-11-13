@@ -1,8 +1,8 @@
 {
-  "locationId": 21,
-  "zone": "Gun Van Location #21",
-  "description": "Magellan Ave / Conquistador St, Vespucci Beach",
-  "mapPath": "map_21.jpg",
+  "locationId": 9,
+  "zone": "Gun Van Location #9",
+  "description": "Palmer-Taylor Power Station",
+  "mapPath": "map_9.jpg",
   "inventory": [
     "Stun Gun: -10 %",
     "Up-n-Atomizer: -10 %",
@@ -16,6 +16,6 @@
     "Proximity Mine: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-11-12T15:32:28.363Z",
+  "updatedAt": "2026-11-13T14:51:14.349Z",
   "source": "GTALens"
 }
