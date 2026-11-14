@@ -224,9 +224,15 @@ const vehicleSets = [
             </div>
             <select id="primaryTexture" class="hidden w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold mt-2">
               <option value="">-- Select Base Texture --</option>
-              <option value="Super Glossy">Super Glossy</option>
-              <option value="Glossy">Glossy</option>
-              <option value="Matte/Worn">Matte/Worn</option>
+              <option value="Chrome">Chrome</option>
+              <option value="Hidden">Hidden</option>
+              <option value="Matte">Matte</option>
+              <option value="Metallic">Metallic</option>
+              <option value="Metal">Metal</option>
+              <option value="Other">Other</option>
+              <option value="Rim">Rim</option>
+              <option value="Utility">Utility</option>
+              <option value="Worn">Worn</option>
             </select>
           </div>
           <div class="space-y-1">
@@ -237,9 +243,15 @@ const vehicleSets = [
             </div>
             <select id="secondaryTexture" class="hidden w-full bg-black border border-zinc-800 rounded-lg p-3 text-white text-sm outline-none focus:border-gold mt-2">
               <option value="">-- Select Base Texture --</option>
-              <option value="Super Glossy">Super Glossy</option>
-              <option value="Glossy">Glossy</option>
-              <option value="Matte/Worn">Matte/Worn</option>
+              <option value="Chrome">Chrome</option>
+              <option value="Hidden">Hidden</option>
+              <option value="Matte">Matte</option>
+              <option value="Metallic">Metallic</option>
+              <option value="Metal">Metal</option>
+              <option value="Other">Other</option>
+              <option value="Rim">Rim</option>
+              <option value="Utility">Utility</option>
+              <option value="Worn">Worn</option>
             </select>
           </div>
         </div>
@@ -638,7 +650,15 @@ const vehicleSets = [
 
   function populateTiresForCategory(cat) {
     const tireSelect = document.getElementById("tires");
-    
+    const rimStyle = document.getElementById("rimStyle")?.value || "";
+
+    if (rimStyle === "Stock") {
+      tireSelect.innerHTML = '<option value="None">None</option><option value="Custom Tire">Custom Tire</option>';
+      tireSelect.disabled = false;
+      updateRimThumb();
+      return;
+    }
+
     const options = tireDesignMap[cat] || [];
 
     if (!options.length) {
@@ -741,6 +761,13 @@ const vehicleSets = [
     const wrap = document.getElementById("activatorWrapper");
     if (document.getElementById("wheelCategory").value === "Bennys Originals" && e.target.value === "Waves") wrap.classList.remove("hidden");
     else { wrap.classList.add("hidden"); document.getElementById("activator").checked = false; }
+    if (e.target.value === "Stock") {
+      const tireSelect = document.getElementById("tires");
+      tireSelect.innerHTML = '<option value="None">None</option><option value="Custom Tire">Custom Tire</option>';
+      tireSelect.disabled = false;
+    } else {
+      populateTiresForCategory(document.getElementById("wheelCategory").value);
+    }
   });
 
   document.getElementById("wheelCategory").addEventListener("change", populateRims);
