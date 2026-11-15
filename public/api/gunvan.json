@@ -1,8 +1,8 @@
 {
-  "locationId": 25,
-  "zone": "Gun Van Location #25",
-  "description": "Caesars Auto Parking, Little Seoul",
-  "mapPath": "map_25.jpg",
+  "locationId": 23,
+  "zone": "Gun Van Location #23",
+  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
+  "mapPath": "map_23.jpg",
   "inventory": [
     "Stun Gun: -10 %",
     "Up-n-Atomizer: -10 %",
@@ -16,6 +16,6 @@
     "Proximity Mine: -10 %",
     "Body armor: -10 %"
   ],
-  "updatedAt": "2026-11-14T13:45:31.552Z",
+  "updatedAt": "2026-11-15T14:15:32.366Z",
   "source": "GTALens"
 }
