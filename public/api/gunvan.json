@@ -1,8 +1,8 @@
 {
-  "locationId": 1,
-  "zone": "Gun Van Location #1",
-  "description": "No Marks Cleaners, Paleto Bay",
-  "mapPath": "map_1.jpg",
+  "locationId": 27,
+  "zone": "Gun Van Location #27",
+  "description": "Hookies, North Chumash",
+  "mapPath": "map_27.jpg",
   "inventory": [
     "Combat Shotgun: -10 %",
     "Precision Rifle: -10 %",
@@ -19,6 +19,6 @@
     "Heavy Armor: -10 %",
     "Super Heavy Armor: -10 %"
   ],
-  "updatedAt": "2026-11-20T15:43:07.613Z",
+  "updatedAt": "2026-11-21T14:54:00.747Z",
   "source": "gtamap.net"
 }
