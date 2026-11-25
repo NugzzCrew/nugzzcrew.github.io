@@ -1,8 +1,8 @@
 {
-  "locationId": 21,
-  "zone": "Gun Van Location #21",
-  "description": "Magellan Ave / Conquistador St, Vespucci Beach",
-  "mapPath": "map_21.jpg",
+  "locationId": 17,
+  "zone": "Gun Van Location #17",
+  "description": "Terminal (southwest corner)",
+  "mapPath": "map_17.jpg",
   "inventory": [
     "Combat Shotgun: -10 %",
     "Precision Rifle: -10 %",
@@ -19,6 +19,6 @@
     "Heavy Armor: -10 %",
     "Super Heavy Armor: -10 %"
   ],
-  "updatedAt": "2026-11-24T18:10:29.416Z",
+  "updatedAt": "2026-11-25T17:32:50.912Z",
   "source": "gtamap.net"
 }
