@@ -1,8 +1,8 @@
 {
-  "locationId": 17,
-  "zone": "Gun Van Location #17",
-  "description": "Terminal (southwest corner)",
-  "mapPath": "map_17.jpg",
+  "locationId": 28,
+  "zone": "Gun Van Location #28",
+  "description": "Public toilets west of Procopio Truck Stop, Procopio Beach",
+  "mapPath": "map_28.jpg",
   "inventory": [
     "Combat Shotgun: -10 %",
     "Precision Rifle: -10 %",
@@ -19,6 +19,6 @@
     "Heavy Armor: -10 %",
     "Super Heavy Armor: -10 %"
   ],
-  "updatedAt": "2026-11-25T17:32:50.912Z",
+  "updatedAt": "2026-11-26T17:15:11.693Z",
   "source": "gtamap.net"
 }
