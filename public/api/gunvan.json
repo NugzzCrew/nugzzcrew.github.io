@@ -1,8 +1,8 @@
 {
-  "locationId": 28,
-  "zone": "Gun Van Location #28",
-  "description": "Public toilets west of Procopio Truck Stop, Procopio Beach",
-  "mapPath": "map_28.jpg",
+  "locationId": 23,
+  "zone": "Gun Van Location #23",
+  "description": "Parking garage south of Oriental Theater, Downtown Vinewood",
+  "mapPath": "map_23.jpg",
   "inventory": [
     "Combat Shotgun: -10 %",
     "Precision Rifle: -10 %",
@@ -19,6 +19,6 @@
     "Heavy Armor: -10 %",
     "Super Heavy Armor: -10 %"
   ],
-  "updatedAt": "2026-11-26T17:15:11.693Z",
+  "updatedAt": "2026-11-27T16:56:24.805Z",
   "source": "gtamap.net"
 }
